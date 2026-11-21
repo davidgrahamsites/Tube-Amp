@@ -1,0 +1,135 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-04T04:49:02",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/4340c407-2269-52d2-817c-c898dd54366d",
+            "violations": []
+        },
+        {
+            "path": "/Clean channel - original values and actual valve pins/",
+            "uuid_path": "/4340c407-2269-52d2-817c-c898dd54366d/7f7bc64f-a732-5066-bce6-915567a00489",
+            "violations": []
+        },
+        {
+            "path": "/Dirty channel - gain stages, cathode follower and Marshall tone stack/",
+            "uuid_path": "/4340c407-2269-52d2-817c-c898dd54366d/449916e3-14ce-5dd3-a7ce-eacd46a5a3da",
+            "violations": []
+        },
+        {
+            "path": "/Dirty cathode follower, tone controls and master volume/",
+            "uuid_path": "/4340c407-2269-52d2-817c-c898dd54366d/15b300e2-6d60-5449-9f96-c7e0220a3690",
+            "violations": []
+        },
+        {
+            "path": "/Channel relays, input and normalled effects loop/",
+            "uuid_path": "/4340c407-2269-52d2-817c-c898dd54366d/fb8be262-2ccc-5a92-8294-d5ed37750afa",
+            "violations": []
+        },
+        {
+            "path": "/Long-tail phase inverter, EL34 pair, output and feedback/",
+            "uuid_path": "/4340c407-2269-52d2-817c-c898dd54366d/89dd6243-d28f-569c-86c5-8e12672d49b8",
+            "violations": []
+        },
+        {
+            "path": "/Output transformer, speaker taps and impedance selector/",
+            "uuid_path": "/4340c407-2269-52d2-817c-c898dd54366d/3fcf7c25-3171-55bd-b6fc-5bd70a89e4c0",
+            "violations": []
+        },
+        {
+            "path": "/Original mains / HV / bias - historical baseline/",
+            "uuid_path": "/4340c407-2269-52d2-817c-c898dd54366d/38ab93f2-9b71-5f57-84cc-64e06ca7ae21",
+            "violations": [
+                {
+                    "description": "Both B_MAIN and B_RAW are attached to the same items; B_MAIN will be used in the netlist",
+                    "items": [
+                        {
+                            "description": "Global Label 'B_MAIN'",
+                            "pos": {
+                                "x": 0.6477,
+                                "y": 2.3495
+                            },
+                            "uuid": "31598659-b615-5cbc-af2e-39020f6b0407"
+                        },
+                        {
+                            "description": "Global Label 'B_RAW'",
+                            "pos": {
+                                "x": 2.7432,
+                                "y": 1.0033
+                            },
+                            "uuid": "1ec5f728-1585-521c-bd7f-9ff535f6c0fe"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "multiple_net_names"
+                }
+            ]
+        },
+        {
+            "path": "/Bias supply, heater elevation and bounded reverb rail/",
+            "uuid_path": "/4340c407-2269-52d2-817c-c898dd54366d/226a06b9-f509-582d-b5c1-88e2e5354960",
+            "violations": []
+        },
+        {
+            "path": "/Heater pin wiring, protective earth and chassis interfaces/",
+            "uuid_path": "/4340c407-2269-52d2-817c-c898dd54366d/dc578498-2f5c-5404-81c8-aca227d19534",
+            "violations": [
+                {
+                    "description": "Both GND and PE are attached to the same items; GND will be used in the netlist",
+                    "items": [
+                        {
+                            "description": "Global Label 'GND'",
+                            "pos": {
+                                "x": 1.0033,
+                                "y": 1.8542
+                            },
+                            "uuid": "3ff978c1-51e1-5bac-a86a-1a0f810aea02"
+                        },
+                        {
+                            "description": "Global Label 'PE'",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 1.27
+                            },
+                            "uuid": "5216dea5-76fe-524b-a69d-2b492f531deb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "multiple_net_names"
+                }
+            ]
+        },
+        {
+            "path": "/Historical relay supply and latching pedal/",
+            "uuid_path": "/4340c407-2269-52d2-817c-c898dd54366d/6a66bfaf-e8d2-5643-82d9-8da5241c2e21",
+            "violations": []
+        }
+    ],
+    "source": "Renegade_Source_Baseline.kicad_sch"
+}

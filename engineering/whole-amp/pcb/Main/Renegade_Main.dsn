@@ -1,0 +1,519 @@
+(pcb "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb/Main/Renegade_Main.dsn"
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "10.0.6")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0 289000 -139000 1000 -139000 1000 -1000 289000 -1000 289000 -139000)
+    )
+    (via "Via[0-1]_600:300_um")
+    (rule
+      (width 400)
+      (clearance 250)
+      (clearance 250 (type smd_smd))
+    )
+  )
+  (placement
+    (component Renegade_Whole:WirePad_1.3mm
+      (place JM004 22857.1 -132000 front 0 (PN B_PRE))
+      (place JM014 87142.9 -132000 front 0 (PN COIL_CH))
+      (place JM037 241428.6 -8000 front 0 (PN OT_4))
+      (place JM023 151428.6 -8000 front 0 (PN DR_IN))
+      (place JM026 164285.7 -132000 front 0 (PN DR_K3))
+      (place JM018 112857.1 -132000 front 0 (PN DR_CF))
+      (place JM016 100000 -132000 front 0 (PN DR_BASS_BOTTOM))
+      (place JM020 125714.3 -132000 front 0 (PN DR_G3))
+      (place JM019 125714.3 -8000 front 0 (PN DR_G2))
+      (place JM003 22857.1 -8000 front 0 (PN B_EARLY))
+      (place JM001 10000 -8000 front 0 (PN +12V))
+      (place JM030 190000 -132000 front 0 (PN DR_TREBLE_TOP))
+      (place JM002 10000 -132000 front 0 (PN BIAS_OUT))
+      (place JM005 35714.3 -8000 front 0 (PN CL_BASS_BOTTOM))
+      (place JM017 112857.1 -8000 front 0 (PN DR_BASS_TOP))
+      (place JM024 151428.6 -132000 front 0 (PN DR_K1))
+      (place JM042 267142.9 -132000 front 0 (PN PI_P2))
+      (place JM040 254285.7 -132000 front 0 (PN PI_K))
+      (place JM028 177142.9 -132000 front 0 (PN DR_P2))
+      (place JM021 138571.4 -8000 front 0 (PN DR_GAIN_TOP))
+      (place JM032 202857.1 -132000 front 0 (PN GND))
+      (place JM041 267142.9 -8000 front 0 (PN PI_P1))
+      (place JM015 100000 -8000 front 0 (PN DIRTY_OUT))
+      (place JM027 177142.9 -8000 front 0 (PN DR_P1))
+      (place JM008 48571.4 -132000 front 0 (PN CL_IN))
+      (place JM012 74285.7 -132000 front 0 (PN CL_P2))
+      (place JM034 215714.3 -132000 front 0 (PN GRID_B_FEED))
+      (place JM033 215714.3 -8000 front 0 (PN GRID_A_FEED))
+      (place JM013 87142.9 -8000 front 0 (PN CL_TREBLE_TOP))
+      (place JM043 280000 -8000 front 0 (PN PRES_TOP))
+      (place JM009 61428.6 -8000 front 0 (PN CL_K1))
+      (place JM038 241428.6 -132000 front 0 (PN PI_G1))
+      (place JM036 228571.4 -132000 front 0 (PN MIX_OUT))
+      (place JM039 254285.7 -8000 front 0 (PN PI_G2))
+      (place JM029 190000 -8000 front 0 (PN DR_P3))
+      (place JM011 74285.7 -8000 front 0 (PN CL_P1))
+      (place JM010 61428.6 -132000 front 0 (PN CL_K2))
+      (place JM022 138571.4 -132000 front 0 (PN DR_GAIN_W))
+      (place JM035 228571.4 -8000 front 0 (PN INPUT))
+      (place JM007 48571.4 -8000 front 0 (PN CL_G2))
+      (place JM031 202857.1 -8000 front 0 (PN FX_SEND))
+      (place JM025 164285.7 -8000 front 0 (PN DR_K2))
+      (place JM006 35714.3 -132000 front 0 (PN CL_BASS_TOP))
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal
+      (place R8 18380 -40000 front 0 (PN 1.5k))
+      (place R23 154380 -56000 front 0 (PN 33k))
+      (place R10 86380 -40000 front 0 (PN 1M))
+      (place R33 256380 -72000 front 0 (PN 220k))
+      (place R21 188380 -24000 front 0 (PN 100k))
+      (place R29 222380 -40000 front 0 (PN 82k))
+      (place R2 52380 -72000 front 0 (PN 1M))
+      (place R43 52380 -24000 front 0 (PN 10M))
+      (place R31 256380 -88000 front 0 (PN 100k))
+      (place R22 154380 -40000 front 0 (PN 100k))
+      (place R19 120380 -120000 front 0 (PN 470k))
+      (place R11 120380 -88000 front 0 (PN 2.7k))
+      (place R26 222380 -120000 front 0 (PN 470))
+      (place R12 120380 -56000 front 0 (PN 100k))
+      (place R25 188380 -120000 front 0 (PN 1M))
+      (place R5 18380 -104000 front 0 (PN 100k))
+      (place R15 154380 -88000 front 0 (PN 100k))
+      (place R3 52380 -104000 front 0 (PN 1.5k))
+      (place R27 256380 -120000 front 0 (PN 1M))
+      (place R13 86380 -104000 front 0 (PN 470k))
+      (place R18 154380 -120000 front 0 (PN 470k))
+      (place R30 256380 -24000 front 0 (PN 100k))
+      (place R34 256380 -56000 front 0 (PN 220k))
+      (place R1 86380 -56000 front 0 (PN 68k))
+      (place R28 222380 -104000 front 0 (PN 10k))
+      (place R20 188380 -56000 front 0 (PN 820))
+      (place R4 18380 -120000 front 0 (PN 100k))
+      (place R6 18380 -56000 front 0 (PN 15k))
+      (place R32 222380 -88000 front 0 (PN 47k))
+      (place R16 120380 -40000 front 0 (PN 1.8k))
+      (place R24 188380 -88000 front 0 (PN 10M))
+      (place R14 86380 -120000 front 0 (PN 470k))
+      (place R7 52380 -56000 front 0 (PN 100k))
+    )
+    (component Capacitor_THT:C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3
+      (place C20 256500 -104000 front 0 (PN 100n))
+      (place C6 52500 -40000 front 0 (PN 47n))
+      (place C8 120500 -72000 front 0 (PN 22n))
+      (place C16 154500 -72000 front 0 (PN 22n))
+      (place C23 222500 -56000 front 0 (PN 22n))
+      (place C11 154500 -104000 front 0 (PN 22n))
+      (place C17 188500 -72000 front 0 (PN 22n))
+      (place C21 222500 -72000 front 0 (PN 100n))
+      (place C19 188500 -104000 front 0 (PN 22n))
+      (place C3 18500 -88000 front 0 (PN 100n))
+      (place C24 256500 -40000 front 0 (PN 22n))
+      (place C4 18500 -72000 front 0 (PN 47n))
+    )
+    (component MountingHole:MountingHole_3.2mm_M3
+      (place H1 4000 -4000 front 0 (PN MountingHole_3.2mm_M3))
+      (place H3 286000 -136000 front 0 (PN MountingHole_3.2mm_M3))
+      (place H2 286000 -4000 front 0 (PN MountingHole_3.2mm_M3))
+      (place H4 4000 -136000 front 0 (PN MountingHole_3.2mm_M3))
+    )
+    (component Capacitor_THT:CP_Axial_L25.0mm_D10.0mm_P30.00mm_Horizontal
+      (place C5 11000 -24000 front 0 (PN 25u))
+      (place C1 45000 -88000 front 0 (PN 25u))
+    )
+    (component "Relay_THT:Relay_DPDT_Omron_G5V-2"
+      (place K1 85142.5 -75762.5 front 90 (PN "G5V-2-H1 DC12 (candidate)"))
+      (place K2 85142.5 -27762.5 front 90 (PN "G5V-2-H1 DC12 (candidate)"))
+    )
+    (component Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P10.00mm
+      (place C9 89000 -88000 front 0 (PN 470p))
+      (place C15 157000 -24000 front 0 (PN 470p))
+      (place C22 225000 -24000 front 0 (PN 47p))
+      (place C2 55000 -120000 front 0 (PN 250p))
+    )
+    (component Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm
+      (place C10 125500 -24000 front 0 (PN 1u))
+      (place C7 125500 -104000 front 0 (PN 680n))
+      (place C14 193500 -40000 front 0 (PN 1u))
+    )
+  )
+  (library
+    (image Renegade_Whole:WirePad_1.3mm
+      (pin Round[A]Pad_3000.000000_um 1 0 0)
+    )
+    (image Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal
+      (outline (polygon signal 0  16285 -1495  -1045 -1495  -1045 1495  16285 1495))
+      (outline (path signal 120  1040 0  4350 0))
+      (outline (path signal 120  14200 0  10890 0))
+      (outline (path signal 120  4350 1370  10890 1370  10890 -1370  4350 -1370  4350 1370))
+      (outline (path signal 100  0 0  4470 0))
+      (outline (path signal 100  15240 0  10770 0))
+      (outline (path signal 100  4470 1250  10770 1250  10770 -1250  4470 -1250  4470 1250))
+      (pin Round[A]Pad_1600.000000_um 1 0 0)
+      (pin Round[A]Pad_1600.000000_um 2 15240 0)
+    )
+    (image Capacitor_THT:C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3
+      (outline (polygon signal 0  16745 -3745  -1745 -3745  -1745 3745  16745 3745))
+      (outline (path signal 120  -1620 3620  16620 3620))
+      (outline (path signal 120  -1620 -3620  -1620 3620))
+      (outline (path signal 120  16620 3620  16620 -3620))
+      (outline (path signal 120  16620 -3620  -1620 -3620))
+      (outline (path signal 100  -1500 3500  16500 3500  16500 -3500  -1500 -3500  -1500 3500))
+      (pin Round[A]Pad_2400.000000_um 1 0 0)
+      (pin Round[A]Pad_2400.000000_um 2 15000 0)
+    )
+    (image MountingHole:MountingHole_3.2mm_M3
+      (outline (polygon signal 0  372.747 3427.32  741.112 3366.93  1100.8 3267.06  1447.58 3128.89
+            1777.39 2954.03  2086.35 2744.55  2370.86 2502.89  2627.57 2231.88
+            2853.48 1934.71  3045.93 1614.85  3202.67 1276.06  3321.86 922.312
+            3402.11 557.752  3442.47 186.613  3445 0  3442.47 -186.612  3402.11 -557.751
+            3321.86 -922.311  3202.67 -1276.06  3045.93 -1614.85  2853.48 -1934.71
+            2627.57 -2231.88  2370.86 -2502.89  2086.35 -2744.55  1777.39 -2954.03
+            1447.58 -3128.89  1100.8 -3267.06  741.112 -3366.93  372.747 -3427.32
+            0 -3447.53  -372.748 -3427.32  -741.113 -3366.93  -1100.8 -3267.06
+            -1447.58 -3128.89  -1777.39 -2954.03  -2086.35 -2744.55  -2370.86 -2502.89
+            -2627.57 -2231.88  -2853.48 -1934.71  -3045.93 -1614.85  -3202.67 -1276.06
+            -3321.86 -922.311  -3402.11 -557.751  -3442.47 -186.641  -3442.47 186.642
+            -3402.11 557.752  -3321.86 922.312  -3202.67 1276.06  -3045.93 1614.85
+            -2853.48 1934.71  -2627.57 2231.88  -2370.86 2502.89  -2086.35 2744.55
+            -1777.39 2954.03  -1447.58 3128.89  -1100.8 3267.06  -741.113 3366.93
+            -372.748 3427.32  0 3447.53))
+      (outline (path signal 150  3200 0  3180.58 -352.026  3122.55 -699.779  3026.61 -1039.04
+            2893.94 -1365.68  2726.14 -1675.75  2525.25 -1965.48  2293.7 -2231.35
+            2034.32 -2470.13  1750.23 -2678.93  1444.91 -2855.21  1122.04 -2996.84
+            785.554 -3102.08  439.531 -3169.67  88.174 -3198.78  -264.254 -3189.07
+            -613.474 -3140.64  -955.247 -3054.1  -1285.42 -2930.47  -1600 -2771.28
+            -1895.15 -2578.45  -2167.3 -2354.32  -2413.14 -2101.61  -2629.69 -1823.39
+            -2814.32 -1523.03  -2964.78 -1204.19  -3079.26 -870.731  -3156.36 -526.703
+            -3195.14 -176.281  -3195.14 176.281  -3156.36 526.703  -3079.26 870.731
+            -2964.78 1204.19  -2814.32 1523.03  -2629.69 1823.39  -2413.14 2101.61
+            -2167.3 2354.32  -1895.15 2578.45  -1600 2771.28  -1285.42 2930.47
+            -955.247 3054.1  -613.474 3140.64  -264.254 3189.07  88.174 3198.78
+            439.531 3169.67  785.554 3102.08  1122.04 2996.84  1444.91 2855.21
+            1750.23 2678.93  2034.32 2470.13  2293.7 2231.35  2525.25 1965.48
+            2726.14 1675.75  2893.94 1365.68  3026.61 1039.04  3122.55 699.779
+            3180.58 352.026  3200 0))
+      (keepout "" (circle F.Cu 3700))
+      (keepout "" (circle B.Cu 3700))
+    )
+    (image Capacitor_THT:CP_Axial_L25.0mm_D10.0mm_P30.00mm_Horizontal
+      (outline (polygon signal 0  31445 -5245  -1445 -5245  -1445 5245  31445 5245))
+      (outline (path signal 120  280 2600  2080 2600))
+      (outline (path signal 120  1180 3500  1180 1700))
+      (outline (path signal 120  1440 0  2380 0))
+      (outline (path signal 120  2380 5120  2380 -5120))
+      (outline (path signal 120  2380 5120  4180 5120))
+      (outline (path signal 120  2380 -5120  4180 -5120))
+      (outline (path signal 120  4180 5120  5080 4220))
+      (outline (path signal 120  4180 -5120  5080 -4220))
+      (outline (path signal 120  5080 4220  5980 5120))
+      (outline (path signal 120  5080 -4220  5980 -5120))
+      (outline (path signal 120  5980 5120  27620 5120))
+      (outline (path signal 120  5980 -5120  27620 -5120))
+      (outline (path signal 120  27620 5120  27620 -5120))
+      (outline (path signal 120  28560 0  27620 0))
+      (outline (path signal 100  0 0  2500 0))
+      (outline (path signal 100  2500 5000  2500 -5000))
+      (outline (path signal 100  2500 5000  4180 5000))
+      (outline (path signal 100  2500 -5000  4180 -5000))
+      (outline (path signal 100  4180 5000  5080 4100))
+      (outline (path signal 100  4180 -5000  5080 -4100))
+      (outline (path signal 100  4200 0  6000 0))
+      (outline (path signal 100  5080 4100  5980 5000))
+      (outline (path signal 100  5080 -4100  5980 -5000))
+      (outline (path signal 100  5100 900  5100 -900))
+      (outline (path signal 100  5980 5000  27500 5000))
+      (outline (path signal 100  5980 -5000  27500 -5000))
+      (outline (path signal 100  27500 5000  27500 -5000))
+      (outline (path signal 100  30000 0  27500 0))
+      (pin RoundRect[A]Pad_2400.000000x2400.000000_250.952000_um_0.000000_0 1 0 0)
+      (pin Round[A]Pad_2400.000000_um 2 30000 0)
+    )
+    (image "Relay_THT:Relay_DPDT_Omron_G5V-2"
+      (outline (polygon signal 0  -1475 -19295  -1475 1495  9095 1495  9095 -19295))
+      (outline (path signal 120  -1540 1550  -330 1550))
+      (outline (path signal 120  9000 1400  -1380 1400))
+      (outline (path signal 120  2300 1400  2300 360))
+      (outline (path signal 120  -1380 1400  -1380 -19190))
+      (outline (path signal 120  5300 340  5300 1400))
+      (outline (path signal 120  2300 340  5300 340))
+      (outline (path signal 120  -1540 250  -1540 1550))
+      (outline (path signal 120  4170 190  3470 190))
+      (outline (path signal 120  3470 190  3470 -1010))
+      (outline (path signal 120  4170 -440  5270 -440))
+      (outline (path signal 120  3470 -440  2370 -440))
+      (outline (path signal 120  3470 -610  4170 -210))
+      (outline (path signal 120  4170 -1010  4170 190))
+      (outline (path signal 120  3470 -1010  4170 -1010))
+      (outline (path signal 120  9000 -19190  9000 1400))
+      (outline (path signal 120  -1380 -19190  9000 -19190))
+      (outline (path signal 100  8860 1260  -330 1260))
+      (outline (path signal 100  -1240 250  -330 1260))
+      (outline (path signal 100  -1240 250  -1240 -19040))
+      (outline (path signal 100  8860 -19040  8860 1260))
+      (outline (path signal 100  -1240 -19040  8860 -19040))
+      (pin Rect[A]Pad_1400.000000x1400.000000_um 1 0 0)
+      (pin Round[A]Pad_1400.000000_um 4 0 -7620)
+      (pin Round[A]Pad_1400.000000_um 6 0 -12700)
+      (pin Round[A]Pad_1400.000000_um 8 0 -17780)
+      (pin Round[A]Pad_1400.000000_um 9 7620 -17780)
+      (pin Round[A]Pad_1400.000000_um 11 7620 -12700)
+      (pin Round[A]Pad_1400.000000_um 13 7620 -7620)
+      (pin Round[A]Pad_1400.000000_um 16 7620 0)
+    )
+    (image Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P10.00mm
+      (outline (polygon signal 0  11245 -2745  -1245 -2745  -1245 2745  11245 2745))
+      (outline (path signal 120  1130 2620  8870 2620))
+      (outline (path signal 120  1130 511  1130 2620))
+      (outline (path signal 120  1130 -2620  1130 -511))
+      (outline (path signal 120  8870 2620  8870 511))
+      (outline (path signal 120  8870 -511  8870 -2620))
+      (outline (path signal 120  8870 -2620  1130 -2620))
+      (outline (path signal 100  1250 2500  8750 2500  8750 -2500  1250 -2500  1250 2500))
+      (pin Round[A]Pad_2000.000000_um 1 0 0)
+      (pin Round[A]Pad_2000.000000_um 2 10000 0)
+    )
+    (image Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm
+      (outline (polygon signal 0  6345 -2745  -1345 -2745  -1345 2745  6345 2745))
+      (outline (path signal 120  -1220 2620  6220 2620))
+      (outline (path signal 120  -1220 -2620  -1220 2620))
+      (outline (path signal 120  6220 2620  6220 -2620))
+      (outline (path signal 120  6220 -2620  -1220 -2620))
+      (outline (path signal 100  -1100 2500  6100 2500  6100 -2500  -1100 -2500  -1100 2500))
+      (pin Round[A]Pad_1500.000000_um 1 0 0)
+      (pin Round[A]Pad_1500.000000_um 2 5000 0)
+    )
+    (padstack Round[A]Pad_1400.000000_um
+      (shape (circle F.Cu 1400))
+      (shape (circle B.Cu 1400))
+      (attach off)
+    )
+    (padstack Round[A]Pad_1500.000000_um
+      (shape (circle F.Cu 1500))
+      (shape (circle B.Cu 1500))
+      (attach off)
+    )
+    (padstack Round[A]Pad_1600.000000_um
+      (shape (circle F.Cu 1600))
+      (shape (circle B.Cu 1600))
+      (attach off)
+    )
+    (padstack Round[A]Pad_2000.000000_um
+      (shape (circle F.Cu 2000))
+      (shape (circle B.Cu 2000))
+      (attach off)
+    )
+    (padstack Round[A]Pad_2400.000000_um
+      (shape (circle F.Cu 2400))
+      (shape (circle B.Cu 2400))
+      (attach off)
+    )
+    (padstack Round[A]Pad_3000.000000_um
+      (shape (circle F.Cu 3000))
+      (shape (circle B.Cu 3000))
+      (attach off)
+    )
+    (padstack RoundRect[A]Pad_2400.000000x2400.000000_250.952000_um_0.000000_0
+      (shape (polygon F.Cu 0  -1200.95 949.999  -1181.85 1046.03  -1127.45 1127.45  -1046.03 1181.85
+            -949.999 1200.95  949.999 1200.95  1046.03 1181.85  1127.45 1127.45
+            1181.85 1046.03  1200.95 949.999  1200.95 -949.999  1181.85 -1046.03
+            1127.45 -1127.45  1046.03 -1181.85  949.999 -1200.95  -949.999 -1200.95
+            -1046.03 -1181.85  -1127.45 -1127.45  -1181.85 -1046.03  -1200.95 -949.999
+            -1200.95 949.999))
+      (shape (polygon B.Cu 0  -1200.95 949.999  -1181.85 1046.03  -1127.45 1127.45  -1046.03 1181.85
+            -949.999 1200.95  949.999 1200.95  1046.03 1181.85  1127.45 1127.45
+            1181.85 1046.03  1200.95 949.999  1200.95 -949.999  1181.85 -1046.03
+            1127.45 -1127.45  1046.03 -1181.85  949.999 -1200.95  -949.999 -1200.95
+            -1046.03 -1181.85  -1127.45 -1127.45  -1181.85 -1046.03  -1200.95 -949.999
+            -1200.95 949.999))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_1400.000000x1400.000000_um
+      (shape (rect F.Cu -700 -700 700 700))
+      (shape (rect B.Cu -700 -700 700 700))
+      (attach off)
+    )
+    (padstack "Via[0-1]_600:300_um"
+      (shape (circle F.Cu 600))
+      (shape (circle B.Cu 600))
+      (attach off)
+    )
+  )
+  (network
+    (net B_PRE
+      (pins JM004-1 R21-1 R29-1 R30-1)
+    )
+    (net CL_K2
+      (pins R8-1 C5-1 JM010-1)
+    )
+    (net GND
+      (pins R8-2 C5-2 R10-2 K1-13 R2-2 R43-2 R22-2 R19-2 R11-2 C1-2 R3-2 C10-2 JM032-1
+        R20-2 K2-13 C7-2 R6-2 R32-2 C14-2 R16-2 R24-2 R14-2)
+    )
+    (net PI_G2
+      (pins C20-1 R27-1 JM039-1)
+    )
+    (net NFB_NODE
+      (pins C20-2 R31-2 C21-1 R28-2 R32-1)
+    )
+    (net COIL_CH
+      (pins JM014-1 K1-16 K2-16)
+    )
+    (net DR_CF
+      (pins R23-1 JM018-1 R22-1 C15-1)
+    )
+    (net DR_TONE
+      (pins R23-2 C16-1 C17-1)
+    )
+    (net CL_P2
+      (pins C6-1 JM012-1 R7-2)
+    )
+    (net CLEAN_OUT
+      (pins C6-2 R43-1 K2-6)
+    )
+    (net OT_4
+      (pins JM037-1 R31-1)
+    )
+    (net DR_IN
+      (pins JM023-1 R10-1 K1-8)
+    )
+    (net DR_K3
+      (pins JM026-1 R20-1 C14-1)
+    )
+    (net GRID_A_FEED
+      (pins R33-1 C23-2 JM033-1)
+    )
+    (net BIAS_OUT
+      (pins R33-2 JM002-1 R34-2)
+    )
+    (net DR_BASS_BOTTOM
+      (pins JM016-1 C17-2)
+    )
+    (net DR_P3
+      (pins R21-2 JM029-1)
+    )
+    (net +12V
+      (pins K1-1 JM001-1 K2-1)
+    )
+    (net INPUT_STOP
+      (pins K1-4 R1-2)
+    )
+    (net CL_IN
+      (pins K1-6 R2-1 JM008-1)
+    )
+    (net CL_G2
+      (pins K1-9 JM007-1)
+    )
+    (net DR_G2
+      (pins K1-11 JM019-1 C9-2 R13-2 R14-1)
+    )
+    (net PI_P1
+      (pins R29-2 C23-1 JM041-1 C22-1)
+    )
+    (net DR_P1
+      (pins C8-1 R12-2 JM027-1)
+    )
+    (net DR_GAIN_TOP
+      (pins C8-2 JM021-1)
+    )
+    (net DR_G3
+      (pins JM020-1 R19-1 R18-2)
+    )
+    (net DR_BASS_TOP
+      (pins C16-2 JM017-1)
+    )
+    (net DR_K1
+      (pins R11-1 JM024-1 C7-1)
+    )
+    (net PI_K
+      (pins R26-1 JM040-1)
+    )
+    (net PI_TAIL_TOP
+      (pins R26-2 R25-2 R27-2 R28-1)
+    )
+    (net B_EARLY
+      (pins R12-1 JM003-1 R15-1 R4-1 R7-1)
+    )
+    (net PI_G1
+      (pins R25-1 C19-2 JM038-1)
+    )
+    (net CL_P1
+      (pins R5-1 R4-2 JM011-1 C2-1)
+    )
+    (net CL_TONE
+      (pins R5-2 C3-1 C4-1)
+    )
+    (net CL_K1
+      (pins C1-1 R3-1 JM009-1)
+    )
+    (net DR_TREBLE_TOP
+      (pins JM030-1 C15-2)
+    )
+    (net CL_BASS_BOTTOM
+      (pins JM005-1 R6-1 C4-2)
+    )
+    (net DR_P2
+      (pins R15-2 C11-1 JM028-1)
+    )
+    (net PI_P2
+      (pins JM042-1 R30-2 C22-2 C24-1)
+    )
+    (net DR_C3
+      (pins C11-2 R18-1)
+    )
+    (net DR_GAIN_W
+      (pins C9-1 R13-1 JM022-1)
+    )
+    (net DR_K2
+      (pins C10-1 R16-1 JM025-1)
+    )
+    (net DIRTY_OUT
+      (pins JM015-1 K2-8)
+    )
+    (net PRES_TOP
+      (pins C21-2 JM043-1)
+    )
+    (net GRID_B_FEED
+      (pins JM034-1 R34-1 C24-2)
+    )
+    (net CL_TREBLE_TOP
+      (pins JM013-1 C2-2)
+    )
+    (net MIX_OUT
+      (pins C19-1 JM036-1 R24-1)
+    )
+    (net INPUT
+      (pins R1-1 JM035-1)
+    )
+    (net FX_SEND
+      (pins K2-4 JM031-1)
+    )
+    (net "unconnected-(K2-Pad9)"
+      (pins K2-9)
+    )
+    (net "unconnected-(K2-Pad11)"
+      (pins K2-11)
+    )
+    (net CL_BASS_TOP
+      (pins C3-2 JM006-1)
+    )
+    (class Default "+12V" "BIAS_OUT" "CLEAN_OUT" "CL_BASS_BOTTOM" "CL_BASS_TOP" "CL_G2" "CL_IN" "CL_K1" "CL_K2" "CL_TREBLE_TOP" "COIL_CH" "DIRTY_OUT" "DR_BASS_BOTTOM" "DR_BASS_TOP" "DR_C3" "DR_G2" "DR_G3" "DR_GAIN_TOP" "DR_GAIN_W" "DR_IN" "DR_K1" "DR_K2" "DR_K3" "DR_TREBLE_TOP" "FX_SEND" "GND" "GRID_A_FEED" "GRID_B_FEED" "INPUT" "INPUT_STOP" "MIX_OUT" "OT_4" "PRES_TOP" "unconnected-(K2-Pad11)" "unconnected-(K2-Pad9)" (circuit (use_via "Via[0-1]_600:300_um")) (rule (width 400) (clearance 250)))
+    (class HV "B_EARLY" "B_PRE" "CL_P1" "CL_P2" "CL_TONE" "DR_CF" "DR_P1" "DR_P2" "DR_P3" "DR_TONE" "NFB_NODE" "PI_G1" "PI_G2" "PI_K" "PI_P1" "PI_P2" "PI_TAIL_TOP" (circuit (use_via "Via[0-1]_600:300_um")) (rule (width 600) (clearance 5500)))
+  )
+  (wiring
+  )
+)

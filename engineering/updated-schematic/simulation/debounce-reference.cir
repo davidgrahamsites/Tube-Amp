@@ -1,0 +1,13 @@
+Debounce v0.2 - RC circuit with bounded ideal Schmitt surrogate
+VDD vdd 0 5
+VE evt 0 PWL(0 0 0.5 0 0.50001 5 0.501 5 0.50101 0 0.502 0 0.50201 5 0.503 5 0.50301 0 0.504 0 0.50401 5 0.57 5 0.57001 0 0.571 0 0.57101 5 0.572 5 0.57201 0 1 0 1.00001 5 1.08 5 1.08001 0 1.3 0)
+RPULL vdd btn 10k
+RCABLE btn pedal 1k
+SFOOT pedal 0 evt 0 FOOT
+.model FOOT SW(Ron=0.1 Roff=1e12 Vt=2.5 Vh=0.1)
+RDB btn db 15k
+CDB db 0 1u IC=5
+RLOGIC vdd clk 1k
+SINV clk 0 db 0 HYST
+.model HYST SW(Ron=1 Roff=1e12 Vt=2.25 Vh=0.75)
+.end

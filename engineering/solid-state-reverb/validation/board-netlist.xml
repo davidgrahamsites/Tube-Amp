@@ -1,0 +1,2021 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/Renegade_Reverb.kicad_sch</source>
+    <date>2026-11-11T05:06:20</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Renegade 220 V + spring reverb</title>
+        <company/>
+        <rev>0.4</rev>
+        <date>2026-11-11</date>
+        <source>Renegade_Reverb.kicad_sch</source>
+        <comment number="1" value="Engineering draft - not a fabrication release"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/">
+      <title_block>
+        <title>Spring send and constant dry buffer</title>
+        <company/>
+        <rev>0.4 ENGINEERING</rev>
+        <date>2026-11-11</date>
+        <source>07a_reverb_send.kicad_sch</source>
+        <comment number="1" value="Engineering draft - not a fabrication release"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/">
+      <title_block>
+        <title>Spring recovery, panel REVERB and constant-dry summing</title>
+        <company/>
+        <rev>0.4 ENGINEERING</rev>
+        <date>2026-11-11</date>
+        <source>07b_reverb_recovery.kicad_sch</source>
+        <comment number="1" value="Engineering draft - not a fabrication release"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/">
+      <title_block>
+        <title>Non-inverting overall mix, output, power and relay</title>
+        <company/>
+        <rev>0.4 ENGINEERING</rev>
+        <date>2026-11-11</date>
+        <source>07c_reverb_output.kicad_sch</source>
+        <comment number="1" value="Engineering draft - not a fabrication release"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="H1">
+      <value>MountingHole_3.2mm_M3</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <fields>
+        <field name="Source">Board mounting, insulated standoffs</field>
+        <field name="Rating"/>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">MountingHole:MountingHole_3.2mm_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Mechanical_MountingHole" description="Mounting Hole without connection"/>
+      <property name="Source" value="Board mounting, insulated standoffs"/>
+      <property name="Rating" value=""/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="Renegade_Reverb"/>
+      <property name="Sheetfile" value="Renegade_Reverb.kicad_sch"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01021146-402e-5474-9cb3-b878699c679c</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole_3.2mm_M3</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <fields>
+        <field name="Source">Board mounting, insulated standoffs</field>
+        <field name="Rating"/>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">MountingHole:MountingHole_3.2mm_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Mechanical_MountingHole" description="Mounting Hole without connection"/>
+      <property name="Source" value="Board mounting, insulated standoffs"/>
+      <property name="Rating" value=""/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="Renegade_Reverb"/>
+      <property name="Sheetfile" value="Renegade_Reverb.kicad_sch"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b5a1b31c-2626-569d-9d4b-de99d6c3376e</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H3">
+      <value>MountingHole_3.2mm_M3</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <fields>
+        <field name="Source">Board mounting, insulated standoffs</field>
+        <field name="Rating"/>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">MountingHole:MountingHole_3.2mm_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Mechanical_MountingHole" description="Mounting Hole without connection"/>
+      <property name="Source" value="Board mounting, insulated standoffs"/>
+      <property name="Rating" value=""/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="Renegade_Reverb"/>
+      <property name="Sheetfile" value="Renegade_Reverb.kicad_sch"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fc8832f7-26c6-5659-913d-285892dbc0b2</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H4">
+      <value>MountingHole_3.2mm_M3</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <fields>
+        <field name="Source">Board mounting, insulated standoffs</field>
+        <field name="Rating"/>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">MountingHole:MountingHole_3.2mm_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Mechanical_MountingHole" description="Mounting Hole without connection"/>
+      <property name="Source" value="Board mounting, insulated standoffs"/>
+      <property name="Rating" value=""/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="Renegade_Reverb"/>
+      <property name="Sheetfile" value="Renegade_Reverb.kicad_sch"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8d16bdf9-6da0-5689-a862-e169bd4497ac</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C601">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L18.0mm_W5.0mm_P15.00mm_FKS3_FKP3</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">630V film</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L18.0mm_W5.0mm_P15.00mm_FKS3_FKP3</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="630V film"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>5e311206-d175-567e-b8c5-e3d277b48838</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C602">
+      <value>22n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">63V film/C0G</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="63V film/C0G"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>efba6506-99a7-5103-a9b0-59186659032d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C603">
+      <value>2.2u</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W7.2mm_P5.00mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">63V film/C0G</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W7.2mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="63V film/C0G"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>6e65ed2c-e783-552a-a584-bf0e5baa2e08</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D601">
+      <value>1N4148</value>
+      <footprint>Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating"/>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_D" description="Diode"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value=""/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>f4ef9efe-5e1c-5860-a647-d81373439d77</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D602">
+      <value>1N4148</value>
+      <footprint>Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating"/>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_D" description="Diode"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value=""/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>b82d1c2b-a1c2-55d5-a083-5e8f77f47cff</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JR1">
+      <value>JR1 harness</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">Low voltage only; soldered locking harness or retained socket</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Connector_Generic_Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="Low voltage only; soldered locking harness or retained socket"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>0ec93d1e-da13-5895-89b3-c99e935d8de5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JR2">
+      <value>JR2 harness</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">Low voltage only; soldered locking harness or retained socket</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Connector_Generic_Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="Low voltage only; soldered locking harness or retained socket"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>e1db5116-5082-5004-9789-b4e456de50a7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R601">
+      <value>100k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>8a9cb995-466e-5c4e-afee-087da21a4bc5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R602">
+      <value>10M</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>0af8986b-8769-5a1d-b69f-8506b3d2c829</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R603">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>2c0a7991-93d8-5d6e-ac79-61324440c6f3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R604">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>854fab78-3a4d-513e-b205-012f0f790349</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R605">
+      <value>220</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>a20942c6-e388-542c-962b-7bb8902cb70a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="RV601">
+      <value>100k SEND trim</value>
+      <footprint>Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">Bourns 3296W-1-104LF; commissioning tank drive trim</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R_Potentiometer" description="Potentiometer"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="Bourns 3296W-1-104LF; commissioning tank drive trim"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="resistor variable"/>
+      <property name="ki_fp_filters" value="Potentiometer*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>ef337ffa-b411-5c9b-bae3-d7c5be170569</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U10">
+      <value>OPA2134PA</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/opa2134.pdf</datasheet>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">PDIP-8; +/-15V; design linear signal limit 10Vpk</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/opa2134.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Amplifier_Operational_OPA2134" description="Dual SoundPlus High Performance Audio Operational Amplifiers, DIP-8/SOIC-8"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="PDIP-8; +/-15V; design linear signal limit 10Vpk"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07a_reverb_send"/>
+      <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
+      <property name="ki_keywords" value="dual opamp"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"/>
+      <sheetpath names="/07a_reverb_send/" tstamps="/905ab7bf-c478-5283-9fbb-463e3e3d1d16/"/>
+      <tstamps>bc21c5ab-5d4a-5953-8bf3-32faadb273ca 6a792997-7a98-58cf-ac44-e0b924610d76</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C604">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">63V film/C0G</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="63V film/C0G"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>287660bf-54de-5fd0-9554-b3813874be3b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C605">
+      <value>330p</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">63V film/C0G</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="63V film/C0G"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>f2d4d7eb-ed90-55ac-81d9-2e07a7fbbd34</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C606">
+      <value>1u</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">63V film/C0G</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="63V film/C0G"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>3c1ecfac-ee27-59b4-8835-e1b041f029d6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JR3">
+      <value>JR3 harness</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">Low voltage only; soldered locking harness or retained socket</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Connector_Generic_Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="Low voltage only; soldered locking harness or retained socket"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>fc7a31b4-3d80-55fc-b6da-94ab4ec8c897</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JR4">
+      <value>JR4 harness</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">Low voltage only; soldered locking harness or retained socket</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Connector_Generic_Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="Low voltage only; soldered locking harness or retained socket"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>c8519a07-fd72-5ded-90c1-775f6d5475d6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="K3">
+      <value>G5V-2-H1 DC12</value>
+      <footprint>Relay_THT:Relay_DPDT_Omron_G5V-2</footprint>
+      <datasheet>https://components.omron.com/system/files/2023-01/datasheet_pdf/K046-E1.pdf</datasheet>
+      <fields>
+        <field name="Display">G5V-2-H1 /12V</field>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating"/>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Relay_THT:Relay_DPDT_Omron_G5V-2</field>
+        <field name="Datasheet">https://components.omron.com/system/files/2023-01/datasheet_pdf/K046-E1.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Relay_G5V-2_Split" description="Relay Miniature Omron DPDT"/>
+      <property name="Display" value="G5V-2-H1 /12V"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value=""/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="Miniature Relay Dual Pole DPDT Omron"/>
+      <property name="ki_fp_filters" value="Relay*DPDT*Omron*G5V*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>4eb26d3c-107a-5d6b-ac69-ac2cec01d29c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="16"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="6"/>
+            <pin num="4"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="11"/>
+            <pin num="13"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R606">
+      <value>220k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>760c8179-c96e-5159-9e08-90f9349f79dc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R607">
+      <value>1k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>60b8ec4f-82d9-57af-aac0-e111a592c900</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R608">
+      <value>100k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>41de8481-8363-59ba-a6bc-96518f7415d5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R609">
+      <value>1M</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>0c17275b-05a5-52d1-9177-b19f038462df</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R610">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>f6116055-2dcb-5c38-a684-fb644bcec946</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R611">
+      <value>100k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>ab225389-4c42-55b2-903e-e59773966016</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R612">
+      <value>100k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>8057b090-6240-536d-8f84-1b7a9092e69c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R613">
+      <value>100k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>16ef475e-dbdf-5ed4-b929-960d3bb49904</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U11">
+      <value>OPA2134PA</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/opa2134.pdf</datasheet>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">PDIP-8; +/-15V; design linear signal limit 10Vpk</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/opa2134.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Amplifier_Operational_OPA2134" description="Dual SoundPlus High Performance Audio Operational Amplifiers, DIP-8/SOIC-8"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="PDIP-8; +/-15V; design linear signal limit 10Vpk"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="dual opamp"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>9fdba56c-2d89-51eb-ba07-3750f0cb74bd 8a28a627-b8a4-5f97-8767-20c82569ad98</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U12">
+      <value>OPA2134PA</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/opa2134.pdf</datasheet>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">PDIP-8; +/-15V; design linear signal limit 10Vpk</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/opa2134.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Amplifier_Operational_OPA2134" description="Dual SoundPlus High Performance Audio Operational Amplifiers, DIP-8/SOIC-8"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="PDIP-8; +/-15V; design linear signal limit 10Vpk"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07b_reverb_recovery"/>
+      <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
+      <property name="ki_keywords" value="dual opamp"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"/>
+      <sheetpath names="/07b_reverb_recovery/" tstamps="/de99432e-dfbd-5473-9108-d29c4d823fa1/"/>
+      <tstamps>1a203314-1d5f-59d4-aeb1-80715bf1a9f5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C607">
+      <value>1u</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">63V film/C0G</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="63V film/C0G"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>bee4b957-26bb-55a6-8ec1-89567dbef894</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C610">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">63V film/C0G</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="63V film/C0G"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>280cd3dd-2b3e-5782-a248-af9adbf38740</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C611">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">63V film/C0G</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="63V film/C0G"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>d4f23709-bdee-54a2-9ecd-c0b09d78457a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C612">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">63V film/C0G</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="63V film/C0G"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>7cdb8bf3-a1e3-5bcf-9b8b-dbb2628e3c77</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C613">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">63V film/C0G</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="63V film/C0G"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>80d6d5e8-e219-511c-8665-ac076e1135c8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C614">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">63V film/C0G</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="63V film/C0G"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>b04ac169-ac53-5c57-a33a-a603e8d95471</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C615">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">63V film/C0G</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="63V film/C0G"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>cb73fbd1-32d9-5821-a2e5-9dc1b11d0464</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C616">
+      <value>47u</value>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">50V electrolytic</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C_Polarized" description="Polarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="50V electrolytic"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>d58bc203-1f15-541b-9011-c5609ee3cb18</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C617">
+      <value>47u</value>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">50V electrolytic</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_C_Polarized" description="Polarized capacitor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="50V electrolytic"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>11d79d59-6f0b-51a5-97ba-10ce3db84a5b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JR5">
+      <value>JR5 harness</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">Low voltage only; soldered locking harness or retained socket</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Connector_Generic_Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="Low voltage only; soldered locking harness or retained socket"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>1b009add-d2b9-5e53-a540-99816088ebc5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JR6">
+      <value>JR6 harness</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">Low voltage only; soldered locking harness or retained socket</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Connector_Generic_Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="Low voltage only; soldered locking harness or retained socket"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>bec3c756-3e71-5692-84aa-4d88bbe3a2aa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R614">
+      <value>100k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>f95fd079-c2ba-550a-801b-690637b5499b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R615">
+      <value>100k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>98e0c9b8-c690-5717-b2f8-704abcb72c95</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R616">
+      <value>100</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>710d87e1-f876-5917-9dcd-dbf9f2c23922</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R617">
+      <value>1M</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="Source">DEC-007 v0.4</field>
+        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Design_status">proposed</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="DEC-007 v0.4"/>
+      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>6c1009f7-4740-5751-8d3a-239458801f7b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Renegade_Draft" part="Amplifier_Operational_OPA2134">
+      <description>Dual SoundPlus High Performance Audio Operational Amplifiers, DIP-8/SOIC-8</description>
+      <docs>http://www.ti.com/lit/ds/symlink/opa134.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TO*99*</fp>
+        <fp>OnSemi*Micro8*</fp>
+        <fp>TSSOP*3x3mm*P0.65mm*</fp>
+        <fp>TSSOP*4.4x3mm*P0.65mm*</fp>
+        <fp>MSOP*3x3mm*P0.65mm*</fp>
+        <fp>SSOP*3.9x4.9mm*P0.635mm*</fp>
+        <fp>LFCSP*2x2mm*P0.5mm*</fp>
+        <fp>*SIP*</fp>
+        <fp>SOIC*5.3x6.2mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">OPA2134</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/opa134.pdf</field>
+        <field name="Description">Dual SoundPlus High Performance Audio Operational Amplifiers, DIP-8/SOIC-8</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Renegade_Draft" part="Connector_Generic_Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Renegade_Draft" part="Connector_Generic_Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Renegade_Draft" part="Connector_Generic_Conn_01x05">
+      <description>Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x05</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Renegade_Draft" part="Device_C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Renegade_Draft" part="Device_C_Polarized">
+      <description>Polarized capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Renegade_Draft" part="Device_D">
+      <description>Diode</description>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Diode</field>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Renegade_Draft" part="Device_R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Renegade_Draft" part="Device_R_Potentiometer">
+      <description>Potentiometer</description>
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">R_Potentiometer</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Potentiometer</field>
+        <field name="Sim.Device">R</field>
+        <field name="Sim.Type">POT</field>
+        <field name="Sim.Pins">1=r0 2=wiper 3=r1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Renegade_Draft" part="Mechanical_MountingHole">
+      <description>Mounting Hole without connection</description>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole without connection</field>
+      </fields>
+    </libpart>
+    <libpart lib="Renegade_Draft" part="Relay_G5V-2_Split">
+      <description>Relay Miniature Omron DPDT</description>
+      <docs>http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_2.pdf</docs>
+      <footprints>
+        <fp>Relay*DPDT*Omron*G5V*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">K</field>
+        <field name="Value">G5V-2_Split</field>
+        <field name="Footprint">Relay_THT:Relay_DPDT_Omron_G5V-2</field>
+        <field name="Datasheet">http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_2.pdf</field>
+        <field name="Description">Relay Miniature Omron DPDT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="6" name="" type="passive"/>
+        <pin num="8" name="" type="passive"/>
+        <pin num="9" name="" type="passive"/>
+        <pin num="11" name="" type="passive"/>
+        <pin num="13" name="" type="passive"/>
+        <pin num="16" name="" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Renegade_Draft">
+      <uri>${KIPRJMOD}/../libraries/Renegade_Draft.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+12V" class="Default">
+      <node ref="JR6" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="K3" pin="1" pintype="passive"/>
+    </net>
+    <net code="2" name="+15V" class="Default">
+      <node ref="C610" pin="1" pintype="passive"/>
+      <node ref="C612" pin="1" pintype="passive"/>
+      <node ref="C614" pin="1" pintype="passive"/>
+      <node ref="C616" pin="1" pintype="passive"/>
+      <node ref="D601" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="JR6" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U10" pin="8" pinfunction="V+_8" pintype="power_in"/>
+      <node ref="U11" pin="8" pinfunction="V+_8" pintype="power_in"/>
+      <node ref="U12" pin="8" pinfunction="V+_8" pintype="power_in"/>
+    </net>
+    <net code="3" name="-15V" class="Default">
+      <node ref="C611" pin="2" pintype="passive"/>
+      <node ref="C613" pin="2" pintype="passive"/>
+      <node ref="C615" pin="2" pintype="passive"/>
+      <node ref="C617" pin="2" pintype="passive"/>
+      <node ref="D602" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="JR6" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="U10" pin="4" pinfunction="V-_4" pintype="power_in"/>
+      <node ref="U11" pin="4" pinfunction="V-_4" pintype="power_in"/>
+      <node ref="U12" pin="4" pinfunction="V-_4" pintype="power_in"/>
+    </net>
+    <net code="4" name="COIL_REV" class="Default">
+      <node ref="JR6" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="K3" pin="16" pintype="passive"/>
+    </net>
+    <net code="5" name="DRY_BUF" class="Default">
+      <node ref="C602" pin="1" pintype="passive"/>
+      <node ref="R612" pin="1" pintype="passive"/>
+      <node ref="U10" pin="1" pintype="output"/>
+      <node ref="U10" pin="2" pinfunction="-_2" pintype="input"/>
+    </net>
+    <net code="6" name="FX_RETURN" class="Default">
+      <node ref="C601" pin="1" pintype="passive"/>
+      <node ref="JR1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+    </net>
+    <net code="7" name="GND" class="Default">
+      <node ref="C610" pin="2" pintype="passive"/>
+      <node ref="C611" pin="1" pintype="passive"/>
+      <node ref="C612" pin="2" pintype="passive"/>
+      <node ref="C613" pin="1" pintype="passive"/>
+      <node ref="C614" pin="2" pintype="passive"/>
+      <node ref="C615" pin="1" pintype="passive"/>
+      <node ref="C616" pin="2" pintype="passive"/>
+      <node ref="C617" pin="1" pintype="passive"/>
+      <node ref="JR1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JR2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JR3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JR4" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="JR5" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JR6" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="K3" pin="6" pintype="passive"/>
+      <node ref="R602" pin="2" pintype="passive"/>
+      <node ref="R603" pin="2" pintype="passive"/>
+      <node ref="R606" pin="2" pintype="passive"/>
+      <node ref="R607" pin="2" pintype="passive"/>
+      <node ref="R609" pin="2" pintype="passive"/>
+      <node ref="R617" pin="2" pintype="passive"/>
+      <node ref="RV601" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="U12" pin="3" pinfunction="+_3" pintype="input"/>
+      <node ref="U12" pin="5" pinfunction="+_5" pintype="input"/>
+    </net>
+    <net code="8" name="MIX_OUT" class="Default">
+      <node ref="C607" pin="2" pintype="passive"/>
+      <node ref="JR5" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R617" pin="1" pintype="passive"/>
+    </net>
+    <net code="9" name="Net-(C601-Pad2)" class="Default">
+      <node ref="C601" pin="2" pintype="passive"/>
+      <node ref="R601" pin="1" pintype="passive"/>
+    </net>
+    <net code="10" name="Net-(C602-Pad2)" class="Default">
+      <node ref="C602" pin="2" pintype="passive"/>
+      <node ref="RV601" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(C603-Pad1)" class="Default">
+      <node ref="C603" pin="1" pintype="passive"/>
+      <node ref="R605" pin="2" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(C605-Pad1)" class="Default">
+      <node ref="C605" pin="1" pintype="passive"/>
+      <node ref="C606" pin="1" pintype="passive"/>
+      <node ref="R608" pin="1" pintype="passive"/>
+      <node ref="U11" pin="1" pintype="output"/>
+    </net>
+    <net code="13" name="Net-(C607-Pad1)" class="Default">
+      <node ref="C607" pin="1" pintype="passive"/>
+      <node ref="R616" pin="2" pintype="passive"/>
+    </net>
+    <net code="14" name="Net-(D601-A)" class="Default">
+      <node ref="D601" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D602" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R601" pin="2" pintype="passive"/>
+      <node ref="R602" pin="1" pintype="passive"/>
+      <node ref="U10" pin="3" pinfunction="+_3" pintype="input"/>
+    </net>
+    <net code="15" name="Net-(K3-Pad4)" class="Default">
+      <node ref="K3" pin="4" pintype="passive"/>
+      <node ref="R610" pin="2" pintype="passive"/>
+      <node ref="R611" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="Net-(R604-Pad1)" class="Default">
+      <node ref="R604" pin="1" pintype="passive"/>
+      <node ref="R605" pin="1" pintype="passive"/>
+      <node ref="U10" pin="7" pintype="output"/>
+    </net>
+    <net code="17" name="Net-(R615-Pad1)" class="Default">
+      <node ref="R615" pin="1" pintype="passive"/>
+      <node ref="R616" pin="1" pintype="passive"/>
+      <node ref="U12" pin="7" pintype="output"/>
+    </net>
+    <net code="18" name="Net-(U10B-+)" class="Default">
+      <node ref="RV601" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U10" pin="5" pinfunction="+_5" pintype="input"/>
+    </net>
+    <net code="19" name="Net-(U10B--)" class="Default">
+      <node ref="R603" pin="1" pintype="passive"/>
+      <node ref="R604" pin="2" pintype="passive"/>
+      <node ref="U10" pin="6" pinfunction="-_6" pintype="input"/>
+    </net>
+    <net code="20" name="Net-(U11A-+)" class="Default">
+      <node ref="C604" pin="2" pintype="passive"/>
+      <node ref="R606" pin="1" pintype="passive"/>
+      <node ref="U11" pin="3" pinfunction="+_3" pintype="input"/>
+    </net>
+    <net code="21" name="Net-(U11A--)" class="Default">
+      <node ref="C605" pin="2" pintype="passive"/>
+      <node ref="R607" pin="1" pintype="passive"/>
+      <node ref="R608" pin="2" pintype="passive"/>
+      <node ref="U11" pin="2" pinfunction="-_2" pintype="input"/>
+    </net>
+    <net code="22" name="Net-(U11B--)" class="Default">
+      <node ref="R610" pin="1" pintype="passive"/>
+      <node ref="U11" pin="6" pinfunction="-_6" pintype="input"/>
+      <node ref="U11" pin="7" pintype="output"/>
+    </net>
+    <net code="23" name="Net-(U12A--)" class="Default">
+      <node ref="R611" pin="2" pintype="passive"/>
+      <node ref="R612" pin="2" pintype="passive"/>
+      <node ref="R613" pin="2" pintype="passive"/>
+      <node ref="U12" pin="2" pinfunction="-_2" pintype="input"/>
+    </net>
+    <net code="24" name="Net-(U12B--)" class="Default">
+      <node ref="R614" pin="2" pintype="passive"/>
+      <node ref="R615" pin="2" pintype="passive"/>
+      <node ref="U12" pin="6" pinfunction="-_6" pintype="input"/>
+    </net>
+    <net code="25" name="SUM_INV" class="Default">
+      <node ref="R613" pin="1" pintype="passive"/>
+      <node ref="R614" pin="1" pintype="passive"/>
+      <node ref="U12" pin="1" pintype="output"/>
+    </net>
+    <net code="26" name="TANK_IN" class="Default">
+      <node ref="C603" pin="2" pintype="passive"/>
+      <node ref="JR2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+    </net>
+    <net code="27" name="TANK_OUT" class="Default">
+      <node ref="C604" pin="1" pintype="passive"/>
+      <node ref="JR3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+    </net>
+    <net code="28" name="WET_TOP" class="Default">
+      <node ref="C606" pin="2" pintype="passive"/>
+      <node ref="JR4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+    </net>
+    <net code="29" name="WET_W" class="Default">
+      <node ref="JR4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R609" pin="1" pintype="passive"/>
+      <node ref="U11" pin="5" pinfunction="+_5" pintype="input"/>
+    </net>
+    <net code="30" name="unconnected-(K3-Pad8)" class="Default">
+      <node ref="K3" pin="8" pintype="passive+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(K3-Pad9)" class="Default">
+      <node ref="K3" pin="9" pintype="passive+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(K3-Pad11)" class="Default">
+      <node ref="K3" pin="11" pintype="passive+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(K3-Pad13)" class="Default">
+      <node ref="K3" pin="13" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

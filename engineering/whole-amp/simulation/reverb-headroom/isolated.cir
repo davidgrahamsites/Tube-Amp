@@ -1,0 +1,57 @@
+Reverb isolated headroom
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/simulation/models/dm12ax7s.inc"
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/simulation/models/6ca7s.inc"
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+.options method=gear maxord=2 reltol=0.003 abstol=1n vntol=10u gmin=1e-10 rshunt=1e12 cshunt=1e-14
+VPLUS vp 0 15
+VMINUS vn 0 -15
+.options method=gear itl1=500 itl4=500
+VTEST FX_RETURN 0 SIN(0 50 1000)
+CREV_601 FX_RETURN rv_acin 100n
+RREV_601 rv_acin rv_dryin 1meg
+RREV_602 rv_dryin 0 100k
+DREV_601 rv_dryin vp DC
+DREV_602 vn rv_dryin DC
+.model DC D(Is=2.52n Rs=.568 N=1.906 Cjo=4p Tt=4n)
+XREV_10a rv_dryin rv_drybuf vp vn rv_drybuf OPAx134
+CREV_602 rv_drybuf rv_sendtop 22n
+RREV_PT rv_sendtop rv_sendw 90000
+RREV_PB rv_sendw 0 10000
+XREV_10b rv_sendw rv_drvfb vp vn rv_driver OPAx134
+RREV_603 rv_drvfb 0 10k
+RREV_604 rv_driver rv_drvfb 10k
+RREV_605 rv_driver rv_drivecap 220
+CREV_603 rv_drivecap rv_tankin 2.2u
+RREV_TANK rv_tankin rv_ti 58
+LREV_TANK rv_ti 0 127m
+* Independent tank-output electrical injection: NOT an acoustic transfer model.
+VREV_TANK rv_tanksrc 0 DC 0 AC 0
+RREV_OUTT rv_tanksrc rv_to 200
+LREV_OUTT rv_to rv_tankout 409m
+CREV_604 rv_tankout rv_recin 100n
+RREV_606 rv_recin 0 220k
+XREV_11a rv_recin rv_recfb vp vn rv_recout OPAx134
+RREV_607 rv_recfb 0 1k
+RREV_608 rv_recout rv_recfb 100k
+CREV_605 rv_recout rv_recfb 330p
+CREV_606 rv_recout rv_wettop 1u
+RREV_WT rv_wettop rv_wetw 100000
+RREV_WB rv_wetw 0 1
+RREV_609 rv_wetw 0 1meg
+XREV_11b rv_wetw rv_wetbuf vp vn rv_wetbuf OPAx134
+RREV_610 rv_wetbuf rv_wetmute 10k
+RREV_MUTE rv_wetmute 0 1
+RREV_611 rv_wetmute rv_sum 100k
+RDRY FX_RETURN MIX_OUT 100k
+RPI MIX_OUT 0 1meg
+XREV_12a 0 rv_sum vp vn rv_suminv OPAx134
+RREV_613 rv_suminv rv_sum 100k
+RREV_614 rv_suminv rv_outfb 100k
+XREV_12b 0 rv_outfb vp vn rv_outbuf OPAx134
+RREV_615 rv_outbuf rv_outfb 100k
+RREV_616 rv_outbuf rv_outac 100
+CREV_607 rv_outac WET_AC 1u
+RWET WET_AC MIX_OUT 1meg
+RREV_617 WET_AC 0 1meg
+.options method=gear itl1=500 itl4=500
+.end

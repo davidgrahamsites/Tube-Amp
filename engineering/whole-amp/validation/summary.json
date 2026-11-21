@@ -1,0 +1,54 @@
+{
+  "revision": "v0.5 development",
+  "build_ready": false,
+  "boards": {
+    "Main": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    },
+    "Power": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    },
+    "Control": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    },
+    "Reverb": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    }
+  },
+  "integrated": {
+    "same_electrical_pin_partitions_as_v04": true,
+    "old_net_groups": 143,
+    "new_net_groups": 143,
+    "removed_groups": [],
+    "added_groups": []
+  },
+  "Main_erc": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Power_erc": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "Control_erc": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "integrated_erc": {
+    "errors": 0,
+    "warnings": 1
+  },
+  "limitations": [
+    "Native checks do not prove analog layout, thermal behavior, protection coordination, selected-part models or cabinet fit.",
+    "Generic-model overdrive screen stress and dry-path clipping remain unresolved; dirty20mV transient failed.",
+    "Exact remaining purchase parts and internal cabinet fit require further evidence."
+  ]
+}

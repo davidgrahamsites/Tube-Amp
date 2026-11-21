@@ -1,0 +1,56 @@
+Received tank 600R-1 TI OPAx134 electrical analysis
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+VP vp 0 15
+VN vn 0 -15
+VIN input 0 DC 0 AC 1 SIN(0 20 1000)
+RSOURCE input fx 100000
+C601 fx acin 100n
+R601 acin dryin 1meg
+R602 dryin 0 100k
+D601 dryin vp DC
+D602 vn dryin DC
+.model DC D(Is=2.52n Rs=.568 N=1.906 Cjo=4p)
+X10a dryin drybuf vp vn drybuf OPAx134
+C602 drybuf sendtop 22n
+RPT sendtop sendw 75000.0
+RPB sendw 0 25000.0
+X10b sendw drvfb vp vn driver OPAx134
+R603 drvfb 0 10k
+R604 driver drvfb 10k
+R605 driver drivecap 220
+C603 drivecap tankin 2.2u
+RTANK tankin ti 76.0
+LTANK ti 0 0.09472380238689147
+* Independent tank-output electrical injection: NOT an acoustic transfer model.
+VTANK tanksrc 0 DC 0 AC 0
+ROUTT tanksrc to 235.0
+LOUTT to tankout 0.3561400812260138
+C604 tankout recin 100n
+R606 recin 0 220k
+X11a recin recfb vp vn recout OPAx134
+R607 recfb 0 1k
+R608 recout recfb 100k
+C605 recout recfb 330p
+C606 recout wettop 1u
+RWT wettop wetw 50000.0
+RWB wetw 0 50000.0
+R609 wetw 0 1meg
+X11b wetw wetbuf vp vn wetbuf OPAx134
+R610 wetbuf wetmute 10k
+RMUTE wetmute 0 1000000000000.0
+R611 wetmute sum 100k
+R612 fx mix 100k
+X12a 0 sum vp vn suminv OPAx134
+R613 suminv sum 100k
+R614 suminv outfb 100k
+X12b 0 outfb vp vn outbuf OPAx134
+R615 outbuf outfb 100k
+R616 outbuf outac 100
+C607 outac wetac 1u
+R617 wetac 0 1meg
+R618 wetac mix 1meg
+R24 mix 0 10meg
+* Representative original PI input load, excludes nonlinear grid-current/clipping.
+C19 mix pi 22n
+RPI pi 0 1meg
+.end

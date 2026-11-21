@@ -1,0 +1,190 @@
+POWER-CIRCUIT DESIGN MUST-REMEMBERS
+=================================
+
+Design imperatives for a 220 V / 50 Hz tube-amplifier build.
+
+
+MAINS AND SAFETY
+---------------
+
+1. Design for the input range—not just nominal voltage.
+   Specify minimum and maximum mains voltage. Both the main transformer
+   and auxiliary supply must support your 220 V / 50 Hz requirement; do
+   not assume a 60 Hz-only transformer is suitable.
+   Source: https://e2e.ti.com/cfs-file/__key/telligent-evolution-components-attachments/00-196-01-00-00-99-38-35/UL_5F00_Power_5F00_Supply.pdf
+
+2. Provide proper mains isolation.
+   Keep the audio circuit and accessible controls isolated from mains.
+   An isolated transformer's high-voltage secondary can still deliver a
+   dangerous shock.
+   Source: https://e2e.ti.com/cfs-file/__key/telligent-evolution-components-attachments/00-196-01-00-00-99-38-35/UL_5F00_Power_5F00_Supply.pdf
+
+3. Protective earth is permanent.
+   Bond the metal chassis using a dedicated, mechanically secure earth
+   connection. Never switch, fuse, or disconnect protective earth to
+   cure hum.
+   Source: https://www.valvewizard.co.uk/Grounding.pdf
+
+4. A fuse needs more than the correct amp rating.
+   Check voltage rating, AC/DC suitability, breaking capacity,
+   temperature, and time–current behavior. It must tolerate normal
+   startup without permitting damaging fault currents.
+   Source: https://www.littelfuse.com/assetdocs/fuseology-selection-guide?assetguid=e0a12d55-c89a-4e06-94e0-9fe3281f889f
+
+5. Use safety-rated capacitors in mains-filter positions.
+   Use the appropriate X classification across the mains and Y
+   classification for line-to-earth filtering—not an ordinary capacitor
+   with a seemingly adequate voltage rating.
+   Source: https://www.vishay.com/docs/48251/_checklist_safety_caps_vmn_ms7357_1707.pdf
+
+6. Determine creepage and clearance properly.
+   Required spacing depends on working voltage, transients, insulation
+   category, materials, pollution, and altitude. There is no single
+   spacing that makes every high-voltage circuit safe.
+   Source: https://www.ti.com/video/6146024211001
+
+
+LOADS AND COMPONENT RATINGS
+--------------------------
+
+7. Budget every load before choosing the transformer.
+   Include power tubes, screens, preamp stages, added reverb tubes,
+   heaters, relays, indicators, and bleeders—not just the advertised
+   amplifier output power.
+   Source: https://www.valvewizard.co.uk/smoothing.html
+
+8. Transformer winding current is not the same as delivered DC current.
+   Rectifier topology and capacitor-charging pulses determine the
+   required winding RMS-current rating.
+   Source: https://www.hammfg.com/electronics/transformers/rectifier
+
+9. Calculate maximum voltage at high mains, startup, and no load.
+   Before tubes conduct, the supply can rise substantially. Check EVERY
+   filter capacitor, not only the first reservoir capacitor.
+   Source: https://www.hammfg.com/electronics/transformers/rectifier
+
+10. Rate rectifiers for reverse voltage and surge current.
+    Average current alone is insufficient. Bridge and center-tapped
+    arrangements impose different stresses; calculate for the actual
+    circuit.
+    Source: https://www.hammfg.com/electronics/transformers/rectifier
+
+11. Resistors have voltage and pulse limits as well as wattage limits.
+    Check continuous dissipation, startup pulses, and maximum working
+    voltage—especially for dropping, balancing, and discharge resistors.
+    Source: https://origin-www.vishay.com/en/resistors-fixed/
+
+12. Design thermally, not just electrically.
+    Use the temperature inside the enclosure, not room temperature.
+    Allow cooling space and keep electrolytic capacitors away from hot
+    tubes and power resistors.
+    Source: https://www.tdk-electronics.tdk.com/download/185386/31a5416e653dd6e4e428b8208d65cc2e/pdf-generaltechnicalinformation.pdf
+
+
+CAPACITORS, FILTERING, AND STORED ENERGY
+--------------------------------------
+
+13. Bigger reservoir capacitors are not automatically better.
+    More capacitance reduces ripple but increases charging-current
+    stress. With a tube rectifier, respect its permitted reservoir
+    capacitance and required source impedance.
+    Source: https://www.valvewizard.co.uk/smoothing.html
+
+14. Check capacitor ripple-current rating—not merely capacitance and voltage.
+    Ripple current causes internal heating. ESR, frequency, ambient
+    temperature, and lifetime all matter.
+    Source: https://www.tdk-electronics.tdk.com/download/185386/31a5416e653dd6e4e428b8208d65cc2e/pdf-generaltechnicalinformation.pdf
+
+15. Series capacitors do not automatically share voltage equally.
+    Account for leakage differences and provide suitable balancing.
+    Two identical capacitors in series give half the capacitance of one.
+    Source: https://www.tdk-electronics.tdk.com/download/185386/31a5416e653dd6e4e428b8208d65cc2e/pdf-generaltechnicalinformation.pdf
+
+16. Provide discharge paths for all high-voltage capacitor banks.
+    Ensure switches cannot leave a charged section isolated from its
+    bleeder. Verify residual voltage before touching anything:
+    UNPLUGGED DOES NOT MEAN DISCHARGED.
+    Source: https://fluke.com.au/en-au/learn/blog/digital-multimeters/how-to-measure-capacitance
+
+
+GROUNDING AND PHYSICAL LAYOUT
+----------------------------
+
+17. Design the return-current paths explicitly.
+    Ground symbols do not make physical wires electrically identical.
+    Keep rectifier-charging and power-stage currents out of sensitive
+    input and reverb-recovery returns.
+    Source: https://www.valvewizard.co.uk/Grounding.pdf
+
+18. Keep the transformer–rectifier–reservoir charging loop compact.
+    Connect that noisy section directly together rather than letting its
+    current circulate through the audio ground wiring.
+    Source: https://www.valvewizard.co.uk/Grounding.pdf
+
+19. Provide local filtering and decoupling.
+    A large capacitor elsewhere in the enclosure is not a substitute
+    for a short local supply-and-return loop. Give sensitive amplifier
+    stages appropriately filtered supply nodes.
+    Source: https://www.valvewizard.co.uk/smoothing.html
+
+20. Wiring and connectors are part of the safety design.
+    Check current capacity, insulation voltage, temperature suitability,
+    mechanical security, and strain relief—not merely whether the
+    connector fits.
+    Source: https://e2e.ti.com/cfs-file/__key/telligent-evolution-components-attachments/00-196-01-00-00-99-38-35/UL_5F00_Power_5F00_Supply.pdf
+
+
+TUBE HEATERS AND SWITCHING CONTROLS
+---------------------------------
+
+21. Check heater voltage under actual load.
+    Include every added tube in the current budget, provide a deliberate
+    heater reference, and check heater-to-cathode voltage limits—including
+    during startup.
+    Source: https://www.valvewizard.co.uk/heater.html
+
+22. Do not casually share an elevated heater supply with grounded controls.
+    Connecting a ground-referenced relay circuit can defeat the heater
+    elevation. Establish the reference and isolation arrangement before
+    sharing a winding.
+    Source: https://www.valvewizard.co.uk/heater.html
+
+23. Protect relay drivers from inductive kickback.
+    Use an appropriately rated driver and flyback/clamp arrangement.
+    Account for the current when multiple relays are energized together.
+    Source: https://www.ti.com/product/ULN2003V12
+
+24. Keep the footswitch interface safely low voltage.
+    Maintain adequate insulation between its accessible wiring and
+    mains/high-voltage circuits—including across relay contacts and
+    coils. A low nominal supply voltage alone does not establish safety.
+    Source: https://e2e.ti.com/cfs-file/__key/telligent-evolution-components-attachments/00-196-01-00-00-99-38-35/UL_5F00_Power_5F00_Supply.pdf
+
+25. Check regulators at both extremes.
+    Minimum input must provide enough regulation headroom; maximum input
+    and load must not overheat the device. Follow its output-capacitor
+    and layout requirements.
+    Source: https://www.ti.com/lit/gpn/tps715
+
+
+FAILURE MODES AND VERIFICATION
+------------------------------
+
+26. Check more than normal operation.
+    Review startup, shutdown, no load, overload, and credible
+    component-open/component-short failures. Protection must work when
+    something fails—not only when everything is healthy.
+    Source: https://e2e.ti.com/cfs-file/__key/telligent-evolution-components-attachments/00-196-01-00-00-99-38-35/UL_5F00_Power_5F00_Supply.pdf
+
+27. Treat oscilloscope grounding as part of the circuit.
+    An ordinary bench scope's ground clip is usually earth-connected.
+    Use correctly rated differential or isolated measurement equipment
+    where needed; never lift the scope's protective earth.
+    Source: https://www.fluke.com/en-us/learn/blog/oscilloscopes/abcs-of-portable-oscilloscopes-part-3-triggering-and-isolation
+
+28. Require physical verification before calling the design finished.
+    Check protective-earth integrity, insulation, loaded voltages,
+    ripple, temperature, and discharge behavior through a planned
+    commissioning process with qualified high-voltage supervision.
+    A correct-looking schematic is not proof of a safe build.
+    Source: https://e2e.ti.com/cfs-file/__key/telligent-evolution-components-attachments/00-196-01-00-00-99-38-35/UL_5F00_Power_5F00_Supply.pdf

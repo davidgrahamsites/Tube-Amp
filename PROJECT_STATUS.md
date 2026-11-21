@@ -1,0 +1,158 @@
+# Project status
+
+Branch scope: [Electric Guitar Amp](BUILD_VARIANT.md). Acoustic requirements/research below are retained context for the separate acoustic branch. See [build-split decision](brain/records/DEC-009-separate-electric-acoustic-builds.md).
+
+Instrument-use clarification November20: review input compatibility and acoustic voicing for the two guitars described in [user-confirmed requirements](Renegade_Codex_Handoff.md#user-confirmed-requirements) before finalizing input and speaker parts. Pickup models remain pending; no circuit change or new simulation is claimed from this clarification.
+
+Photo intake November 20: [six received tank/meter photographs and DT9205A instructions](engineering/whole-amp/mechanical/review/received-tank-photo-intake-2026-11-20.md) are saved. Label and IN/OUT identification confirmed. User subsequently reported 76 Ω IN / 235 Ω OUT on the DT9205A 2k range, with shorted tips indicating zero. Results and limitations are in the mechanical fit register. The measured-resistance rerun and four-board integration draft are now recorded in [the November 20 review](engineering/whole-amp/reverb-600/review/measured-resistance-results-2026-11-20.md). All eight scoped simulation checks pass; AC coil data and safe drive current remain unknown.
+
+Updated November 20, 2026.
+
+**Current hard constraint: yellow-tweed cabinet delivered.** User confirmed November19. All internal parts and board/chassis geometry must fit this actual unit. Earlier cabinet-stock/purchase questions are historical. PCB outlines are replaceable drafts; the board-only stacking illustration is not the chosen design. Both cabinet and tank are confirmed on hand. A-front and A-rear are user-reported467mm; B depth is user-reported160mm to the instructed rear-edge datum; both opposite speaker-hole spacings are user-reported294mm,18mm below the seller drawing. See the received-versus-drawing comparison. Datums/uncertainty are recorded in the mechanical register.
+
+Current electrical edit surface: [received-tank revision600R-1](engineering/whole-amp/reverb-600/review/review.md). The18-sheet native schematic now implements attenuated send and passive dry/wet mixing for the confirmed600/2250ohm tank. Native check:230parts/597connected pins match;25modeled R/C values/endpoints agree; ERC zero errors plus retained GND/PE warning. Thirteen original amplifier sheets are unchanged. Latest measured-resistance run:18AC/12coil/6transient cases pass8 stated criteria. This is not full amplifier/tank/hardware qualification.
+
+Exact-part coverage now tracks127groups/230references. Selected subset:36MPNs/117references/48groups; dated MOQ estimateRMB335.59. Nine resistor positions added in600R-1. [Selected BOM](engineering/component-selection/selected-engineering-bom.csv) remains partial; live stock and remaining parts are open. Historical boards are preserved. The new pcb-measured-r draft integrates93 footprint changes and current600R-1 reverb nets; Reverb DRC has0 violations/0 unconnected items. Main/Power/Control still have103/38/95 unconnected items after package changes. Populated cabinet fit is not approved. Expression-pedal electronics remain to implement.
+
+Historical Mable quote relayed by the user November12: cabinetRMB726,tankRMB100,shippingRMB100,totalRMB926. Arithmetic checked. Inside dimensions, explicit finish/tank identity and payment acceptance remain unconfirmed in this reply. See [quote record](engineering/cabinet-search/2026-11-12.md). No purchase authorized.
+
+Expression-pedal operation confirmed November12: heel=dry,toe=faceplate REVERB setting,unplugged=normal knob operation. Wet-only control with audio kept inside the amp. [Requirements/work order](engineering/whole-amp/expression-control/requirements.md) saved; circuit/parts/native PCB implementation pending.
+
+## Current revision: original amplifier plus solid-state spring reverb
+
+The user's November 11 scope supersedes the added tube-reverb architecture: keep the original six-tube amp and cabinet choices, add solid-state spring drive/recovery, a faceplate knob that adds wet to constant dry, and a PCB. [DEC-007](brain/records/DEC-007-original-amp-solid-state-reverb.md) records the decisions.
+
+The [v0.4 engineering package](engineering/solid-state-reverb/README.md) includes an 18-sheet native schematic/PDF, 247-row engineering BOM including hardware, build plan and routed 160 x 100mm reverb daughterboard with manufacturing previews. Integrated pin checking covers 229 references/595 connected pins; ERC has zero errors and one retained GND/PE alias warning. The reverb board has 45 fitted components, 115 connected pads, and zero native DRC, unrouted or schematic-parity issues. TI-model AC analysis confirms dry gain is independent of reverb level/mute within the scoped fixture. See [VAL-011](brain/records/VAL-011-solid-state-reverb.md).
+
+Recovered manufacturer drawings for the preferred Mable 5E3 shell show 508mm width, 420mm height, 215/242mm top/bottom depth and 312mm top-control opening. The China supplier still lists the exact cabinet; stock, current material, delivered quote and usable assembled fit remain unconfirmed. Cabinet choice is unchanged.
+
+**Not released for construction or ordering.** Exact HV standby/fuse selection, full chosen-component amplifier simulation, actual tank/parts, chassis fit and physical testing remain open. At v0.4 only the reverb daughterboard was routed; the subsequent v0.5 section below records the routed Main, Power and Control drafts. Prior drafts/source remain preserved. Start follow-up work in `engineering/solid-state-reverb/` and read its build-plan gates before advancing.
+
+## v0.5 whole-amplifier work in progress
+
+The user subsequently required PCB coverage for the whole amplifier. Active work is now in [engineering/whole-amp](engineering/whole-amp/README.md), preserving v0.4. Main, Power and Control board projects and native assembly schematics exist alongside the earlier Reverb board. All three new boards are routed and pass native DRC with zero violations, unconnected items or schematic parity issues. Assembly ERC is clean. A separate integrated v0.5 schematic/PDF, development BOM, terminal schedule and build plan are saved; its electrical pin partitions match v0.4. Parts, functional layout/thermal review, simulation qualification and cabinet fit still prevent a build-ready release.
+
+Full signal-path OP/AC, four successful large-signal cases and24 supply stress cases have been run with explicit model assumptions. Overdrive screen dissipation, dry-path clipping and dirty-channel transient convergence are tracked in the simulation report. November12 numerical changes resolved completion of the dirty20mV/200mV baseline cases. A subsequent combined passive-dry/attenuated-send and4.7k-screen candidate completes80ms at100ns step: nominal screen4.14–4.16W and reverb input1.65Vpeak, plus18AC cases with dry-control independence. Subsequent waveform review found~412kHz ringing and17.5% mix-peak sensitivity when halving the timestep; therefore the transient is not numerically qualified. A separate ideal-transformer low-frequency reference completes80ms; a5ms timestep comparison agrees within0.0055% on mix peak. Its225.77mA B+ current/47.29W ideal load result requires larger-magnetics quote options, not a claimed real output rating. Real-transformer HF behavior remains unqualified. No native circuit update or high-line/actual-part qualification is claimed. See [simulation limits](engineering/whole-amp/simulation/README.md).
+
+The user authorized the prepared supplier inquiry and selected admin@goodgaryapps.com. It was sent to Mable and verified in Sent at06:22 on November11. [Contact record](engineering/whole-amp/evidence/supplier-contact-log.md). No purchase or design upload. Mable replied November11: USD120 cabinet plusUSD10 Shanghai shipping, and8EB2C1B supply possible, but dimensions offered only after purchase. The user requires dimensions before payment and explicitly wants yellow tweed, not black. The cabinet/tank follow-up was sent and verified in Sent November12 at03:23, requesting dimensions before purchase, RMB via WeChat Pay/Alipay and Shanghai delivery; see engineering/cabinet-search/mable-dimensions-followup.txt. [Alternative cabinet research](engineering/cabinet-search/2026-11-12.md) retains the historical Hanlongjia black-cabinet lead, excluded by the user’s yellow-tweed requirement. Mable’s yellow5E3 listing remains the chosen candidate; internal fit remains unconfirmed. Taobao browser search was policy-blocked.
+
+## Historical October 4 work
+
+## Current milestone: one working prototype in the box
+
+## Updated schematic draft created
+
+The user clarified that “Updated schematic” means **create the revision**. The [v0.3 wired native KiCad draft](engineering/updated-schematic/README.md) now has 15 sheets, 204 component references and electrically connected clean/dirty, phase/output, 220V/50Hz mains/control supplies, tube spring reverb and debounced toggle/reset/relay circuits. A separate 11-sheet source baseline and project-local library are preserved alongside it; the imported source and starter remain unchanged.
+
+Fresh native exports and register-to-netlist pin checks pass. Revised ERC has zero errors and one retained GND/PE bond warning; baseline has zero errors and two deliberate net-alias warnings. Preliminary ngspice bias and RC/ideal-Schmitt runs exposed and corrected an insufficient-negative-bias proposal. Corrected nominal reference bias range is approximately -33.6 to -48.1V. This is scoped reference evidence, not selected-component amplifier or safe-bias validation. See [VAL-009](brain/records/VAL-009-updated-schematic-draft.md).
+
+Exact build magnetics/tank/parts, independent source review, nonlinear audio/reverb/integrated simulation, fuse/HV switch stress, relay pops, pedal jack behavior and actual cabinet fit still need review. No fabrication, procurement or energized build is released. The native schematic is the edit surface for follow-ups.
+
+At the user’s request, all fourteen circuit sheets have been redrawn with continuous wires, conventional circuit placement, standard grounds and 71 sheet-interface labels. Fresh native component-value /reference /pin-partition comparison matches v0.2 exactly; ERC retains zero errors and only the existing ground/earth alias warning. The prior label layout is archived. See [VAL-010](brain/records/VAL-010-wired-schematic-redraw.md).
+
+## Prototype milestone context
+
+The user clarified that the first plan is one working prototype that fits the chosen box. The [active prototype plan](plans/renegade-working-prototype/plan.md) now routes source recovery and cabinet measurements into a reviewed fit layout, electrical/physical design, quantity-one procurement planning, staged construction and final in-cabinet testing. It has eight delegable packages; none has been dispatched by this scope correction.
+
+The preferred Mable 5E3 shell remains unverified for fit. The original PPTX is now received and visually inspected; actual cabinet/chassis geometry is still required. The source BOM establishes four 12AX7s and two EL34s before added reverb. The user accepts top-mounted or front-facing main controls; final orientation depends on fit/access/cost. Output target remains unresolved. No prototype price or hardware acceptance has been established.
+
+## Context recovered
+
+- Shared chat: [Modify Amp Schematic Reverb](https://chatgpt.com/share/6ac1cdb0-a724-83e9-9599-a2902e65a795).
+- `CHATGPT_CONVERSATION.md` contains the seven turns returned by the accessible conversation record plus the opening request from the shared page. It does not include original uploaded file contents, screenshots, or a guaranteed complete history.
+- `Renegade_Codex_Handoff.md` is present and has been read.
+- `Renegade_KiCad_Library_Starter.zip` and the extracted `Renegade_Library_Starter` directory are present. Existing files were preserved.
+- `Renegade Tube Amp.pptx` was supplied October 4, 2026. Three embedded schematic/BOM images were extracted byte-for-byte and inspected; the original remains unchanged.
+
+## Starter audit
+
+The starter contains its preview project/schematic, custom symbol library, project library table, documentation, and verification script. The project table references `${KIPRJMOD}/libraries/Renegade_Custom.kicad_sym` under the `Renegade_Custom` nickname.
+
+The supplied `docs/Validation.txt` reports earlier generic structure checks and explicitly says KiCad application loading, native parsing, rendering, ERC, DRC, and simulation were not run. Those historical reports are not fresh validation by this chat. No engineering checks have been performed here.
+
+On October 4, the newly installed MCP server successfully exported the preview schematic to SVG through the installed KiCad CLI, with the source unchanged. This establishes the tested export route only; visual review and electrical checks remain pending.
+
+## KiCad MCP installed
+
+The user-specified `mixelpixx/KiCAD-MCP-Server` stable v2.8.2 is also installed and registered as `kicad_mixelpixx`. Its build, prerequisites, MCP handshake, 244-tool catalog, preview component query and 223-library query passed; the preview source hash is unchanged. Compatible runtime dependency updates leave zero production npm audit findings. Existing Codex settings and the Konnect server were preserved. Restart/reload Codex to load this added server; board mutation and live IPC remain untested. See [VAL-008](brain/records/VAL-008-mixelpixx-kicad-mcp-install.md).
+
+KiCad Agentic MCP (`konnect`) v1.2.0 is installed as a native Apple Silicon binary and registered globally with Codex as `kicad`. Its download digest, stdio initialization, 21-tool startup catalog, preview-project metadata and direct schematic SVG export were checked. KiCad's API is enabled for the next launch. Restart/reload Codex to load the new server; live PCB access requires an open board in KiCad and remains untested. The gateway export route timed out in one check; the direct loaded-tool route succeeded. See [VAL-002](brain/records/VAL-002-kicad-mcp-install.md) for evidence, backups and limitations.
+
+## Original source inspected
+
+After the user's “Updated schematic” message, a fresh comparison found a changed PowerPoint archive hash but identical schematic/BOM image bytes, order, transforms and cropping. No revised circuit content was found in that file; the reason for the package change is unknown and prior intake evidence is preserved. See [VAL-007](brain/records/VAL-007-source-revision-comparison.md). The user subsequently clarified creation of the revised schematic, now documented above.
+
+The missing-source dependency is resolved. [Source inspection](sources/original-ppt/inspection.md) maps all three slides and records the original circuit sections, tube count and part identities. The [as-printed BOM](sources/original-ppt/bom-as-printed.csv) contains 50 source groups with explicit conflicts/unknowns; it is not a procurement release. Native baseline capture and detailed connectivity/rating reconciliation remain pending. See [VAL-003](brain/records/VAL-003-original-ppt-intake.md) for scoped intake evidence.
+
+## 220 V refactor and simulation requirement
+
+The user requires every mains supply to be refactored for 220 V / 50 Hz and simulation with chosen components. P04 now includes matched-model block and integrated analyses before board release. The [simulation contract](simulation/requirements.md) defines model provenance, load/tolerance/startup cases and reproducible evidence. Manufacturer checks identify the source 272FX as 115 V / 60 Hz and the 1650F as a 25 W rated component; neither establishes the redesigned amp's measured power. Bundled ngspice 45.2 was qualified through KiCad's native Python with analytic DC and RC transient checks; see [VAL-004](brain/records/VAL-004-ngspice-qualification.md). Actual component selection, native baseline netlist and amplifier runs remain pending.
+
+## User design imperatives reviewed
+
+All seven supplied text files were read: 364 overlapping numbered items. The [review](<Design Imperatives/review/REVIEW.md>) records applicability and targeted primary-source checks; the originals remain unchanged with hashes in the inventory. Main findings are a mismatched tube-grid citation, a missing second heater datasheet, conditional device/topology rules, and the need to derive numerical circuit/layout/acceptance limits. The planned supply cases now include the verified normal upper boundary of 235.4 V while retaining 242 V as extra engineering stress.
+
+The [prototype checklist](<Design Imperatives/review/prototype-checks.csv>) consolidates 20 evidence areas, all initially pending. It is linked into the active plan and engineering brain via [VAL-006](brain/records/VAL-006-design-imperatives-review.md). This is a document/applicability review with selected citation checks, not verification of every citation, component selection, amplifier simulation or passing hardware tests.
+
+## Future build and sales reference
+
+The requested five-times-skill-plus run is complete: plan-only versions v1 through v4 and [final.md](plans/renegade-five-unit-build/final.md) are saved as future references, rather than the active first milestone. It includes delegable steps, free software/automation limits, sourced PCB/speaker/cabinet/panel leads, an illustrative five-unit budget and a separate commercial/demand branch. The preferred Mable 5E3 shell is only a candidate: dimensions, stock construction and delivered quote remain unresolved.
+
+Preferred-shell cash scenarios are approximately ¥23,115/37,440/63,750 for five, with unpaid owner labor and existing equipment. These are allowances, not landed BOM quotes, and exclude unquoted commercial testing/taxes. No demonstrated buyers or achievable sale price have been established.
+
+Two discoverable skills were created under /Users/appleadmin/.codex/skills/: circuit-design-skill-ladder and physical-design-agent-ladder. Both pass the skill metadata validator. KiCad CLI 10.0.6 was located; research confirmed export/check capabilities and version-specific API limits. No amplifier schematic, PCB or cabinet has been engineered or released in this planning run.
+
+Independent planning dry runs exercised both skills. The circuit run produced a checked task card and correctly blocked fabrication on missing evidence; the physical run detected missing fit evidence and revision mismatch. Its feedback clarified stage-specific deliverables, field requirements and coordinate conventions in the physical skill. These are workflow checks, not hardware validation.
+
+## Supporting instrument: tube matcher design
+
+The user requested a plug-in matching/binning tool, BLE result transfer to macOS, and/or a Raspberry Pi with integrated benchtop display, then explicitly corrected EL84 to **EL34**. [Design v0.1](engineering/tube-matcher/design.md) defines a one-tube-at-a-time EL34/12AX7 instrument: Pi display/inventory, separate measurement controller, independent HV protection, socket cartridges, regulated electrode tests, uncertainty-aware pairing and traceable bins. [DEC-006](brain/records/DEC-006-tube-matcher.md) records the scope and proposals.
+
+Source-linked system/interfaces and reproducible calculations are prepared; [VAL-005](brain/records/VAL-005-tube-matcher-calculations.md) records 13 numerical checks, proposed profile range/anchor arithmetic, a clean module-contract check and successful brain catalog regeneration. No hardware, circuit simulation, native schematic/PCB, working firmware/UI/BLE, procurement release or actual tube measurements are completed. Generic ≤250 V comparison profiles do not establish matching at the amplifier's eventual operating voltages; those points remain unresolved. Audio noise and microphonics require a separate qualified fixture. This supporting design does not change the prototype milestone or approve the amplifier circuit.
+
+The supporting matcher also has an [app/data contract](engineering/tube-matcher/app-data-contract.md) and explicit synthetic import example for a proposed Mac inventory/history application. Records can be retained locally on the Pi and synchronized over resumable BLE or file import; working app/transport implementation remains pending.
+
+## Implementation priorities
+
+The user explicitly authorized Claude delegation for product specifications and related sourcing research. [DEC-002](brain/records/DEC-002-combo-shanghai-automation.md) records the preference and evidence expectations; this authorization update did not dispatch a research task.
+
+The structured engineering brain is initialized under `brain/`. Its contract defines evidence/status handling and ongoing capture; its generated catalog routes to schematic, BOM, component, PCB and manufacture guidance. Start at [brain/INDEX.md](brain/INDEX.md). No amplifier circuit is validated by creating this knowledge base.
+
+1. Reconcile source ambiguities and establish prototype targets while obtaining actual cabinet/chassis geometry; source receipt and initial visual inspection are complete.
+2. Validate the starter using the located KiCad CLI and rendered output; establish circuit targets and a reviewed component-envelope fit layout.
+3. Recreate and simulate the source baseline; select actual parts and co-design/simulate the complete reverb, 220 V / 50 Hz supplies and switching against component and packaging constraints before board release.
+4. Prepare quantity-one costs and reviewed fabrication files, then build and test one complete combo in its box after the required approvals and electrical review.
+
+## Additional Mable catalogue screen — November12
+
+[Review](engineering/component-selection/evidence/mable-catalogue-review-2026-11-12.md) identifies socket/retainer and alternative choke leads. The stocked3.6k JCM800 transformer does not match the7.6k requirement. RFQ expanded with exact compatibility and expression-pedal questions; not sent. No procurement or PCB release.
+
+## November15 parallel selection pass
+
+[Reviewed results](engineering/component-selection/parts-sprint-2026-11-15.md) add32 fitted positions:19resistors,6capacitors,3relays,4diodes. Current total34selectedMPNs/95references/44groups. MOQ subset estimateRMB324.47; dated inventory retained. Exact operating envelopes and remaining qualification/fit checks are documented. Native boards unchanged; no procurement release.
+
+## November19 cabinet and tank fit screen
+
+All three cabinet drawings re-inspected. [Mechanical review](engineering/whole-amp/mechanical/review/fit-review.md) and canonical [fit register](engineering/whole-amp/mechanical/fit-register.json) now record the312mm speaker bolt circle,270mm cutout,204mm offset speaker center and8mm baffle-attachment dimension conflict. The Celestion Seventy80 candidate has297mm PCD and does not fit the unchanged holes. Four current boards total109900mm², exceeding the109220mm² exterior top footprint for a single-plane layout. A two-plane board-only concept remains unqualified in3D. Six tubes, final magnetics, populated heights, speaker depth and tank installation still prevent assembly fit release.
+
+[Tank evidence](engineering/whole-amp/mechanical/review/tank-specifications.md) identifies conflicting Mable MAGT0037/MAGT0046 descriptions. MAGT0046 mini description600/2250ohm contradicts its3spring chart800/2575ohm; dimensions also differ. Do not treat earlier MAGT0046 candidate identity as verified8EB2C1B equivalence. Original Accutronics reference data found, including3.1mA recommended AC drive; not a Mable maximum rating. Focused supplier clarification prepared, not sent. Native boards untouched.
+
+November19 arrival clarification: user confirms BOTH cabinet and reverb tank are here. Exact tank label and basic actual cabinet clearance checks remain to capture. Provide simple ruler/tape instructions; no volume measurement is needed.
+
+## November19 seller-confirmed received tank interface
+
+User relayed seller confirmation:3springs,input600ohm,output2250ohm,medium decay,input insulated/output grounded,no lock,horizontal/open-side-down. This supersedes800/2575 as the tank design basis. Tank and cabinet are already on hand. The reply does not establish exact body dimensions, DC coil resistance, impedance test frequency or drive current; do not infer them from a similar model code. Historical800/2575 simulations are reference runs, not verification of this tank. Record: engineering/whole-amp/mechanical/review/tank-specifications.md. Continue physical identification/low-level characterization, not repeated datasheet inquiries.
+
+## November20 ICM and live feedback checkpoint
+
+Project-wide [materials map](brain/catalog/WORKSPACE.md), [feedback trail](brain/catalog/FEEDBACK.md), complete visible-file inventory and folder contracts now route the existing project in place. [DEC-008](brain/records/DEC-008-continuous-project-memory.md) establishes ongoing capture during active sessions. Native engineering/source files are preserved; no electrical design or release status changes from this record work. The first live measurement was captured immediately: see [fit register](engineering/whole-amp/mechanical/fit-register.json). Follow the [measurement card](engineering/whole-amp/mechanical/review/measurement-guide.md) for C.
+
+November20 A/B/C comparison complete: engineering/whole-amp/mechanical/review/received-vs-drawing.md. Use received294mm speaker mounting pattern for screening; historical312mm drawing-only rejection is superseded for the delivered unit. Complete speaker and assembly fit remain open.
+
+November20 speaker-pattern cross-check: top and bottom adjacent pairs both reported210mm, alongside294mm opposite diagonals. Keep these independent readings; vertical pairs remain to measure. Do not force a square or average into a new mounting diameter. See mechanical register/comparison.
+
+November20 measurement reconciliation: right vertical also210mm; top/bottom/right adjacent readings suggestapproximately210mm square and297mm calculated diagonal, versus294mm tape diagonals. Neither diameter is exact-fit approval. Stop repetitive tape refinements; proceed with preliminary screening and final template/trial-fit verification. See mechanical comparison.
+
+November20 tank identification: user transcribed M8EB2C1B and R2610270015. Mable MAGT0046 specification page and dimensioned drawing saved; prose matches seller600/2250ohm. No full exact-unit electrical datasheet located; model string reused on conflicting listings. See mechanical/review/tank-specifications.md.
+
+November20 tank characterization plan saved: engineering/whole-amp/mechanical/review/tank-characterization-plan.md. Multimeter can establish coil DC resistance; controlled low-level AC testing establishes impedance at recorded conditions. Guaranteed current rating is not inferred from these measurements. Actual tests remain pending; no equipment purchase.

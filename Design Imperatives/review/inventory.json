@@ -1,0 +1,2255 @@
+{
+  "review_date": "2026-10-04",
+  "scope": "All seven files read and compared with prototype requirements; targeted primary-source checks only, not verification of every citation or an amplifier validation. Originals preserved.",
+  "total_files": 7,
+  "total_numbered_rules": 364,
+  "files": [
+    {
+      "file": "audio_tube_amplifier_design_imperatives.txt",
+      "prefix": "TUBE",
+      "bytes": 13571,
+      "sha256": "73ca0565a22a17441623ede7e9a74e11be16791f3eaaeefe0dc0728a2fa62fd0",
+      "numbered_rule_count": 60,
+      "rules": [
+        {
+          "id": "TUBE-001",
+          "number": 1,
+          "line": 14,
+          "first_line": "Specify the intended behavior: clean hi-fi reproduction, clean guitar headroom, deliberate overdrive, or a combination. Do not automatically treat a desirable guitar distortion characteristic as good hi-fi performance."
+        },
+        {
+          "id": "TUBE-002",
+          "number": 2,
+          "line": 16,
+          "first_line": "Define output power together with load, frequency range, and distortion limit. A wattage figure alone is an incomplete design target."
+        },
+        {
+          "id": "TUBE-003",
+          "number": 3,
+          "line": 18,
+          "first_line": "Choose the output tubes, operating voltages, bias, and output transformer together. They are interdependent, not independent shopping decisions."
+        },
+        {
+          "id": "TUBE-004",
+          "number": 4,
+          "line": 20,
+          "first_line": "Distinguish topology from operating class. Push-pull does not automatically mean Class AB, and cathode bias does not automatically mean Class A."
+        },
+        {
+          "id": "TUBE-005",
+          "number": 5,
+          "line": 28,
+          "first_line": "Use a mains-isolated power supply. For your build, specify 220 V, 50 Hz input compatibility for every mains-powered supply, including any separate control supply."
+        },
+        {
+          "id": "TUBE-006",
+          "number": 6,
+          "line": 30,
+          "first_line": "Give protective earth a dedicated, mechanically secure chassis connection. Never switch, fuse, or disconnect protective earth to cure hum. Audio grounding is a separate design problem."
+        },
+        {
+          "id": "TUBE-007",
+          "number": 7,
+          "line": 34,
+          "first_line": "Specify fuses properly: current, time characteristic, voltage, breaking capacity, and location. Check whether secondary faults can bypass the protection; never casually copy a 120 V amplifier’s fuse value."
+        },
+        {
+          "id": "TUBE-008",
+          "number": 8,
+          "line": 36,
+          "first_line": "Provide discharge paths for stored high voltage. Check every capacitor bank and switch position. A bleeder resistor or extinguished indicator is not proof that the circuit is discharged—verify with appropriately rated equipment."
+        },
+        {
+          "id": "TUBE-009",
+          "number": 9,
+          "line": 40,
+          "first_line": "Rate switches for the actual circuit they interrupt. A mains AC rating does not automatically establish suitability for several hundred volts DC."
+        },
+        {
+          "id": "TUBE-010",
+          "number": 10,
+          "line": 42,
+          "first_line": "Determine insulation spacing from actual requirements. Working voltage, transients, insulation category, board material, contamination, and altitude matter; there is no universal “tube-amp clearance” number."
+        },
+        {
+          "id": "TUBE-011",
+          "number": 11,
+          "line": 50,
+          "first_line": "Use the exact tube manufacturer’s datasheet. Verify pinout, heater requirements, voltage limits, dissipation, grid-circuit resistance, and heater-to-cathode limits."
+        },
+        {
+          "id": "TUBE-012",
+          "number": 12,
+          "line": 52,
+          "first_line": "Do not assume tubes sharing a socket are interchangeable. Even common nine-pin dual triodes can have different heater connections."
+        },
+        {
+          "id": "TUBE-013",
+          "number": 13,
+          "line": 56,
+          "first_line": "Calculate idle plate dissipation using plate-to-cathode voltage:"
+        },
+        {
+          "id": "TUBE-014",
+          "number": 14,
+          "line": 62,
+          "first_line": "Check dissipation throughout the output range—not only at idle or full power. In Class AB, the worst operating point can occur between them."
+        },
+        {
+          "id": "TUBE-015",
+          "number": 15,
+          "line": 64,
+          "first_line": "Do not use “70% bias” as a universal design rule. Safe bias depends on operating voltage, reflected load, tube characteristics, and operating class."
+        },
+        {
+          "id": "TUBE-016",
+          "number": 16,
+          "line": 66,
+          "first_line": "Treat screen-grid dissipation separately. Safe plate dissipation does not guarantee safe screens, particularly during overdrive. Size screen resistors for current limiting, heat, and fault-voltage stress."
+        },
+        {
+          "id": "TUBE-017",
+          "number": 17,
+          "line": 74,
+          "first_line": "Give every control grid a defined DC return path. Check normal operation, switching transitions, disconnected controls, and broken potentiometer wipers."
+        },
+        {
+          "id": "TUBE-018",
+          "number": 18,
+          "line": 76,
+          "first_line": "Respect the maximum grid-circuit resistance. Include the relevant grid stopper, grid-leak resistor, and bias-source resistance—not merely the resistor labelled “grid leak.”"
+        },
+        {
+          "id": "TUBE-019",
+          "number": 19,
+          "line": 80,
+          "first_line": "Make adjustable fixed bias fail toward a colder operating point. Limit the adjustment range and address loss of wiper contact."
+        },
+        {
+          "id": "TUBE-020",
+          "number": 20,
+          "line": 82,
+          "first_line": "Check bias during startup, shutdown, and rapid power cycling. Power tubes must not remain conducting with substantial B+ but inadequate negative bias."
+        },
+        {
+          "id": "TUBE-021",
+          "number": 21,
+          "line": 84,
+          "first_line": "Do not treat cathode bias as automatic protection. Verify resistor dissipation, bypass-capacitor stress, current sharing, and behavior under sustained drive."
+        },
+        {
+          "id": "TUBE-022",
+          "number": 22,
+          "line": 92,
+          "first_line": "Match reflected primary impedance to the operating point. The transformer reflects the connected speaker load:"
+        },
+        {
+          "id": "TUBE-023",
+          "number": 23,
+          "line": 96,
+          "first_line": "Do not confuse winding DC resistance with rated audio impedance. A resistance-meter reading is not the transformer’s specified primary load."
+        },
+        {
+          "id": "TUBE-024",
+          "number": 24,
+          "line": 98,
+          "first_line": "Specify bass performance at the required output power. A transformer that handles its rated watts at guitar frequencies may not handle the same power at deep hi-fi bass frequencies."
+        },
+        {
+          "id": "TUBE-025",
+          "number": 25,
+          "line": 102,
+          "first_line": "Use a transformer suitable for the DC operating conditions. Conventional single-ended stages need DC-current capability and an appropriate core gap; push-pull stages require attention to current imbalance."
+        },
+        {
+          "id": "TUBE-026",
+          "number": 26,
+          "line": 106,
+          "first_line": "Account for plate swings above B+. Insulation and component ratings must accommodate signal peaks and inductive transients. Do not drive the amplifier without its intended load unless unloaded operation has been specifically protected and validated."
+        },
+        {
+          "id": "TUBE-027",
+          "number": 27,
+          "line": 114,
+          "first_line": "Budget gain and headroom stage by stage. Decide which stage should clip first; include losses from tone controls, mixers, effects loops, and feedback."
+        },
+        {
+          "id": "TUBE-028",
+          "number": 28,
+          "line": 116,
+          "first_line": "Account for loading between stages. Tone controls and volume pots affect the preceding stage’s gain, frequency response, and available signal swing."
+        },
+        {
+          "id": "TUBE-029",
+          "number": 29,
+          "line": 118,
+          "first_line": "Calculate coupling-capacitor behavior using the actual surrounding circuit. Larger capacitors are not automatically better; excessively low-frequency response can be undesirable."
+        },
+        {
+          "id": "TUBE-030",
+          "number": 30,
+          "line": 122,
+          "first_line": "Control blocking distortion. Grid current can charge coupling capacitors and temporarily shift bias; assess recovery after hard clipping, not just the clipped waveform."
+        },
+        {
+          "id": "TUBE-031",
+          "number": 31,
+          "line": 124,
+          "first_line": "Put grid stoppers close to the tube’s grid pin. Long wiring after the resistor undermines parasitic-oscillation suppression. Choose values for stability, overload behavior, and bandwidth together."
+        },
+        {
+          "id": "TUBE-032",
+          "number": 32,
+          "line": 128,
+          "first_line": "Give the phase inverter adequate loaded output swing. Balance alone is insufficient: check drive capability and clipping behavior with the actual power-tube grid networks attached."
+        },
+        {
+          "id": "TUBE-033",
+          "number": 33,
+          "line": 136,
+          "first_line": "Design for high mains and light-load/startup voltage. B+ can rise before the tubes conduct; normal warm operating voltage is not the worst-case capacitor voltage."
+        },
+        {
+          "id": "TUBE-034",
+          "number": 34,
+          "line": 138,
+          "first_line": "Do not equate transformer AC current with available DC current. Capacitor-input rectifiers draw charging pulses that increase winding RMS current and heating."
+        },
+        {
+          "id": "TUBE-035",
+          "number": 35,
+          "line": 142,
+          "first_line": "Match reservoir capacitance to the rectifier and transformer. More capacitance increases charging stress; tube rectifiers have specific reservoir-capacitance and source-resistance requirements."
+        },
+        {
+          "id": "TUBE-036",
+          "number": 36,
+          "line": 144,
+          "first_line": "Give sensitive stages suitable supply decoupling. Filtering must suppress ripple and prevent stages from coupling through their shared supply."
+        },
+        {
+          "id": "TUBE-037",
+          "number": 37,
+          "line": 146,
+          "first_line": "For series electrolytics, check voltage sharing and reduced capacitance. Design balancing resistors from capacitor leakage and operating conditions, and verify their voltage and power ratings."
+        },
+        {
+          "id": "TUBE-038",
+          "number": 38,
+          "line": 150,
+          "first_line": "Do not add standby circuitry by habit. Define its purpose, switching stress, discharge behavior, and effect on bias. A standby switch is not a substitute for correctly rated components."
+        },
+        {
+          "id": "TUBE-039",
+          "number": 39,
+          "line": 158,
+          "first_line": "Check heater voltage at the sockets under load, across the intended mains range—not only at the transformer terminals."
+        },
+        {
+          "id": "TUBE-040",
+          "number": 40,
+          "line": 160,
+          "first_line": "Budget all heater current, including added reverb tubes and indicators. Rectified DC heater supplies require extra transformer-current allowance."
+        },
+        {
+          "id": "TUBE-041",
+          "number": 41,
+          "line": 162,
+          "first_line": "Give the heater supply one deliberate reference scheme. Avoid floating heaters and conflicting references on opposite sides of a rectifier."
+        },
+        {
+          "id": "TUBE-042",
+          "number": 42,
+          "line": 164,
+          "first_line": "Check heater-to-cathode voltage for every stage, including startup. Cathode followers and elevated-cathode circuits may require heater elevation or separate windings."
+        },
+        {
+          "id": "TUBE-043",
+          "number": 43,
+          "line": 166,
+          "first_line": "Keep heater current loops small. Twist AC heater pairs and separate them from sensitive signal wiring. DC heaters must actually be clean; poorly filtered DC can introduce noise."
+        },
+        {
+          "id": "TUBE-044",
+          "number": 44,
+          "line": 174,
+          "first_line": "Design current-return paths—not just ground symbols. Do not let the chassis become an accidental shared signal-return conductor."
+        },
+        {
+          "id": "TUBE-045",
+          "number": 45,
+          "line": 176,
+          "first_line": "Keep rectifier charging currents out of input-stage returns. Place the rectifier–reservoir loop compactly and route its return deliberately."
+        },
+        {
+          "id": "TUBE-046",
+          "number": 46,
+          "line": 178,
+          "first_line": "Ground each stage with its associated local supply-decoupling return. Prevent output-stage and control-circuit currents from sharing sensitive input paths."
+        },
+        {
+          "id": "TUBE-047",
+          "number": 47,
+          "line": 180,
+          "first_line": "Separate low-level inputs from large-signal outputs. Short grid wiring and sensible stage placement help prevent unintended feedback."
+        },
+        {
+          "id": "TUBE-048",
+          "number": 48,
+          "line": 182,
+          "first_line": "Plan chassis connections at jacks, pots, shields, and mounting hardware. Accidental additional connections can defeat an otherwise sound grounding scheme."
+        },
+        {
+          "id": "TUBE-049",
+          "number": 49,
+          "line": 190,
+          "first_line": "Verify feedback polarity with the actual transformer connections. Incorrect phasing can turn intended negative feedback into positive feedback."
+        },
+        {
+          "id": "TUBE-050",
+          "number": 50,
+          "line": 192,
+          "first_line": "Validate stability beyond the audible band. An amplifier can sound normal while suffering ultrasonic oscillation."
+        },
+        {
+          "id": "TUBE-051",
+          "number": 51,
+          "line": 194,
+          "first_line": "Test feedback with realistic reactive loads and control extremes. Presence, resonance, feedback switches, and output-tap changes can alter loop behavior."
+        },
+        {
+          "id": "TUBE-052",
+          "number": 52,
+          "line": 196,
+          "first_line": "Do not assume more feedback is always better. It changes gain, distortion, output impedance, clipping behavior, and stability requirements."
+        },
+        {
+          "id": "TUBE-053",
+          "number": 53,
+          "line": 204,
+          "first_line": "Check voltage ratings as well as wattage. Screen resistors, plate resistors, and supply-dropping resistors may face startup or fault stresses far beyond their normal dissipation."
+        },
+        {
+          "id": "TUBE-054",
+          "number": 54,
+          "line": 206,
+          "first_line": "Design for the temperature inside the finished enclosure. Keep heat-sensitive components away from tubes and hot resistors; validate after the amplifier reaches operating temperature."
+        },
+        {
+          "id": "TUBE-055",
+          "number": 55,
+          "line": 210,
+          "first_line": "Verify every symbol-to-footprint pin mapping against the physical part. Include tube-socket viewing direction, transformer leads, switched jacks, and relay contact states."
+        },
+        {
+          "id": "TUBE-056",
+          "number": 56,
+          "line": 212,
+          "first_line": "Never defeat oscilloscope protective earth. Ordinary bench-scope ground clips are generally earth-referenced; use properly rated differential or isolated measurement equipment where required."
+        },
+        {
+          "id": "TUBE-057",
+          "number": 57,
+          "line": 216,
+          "first_line": "Test before relying on listening impressions. Use a suitably rated resistive dummy load for power measurements, then validate reactive-load stability, clipping recovery, hum, temperature, bias drift, and startup/shutdown behavior. Record expected voltages and test conditions."
+        },
+        {
+          "id": "TUBE-058",
+          "number": 58,
+          "line": 224,
+          "first_line": "Match the reverb tank, driver, and transformer as a system. Tank impedance is frequency-dependent; the driver needs adequate current, not merely voltage gain."
+        },
+        {
+          "id": "TUBE-059",
+          "number": 59,
+          "line": 226,
+          "first_line": "Protect the reverb driver against an unplugged tank and flyback transients. Keep its transformer away from magnetic hum sources and its low-level recovery wiring away from the driver."
+        },
+        {
+          "id": "TUBE-060",
+          "number": 60,
+          "line": 230,
+          "first_line": "Keep the external footswitch interface touch-safe and low voltage. Specify relay isolation and switching ratings; separately address debounce, audio-pop suppression, coil transients, startup defaults, and TRS insertion shorts. Debouncing alone does not make audio switching quiet."
+        }
+      ]
+    },
+    {
+      "file": "China_220V_Power_Supply_Design_Imperatives.txt",
+      "prefix": "CN",
+      "bytes": 13254,
+      "sha256": "64a294b901e648091858c2ecbf7d376bec00e0f1efd06dc15d99c8a346ee15d0",
+      "numbered_rule_count": 40,
+      "rules": [
+        {
+          "id": "CN-001",
+          "number": 1,
+          "line": 13,
+          "first_line": "Design for 220 V AC RMS, 50 Hz."
+        },
+        {
+          "id": "CN-002",
+          "number": 2,
+          "line": 17,
+          "first_line": "Do not design around exactly 220 V."
+        },
+        {
+          "id": "CN-003",
+          "number": 3,
+          "line": 22,
+          "first_line": "Require an explicit 50 Hz transformer rating."
+        },
+        {
+          "id": "CN-004",
+          "number": 4,
+          "line": 26,
+          "first_line": "Remember RMS versus peak voltage."
+        },
+        {
+          "id": "CN-005",
+          "number": 5,
+          "line": 38,
+          "first_line": "Provide safety isolation for user-accessible circuits."
+        },
+        {
+          "id": "CN-006",
+          "number": 6,
+          "line": 43,
+          "first_line": "Use protective earth for the metal-chassis tube-amp build."
+        },
+        {
+          "id": "CN-007",
+          "number": 7,
+          "line": 48,
+          "first_line": "Never switch, fuse, or insert a resistor into protective earth."
+        },
+        {
+          "id": "CN-008",
+          "number": 8,
+          "line": 52,
+          "first_line": "Keep neutral, protective earth, and signal return conceptually separate."
+        },
+        {
+          "id": "CN-009",
+          "number": 9,
+          "line": 56,
+          "first_line": "Protect the live conductor; never fuse only neutral."
+        },
+        {
+          "id": "CN-010",
+          "number": 10,
+          "line": 61,
+          "first_line": "Specify the complete power-entry assembly."
+        },
+        {
+          "id": "CN-011",
+          "number": 11,
+          "line": 71,
+          "first_line": "Select the fuse from actual input requirements."
+        },
+        {
+          "id": "CN-012",
+          "number": 12,
+          "line": 76,
+          "first_line": "Check voltage ratings as well as amperage."
+        },
+        {
+          "id": "CN-013",
+          "number": 13,
+          "line": 81,
+          "first_line": "Design for inrush current."
+        },
+        {
+          "id": "CN-014",
+          "number": 14,
+          "line": 86,
+          "first_line": "Treat MOV protection as a coordinated safety circuit."
+        },
+        {
+          "id": "CN-015",
+          "number": 15,
+          "line": 91,
+          "first_line": "Use the correct safety capacitors."
+        },
+        {
+          "id": "CN-016",
+          "number": 16,
+          "line": 96,
+          "first_line": "Budget total leakage current."
+        },
+        {
+          "id": "CN-017",
+          "number": 17,
+          "line": 104,
+          "first_line": "Obtain loaded and unloaded secondary voltages."
+        },
+        {
+          "id": "CN-018",
+          "number": 18,
+          "line": 109,
+          "first_line": "Do not equate secondary AC current with available DC current."
+        },
+        {
+          "id": "CN-019",
+          "number": 19,
+          "line": 113,
+          "first_line": "Follow the manufacturer's winding-phasing diagram."
+        },
+        {
+          "id": "CN-020",
+          "number": 20,
+          "line": 117,
+          "first_line": "Do not casually parallel secondary windings."
+        },
+        {
+          "id": "CN-021",
+          "number": 21,
+          "line": 126,
+          "first_line": "Calculate full-wave reservoir ripple at 100 Hz—not 120 Hz."
+        },
+        {
+          "id": "CN-022",
+          "number": 22,
+          "line": 134,
+          "first_line": "Rate capacitors for maximum voltage, not normal operating voltage."
+        },
+        {
+          "id": "CN-023",
+          "number": 23,
+          "line": 138,
+          "first_line": "Choose rectifiers for the actual topology."
+        },
+        {
+          "id": "CN-024",
+          "number": 24,
+          "line": 142,
+          "first_line": "Check capacitor ripple-current ratings and temperature."
+        },
+        {
+          "id": "CN-025",
+          "number": 25,
+          "line": 146,
+          "first_line": "Provide permanent discharge paths for hazardous capacitor banks."
+        },
+        {
+          "id": "CN-026",
+          "number": 26,
+          "line": 154,
+          "first_line": "Never assume “off” means discharged."
+        },
+        {
+          "id": "CN-027",
+          "number": 27,
+          "line": 162,
+          "first_line": "Calculate creepage and clearance rather than choosing a generic gap."
+        },
+        {
+          "id": "CN-028",
+          "number": 28,
+          "line": 166,
+          "first_line": "Check the complete physical insulation barrier."
+        },
+        {
+          "id": "CN-029",
+          "number": 29,
+          "line": 171,
+          "first_line": "Account for humidity, contamination, and altitude."
+        },
+        {
+          "id": "CN-030",
+          "number": 30,
+          "line": 176,
+          "first_line": "Validate temperatures inside the finished enclosure."
+        },
+        {
+          "id": "CN-031",
+          "number": 31,
+          "line": 185,
+          "first_line": "Convert every mains-powered branch—not only the main transformer."
+        },
+        {
+          "id": "CN-032",
+          "number": 32,
+          "line": 190,
+          "first_line": "Include the added reverb tubes in the heater budget."
+        },
+        {
+          "id": "CN-033",
+          "number": 33,
+          "line": 194,
+          "first_line": "Do not confuse center-tapped and bridge rectification."
+        },
+        {
+          "id": "CN-034",
+          "number": 34,
+          "line": 198,
+          "first_line": "Check heater-to-cathode voltage limits."
+        },
+        {
+          "id": "CN-035",
+          "number": 35,
+          "line": 203,
+          "first_line": "Keep footswitch connections safely low-voltage and isolated from hazardous"
+        },
+        {
+          "id": "CN-036",
+          "number": 36,
+          "line": 212,
+          "first_line": "Require documentation for safety-critical parts."
+        },
+        {
+          "id": "CN-037",
+          "number": 37,
+          "line": 217,
+          "first_line": "Include electrical-safety testing in the design plan."
+        },
+        {
+          "id": "CN-038",
+          "number": 38,
+          "line": 222,
+          "first_line": "Do not mistake a Variac for isolation."
+        },
+        {
+          "id": "CN-039",
+          "number": 39,
+          "line": 226,
+          "first_line": "Never lift an oscilloscope's protective earth."
+        },
+        {
+          "id": "CN-040",
+          "number": 40,
+          "line": 231,
+          "first_line": "Use the applicable Chinese safety standard, not an obsolete schematic's"
+        }
+      ]
+    },
+    {
+      "file": "power_circuit_design_imperatives.txt",
+      "prefix": "PWR",
+      "bytes": 9379,
+      "sha256": "d3da1d7e64f36282c5c72369b2aea72d5a2bde6134eb996177928cb156224ba0",
+      "numbered_rule_count": 28,
+      "rules": [
+        {
+          "id": "PWR-001",
+          "number": 1,
+          "line": 10,
+          "first_line": "Design for the input range—not just nominal voltage."
+        },
+        {
+          "id": "PWR-002",
+          "number": 2,
+          "line": 16,
+          "first_line": "Provide proper mains isolation."
+        },
+        {
+          "id": "PWR-003",
+          "number": 3,
+          "line": 22,
+          "first_line": "Protective earth is permanent."
+        },
+        {
+          "id": "PWR-004",
+          "number": 4,
+          "line": 28,
+          "first_line": "A fuse needs more than the correct amp rating."
+        },
+        {
+          "id": "PWR-005",
+          "number": 5,
+          "line": 34,
+          "first_line": "Use safety-rated capacitors in mains-filter positions."
+        },
+        {
+          "id": "PWR-006",
+          "number": 6,
+          "line": 40,
+          "first_line": "Determine creepage and clearance properly."
+        },
+        {
+          "id": "PWR-007",
+          "number": 7,
+          "line": 50,
+          "first_line": "Budget every load before choosing the transformer."
+        },
+        {
+          "id": "PWR-008",
+          "number": 8,
+          "line": 56,
+          "first_line": "Transformer winding current is not the same as delivered DC current."
+        },
+        {
+          "id": "PWR-009",
+          "number": 9,
+          "line": 61,
+          "first_line": "Calculate maximum voltage at high mains, startup, and no load."
+        },
+        {
+          "id": "PWR-010",
+          "number": 10,
+          "line": 66,
+          "first_line": "Rate rectifiers for reverse voltage and surge current."
+        },
+        {
+          "id": "PWR-011",
+          "number": 11,
+          "line": 72,
+          "first_line": "Resistors have voltage and pulse limits as well as wattage limits."
+        },
+        {
+          "id": "PWR-012",
+          "number": 12,
+          "line": 77,
+          "first_line": "Design thermally, not just electrically."
+        },
+        {
+          "id": "PWR-013",
+          "number": 13,
+          "line": 87,
+          "first_line": "Bigger reservoir capacitors are not automatically better."
+        },
+        {
+          "id": "PWR-014",
+          "number": 14,
+          "line": 93,
+          "first_line": "Check capacitor ripple-current rating—not merely capacitance and voltage."
+        },
+        {
+          "id": "PWR-015",
+          "number": 15,
+          "line": 98,
+          "first_line": "Series capacitors do not automatically share voltage equally."
+        },
+        {
+          "id": "PWR-016",
+          "number": 16,
+          "line": 103,
+          "first_line": "Provide discharge paths for all high-voltage capacitor banks."
+        },
+        {
+          "id": "PWR-017",
+          "number": 17,
+          "line": 113,
+          "first_line": "Design the return-current paths explicitly."
+        },
+        {
+          "id": "PWR-018",
+          "number": 18,
+          "line": 119,
+          "first_line": "Keep the transformer–rectifier–reservoir charging loop compact."
+        },
+        {
+          "id": "PWR-019",
+          "number": 19,
+          "line": 124,
+          "first_line": "Provide local filtering and decoupling."
+        },
+        {
+          "id": "PWR-020",
+          "number": 20,
+          "line": 130,
+          "first_line": "Wiring and connectors are part of the safety design."
+        },
+        {
+          "id": "PWR-021",
+          "number": 21,
+          "line": 140,
+          "first_line": "Check heater voltage under actual load."
+        },
+        {
+          "id": "PWR-022",
+          "number": 22,
+          "line": 146,
+          "first_line": "Do not casually share an elevated heater supply with grounded controls."
+        },
+        {
+          "id": "PWR-023",
+          "number": 23,
+          "line": 152,
+          "first_line": "Protect relay drivers from inductive kickback."
+        },
+        {
+          "id": "PWR-024",
+          "number": 24,
+          "line": 157,
+          "first_line": "Keep the footswitch interface safely low voltage."
+        },
+        {
+          "id": "PWR-025",
+          "number": 25,
+          "line": 163,
+          "first_line": "Check regulators at both extremes."
+        },
+        {
+          "id": "PWR-026",
+          "number": 26,
+          "line": 173,
+          "first_line": "Check more than normal operation."
+        },
+        {
+          "id": "PWR-027",
+          "number": 27,
+          "line": 179,
+          "first_line": "Treat oscilloscope grounding as part of the circuit."
+        },
+        {
+          "id": "PWR-028",
+          "number": 28,
+          "line": 185,
+          "first_line": "Require physical verification before calling the design finished."
+        }
+      ]
+    },
+    {
+      "file": "Audio_Circuit_Design_Imperatives.txt",
+      "prefix": "AUD",
+      "bytes": 16383,
+      "sha256": "753dbd7324a9a73d5b70c06a6a21c5f45ae93bcbee83144e89b68b28e030ebc6",
+      "numbered_rule_count": 50,
+      "rules": [
+        {
+          "id": "AUD-001",
+          "number": 1,
+          "line": 11,
+          "first_line": "Define nominal and maximum signal levels—not just “audio level.” Specify"
+        },
+        {
+          "id": "AUD-002",
+          "number": 2,
+          "line": 16,
+          "first_line": "Budget headroom at every stage. Include maximum input, gain settings,"
+        },
+        {
+          "id": "AUD-003",
+          "number": 3,
+          "line": 20,
+          "first_line": "Decide where distortion is intentional. In a guitar amp, clipping may be"
+        },
+        {
+          "id": "AUD-004",
+          "number": 4,
+          "line": 25,
+          "first_line": "Calculate loading with everything connected. Volume controls, tone"
+        },
+        {
+          "id": "AUD-005",
+          "number": 5,
+          "line": 30,
+          "first_line": "Usually bridge impedances rather than match them. For voltage-signal"
+        },
+        {
+          "id": "AUD-006",
+          "number": 6,
+          "line": 40,
+          "first_line": "Every high-impedance input needs a defined DC return path. A coupling"
+        },
+        {
+          "id": "AUD-007",
+          "number": 7,
+          "line": 45,
+          "first_line": "Treat a single-supply midpoint reference as a real circuit. It needs"
+        },
+        {
+          "id": "AUD-008",
+          "number": 8,
+          "line": 51,
+          "first_line": "Calculate coupling-capacitor cutoff frequencies. For a simple one-pole"
+        },
+        {
+          "id": "AUD-009",
+          "number": 9,
+          "line": 60,
+          "first_line": "Avoid unnecessary DC across volume-control tracks and switching"
+        },
+        {
+          "id": "AUD-010",
+          "number": 10,
+          "line": 66,
+          "first_line": "Choose capacitors by electrical behavior, not “audio-grade” labeling."
+        },
+        {
+          "id": "AUD-011",
+          "number": 11,
+          "line": 76,
+          "first_line": "Choose the input device for the source impedance. Low voltage noise"
+        },
+        {
+          "id": "AUD-012",
+          "number": 12,
+          "line": 80,
+          "first_line": "Do not make every resistor enormous—or tiny. Larger resistances can"
+        },
+        {
+          "id": "AUD-013",
+          "number": 13,
+          "line": 84,
+          "first_line": "Protect the first low-level stages especially carefully. Noise"
+        },
+        {
+          "id": "AUD-014",
+          "number": 14,
+          "line": 89,
+          "first_line": "Specify noise over a bandwidth. A noise-density figure in nV/√Hz is not"
+        },
+        {
+          "id": "AUD-015",
+          "number": 15,
+          "line": 94,
+          "first_line": "Stop radio-frequency interference before it reaches a nonlinear input"
+        },
+        {
+          "id": "AUD-016",
+          "number": 16,
+          "line": 104,
+          "first_line": "Check noise gain as well as signal gain. Op-amp stability depends on"
+        },
+        {
+          "id": "AUD-017",
+          "number": 17,
+          "line": 109,
+          "first_line": "Check input common-mode range and loaded output swing. “The supply"
+        },
+        {
+          "id": "AUD-018",
+          "number": 18,
+          "line": 114,
+          "first_line": "Check slew rate at the largest required signal. A sine wave requires"
+        },
+        {
+          "id": "AUD-019",
+          "number": 19,
+          "line": 123,
+          "first_line": "Treat cables as capacitive loads. A circuit that works into a resistor"
+        },
+        {
+          "id": "AUD-020",
+          "number": 20,
+          "line": 127,
+          "first_line": "Do not assume a faster op-amp is a drop-in upgrade. Recheck feedback"
+        },
+        {
+          "id": "AUD-021",
+          "number": 21,
+          "line": 136,
+          "first_line": "Draw the return-current paths, not just the signal wires. “Ground” is"
+        },
+        {
+          "id": "AUD-022",
+          "number": 22,
+          "line": 140,
+          "first_line": "Keep noisy return currents out of sensitive input references. Speaker,"
+        },
+        {
+          "id": "AUD-023",
+          "number": 23,
+          "line": 145,
+          "first_line": "Do not blindly apply “star ground everything” or “split every ground"
+        },
+        {
+          "id": "AUD-024",
+          "number": 24,
+          "line": 151,
+          "first_line": "Distinguish cable shielding from signal return. Balanced-interface"
+        },
+        {
+          "id": "AUD-025",
+          "number": 25,
+          "line": 156,
+          "first_line": "Never disconnect protective earth to cure hum. Correct the signal"
+        },
+        {
+          "id": "AUD-026",
+          "number": 26,
+          "line": 164,
+          "first_line": "Keep sensitive nodes and feedback paths physically compact. Wiring and"
+        },
+        {
+          "id": "AUD-027",
+          "number": 27,
+          "line": 169,
+          "first_line": "Separate low-level inputs from high-level outputs and fast switching"
+        },
+        {
+          "id": "AUD-028",
+          "number": 28,
+          "line": 174,
+          "first_line": "Put supply decoupling close to the device it serves. A capacitor near"
+        },
+        {
+          "id": "AUD-029",
+          "number": 29,
+          "line": 179,
+          "first_line": "Design supply and reference filtering separately. A clean supply does"
+        },
+        {
+          "id": "AUD-030",
+          "number": 30,
+          "line": 184,
+          "first_line": "Consider magnetic pickup as well as electrical shielding. Transformer"
+        },
+        {
+          "id": "AUD-031",
+          "number": 31,
+          "line": 194,
+          "first_line": "Debouncing and pop suppression are different jobs. Debouncing prevents"
+        },
+        {
+          "id": "AUD-032",
+          "number": 32,
+          "line": 199,
+          "first_line": "Do not leave disconnected audio nodes floating. Provide appropriate"
+        },
+        {
+          "id": "AUD-033",
+          "number": 33,
+          "line": 203,
+          "first_line": "Design the audio transition deliberately. Consider DC equalization,"
+        },
+        {
+          "id": "AUD-034",
+          "number": 34,
+          "line": 209,
+          "first_line": "For your footswitch, keep the switching circuitry near the audio"
+        },
+        {
+          "id": "AUD-035",
+          "number": 35,
+          "line": 214,
+          "first_line": "Suppress relay-coil transients and keep their currents local. The coil"
+        },
+        {
+          "id": "AUD-036",
+          "number": 36,
+          "line": 223,
+          "first_line": "Never directly tie ordinary amplifier outputs together to mix them."
+        },
+        {
+          "id": "AUD-037",
+          "number": 37,
+          "line": 229,
+          "first_line": "Track polarity and allow headroom at summing points. Two identical,"
+        },
+        {
+          "id": "AUD-038",
+          "number": 38,
+          "line": 234,
+          "first_line": "Balanced does not necessarily mean equal-and-opposite output voltages."
+        },
+        {
+          "id": "AUD-039",
+          "number": 39,
+          "line": 240,
+          "first_line": "Document every connector pin explicitly. A TRS connector could carry"
+        },
+        {
+          "id": "AUD-040",
+          "number": 40,
+          "line": 245,
+          "first_line": "Identify the output topology before connecting a load or probe. In"
+        },
+        {
+          "id": "AUD-041",
+          "number": 41,
+          "line": 255,
+          "first_line": "A grid stopper and a grid-leak resistor do different jobs. The grid"
+        },
+        {
+          "id": "AUD-042",
+          "number": 42,
+          "line": 261,
+          "first_line": "Check overload recovery, not just the clipping waveform. Grid current"
+        },
+        {
+          "id": "AUD-043",
+          "number": 43,
+          "line": 266,
+          "first_line": "Match the reverb driver to the tank electrically. Check drive current,"
+        },
+        {
+          "id": "AUD-044",
+          "number": 44,
+          "line": 270,
+          "first_line": "Protect against an unplugged reverb tank. A transformer-driven tank is"
+        },
+        {
+          "id": "AUD-045",
+          "number": 45,
+          "line": 276,
+          "first_line": "Define the wet/dry interface before choosing final values. For your"
+        },
+        {
+          "id": "AUD-046",
+          "number": 46,
+          "line": 285,
+          "first_line": "Test more than a 1 kHz sine wave. Measure response and distortion across"
+        },
+        {
+          "id": "AUD-047",
+          "number": 47,
+          "line": 289,
+          "first_line": "Record the conditions beside every performance result. Include gain"
+        },
+        {
+          "id": "AUD-048",
+          "number": 48,
+          "line": 295,
+          "first_line": "Check stability with realistic cables and loads. Look for overshoot,"
+        },
+        {
+          "id": "AUD-049",
+          "number": 49,
+          "line": 300,
+          "first_line": "Make a state-by-state test checklist. Cover startup, shutdown, mute,"
+        },
+        {
+          "id": "AUD-050",
+          "number": 50,
+          "line": 306,
+          "first_line": "Treat test equipment as part of the circuit—and the safety review."
+        }
+      ]
+    },
+    {
+      "file": "Audio_Amplifier_PCB_Problems_to_Avoid.txt",
+      "prefix": "APCB",
+      "bytes": 12699,
+      "sha256": "cf118a563e6d42979c19c9b3fc5cfe232c726a4e8fdc5e75be9b13346575f0c5",
+      "numbered_rule_count": 52,
+      "rules": [
+        {
+          "id": "APCB-001",
+          "number": 1,
+          "line": 8,
+          "first_line": "Sharing input-ground paths with speaker current."
+        },
+        {
+          "id": "APCB-002",
+          "number": 2,
+          "line": 13,
+          "first_line": "Large rectifier-reservoir charging loops."
+        },
+        {
+          "id": "APCB-003",
+          "number": 3,
+          "line": 17,
+          "first_line": "Accidental ground connections through hardware."
+        },
+        {
+          "id": "APCB-004",
+          "number": 4,
+          "line": 22,
+          "first_line": "Treating every \"GND\" point as electrically identical."
+        },
+        {
+          "id": "APCB-005",
+          "number": 5,
+          "line": 26,
+          "first_line": "Assuming \"star ground\" or \"ground plane\" automatically solves everything."
+        },
+        {
+          "id": "APCB-006",
+          "number": 6,
+          "line": 35,
+          "first_line": "Putting the output stage beside the input stage."
+        },
+        {
+          "id": "APCB-007",
+          "number": 7,
+          "line": 39,
+          "first_line": "Long high-impedance input traces."
+        },
+        {
+          "id": "APCB-008",
+          "number": 8,
+          "line": 43,
+          "first_line": "Long parallel runs between sensitive and noisy signals."
+        },
+        {
+          "id": "APCB-009",
+          "number": 9,
+          "line": 48,
+          "first_line": "Poorly routed balanced inputs."
+        },
+        {
+          "id": "APCB-010",
+          "number": 10,
+          "line": 53,
+          "first_line": "Placing interference sources beside sensitive circuitry."
+        },
+        {
+          "id": "APCB-011",
+          "number": 11,
+          "line": 63,
+          "first_line": "Large feedback loops."
+        },
+        {
+          "id": "APCB-012",
+          "number": 12,
+          "line": 67,
+          "first_line": "Excess copper around sensitive feedback nodes."
+        },
+        {
+          "id": "APCB-013",
+          "number": 13,
+          "line": 72,
+          "first_line": "Ignoring minimum stable gain."
+        },
+        {
+          "id": "APCB-014",
+          "number": 14,
+          "line": 76,
+          "first_line": "Omitting or relocating output-stability components."
+        },
+        {
+          "id": "APCB-015",
+          "number": 15,
+          "line": 82,
+          "first_line": "Grounding a bridge-tied speaker output."
+        },
+        {
+          "id": "APCB-016",
+          "number": 16,
+          "line": 92,
+          "first_line": "Using large reservoir capacitors instead of local bypass capacitors."
+        },
+        {
+          "id": "APCB-017",
+          "number": 17,
+          "line": 96,
+          "first_line": "Correct bypass values but poor placement."
+        },
+        {
+          "id": "APCB-018",
+          "number": 18,
+          "line": 101,
+          "first_line": "Allowing stages to interact through the supply."
+        },
+        {
+          "id": "APCB-019",
+          "number": 19,
+          "line": 106,
+          "first_line": "Wide power traces with hidden narrow bottlenecks."
+        },
+        {
+          "id": "APCB-020",
+          "number": 20,
+          "line": 111,
+          "first_line": "Rating capacitors only for nominal running voltage."
+        },
+        {
+          "id": "APCB-021",
+          "number": 21,
+          "line": 120,
+          "first_line": "Reversed electrolytic capacitors."
+        },
+        {
+          "id": "APCB-022",
+          "number": 22,
+          "line": 125,
+          "first_line": "Ignoring capacitor ripple-current and temperature ratings."
+        },
+        {
+          "id": "APCB-023",
+          "number": 23,
+          "line": 130,
+          "first_line": "Inadequate thermal paths."
+        },
+        {
+          "id": "APCB-024",
+          "number": 24,
+          "line": 135,
+          "first_line": "Assuming a metal tab or thermal pad is ground."
+        },
+        {
+          "id": "APCB-025",
+          "number": 25,
+          "line": 140,
+          "first_line": "Flux residue and contamination around high-impedance nodes."
+        },
+        {
+          "id": "APCB-026",
+          "number": 26,
+          "line": 149,
+          "first_line": "Assuming debouncing prevents audio pops."
+        },
+        {
+          "id": "APCB-027",
+          "number": 27,
+          "line": 153,
+          "first_line": "Leaving disconnected audio nodes floating."
+        },
+        {
+          "id": "APCB-028",
+          "number": 28,
+          "line": 158,
+          "first_line": "Ignoring power-on and power-off transients."
+        },
+        {
+          "id": "APCB-029",
+          "number": 29,
+          "line": 162,
+          "first_line": "Missing or unsuitable relay-coil suppression."
+        },
+        {
+          "id": "APCB-030",
+          "number": 30,
+          "line": 167,
+          "first_line": "Using power-relay contacts for tiny audio signals without checking suitability."
+        },
+        {
+          "id": "APCB-031",
+          "number": 31,
+          "line": 172,
+          "first_line": "Floating logic inputs or slow edges into ordinary CMOS inputs."
+        },
+        {
+          "id": "APCB-032",
+          "number": 32,
+          "line": 181,
+          "first_line": "Long unprotected grid connections."
+        },
+        {
+          "id": "APCB-033",
+          "number": 33,
+          "line": 186,
+          "first_line": "Large AC-heater loops near signal wiring."
+        },
+        {
+          "id": "APCB-034",
+          "number": 34,
+          "line": 190,
+          "first_line": "Floating heater supplies."
+        },
+        {
+          "id": "APCB-035",
+          "number": 35,
+          "line": 194,
+          "first_line": "Exceeding heater-to-cathode voltage limits."
+        },
+        {
+          "id": "APCB-036",
+          "number": 36,
+          "line": 199,
+          "first_line": "Remote stage-filter capacitors and poorly placed returns."
+        },
+        {
+          "id": "APCB-037",
+          "number": 37,
+          "line": 208,
+          "first_line": "Using ordinary PCB default clearances for mains or tube high voltage."
+        },
+        {
+          "id": "APCB-038",
+          "number": 38,
+          "line": 213,
+          "first_line": "Checking only visible top-layer spacing."
+        },
+        {
+          "id": "APCB-039",
+          "number": 39,
+          "line": 217,
+          "first_line": "Treating an unqualified coating as permission to reduce spacing."
+        },
+        {
+          "id": "APCB-040",
+          "number": 40,
+          "line": 222,
+          "first_line": "Relying on signal-ground wiring for protective earth."
+        },
+        {
+          "id": "APCB-041",
+          "number": 41,
+          "line": 227,
+          "first_line": "Assuming \"unplugged\" means safe."
+        },
+        {
+          "id": "APCB-042",
+          "number": 42,
+          "line": 236,
+          "first_line": "Trusting a footprint because its name looks correct."
+        },
+        {
+          "id": "APCB-043",
+          "number": 43,
+          "line": 239,
+          "first_line": "Confusing top and bottom views."
+        },
+        {
+          "id": "APCB-044",
+          "number": 44,
+          "line": 243,
+          "first_line": "Incorrect pitch, hole size, or body clearance."
+        },
+        {
+          "id": "APCB-045",
+          "number": 45,
+          "line": 246,
+          "first_line": "Unclear assembly markings."
+        },
+        {
+          "id": "APCB-046",
+          "number": 46,
+          "line": 249,
+          "first_line": "Mounting hardware colliding with components or copper."
+        },
+        {
+          "id": "APCB-047",
+          "number": 47,
+          "line": 253,
+          "first_line": "Poor solderability around large copper areas."
+        },
+        {
+          "id": "APCB-048",
+          "number": 48,
+          "line": 262,
+          "first_line": "A PCB that no longer matches the schematic."
+        },
+        {
+          "id": "APCB-049",
+          "number": 49,
+          "line": 265,
+          "first_line": "Treating a clean design-rule check as proof of a good amplifier."
+        },
+        {
+          "id": "APCB-050",
+          "number": 50,
+          "line": 269,
+          "first_line": "Not inspecting the fabrication outputs."
+        },
+        {
+          "id": "APCB-051",
+          "number": 51,
+          "line": 274,
+          "first_line": "Assuming no audible squeal means no oscillation."
+        },
+        {
+          "id": "APCB-052",
+          "number": 52,
+          "line": 279,
+          "first_line": "Unsafe oscilloscope grounding."
+        }
+      ]
+    },
+    {
+      "file": "PCB_Layout_Design_Imperatives.txt",
+      "prefix": "LAY",
+      "bytes": 13734,
+      "sha256": "3aeff42dae36de96936093f8b927e6fda5bcf492c4b9fb4e6ea5b38447db6407",
+      "numbered_rule_count": 66,
+      "rules": [
+        {
+          "id": "LAY-001",
+          "number": 1,
+          "line": 11,
+          "first_line": "Start with the enclosure. Establish the board outline, mounting holes, connector positions, component heights, and cable access before routing."
+        },
+        {
+          "id": "LAY-002",
+          "number": 2,
+          "line": 13,
+          "first_line": "Allow space around components. Include connector plugs, screwdrivers, heatsinks, and insertion/removal clearance—not just the component body. [1]"
+        },
+        {
+          "id": "LAY-003",
+          "number": 3,
+          "line": 15,
+          "first_line": "Check every footprint against the actual part. Verify pad numbering, lead pitch, finished-hole size, body dimensions, polarity, and top-view versus bottom-view drawings."
+        },
+        {
+          "id": "LAY-004",
+          "number": 4,
+          "line": 17,
+          "first_line": "Never trust a footprint merely because its name matches. This is especially important for downloaded or AI-generated libraries, connectors, transistors, and tube sockets. [2]"
+        },
+        {
+          "id": "LAY-005",
+          "number": 5,
+          "line": 19,
+          "first_line": "Choose the manufacturer’s capabilities before setting design rules. Check trace/space limits, hole sizes, annular rings, copper thickness, solder mask, and board-edge clearances. [3]"
+        },
+        {
+          "id": "LAY-006",
+          "number": 6,
+          "line": 21,
+          "first_line": "Choose the layer stack deliberately. Give critical signals a nearby, continuous reference plane; do not select layers solely according to routing convenience. [4]"
+        },
+        {
+          "id": "LAY-007",
+          "number": 7,
+          "line": 27,
+          "first_line": "Group components by function. Keep each amplifier stage, regulator, interface, and associated support components together."
+        },
+        {
+          "id": "LAY-008",
+          "number": 8,
+          "line": 29,
+          "first_line": "Separate noise sources from sensitive circuits. Switching power supplies and high-current paths should not occupy the same area as low-level analog inputs. [5]"
+        },
+        {
+          "id": "LAY-009",
+          "number": 9,
+          "line": 31,
+          "first_line": "Place the most layout-sensitive components first. Examples include switching-power components, oscillator parts, feedback networks, and bypass capacitors."
+        },
+        {
+          "id": "LAY-010",
+          "number": 10,
+          "line": 33,
+          "first_line": "Follow the component manufacturer’s recommended layout. A correct schematic does not make an arbitrary placement electrically equivalent. [6]"
+        },
+        {
+          "id": "LAY-011",
+          "number": 11,
+          "line": 35,
+          "first_line": "Put electrostatic-discharge protection at the connector. Route the incoming signal through the protection location before it reaches the vulnerable circuit."
+        },
+        {
+          "id": "LAY-012",
+          "number": 12,
+          "line": 37,
+          "first_line": "Give protection devices a short discharge-return path. A nearby protection diode with a long, inductive ground connection can still provide poor protection. [7]"
+        },
+        {
+          "id": "LAY-013",
+          "number": 13,
+          "line": 43,
+          "first_line": "Ground is not an ideal zero-voltage surface. Shared return impedance lets one circuit’s current disturb another circuit’s reference. [5]"
+        },
+        {
+          "id": "LAY-014",
+          "number": 14,
+          "line": 45,
+          "first_line": "Prefer a continuous ground plane within each non-isolated domain. Separate noisy and quiet functions through placement and current-path control—not automatic plane splitting."
+        },
+        {
+          "id": "LAY-015",
+          "number": 15,
+          "line": 47,
+          "first_line": "Do not route fast signals across ground-plane gaps. The return current must detour, increasing loop area and interference."
+        },
+        {
+          "id": "LAY-016",
+          "number": 16,
+          "line": 49,
+          "first_line": "Check return paths whenever a signal changes layers. When it changes between ground reference planes, provide a nearby stitching via connecting those planes."
+        },
+        {
+          "id": "LAY-017",
+          "number": 17,
+          "line": 51,
+          "first_line": "Keep heavy and pulsed returns out of sensitive reference paths. Rectifier, speaker, and power-stage currents should not share a narrow return section with an input stage."
+        },
+        {
+          "id": "LAY-018",
+          "number": 18,
+          "line": 53,
+          "first_line": "Use star or bus grounding deliberately—not universally. These can suit audio power systems, but “everything must connect to one distant star” is not a universal PCB rule. [8]"
+        },
+        {
+          "id": "LAY-019",
+          "number": 19,
+          "line": 59,
+          "first_line": "Place bypass capacitors electrically close to their supply pins. Physical proximity is insufficient when the connecting traces take a long detour."
+        },
+        {
+          "id": "LAY-020",
+          "number": 20,
+          "line": 61,
+          "first_line": "Minimize the complete bypass loop. Consider the capacitor, supply pin, device return, and ground connection together."
+        },
+        {
+          "id": "LAY-021",
+          "number": 21,
+          "line": 63,
+          "first_line": "Keep bypass connections short and low-inductance. Avoid long, thin traces between the capacitor and the pins it serves."
+        },
+        {
+          "id": "LAY-022",
+          "number": 22,
+          "line": 65,
+          "first_line": "Do not expect one distant bulk capacitor to replace local bypassing. Bulk energy storage and high-frequency decoupling serve different needs. [5]"
+        },
+        {
+          "id": "LAY-023",
+          "number": 23,
+          "line": 67,
+          "first_line": "Follow the device’s specified capacitor placement and connections. Particular regulators and isolated supplies can require capacitors directly between designated supply-and-return pin pairs. [9]"
+        },
+        {
+          "id": "LAY-024",
+          "number": 24,
+          "line": 69,
+          "first_line": "Avoid unnecessary shared bottlenecks in power distribution. Separate noisy branches and provide their local decoupling rather than feeding everything through one restrictive path. [10]"
+        },
+        {
+          "id": "LAY-025",
+          "number": 25,
+          "line": 75,
+          "first_line": "Route critical nets before ordinary control signals. Preserve the geometry needed by clocks, feedback, sensitive inputs, and controlled-impedance connections."
+        },
+        {
+          "id": "LAY-026",
+          "number": 26,
+          "line": 77,
+          "first_line": "Keep sensitive traces short and away from aggressors. Long parallel runs increase opportunities for coupling."
+        },
+        {
+          "id": "LAY-027",
+          "number": 27,
+          "line": 79,
+          "first_line": "Judge digital routing by edge speed—not merely clock frequency. A slowly repeating signal can still have very fast transitions."
+        },
+        {
+          "id": "LAY-028",
+          "number": 28,
+          "line": 81,
+          "first_line": "Calculate controlled impedance using the actual stack-up. Trace width alone does not determine impedance."
+        },
+        {
+          "id": "LAY-029",
+          "number": 29,
+          "line": 83,
+          "first_line": "Route differential pairs consistently. Maintain the required width, spacing, reference continuity, and reasonably symmetric transitions."
+        },
+        {
+          "id": "LAY-030",
+          "number": 30,
+          "line": 85,
+          "first_line": "Match lengths only to an actual timing requirement. Avoid adding unnecessary meanders or stubs merely to make traces look equal. [4]"
+        },
+        {
+          "id": "LAY-031",
+          "number": 31,
+          "line": 87,
+          "first_line": "Keep amplifier feedback networks compact. Unintended capacitance at sensitive input nodes can alter stability; copper beneath those nodes may need a deliberate keepout. [11]"
+        },
+        {
+          "id": "LAY-032",
+          "number": 32,
+          "line": 93,
+          "first_line": "Size traces for current, copper thickness, temperature rise, and voltage drop. There is no universally correct “power trace width.”"
+        },
+        {
+          "id": "LAY-033",
+          "number": 33,
+          "line": 95,
+          "first_line": "Check vias as well as traces. A wide trace feeding a single small via can still create an electrical and thermal bottleneck. [12]"
+        },
+        {
+          "id": "LAY-034",
+          "number": 34,
+          "line": 97,
+          "first_line": "Identify the switching hot loop. Minimize the loop carrying rapidly changing current; its location depends on the converter topology."
+        },
+        {
+          "id": "LAY-035",
+          "number": 35,
+          "line": 99,
+          "first_line": "Keep switching-node copper controlled. Use enough for current and heat, but do not turn a rapidly switching node into an unnecessarily large copper area."
+        },
+        {
+          "id": "LAY-036",
+          "number": 36,
+          "line": 101,
+          "first_line": "Keep gate-drive loops compact. Route the drive and its return together; do not consider only the gate trace."
+        },
+        {
+          "id": "LAY-037",
+          "number": 37,
+          "line": 103,
+          "first_line": "Keep feedback and sensing away from switching nodes. Short routing is not an improvement when it passes through a noisy region. [10]"
+        },
+        {
+          "id": "LAY-038",
+          "number": 38,
+          "line": 105,
+          "first_line": "Use Kelvin connections for current sensing. Run separate sense traces from the intended shunt measurement points, rather than measuring through current-carrying copper. [13]"
+        },
+        {
+          "id": "LAY-039",
+          "number": 39,
+          "line": 111,
+          "first_line": "Design the heat-removal path, not just the electrical connection. Power parts may depend on copper area and thermal vias to reach their intended performance."
+        },
+        {
+          "id": "LAY-040",
+          "number": 40,
+          "line": 113,
+          "first_line": "Treat thermal reliefs as a trade-off. They improve solderability but can restrict current and heat flow; do not apply them indiscriminately to power connections. [10]"
+        },
+        {
+          "id": "LAY-041",
+          "number": 41,
+          "line": 115,
+          "first_line": "Check exposed-pad electrical connections. Follow the exact datasheet; exposed metal and thermal structures are not automatically interchangeable with ground."
+        },
+        {
+          "id": "LAY-042",
+          "number": 42,
+          "line": 117,
+          "first_line": "Respect package-specific keepouts. Some packages contain exposed structures that must not contact PCB copper. [6]"
+        },
+        {
+          "id": "LAY-043",
+          "number": 43,
+          "line": 119,
+          "first_line": "Keep precision analog circuits away from thermal gradients. Uneven heating can create measurement errors even when the electrical routing looks correct. [14]"
+        },
+        {
+          "id": "LAY-044",
+          "number": 44,
+          "line": 125,
+          "first_line": "Distinguish clearance from creepage. Clearance is the shortest distance through air; creepage is the shortest path along an insulating surface."
+        },
+        {
+          "id": "LAY-045",
+          "number": 45,
+          "line": 127,
+          "first_line": "Do not choose safety spacing from nominal voltage alone. Consider working voltage, transients, insulation category, pollution degree, material, altitude, and the applicable equipment standard. [15]"
+        },
+        {
+          "id": "LAY-046",
+          "number": 46,
+          "line": 129,
+          "first_line": "Check the whole assembled insulation boundary. Include pads, solder, component leads, connectors, mounting hardware, and nearby accessible metal—not just trace spacing."
+        },
+        {
+          "id": "LAY-047",
+          "number": 47,
+          "line": 131,
+          "first_line": "Do not assume a board slot solves every spacing problem. A slot can increase PCB creepage without increasing air clearance or the creepage across a component."
+        },
+        {
+          "id": "LAY-048",
+          "number": 48,
+          "line": 133,
+          "first_line": "Do not casually credit solder mask or coating as safety insulation. Any claimed reduction in required spacing needs an appropriately qualified insulation/coating system. [16]"
+        },
+        {
+          "id": "LAY-049",
+          "number": 49,
+          "line": 135,
+          "first_line": "Keep protective earth separate from noise-control decisions. For a Class I metal-chassis build, use a secure dedicated chassis bond; never remove protective earth to cure hum. [8]"
+        },
+        {
+          "id": "LAY-050",
+          "number": 50,
+          "line": 141,
+          "first_line": "Check solder-mask openings and the mask between adjacent pads. Copper clearances alone do not guarantee a manufacturable solder-mask pattern."
+        },
+        {
+          "id": "LAY-051",
+          "number": 51,
+          "line": 143,
+          "first_line": "Specify via treatment deliberately. Tented, open, filled, and capped vias are not equivalent manufacturing instructions. [17]"
+        },
+        {
+          "id": "LAY-052",
+          "number": 52,
+          "line": 145,
+          "first_line": "Make polarity and pin 1 unmistakable. Ensure markings remain useful when the part is installed."
+        },
+        {
+          "id": "LAY-053",
+          "number": 53,
+          "line": 147,
+          "first_line": "Keep identification readable and off soldering surfaces. Reference designators and connector labels should not disappear beneath components or overlap exposed pads. [2]"
+        },
+        {
+          "id": "LAY-054",
+          "number": 54,
+          "line": 149,
+          "first_line": "Provide accessible test points on important nets. Include supplies, returns, and diagnostic signals; allow room for the actual probe."
+        },
+        {
+          "id": "LAY-055",
+          "number": 55,
+          "line": 151,
+          "first_line": "Plan test access around the assembled board. Tall components, heatsinks, and enclosure hardware must not block the points you need to reach. [18]"
+        },
+        {
+          "id": "LAY-056",
+          "number": 56,
+          "line": 157,
+          "first_line": "Set meaningful net classes and custom rules. High-voltage, high-current, ordinary signal, and controlled-impedance nets should not all inherit unsuitable defaults."
+        },
+        {
+          "id": "LAY-057",
+          "number": 57,
+          "line": 159,
+          "first_line": "Refill every copper zone before checking the board. Inspect for disconnected islands, narrow connections, and unintentionally interrupted return paths."
+        },
+        {
+          "id": "LAY-058",
+          "number": 58,
+          "line": 161,
+          "first_line": "Run design-rule checking and schematic-to-PCB parity checking. Resolve unintended shorts, unconnected items, clearance violations, and schematic mismatches."
+        },
+        {
+          "id": "LAY-059",
+          "number": 59,
+          "line": 163,
+          "first_line": "Review exclusions instead of hiding problems. Every waived violation should have an understood, documented reason."
+        },
+        {
+          "id": "LAY-060",
+          "number": 60,
+          "line": 165,
+          "first_line": "Inspect the exported manufacturing files. Check copper, solder mask, drill data, board outline, and layer selection—not just the editor view."
+        },
+        {
+          "id": "LAY-061",
+          "number": 61,
+          "line": 167,
+          "first_line": "Treat a clean DRC as necessary, not sufficient. It checks configured rules; it does not establish analog performance, adequate cooling, or product safety. [19]"
+        },
+        {
+          "id": "LAY-062",
+          "number": 62,
+          "line": 173,
+          "first_line": "Keep high-gain inputs away from later-stage outputs. Unintended coupling can create feedback, oscillation, or unwanted interaction between stages. [5]"
+        },
+        {
+          "id": "LAY-063",
+          "number": 63,
+          "line": 175,
+          "first_line": "Keep the connection after a grid-stopper resistor extremely short. Place it at or very near the tube’s grid connection rather than leaving a long unprotected grid lead. [20]"
+        },
+        {
+          "id": "LAY-064",
+          "number": 64,
+          "line": 177,
+          "first_line": "Route heater supply and return together. Use paired PCB routing and tightly twisted off-board AC heater wiring; keep them away from sensitive signal wiring."
+        },
+        {
+          "id": "LAY-065",
+          "number": 65,
+          "line": 179,
+          "first_line": "Keep rectifier charging pulses local. Arrange the transformer-secondary, rectifier, and first reservoir-capacitor circuit so its pulsed current does not travel through preamp returns."
+        },
+        {
+          "id": "LAY-066",
+          "number": 66,
+          "line": 181,
+          "first_line": "Plan grounding across the whole amplifier. Include jacks, pots, cable shields, board interconnects, and chassis connections; PCB grounding alone cannot control paths created elsewhere. [8]"
+        }
+      ]
+    },
+    {
+      "file": "PCB_Trace_Placement_Design_Imperatives.txt",
+      "prefix": "TRACE",
+      "bytes": 19424,
+      "sha256": "99eb84a10e61f12a9476f90aa89823673898518711631b677744bea74ca79cd2",
+      "numbered_rule_count": 68,
+      "rules": [
+        {
+          "id": "TRACE-001",
+          "number": 1,
+          "line": 24,
+          "first_line": "Place components in signal-flow order. Arrange input, gain stages,"
+        },
+        {
+          "id": "TRACE-002",
+          "number": 2,
+          "line": 28,
+          "first_line": "Separate quiet and noisy regions. Keep low-level audio away from"
+        },
+        {
+          "id": "TRACE-003",
+          "number": 3,
+          "line": 32,
+          "first_line": "Put the input stage near its connector. Avoid carrying an unamplified,"
+        },
+        {
+          "id": "TRACE-004",
+          "number": 4,
+          "line": 36,
+          "first_line": "Keep sensitive traces away from inductors and transformers on every"
+        },
+        {
+          "id": "TRACE-005",
+          "number": 5,
+          "line": 40,
+          "first_line": "Place feedback components and bypass capacitors before routing general"
+        },
+        {
+          "id": "TRACE-006",
+          "number": 6,
+          "line": 48,
+          "first_line": "Prefer a continuous ground reference within each non-isolated circuit"
+        },
+        {
+          "id": "TRACE-007",
+          "number": 7,
+          "line": 52,
+          "first_line": "Do not route a signal across a break in its reference plane. Slots,"
+        },
+        {
+          "id": "TRACE-008",
+          "number": 8,
+          "line": 55,
+          "first_line": "Do not cut up ground merely to eliminate every visible \"loop.\" A"
+        },
+        {
+          "id": "TRACE-009",
+          "number": 9,
+          "line": 59,
+          "first_line": "Provide a nearby return connection when a critical signal changes"
+        },
+        {
+          "id": "TRACE-010",
+          "number": 10,
+          "line": 64,
+          "first_line": "Do not assume return current always flows directly underneath the"
+        },
+        {
+          "id": "TRACE-011",
+          "number": 11,
+          "line": 69,
+          "first_line": "Prevent shared-impedance coupling. Speaker, rectifier, heater, relay,"
+        },
+        {
+          "id": "TRACE-012",
+          "number": 12,
+          "line": 73,
+          "first_line": "Use star or bus grounding where appropriate, but avoid long RF return"
+        },
+        {
+          "id": "TRACE-013",
+          "number": 13,
+          "line": 77,
+          "first_line": "Inspect filled copper, not just ground labels. Look for narrow necks,"
+        },
+        {
+          "id": "TRACE-014",
+          "number": 14,
+          "line": 85,
+          "first_line": "Route high-impedance nodes first and keep them short. Examples include"
+        },
+        {
+          "id": "TRACE-015",
+          "number": 15,
+          "line": 89,
+          "first_line": "Keep large-signal outputs away from small-signal inputs. Output-to-input"
+        },
+        {
+          "id": "TRACE-016",
+          "number": 16,
+          "line": 93,
+          "first_line": "Avoid long parallel runs between unrelated signals. Reducing the"
+        },
+        {
+          "id": "TRACE-017",
+          "number": 17,
+          "line": 97,
+          "first_line": "Check broadside coupling between layers. Two traces directly overlapping"
+        },
+        {
+          "id": "TRACE-018",
+          "number": 18,
+          "line": 101,
+          "first_line": "Do not treat fabrication clearance as noise clearance. A gap that"
+        },
+        {
+          "id": "TRACE-019",
+          "number": 19,
+          "line": 105,
+          "first_line": "Do not treat \"three trace widths apart\" as a universal guarantee."
+        },
+        {
+          "id": "TRACE-020",
+          "number": 20,
+          "line": 109,
+          "first_line": "For intentional balanced audio, route the two legs together and"
+        },
+        {
+          "id": "TRACE-021",
+          "number": 21,
+          "line": 114,
+          "first_line": "Do not add serpentine length matching to ordinary analog audio without"
+        },
+        {
+          "id": "TRACE-022",
+          "number": 22,
+          "line": 123,
+          "first_line": "Minimize loop area, not just conductor length. Keep outgoing and"
+        },
+        {
+          "id": "TRACE-023",
+          "number": 23,
+          "line": 127,
+          "first_line": "Avoid unnecessarily large copper areas on sensitive nodes. Wide traces"
+        },
+        {
+          "id": "TRACE-024",
+          "number": 24,
+          "line": 131,
+          "first_line": "Keep feedback and summing-node connections compact. Place the relevant"
+        },
+        {
+          "id": "TRACE-025",
+          "number": 25,
+          "line": 135,
+          "first_line": "Use local ground-plane exclusions only when justified. Some"
+        },
+        {
+          "id": "TRACE-026",
+          "number": 26,
+          "line": 140,
+          "first_line": "Do not add arbitrary shunt capacitors to \"kill RF.\" A capacitor directly"
+        },
+        {
+          "id": "TRACE-027",
+          "number": 27,
+          "line": 144,
+          "first_line": "Distinguish shielding from guarding. A grounded shield intercepts"
+        },
+        {
+          "id": "TRACE-028",
+          "number": 28,
+          "line": 149,
+          "first_line": "Do not let trace cosmetics outrank electrical geometry. Straightforward"
+        },
+        {
+          "id": "TRACE-029",
+          "number": 29,
+          "line": 159,
+          "first_line": "Size power traces for current, temperature rise, and voltage drop."
+        },
+        {
+          "id": "TRACE-030",
+          "number": 30,
+          "line": 163,
+          "first_line": "Check every bottleneck. A wide power pour can still feed through a"
+        },
+        {
+          "id": "TRACE-031",
+          "number": 31,
+          "line": 167,
+          "first_line": "Route each supply with its actual return path. Do not assume that"
+        },
+        {
+          "id": "TRACE-032",
+          "number": 32,
+          "line": 171,
+          "first_line": "Keep high-current supply paths short and low resistance. Otherwise,"
+        },
+        {
+          "id": "TRACE-033",
+          "number": 33,
+          "line": 175,
+          "first_line": "Branch sensitive and noisy loads deliberately. Do not feed a quiet"
+        },
+        {
+          "id": "TRACE-034",
+          "number": 34,
+          "line": 179,
+          "first_line": "Contain the transformer-rectifier-reservoir charging loop. Connect the"
+        },
+        {
+          "id": "TRACE-035",
+          "number": 35,
+          "line": 183,
+          "first_line": "Use Kelvin sensing for low-level measurements of high-current circuits."
+        },
+        {
+          "id": "TRACE-036",
+          "number": 36,
+          "line": 191,
+          "first_line": "Minimize the complete bypass loop. Consider the capacitor, supply pin,"
+        },
+        {
+          "id": "TRACE-037",
+          "number": 37,
+          "line": 195,
+          "first_line": "Keep high-frequency bypass connections short and low inductance. A"
+        },
+        {
+          "id": "TRACE-038",
+          "number": 38,
+          "line": 199,
+          "first_line": "Provide appropriate local storage as well as high-frequency bypassing."
+        },
+        {
+          "id": "TRACE-039",
+          "number": 39,
+          "line": 203,
+          "first_line": "Decouple each required supply pin or rail according to the device"
+        },
+        {
+          "id": "TRACE-040",
+          "number": 40,
+          "line": 207,
+          "first_line": "Check capacitor impedance over frequency, not just capacitance. Above"
+        },
+        {
+          "id": "TRACE-041",
+          "number": 41,
+          "line": 215,
+          "first_line": "Design for the fastest edges, not just the repetition frequency. A"
+        },
+        {
+          "id": "TRACE-042",
+          "number": 42,
+          "line": 219,
+          "first_line": "Identify and minimize the switching regulator's \"hot loop.\" This is"
+        },
+        {
+          "id": "TRACE-043",
+          "number": 43,
+          "line": 223,
+          "first_line": "Keep switch-node copper compact while meeting current and thermal"
+        },
+        {
+          "id": "TRACE-044",
+          "number": 44,
+          "line": 227,
+          "first_line": "Keep relay suppression local. Place the flyback diode or specified"
+        },
+        {
+          "id": "TRACE-045",
+          "number": 45,
+          "line": 231,
+          "first_line": "Treat ferrite beads as designed filters, not magic fixes. Check"
+        },
+        {
+          "id": "TRACE-046",
+          "number": 46,
+          "line": 235,
+          "first_line": "Treat class-D outputs as switching-power nets. Follow the amplifier's"
+        },
+        {
+          "id": "TRACE-047",
+          "number": 47,
+          "line": 243,
+          "first_line": "Stop RF before it reaches a nonlinear input stage. An amplifier need"
+        },
+        {
+          "id": "TRACE-048",
+          "number": 48,
+          "line": 248,
+          "first_line": "Put cable-entry filtering at the entry point. Do not let an unfiltered"
+        },
+        {
+          "id": "TRACE-049",
+          "number": 49,
+          "line": 252,
+          "first_line": "Keep the dirty and clean sides of a filter physically separated."
+        },
+        {
+          "id": "TRACE-050",
+          "number": 50,
+          "line": 256,
+          "first_line": "Use short, broad shield-to-chassis connections. Long pigtails add"
+        },
+        {
+          "id": "TRACE-051",
+          "number": 51,
+          "line": 260,
+          "first_line": "For balanced connections, terminate the cable shield to chassis at the"
+        },
+        {
+          "id": "TRACE-052",
+          "number": 52,
+          "line": 264,
+          "first_line": "Do not apply \"ground every shield at one end\" universally. Balanced"
+        },
+        {
+          "id": "TRACE-053",
+          "number": 53,
+          "line": 268,
+          "first_line": "Do not expect a thin copper pour to solve 50/60 Hz magnetic hum. First"
+        },
+        {
+          "id": "TRACE-054",
+          "number": 54,
+          "line": 277,
+          "first_line": "Put grid-stopper resistors at the tube socket's grid connection. Keep"
+        },
+        {
+          "id": "TRACE-055",
+          "number": 55,
+          "line": 281,
+          "first_line": "Keep plate/anode wiring away from grids and early-stage inputs. Apply"
+        },
+        {
+          "id": "TRACE-056",
+          "number": 56,
+          "line": 286,
+          "first_line": "Route heater supply and return together. Keep the pair away from input"
+        },
+        {
+          "id": "TRACE-057",
+          "number": 57,
+          "line": 290,
+          "first_line": "Associate each stage's return with its supply-decoupling node. Keep"
+        },
+        {
+          "id": "TRACE-058",
+          "number": 58,
+          "line": 294,
+          "first_line": "Treat the spring-reverb return as a sensitive input and the send as a"
+        },
+        {
+          "id": "TRACE-059",
+          "number": 59,
+          "line": 299,
+          "first_line": "Keep footswitch-control wiring out of the sensitive audio region."
+        },
+        {
+          "id": "TRACE-060",
+          "number": 60,
+          "line": 307,
+          "first_line": "Treat insulation boundaries as mandatory exceptions to"
+        },
+        {
+          "id": "TRACE-061",
+          "number": 61,
+          "line": 312,
+          "first_line": "Set spacing from actual insulation requirements, not nominal voltage"
+        },
+        {
+          "id": "TRACE-062",
+          "number": 62,
+          "line": 316,
+          "first_line": "Check clearance and creepage separately. Clearance is the shortest"
+        },
+        {
+          "id": "TRACE-063",
+          "number": 63,
+          "line": 320,
+          "first_line": "Review the assembled geometry. Pads, leads, mounting hardware, board"
+        },
+        {
+          "id": "TRACE-064",
+          "number": 64,
+          "line": 324,
+          "first_line": "Do not assume a slot or solder mask automatically makes a layout safe."
+        },
+        {
+          "id": "TRACE-065",
+          "number": 65,
+          "line": 332,
+          "first_line": "Create meaningful net classes. Suggested categories include AUDIO_HIZ,"
+        },
+        {
+          "id": "TRACE-066",
+          "number": 66,
+          "line": 337,
+          "first_line": "Separate manufacturing rules from electrical requirements. Use"
+        },
+        {
+          "id": "TRACE-067",
+          "number": 67,
+          "line": 342,
+          "first_line": "Refill zones and inspect all layers before sign-off. Check minimum"
+        },
+        {
+          "id": "TRACE-068",
+          "number": 68,
+          "line": 346,
+          "first_line": "Do not equate a clean DRC report with a quiet amplifier. DRC checks"
+        }
+      ]
+    }
+  ]
+}

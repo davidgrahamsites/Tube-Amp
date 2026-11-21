@@ -1,0 +1,13 @@
+# C27/C28 selected component — November 12, 2026
+
+Select **Samyoung NFA200VB10M8*11.5_LO**, LCSC **C371316**, for both10µF bias capacitors. This is an engineering selection, not an order or complete amplifier qualification. [Domestic listing](https://item.szlcsc.com/344891.html):1170 ordinary stock,MOQ5,¥0.6858 at5,¥3.429 minimum purchase before shipping, observed November12. The carousel's¥0.3593 was the5000-piece tier and is not the prototype price.
+
+Manufacturer [approval710-011,2020-06-23](evidence/Samyoung-NFA.pdf):200V,±20%,105°C,7000h load life for diameter8mm,75mArms at120Hz/105°C. At20°C afterfive minutes, leakage limit is0.02CV+25µA=65µA. Nominal body8×11.5mm; maximum8.5×13mm; pitch3.5±0.5mm; leads0.6±0.05mm. These are ordinary durable electrolytics suitable for further bias-supply qualification; no unsupported audio-grade claim.
+
+[Sixteen scoped ngspice cases](bias-cap-screen/results.json) use198/235.4V mains,50VAC reference bias tap,assumed secondary multipliers1/1.12,pot endpoints,8µF minimum capacitance and0/65µA leakage at20°C. Highest capacitor voltage77.14V; largest steady-state capacitor ripple3.261mArms(C28),0.176mArms(C27). The50Hz ripple multiplier is not specified by the approval sheet, so the120Hz rating is not directly claimed as a50Hz qualified rating. Constant maximum leakage uses a smooth direction-correct startup approximation. Transients run2seconds and summarize1.9–2.0seconds; this does not verify power-off sequencing, faults or hot leakage.
+
+The maximum-negative setting at198V nominal secondary changes from approximately-43.24V to-42.35V at the least-negative ripple peak under the leakage bound. Whether that is sufficiently negative for the actual selected EL34s remains open. No idle-current setting is established by this screen.
+
+Prepared native footprint: [Samyoung_NFA_10u_200V_D8_P3.5](footprints/Renegade_Selected.pretty/Samyoung_NFA_10u_200V_D8_P3.5.kicad_mod), based on KiCad's standard radial geometry with9mm courtyard diameter around8.5mm maximum body. Pads1.6mm,drill0.8mm; pad1positive. **Both positive terminals go to GND**, negatives toBIAS_RAW/BIAS_FILTER. Exact3D model absent; reserve13mm maximum body height plus board standoff/lead seating and assembly clearance. Native parse, pad checks, SVG export and visual review completed. [Preview](footprints/previews/Samyoung_NFA_10u_200V_D8_P3.5.svg).
+
+The draft Power PCB usesD10/pitch5mm footprints. Replace those with the selected3.5mm-pitch footprint and reconnect/inspect tracks during the coordinated parts update. Existing routed boards have not been changed. Re-run parity/DRC and inspect polarity after integration. Whole-amp fit/thermal/protection qualification remains open.

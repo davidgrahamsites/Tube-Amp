@@ -1,0 +1,246 @@
+{
+  "revision": "v0.5-fit-review-2026-11-20",
+  "units": "mm",
+  "fabrication_release": false,
+  "cabinet": {
+    "supplier": "Mable Audio, Shenzhen",
+    "choice": "Mable 5E3 empty yellow-tweed shell; unchanged",
+    "manufacturer_listing": "https://mableaudio.com/en/productview.asp?sid=848",
+    "published_external": {
+      "width": 508,
+      "height": 420,
+      "depth_top": 215,
+      "depth_bottom": 242
+    },
+    "published_top_opening_straight_width": 312,
+    "usable_internal_dimensions": null,
+    "support_positions": null,
+    "stock_and_Shanghai_quote": "Historical quote only; cabinet delivered. Do not request stock/purchase approval for cabinet again.",
+    "drawing_sources": [
+      "../../solid-state-reverb/evidence/cabinet-size-01.jpg",
+      "../../solid-state-reverb/evidence/cabinet-size-02.jpg",
+      "../../solid-state-reverb/evidence/cabinet-size-03.jpg"
+    ],
+    "top_opening": {
+      "straight_width_mm": 312,
+      "stepped_width_mm": 344,
+      "depth_mm": 67,
+      "corner_radius_mm": 31,
+      "scope": "drawing labels, no fit tolerance or installed chassis provided"
+    },
+    "procurement_state": "DELIVERED: cabinet and reverb tank confirmed on hand by user November19",
+    "design_constraint": "FIXED EXISTING CABINET. Select and redesign internal parts/boards/chassis to fit; cabinet replacement is not the plan.",
+    "measurement_priority": "Actual received cabinet overrides ambiguous catalogue drawing; targeted physical measurements requested November19.",
+    "user_measurements": {
+      "reported_on": "2026-11-20",
+      "source": "User: the first measurement A is 3 mm short of 47cm (that's the front face). the back is the same",
+      "A_front_clear_width_mm": 467,
+      "A_rear_clear_width_mm": 467,
+      "conversion": "47cm=470mm;470-3=467mm",
+      "interpretation": "Recorded as requested A clear inside widths at front and rear. User calls front location front face; exact height/datum not independently verified.",
+      "measurement_height_mm": null,
+      "reported_uncertainty_mm": null,
+      "B_rear_edge_depth_mm": 160,
+      "B_obstruction_depth_mm": null,
+      "C1_opposite_hole_centres_mm": 294,
+      "C2_opposite_hole_centres_mm": 294,
+      "B_source": "User November20: measurement b: 16cm",
+      "B_interpretation": "160mm converted from16cm, treated as speaker-board rear face to cabinet rear edge per preceding instructions; exact endpoint not independently confirmed.",
+      "C_source": "User2026-11-20: Measurement C1:29.4cm Measurement C2:29.4cm",
+      "C_conversion": "29.4cm x10=294mm for both opposite pairs",
+      "C_interpretation": "Two user-reported opposite speaker mounting-hole centre spacings agree at294mm. Use294mm for received-cabinet selection screening. Hole/stud diameter, angular pattern, cutout and uncertainty not independently measured.",
+      "speaker_top_adjacent_centres_mm": 210,
+      "speaker_top_adjacent_source": "User2026-11-20: when I measure hole to hole, top left to right right is 21cm",
+      "speaker_top_adjacent_interpretation": "Assumed top-left to top-right neighbouring hole centres. User wording says right right; endpoint interpretation remains explicit. Preserve210mm separately from reported294mm diagonals; do not force a perfect square or average values.",
+      "speaker_bottom_adjacent_centres_mm": 210,
+      "speaker_bottom_adjacent_source": "User2026-11-20: bottom left to bottom right is also 21cm",
+      "speaker_right_vertical_centres_mm": 210,
+      "speaker_right_vertical_source": "User2026-11-20: top right to bottom right also 21cm. Don't you think it's a little hard to measure a tangeant instead of a straight line?",
+      "speaker_pattern_interpretation": "Three adjacent spacings reported210mm; two opposite diagonals reported294mm. Approximately square pattern is plausible; ideal210mm square implies296.985mm diagonal. Retain3mm discrepancy as unresolved measurement/geometry uncertainty; do not treat294 or297 as exact or as a fabrication tolerance. Enough for preliminary speaker screening; qualify exact fit with manufacturer drawing/template or trial fit, without repeated tape measurements now."
+    }
+  },
+  "boards": {
+    "Main": [
+      290,
+      140,
+      1.6
+    ],
+    "Power": [
+      160,
+      175,
+      1.6
+    ],
+    "Control": [
+      230,
+      110,
+      1.6
+    ],
+    "Reverb": [
+      160,
+      100,
+      1.6
+    ]
+  },
+  "power_film_cap_max_height": 41,
+  "unknowns": [
+    "Actual usable chassis opening/support geometry and tolerances",
+    "Final chassis construction and board mounting planes",
+    "Speaker model, cutout requirement and installed baffle-to-rear clearance",
+    "Final PT/OT/choke/aux transformer drawings and locations",
+    "Six socket/tube/shield/retainer envelopes, thermal and extraction clearances",
+    "Exact quoted tank identity, height, mounting hole pattern, bag/grommets and cable allowance",
+    "Ten controls, jacks and switch body clearances; knob/shaft confirmation",
+    "Handle bolts, braces, back panels and earth-bond keepouts"
+  ],
+  "fit_verdict": "Design in progress for delivered fixed cabinet; revise component selections and PCB/chassis geometry. No final fit claim.",
+  "checked_date": "2026-11-20",
+  "baffle": {
+    "width_mm": 468,
+    "height_mm": 380,
+    "cutout_diameter_mm": 270,
+    "speaker_hole_circle_mm": 312,
+    "speaker_holes": 4,
+    "speaker_hole_diameter_mm": 5,
+    "speaker_hole_angle_deg": 45,
+    "speaker_center_x_from_left_as_drawn_mm": 204,
+    "speaker_center_y_from_top_inferred_mm": 190,
+    "thickness_mm": null,
+    "conflicts": [
+      "Width468 and side offsets20 imply428 hole span, but bottom labels218+218 imply436. Do not release baffle attachment holes.",
+      "Two9mm side-view labels need layer/assembly interpretation; do not assume whole baffle stack9mm."
+    ],
+    "source": "cabinet-size-03.jpg",
+    "received_mounting_source": "cabinet.user_measurements.C1_opposite_hole_centres_mm and C2_opposite_hole_centres_mm supersede drawing speaker_hole_circle_mm for selection screening; drawing value remains historical evidence."
+  },
+  "speaker_reference": {
+    "mpn": "Celestion Seventy 80 8ohm",
+    "selected": false,
+    "outer_diameter_mm": 309,
+    "bolt_circle_mm": 297,
+    "hole_diameter_mm": 7.9,
+    "depth_mm": 119,
+    "magnet_diameter_mm": 134,
+    "required_cutout_mm": null,
+    "source": "https://celestion.com/product/seventy-80/",
+    "note": "Drawing-only312mm rejection is historical. User reports three210mm adjacent spacings and two294mm diagonals; ideal square interpretation impliesabout297mm circle but discrepancy remains. Celestion297mm reference is no longer excluded by the312mm drawing; not selected or verified to fit. Check template/hardware,cutout,frame and depth."
+  },
+  "tank_variants": {
+    "reference_8EB2C1B": {
+      "envelope_mm": [
+        234.95,
+        85.725,
+        33.32
+      ],
+      "source": "evidence/accutronics-reference.pdf page6",
+      "applies_to_quoted_unit": false
+    },
+    "Mable_MAGT0037": {
+      "envelope_mm": [
+        235,
+        85,
+        null
+      ],
+      "input_ohm": 800,
+      "output_ohm_as_printed": "2.575 ohm; likely missing k, not silently accepted",
+      "source": "https://www.mableaudio.com/en/productview.asp?sid=10656"
+    },
+    "Mable_MAGT0046": {
+      "description_envelope_mm": [
+        180,
+        60,
+        36
+      ],
+      "drawing_envelope_mm": [
+        178,
+        60,
+        37
+      ],
+      "connector_projection_mm": 6.5,
+      "description_impedance_ohm": [
+        600,
+        2250
+      ],
+      "three_spring_code_table_impedance_ohm": [
+        800,
+        2575
+      ],
+      "source": "https://www.mableaudio.com/en/productview.asp?sid=11692",
+      "verdict": "Internally conflicting listing. Actual quoted unit not identified."
+    }
+  },
+  "layout_options": {
+    "two_plane_board_only": {
+      "assumed_tray_mm": [
+        468,
+        190
+      ],
+      "gap_mm": 8,
+      "plane_A": [
+        "Main",
+        "Reverb"
+      ],
+      "plane_B": [
+        "Power",
+        "Control"
+      ],
+      "vertical_separation_mm": null,
+      "status": "Historical area illustration only; not chosen architecture. Redesign board outlines around real cabinet and component envelopes."
+    }
+  },
+  "tank_received": {
+    "confirmed": true,
+    "date": "2026-11-19",
+    "exact_label": {
+      "model_marking": "M8EB2C1B",
+      "serial_or_production_marking": "R2610270015",
+      "reported_on": "2026-11-20",
+      "source": "User transcription confirmed by received photograph 03-tank-label.jpg on 2026-11-20",
+      "serial_format_decoded": false,
+      "photo_evidence": "engineering/whole-amp/mechanical/evidence/received-tank-2026-11-20/03-tank-label.jpg"
+    },
+    "electrical_measurements": {
+      "reported_on": "2026-11-20",
+      "source": "User-reported readings in current chat, following DT9205A centre-to-own-shell procedure; no reading photographs supplied",
+      "instrument": "DT9205A enhanced version, manual range",
+      "range": "2k ohm",
+      "shorted_probes_display": "000",
+      "shorted_probes_indicated_ohm": 0,
+      "input_display": ".076",
+      "input_DC_resistance_ohm": 76,
+      "output_display": ".235",
+      "output_DC_resistance_ohm": 235,
+      "conversion": "2k resistance range: displayed kilohms multiplied by 1000",
+      "temperature_C": null,
+      "meter_accuracy_verified": false,
+      "setup": "Per instructed isolated-tank procedure; operator reports readings, setup not independently inspected",
+      "interpretation": "Finite winding-path DC resistance at both sockets; does not exclude shorted turns or establish acoustic performance, AC impedance, grounding or allowable drive current."
+    },
+    "note": "Label photograph-confirmed. User-reported coil DC readings now 76 ohm IN and 235 ohm OUT; provenance in electrical_measurements. Body dimensions and AC characterization remain unresolved. Seller-reported 600/2250 ohm AC impedance basis retains unknown test frequency.",
+    "supplier_statement_date": "2026-11-19",
+    "supplier_statement_source": "User relayed seller reply in chat",
+    "supplier_statement": "3 spring, input IMP 600ohm, Output IMP 2250ohm, MEDIUM DECAY, input insulated Output grounded, no lock, Mount horizontal Open side Down",
+    "design_basis": {
+      "spring_count": 3,
+      "input_impedance_ohm": 600,
+      "output_impedance_ohm": 2250,
+      "decay": "medium; numeric range unconfirmed",
+      "input_connector_shell": "insulated from tank case",
+      "output_connector_shell": "grounded to tank case",
+      "transport_lock": false,
+      "mounting": "horizontal, open side down",
+      "impedance_test_frequency_Hz": null,
+      "input_DC_resistance_ohm": 76,
+      "output_DC_resistance_ohm": 235,
+      "recommended_drive_current_mA": null,
+      "maximum_drive_current_mA": null
+    },
+    "photo_observations": {
+      "record": "engineering/whole-amp/mechanical/review/received-tank-photo-intake-2026-11-20.md",
+      "spring_count_visible": 3,
+      "front_view_input": "Right white RCA socket stamped IN",
+      "front_view_output": "Left red RCA socket stamped OUT",
+      "electrical_bonding_verified": false,
+      "scale_present": false
+    }
+  }
+}

@@ -1,0 +1,1061 @@
+{
+  "board_mm": [
+    160,
+    100
+  ],
+  "parts": {
+    "JR1": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "JR1",
+      "unit": 1,
+      "value": "JR1 harness",
+      "symbol": "Connector_Generic_Conn_01x02",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Low voltage only; soldered locking harness or retained socket",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+    },
+    "C601": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "C601",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "IN_AC"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "630V film",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L18.0mm_W5.0mm_P15.00mm_FKS3_FKP3"
+    },
+    "R601": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R601",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "IN_AC",
+        "2": "DRY_IN"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "R602": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R602",
+      "unit": 1,
+      "value": "10M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DRY_IN",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "U10": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "U10",
+      "unit": 1,
+      "value": "OPA2134PA",
+      "symbol": "Amplifier_Operational_OPA2134",
+      "pins": {
+        "3": "DRY_IN",
+        "2": "DRY_BUF",
+        "1": "DRY_BUF",
+        "5": "SEND_W",
+        "6": "DRV_FB",
+        "7": "DRIVER",
+        "8": "+15V",
+        "4": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "PDIP-8; +/-15V; design linear signal limit 10Vpk",
+      "status": "proposed",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+      "footprint": "Package_DIP:DIP-8_W7.62mm"
+    },
+    "D601": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "D601",
+      "unit": 1,
+      "value": "1N4148",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "+15V",
+        "2": "DRY_IN"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+    },
+    "D602": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "D602",
+      "unit": 1,
+      "value": "1N4148",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "DRY_IN",
+        "2": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+    },
+    "C602": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "C602",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DRY_BUF",
+        "2": "SEND_TOP"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    "RV601": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "RV601",
+      "unit": 1,
+      "value": "100k SEND trim",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "SEND_TOP",
+        "2": "SEND_W",
+        "3": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Bourns 3296W-1-104LF; commissioning tank drive trim",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical"
+    },
+    "R603": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R603",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DRV_FB",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "R604": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R604",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DRIVER",
+        "2": "DRV_FB"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "R605": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R605",
+      "unit": 1,
+      "value": "220",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DRIVER",
+        "2": "DRIVE_CAP"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "C603": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "C603",
+      "unit": 1,
+      "value": "2.2u",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DRIVE_CAP",
+        "2": "TANK_IN"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W7.2mm_P5.00mm"
+    },
+    "JR2": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "JR2",
+      "unit": 1,
+      "value": "JR2 harness",
+      "symbol": "Connector_Generic_Conn_01x02",
+      "pins": {
+        "1": "TANK_IN",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Low voltage only; soldered locking harness or retained socket",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+    },
+    "JR3": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "JR3",
+      "unit": 1,
+      "value": "JR3 harness",
+      "symbol": "Connector_Generic_Conn_01x02",
+      "pins": {
+        "1": "TANK_OUT",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Low voltage only; soldered locking harness or retained socket",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+    },
+    "C604": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "C604",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "TANK_OUT",
+        "2": "REC_IN"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    "R606": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R606",
+      "unit": 1,
+      "value": "220k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "REC_IN",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "U11": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "U11",
+      "unit": 1,
+      "value": "OPA2134PA",
+      "symbol": "Amplifier_Operational_OPA2134",
+      "pins": {
+        "3": "REC_IN",
+        "2": "REC_FB",
+        "1": "REC_OUT",
+        "5": "WET_W",
+        "6": "WET_BUF",
+        "7": "WET_BUF",
+        "8": "+15V",
+        "4": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "PDIP-8; +/-15V; design linear signal limit 10Vpk",
+      "status": "proposed",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+      "footprint": "Package_DIP:DIP-8_W7.62mm"
+    },
+    "R607": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R607",
+      "unit": 1,
+      "value": "1k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "REC_FB",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "R608": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R608",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "REC_OUT",
+        "2": "REC_FB"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "C605": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "C605",
+      "unit": 1,
+      "value": "330p",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "REC_OUT",
+        "2": "REC_FB"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    "C606": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "C606",
+      "unit": 1,
+      "value": "1u",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "REC_OUT",
+        "2": "WET_TOP"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm"
+    },
+    "JR4": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "JR4",
+      "unit": 1,
+      "value": "JR4 harness",
+      "symbol": "Connector_Generic_Conn_01x03",
+      "pins": {
+        "1": "WET_TOP",
+        "2": "WET_W",
+        "3": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Low voltage only; soldered locking harness or retained socket",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+    },
+    "R609": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R609",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_W",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "R610": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R610",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_BUF",
+        "2": "WET_MUTE"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "K3": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "K3",
+      "unit": 2,
+      "value": "G5V-2-H1 DC12",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "4": "WET_MUTE",
+        "6": "GND",
+        "8": null,
+        "1": "+12V",
+        "16": "COIL_REV",
+        "13": null,
+        "11": null,
+        "9": null
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "https://components.omron.com/system/files/2023-01/datasheet_pdf/K046-E1.pdf",
+      "footprint": "Relay_THT:Relay_DPDT_Omron_G5V-2"
+    },
+    "R611": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R611",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_MUTE",
+        "2": "SUM"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "R612": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R612",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DRY_BUF",
+        "2": "SUM"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "U12": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "U12",
+      "unit": 1,
+      "value": "OPA2134PA",
+      "symbol": "Amplifier_Operational_OPA2134",
+      "pins": {
+        "3": "GND",
+        "2": "SUM",
+        "1": "SUM_INV",
+        "5": "GND",
+        "6": "OUT_FB",
+        "7": "OUT_BUF",
+        "8": "+15V",
+        "4": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "PDIP-8; +/-15V; design linear signal limit 10Vpk",
+      "status": "proposed",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+      "footprint": "Package_DIP:DIP-8_W7.62mm"
+    },
+    "R613": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R613",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "SUM_INV",
+        "2": "SUM"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "R614": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R614",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "SUM_INV",
+        "2": "OUT_FB"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "R615": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R615",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "OUT_BUF",
+        "2": "OUT_FB"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "R616": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R616",
+      "unit": 1,
+      "value": "100",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "OUT_BUF",
+        "2": "OUT_AC"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "C607": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C607",
+      "unit": 1,
+      "value": "1u",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "OUT_AC",
+        "2": "MIX_OUT"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm"
+    },
+    "R617": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R617",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "MIX_OUT",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    "JR5": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "JR5",
+      "unit": 1,
+      "value": "JR5 harness",
+      "symbol": "Connector_Generic_Conn_01x02",
+      "pins": {
+        "1": "MIX_OUT",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Low voltage only; soldered locking harness or retained socket",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+    },
+    "JR6": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "JR6",
+      "unit": 1,
+      "value": "JR6 harness",
+      "symbol": "Connector_Generic_Conn_01x05",
+      "pins": {
+        "1": "+15V",
+        "2": "GND",
+        "3": "-15V",
+        "4": "+12V",
+        "5": "COIL_REV"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Low voltage only; soldered locking harness or retained socket",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
+    },
+    "C610": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C610",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+15V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    "C611": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C611",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "GND",
+        "2": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    "C612": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C612",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+15V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    "C613": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C613",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "GND",
+        "2": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    "C614": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C614",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+15V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    "C615": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C615",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "GND",
+        "2": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    "C616": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C616",
+      "unit": 1,
+      "value": "47u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "+15V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "50V electrolytic",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
+    },
+    "C617": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C617",
+      "unit": 1,
+      "value": "47u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "GND",
+        "2": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "50V electrolytic",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
+    }
+  },
+  "placements": {
+    "JR1": [
+      8,
+      15,
+      0
+    ],
+    "C601": [
+      16,
+      15,
+      0
+    ],
+    "R601": [
+      38,
+      15,
+      0
+    ],
+    "R602": [
+      28,
+      26,
+      0
+    ],
+    "U10": [
+      49,
+      26,
+      0
+    ],
+    "D601": [
+      38,
+      37,
+      0
+    ],
+    "D602": [
+      38,
+      44,
+      0
+    ],
+    "C602": [
+      61,
+      16,
+      0
+    ],
+    "RV601": [
+      76,
+      22,
+      0
+    ],
+    "R603": [
+      61,
+      41,
+      0
+    ],
+    "R604": [
+      61,
+      33,
+      0
+    ],
+    "R605": [
+      78,
+      41,
+      0
+    ],
+    "C603": [
+      91,
+      41,
+      0
+    ],
+    "JR2": [
+      104,
+      41,
+      0
+    ],
+    "JR3": [
+      8,
+      62,
+      0
+    ],
+    "C604": [
+      17,
+      62,
+      0
+    ],
+    "R606": [
+      17,
+      73,
+      0
+    ],
+    "U11": [
+      40,
+      61,
+      0
+    ],
+    "R607": [
+      28,
+      84,
+      0
+    ],
+    "R608": [
+      53,
+      72,
+      0
+    ],
+    "C605": [
+      53,
+      81,
+      0
+    ],
+    "C606": [
+      55,
+      61,
+      0
+    ],
+    "JR4": [
+      73,
+      61,
+      0
+    ],
+    "R609": [
+      68,
+      77,
+      0
+    ],
+    "R610": [
+      80,
+      86,
+      0
+    ],
+    "R611": [
+      93,
+      86,
+      0
+    ],
+    "R612": [
+      104,
+      57,
+      0
+    ],
+    "U12": [
+      117,
+      66,
+      0
+    ],
+    "R613": [
+      104,
+      78,
+      0
+    ],
+    "R614": [
+      131,
+      80,
+      90
+    ],
+    "R615": [
+      141,
+      80,
+      90
+    ],
+    "R616": [
+      131,
+      60,
+      0
+    ],
+    "C607": [
+      133,
+      49,
+      0
+    ],
+    "R617": [
+      133,
+      39,
+      0
+    ],
+    "JR5": [
+      148,
+      49,
+      0
+    ],
+    "JR6": [
+      148,
+      10,
+      0
+    ],
+    "K3": [
+      114,
+      17,
+      0
+    ],
+    "C610": [
+      62,
+      24,
+      0
+    ],
+    "C611": [
+      43,
+      52,
+      0
+    ],
+    "C612": [
+      51,
+      54,
+      0
+    ],
+    "C613": [
+      35,
+      77,
+      0
+    ],
+    "C614": [
+      130,
+      64,
+      0
+    ],
+    "C615": [
+      111,
+      89,
+      0
+    ],
+    "C616": [
+      137,
+      15,
+      0
+    ],
+    "C617": [
+      137,
+      26,
+      0
+    ]
+  },
+  "pads": 119,
+  "nets": [
+    "+12V",
+    "+15V",
+    "-15V",
+    "COIL_REV",
+    "DRIVER",
+    "DRIVE_CAP",
+    "DRV_FB",
+    "DRY_BUF",
+    "DRY_IN",
+    "FX_RETURN",
+    "GND",
+    "IN_AC",
+    "MIX_OUT",
+    "OUT_AC",
+    "OUT_BUF",
+    "OUT_FB",
+    "REC_FB",
+    "REC_IN",
+    "REC_OUT",
+    "SEND_TOP",
+    "SEND_W",
+    "SUM",
+    "SUM_INV",
+    "TANK_IN",
+    "TANK_OUT",
+    "WET_BUF",
+    "WET_MUTE",
+    "WET_TOP",
+    "WET_W"
+  ]
+}

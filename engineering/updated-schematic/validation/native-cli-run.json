@@ -1,0 +1,60 @@
+{
+  "commands": [
+    "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli sch export netlist --format kicadxml -o engineering/updated-schematic/validation/revised-netlist.xml engineering/updated-schematic/Renegade_220V_Reverb.kicad_sch",
+    "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli sch export netlist --format kicadxml -o engineering/updated-schematic/validation/baseline-netlist.xml engineering/updated-schematic/baseline/Renegade_Source_Baseline.kicad_sch",
+    "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli sch erc --format json --severity-all -o engineering/updated-schematic/validation/revised-erc.json engineering/updated-schematic/Renegade_220V_Reverb.kicad_sch",
+    "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli sch erc --format json --severity-all -o engineering/updated-schematic/validation/baseline-erc.json engineering/updated-schematic/baseline/Renegade_Source_Baseline.kicad_sch",
+    "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli sch export pdf -o engineering/updated-schematic/validation/Renegade_220V_Reverb.pdf engineering/updated-schematic/Renegade_220V_Reverb.kicad_sch",
+    "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli sch export pdf -o engineering/updated-schematic/validation/Renegade_Source_Baseline.pdf engineering/updated-schematic/baseline/Renegade_Source_Baseline.kicad_sch"
+  ],
+  "results": [
+    {
+      "index": 0,
+      "chunk_id": "ea852d",
+      "wall_time_seconds": 0.000007375,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "index": 1,
+      "chunk_id": "1843d2",
+      "wall_time_seconds": 0.000016125,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "index": 2,
+      "chunk_id": "ca385a",
+      "wall_time_seconds": 0.000011209,
+      "exit_code": 0,
+      "original_token_count": 25,
+      "output": "Found 1 violations\nSaved ERC Report to engineering/updated-schematic/validation/revised-erc.json\n"
+    },
+    {
+      "index": 3,
+      "chunk_id": "c83916",
+      "wall_time_seconds": 0.000004959,
+      "exit_code": 0,
+      "original_token_count": 25,
+      "output": "Found 2 violations\nSaved ERC Report to engineering/updated-schematic/validation/baseline-erc.json\n"
+    },
+    {
+      "index": 4,
+      "chunk_id": "4a048d",
+      "wall_time_seconds": 0.000006666,
+      "exit_code": 0,
+      "original_token_count": 22,
+      "output": "Plotted to 'engineering/updated-schematic/validation/Renegade_220V_Reverb.pdf'.\nDone.\n"
+    },
+    {
+      "index": 5,
+      "chunk_id": "5b2478",
+      "wall_time_seconds": 0.000019292,
+      "exit_code": 0,
+      "original_token_count": 23,
+      "output": "Plotted to 'engineering/updated-schematic/validation/Renegade_Source_Baseline.pdf'.\nDone.\n"
+    }
+  ]
+}

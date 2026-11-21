@@ -1,0 +1,280 @@
+{
+  "scope": "TI-model electrical interface only; original PI represented by linear load. No spring acoustic transfer, actual coil data, VCA/pedal, real PSU, tube/OT or physical qualification.",
+  "assumptions": {
+    "tank_impedance_frequency_Hz": 1000,
+    "input_Rdc_nominal_ohm": 56,
+    "output_Rdc_nominal_ohm": 200,
+    "input_L_nominal_H": 0.09507613117830789,
+    "output_L_nominal_H": 0.3566811057666363,
+    "maximum_actual_drive_current": "UNKNOWN; full trim simulation is not an authorized setting"
+  },
+  "model_sha256": "8ff414c678a7f8330b87504d7e0553de20ca87bdc713cecf81ab3448b4d7608f",
+  "ac_cases": [
+    {
+      "name": "dry-rs1000-knob0-muteFalse",
+      "mix_at_1kHz_V": 0.8242766963152818,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "dry-rs1000-knob0-muteTrue",
+      "mix_at_1kHz_V": 0.8242766963152818,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "dry-rs1000-knob0.5-muteFalse",
+      "mix_at_1kHz_V": 0.8242766963152818,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "dry-rs1000-knob0.5-muteTrue",
+      "mix_at_1kHz_V": 0.8242766963152818,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "dry-rs1000-knob1-muteFalse",
+      "mix_at_1kHz_V": 0.8242766963152818,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "dry-rs1000-knob1-muteTrue",
+      "mix_at_1kHz_V": 0.8242766963152818,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "wet-rs1000-knob0-muteFalse",
+      "mix_at_1kHz_V": 7.463261941520627e-08,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "wet-rs1000-knob0.5-muteFalse",
+      "mix_at_1kHz_V": 0.00364065005842143,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "wet-rs1000-knob1-muteFalse",
+      "mix_at_1kHz_V": 0.007463221529295351,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "dry-rs100000-knob0-muteFalse",
+      "mix_at_1kHz_V": 0.653608063213045,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "dry-rs100000-knob0-muteTrue",
+      "mix_at_1kHz_V": 0.653608063213045,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "dry-rs100000-knob0.5-muteFalse",
+      "mix_at_1kHz_V": 0.653608063213045,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "dry-rs100000-knob0.5-muteTrue",
+      "mix_at_1kHz_V": 0.653608063213045,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "dry-rs100000-knob1-muteFalse",
+      "mix_at_1kHz_V": 0.653608063213045,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "dry-rs100000-knob1-muteTrue",
+      "mix_at_1kHz_V": 0.653608063213045,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "wet-rs100000-knob0-muteFalse",
+      "mix_at_1kHz_V": 1.224041334985944e-07,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "wet-rs100000-knob0.5-muteFalse",
+      "mix_at_1kHz_V": 0.005970989887055814,
+      "frequency_Hz": 1002.3744672545444
+    },
+    {
+      "name": "wet-rs100000-knob1-muteFalse",
+      "mix_at_1kHz_V": 0.012240347070215818,
+      "frequency_Hz": 1002.3744672545444
+    }
+  ],
+  "coil_cases": [
+    {
+      "Z_1k_assumed_ohm": 480,
+      "Rdc_assumed_ohm": 30,
+      "max_current_mArms_at_20Vpeak_source_full_trim": 7.995725812618051,
+      "at_Hz": 399.0524629937743,
+      "max_R605_W": 0.014064958879524653
+    },
+    {
+      "Z_1k_assumed_ohm": 480,
+      "Rdc_assumed_ohm": 56,
+      "max_current_mArms_at_20Vpeak_source_full_trim": 7.244358320073493,
+      "at_Hz": 399.0524629937743,
+      "max_R605_W": 0.01154576004331597
+    },
+    {
+      "Z_1k_assumed_ohm": 480,
+      "Rdc_assumed_ohm": 100,
+      "max_current_mArms_at_20Vpeak_source_full_trim": 6.250428364730779,
+      "at_Hz": 399.0524629937743,
+      "max_R605_W": 0.008594928043378839
+    },
+    {
+      "Z_1k_assumed_ohm": 600,
+      "Rdc_assumed_ohm": 30,
+      "max_current_mArms_at_20Vpeak_source_full_trim": 7.96323336988154,
+      "at_Hz": 355.6558820077832,
+      "max_R605_W": 0.013950878854702881
+    },
+    {
+      "Z_1k_assumed_ohm": 600,
+      "Rdc_assumed_ohm": 56,
+      "max_current_mArms_at_20Vpeak_source_full_trim": 7.214644104183265,
+      "at_Hz": 355.6558820077832,
+      "max_R605_W": 0.011451239701005797
+    },
+    {
+      "Z_1k_assumed_ohm": 600,
+      "Rdc_assumed_ohm": 100,
+      "max_current_mArms_at_20Vpeak_source_full_trim": 6.2244919933180665,
+      "at_Hz": 355.6558820077832,
+      "max_R605_W": 0.008523746126473757
+    },
+    {
+      "Z_1k_assumed_ohm": 720,
+      "Rdc_assumed_ohm": 30,
+      "max_current_mArms_at_20Vpeak_source_full_trim": 7.928619780454314,
+      "at_Hz": 316.97863849222153,
+      "max_R605_W": 0.013829862557062509
+    },
+    {
+      "Z_1k_assumed_ohm": 720,
+      "Rdc_assumed_ohm": 56,
+      "max_current_mArms_at_20Vpeak_source_full_trim": 7.181702375318012,
+      "at_Hz": 316.97863849222153,
+      "max_R605_W": 0.011346906781682643
+    },
+    {
+      "Z_1k_assumed_ohm": 720,
+      "Rdc_assumed_ohm": 100,
+      "max_current_mArms_at_20Vpeak_source_full_trim": 6.198575295407644,
+      "at_Hz": 329.37957309657247,
+      "max_R605_W": 0.008452913852424351
+    }
+  ],
+  "transient_cases": [
+    {
+      "name": "transient-rail12-hz100",
+      "end_s": 0.04,
+      "peaks_V": {
+        "fx": 15.862956774341704,
+        "dryin": 1.4520775528388459,
+        "driver": 2.331238733970298,
+        "mix": 13.150249703381252,
+        "recout": 0.04774369006823257,
+        "outbuf": 0.0004734403717810169
+      }
+    },
+    {
+      "name": "transient-rail12-hz1000",
+      "end_s": 0.04,
+      "peaks_V": {
+        "fx": 15.821545118618983,
+        "dryin": 1.4393180263933598,
+        "driver": 2.868601988888966,
+        "mix": 13.079600312277135,
+        "recout": 0.04774369006823384,
+        "outbuf": 0.0004735957002035479
+      }
+    },
+    {
+      "name": "transient-rail12-hz5000",
+      "end_s": 0.04,
+      "peaks_V": {
+        "fx": 15.81792523039422,
+        "dryin": 1.4378097984460079,
+        "driver": 2.875105110480184,
+        "mix": 13.073539343228164,
+        "recout": 0.04774369006824506,
+        "outbuf": 0.0004742962385724324
+      }
+    },
+    {
+      "name": "transient-rail15-hz100",
+      "end_s": 0.04,
+      "peaks_V": {
+        "fx": 15.862956735751913,
+        "dryin": 1.4520775888455881,
+        "driver": 2.331291284088096,
+        "mix": 13.15024967827033,
+        "recout": 0.05038680802291373,
+        "outbuf": 0.0004996113310279807
+      }
+    },
+    {
+      "name": "transient-rail15-hz1000",
+      "end_s": 0.04,
+      "peaks_V": {
+        "fx": 15.821533312350676,
+        "dryin": 1.4393197791077252,
+        "driver": 2.868654923065499,
+        "mix": 13.079586887320152,
+        "recout": 0.050386808022912455,
+        "outbuf": 0.0004997666593929823
+      }
+    },
+    {
+      "name": "transient-rail15-hz5000",
+      "end_s": 0.04,
+      "peaks_V": {
+        "fx": 15.81791778375201,
+        "dryin": 1.4378318248431414,
+        "driver": 2.87519129878685,
+        "mix": 13.073531846641302,
+        "recout": 0.05038680802291624,
+        "outbuf": 0.0005004671978275377
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "dry_control_independence_rs1000_20Hz_to_20kHz",
+      "relative_spread": 1.3469121084810645e-15,
+      "pass": true
+    },
+    {
+      "name": "dry_control_independence_rs100000_20Hz_to_20kHz",
+      "relative_spread": 2.2083037461608472e-15,
+      "pass": true
+    },
+    {
+      "name": "transient-rail12-hz100_driver_headroom",
+      "pass": true
+    },
+    {
+      "name": "transient-rail12-hz1000_driver_headroom",
+      "pass": true
+    },
+    {
+      "name": "transient-rail12-hz5000_driver_headroom",
+      "pass": true
+    },
+    {
+      "name": "transient-rail15-hz100_driver_headroom",
+      "pass": true
+    },
+    {
+      "name": "transient-rail15-hz1000_driver_headroom",
+      "pass": true
+    },
+    {
+      "name": "transient-rail15-hz5000_driver_headroom",
+      "pass": true
+    }
+  ],
+  "all_scoped_checks_pass": true
+}

@@ -1,0 +1,1849 @@
+{
+  "01_clean": {
+    "paper": "A3",
+    "positions": {
+      "V1/2": [
+        65,
+        115,
+        0
+      ],
+      "R4": [
+        65,
+        65,
+        0
+      ],
+      "R2": [
+        35,
+        145,
+        0
+      ],
+      "R3": [
+        62.5,
+        158,
+        0
+      ],
+      "C1": [
+        85,
+        158,
+        0
+      ],
+      "R5": [
+        110,
+        120,
+        0
+      ],
+      "C2": [
+        130,
+        80,
+        270
+      ],
+      "C3": [
+        140,
+        145,
+        270
+      ],
+      "C4": [
+        140,
+        175,
+        270
+      ],
+      "RV1": [
+        195,
+        100,
+        0
+      ],
+      "RV2": [
+        195,
+        150,
+        0
+      ],
+      "R6": [
+        195,
+        195,
+        0
+      ],
+      "RV3": [
+        250,
+        115,
+        0
+      ],
+      "V1": [
+        315,
+        115,
+        0
+      ],
+      "R7": [
+        315,
+        65,
+        0
+      ],
+      "R8": [
+        312.5,
+        158,
+        0
+      ],
+      "C5": [
+        335,
+        158,
+        0
+      ],
+      "C6": [
+        350,
+        90,
+        270
+      ],
+      "R43": [
+        375,
+        150,
+        0
+      ]
+    },
+    "anchors": {
+      "CL_IN": [
+        20,
+        115
+      ],
+      "CL_G2": [
+        275,
+        115
+      ],
+      "CLEAN_OUT": [
+        390,
+        90
+      ],
+      "B_EARLY": [
+        65,
+        40
+      ]
+    },
+    "notes": [
+      [
+        "CLEAN CHANNEL | signal flows left to right",
+        20,
+        222,
+        1.5
+      ],
+      [
+        "V1 first triode: pins 1/2/3. Second triode: pins 6/7/8.\nBass wiper is strapped to its top terminal. Channel-mute connection is on sheet 03.",
+        20,
+        237
+      ]
+    ],
+    "values": {},
+    "properties": {}
+  },
+  "02_dirty": {
+    "paper": "A3",
+    "positions": {
+      "V2/2": [
+        65,
+        110,
+        0
+      ],
+      "R12": [
+        65,
+        62,
+        0
+      ],
+      "R10": [
+        35,
+        142,
+        0
+      ],
+      "R11": [
+        62.5,
+        158,
+        0
+      ],
+      "C7": [
+        83,
+        158,
+        0
+      ],
+      "C8": [
+        105,
+        85,
+        270
+      ],
+      "RV4": [
+        140,
+        110,
+        0
+      ],
+      "R13": [
+        180,
+        110,
+        270
+      ],
+      "C9": [
+        180,
+        82,
+        270
+      ],
+      "R14": [
+        210,
+        145,
+        0
+      ],
+      "V2": [
+        240,
+        110,
+        0
+      ],
+      "R15": [
+        240,
+        62,
+        0
+      ],
+      "R16": [
+        237.5,
+        158,
+        0
+      ],
+      "C10": [
+        260,
+        158,
+        0
+      ],
+      "C11": [
+        275,
+        85,
+        270
+      ],
+      "R18": [
+        312,
+        110,
+        270
+      ],
+      "R19": [
+        332,
+        145,
+        0
+      ],
+      "V3/2": [
+        365,
+        110,
+        0
+      ],
+      "R21": [
+        365,
+        62,
+        0
+      ],
+      "R20": [
+        362.5,
+        158,
+        0
+      ],
+      "C14": [
+        385,
+        158,
+        0
+      ]
+    },
+    "anchors": {
+      "DR_IN": [
+        20,
+        110
+      ],
+      "DR_G2": [
+        215,
+        110
+      ],
+      "DR_P3": [
+        392,
+        85
+      ],
+      "B_EARLY": [
+        65,
+        38
+      ],
+      "B_PRE": [
+        365,
+        38
+      ]
+    },
+    "notes": [
+      [
+        "DIRTY CHANNEL | three cascaded gain stages",
+        20,
+        220,
+        1.5
+      ],
+      [
+        "V3 first triode drives the DC-coupled cathode follower on sheet 02b.\nThe channel switching circuit grounds the inactive second-stage grid.",
+        20,
+        238
+      ]
+    ],
+    "values": {},
+    "properties": {}
+  },
+  "02b_dirty_tone": {
+    "paper": "A3",
+    "positions": {
+      "V3": [
+        70,
+        100,
+        0
+      ],
+      "R22": [
+        67.5,
+        160,
+        0
+      ],
+      "R23": [
+        120,
+        160,
+        270
+      ],
+      "C15": [
+        145,
+        125,
+        270
+      ],
+      "C16": [
+        160,
+        185,
+        270
+      ],
+      "C17": [
+        160,
+        215,
+        270
+      ],
+      "RV5": [
+        230,
+        130,
+        0
+      ],
+      "RV6": [
+        230,
+        185,
+        0
+      ],
+      "RV7": [
+        230,
+        230,
+        0
+      ],
+      "RV8": [
+        330,
+        155,
+        0
+      ]
+    },
+    "anchors": {
+      "B_PRE": [
+        70,
+        60
+      ],
+      "DR_P3": [
+        25,
+        100
+      ],
+      "DIRTY_OUT": [
+        385,
+        155
+      ]
+    },
+    "notes": [
+      [
+        "DIRTY TONE STACK | V3 cathode follower -> treble / bass / mid -> master",
+        20,
+        260,
+        1.3
+      ]
+    ],
+    "values": {
+      "RV5": "250k LIN /TREBLE",
+      "RV6": "1M LOG /BASS",
+      "RV7": "25k LIN /MID",
+      "RV8": "1M LOG /MASTER"
+    },
+    "properties": {}
+  },
+  "03_routing": {
+    "paper": "A3",
+    "positions": {
+      "J1": [
+        30,
+        78,
+        0
+      ],
+      "R1": [
+        75,
+        78,
+        270
+      ],
+      "K1/2": [
+        120,
+        78,
+        90
+      ],
+      "K1/3": [
+        120,
+        155,
+        270
+      ],
+      "K2/2": [
+        220,
+        78,
+        270
+      ],
+      "K2/3": [
+        220,
+        165,
+        0
+      ],
+      "J3": [
+        285,
+        65,
+        180
+      ],
+      "J4": [
+        330,
+        105,
+        180
+      ],
+      "R100": [
+        370,
+        150,
+        0
+      ]
+    },
+    "anchors": {
+      "CL_IN": [
+        155,
+        65
+      ],
+      "DR_IN": [
+        155,
+        95
+      ],
+      "CL_G2": [
+        160,
+        145
+      ],
+      "DR_G2": [
+        160,
+        175
+      ],
+      "CLEAN_OUT": [
+        180,
+        65
+      ],
+      "DIRTY_OUT": [
+        180,
+        95
+      ],
+      "FX_SEND": [
+        285,
+        110
+      ],
+      "FX_RETURN": [
+        390,
+        105
+      ]
+    },
+    "notes": [
+      [
+        "CHANNEL SELECT AND NORMALLED EFFECTS LOOP",
+        20,
+        225,
+        1.5
+      ],
+      [
+        "Relays de-energized = clean. K1 grounds the inactive second-stage grid.\nK2 selects the channel output. J4 normal contact passes J3 send when no return plug is inserted.\nRelay coils and drivers appear on sheets 08 and 09b.",
+        20,
+        240
+      ]
+    ],
+    "values": {
+      "J1": "INPUT",
+      "J3": "FX SEND",
+      "J4": "FX RETURN /NORMALLED"
+    },
+    "properties": {
+      "K2/3": [
+        234,
+        149
+      ]
+    }
+  },
+  "04_output": {
+    "paper": "A2",
+    "positions": {
+      "R24": [
+        40,
+        160,
+        0
+      ],
+      "C19": [
+        65,
+        120,
+        270
+      ],
+      "R25": [
+        95,
+        172,
+        0
+      ],
+      "V4/2": [
+        130,
+        120,
+        0
+      ],
+      "V4": [
+        190,
+        120,
+        0
+      ],
+      "R29": [
+        130,
+        65,
+        0
+      ],
+      "R30": [
+        190,
+        65,
+        0
+      ],
+      "C22": [
+        160,
+        90,
+        270
+      ],
+      "R26": [
+        150,
+        170,
+        0
+      ],
+      "R28": [
+        150,
+        212,
+        0
+      ],
+      "R27": [
+        220,
+        172,
+        0
+      ],
+      "C20": [
+        235,
+        212,
+        0
+      ],
+      "R31": [
+        90,
+        242,
+        270
+      ],
+      "R32": [
+        150,
+        280,
+        0
+      ],
+      "C21": [
+        195,
+        260,
+        270
+      ],
+      "RV9": [
+        245,
+        285,
+        0
+      ],
+      "C23": [
+        275,
+        95,
+        270
+      ],
+      "C24": [
+        275,
+        220,
+        270
+      ],
+      "R33": [
+        310,
+        132,
+        0
+      ],
+      "R34": [
+        310,
+        260,
+        0
+      ],
+      "R36": [
+        350,
+        95,
+        270
+      ],
+      "R37": [
+        350,
+        220,
+        270
+      ],
+      "R41": [
+        445,
+        95,
+        270
+      ],
+      "R42": [
+        445,
+        220,
+        270
+      ],
+      "V5": [
+        400,
+        95,
+        0
+      ],
+      "V6": [
+        400,
+        220,
+        0
+      ],
+      "R110": [
+        397.5,
+        145,
+        0
+      ],
+      "R111": [
+        397.5,
+        270,
+        0
+      ]
+    },
+    "anchors": {
+      "MIX_OUT": [
+        20,
+        120
+      ],
+      "B_PRE": [
+        130,
+        40
+      ],
+      "OT_4": [
+        40,
+        242
+      ],
+      "BIAS_OUT": [
+        310,
+        305
+      ],
+      "B_SCREEN": [
+        490,
+        65
+      ],
+      "OT_PA": [
+        540,
+        70
+      ],
+      "OT_PB": [
+        540,
+        195
+      ]
+    },
+    "notes": [
+      [
+        "PHASE INVERTER AND EL34 OUTPUT | signal flows left to right",
+        20,
+        335,
+        1.5
+      ],
+      [
+        "100k output-grid returns are a draft change. Individual 1-ohm cathode sense resistors are included.\nFeedback originates at the fixed 4-ohm transformer tap. Transformer / speaker selector is on sheet 04b.\nActual bias point, output-transformer phase, component stress and stability remain unqualified.",
+        20,
+        354
+      ]
+    ],
+    "values": {
+      "RV9": "25k LIN /PRESENCE"
+    },
+    "properties": {
+      "V5": [
+        413,
+        73
+      ],
+      "V6": [
+        413,
+        198
+      ]
+    }
+  },
+  "04b_output_transformer": {
+    "paper": "A3",
+    "positions": {
+      "T2": [
+        130,
+        110,
+        0
+      ],
+      "S3": [
+        250,
+        112,
+        180
+      ],
+      "J5": [
+        340,
+        112,
+        180
+      ],
+      "JOT1": [
+        240,
+        195,
+        0
+      ]
+    },
+    "anchors": {
+      "OT_PA": [
+        60,
+        100
+      ],
+      "B_MAIN": [
+        60,
+        110
+      ],
+      "OT_PB": [
+        60,
+        120
+      ],
+      "OT_4": [
+        200,
+        80
+      ]
+    },
+    "notes": [
+      [
+        "OUTPUT TRANSFORMER AND SPEAKER SELECTOR",
+        20,
+        235,
+        1.5
+      ],
+      [
+        "S3 selects 4, 8 or 16 ohms. Feedback remains on the fixed 4-ohm tap.\nT2 uses logical terminals: confirm actual supplier winding / lead mapping and phase before build.\nJOT1 is the tap-lead interface; protect and insulate unused conductors.",
+        20,
+        252
+      ]
+    ],
+    "values": {
+      "T2": "1650F ref /7k6 CT /25W",
+      "S3": "4 /8 /16 OHM",
+      "J5": "SPEAKER"
+    },
+    "properties": {}
+  },
+  "05_supplies": {
+    "paper": "A2",
+    "positions": {
+      "J7": [
+        35,
+        100,
+        180
+      ],
+      "F1": [
+        75,
+        97.5,
+        270
+      ],
+      "S1": [
+        105,
+        100,
+        0
+      ],
+      "T1": [
+        160,
+        100,
+        0
+      ],
+      "D3": [
+        205,
+        85,
+        180
+      ],
+      "D4": [
+        235,
+        85,
+        180
+      ],
+      "D5": [
+        205,
+        125,
+        180
+      ],
+      "D6": [
+        235,
+        125,
+        180
+      ],
+      "F2": [
+        275,
+        105,
+        270
+      ],
+      "C29": [
+        310,
+        160,
+        0
+      ],
+      "C30": [
+        310,
+        215,
+        0
+      ],
+      "R501": [
+        340,
+        160,
+        0
+      ],
+      "R502": [
+        340,
+        215,
+        0
+      ],
+      "S2": [
+        380,
+        105,
+        0
+      ],
+      "L1": [
+        420,
+        105,
+        270
+      ],
+      "C26": [
+        450,
+        160,
+        0
+      ],
+      "R35": [
+        480,
+        105,
+        270
+      ],
+      "C25": [
+        510,
+        160,
+        0
+      ],
+      "C13": [
+        535,
+        160,
+        0
+      ],
+      "R17": [
+        540,
+        105,
+        270
+      ],
+      "C12": [
+        570,
+        160,
+        0
+      ]
+    },
+    "anchors": {
+      "PE": [
+        40,
+        200
+      ],
+      "L_SW": [
+        115,
+        60
+      ],
+      "N_SW": [
+        115,
+        150
+      ],
+      "BIAS_AC": [
+        195,
+        175
+      ],
+      "HEAT_A": [
+        200,
+        195
+      ],
+      "HEAT_B": [
+        200,
+        215
+      ],
+      "B_MAIN": [
+        398,
+        75
+      ],
+      "B_SCREEN": [
+        450,
+        75
+      ],
+      "B_PRE": [
+        510,
+        75
+      ],
+      "B_EARLY": [
+        570,
+        75
+      ]
+    },
+    "notes": [
+      [
+        "220 V /50 Hz MAINS AND HIGH-VOLTAGE SUPPLY",
+        20,
+        280,
+        1.5
+      ],
+      [
+        "Series 220uF /350V reservoirs with balancing resistors: 110uF effective, nominal 700V series rating.\nStandby interrupts filtered DC after the reservoir; actual HVDC switch / fuse selections are pending.\nT1 is a reference winding specification. Protective earth bonds directly to chassis on sheet 06.",
+        20,
+        305
+      ]
+    ],
+    "values": {
+      "F1": "T1.6A /250VAC provisional",
+      "F2": "HV fuse /rating TBD",
+      "S2": "STANDBY /HVDC TBD",
+      "T1": "372HX ref /220V 50Hz",
+      "L1": "8H /150mA ref"
+    },
+    "properties": {}
+  },
+  "05b_bias_reverb_supply": {
+    "paper": "A2",
+    "positions": {
+      "R40": [
+        50,
+        65,
+        270
+      ],
+      "D7": [
+        90,
+        65,
+        0
+      ],
+      "C28": [
+        125,
+        100,
+        180
+      ],
+      "R39": [
+        155,
+        65,
+        270
+      ],
+      "C27": [
+        185,
+        100,
+        180
+      ],
+      "R38": [
+        220,
+        65,
+        270
+      ],
+      "RV10": [
+        260,
+        110,
+        0
+      ],
+      "R503": [
+        260,
+        165,
+        0
+      ],
+      "R504": [
+        55,
+        240,
+        270
+      ],
+      "D501": [
+        100,
+        267,
+        270
+      ],
+      "D502": [
+        100,
+        312,
+        270
+      ],
+      "C503": [
+        145,
+        275,
+        0
+      ],
+      "R505": [
+        180,
+        240,
+        270
+      ],
+      "C504": [
+        220,
+        275,
+        0
+      ],
+      "R506": [
+        380,
+        90,
+        0
+      ],
+      "R507": [
+        380,
+        170,
+        0
+      ],
+      "C505": [
+        415,
+        170,
+        0
+      ],
+      "R508": [
+        470,
+        115,
+        0
+      ],
+      "R509": [
+        525,
+        115,
+        0
+      ]
+    },
+    "anchors": {
+      "BIAS_AC": [
+        20,
+        65
+      ],
+      "BIAS_OUT": [
+        290,
+        65
+      ],
+      "B_SCREEN": [
+        25,
+        240
+      ],
+      "B_REV": [
+        145,
+        215
+      ],
+      "B_REC": [
+        240,
+        240
+      ],
+      "HREF": [
+        420,
+        140
+      ],
+      "HEAT_A": [
+        470,
+        70
+      ],
+      "HEAT_B": [
+        525,
+        70
+      ]
+    },
+    "notes": [
+      [
+        "NEGATIVE BIAS | HEATER ELEVATION | REVERB SUPPLY",
+        20,
+        350,
+        1.5
+      ],
+      [
+        "Bias trim wiper is strapped to its lower terminal; 33k fixes the minimum return resistance.\nBias reference exploration is not a safe operating-point qualification. Zener knee / rail loading / thermal checks remain pending.\nHeater reference uses two 100-ohm artificial-center resistors; physical heater loads appear on sheet 06.",
+        20,
+        370
+      ]
+    ],
+    "values": {
+      "RV10": "50k LIN /BIAS",
+      "D501": "120V /5W ref",
+      "D502": "120V /5W ref"
+    },
+    "properties": {}
+  },
+  "06_heaters": {
+    "paper": "A3",
+    "positions": {
+      "V1/3": [
+        60,
+        85,
+        0
+      ],
+      "V2/3": [
+        100,
+        85,
+        0
+      ],
+      "V3/3": [
+        140,
+        85,
+        0
+      ],
+      "V4/3": [
+        180,
+        85,
+        0
+      ],
+      "V7/3": [
+        220,
+        85,
+        0
+      ],
+      "V8/3": [
+        260,
+        85,
+        0
+      ],
+      "V5/2": [
+        310,
+        85,
+        0
+      ],
+      "V6/2": [
+        350,
+        85,
+        0
+      ],
+      "JH1": [
+        385,
+        145,
+        0
+      ],
+      "JPE1": [
+        50,
+        210,
+        0
+      ],
+      "JPE2": [
+        50,
+        245,
+        0
+      ],
+      "#FLG15": [
+        20,
+        135,
+        0
+      ],
+      "#FLG16": [
+        20,
+        165,
+        0
+      ],
+      "#FLG17": [
+        140,
+        210,
+        0
+      ]
+    },
+    "anchors": {
+      "HEAT_A": [
+        25,
+        130
+      ],
+      "HEAT_B": [
+        25,
+        160
+      ],
+      "PE": [
+        25,
+        210
+      ]
+    },
+    "notes": [
+      [
+        "6.3 V HEATERS | PROTECTIVE EARTH | CHASSIS BOND",
+        20,
+        35,
+        1.5
+      ],
+      [
+        "Dual triodes: pins 4 and 5 strapped together, pin 9 is the other 6.3V terminal.\nEL34 heaters are pins 2 and 7. Twist heater wiring; elevation circuit is on sheet 05b.",
+        20,
+        180
+      ],
+      [
+        "PE bonds to exposed chassis metal. One intentional audio-GND /PE bond is shown.\nHeater reference load is 4.8A plus the still-unselected pilot lamp allowance.",
+        180,
+        230
+      ]
+    ],
+    "values": {
+      "JH1": "6V3 PILOT /current TBD",
+      "JPE1": "CHASSIS PE STUD",
+      "JPE2": "EXPOSED METAL BOND"
+    },
+    "properties": {}
+  },
+  "07_reverb": {
+    "paper": "A2",
+    "positions": {
+      "C101": [
+        55,
+        100,
+        270
+      ],
+      "RV101": [
+        90,
+        115,
+        0
+      ],
+      "R101": [
+        125,
+        115,
+        270
+      ],
+      "R102": [
+        155,
+        160,
+        0
+      ],
+      "V7/2": [
+        190,
+        115,
+        0
+      ],
+      "V7": [
+        245,
+        115,
+        0
+      ],
+      "R103": [
+        205,
+        175,
+        0
+      ],
+      "C102": [
+        235,
+        175,
+        0
+      ],
+      "T4": [
+        320,
+        80,
+        0
+      ],
+      "RT1": [
+        430,
+        90,
+        0
+      ],
+      "R104": [
+        45,
+        300,
+        0
+      ],
+      "R105": [
+        75,
+        270,
+        270
+      ],
+      "V8/2": [
+        115,
+        270,
+        0
+      ],
+      "R106": [
+        115,
+        215,
+        0
+      ],
+      "R107": [
+        112.5,
+        320,
+        0
+      ],
+      "C103": [
+        140,
+        320,
+        0
+      ],
+      "C104": [
+        155,
+        245,
+        270
+      ],
+      "RV102": [
+        195,
+        270,
+        0
+      ],
+      "K3/2": [
+        215,
+        330,
+        90
+      ],
+      "K3/3": [
+        285,
+        345,
+        0
+      ],
+      "R108": [
+        250,
+        270,
+        270
+      ],
+      "R109": [
+        250,
+        205,
+        270
+      ],
+      "C105": [
+        250,
+        180,
+        270
+      ],
+      "R112": [
+        305,
+        315,
+        0
+      ],
+      "V8": [
+        355,
+        270,
+        0
+      ],
+      "R113": [
+        355,
+        215,
+        0
+      ],
+      "R114": [
+        352.5,
+        320,
+        0
+      ],
+      "C106": [
+        380,
+        320,
+        0
+      ],
+      "C107": [
+        410,
+        245,
+        270
+      ],
+      "R115": [
+        450,
+        290,
+        0
+      ]
+    },
+    "anchors": {
+      "FX_RETURN": [
+        25,
+        100
+      ],
+      "B_REV": [
+        275,
+        65
+      ],
+      "B_REC": [
+        115,
+        190
+      ],
+      "MIX_OUT": [
+        490,
+        245
+      ]
+    },
+    "notes": [
+      [
+        "TUBE SPRING REVERB | DRIVER ABOVE, RECOVERY AND MIXER BELOW",
+        20,
+        365,
+        1.5
+      ],
+      [
+        "V7 triodes operate in parallel. T4 /tank shown with logical terminals; actual winding, RCA case and mounting verification remain pending.\nDry audio feeds R109/C105 continuously. K3 off grounds the AC-coupled wet-level wiper for immediate reverb muting.\nSelected-tube /transformer /tank simulations and pop /noise /transient tests remain pending.",
+        20,
+        382
+      ]
+    ],
+    "values": {
+      "RV101": "250k LIN /SEND trim",
+      "RV102": "100k LOG /REVERB",
+      "T4": "1750A ref /22k8:8",
+      "RT1": "4AB3C1B ref /8:2250"
+    },
+    "properties": {
+      "K3/3": [
+        299,
+        329
+      ],
+      "C105": [
+        254,
+        190
+      ]
+    }
+  },
+  "08_control_supply": {
+    "paper": "A2",
+    "positions": {
+      "T3": [
+        55,
+        105,
+        0
+      ],
+      "D201": [
+        115,
+        85,
+        180
+      ],
+      "D202": [
+        115,
+        125,
+        180
+      ],
+      "D203": [
+        115,
+        180,
+        180
+      ],
+      "D204": [
+        115,
+        220,
+        180
+      ],
+      "C201": [
+        175,
+        145,
+        0
+      ],
+      "U4": [
+        240,
+        110,
+        0
+      ],
+      "U5": [
+        385,
+        110,
+        0
+      ],
+      "C202": [
+        205,
+        145,
+        0
+      ],
+      "C203": [
+        280,
+        145,
+        0
+      ],
+      "C204": [
+        305,
+        145,
+        0
+      ],
+      "C205": [
+        340,
+        145,
+        0
+      ],
+      "C206": [
+        425,
+        145,
+        0
+      ],
+      "C207": [
+        455,
+        145,
+        0
+      ],
+      "#FLG18": [
+        175,
+        80,
+        0
+      ],
+      "D205": [
+        240,
+        65,
+        0
+      ],
+      "D206": [
+        385,
+        65,
+        0
+      ],
+      "K1": [
+        280,
+        275,
+        0
+      ],
+      "K2": [
+        330,
+        275,
+        0
+      ],
+      "K3": [
+        440,
+        275,
+        0
+      ]
+    },
+    "anchors": {
+      "L_SW": [
+        20,
+        80
+      ],
+      "N_SW": [
+        20,
+        130
+      ],
+      "+12V": [
+        305,
+        90
+      ],
+      "+5V": [
+        480,
+        110
+      ],
+      "COIL_CH": [
+        355,
+        310
+      ],
+      "COIL_REV": [
+        475,
+        310
+      ]
+    },
+    "notes": [
+      [
+        "ISOLATED CONTROL POWER AND RELAY COILS",
+        20,
+        340,
+        1.5
+      ],
+      [
+        "T3: separate 220V /50Hz primary, 15VAC /0.5A secondary specification.\nD201-D204 form a full bridge. Regulators require heat /dropout qualification.\nK1/K2 switch together; K3 controls wet muting. Flyback and MOSFET drivers are on sheet 09b.",
+        20,
+        359
+      ]
+    ],
+    "values": {
+      "T3": "220V /15VAC /0.5A spec",
+      "D205": "1N4007 bypass",
+      "D206": "1N4007 bypass"
+    },
+    "properties": {}
+  },
+  "09_controller": {
+    "paper": "A2",
+    "positions": {
+      "J2": [
+        30,
+        80,
+        0
+      ],
+      "R301": [
+        80,
+        95,
+        270
+      ],
+      "SW1": [
+        130,
+        145,
+        90
+      ],
+      "R302": [
+        125,
+        60,
+        0
+      ],
+      "R303": [
+        200,
+        95,
+        270
+      ],
+      "C301": [
+        250,
+        130,
+        0
+      ],
+      "U1": [
+        305,
+        95,
+        0
+      ],
+      "D301": [
+        165,
+        62,
+        90
+      ],
+      "D302": [
+        165,
+        145,
+        90
+      ],
+      "R311": [
+        80,
+        205,
+        270
+      ],
+      "SW2": [
+        130,
+        255,
+        90
+      ],
+      "R312": [
+        125,
+        170,
+        0
+      ],
+      "R313": [
+        200,
+        205,
+        270
+      ],
+      "C311": [
+        250,
+        240,
+        0
+      ],
+      "U1/2": [
+        305,
+        205,
+        0
+      ],
+      "D311": [
+        165,
+        172,
+        90
+      ],
+      "D312": [
+        165,
+        255,
+        90
+      ]
+    },
+    "anchors": {
+      "+5V": [
+        125,
+        38
+      ],
+      "CLK_CH": [
+        380,
+        95
+      ],
+      "CLK_REV": [
+        380,
+        205
+      ]
+    },
+    "notes": [
+      [
+        "PASSIVE PEDAL AND LOCAL BUTTON DEBOUNCE",
+        20,
+        315,
+        1.5
+      ],
+      [
+        "TRS assumption: tip = channel, ring = reverb, sleeve = ground. Each pedal contact is momentary.\nRC /Schmitt conditioning feeds the toggle latches on sheet 09b. Connect the pedal with power off\nuntil insertion-inhibit /ESD behavior is qualified. Switch timing and relay pops still require testing.",
+        20,
+        337
+      ]
+    ],
+    "values": {
+      "J2": "TRS PEDAL /T=CH R=REV",
+      "D301": "BAT43",
+      "D302": "BAT43",
+      "D311": "BAT43",
+      "D312": "BAT43"
+    },
+    "properties": {}
+  },
+  "09b_latches_drivers": {
+    "paper": "A2",
+    "positions": {
+      "U2": [
+        100,
+        95,
+        0
+      ],
+      "U2/2": [
+        100,
+        225,
+        0
+      ],
+      "U3": [
+        300,
+        305,
+        0
+      ],
+      "C321": [
+        250,
+        345,
+        0
+      ],
+      "R321": [
+        340,
+        280,
+        0
+      ],
+      "R322": [
+        250,
+        280,
+        0
+      ],
+      "SW3": [
+        215,
+        305,
+        90
+      ],
+      "R331": [
+        170,
+        92.5,
+        270
+      ],
+      "R332": [
+        205,
+        145,
+        0
+      ],
+      "Q1": [
+        240,
+        92.5,
+        0
+      ],
+      "D331": [
+        290,
+        95,
+        90
+      ],
+      "R341": [
+        170,
+        222.5,
+        270
+      ],
+      "R342": [
+        205,
+        275,
+        0
+      ],
+      "Q2": [
+        240,
+        222.5,
+        0
+      ],
+      "D341": [
+        290,
+        225,
+        90
+      ]
+    },
+    "anchors": {
+      "CLK_CH": [
+        30,
+        95
+      ],
+      "CLK_REV": [
+        30,
+        225
+      ],
+      "+5V": [
+        100,
+        45
+      ],
+      "+12V": [
+        290,
+        55
+      ],
+      "COIL_CH": [
+        340,
+        90
+      ],
+      "COIL_REV": [
+        340,
+        220
+      ]
+    },
+    "notes": [
+      [
+        "TOGGLE LATCHES, RESET SUPERVISOR AND RELAY DRIVERS",
+        380,
+        65,
+        1.5
+      ],
+      [
+        "Q-bar feeds D so each clock toggles its channel.\nSupervised reset forces clean /reverb off at startup.\nHeld-switch /brownout /simultaneous-button\nbehavior remains subject to actual-part testing.",
+        380,
+        88
+      ]
+    ],
+    "values": {
+      "D331": "1N4007 flyback",
+      "D341": "1N4007 flyback",
+      "SW3": "RESET /clean +rev off"
+    },
+    "properties": {}
+  },
+  "10_logic_power": {
+    "paper": "A3",
+    "positions": {
+      "U1/3": [
+        70,
+        80,
+        0
+      ],
+      "U1/4": [
+        150,
+        80,
+        0
+      ],
+      "U1/5": [
+        230,
+        80,
+        0
+      ],
+      "U1/6": [
+        310,
+        80,
+        0
+      ],
+      "U1/7": [
+        85,
+        170,
+        0
+      ],
+      "U2/3": [
+        165,
+        170,
+        0
+      ],
+      "C351": [
+        230,
+        170,
+        0
+      ],
+      "C352": [
+        285,
+        170,
+        0
+      ],
+      "C353": [
+        340,
+        170,
+        0
+      ]
+    },
+    "anchors": {
+      "+5V": [
+        85,
+        130
+      ]
+    },
+    "notes": [
+      [
+        "LOGIC PACKAGE POWER AND UNUSED GATES",
+        20,
+        220,
+        1.5
+      ],
+      [
+        "Unused HC14 inputs are grounded; unused outputs are explicitly no-connect.\nPlace a 100nF ceramic bypass capacitor at each IC supply pair in the physical layout.",
+        20,
+        240
+      ]
+    ],
+    "values": {},
+    "properties": {}
+  }
+}

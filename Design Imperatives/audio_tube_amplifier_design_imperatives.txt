@@ -1,0 +1,232 @@
+AUDIO TUBE AMPLIFIER DESIGN — MUST-REMEMBERS
+==========================================
+
+For conventional transformer-coupled tube amplifiers, including guitar amps and hi-fi amps. B+ means the high-voltage DC supply; plate and anode mean the same thing.
+
+SAFETY: Tube amplifiers contain potentially lethal voltages. Stored capacitor energy can remain after unplugging; an isolation transformer does not make the internal high-voltage supply safe to touch. Have the mains and high-voltage construction reviewed by someone qualified before energizing it.
+
+Reference: https://www.valvewizard.co.uk/
+
+
+1. DEFINE THE AMPLIFIER BEFORE CHOOSING COMPONENTS
+------------------------------------------------
+
+1. Specify the intended behavior: clean hi-fi reproduction, clean guitar headroom, deliberate overdrive, or a combination. Do not automatically treat a desirable guitar distortion characteristic as good hi-fi performance.
+
+2. Define output power together with load, frequency range, and distortion limit. A wattage figure alone is an incomplete design target.
+
+3. Choose the output tubes, operating voltages, bias, and output transformer together. They are interdependent, not independent shopping decisions.
+
+4. Distinguish topology from operating class. Push-pull does not automatically mean Class AB, and cathode bias does not automatically mean Class A.
+
+Reference: https://www.valvewizard.co.uk/pp.html
+
+
+2. HIGH-VOLTAGE AND MAINS SAFETY
+------------------------------
+
+5. Use a mains-isolated power supply. For your build, specify 220 V, 50 Hz input compatibility for every mains-powered supply, including any separate control supply.
+
+6. Give protective earth a dedicated, mechanically secure chassis connection. Never switch, fuse, or disconnect protective earth to cure hum. Audio grounding is a separate design problem.
+
+Reference: https://www.valvewizard.co.uk/Grounding.pdf
+
+7. Specify fuses properly: current, time characteristic, voltage, breaking capacity, and location. Check whether secondary faults can bypass the protection; never casually copy a 120 V amplifier’s fuse value.
+
+8. Provide discharge paths for stored high voltage. Check every capacitor bank and switch position. A bleeder resistor or extinguished indicator is not proof that the circuit is discharged—verify with appropriately rated equipment.
+
+Reference: https://www.valvewizard.co.uk/fuses.html
+
+9. Rate switches for the actual circuit they interrupt. A mains AC rating does not automatically establish suitability for several hundred volts DC.
+
+10. Determine insulation spacing from actual requirements. Working voltage, transients, insulation category, board material, contamination, and altitude matter; there is no universal “tube-amp clearance” number.
+
+Reference: https://www.valvewizard.co.uk/standby.html
+
+
+3. TUBE RATINGS AND OPERATING POINTS
+----------------------------------
+
+11. Use the exact tube manufacturer’s datasheet. Verify pinout, heater requirements, voltage limits, dissipation, grid-circuit resistance, and heater-to-cathode limits.
+
+12. Do not assume tubes sharing a socket are interchangeable. Even common nine-pin dual triodes can have different heater connections.
+
+Reference: https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf
+
+13. Calculate idle plate dissipation using plate-to-cathode voltage:
+
+    P_plate,idle = (V_plate - V_cathode) × I_plate
+
+    Use volts and amperes to obtain watts.
+
+14. Check dissipation throughout the output range—not only at idle or full power. In Class AB, the worst operating point can occur between them.
+
+15. Do not use “70% bias” as a universal design rule. Safe bias depends on operating voltage, reflected load, tube characteristics, and operating class.
+
+16. Treat screen-grid dissipation separately. Safe plate dissipation does not guarantee safe screens, particularly during overdrive. Size screen resistors for current limiting, heat, and fault-voltage stress.
+
+Reference: https://valvewizard.co.uk/gridstopper.html
+
+
+4. BIAS AND GRID PROTECTION
+--------------------------
+
+17. Give every control grid a defined DC return path. Check normal operation, switching transitions, disconnected controls, and broken potentiometer wipers.
+
+18. Respect the maximum grid-circuit resistance. Include the relevant grid stopper, grid-leak resistor, and bias-source resistance—not merely the resistor labelled “grid leak.”
+
+Reference: https://aikenamps.com/index.php/grid-resistors-why-are-they-used
+
+19. Make adjustable fixed bias fail toward a colder operating point. Limit the adjustment range and address loss of wiper contact.
+
+20. Check bias during startup, shutdown, and rapid power cycling. Power tubes must not remain conducting with substantial B+ but inadequate negative bias.
+
+21. Do not treat cathode bias as automatic protection. Verify resistor dissipation, bypass-capacitor stress, current sharing, and behavior under sustained drive.
+
+Reference: https://www.valvewizard.co.uk/bias.html
+
+
+5. OUTPUT TRANSFORMER AND SPEAKER LOAD
+--------------------------------------
+
+22. Match reflected primary impedance to the operating point. The transformer reflects the connected speaker load:
+
+    Z_primary = (N_primary / N_secondary)^2 × Z_load
+
+23. Do not confuse winding DC resistance with rated audio impedance. A resistance-meter reading is not the transformer’s specified primary load.
+
+24. Specify bass performance at the required output power. A transformer that handles its rated watts at guitar frequencies may not handle the same power at deep hi-fi bass frequencies.
+
+Reference: https://www.aikenamps.com/index.php/output-transformers-explained
+
+25. Use a transformer suitable for the DC operating conditions. Conventional single-ended stages need DC-current capability and an appropriate core gap; push-pull stages require attention to current imbalance.
+
+Reference: https://www.hammfg.com/electronics/transformers/audio/overview
+
+26. Account for plate swings above B+. Insulation and component ratings must accommodate signal peaks and inductive transients. Do not drive the amplifier without its intended load unless unloaded operation has been specifically protected and validated.
+
+Reference: https://www.aikenamps.com/index.php/idle-current-biasing-why-70-percent
+
+
+6. SIGNAL PATH, GAIN, AND OVERLOAD
+---------------------------------
+
+27. Budget gain and headroom stage by stage. Decide which stage should clip first; include losses from tone controls, mixers, effects loops, and feedback.
+
+28. Account for loading between stages. Tone controls and volume pots affect the preceding stage’s gain, frequency response, and available signal swing.
+
+29. Calculate coupling-capacitor behavior using the actual surrounding circuit. Larger capacitors are not automatically better; excessively low-frequency response can be undesirable.
+
+Reference: https://valvewizard.co.uk/Common_Gain_Stage.pdf
+
+30. Control blocking distortion. Grid current can charge coupling capacitors and temporarily shift bias; assess recovery after hard clipping, not just the clipped waveform.
+
+31. Put grid stoppers close to the tube’s grid pin. Long wiring after the resistor undermines parasitic-oscillation suppression. Choose values for stability, overload behavior, and bandwidth together.
+
+Reference: https://aikenamps.com/index.php/grid-resistors-why-are-they-used
+
+32. Give the phase inverter adequate loaded output swing. Balance alone is insufficient: check drive capability and clipping behavior with the actual power-tube grid networks attached.
+
+Reference: https://www.valvewizard.co.uk/acltp.html
+
+
+7. B+ SUPPLY AND FILTERING
+-------------------------
+
+33. Design for high mains and light-load/startup voltage. B+ can rise before the tubes conduct; normal warm operating voltage is not the worst-case capacitor voltage.
+
+34. Do not equate transformer AC current with available DC current. Capacitor-input rectifiers draw charging pulses that increase winding RMS current and heating.
+
+Reference: https://valvewizard.co.uk/psu.html
+
+35. Match reservoir capacitance to the rectifier and transformer. More capacitance increases charging stress; tube rectifiers have specific reservoir-capacitance and source-resistance requirements.
+
+36. Give sensitive stages suitable supply decoupling. Filtering must suppress ripple and prevent stages from coupling through their shared supply.
+
+37. For series electrolytics, check voltage sharing and reduced capacitance. Design balancing resistors from capacitor leakage and operating conditions, and verify their voltage and power ratings.
+
+Reference: https://www.valvewizard.co.uk/smoothing.html
+
+38. Do not add standby circuitry by habit. Define its purpose, switching stress, discharge behavior, and effect on bias. A standby switch is not a substitute for correctly rated components.
+
+Reference: https://www.valvewizard.co.uk/standby.html
+
+
+8. HEATER SUPPLIES
+-----------------
+
+39. Check heater voltage at the sockets under load, across the intended mains range—not only at the transformer terminals.
+
+40. Budget all heater current, including added reverb tubes and indicators. Rectified DC heater supplies require extra transformer-current allowance.
+
+41. Give the heater supply one deliberate reference scheme. Avoid floating heaters and conflicting references on opposite sides of a rectifier.
+
+42. Check heater-to-cathode voltage for every stage, including startup. Cathode followers and elevated-cathode circuits may require heater elevation or separate windings.
+
+43. Keep heater current loops small. Twist AC heater pairs and separate them from sensitive signal wiring. DC heaters must actually be clean; poorly filtered DC can introduce noise.
+
+Reference: https://www.valvewizard.co.uk/heater.html
+
+
+9. GROUNDING AND PHYSICAL LAYOUT
+-------------------------------
+
+44. Design current-return paths—not just ground symbols. Do not let the chassis become an accidental shared signal-return conductor.
+
+45. Keep rectifier charging currents out of input-stage returns. Place the rectifier–reservoir loop compactly and route its return deliberately.
+
+46. Ground each stage with its associated local supply-decoupling return. Prevent output-stage and control-circuit currents from sharing sensitive input paths.
+
+47. Separate low-level inputs from large-signal outputs. Short grid wiring and sensible stage placement help prevent unintended feedback.
+
+48. Plan chassis connections at jacks, pots, shields, and mounting hardware. Accidental additional connections can defeat an otherwise sound grounding scheme.
+
+Reference: https://www.valvewizard.co.uk/Grounding.pdf
+
+
+10. FEEDBACK AND STABILITY
+-------------------------
+
+49. Verify feedback polarity with the actual transformer connections. Incorrect phasing can turn intended negative feedback into positive feedback.
+
+50. Validate stability beyond the audible band. An amplifier can sound normal while suffering ultrasonic oscillation.
+
+51. Test feedback with realistic reactive loads and control extremes. Presence, resonance, feedback switches, and output-tap changes can alter loop behavior.
+
+52. Do not assume more feedback is always better. It changes gain, distortion, output impedance, clipping behavior, and stability requirements.
+
+Reference: https://www.aikenamps.com/index.php/what-is-negative-feedback
+
+
+11. COMPONENTS, CONSTRUCTION, AND VALIDATION
+-------------------------------------------
+
+53. Check voltage ratings as well as wattage. Screen resistors, plate resistors, and supply-dropping resistors may face startup or fault stresses far beyond their normal dissipation.
+
+54. Design for the temperature inside the finished enclosure. Keep heat-sensitive components away from tubes and hot resistors; validate after the amplifier reaches operating temperature.
+
+Reference: https://aikenamps.com/index.php/technical-q-a
+
+55. Verify every symbol-to-footprint pin mapping against the physical part. Include tube-socket viewing direction, transformer leads, switched jacks, and relay contact states.
+
+56. Never defeat oscilloscope protective earth. Ordinary bench-scope ground clips are generally earth-referenced; use properly rated differential or isolated measurement equipment where required.
+
+Reference: https://www.tek.com/en/documents/technical-brief/floating-oscilloscope-measurements-and-operator-protection
+
+57. Test before relying on listening impressions. Use a suitably rated resistive dummy load for power measurements, then validate reactive-load stability, clipping recovery, hum, temperature, bias drift, and startup/shutdown behavior. Record expected voltages and test conditions.
+
+Reference: https://aikenamps.com/index.php/technical-q-a
+
+
+12. YOUR SPRING REVERB AND FOOTSWITCH ADDITIONS
+---------------------------------------------
+
+58. Match the reverb tank, driver, and transformer as a system. Tank impedance is frequency-dependent; the driver needs adequate current, not merely voltage gain.
+
+59. Protect the reverb driver against an unplugged tank and flyback transients. Keep its transformer away from magnetic hum sources and its low-level recovery wiring away from the driver.
+
+Reference: https://www.valvewizard.co.uk/reverbdriver.html
+
+60. Keep the external footswitch interface touch-safe and low voltage. Specify relay isolation and switching ratings; separately address debounce, audio-pop suppression, coil transients, startup defaults, and TRS insertion shorts. Debouncing alone does not make audio switching quiet.
+
+Reference: https://www.ia.omron.com/product/cautions/36/safety_precautions.html

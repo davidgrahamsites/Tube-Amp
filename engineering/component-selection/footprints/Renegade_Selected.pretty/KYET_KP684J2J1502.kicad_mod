@@ -1,0 +1,101 @@
+(footprint "KYET_KP684J2J1502"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "KYET KP684J2J1502;630V5% polypropylene; body W17 H14.5 T8.5, each+/-1mm; pitch15+/-0.5mm; lead0.8+/-0.05mm. Courtyard max body plus0.5mm. No3D model. Temperature<=100C. Peak voltage/ripple and layout isolation require review.")
+	(property "Reference" "REF**"
+		(at 7.5 -6.25 0)
+		(layer "F.SilkS")
+		(uuid "46b83043-5565-4406-8483-bf814d0ae652")
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+	)
+	(property "Value" "KP684J2J1502"
+		(at 7.5 6.25 0)
+		(layer "F.Fab")
+		(uuid "1996f80b-ff60-4f34-b454-c064e94e9d13")
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "21f9797b-f3b5-4748-86be-312fac88946b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1f86a682-4054-4e40-8904-3c7649d211a5")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -1.15 -4.4)
+		(end 16.149999 4.4)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "cc83d390-aa03-455a-894a-22c18ac637a4")
+	)
+	(fp_rect
+		(start -2 -5.25)
+		(end 17 5.25)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "b545476c-13d7-4b21-8a5c-ea3b5f60df19")
+	)
+	(fp_rect
+		(start -1 -4.25)
+		(end 16 4.25)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "78222bee-34b1-417b-8bb1-6f1ee517fac3")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 2 2)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "553fcbf5-6da9-4727-b7e6-0593088cbe70")
+	)
+	(pad "2" thru_hole circle
+		(at 15 0)
+		(size 2 2)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1a5ce814-4949-4fa8-a400-547c73e96e10")
+	)
+	(embedded_fonts no)
+)

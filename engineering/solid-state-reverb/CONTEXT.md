@@ -1,0 +1,15 @@
+# solid-state-reverb contract
+
+Owner: Renegade integration agent. One job: preserve v0.4 solid-state reverb design and its evidence.
+
+## Inputs
+Paths in this contract are project-root-relative unless named as local. Read `brain/records/VAL-011-solid-state-reverb.md`, `engineering/solid-state-reverb/README.md`. Local edit/evidence surfaces include `01_clean.kicad_sch`, `02_dirty.kicad_sch`, `02b_dirty_tone.kicad_sch`, `03_routing.kicad_sch`, `04_output.kicad_sch`.
+
+## Process
+Historical snapshot superseded for the received tank by engineering/whole-amp/reverb-600. Historical factory scripts and products retain original paths; new work uses separate tools and product folders. Keep source inputs, stable scripts and run products identifiable by their registered roles. This contract adds navigation in place; it does not rerun, relocate or approve the existing design. New active runs belong in a revision module with separate tools, evidence and products.
+
+## Outputs
+The local files listed above and their children remain the module outputs. `brain/catalog/FILES.json` indexes their roles and hashes; `brain/materials/register.json` identifies the owning material route.
+
+## Human check
+Open the local output with its source/reference and confirm revision, unresolved limits and actual part or circuit identity before using it for the build. For native CAD, inspect the render and pin/geometry checks; for runs, inspect assumptions and logs.

@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-15",
+  "selections": [
+    {
+      "coverage_id": "P075",
+      "mpn": "1N4007RLG",
+      "refs": [
+        "D331",
+        "D341"
+      ],
+      "status": "engineering selected; coil transient and footprint integration pending"
+    },
+    {
+      "coverage_id": "P082",
+      "mpn": "1N4148TR",
+      "refs": [
+        "D601",
+        "D602"
+      ],
+      "status": "engineering selected; clamp/system protection and footprint integration pending"
+    }
+  ],
+  "checks": {
+    "flyback_assumptions": "12V +/-10%, each H1 relay coil960ohm +/-10%; two coils on D331, one D341; winding resistance at room temperature; cold resistance and turnoff waveform still open",
+    "D331_initial_current_A": 0.030555555555555555,
+    "D341_initial_current_A": 0.015277777777777777,
+    "clamp_assumptions": "50V peak send, nominal15V rails, original100k series resistor with1% low tolerance; candidate1M reduces current further",
+    "clamp_current_upper_A": 0.00035353535353535354,
+    "opposite_diode_reverse_upper_V": 31
+  },
+  "not_selected": [
+    "P105: rectifier/discharge surge requires separate checks",
+    "P074: current manufacturer 2N7000 datasheet and hot5V drive guarantee still to close",
+    "P066: BAT54 substitution needs HC input clamp and pin/layout checks"
+  ]
+}

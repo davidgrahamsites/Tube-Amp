@@ -1,0 +1,2098 @@
+stderr Warning: can't find the initialization file spinit.
+stdout ******
+stdout ** ngspice-45.2 shared library
+stdout ******
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: renegade full signal path v0.4 baseline
+stdout Option cshunt: 825 capacitors added with 1e-14 F each
+stdout Reducing trtol to 1 for xspice 'A' devices
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stderr Note: Starting dynamic gmin stepping
+stderr Note: Dynamic gmin stepping completed
+stdout Initial Transient Solution
+stdout --------------------------
+stdout Node                                   Voltage
+stdout ----                                   -------
+stdout b_main                                     400
+stdout bias_out                                   -40
+stdout input                                        0
+stdout vp                                          15
+stdout vn                                         -15
+stdout xv1_1.ca                               88.6569
+stdout cl_p1                                  182.152
+stdout cl_k1                                  1.43623
+stdout cl_in                                        0
+stdout xv1_1.re                                     1
+stdout b_early                                277.901
+stdout cl_tone                                182.152
+stdout cl_treble_top                                0
+stdout cl_bass_top                                  0
+stdout cl_bass_bottom                               0
+stdout cl_treble_w                                  0
+stdout cl_g2                                        0
+stdout xv1_6.ca                               88.6569
+stdout cl_p2                                  182.153
+stdout cl_k2                                  1.43623
+stdout xv1_6.re                                     1
+stdout clean_out                                    0
+stdout xv2_1.ca                               71.7408
+stdout dr_p1                                  208.204
+stdout dr_k1                                  1.88181
+stdout dr_in                                        0
+stdout xv2_1.re                                     1
+stdout dr_gain_top                                  0
+stdout dr_gain_w                                    0
+stdout dr_g2                                        0
+stdout xv2_6.ca                               83.4957
+stdout dr_p2                                  190.391
+stdout dr_k2                                  1.57519
+stdout xv2_6.re                                     1
+stdout dr_c3                                        0
+stdout dr_g3                                        0
+stdout xv3_1.ca                               112.543
+stdout dr_p3                                  175.828
+stdout dr_k3                                  1.12294
+stdout xv3_1.re                                     1
+stdout b_pre                                  312.772
+stdout xv3_6.ca                               133.203
+stdout dr_cf                                  176.333
+stdout xv3_6.re                                     1
+stdout dr_tone                                176.333
+stdout dr_treble_top                                0
+stdout dr_bass_top                                  0
+stdout dr_bass_bottom                               0
+stdout dr_treble_w                                  0
+stdout dirty_out                                    0
+stdout input_stop                                   0
+stdout mix_out                                      0
+stdout pi_g1                                   84.327
+stdout pi_tail_top                            84.3271
+stdout xv4_1.ca                               95.1227
+stdout pi_p1                                  225.514
+stdout pi_k                                   85.2714
+stdout xv4_1.re                                     1
+stdout xv4_6.ca                               87.8829
+stdout pi_p2                                  218.274
+stdout pi_g2                                   84.327
+stdout xv4_6.re                                     1
+stdout nfb_node                               64.2362
+stdout ot_4                                         0
+stdout pres_top                                     0
+stdout grid_a_feed                                -40
+stdout grid_b_feed                                -40
+stdout el34_ga                                    -40
+stdout el34_gb                                    -40
+stdout b_screen                               399.061
+stdout el34_sa                                394.775
+stdout el34_sb                                394.775
+stdout xv5.at                                0.962342
+stdout ot_pa                                  398.331
+stdout k_a                                  0.0186334
+stdout xv5.gs                                 4.42926
+stdout xv5.gs2                                9.32174
+stdout xv5.cc                                 8.97071
+stdout xv5.sc                                 1.28321
+stdout xv6.at                                0.962342
+stdout ot_pb                                  398.331
+stdout k_b                                  0.0186334
+stdout xv6.gs                                 4.42926
+stdout xv6.gs2                                9.32174
+stdout xv6.cc                                 8.97071
+stdout xv6.sc                                 1.28321
+stdout choke                                  399.061
+stdout fx_send                                      0
+stdout fx_return                                    0
+stdout pa_w                                       400
+stdout pb_w                                       400
+stdout speaker                                      0
+stdout rv_acin                           -4.99091e-05
+stdout rv_dryin                          -4.99091e-05
+stdout xrev_10a.n4201330                 -9.23518e-06
+stdout xrev_10a.n4200188                 -5.12333e-10
+stdout xrev_10a.n4201210                   0.00494168
+stdout xrev_10a.n4201214                    0.0012284
+stdout xrev_10a.n4201026                           15
+stdout xrev_10a.n4201004                  7.32193e-13
+stdout xrev_10a.n4201042                          -15
+stdout xrev_10a.n4200376                  7.32193e-13
+stdout xrev_10a.mid                       7.32193e-13
+stdout xrev_10a.n4200400                  7.32193e-13
+stdout xrev_10a.n4200446                  7.32193e-13
+stdout xrev_10a.n4200466                  7.32193e-13
+stdout xrev_10a.n4201370                     -1.14112
+stdout xrev_10a.n4201374                  -4.5645e-05
+stdout xrev_10a.n4200542                  7.32193e-13
+stdout xrev_10a.n4200560                  7.32193e-13
+stdout xrev_10a.n4200604                  0.000505411
+stdout xrev_10a.n4200668                      13.7967
+stdout xrev_10a.n4200664                     -14.4902
+stdout xrev_10a.n4200728                 -1.03302e-08
+stdout xrev_10a.n4200734                 -1.00293e-08
+stdout xrev_10a.sw_ol_opax134             7.32193e-13
+stdout xrev_10a.vimon                    -4.95187e-07
+stdout xrev_10a.vout_s                    0.000450085
+stdout xrev_10a.n4200292                  0.000450086
+stdout xrev_10a.clamp                     0.000505411
+stdout xrev_10a.vclp                      0.000505581
+stdout xrev_10a.n4201574                  0.000505582
+stdout xrev_10a.n4201424                   0.00494123
+stdout xrev_10a.n4201430                  1.87765e-07
+stdout xrev_10a.n4201448                      10.2252
+stdout xrev_10a.n4201452                  8.52099e-05
+stdout xrev_10a.n4201456                  0.000119294
+stdout xrev_10a.n4200216                  8.52038e-05
+stdout xrev_10a.n4201532                  0.000669148
+stdout xrev_10a.n4201536                  0.000505582
+stdout xrev_10a.n4201138                  0.000505581
+stdout xrev_10a.n42414241                  0.00494172
+stdout xrev_10a.n4201680                 -5.93384e-05
+stdout xrev_10a.n4200214                 -4.56414e-05
+stdout xrev_10a.esdp                     -4.99091e-05
+stdout xrev_10a.esdn                      0.000450085
+stdout xrev_10a.n4200794                  0.000450085
+stdout rv_drybuf                          0.000450085
+stdout xrev_10a.n4201202                  0.000505581
+stdout xrev_10a.cl_clamp                  0.000505581
+stdout xrev_10a.claw_clamp                0.000505581
+stdout xrev_10a.n4201412                   0.00494172
+stdout xrev_10a.vcc_b                              15
+stdout xrev_10a.vee_b                             -15
+stdout xrev_10a.n4200198                   0.00031924
+stdout xrev_10a.n4200190                  0.000319241
+stdout xrev_10a.vcc_clp                       13.7967
+stdout xrev_10a.vee_clp                      -14.4902
+stdout xrev_10a.n4200928                     -10.2995
+stdout xrev_10a.n4200924                     -10.2995
+stdout xrev_10a.n4200952                      10.0005
+stdout xrev_10a.n4200960                      10.0005
+stdout xrev_10a.n4200864                  0.000450085
+stdout xrev_10a.n4200222                  0.000450086
+stdout xrev_10a.n4200218                   0.00031924
+stdout xrev_10a.vsense                    0.000505411
+stdout xrev_10a.n4201644                   0.00494172
+stdout xrev_10a.n4200208                 -4.99091e-05
+stdout xrev_10a.n4200254                  0.000450085
+stdout xrev_10a.n4200258                         12.5
+stdout xrev_10a.n4200270                        -12.5
+stdout xrev_10a.n4200278                  0.000450086
+stdout xrev_10a.n4200302                  4.03578e-08
+stdout xrev_10a.n4201254                   0.00494103
+stdout xrev_10a.n4200364                  7.32193e-13
+stdout xrev_10a.n4200398                  7.32193e-13
+stdout xrev_10a.n4200442                        43.98
+stdout xrev_10a.n4200444                  7.32193e-13
+stdout xrev_10a.n4200472                  7.32193e-13
+stdout xrev_10a.n4200484                       -48.09
+stdout xrev_10a.n4200536                           60
+stdout xrev_10a.n4200540                  7.32193e-13
+stdout xrev_10a.n4200566                  7.32193e-13
+stdout xrev_10a.n4200578                          -60
+stdout xrev_10a.n4200632                      13.7967
+stdout xrev_10a.n4200636                     -14.4902
+stdout xrev_10a.v11                      -1.03302e-08
+stdout xrev_10a.v12                      -1.00293e-08
+stdout xrev_10a.n4200740                  7.32193e-13
+stdout xrev_10a.n4200782                 -4.95187e-07
+stdout xrev_10a.n4200916                      10.0005
+stdout xrev_10a.n4200896                     -10.2995
+stdout xrev_10a.x_u1.7                       0.833786
+stdout xrev_10a.x_u1.8                       0.833786
+stdout xrev_10a.x_u1.3                   -5.70721e-19
+stdout xrev_10a.x_u1.6                    1.13973e-18
+stdout xrev_10a.x_u1.4                    1.13973e-18
+stdout xrev_10a.x_u1.5                              0
+stdout xrev_10a.x_u10.gvo+_int1                     0
+stdout xrev_10a.x_u10.gvo-_int1                     0
+stdout xrev_10a.x_u11.gvo+_int1                     0
+stdout xrev_10a.x_u11.gvo-_int1                     0
+stdout xrev_10a.x_u12.gvo+_int1                     0
+stdout xrev_10a.x_u12.gvo-_int1                     0
+stdout xrev_10a.x_u16.gsw+_int1                     0
+stdout xrev_10a.x_u18.g1_int1              0.00120325
+stdout xrev_10a.x_u18.g1_int2            -4.95188e-07
+stdout xrev_10a.x_u19.g1_int1               0.0005098
+stdout xrev_10a.x_u19.g1_int2             4.95188e-07
+stdout xrev_10a.x_u22.g1_int1                       0
+stdout xrev_10a.x_u23.g1_int1                       0
+stdout xrev_10a.x_u26.g1_int1                       0
+stdout xrev_10a.x_u27.g1_int1             4.95188e-10
+stdout xrev_10a.x_u30.g1_int1             4.03571e-14
+stdout xrev_10a.x_u31.g1_int1             8.06012e-10
+stdout xrev_10a.x_u32.g1_int1              0.00494126
+stdout xrev_10a.x_u35.g1_int1                       0
+stdout xrev_10a.x_u36.3                             0
+stdout xrev_10a.x_u36.5                             0
+stdout xrev_10a.x_u37.3                             0
+stdout xrev_10a.x_u37.5                             0
+stdout xrev_10a.x_u4.e1_int1               0.00036915
+stdout xrev_10a.x_u6.g1_int1              0.000450086
+stdout rv_sendtop                        -5.00158e-08
+stdout rv_sendw                          -5.00158e-08
+stdout xrev_10b.n4201330                 -9.25434e-09
+stdout xrev_10b.n4200188                  2.16445e-13
+stdout xrev_10b.n4201210                    0.0120007
+stdout xrev_10b.n4201214                   0.00298312
+stdout xrev_10b.n4201026                           15
+stdout xrev_10b.n4201004                  7.30616e-13
+stdout xrev_10b.n4201042                          -15
+stdout xrev_10b.n4200376                  7.30616e-13
+stdout xrev_10b.mid                       7.30616e-13
+stdout xrev_10b.n4200400                  7.30616e-13
+stdout xrev_10b.n4200446                  7.30616e-13
+stdout xrev_10b.n4200466                  7.30616e-13
+stdout xrev_10b.n4201370                     -1.14112
+stdout xrev_10b.n4201374                  -4.5645e-05
+stdout xrev_10b.n4200542                  7.30616e-13
+stdout xrev_10b.n4200560                  7.30616e-13
+stdout xrev_10b.n4200604                   0.00113431
+stdout xrev_10b.n4200668                      13.7967
+stdout xrev_10b.n4200664                     -14.4902
+stdout xrev_10b.n4200728                 -1.03302e-08
+stdout xrev_10b.n4200734                 -1.00293e-08
+stdout xrev_10b.sw_ol_opax134             7.30616e-13
+stdout xrev_10b.vimon                     4.99995e-05
+stdout xrev_10b.vout_s                    0.000999919
+stdout xrev_10b.n4200292                  0.000499945
+stdout xrev_10b.clamp                      0.00113431
+stdout xrev_10b.vclp                       0.00113469
+stdout xrev_10b.n4201574                   0.00113469
+stdout xrev_10b.n4201424                    0.0119996
+stdout xrev_10b.n4201430                  4.55979e-07
+stdout xrev_10b.n4201448                      10.2252
+stdout xrev_10b.n4201452                  8.52099e-05
+stdout xrev_10b.n4201456                  0.000119294
+stdout xrev_10b.n4200216                  8.52038e-05
+stdout xrev_10b.n4201532                   0.00150179
+stdout xrev_10b.n4201536                   0.00113469
+stdout xrev_10b.n4201138                   0.00113469
+stdout xrev_10b.n42414241                   0.0120008
+stdout xrev_10b.n4201680                 -5.93384e-05
+stdout xrev_10b.n4200214                 -4.56414e-05
+stdout xrev_10b.esdp                     -5.00159e-08
+stdout xrev_10b.esdn                      0.000499945
+stdout xrev_10b.n4200794                  0.000999919
+stdout rv_driver                          0.000999919
+stdout xrev_10b.n4201202                   0.00113469
+stdout xrev_10b.cl_clamp                   0.00113469
+stdout xrev_10b.claw_clamp                 0.00113469
+stdout xrev_10b.n4201412                    0.0120008
+stdout xrev_10b.vcc_b                              15
+stdout xrev_10b.vee_b                             -15
+stdout xrev_10b.n4200198                    0.0003691
+stdout xrev_10b.n4200190                    0.0003691
+stdout xrev_10b.vcc_clp                       13.7967
+stdout xrev_10b.vee_clp                      -14.4902
+stdout xrev_10b.n4200928                     -10.2989
+stdout xrev_10b.n4200924                     -10.2989
+stdout xrev_10b.n4200952                      10.0011
+stdout xrev_10b.n4200960                      10.0011
+stdout xrev_10b.n4200864                  0.000999919
+stdout xrev_10b.n4200222                  0.000499945
+stdout xrev_10b.n4200218                    0.0003691
+stdout xrev_10b.vsense                     0.00113431
+stdout xrev_10b.n4201644                    0.0120008
+stdout xrev_10b.n4200208                 -5.00159e-08
+stdout xrev_10b.n4200254                  0.000499945
+stdout xrev_10b.n4200258                         12.5
+stdout xrev_10b.n4200270                        -12.5
+stdout xrev_10b.n4200278                  0.000499945
+stdout xrev_10b.n4200302                  7.18467e-08
+stdout xrev_10b.n4201254                    0.0119991
+stdout xrev_10b.n4200364                  7.30616e-13
+stdout xrev_10b.n4200398                  7.30616e-13
+stdout xrev_10b.n4200442                        43.98
+stdout xrev_10b.n4200444                  7.30616e-13
+stdout xrev_10b.n4200472                  7.30616e-13
+stdout xrev_10b.n4200484                       -48.09
+stdout xrev_10b.n4200536                           60
+stdout xrev_10b.n4200540                  7.30616e-13
+stdout xrev_10b.n4200566                  7.30616e-13
+stdout xrev_10b.n4200578                          -60
+stdout xrev_10b.n4200632                      13.7967
+stdout xrev_10b.n4200636                     -14.4902
+stdout xrev_10b.v11                      -1.03302e-08
+stdout xrev_10b.v12                      -1.00293e-08
+stdout xrev_10b.n4200740                  7.30616e-13
+stdout rv_drvfb                           0.000499945
+stdout xrev_10b.n4200782                  4.99995e-05
+stdout xrev_10b.n4200916                      10.0011
+stdout xrev_10b.n4200896                     -10.2989
+stdout xrev_10b.x_u1.7                       0.833786
+stdout xrev_10b.x_u1.8                       0.833786
+stdout xrev_10b.x_u1.3                   -5.70721e-19
+stdout xrev_10b.x_u1.6                    1.13973e-18
+stdout xrev_10b.x_u1.4                    1.13973e-18
+stdout xrev_10b.x_u1.5                              0
+stdout xrev_10b.x_u10.gvo+_int1                     0
+stdout xrev_10b.x_u10.gvo-_int1                     0
+stdout xrev_10b.x_u11.gvo+_int1                     0
+stdout xrev_10b.x_u11.gvo-_int1                     0
+stdout xrev_10b.x_u12.gvo+_int1                     0
+stdout xrev_10b.x_u12.gvo-_int1                     0
+stdout xrev_10b.x_u16.gsw+_int1                     0
+stdout xrev_10b.x_u18.g1_int1              0.00120325
+stdout xrev_10b.x_u18.g1_int2             4.99995e-05
+stdout xrev_10b.x_u19.g1_int1             0.000509798
+stdout xrev_10b.x_u19.g1_int2            -4.99995e-05
+stdout xrev_10b.x_u22.g1_int1                       0
+stdout xrev_10b.x_u23.g1_int1            -2.32241e-26
+stdout xrev_10b.x_u26.g1_int1             4.99995e-08
+stdout xrev_10b.x_u27.g1_int1                       0
+stdout xrev_10b.x_u30.g1_int1             7.18461e-14
+stdout xrev_10b.x_u31.g1_int1             1.43491e-09
+stdout xrev_10b.x_u32.g1_int1               0.0119996
+stdout xrev_10b.x_u35.g1_int1             2.32241e-26
+stdout xrev_10b.x_u36.3                             0
+stdout xrev_10b.x_u36.5                             0
+stdout xrev_10b.x_u37.3                             0
+stdout xrev_10b.x_u37.5                             0
+stdout xrev_10b.x_u4.e1_int1               0.00036915
+stdout xrev_10b.x_u6.g1_int1              0.000499945
+stdout rv_drivecap                        0.000999919
+stdout rv_tankin                                    0
+stdout rv_ti                                        0
+stdout rv_tanksrc                                   0
+stdout rv_to                                        0
+stdout rv_tankout                                   0
+stdout rv_recin                          -1.10035e-06
+stdout xrev_11a.n4201330                 -2.03607e-07
+stdout xrev_11a.n4200188                 -1.05809e-11
+stdout xrev_11a.n4201210                     0.564297
+stdout xrev_11a.n4201214                     0.140272
+stdout xrev_11a.n4201026                           15
+stdout xrev_11a.n4201004                  7.30634e-13
+stdout xrev_11a.n4201042                          -15
+stdout xrev_11a.n4200376                  7.30634e-13
+stdout xrev_11a.mid                       7.30634e-13
+stdout xrev_11a.n4200400                  7.30634e-13
+stdout xrev_11a.n4200446                  7.30634e-13
+stdout xrev_11a.n4200466                  7.30634e-13
+stdout xrev_11a.n4201370                     -1.14112
+stdout xrev_11a.n4201374                  -4.5645e-05
+stdout xrev_11a.n4200542                  7.30634e-13
+stdout xrev_11a.n4200560                  7.30634e-13
+stdout xrev_11a.n4200604                    0.0567039
+stdout xrev_11a.n4200668                      13.7967
+stdout xrev_11a.n4200664                     -14.4902
+stdout xrev_11a.n4200728                 -1.03301e-08
+stdout xrev_11a.n4200734                 -1.00293e-08
+stdout xrev_11a.sw_ol_opax134             7.30634e-13
+stdout xrev_11a.vimon                      0.00049897
+stdout xrev_11a.vout_s                      0.0503858
+stdout xrev_11a.n4200292                  0.000498895
+stdout xrev_11a.clamp                       0.0567039
+stdout xrev_11a.vclp                         0.056723
+stdout xrev_11a.n4201574                     0.056723
+stdout xrev_11a.n4201424                     0.564245
+stdout xrev_11a.n4201430                  2.14411e-05
+stdout xrev_11a.n4201448                      10.2252
+stdout xrev_11a.n4201452                  8.52099e-05
+stdout xrev_11a.n4201456                  0.000119294
+stdout xrev_11a.n4200216                  8.52038e-05
+stdout xrev_11a.n4201532                    0.0750741
+stdout xrev_11a.n4201536                    0.0567231
+stdout xrev_11a.n4201138                     0.056723
+stdout xrev_11a.n42414241                    0.564302
+stdout xrev_11a.n4201680                 -5.93384e-05
+stdout xrev_11a.n4200214                 -4.56414e-05
+stdout xrev_11a.esdp                     -1.10035e-06
+stdout xrev_11a.esdn                      0.000498866
+stdout xrev_11a.n4200794                    0.0503858
+stdout rv_recout                            0.0503858
+stdout xrev_11a.n4201202                     0.056723
+stdout xrev_11a.cl_clamp                     0.056723
+stdout xrev_11a.claw_clamp                   0.056723
+stdout xrev_11a.n4201412                     0.564302
+stdout xrev_11a.vcc_b                              15
+stdout xrev_11a.vee_b                             -15
+stdout xrev_11a.n4200198                   0.00036805
+stdout xrev_11a.n4200190                   0.00036805
+stdout xrev_11a.vcc_clp                       13.7967
+stdout xrev_11a.vee_clp                      -14.4902
+stdout xrev_11a.n4200928                     -10.2433
+stdout xrev_11a.n4200924                     -10.2433
+stdout xrev_11a.n4200952                      10.0567
+stdout xrev_11a.n4200960                      10.0567
+stdout xrev_11a.n4200864                    0.0503858
+stdout xrev_11a.n4200222                  0.000498895
+stdout xrev_11a.n4200218                   0.00036805
+stdout xrev_11a.vsense                      0.0567039
+stdout xrev_11a.n4201644                     0.564302
+stdout xrev_11a.n4200208                 -1.10035e-06
+stdout xrev_11a.n4200254                  0.000498866
+stdout xrev_11a.n4200258                         12.5
+stdout xrev_11a.n4200270                        -12.5
+stdout xrev_11a.n4200278                  0.000498895
+stdout xrev_11a.n4200302                  2.85422e-06
+stdout xrev_11a.n4201254                     0.564223
+stdout xrev_11a.n4200364                  7.30634e-13
+stdout xrev_11a.n4200398                  7.30634e-13
+stdout xrev_11a.n4200442                        43.98
+stdout xrev_11a.n4200444                  7.30634e-13
+stdout xrev_11a.n4200472                  7.30634e-13
+stdout xrev_11a.n4200484                       -48.09
+stdout xrev_11a.n4200536                           60
+stdout xrev_11a.n4200540                  7.30634e-13
+stdout xrev_11a.n4200566                  7.30634e-13
+stdout xrev_11a.n4200578                          -60
+stdout xrev_11a.n4200632                      13.7967
+stdout xrev_11a.n4200636                     -14.4902
+stdout xrev_11a.v11                      -1.03301e-08
+stdout xrev_11a.v12                      -1.00293e-08
+stdout xrev_11a.n4200740                  7.30634e-13
+stdout rv_recfb                           0.000498866
+stdout xrev_11a.n4200782                   0.00049897
+stdout xrev_11a.n4200916                      10.0567
+stdout xrev_11a.n4200896                     -10.2433
+stdout xrev_11a.x_u1.7                       0.833786
+stdout xrev_11a.x_u1.8                       0.833786
+stdout xrev_11a.x_u1.3                   -5.70721e-19
+stdout xrev_11a.x_u1.6                    1.13973e-18
+stdout xrev_11a.x_u1.4                    1.13973e-18
+stdout xrev_11a.x_u1.5                              0
+stdout xrev_11a.x_u10.gvo+_int1                     0
+stdout xrev_11a.x_u10.gvo-_int1                     0
+stdout xrev_11a.x_u11.gvo+_int1                     0
+stdout xrev_11a.x_u11.gvo-_int1                     0
+stdout xrev_11a.x_u12.gvo+_int1                     0
+stdout xrev_11a.x_u12.gvo-_int1                     0
+stdout xrev_11a.x_u16.gsw+_int1                     0
+stdout xrev_11a.x_u18.g1_int1              0.00120325
+stdout xrev_11a.x_u18.g1_int2              0.00049897
+stdout xrev_11a.x_u19.g1_int1             0.000509785
+stdout xrev_11a.x_u19.g1_int2             -0.00049897
+stdout xrev_11a.x_u22.g1_int1                       0
+stdout xrev_11a.x_u23.g1_int1                       0
+stdout xrev_11a.x_u26.g1_int1              4.9897e-07
+stdout xrev_11a.x_u27.g1_int1                       0
+stdout xrev_11a.x_u30.g1_int1             2.85422e-12
+stdout xrev_11a.x_u31.g1_int1             5.70045e-08
+stdout xrev_11a.x_u32.g1_int1                0.564249
+stdout xrev_11a.x_u35.g1_int1                       0
+stdout xrev_11a.x_u36.3                             0
+stdout xrev_11a.x_u36.5                             0
+stdout xrev_11a.x_u37.3                             0
+stdout xrev_11a.x_u37.5                             0
+stdout xrev_11a.x_u4.e1_int1               0.00036915
+stdout xrev_11a.x_u6.g1_int1              0.000498895
+stdout rv_wettop                         -5.00158e-12
+stdout rv_wetw                           -5.00158e-12
+stdout xrev_11b.n4201330                 -3.38727e-13
+stdout xrev_11b.n4200188                  7.31289e-13
+stdout xrev_11b.n4201210                   0.00650076
+stdout xrev_11b.n4201214                   0.00161595
+stdout xrev_11b.n4201026                           15
+stdout xrev_11b.n4201004                  7.31348e-13
+stdout xrev_11b.n4201042                          -15
+stdout xrev_11b.n4200376                  7.31348e-13
+stdout xrev_11b.mid                       7.31348e-13
+stdout xrev_11b.n4200400                  7.31348e-13
+stdout xrev_11b.n4200446                  7.31348e-13
+stdout xrev_11b.n4200466                  7.31348e-13
+stdout xrev_11b.n4201370                     -1.14112
+stdout xrev_11b.n4201374                  -4.5645e-05
+stdout xrev_11b.n4200542                  7.31348e-13
+stdout xrev_11b.n4200560                  7.31348e-13
+stdout xrev_11b.n4200604                  0.000572807
+stdout xrev_11b.n4200668                      13.7967
+stdout xrev_11b.n4200664                     -14.4902
+stdout xrev_11b.n4200728                 -1.03302e-08
+stdout xrev_11b.n4200734                 -1.00293e-08
+stdout xrev_11b.sw_ol_opax134             7.31348e-13
+stdout xrev_11b.vimon                      4.9998e-05
+stdout xrev_11b.vout_s                    0.000499995
+stdout xrev_11b.n4200292                  0.000499995
+stdout xrev_11b.clamp                     0.000572807
+stdout xrev_11b.vclp                         0.000573
+stdout xrev_11b.n4201574                     0.000573
+stdout xrev_11b.n4201424                   0.00650016
+stdout xrev_11b.n4201430                  2.47004e-07
+stdout xrev_11b.n4201448                      10.2252
+stdout xrev_11b.n4201452                  8.52099e-05
+stdout xrev_11b.n4201456                  0.000119294
+stdout xrev_11b.n4200216                  8.52038e-05
+stdout xrev_11b.n4201532                  0.000758378
+stdout xrev_11b.n4201536                  0.000573001
+stdout xrev_11b.n4201138                     0.000573
+stdout xrev_11b.n42414241                  0.00650081
+stdout xrev_11b.n4201680                 -5.93384e-05
+stdout xrev_11b.n4200214                 -4.56414e-05
+stdout xrev_11b.esdp                      -5.0516e-12
+stdout xrev_11b.esdn                      0.000499995
+stdout xrev_11b.n4200794                  0.000499995
+stdout rv_wetbuf                          0.000499995
+stdout xrev_11b.n4201202                     0.000573
+stdout xrev_11b.cl_clamp                     0.000573
+stdout xrev_11b.claw_clamp                   0.000573
+stdout xrev_11b.n4201412                   0.00650081
+stdout xrev_11b.vcc_b                              15
+stdout xrev_11b.vee_b                             -15
+stdout xrev_11b.n4200198                   0.00036915
+stdout xrev_11b.n4200190                   0.00036915
+stdout xrev_11b.vcc_clp                       13.7967
+stdout xrev_11b.vee_clp                      -14.4902
+stdout xrev_11b.n4200928                     -10.2994
+stdout xrev_11b.n4200924                     -10.2994
+stdout xrev_11b.n4200952                      10.0006
+stdout xrev_11b.n4200960                      10.0006
+stdout xrev_11b.n4200864                  0.000499995
+stdout xrev_11b.n4200222                  0.000499995
+stdout xrev_11b.n4200218                   0.00036915
+stdout xrev_11b.vsense                    0.000572807
+stdout xrev_11b.n4201644                   0.00650081
+stdout xrev_11b.n4200208                 -5.05159e-12
+stdout xrev_11b.n4200254                  0.000499995
+stdout xrev_11b.n4200258                         12.5
+stdout xrev_11b.n4200270                        -12.5
+stdout xrev_11b.n4200278                  0.000499995
+stdout xrev_11b.n4200302                  4.37323e-08
+stdout xrev_11b.n4201254                    0.0064999
+stdout xrev_11b.n4200364                  7.31348e-13
+stdout xrev_11b.n4200398                  7.31348e-13
+stdout xrev_11b.n4200442                        43.98
+stdout xrev_11b.n4200444                  7.31348e-13
+stdout xrev_11b.n4200472                  7.31348e-13
+stdout xrev_11b.n4200484                       -48.09
+stdout xrev_11b.n4200536                           60
+stdout xrev_11b.n4200540                  7.31348e-13
+stdout xrev_11b.n4200566                  7.31348e-13
+stdout xrev_11b.n4200578                          -60
+stdout xrev_11b.n4200632                      13.7967
+stdout xrev_11b.n4200636                     -14.4902
+stdout xrev_11b.v11                      -1.03302e-08
+stdout xrev_11b.v12                      -1.00293e-08
+stdout xrev_11b.n4200740                  7.31348e-13
+stdout xrev_11b.n4200782                   4.9998e-05
+stdout xrev_11b.n4200916                      10.0006
+stdout xrev_11b.n4200896                     -10.2994
+stdout xrev_11b.x_u1.7                       0.833786
+stdout xrev_11b.x_u1.8                       0.833786
+stdout xrev_11b.x_u1.3                   -5.70721e-19
+stdout xrev_11b.x_u1.6                    1.13973e-18
+stdout xrev_11b.x_u1.4                    1.13973e-18
+stdout xrev_11b.x_u1.5                              0
+stdout xrev_11b.x_u10.gvo+_int1                     0
+stdout xrev_11b.x_u10.gvo-_int1                     0
+stdout xrev_11b.x_u11.gvo+_int1                     0
+stdout xrev_11b.x_u11.gvo-_int1                     0
+stdout xrev_11b.x_u12.gvo+_int1                     0
+stdout xrev_11b.x_u12.gvo-_int1                     0
+stdout xrev_11b.x_u16.gsw+_int1                     0
+stdout xrev_11b.x_u18.g1_int1              0.00120325
+stdout xrev_11b.x_u18.g1_int2              4.9998e-05
+stdout xrev_11b.x_u19.g1_int1             0.000509798
+stdout xrev_11b.x_u19.g1_int2             -4.9998e-05
+stdout xrev_11b.x_u22.g1_int1                       0
+stdout xrev_11b.x_u23.g1_int1                       0
+stdout xrev_11b.x_u26.g1_int1              4.9998e-08
+stdout xrev_11b.x_u27.g1_int1                       0
+stdout xrev_11b.x_u30.g1_int1             4.37316e-14
+stdout xrev_11b.x_u31.g1_int1             8.73407e-10
+stdout xrev_11b.x_u32.g1_int1               0.0065002
+stdout xrev_11b.x_u35.g1_int1                       0
+stdout xrev_11b.x_u36.3                             0
+stdout xrev_11b.x_u36.5                             0
+stdout xrev_11b.x_u37.3                             0
+stdout xrev_11b.x_u37.5                             0
+stdout xrev_11b.x_u4.e1_int1               0.00036915
+stdout xrev_11b.x_u6.g1_int1              0.000499995
+stdout rv_wetmute                         5.49934e-08
+stdout rv_sum                             0.000499995
+stdout xrev_12a.n4201330                  5.86138e-13
+stdout xrev_12a.n4200188                  7.30571e-13
+stdout xrev_12a.n4201210                    0.0117732
+stdout xrev_12a.n4201214                   0.00292658
+stdout xrev_12a.n4201026                           15
+stdout xrev_12a.n4201004                  7.30579e-13
+stdout xrev_12a.n4201042                          -15
+stdout xrev_12a.n4200376                  7.30579e-13
+stdout xrev_12a.mid                       7.30579e-13
+stdout xrev_12a.n4200400                  7.30579e-13
+stdout xrev_12a.n4200446                  7.30579e-13
+stdout xrev_12a.n4200466                  7.30579e-13
+stdout xrev_12a.n4201370                     -1.14112
+stdout xrev_12a.n4201374                  -4.5645e-05
+stdout xrev_12a.n4200542                  7.30579e-13
+stdout xrev_12a.n4200560                  7.30579e-13
+stdout xrev_12a.n4200604                   0.00118196
+stdout xrev_12a.n4200668                      13.7967
+stdout xrev_12a.n4200664                     -14.4902
+stdout xrev_12a.n4200728                 -1.03302e-08
+stdout xrev_12a.n4200734                 -1.00293e-08
+stdout xrev_12a.sw_ol_opax134             7.30579e-13
+stdout xrev_12a.vimon                     1.10051e-05
+stdout xrev_12a.vout_s                     0.00105014
+stdout xrev_12a.n4200292                  0.000499995
+stdout xrev_12a.clamp                      0.00118196
+stdout xrev_12a.vclp                       0.00118236
+stdout xrev_12a.n4201574                   0.00118236
+stdout xrev_12a.n4201424                    0.0117721
+stdout xrev_12a.n4201430                  4.47337e-07
+stdout xrev_12a.n4201448                      10.2252
+stdout xrev_12a.n4201452                  8.52099e-05
+stdout xrev_12a.n4201456                  0.000119294
+stdout xrev_12a.n4200216                  8.52038e-05
+stdout xrev_12a.n4201532                   0.00156488
+stdout xrev_12a.n4201536                   0.00118236
+stdout xrev_12a.n4201138                   0.00118236
+stdout xrev_12a.n42414241                   0.0117733
+stdout xrev_12a.n4201680                 -5.93384e-05
+stdout xrev_12a.n4200214                 -4.56414e-05
+stdout xrev_12a.esdp                     -5.00163e-14
+stdout xrev_12a.esdn                      0.000499995
+stdout xrev_12a.n4200794                   0.00105014
+stdout rv_suminv                           0.00105014
+stdout xrev_12a.n4201202                   0.00118236
+stdout xrev_12a.cl_clamp                   0.00118236
+stdout xrev_12a.claw_clamp                 0.00118236
+stdout xrev_12a.n4201412                    0.0117733
+stdout xrev_12a.vcc_b                              15
+stdout xrev_12a.vee_b                             -15
+stdout xrev_12a.n4200198                   0.00036915
+stdout xrev_12a.n4200190                   0.00036915
+stdout xrev_12a.vcc_clp                       13.7967
+stdout xrev_12a.vee_clp                      -14.4902
+stdout xrev_12a.n4200928                     -10.2988
+stdout xrev_12a.n4200924                     -10.2988
+stdout xrev_12a.n4200952                      10.0012
+stdout xrev_12a.n4200960                      10.0012
+stdout xrev_12a.n4200864                   0.00105014
+stdout xrev_12a.n4200222                  0.000499995
+stdout xrev_12a.n4200218                   0.00036915
+stdout xrev_12a.vsense                     0.00118196
+stdout xrev_12a.n4201644                    0.0117733
+stdout xrev_12a.n4200208                 -5.00145e-14
+stdout xrev_12a.n4200254                  0.000499995
+stdout xrev_12a.n4200258                         12.5
+stdout xrev_12a.n4200270                        -12.5
+stdout xrev_12a.n4200278                  0.000499995
+stdout xrev_12a.n4200302                  7.42328e-08
+stdout xrev_12a.n4201254                    0.0117717
+stdout xrev_12a.n4200364                  7.30579e-13
+stdout xrev_12a.n4200398                  7.30579e-13
+stdout xrev_12a.n4200442                        43.98
+stdout xrev_12a.n4200444                  7.30579e-13
+stdout xrev_12a.n4200472                  7.30579e-13
+stdout xrev_12a.n4200484                       -48.09
+stdout xrev_12a.n4200536                           60
+stdout xrev_12a.n4200540                  7.30579e-13
+stdout xrev_12a.n4200566                  7.30579e-13
+stdout xrev_12a.n4200578                          -60
+stdout xrev_12a.n4200632                      13.7967
+stdout xrev_12a.n4200636                     -14.4902
+stdout xrev_12a.v11                      -1.03302e-08
+stdout xrev_12a.v12                      -1.00293e-08
+stdout xrev_12a.n4200740                  7.30579e-13
+stdout xrev_12a.n4200782                  1.10051e-05
+stdout xrev_12a.n4200916                      10.0012
+stdout xrev_12a.n4200896                     -10.2988
+stdout xrev_12a.x_u1.7                       0.833786
+stdout xrev_12a.x_u1.8                       0.833786
+stdout xrev_12a.x_u1.3                   -5.70721e-19
+stdout xrev_12a.x_u1.6                    1.13973e-18
+stdout xrev_12a.x_u1.4                    1.13973e-18
+stdout xrev_12a.x_u1.5                              0
+stdout xrev_12a.x_u10.gvo+_int1                     0
+stdout xrev_12a.x_u10.gvo-_int1                     0
+stdout xrev_12a.x_u11.gvo+_int1                     0
+stdout xrev_12a.x_u11.gvo-_int1                     0
+stdout xrev_12a.x_u12.gvo+_int1                     0
+stdout xrev_12a.x_u12.gvo-_int1                     0
+stdout xrev_12a.x_u16.gsw+_int1                     0
+stdout xrev_12a.x_u18.g1_int1              0.00120325
+stdout xrev_12a.x_u18.g1_int2             1.10051e-05
+stdout xrev_12a.x_u19.g1_int1               0.0005098
+stdout xrev_12a.x_u19.g1_int2            -1.10051e-05
+stdout xrev_12a.x_u22.g1_int1                       0
+stdout xrev_12a.x_u23.g1_int1            -1.26697e-29
+stdout xrev_12a.x_u26.g1_int1             1.10051e-08
+stdout xrev_12a.x_u27.g1_int1                       0
+stdout xrev_12a.x_u30.g1_int1             7.42321e-14
+stdout xrev_12a.x_u31.g1_int1             1.48256e-09
+stdout xrev_12a.x_u32.g1_int1               0.0117722
+stdout xrev_12a.x_u35.g1_int1                       0
+stdout xrev_12a.x_u36.3                             0
+stdout xrev_12a.x_u36.5                             0
+stdout xrev_12a.x_u37.3                             0
+stdout xrev_12a.x_u37.5                             0
+stdout xrev_12a.x_u4.e1_int1               0.00036915
+stdout xrev_12a.x_u6.g1_int1              0.000499995
+stdout rv_outfb                           0.000499995
+stdout xrev_12b.n4201330                  5.86763e-13
+stdout xrev_12b.n4200188                  7.31338e-13
+stdout xrev_12b.n4201210                 -0.000658442
+stdout xrev_12b.n4201214                 -0.000163675
+stdout xrev_12b.n4201026                           15
+stdout xrev_12b.n4201004                  7.31346e-13
+stdout xrev_12b.n4201042                          -15
+stdout xrev_12b.n4200376                  7.31346e-13
+stdout xrev_12b.mid                       7.31346e-13
+stdout xrev_12b.n4200400                  7.31346e-13
+stdout xrev_12b.n4200446                  7.31346e-13
+stdout xrev_12b.n4200466                  7.31346e-13
+stdout xrev_12b.n4201370                     -1.14112
+stdout xrev_12b.n4201374                  -4.5645e-05
+stdout xrev_12b.n4200542                  7.31346e-13
+stdout xrev_12b.n4200560                  7.31346e-13
+stdout xrev_12b.n4200604                 -5.72282e-05
+stdout xrev_12b.n4200668                      13.7967
+stdout xrev_12b.n4200664                     -14.4902
+stdout xrev_12b.n4200728                 -1.03302e-08
+stdout xrev_12b.n4200734                 -1.00293e-08
+stdout xrev_12b.sw_ol_opax134             7.31346e-13
+stdout xrev_12b.vimon                    -5.49858e-06
+stdout xrev_12b.vout_s                    -4.9853e-05
+stdout xrev_12b.n4200292                  0.000499995
+stdout xrev_12b.clamp                    -5.72282e-05
+stdout xrev_12b.vclp                     -5.72474e-05
+stdout xrev_12b.n4201574                 -5.72475e-05
+stdout xrev_12b.n4201424                 -0.000658381
+stdout xrev_12b.n4201430                 -2.50175e-08
+stdout xrev_12b.n4201448                      10.2252
+stdout xrev_12b.n4201452                  8.52099e-05
+stdout xrev_12b.n4201456                  0.000119294
+stdout xrev_12b.n4200216                  8.52038e-05
+stdout xrev_12b.n4201532                 -7.57683e-05
+stdout xrev_12b.n4201536                 -5.72476e-05
+stdout xrev_12b.n4201138                 -5.72475e-05
+stdout xrev_12b.n42414241                -0.000658447
+stdout xrev_12b.n4201680                 -5.93384e-05
+stdout xrev_12b.n4200214                 -4.56414e-05
+stdout xrev_12b.esdp                     -5.00163e-14
+stdout xrev_12b.esdn                      0.000499995
+stdout xrev_12b.n4200794                  -4.9853e-05
+stdout rv_outbuf                          -4.9853e-05
+stdout xrev_12b.n4201202                 -5.72475e-05
+stdout xrev_12b.cl_clamp                 -5.72475e-05
+stdout xrev_12b.claw_clamp               -5.72475e-05
+stdout xrev_12b.n4201412                 -0.000658447
+stdout xrev_12b.vcc_b                              15
+stdout xrev_12b.vee_b                             -15
+stdout xrev_12b.n4200198                   0.00036915
+stdout xrev_12b.n4200190                   0.00036915
+stdout xrev_12b.vcc_clp                       13.7967
+stdout xrev_12b.vee_clp                      -14.4902
+stdout xrev_12b.n4200928                     -10.3001
+stdout xrev_12b.n4200924                     -10.3001
+stdout xrev_12b.n4200952                      9.99994
+stdout xrev_12b.n4200960                      9.99994
+stdout xrev_12b.n4200864                  -4.9853e-05
+stdout xrev_12b.n4200222                  0.000499995
+stdout xrev_12b.n4200218                   0.00036915
+stdout xrev_12b.vsense                   -5.72282e-05
+stdout xrev_12b.n4201644                 -0.000658447
+stdout xrev_12b.n4200208                 -5.00145e-14
+stdout xrev_12b.n4200254                  0.000499995
+stdout xrev_12b.n4200258                         12.5
+stdout xrev_12b.n4200270                        -12.5
+stdout xrev_12b.n4200278                  0.000499995
+stdout xrev_12b.n4200302                  1.21864e-08
+stdout xrev_12b.n4201254                 -0.000658355
+stdout xrev_12b.n4200364                  7.31346e-13
+stdout xrev_12b.n4200398                  7.31346e-13
+stdout xrev_12b.n4200442                        43.98
+stdout xrev_12b.n4200444                  7.31346e-13
+stdout xrev_12b.n4200472                  7.31346e-13
+stdout xrev_12b.n4200484                       -48.09
+stdout xrev_12b.n4200536                           60
+stdout xrev_12b.n4200540                  7.31346e-13
+stdout xrev_12b.n4200566                  7.31346e-13
+stdout xrev_12b.n4200578                          -60
+stdout xrev_12b.n4200632                      13.7967
+stdout xrev_12b.n4200636                     -14.4902
+stdout xrev_12b.v11                      -1.03302e-08
+stdout xrev_12b.v12                      -1.00293e-08
+stdout xrev_12b.n4200740                  7.31346e-13
+stdout xrev_12b.n4200782                 -5.49858e-06
+stdout xrev_12b.n4200916                      9.99994
+stdout xrev_12b.n4200896                     -10.3001
+stdout xrev_12b.x_u1.7                       0.833786
+stdout xrev_12b.x_u1.8                       0.833786
+stdout xrev_12b.x_u1.3                   -5.70721e-19
+stdout xrev_12b.x_u1.6                    1.13973e-18
+stdout xrev_12b.x_u1.4                    1.13973e-18
+stdout xrev_12b.x_u1.5                              0
+stdout xrev_12b.x_u10.gvo+_int1                     0
+stdout xrev_12b.x_u10.gvo-_int1                     0
+stdout xrev_12b.x_u11.gvo+_int1                     0
+stdout xrev_12b.x_u11.gvo-_int1                     0
+stdout xrev_12b.x_u12.gvo+_int1                     0
+stdout xrev_12b.x_u12.gvo-_int1                     0
+stdout xrev_12b.x_u16.gsw+_int1                     0
+stdout xrev_12b.x_u18.g1_int1              0.00120325
+stdout xrev_12b.x_u18.g1_int2            -5.49858e-06
+stdout xrev_12b.x_u19.g1_int1               0.0005098
+stdout xrev_12b.x_u19.g1_int2             5.49858e-06
+stdout xrev_12b.x_u22.g1_int1                       0
+stdout xrev_12b.x_u23.g1_int1                       0
+stdout xrev_12b.x_u26.g1_int1                       0
+stdout xrev_12b.x_u27.g1_int1             5.49858e-09
+stdout xrev_12b.x_u30.g1_int1             1.21857e-14
+stdout xrev_12b.x_u31.g1_int1             2.43372e-10
+stdout xrev_12b.x_u32.g1_int1            -0.000658385
+stdout xrev_12b.x_u35.g1_int1            -2.32241e-26
+stdout xrev_12b.x_u36.3                             0
+stdout xrev_12b.x_u36.5                             0
+stdout xrev_12b.x_u37.3                             0
+stdout xrev_12b.x_u37.5                             0
+stdout xrev_12b.x_u4.e1_int1               0.00036915
+stdout xrev_12b.x_u6.g1_int1              0.000499995
+stdout rv_outac                           -4.9853e-05
+stdout b.xrev_12b.x_u6.bg1#branch        -4.99995e-16
+stdout b.xrev_12b.x_u4.be1#branch         -3.6915e-16
+stdout b.xrev_12b.x_u35.bg1#branch        2.32241e-38
+stdout b.xrev_12b.x_u32.bg1#branch        6.58385e-16
+stdout b.xrev_12b.x_u31.bg1#branch       -2.43372e-22
+stdout b.xrev_12b.x_u30.bg1#branch       -1.21857e-26
+stdout b.xrev_12b.x_u27.bg1#branch       -5.49858e-21
+stdout b.xrev_12b.x_u26.bg1#branch                  0
+stdout b.xrev_12b.x_u23.bg1#branch                  0
+stdout b.xrev_12b.x_u22.bg1#branch                  0
+stdout b.xrev_12b.x_u19.bg1#branch       -5.49858e-18
+stdout b.xrev_12b.x_u18.bg1#branch        5.49858e-18
+stdout b.xrev_12b.x_u16.bgsw+#branch                0
+stdout b.xrev_12b.x_u12.bgvo-#branch                0
+stdout b.xrev_12b.x_u12.bgvo+#branch                0
+stdout b.xrev_12b.x_u11.bgvo-#branch                0
+stdout b.xrev_12b.x_u11.bgvo+#branch                0
+stdout b.xrev_12b.x_u10.bgvo-#branch                0
+stdout b.xrev_12b.x_u10.bgvo+#branch                0
+stdout b.xrev_12a.x_u6.bg1#branch        -4.99995e-16
+stdout b.xrev_12a.x_u4.be1#branch         -3.6915e-16
+stdout b.xrev_12a.x_u35.bg1#branch                  0
+stdout b.xrev_12a.x_u32.bg1#branch       -1.17722e-14
+stdout b.xrev_12a.x_u31.bg1#branch       -1.48256e-21
+stdout b.xrev_12a.x_u30.bg1#branch       -7.42321e-26
+stdout b.xrev_12a.x_u27.bg1#branch                  0
+stdout b.xrev_12a.x_u26.bg1#branch       -1.10051e-20
+stdout b.xrev_12a.x_u23.bg1#branch        1.26697e-41
+stdout b.xrev_12a.x_u22.bg1#branch                  0
+stdout b.xrev_12a.x_u19.bg1#branch        1.10051e-17
+stdout b.xrev_12a.x_u18.bg1#branch       -1.10051e-17
+stdout b.xrev_12a.x_u16.bgsw+#branch                0
+stdout b.xrev_12a.x_u12.bgvo-#branch                0
+stdout b.xrev_12a.x_u12.bgvo+#branch                0
+stdout b.xrev_12a.x_u11.bgvo-#branch                0
+stdout b.xrev_12a.x_u11.bgvo+#branch                0
+stdout b.xrev_12a.x_u10.bgvo-#branch                0
+stdout b.xrev_12a.x_u10.bgvo+#branch                0
+stdout b.xrev_11b.x_u6.bg1#branch        -4.99995e-16
+stdout b.xrev_11b.x_u4.be1#branch         -3.6915e-16
+stdout b.xrev_11b.x_u35.bg1#branch                  0
+stdout b.xrev_11b.x_u32.bg1#branch        -6.5002e-15
+stdout b.xrev_11b.x_u31.bg1#branch       -8.73407e-22
+stdout b.xrev_11b.x_u30.bg1#branch       -4.37316e-26
+stdout b.xrev_11b.x_u27.bg1#branch                  0
+stdout b.xrev_11b.x_u26.bg1#branch        -4.9998e-20
+stdout b.xrev_11b.x_u23.bg1#branch                  0
+stdout b.xrev_11b.x_u22.bg1#branch                  0
+stdout b.xrev_11b.x_u19.bg1#branch         4.9998e-17
+stdout b.xrev_11b.x_u18.bg1#branch        -4.9998e-17
+stdout b.xrev_11b.x_u16.bgsw+#branch                0
+stdout b.xrev_11b.x_u12.bgvo-#branch                0
+stdout b.xrev_11b.x_u12.bgvo+#branch                0
+stdout b.xrev_11b.x_u11.bgvo-#branch                0
+stdout b.xrev_11b.x_u11.bgvo+#branch                0
+stdout b.xrev_11b.x_u10.bgvo-#branch                0
+stdout b.xrev_11b.x_u10.bgvo+#branch                0
+stdout b.xrev_11a.x_u6.bg1#branch        -4.98895e-16
+stdout b.xrev_11a.x_u4.be1#branch         -3.6915e-16
+stdout b.xrev_11a.x_u35.bg1#branch                  0
+stdout b.xrev_11a.x_u32.bg1#branch       -5.64249e-13
+stdout b.xrev_11a.x_u31.bg1#branch       -5.70045e-20
+stdout b.xrev_11a.x_u30.bg1#branch       -2.85422e-24
+stdout b.xrev_11a.x_u27.bg1#branch                  0
+stdout b.xrev_11a.x_u26.bg1#branch        -4.9897e-19
+stdout b.xrev_11a.x_u23.bg1#branch                  0
+stdout b.xrev_11a.x_u22.bg1#branch                  0
+stdout b.xrev_11a.x_u19.bg1#branch         4.9897e-16
+stdout b.xrev_11a.x_u18.bg1#branch        -4.9897e-16
+stdout b.xrev_11a.x_u16.bgsw+#branch                0
+stdout b.xrev_11a.x_u12.bgvo-#branch                0
+stdout b.xrev_11a.x_u12.bgvo+#branch                0
+stdout b.xrev_11a.x_u11.bgvo-#branch                0
+stdout b.xrev_11a.x_u11.bgvo+#branch                0
+stdout b.xrev_11a.x_u10.bgvo-#branch                0
+stdout b.xrev_11a.x_u10.bgvo+#branch                0
+stdout b.xrev_10b.x_u6.bg1#branch        -4.99945e-16
+stdout b.xrev_10b.x_u4.be1#branch         -3.6915e-16
+stdout b.xrev_10b.x_u35.bg1#branch       -2.32241e-38
+stdout b.xrev_10b.x_u32.bg1#branch       -1.19996e-14
+stdout b.xrev_10b.x_u31.bg1#branch       -1.43491e-21
+stdout b.xrev_10b.x_u30.bg1#branch       -7.18461e-26
+stdout b.xrev_10b.x_u27.bg1#branch                  0
+stdout b.xrev_10b.x_u26.bg1#branch       -4.99995e-20
+stdout b.xrev_10b.x_u23.bg1#branch        2.32241e-38
+stdout b.xrev_10b.x_u22.bg1#branch                  0
+stdout b.xrev_10b.x_u19.bg1#branch        4.99995e-17
+stdout b.xrev_10b.x_u18.bg1#branch       -4.99995e-17
+stdout b.xrev_10b.x_u16.bgsw+#branch                0
+stdout b.xrev_10b.x_u12.bgvo-#branch                0
+stdout b.xrev_10b.x_u12.bgvo+#branch                0
+stdout b.xrev_10b.x_u11.bgvo-#branch                0
+stdout b.xrev_10b.x_u11.bgvo+#branch                0
+stdout b.xrev_10b.x_u10.bgvo-#branch                0
+stdout b.xrev_10b.x_u10.bgvo+#branch                0
+stdout b.xrev_10a.x_u6.bg1#branch        -4.50086e-16
+stdout b.xrev_10a.x_u4.be1#branch         -3.6915e-16
+stdout b.xrev_10a.x_u35.bg1#branch                  0
+stdout b.xrev_10a.x_u32.bg1#branch       -4.94126e-15
+stdout b.xrev_10a.x_u31.bg1#branch       -8.06012e-22
+stdout b.xrev_10a.x_u30.bg1#branch       -4.03571e-26
+stdout b.xrev_10a.x_u27.bg1#branch       -4.95188e-22
+stdout b.xrev_10a.x_u26.bg1#branch                  0
+stdout b.xrev_10a.x_u23.bg1#branch                  0
+stdout b.xrev_10a.x_u22.bg1#branch                  0
+stdout b.xrev_10a.x_u19.bg1#branch       -4.95188e-19
+stdout b.xrev_10a.x_u18.bg1#branch        4.95188e-19
+stdout b.xrev_10a.x_u16.bgsw+#branch                0
+stdout b.xrev_10a.x_u12.bgvo-#branch                0
+stdout b.xrev_10a.x_u12.bgvo+#branch                0
+stdout b.xrev_10a.x_u11.bgvo-#branch                0
+stdout b.xrev_10a.x_u11.bgvo+#branch                0
+stdout b.xrev_10a.x_u10.bgvo-#branch                0
+stdout b.xrev_10a.x_u10.bgvo+#branch                0
+stdout b.xv6.bscrn#branch                -1.28321e-12
+stdout b.xv6.bcath#branch                -8.97071e-12
+stdout b.xv6.bgs2#branch                 -9.32174e-12
+stdout b.xv6.bgs#branch                  -4.42926e-12
+stdout b.xv6.bat#branch                  -9.62342e-13
+stdout b.xv5.bscrn#branch                -1.28321e-12
+stdout b.xv5.bcath#branch                -8.97071e-12
+stdout b.xv5.bgs2#branch                 -9.32174e-12
+stdout b.xv5.bgs#branch                  -4.42926e-12
+stdout b.xv5.bat#branch                  -9.62342e-13
+stdout b.xv4_6.bre#branch                      -1e-12
+stdout b.xv4_6.bca#branch                -8.78829e-11
+stdout b.xv4_1.bre#branch                      -1e-12
+stdout b.xv4_1.bca#branch                -9.51227e-11
+stdout b.xv3_6.bre#branch                      -1e-12
+stdout b.xv3_6.bca#branch                -1.33203e-10
+stdout b.xv3_1.bre#branch                      -1e-12
+stdout b.xv3_1.bca#branch                -1.12543e-10
+stdout b.xv2_6.bre#branch                      -1e-12
+stdout b.xv2_6.bca#branch                -8.34957e-11
+stdout b.xv2_1.bre#branch                      -1e-12
+stdout b.xv2_1.bca#branch                -7.17408e-11
+stdout b.xv1_6.bre#branch                      -1e-12
+stdout b.xv1_6.bca#branch                -8.86569e-11
+stdout b.xv1_1.bre#branch                      -1e-12
+stdout b.xv1_1.bca#branch                -8.86569e-11
+stdout h.xrev_12b.x_h3.h_h3#branch        2.06604e-20
+stdout v.xrev_12b.x_h3.vh_h3#branch       1.03309e-08
+stdout h.xrev_12b.x_h2.h_h2#branch        2.00585e-20
+stdout v.xrev_12b.x_h2.vh_h2#branch        -1.003e-08
+stdout h.xrev_12b.x_h1.h_h1#branch        1.64958e-17
+stdout v.xrev_12b.x_h1.vh_h1#branch      -5.49858e-09
+stdout h.xrev_12a.x_h3.h_h3#branch        2.06604e-20
+stdout v.xrev_12a.x_h3.vh_h3#branch       1.03309e-08
+stdout h.xrev_12a.x_h2.h_h2#branch        2.00585e-20
+stdout v.xrev_12a.x_h2.vh_h2#branch        -1.003e-08
+stdout h.xrev_12a.x_h1.h_h1#branch       -3.30153e-17
+stdout v.xrev_12a.x_h1.vh_h1#branch       1.10051e-08
+stdout h.xrev_11b.x_h3.h_h3#branch        2.06603e-20
+stdout v.xrev_11b.x_h3.vh_h3#branch       1.03309e-08
+stdout h.xrev_11b.x_h2.h_h2#branch        2.00585e-20
+stdout v.xrev_11b.x_h2.vh_h2#branch        -1.003e-08
+stdout h.xrev_11b.x_h1.h_h1#branch       -1.49994e-16
+stdout v.xrev_11b.x_h1.vh_h1#branch        4.9998e-08
+stdout h.xrev_11a.x_h3.h_h3#branch        2.06602e-20
+stdout v.xrev_11a.x_h3.vh_h3#branch       1.03308e-08
+stdout h.xrev_11a.x_h2.h_h2#branch        2.00587e-20
+stdout v.xrev_11a.x_h2.vh_h2#branch      -1.00301e-08
+stdout h.xrev_11a.x_h1.h_h1#branch       -1.49691e-15
+stdout v.xrev_11a.x_h1.vh_h1#branch        4.9897e-07
+stdout h.xrev_10b.x_h3.h_h3#branch        2.06603e-20
+stdout v.xrev_10b.x_h3.vh_h3#branch       1.03309e-08
+stdout h.xrev_10b.x_h2.h_h2#branch        2.00585e-20
+stdout v.xrev_10b.x_h2.vh_h2#branch        -1.003e-08
+stdout h.xrev_10b.x_h1.h_h1#branch       -1.49999e-16
+stdout v.xrev_10b.x_h1.vh_h1#branch       4.99995e-08
+stdout h.xrev_10a.x_h3.h_h3#branch        2.06603e-20
+stdout v.xrev_10a.x_h3.vh_h3#branch       1.03309e-08
+stdout h.xrev_10a.x_h2.h_h2#branch        2.00585e-20
+stdout v.xrev_10a.x_h2.vh_h2#branch        -1.003e-08
+stdout h.xrev_10a.x_h1.h_h1#branch        1.48556e-18
+stdout v.xrev_10a.x_h1.vh_h1#branch      -4.95188e-10
+stdout lrev_outt#branch                             0
+stdout lrev_tank#branch                             0
+stdout ls#branch                                    0
+stdout lpb#branch                          -0.0166855
+stdout lpa#branch                           0.0166855
+stdout l1#branch                            0.0125247
+stdout e.xrev_12b.x_u4.e1#branch          -1.6252e-15
+stdout e.xrev_12b.x_u37.e1#branch                   0
+stdout e.xrev_12b.x_u36.e1#branch                   0
+stdout e.xrev_12b.x_u1.e3#branch          5.00163e-12
+stdout e.xrev_12b.x_u1.e2#branch          2.85133e-27
+stdout e.xrev_12b.x_u1.e1#branch          4.56293e-27
+stdout e.xrev_12b.e_e4#branch             3.00229e-13
+stdout e.xrev_12b.e_e3#branch             1.49559e-16
+stdout e.xrev_12b.e_e1#branch             4.62691e-12
+stdout e.xrev_12a.x_u4.e1#branch          -1.6252e-15
+stdout e.xrev_12a.x_u37.e1#branch                   0
+stdout e.xrev_12a.x_u36.e1#branch                   0
+stdout e.xrev_12a.x_u1.e3#branch          5.00163e-12
+stdout e.xrev_12a.x_u1.e2#branch          2.85133e-27
+stdout e.xrev_12a.x_u1.e1#branch          4.56293e-27
+stdout e.xrev_12a.e_e4#branch             2.95271e-13
+stdout e.xrev_12a.e_e3#branch            -3.15043e-15
+stdout e.xrev_12a.e_e1#branch             4.51349e-12
+stdout e.xrev_11b.x_u4.e1#branch         -1.58433e-15
+stdout e.xrev_11b.x_u37.e1#branch                   0
+stdout e.xrev_11b.x_u36.e1#branch                   0
+stdout e.xrev_11b.x_u1.e3#branch          5.00158e-12
+stdout e.xrev_11b.x_u1.e2#branch          2.85133e-27
+stdout e.xrev_11b.x_u1.e1#branch          4.56293e-27
+stdout e.xrev_11b.e_e4#branch             2.97708e-13
+stdout e.xrev_11b.e_e3#branch            -1.49998e-15
+stdout e.xrev_11b.e_e1#branch             4.56964e-12
+stdout e.xrev_11a.x_u4.e1#branch         -1.58007e-15
+stdout e.xrev_11a.x_u37.e1#branch                   0
+stdout e.xrev_11a.x_u36.e1#branch                   0
+stdout e.xrev_11a.x_u1.e3#branch          5.00158e-12
+stdout e.xrev_11a.x_u1.e2#branch          2.85133e-27
+stdout e.xrev_11a.x_u1.e1#branch          4.56293e-27
+stdout e.xrev_11a.e_e4#branch             7.31081e-14
+stdout e.xrev_11a.e_e3#branch            -1.51157e-13
+stdout e.xrev_11a.e_e1#branch            -5.15533e-14
+stdout e.xrev_10b.x_u4.e1#branch         -1.58421e-15
+stdout e.xrev_10b.x_u37.e1#branch                   0
+stdout e.xrev_10b.x_u36.e1#branch                   0
+stdout e.xrev_10b.x_u1.e3#branch          5.00158e-12
+stdout e.xrev_10b.x_u1.e2#branch          2.85133e-27
+stdout e.xrev_10b.x_u1.e1#branch          4.56293e-27
+stdout e.xrev_10b.e_e4#branch             2.95461e-13
+stdout e.xrev_10b.e_e3#branch            -2.99976e-15
+stdout e.xrev_10b.e_e1#branch              4.5112e-12
+stdout e.xrev_10a.x_u4.e1#branch         -1.38839e-15
+stdout e.xrev_10a.x_u37.e1#branch                   0
+stdout e.xrev_10a.x_u36.e1#branch                   0
+stdout e.xrev_10a.x_u1.e3#branch          5.00134e-12
+stdout e.xrev_10a.x_u1.e2#branch          2.85133e-27
+stdout e.xrev_10a.x_u1.e1#branch          4.56293e-27
+stdout e.xrev_10a.e_e4#branch             2.97978e-13
+stdout e.xrev_10a.e_e3#branch            -1.35026e-15
+stdout e.xrev_10a.e_e1#branch             4.57643e-12
+stdout enfb#branch                        0.000642362
+stdout v.xrev_12b.v_v_orp#branch         -9.99994e-12
+stdout v.xrev_12b.v_v_orn#branch          1.03001e-11
+stdout v.xrev_12b.v_v_iscp#branch          -8.796e-11
+stdout v.xrev_12b.v_v_iscn#branch           9.618e-11
+stdout v.xrev_12b.v_v_grp#branch             -1.2e-10
+stdout v.xrev_12b.v_v_grn#branch              1.2e-10
+stdout v.xrev_12b.v_vcm_min#branch            2.5e-11
+stdout v.xrev_12b.v_vcm_max#branch           -2.5e-11
+stdout v.xrev_12a.v_v_orp#branch         -1.00012e-11
+stdout v.xrev_12a.v_v_orn#branch          1.02988e-11
+stdout v.xrev_12a.v_v_iscp#branch          -8.796e-11
+stdout v.xrev_12a.v_v_iscn#branch           9.618e-11
+stdout v.xrev_12a.v_v_grp#branch             -1.2e-10
+stdout v.xrev_12a.v_v_grn#branch              1.2e-10
+stdout v.xrev_12a.v_vcm_min#branch            2.5e-11
+stdout v.xrev_12a.v_vcm_max#branch           -2.5e-11
+stdout v.xrev_11b.v_v_orp#branch         -1.00006e-11
+stdout v.xrev_11b.v_v_orn#branch          1.02994e-11
+stdout v.xrev_11b.v_v_iscp#branch          -8.796e-11
+stdout v.xrev_11b.v_v_iscn#branch           9.618e-11
+stdout v.xrev_11b.v_v_grp#branch             -1.2e-10
+stdout v.xrev_11b.v_v_grn#branch              1.2e-10
+stdout v.xrev_11b.v_vcm_min#branch            2.5e-11
+stdout v.xrev_11b.v_vcm_max#branch           -2.5e-11
+stdout v.xrev_11a.v_v_orp#branch         -1.00567e-11
+stdout v.xrev_11a.v_v_orn#branch          1.02433e-11
+stdout v.xrev_11a.v_v_iscp#branch          -8.796e-11
+stdout v.xrev_11a.v_v_iscn#branch           9.618e-11
+stdout v.xrev_11a.v_v_grp#branch             -1.2e-10
+stdout v.xrev_11a.v_v_grn#branch              1.2e-10
+stdout v.xrev_11a.v_vcm_min#branch            2.5e-11
+stdout v.xrev_11a.v_vcm_max#branch           -2.5e-11
+stdout vrev_tank#branch                             0
+stdout v.xrev_10b.v_v_orp#branch         -1.00011e-11
+stdout v.xrev_10b.v_v_orn#branch          1.02989e-11
+stdout v.xrev_10b.v_v_iscp#branch          -8.796e-11
+stdout v.xrev_10b.v_v_iscn#branch           9.618e-11
+stdout v.xrev_10b.v_v_grp#branch             -1.2e-10
+stdout v.xrev_10b.v_v_grn#branch              1.2e-10
+stdout v.xrev_10b.v_vcm_min#branch            2.5e-11
+stdout v.xrev_10b.v_vcm_max#branch           -2.5e-11
+stdout v.xrev_10a.v_v_orp#branch         -1.00005e-11
+stdout v.xrev_10a.v_v_orn#branch          1.02995e-11
+stdout v.xrev_10a.v_v_iscp#branch          -8.796e-11
+stdout v.xrev_10a.v_v_iscn#branch           9.618e-11
+stdout v.xrev_10a.v_v_grp#branch             -1.2e-10
+stdout v.xrev_10a.v_v_grn#branch              1.2e-10
+stdout v.xrev_10a.v_vcm_min#branch            2.5e-11
+stdout v.xrev_10a.v_vcm_max#branch           -2.5e-11
+stdout vminus#branch                        0.0240001
+stdout vplus#branch                        -0.0240007
+stdout vin#branch                                   0
+stdout vbias#branch                             2e-10
+stdout vsup#branch                         -0.0458958
+stdout a.xrev_12b.x_u19.ag1#branch_1_0      -5.098e-16
+stdout a.xrev_12b.x_u18.ag1#branch_1_0    -1.20325e-15
+stdout a.xrev_12a.x_u19.ag1#branch_1_0      -5.098e-16
+stdout a.xrev_12a.x_u18.ag1#branch_1_0    -1.20325e-15
+stdout a.xrev_11b.x_u19.ag1#branch_1_0    -5.09798e-16
+stdout a.xrev_11b.x_u18.ag1#branch_1_0    -1.20325e-15
+stdout a.xrev_11a.x_u19.ag1#branch_1_0    -5.09785e-16
+stdout a.xrev_11a.x_u18.ag1#branch_1_0    -1.20325e-15
+stdout a.xrev_10b.x_u19.ag1#branch_1_0    -5.09798e-16
+stdout a.xrev_10b.x_u18.ag1#branch_1_0    -1.20325e-15
+stdout a.xrev_10a.x_u19.ag1#branch_1_0      -5.098e-16
+stdout a.xrev_10a.x_u18.ag1#branch_1_0    -1.20325e-15
+ Reference value :  0.00000e+00
+ Reference value :  3.69381e-05
+ Reference value :  3.12822e-04
+ Reference value :  4.50374e-04
+ Reference value :  4.54980e-04
+ Reference value :  4.60641e-04
+ Reference value :  4.67043e-04
+ Reference value :  4.75835e-04
+ Reference value :  4.85163e-04
+ Reference value :  5.06337e-04
+ Reference value :  6.87133e-04
+ Reference value :  9.54809e-04
+ Reference value :  9.69130e-04
+ Reference value :  9.93946e-04
+ Reference value :  1.13021e-03
+ Reference value :  1.42221e-03
+ Reference value :  1.46677e-03
+ Reference value :  1.47187e-03
+ Reference value :  1.48055e-03
+ Reference value :  1.49000e-03
+ Reference value :  1.50260e-03
+ Reference value :  1.52833e-03
+ Reference value :  1.73608e-03
+ Reference value :  1.95275e-03
+ Reference value :  1.96267e-03
+ Reference value :  1.98184e-03
+ Reference value :  2.01641e-03
+ Reference value :  2.19763e-03
+ Reference value :  2.42763e-03
+ Reference value :  2.46964e-03
+ Reference value :  2.47511e-03
+ Reference value :  2.48285e-03
+ Reference value :  2.49073e-03
+ Reference value :  2.49946e-03
+ Reference value :  2.51608e-03
+ Reference value :  2.54084e-03
+ Reference value :  2.75239e-03
+ Reference value :  2.95151e-03
+ Reference value :  2.96004e-03
+ Reference value :  2.97072e-03
+ Reference value :  3.00108e-03
+ Reference value :  3.24235e-03
+ Reference value :  3.46319e-03
+ Reference value :  3.47122e-03
+ Reference value :  3.47704e-03
+ Reference value :  3.48442e-03
+ Reference value :  3.49157e-03
+ Reference value :  3.50018e-03
+ Reference value :  3.51837e-03
+ Reference value :  3.54455e-03
+ Reference value :  3.68667e-03
+ Reference value :  3.94914e-03
+ Reference value :  3.95921e-03
+ Reference value :  3.97441e-03
+ Reference value :  4.08680e-03
+ Reference value :  4.35580e-03
+ Reference value :  4.47012e-03
+ Reference value :  4.47482e-03
+ Reference value :  4.48251e-03
+ Reference value :  4.49245e-03
+ Reference value :  4.50353e-03
+ Reference value :  4.52699e-03
+ Reference value :  4.55507e-03
+ Reference value :  4.79796e-03
+ Reference value :  4.95317e-03
+ Reference value :  4.96109e-03
+ Reference value :  4.97616e-03
+ Reference value :  5.11157e-03
+ Reference value :  5.41457e-03
+ Reference value :  5.47077e-03
+ Reference value :  5.47770e-03
+ Reference value :  5.48671e-03
+ Reference value :  5.49619e-03
+ Reference value :  5.51160e-03
+ Reference value :  5.53673e-03
+ Reference value :  5.59624e-03
+ Reference value :  5.91824e-03
+ Reference value :  5.95748e-03
+ Reference value :  5.96588e-03
+ Reference value :  6.00436e-03
+ Reference value :  6.30381e-03
+ Reference value :  6.46961e-03
+ Reference value :  6.47312e-03
+ Reference value :  6.48024e-03
+ Reference value :  6.48863e-03
+ Reference value :  6.49752e-03
+ Reference value :  6.51447e-03
+ Reference value :  6.53839e-03
+ Reference value :  6.63407e-03
+ Reference value :  6.94252e-03
+ Reference value :  6.95914e-03
+ Reference value :  6.98075e-03
+ Reference value :  7.20441e-03
+ Reference value :  7.46148e-03
+ Reference value :  7.47116e-03
+ Reference value :  7.47882e-03
+ Reference value :  7.48766e-03
+ Reference value :  7.49854e-03
+ Reference value :  7.51872e-03
+ Reference value :  7.54596e-03
+ Reference value :  7.77477e-03
+ Reference value :  7.95829e-03
+ Reference value :  7.97086e-03
+ Reference value :  8.03417e-03
+ Reference value :  8.36444e-03
+ Reference value :  8.46970e-03
+ Reference value :  8.47543e-03
+ Reference value :  8.48383e-03
+ Reference value :  8.49212e-03
+ Reference value :  8.50312e-03
+ Reference value :  8.52759e-03
+ Reference value :  8.58719e-03
+ Reference value :  8.92960e-03
+ Reference value :  8.96183e-03
+ Reference value :  8.97427e-03
+ Reference value :  9.00466e-03
+ Reference value :  9.28528e-03
+ Reference value :  9.46921e-03
+ Reference value :  9.47563e-03
+ Reference value :  9.48573e-03
+ Reference value :  9.49633e-03
+ Reference value :  9.51281e-03
+ Reference value :  9.54288e-03
+ Reference value :  9.78357e-03
+ Reference value :  9.96078e-03
+ Reference value :  9.96944e-03
+ Reference value :  9.98844e-03
+ Reference value :  1.00201e-02
+ Reference value :  1.03557e-02
+ Reference value :  1.04693e-02
+ Reference value :  1.04748e-02
+ Reference value :  1.04836e-02
+ Reference value :  1.04925e-02
+ Reference value :  1.05036e-02
+ Reference value :  1.05297e-02
+ Reference value :  1.06591e-02
+ Reference value :  1.09556e-02
+ Reference value :  1.09653e-02
+ Reference value :  1.09746e-02
+ Reference value :  1.10005e-02
+ Reference value :  1.11024e-02
+ Reference value :  1.14224e-02
+ Reference value :  1.14695e-02
+ Reference value :  1.14774e-02
+ Reference value :  1.14869e-02
+ Reference value :  1.14963e-02
+ Reference value :  1.15143e-02
+ Reference value :  1.15425e-02
+ Reference value :  1.17917e-02
+ Reference value :  1.19583e-02
+ Reference value :  1.19660e-02
+ Reference value :  1.19795e-02
+ Reference value :  1.20068e-02
+ Reference value :  1.21825e-02
+ Reference value :  1.24602e-02
+ Reference value :  1.24708e-02
+ Reference value :  1.24795e-02
+ Reference value :  1.24885e-02
+ Reference value :  1.24987e-02
+ Reference value :  1.25191e-02
+ Reference value :  1.25536e-02
+ Reference value :  1.28771e-02
+ Reference value :  1.29622e-02
+ Reference value :  1.29736e-02
+ Reference value :  1.29974e-02
+ Reference value :  1.30421e-02
+ Reference value :  1.33335e-02
+ Reference value :  1.34667e-02
+ Reference value :  1.34713e-02
+ Reference value :  1.34794e-02
+ Reference value :  1.34880e-02
+ Reference value :  1.34972e-02
+ Reference value :  1.35168e-02
+ Reference value :  1.35481e-02
+ Reference value :  1.38404e-02
+ Reference value :  1.39606e-02
+ Reference value :  1.39699e-02
+ Reference value :  1.39912e-02
+ Reference value :  1.40168e-02
+ Reference value :  1.42107e-02
+ Reference value :  1.44547e-02
+ Reference value :  1.44690e-02
+ Reference value :  1.44763e-02
+ Reference value :  1.44853e-02
+ Reference value :  1.44943e-02
+ Reference value :  1.45082e-02
+ Reference value :  1.45340e-02
+ Reference value :  1.47134e-02
+ Reference value :  1.49594e-02
+ Reference value :  1.49658e-02
+ Reference value :  1.49774e-02
+ Reference value :  1.50020e-02
+ Reference value :  1.50416e-02
+ Reference value :  1.53304e-02
+ Reference value :  1.54676e-02
+ Reference value :  1.54718e-02
+ Reference value :  1.54804e-02
+ Reference value :  1.54894e-02
+ Reference value :  1.54991e-02
+ Reference value :  1.55195e-02
+ Reference value :  1.55531e-02
+ Reference value :  1.58387e-02
+ Reference value :  1.59608e-02
+ Reference value :  1.59681e-02
+ Reference value :  1.59857e-02
+ Reference value :  1.60095e-02
+ Reference value :  1.61195e-02
+ Reference value :  1.64155e-02
+ Reference value :  1.64683e-02
+ Reference value :  1.64732e-02
+ Reference value :  1.64815e-02
+ Reference value :  1.64902e-02
+ Reference value :  1.65001e-02
+ Reference value :  1.65234e-02
+ Reference value :  1.66001e-02
+ Reference value :  1.69001e-02
+ Reference value :  1.69625e-02
+ Reference value :  1.69704e-02
+ Reference value :  1.69908e-02
+ Reference value :  1.70182e-02
+ Reference value :  1.72305e-02
+ Reference value :  1.74598e-02
+ Reference value :  1.74692e-02
+ Reference value :  1.74775e-02
+ Reference value :  1.74860e-02
+ Reference value :  1.74949e-02
+ Reference value :  1.75104e-02
+ Reference value :  1.75360e-02
+ Reference value :  1.77593e-02
+ Reference value :  1.79599e-02
+ Reference value :  1.79676e-02
+ Reference value :  1.79862e-02
+ Reference value :  1.80106e-02
+ Reference value :  1.81847e-02
+ Reference value :  1.84586e-02
+ Reference value :  1.84688e-02
+ Reference value :  1.84750e-02
+ Reference value :  1.84824e-02
+ Reference value :  1.84915e-02
+ Reference value :  1.85040e-02
+ Reference value :  1.85282e-02
+ Reference value :  1.86664e-02
+ Reference value :  1.89461e-02
+ Reference value :  1.89641e-02
+ Reference value :  1.89788e-02
+ Reference value :  1.90055e-02
+ Reference value :  1.91052e-02
+ Reference value :  1.94172e-02
+ Reference value :  1.94681e-02
+ Reference value :  1.94740e-02
+ Reference value :  1.94821e-02
+ Reference value :  1.94914e-02
+ Reference value :  1.95032e-02
+ Reference value :  1.95300e-02
+ Reference value :  1.97316e-02
+ Reference value :  1.99599e-02
+ Reference value :  1.99679e-02
+ Reference value :  1.99851e-02
+ Reference value :  2.00105e-02
+ Reference value :  2.01483e-02
+ Reference value :  2.04559e-02
+ Reference value :  2.04686e-02
+ Reference value :  2.04772e-02
+ Reference value :  2.04857e-02
+ Reference value :  2.04958e-02
+ Reference value :  2.05142e-02
+ Reference value :  2.05430e-02
+ Reference value :  2.07900e-02
+ Reference value :  2.09606e-02
+ Reference value :  2.09695e-02
+ Reference value :  2.09922e-02
+ Reference value :  2.10225e-02
+ Reference value :  2.12542e-02
+ Reference value :  2.14641e-02
+ Reference value :  2.14700e-02
+ Reference value :  2.14785e-02
+ Reference value :  2.14872e-02
+ Reference value :  2.14974e-02
+ Reference value :  2.15177e-02
+ Reference value :  2.16122e-02
+ Reference value :  2.19362e-02
+ Reference value :  2.19642e-02
+ Reference value :  2.19773e-02
+ Reference value :  2.20034e-02
+ Reference value :  2.20762e-02
+ Reference value :  2.24022e-02
+ Reference value :  2.24676e-02
+ Reference value :  2.24749e-02
+ Reference value :  2.24838e-02
+ Reference value :  2.24943e-02
+ Reference value :  2.25139e-02
+ Reference value :  2.25737e-02
+ Reference value :  2.29047e-02
+ Reference value :  2.29635e-02
+ Reference value :  2.29751e-02
+ Reference value :  2.30020e-02
+ Reference value :  2.30411e-02
+ Reference value :  2.33633e-02
+ Reference value :  2.34673e-02
+ Reference value :  2.34739e-02
+ Reference value :  2.34829e-02
+ Reference value :  2.34933e-02
+ Reference value :  2.35121e-02
+ Reference value :  2.35531e-02
+ Reference value :  2.38661e-02
+ Reference value :  2.39624e-02
+ Reference value :  2.39717e-02
+ Reference value :  2.39927e-02
+ Reference value :  2.40175e-02
+ Reference value :  2.41765e-02
+ Reference value :  2.44547e-02
+ Reference value :  2.44657e-02
+ Reference value :  2.44706e-02
+ Reference value :  2.44785e-02
+ Reference value :  2.44868e-02
+ Reference value :  2.44975e-02
+ Reference value :  2.45222e-02
+ Reference value :  2.46481e-02
+ Reference value :  2.49331e-02
+ Reference value :  2.49648e-02
+ Reference value :  2.49791e-02
+ Reference value :  2.50040e-02
+ Reference value :  2.50380e-02
+ Reference value :  2.53325e-02
+ Reference value :  2.54663e-02
+ Reference value :  2.54719e-02
+ Reference value :  2.54803e-02
+ Reference value :  2.54892e-02
+ Reference value :  2.55037e-02
+ Reference value :  2.55291e-02
+ Reference value :  2.57629e-02
+ Reference value :  2.59614e-02
+ Reference value :  2.59715e-02
+ Reference value :  2.59966e-02
+ Reference value :  2.60267e-02
+ Reference value :  2.62959e-02
+ Reference value :  2.64655e-02
+ Reference value :  2.64720e-02
+ Reference value :  2.64815e-02
+ Reference value :  2.64916e-02
+ Reference value :  2.65112e-02
+ Reference value :  2.65477e-02
+ Reference value :  2.68448e-02
+ Reference value :  2.69639e-02
+ Reference value :  2.69771e-02
+ Reference value :  2.70058e-02
+ Reference value :  2.71045e-02
+ Reference value :  2.74485e-02
+ Reference value :  2.74676e-02
+ Reference value :  2.74759e-02
+ Reference value :  2.74854e-02
+ Reference value :  2.74970e-02
+ Reference value :  2.75220e-02
+ Reference value :  2.77098e-02
+ Reference value :  2.79614e-02
+ Reference value :  2.79714e-02
+ Reference value :  2.79966e-02
+ Reference value :  2.80295e-02
+ Reference value :  2.83135e-02
+ Reference value :  2.84652e-02
+ Reference value :  2.84709e-02
+ Reference value :  2.84797e-02
+ Reference value :  2.84889e-02
+ Reference value :  2.85024e-02
+ Reference value :  2.85315e-02
+ Reference value :  2.88033e-02
+ Reference value :  2.89628e-02
+ Reference value :  2.89749e-02
+ Reference value :  2.90014e-02
+ Reference value :  2.90351e-02
+ Reference value :  2.93456e-02
+ Reference value :  2.94666e-02
+ Reference value :  2.94735e-02
+ Reference value :  2.94830e-02
+ Reference value :  2.94948e-02
+ Reference value :  2.95159e-02
+ Reference value :  2.96002e-02
+ Reference value :  2.99142e-02
+ Reference value :  2.99651e-02
+ Reference value :  2.99787e-02
+ Reference value :  3.00047e-02
+ Reference value :  3.00396e-02
+ Reference value :  3.03385e-02
+ Reference value :  3.04655e-02
+ Reference value :  3.04707e-02
+ Reference value :  3.04801e-02
+ Reference value :  3.04910e-02
+ Reference value :  3.05056e-02
+ Reference value :  3.05342e-02
+ Reference value :  3.08107e-02
+ Reference value :  3.09629e-02
+ Reference value :  3.09734e-02
+ Reference value :  3.09976e-02
+ Reference value :  3.10264e-02
+ Reference value :  3.12625e-02
+ Reference value :  3.14644e-02
+ Reference value :  3.14699e-02
+ Reference value :  3.14788e-02
+ Reference value :  3.14884e-02
+ Reference value :  3.15013e-02
+ Reference value :  3.15283e-02
+ Reference value :  3.15961e-02
+ Reference value :  3.19251e-02
+ Reference value :  3.19654e-02
+ Reference value :  3.19757e-02
+ Reference value :  3.20000e-02
+ Reference value :  3.20297e-02
+ Reference value :  3.23038e-02
+ Reference value :  3.24644e-02
+ Reference value :  3.24704e-02
+ Reference value :  3.24790e-02
+ Reference value :  3.24889e-02
+ Reference value :  3.25025e-02
+ Reference value :  3.25322e-02
+ Reference value :  3.28022e-02
+ Reference value :  3.29626e-02
+ Reference value :  3.29730e-02
+ Reference value :  3.29951e-02
+ Reference value :  3.30222e-02
+ Reference value :  3.32121e-02
+ Reference value :  3.34559e-02
+ Reference value :  3.34673e-02
+ Reference value :  3.34755e-02
+ Reference value :  3.34847e-02
+ Reference value :  3.34965e-02
+ Reference value :  3.35208e-02
+ Reference value :  3.37130e-02
+ Reference value :  3.39621e-02
+ Reference value :  3.39713e-02
+ Reference value :  3.39961e-02
+ Reference value :  3.40258e-02
+ Reference value :  3.42679e-02
+ Reference value :  3.44622e-02
+ Reference value :  3.44691e-02
+ Reference value :  3.44785e-02
+ Reference value :  3.44879e-02
+ Reference value :  3.45061e-02
+ Reference value :  3.45533e-02
+ Reference value :  3.48633e-02
+ Reference value :  3.49654e-02
+ Reference value :  3.49794e-02
+ Reference value :  3.50055e-02
+ Reference value :  3.50510e-02
+ Reference value :  3.53746e-02
+ Reference value :  3.54657e-02
+ Reference value :  3.54717e-02
+ Reference value :  3.54800e-02
+ Reference value :  3.54904e-02
+ Reference value :  3.55039e-02
+ Reference value :  3.55313e-02
+ Reference value :  3.58044e-02
+ Reference value :  3.59636e-02
+ Reference value :  3.59758e-02
+ Reference value :  3.60025e-02
+ Reference value :  3.60501e-02
+ Reference value :  3.63825e-02
+ Reference value :  3.64663e-02
+ Reference value :  3.64731e-02
+ Reference value :  3.64827e-02
+ Reference value :  3.64938e-02
+ Reference value :  3.65130e-02
+ Reference value :  3.66266e-02
+ Reference value :  3.69545e-02
+ Reference value :  3.69688e-02
+ Reference value :  3.69892e-02
+ Reference value :  3.70175e-02
+ Reference value :  3.71917e-02
+ Reference value :  3.74579e-02
+ Reference value :  3.74656e-02
+ Reference value :  3.74731e-02
+ Reference value :  3.74824e-02
+ Reference value :  3.74959e-02
+ Reference value :  3.75262e-02
+ Reference value :  3.78061e-02
+ Reference value :  3.79638e-02
+ Reference value :  3.79759e-02
+ Reference value :  3.80033e-02
+ Reference value :  3.80478e-02
+ Reference value :  3.83948e-02
+ Reference value :  3.84663e-02
+ Reference value :  3.84734e-02
+ Reference value :  3.84832e-02
+ Reference value :  3.84948e-02
+ Reference value :  3.85157e-02
+ Reference value :  3.86447e-02
+ Reference value :  3.89488e-02
+ Reference value :  3.89679e-02
+ Reference value :  3.89846e-02
+ Reference value :  3.90132e-02
+ Reference value :  3.91338e-02
+ Reference value :  3.94528e-02
+ Reference value :  3.94642e-02
+ Reference value :  3.94711e-02
+ Reference value :  3.94811e-02
+ Reference value :  3.94940e-02
+ Reference value :  3.95270e-02
+ Reference value :  3.98294e-02
+ Reference value :  3.99653e-02
+ Reference value :  3.99786e-02
+ Reference value :  4.00059e-02
+ Reference value :  4.00469e-02
+ Reference value :  4.03598e-02
+ Reference value :  4.04647e-02
+ Reference value :  4.04710e-02
+ Reference value :  4.04799e-02
+ Reference value :  4.04902e-02
+ Reference value :  4.05049e-02
+ Reference value :  4.05445e-02
+ Reference value :  4.08810e-02
+ Reference value :  4.09662e-02
+ Reference value :  4.09813e-02
+ Reference value :  4.10113e-02
+ Reference value :  4.11652e-02
+ Reference value :  4.14549e-02
+ Reference value :  4.14671e-02
+ Reference value :  4.14755e-02
+ Reference value :  4.14852e-02
+ Reference value :  4.15054e-02
+ Reference value :  4.15896e-02
+ Reference value :  4.19196e-02
+ Reference value :  4.19672e-02
+ Reference value :  4.19825e-02
+ Reference value :  4.20098e-02
+ Reference value :  4.20815e-02
+ Reference value :  4.24205e-02
+ Reference value :  4.24665e-02
+ Reference value :  4.24745e-02
+ Reference value :  4.24839e-02
+ Reference value :  4.24951e-02
+ Reference value :  4.25185e-02
+ Reference value :  4.26867e-02
+ Reference value :  4.29624e-02
+ Reference value :  4.29710e-02
+ Reference value :  4.29928e-02
+ Reference value :  4.30223e-02
+ Reference value :  4.32468e-02
+ Reference value :  4.34634e-02
+ Reference value :  4.34693e-02
+ Reference value :  4.34791e-02
+ Reference value :  4.34899e-02
+ Reference value :  4.35097e-02
+ Reference value :  4.35880e-02
+ Reference value :  4.39270e-02
+ Reference value :  4.39678e-02
+ Reference value :  4.39826e-02
+ Reference value :  4.40081e-02
+ Reference value :  4.40566e-02
+ Reference value :  4.43746e-02
+ Reference value :  4.44657e-02
+ Reference value :  4.44731e-02
+ Reference value :  4.44827e-02
+ Reference value :  4.45020e-02
+ Reference value :  4.45737e-02
+ Reference value :  4.49207e-02
+ Reference value :  4.49680e-02
+ Reference value :  4.49864e-02
+ Reference value :  4.50155e-02
+ Reference value :  4.51907e-02
+ Reference value :  4.54575e-02
+ Reference value :  4.54686e-02
+ Reference value :  4.54778e-02
+ Reference value :  4.54881e-02
+ Reference value :  4.55032e-02
+ Reference value :  4.55335e-02
+ Reference value :  4.58223e-02
+ Reference value :  4.59650e-02
+ Reference value :  4.59782e-02
+ Reference value :  4.60052e-02
+ Reference value :  4.60395e-02
+ Reference value :  4.63441e-02
+ Reference value :  4.64643e-02
+ Reference value :  4.64717e-02
+ Reference value :  4.64811e-02
+ Reference value :  4.64924e-02
+ Reference value :  4.65145e-02
+ Reference value :  4.66445e-02
+ Reference value :  4.69605e-02
+ Reference value :  4.69712e-02
+ Reference value :  4.69936e-02
+ Reference value :  4.70243e-02
+ Reference value :  4.73030e-02
+ Reference value :  4.74639e-02
+ Reference value :  4.74716e-02
+ Reference value :  4.74813e-02
+ Reference value :  4.74952e-02
+ Reference value :  4.75253e-02
+ Reference value :  4.77829e-02
+ Reference value :  4.79638e-02
+ Reference value :  4.79765e-02
+ Reference value :  4.80029e-02
+ Reference value :  4.80390e-02
+ Reference value :  4.83626e-02
+ Reference value :  4.84655e-02
+ Reference value :  4.84729e-02
+ Reference value :  4.84822e-02
+ Reference value :  4.84981e-02
+ Reference value :  4.85327e-02
+ Reference value :  4.88576e-02
+ Reference value :  4.89656e-02
+ Reference value :  4.89784e-02
+ Reference value :  4.90053e-02
+ Reference value :  4.90392e-02
+ Reference value :  4.93405e-02
+ Reference value :  4.94647e-02
+ Reference value :  4.94716e-02
+ Reference value :  4.94805e-02
+ Reference value :  4.94907e-02
+ Reference value :  4.95126e-02
+ Reference value :  4.96117e-02
+ Reference value :  4.99487e-02
+ Reference value :  4.99687e-02
+ Reference value :  4.99866e-02
+ Reference value :  5.00155e-02
+ Reference value :  5.01813e-02
+ Reference value :  5.04569e-02
+ Reference value :  5.04680e-02
+ Reference value :  5.04769e-02
+ Reference value :  5.04870e-02
+ Reference value :  5.04995e-02
+ Reference value :  5.05281e-02
+ Reference value :  5.07563e-02
+ Reference value :  5.09635e-02
+ Reference value :  5.09721e-02
+ Reference value :  5.09942e-02
+ Reference value :  5.10205e-02
+ Reference value :  5.12467e-02
+ Reference value :  5.14624e-02
+ Reference value :  5.14691e-02
+ Reference value :  5.14788e-02
+ Reference value :  5.14897e-02
+ Reference value :  5.15080e-02
+ Reference value :  5.15463e-02
+ Reference value :  5.18866e-02
+ Reference value :  5.19671e-02
+ Reference value :  5.19811e-02
+ Reference value :  5.20085e-02
+ Reference value :  5.21276e-02
+ Reference value :  5.24306e-02
+ Reference value :  5.24662e-02
+ Reference value :  5.24743e-02
+ Reference value :  5.24840e-02
+ Reference value :  5.24974e-02
+ Reference value :  5.25223e-02
+ Reference value :  5.27254e-02
+ Reference value :  5.29627e-02
+ Reference value :  5.29700e-02
+ Reference value :  5.29893e-02
+ Reference value :  5.30159e-02
+ Reference value :  5.31617e-02
+ Reference value :  5.34535e-02
+ Reference value :  5.34667e-02
+ Reference value :  5.34756e-02
+ Reference value :  5.34861e-02
+ Reference value :  5.35128e-02
+ Reference value :  5.36972e-02
+ Reference value :  5.39635e-02
+ Reference value :  5.39734e-02
+ Reference value :  5.39969e-02
+ Reference value :  5.40272e-02
+ Reference value :  5.42924e-02
+ Reference value :  5.44634e-02
+ Reference value :  5.44703e-02
+ Reference value :  5.44796e-02
+ Reference value :  5.44908e-02
+ Reference value :  5.45192e-02
+ Reference value :  5.47172e-02
+ Reference value :  5.49637e-02
+ Reference value :  5.49739e-02
+ Reference value :  5.49994e-02
+ Reference value :  5.50357e-02
+ Reference value :  5.53114e-02
+ Reference value :  5.54629e-02
+ Reference value :  5.54694e-02
+ Reference value :  5.54781e-02
+ Reference value :  5.54888e-02
+ Reference value :  5.55066e-02
+ Reference value :  5.55400e-02
+ Reference value :  5.58532e-02
+ Reference value :  5.59671e-02
+ Reference value :  5.59823e-02
+ Reference value :  5.60114e-02
+ Reference value :  5.61565e-02
+ Reference value :  5.64536e-02
+ Reference value :  5.64670e-02
+ Reference value :  5.64755e-02
+ Reference value :  5.64855e-02
+ Reference value :  5.64969e-02
+ Reference value :  5.65228e-02
+ Reference value :  5.67124e-02
+ Reference value :  5.69638e-02
+ Reference value :  5.69736e-02
+ Reference value :  5.69983e-02
+ Reference value :  5.70316e-02
+ Reference value :  5.73465e-02
+ Reference value :  5.74646e-02
+ Reference value :  5.74725e-02
+ Reference value :  5.74824e-02
+ Reference value :  5.74928e-02
+ Reference value :  5.75141e-02
+ Reference value :  5.75797e-02
+ Reference value :  5.78967e-02
+ Reference value :  5.79671e-02
+ Reference value :  5.79797e-02
+ Reference value :  5.80044e-02
+ Reference value :  5.80685e-02
+ Reference value :  5.83885e-02
+ Reference value :  5.84645e-02
+ Reference value :  5.84718e-02
+ Reference value :  5.84813e-02
+ Reference value :  5.84920e-02
+ Reference value :  5.85119e-02
+ Reference value :  5.85640e-02
+ Reference value :  5.88560e-02
+ Reference value :  5.89664e-02
+ Reference value :  5.89778e-02
+ Reference value :  5.90008e-02
+ Reference value :  5.90267e-02
+ Reference value :  5.92717e-02
+ Reference value :  5.94620e-02
+ Reference value :  5.94687e-02
+ Reference value :  5.94781e-02
+ Reference value :  5.94883e-02
+ Reference value :  5.95046e-02
+ Reference value :  5.95374e-02
+ Reference value :  5.98356e-02
+ Reference value :  5.99667e-02
+ Reference value :  5.99778e-02
+ Reference value :  6.00019e-02
+ Reference value :  6.00316e-02
+ Reference value :  6.03305e-02
+ Reference value :  6.04639e-02
+ Reference value :  6.04712e-02
+ Reference value :  6.04810e-02
+ Reference value :  6.04913e-02
+ Reference value :  6.05139e-02
+ Reference value :  6.06301e-02
+ Reference value :  6.09496e-02
+ Reference value :  6.09697e-02
+ Reference value :  6.09874e-02
+ Reference value :  6.10113e-02
+ Reference value :  6.11384e-02
+ Reference value :  6.14520e-02
+ Reference value :  6.14662e-02
+ Reference value :  6.14734e-02
+ Reference value :  6.14829e-02
+ Reference value :  6.14944e-02
+ Reference value :  6.15194e-02
+ Reference value :  6.17021e-02
+ Reference value :  6.19561e-02
+ Reference value :  6.19703e-02
+ Reference value :  6.19893e-02
+ Reference value :  6.20144e-02
+ Reference value :  6.21844e-02
+ Reference value :  6.24560e-02
+ Reference value :  6.24666e-02
+ Reference value :  6.24753e-02
+ Reference value :  6.24838e-02
+ Reference value :  6.25017e-02
+ Reference value :  6.25336e-02
+ Reference value :  6.28304e-02
+ Reference value :  6.29651e-02
+ Reference value :  6.29760e-02
+ Reference value :  6.29996e-02
+ Reference value :  6.30276e-02
+ Reference value :  6.33004e-02
+ Reference value :  6.34628e-02
+ Reference value :  6.34697e-02
+ Reference value :  6.34792e-02
+ Reference value :  6.34902e-02
+ Reference value :  6.35152e-02
+ Reference value :  6.36668e-02
+ Reference value :  6.39558e-02
+ Reference value :  6.39703e-02
+ Reference value :  6.39862e-02
+ Reference value :  6.40112e-02
+ Reference value :  6.41294e-02
+ Reference value :  6.44532e-02
+ Reference value :  6.44667e-02
+ Reference value :  6.44761e-02
+ Reference value :  6.44868e-02
+ Reference value :  6.45150e-02
+ Reference value :  6.46814e-02
+ Reference value :  6.49610e-02
+ Reference value :  6.49700e-02
+ Reference value :  6.49863e-02
+ Reference value :  6.50160e-02
+ Reference value :  6.52217e-02
+ Reference value :  6.54616e-02
+ Reference value :  6.54690e-02
+ Reference value :  6.54788e-02
+ Reference value :  6.54957e-02
+ Reference value :  6.55314e-02
+ Reference value :  6.58393e-02
+ Reference value :  6.59673e-02
+ Reference value :  6.59771e-02
+ Reference value :  6.59996e-02
+ Reference value :  6.60257e-02
+ Reference value :  6.62974e-02
+ Reference value :  6.64627e-02
+ Reference value :  6.64688e-02
+ Reference value :  6.64777e-02
+ Reference value :  6.64903e-02
+ Reference value :  6.65171e-02
+ Reference value :  6.67086e-02
+ Reference value :  6.69642e-02
+ Reference value :  6.69735e-02
+ Reference value :  6.69941e-02
+ Reference value :  6.70235e-02
+ Reference value :  6.73026e-02
+ Reference value :  6.74641e-02
+ Reference value :  6.74714e-02
+ Reference value :  6.74813e-02
+ Reference value :  6.74998e-02
+ Reference value :  6.75352e-02
+ Reference value :  6.78840e-02
+ Reference value :  6.79684e-02
+ Reference value :  6.79825e-02
+ Reference value :  6.80099e-02
+ Reference value :  6.81374e-02
+ Reference value :  6.84518e-02
+ Reference value :  6.84657e-02
+ Reference value :  6.84725e-02
+ Reference value :  6.84827e-02
+ Reference value :  6.85007e-02
+ Reference value :  6.85344e-02
+ Reference value :  6.88318e-02
+ Reference value :  6.89669e-02
+ Reference value :  6.89779e-02
+ Reference value :  6.90043e-02
+ Reference value :  6.90380e-02
+ Reference value :  6.93775e-02
+ Reference value :  6.94656e-02
+ Reference value :  6.94737e-02
+ Reference value :  6.94848e-02
+ Reference value :  6.95061e-02
+ Reference value :  6.95628e-02
+ Reference value :  6.99328e-02
+ Reference value :  6.99698e-02
+ Reference value :  6.99841e-02
+ Reference value :  7.00138e-02
+ Reference value :  7.01741e-02
+ Reference value :  7.04575e-02
+ Reference value :  7.04680e-02
+ Reference value :  7.04769e-02
+ Reference value :  7.04871e-02
+ Reference value :  7.05053e-02
+ Reference value :  7.05415e-02
+ Reference value :  7.08711e-02
+ Reference value :  7.09674e-02
+ Reference value :  7.09780e-02
+ Reference value :  7.10063e-02
+ Reference value :  7.10836e-02
+ Reference value :  7.14314e-02
+ Reference value :  7.14661e-02
+ Reference value :  7.14748e-02
+ Reference value :  7.14855e-02
+ Reference value :  7.15045e-02
+ Reference value :  7.15418e-02
+ Reference value :  7.18919e-02
+ Reference value :  7.19686e-02
+ Reference value :  7.19803e-02
+ Reference value :  7.20054e-02
+ Reference value :  7.20797e-02
+ Reference value :  7.24324e-02
+ Reference value :  7.24659e-02
+ Reference value :  7.24743e-02
+ Reference value :  7.24849e-02
+ Reference value :  7.25003e-02
+ Reference value :  7.25318e-02
+ Reference value :  7.28185e-02
+ Reference value :  7.29666e-02
+ Reference value :  7.29748e-02
+ Reference value :  7.29968e-02
+ Reference value :  7.30234e-02
+ Reference value :  7.32672e-02
+ Reference value :  7.34627e-02
+ Reference value :  7.34696e-02
+ Reference value :  7.34794e-02
+ Reference value :  7.34904e-02
+ Reference value :  7.35147e-02
+ Reference value :  7.36484e-02
+ Reference value :  7.39566e-02
+ Reference value :  7.39701e-02
+ Reference value :  7.39849e-02
+ Reference value :  7.40128e-02
+ Reference value :  7.41505e-02
+ Reference value :  7.44374e-02
+ Reference value :  7.44656e-02
+ Reference value :  7.44723e-02
+ Reference value :  7.44809e-02
+ Reference value :  7.44915e-02
+ Reference value :  7.45154e-02
+ Reference value :  7.46273e-02
+ Reference value :  7.49013e-02
+ Reference value :  7.49675e-02
+ Reference value :  7.49757e-02
+ Reference value :  7.49924e-02
+ Reference value :  7.50166e-02
+ Reference value :  7.51568e-02
+ Reference value :  7.54344e-02
+ Reference value :  7.54657e-02
+ Reference value :  7.54719e-02
+ Reference value :  7.54817e-02
+ Reference value :  7.54927e-02
+ Reference value :  7.55174e-02
+ Reference value :  7.56678e-02
+ Reference value :  7.59638e-02
+ Reference value :  7.59727e-02
+ Reference value :  7.59936e-02
+ Reference value :  7.60237e-02
+ Reference value :  7.62813e-02
+ Reference value :  7.64630e-02
+ Reference value :  7.64695e-02
+ Reference value :  7.64787e-02
+ Reference value :  7.64900e-02
+ Reference value :  7.65138e-02
+ Reference value :  7.65940e-02
+ Reference value :  7.69430e-02
+ Reference value :  7.69701e-02
+ Reference value :  7.69854e-02
+ Reference value :  7.70144e-02
+ Reference value :  7.71976e-02
+ Reference value :  7.74581e-02
+ Reference value :  7.74688e-02
+ Reference value :  7.74788e-02
+ Reference value :  7.74903e-02
+ Reference value :  7.75158e-02
+ Reference value :  7.76696e-02
+ Reference value :  7.79644e-02
+ Reference value :  7.79735e-02
+ Reference value :  7.79941e-02
+ Reference value :  7.80249e-02
+ Reference value :  7.83276e-02
+ Reference value :  7.84642e-02
+ Reference value :  7.84724e-02
+ Reference value :  7.84830e-02
+ Reference value :  7.84962e-02
+ Reference value :  7.85269e-02
+ Reference value :  7.87890e-02
+ Reference value :  7.89672e-02
+ Reference value :  7.89791e-02
+ Reference value :  7.90073e-02
+ Reference value :  7.91189e-02
+ Reference value :  7.94547e-02
+ Reference value :  7.94680e-02
+ Reference value :  7.94769e-02
+ Reference value :  7.94875e-02
+ Reference value :  7.95069e-02
+ Reference value :  7.95442e-02
+ Reference value :  7.99052e-02
+ Reference value :  7.99701e-02
+ Reference value :  7.99851e-02
+stdout No. of Data Rows : 196786
+stderr Warning: vector i(b.xv5.ba) not or not yet available!

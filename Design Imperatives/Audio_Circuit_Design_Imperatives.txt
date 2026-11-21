@@ -1,0 +1,318 @@
+AUDIO CIRCUIT DESIGN MUST-REMEMBERS
+=================================
+
+For every stage, know its DC bias, signal level, input and output impedance,
+noise contribution, bandwidth, and current-return path.
+
+
+1. SIGNAL LEVELS, GAIN, AND HEADROOM
+----------------------------------
+
+1. Define nominal and maximum signal levels—not just “audio level.” Specify
+   the source, load, and units: volts RMS, volts peak, volts peak-to-peak,
+   dBu, or dBV. These are not interchangeable.
+   Source: https://www.ap.com/fileadmin-ap/technical-library/How_to_write_and_read_audio_specs.pdf
+
+2. Budget headroom at every stage. Include maximum input, gain settings,
+   equalizer boosts, and summed signals. A clean final output stage cannot
+   undo accidental clipping earlier in the circuit.
+
+3. Decide where distortion is intentional. In a guitar amp, clipping may be
+   the objective; unintended clipping in a buffer, effects return, or reverb
+   recovery stage is a separate design problem.
+   Source: https://valvewizard.co.uk/Book1.html
+
+4. Calculate loading with everything connected. Volume controls, tone
+   networks, reverb sends, parallel branches, and the following stage all
+   affect the circuit—not just the component labeled “load.”
+   Source: https://www.analog.com/en/resources/technical-articles/using-DS1802-pushbutton-digital-potentiometer-create-audio-preamplifier-attenuator.html
+
+5. Usually bridge impedances rather than match them. For voltage-signal
+   connections, the receiving input should generally have substantially
+   higher impedance than the driving output. Transformer and power-stage
+   load requirements are different.
+   Source: https://www.ranecommercial.com/legacy/note109.html
+
+
+2. DC BIAS AND COUPLING CAPACITORS
+--------------------------------
+
+6. Every high-impedance input needs a defined DC return path. A coupling
+   capacitor does not provide one. Check this with cables unplugged and
+   switches in every position.
+   Source: https://www.analog.com/en/resources/app-notes/an-937.html
+
+7. Treat a single-supply midpoint reference as a real circuit. It needs
+   adequate filtering, suitable impedance, and enough current capability
+   for its loads. A noisy reference can bypass the amplifier’s otherwise
+   good supply-noise rejection.
+   Source: https://www.analog.com/en/resources/analog-dialogue/articles/common-problems-when-designing-amplifier-circuits.html
+
+8. Calculate coupling-capacitor cutoff frequencies. For a simple one-pole
+   RC section:
+
+       f_c = 1 / (2 × π × R_seen × C)
+
+   Resistance is in ohms, capacitance in farads, and frequency in hertz.
+   Include the actual surrounding impedances.
+   Source: https://www.analog.com/en/resources/technical-articles/using-DS1802-pushbutton-digital-potentiometer-create-audio-preamplifier-attenuator.html
+
+9. Avoid unnecessary DC across volume-control tracks and switching
+   contacts. Changing a connection between different DC potentials creates
+   an unwanted voltage step; coupling and bias arrangements must account
+   for this.
+   Source: https://www.analog.com/en/resources/technical-articles/using-DS1802-pushbutton-digital-potentiometer-create-audio-preamplifier-attenuator.html
+
+10. Choose capacitors by electrical behavior, not “audio-grade” labeling.
+    Check voltage rating, polarity, leakage, and capacitance stability.
+    Film or C0G/NP0 types are useful for low-distortion signal filtering
+    where practical; not all ceramic dielectrics behave alike.
+    Source: https://www.ti.com/video/4650746830001
+
+
+3. NOISE AND COMPONENT CHOICES
+-----------------------------
+
+11. Choose the input device for the source impedance. Low voltage noise
+    alone does not guarantee a quiet circuit: input-current noise flowing
+    through source impedance also produces noise voltage.
+
+12. Do not make every resistor enormous—or tiny. Larger resistances can
+    increase noise; smaller resistances increase loading and required drive
+    current. Select values for the complete circuit.
+
+13. Protect the first low-level stages especially carefully. Noise
+    introduced there is amplified by subsequent stages. Improving a later
+    stage will not remove noise already mixed with the signal.
+    Source: https://e2e.ti.com/support/amplifiers-group/amplifiers/f/amplifiers-forum/1126121/faq-understanding-the-parameters-for-audio-op-amps
+
+14. Specify noise over a bandwidth. A noise-density figure in nV/√Hz is not
+    total RMS noise. Compare measurements using the same bandwidth and
+    weighting.
+    Source: https://e2e.ti.com/support/amplifiers-group/amplifiers/f/amplifiers-forum/1126121/faq-understanding-the-parameters-for-audio-op-amps
+
+15. Stop radio-frequency interference before it reaches a nonlinear input
+    stage. Otherwise, an amplifier can demodulate radio-frequency energy
+    into audible interference. Input filtering must also preserve the
+    wanted audio response.
+    Source: https://www.valvewizard.co.uk/gridstopper.html
+
+
+4. AMPLIFIER LIMITS AND STABILITY
+--------------------------------
+
+16. Check noise gain as well as signal gain. Op-amp stability depends on
+    the feedback network and its frequency response—not merely the
+    advertised audio gain. Confirm any minimum stable-gain requirement.
+    Source: https://e2e.ti.com/blogs_/archives/b/precisionhub/posts/resistors-in-the-feedback-of-a-buffer-ask-why
+
+17. Check input common-mode range and loaded output swing. “The supply
+    rails are high enough” does not prove the amplifier can accept or
+    produce the required waveform.
+    Source: https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/14/CircuitCookbook_2D00_OpAmps.pdf
+
+18. Check slew rate at the largest required signal. A sine wave requires
+    a maximum slope of:
+
+        2 × π × f × V_peak
+
+    Use peak voltage, keep the units consistent, and allow margin rather
+    than designing exactly at the limit.
+    Source: https://edgeworker.ti.com/lit/pdf/tidu765
+
+19. Treat cables as capacitive loads. A circuit that works into a resistor
+    may ring or oscillate when connected to a long cable. Use the
+    manufacturer’s recommended isolation or compensation approach.
+
+20. Do not assume a faster op-amp is a drop-in upgrade. Recheck feedback
+    components, layout, decoupling, load capacitance, and stability whenever
+    the device changes.
+    Source: https://www.analog.com/en/resources/analog-dialogue/articles/techniques-to-avoid-instability-capacitive-loading.html
+
+
+5. GROUNDING AND SHIELDING
+-------------------------
+
+21. Draw the return-current paths, not just the signal wires. “Ground” is
+    not an ideal zero-impedance connection; current through shared
+    resistance and inductance creates unwanted voltages.
+
+22. Keep noisy return currents out of sensitive input references. Speaker,
+    rectifier-charging, relay, and digital currents should not share
+    avoidable impedance with low-level audio returns.
+    Source: https://www.analog.com/en/resources/technical-articles/successful-pcb-grounding-with-mixedsignal-chips--follow-the-path-of-least-impedance.html
+
+23. Do not blindly apply “star ground everything” or “split every ground
+    plane.” Choose the arrangement from the actual current paths. A
+    continuous plane with sensible component placement is often preferable
+    to arbitrary splits.
+    Source: https://www.analog.com/en/resources/analog-dialogue/articles/what-are-the-basic-guidelines-for-layout-design-of-mixed-signal-pcbs.html
+
+24. Distinguish cable shielding from signal return. Balanced-interface
+    shields generally belong at the chassis entry; an unbalanced cable’s
+    shield commonly also carries signal-return current. “Ground the shield
+    at only one end” is not a universal rule.
+
+25. Never disconnect protective earth to cure hum. Correct the signal
+    interconnection, shield termination, or isolation arrangement instead.
+    Source: https://www.ranecommercial.com/legacy/note110.html
+
+
+6. PHYSICAL LAYOUT AND POWER CLEANLINESS
+--------------------------------------
+
+26. Keep sensitive nodes and feedback paths physically compact. Wiring and
+    PCB traces add capacitance and inductance; these become part of the
+    circuit whether drawn on the schematic or not.
+    Source: https://www.analog.com/en/resources/analog-dialogue/articles/techniques-to-avoid-instability-capacitive-loading.html
+
+27. Separate low-level inputs from high-level outputs and fast switching
+    circuitry. Avoid routing them together where coupling can create
+    crosstalk or unintended feedback.
+    Source: https://www.analog.com/en/resources/technical-articles/successful-pcb-grounding-with-mixedsignal-chips--follow-the-path-of-least-impedance.html
+
+28. Put supply decoupling close to the device it serves. A capacitor near
+    the regulator does not replace local decoupling at an amplifier,
+    converter, or switching device. Keep the associated current loops short.
+    Source: https://www.analog.com/en/resources/analog-dialogue/articles/what-are-the-basic-guidelines-for-layout-design-of-mixed-signal-pcbs.html
+
+29. Design supply and reference filtering separately. A clean supply does
+    not automatically make a resistor-derived bias reference clean;
+    reference noise can enter the signal directly.
+    Source: https://www.analog.com/en/resources/analog-dialogue/articles/common-problems-when-designing-amplifier-circuits.html
+
+30. Consider magnetic pickup as well as electrical shielding. Transformer
+    spacing and orientation matter, especially around spring-reverb
+    hardware. A shielded cable does not solve every magnetic-coupling
+    problem.
+    Source: https://www.valvewizard.co.uk/reverbdriver.html
+
+
+7. CONTROLS, SWITCHING, AND FOOTSWITCHES
+--------------------------------------
+
+31. Debouncing and pop suppression are different jobs. Debouncing prevents
+    multiple control events. It does not eliminate DC steps or
+    discontinuities in the audio waveform.
+    Source: https://www.ti.com/document-viewer/lit/html/SCEA094
+
+32. Do not leave disconnected audio nodes floating. Provide appropriate
+    bias or discharge paths so stored charge does not produce a pop when
+    the connection returns.
+
+33. Design the audio transition deliberately. Consider DC equalization,
+    break-before-make switching, and a controlled mute or ramp where
+    necessary. A mechanically perfect switch can still make an audible
+    click.
+    Source: https://e2e.ti.com/support/switches-multiplexers-group/switches-multiplexers/f/switches-multiplexers-forum/1114638/faq-how-can-i-reduce-the-click-and-pop-noise-on-my-audio-switch-and-detection-jack
+
+34. For your footswitch, keep the switching circuitry near the audio
+    circuit. Use the pedal cable for touch-safe low-voltage control, rather
+    than sending sensitive tube-stage audio out to the pedal. Make startup,
+    unplugged-cable, and fault states explicit design requirements.
+
+35. Suppress relay-coil transients and keep their currents local. The coil
+    stores energy that must go somewhere when switched off; select a clamp
+    compatible with the driver and required release behavior.
+    Source: https://www.ti.com/document-viewer/lit/html/SNVAA45
+
+
+8. MIXING, CONNECTORS, AND OUTPUTS
+--------------------------------
+
+36. Never directly tie ordinary amplifier outputs together to mix them.
+    Use a suitable resistor network or summing amplifier. Splitting one
+    output into suitable loads is not the same as combining multiple
+    outputs.
+    Source: https://www.ranecommercial.com/legacy/note109.html
+
+37. Track polarity and allow headroom at summing points. Two identical,
+    in-phase signals added at unity gain produce twice the voltage—
+    approximately +6 dB. Opposite polarity can cancel shared signal content.
+    Source: https://ez.analog.com/dsp/sigmadsp/f/q-a/564774/what-are-the-possible-options-for-summing-left-and-right-signal-into-mono-signal
+
+38. Balanced does not necessarily mean equal-and-opposite output voltages.
+    Impedance balance is fundamental to interference rejection; a correctly
+    implemented impedance-balanced output can drive only one signal
+    conductor.
+    Source: https://www.sounddevices.com/output-balancing-topologies/
+
+39. Document every connector pin explicitly. A TRS connector could carry
+    balanced mono, unbalanced stereo, an insert send/return, or footswitch
+    control. Its shape does not define its function.
+    Source: https://www.ranecommercial.com/legacy/pdf/ranenotes/Grounding_%26_Shielding_of_Audio_Devices.pdf
+
+40. Identify the output topology before connecting a load or probe. In
+    particular, neither speaker terminal of a bridge-tied-load amplifier
+    should be assumed to be ground. An oscilloscope ground clip can short
+    an active output.
+    Source: https://www.ti.com/mx/lit/pdf/slou346
+
+
+9. EXTRA REMINDERS FOR YOUR TUBE AMP AND SPRING REVERB
+---------------------------------------------------
+
+41. A grid stopper and a grid-leak resistor do different jobs. The grid
+    leak establishes the DC reference; the stopper helps control
+    radio-frequency pickup, parasitic oscillation, and grid current. One
+    does not replace the other.
+    Source: https://www.analog.com/en/resources/app-notes/an-937.html
+
+42. Check overload recovery, not just the clipping waveform. Grid current
+    can shift bias and cause blocking distortion. Bass response, coupling
+    time constants, and grid-current limiting must be considered together.
+    Source: https://valvewizard.co.uk/Book1.html
+
+43. Match the reverb driver to the tank electrically. Check drive current,
+    impedance versus frequency, transformer requirements, and component
+    stresses. A tank’s nominal impedance is not its DC resistance.
+
+44. Protect against an unplugged reverb tank. A transformer-driven tank is
+    an inductive-load problem as well as an audio problem; review flyback,
+    damping, and connector behavior. Keep magnetic hum pickup in mind when
+    positioning the transformer.
+    Source: https://www.valvewizard.co.uk/reverbdriver.html
+
+45. Define the wet/dry interface before choosing final values. For your
+    build, explicitly review send loading, recovery gain, mix level,
+    polarity, and whether switching reverb off should preserve or cut the
+    remaining tail.
+
+
+10. VERIFICATION BEFORE CALLING IT FINISHED
+-----------------------------------------
+
+46. Test more than a 1 kHz sine wave. Measure response and distortion across
+    the intended frequency range and at meaningful signal levels and loads.
+    Source: https://www.ap.com/fileadmin-ap/technical-library/How_to_write_and_read_audio_specs.pdf
+
+47. Record the conditions beside every performance result. Include gain
+    setting, source and load impedance, input/output level, measurement
+    bandwidth, and weighting. An isolated “THD” or “noise” number is
+    incomplete.
+    Source: https://www.ap.com/fileadmin-ap/technical-library/How_to_write_and_read_audio_specs.pdf
+
+48. Check stability with realistic cables and loads. Look for overshoot,
+    ringing, and oscillation—not just an audible squeal. A pleasant
+    listening test is not a stability test.
+    Source: https://www.analog.com/en/resources/analog-dialogue/articles/techniques-to-avoid-instability-capacitive-loading.html
+
+49. Make a state-by-state test checklist. Cover startup, shutdown, mute,
+    bypass, channel changes, reverb changes, unplugged connectors, and
+    control extremes. Test switching both during silence and while passing
+    audio.
+    Source: https://e2e.ti.com/support/switches-multiplexers-group/switches-multiplexers/f/switches-multiplexers-forum/1114638/faq-how-can-i-reduce-the-click-and-pop-noise-on-my-audio-switch-and-detection-jack
+
+50. Treat test equipment as part of the circuit—and the safety review.
+    Confirm voltage ratings and earth connections before probing. Never
+    defeat an oscilloscope’s protective earth; use appropriately rated
+    differential or isolated measurement equipment where required.
+    Source: https://www.tek.com/en/documents/technical-brief/floating-oscilloscope-measurements-and-operator-protection
+
+
+FINAL REVIEW QUESTION
+=====================
+
+Does this circuit still behave correctly at maximum signal, minimum load
+impedance, every control setting, and every switching state—not merely
+under its easiest operating conditions?

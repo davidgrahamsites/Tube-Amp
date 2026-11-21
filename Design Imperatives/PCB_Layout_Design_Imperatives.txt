@@ -1,0 +1,246 @@
+PCB LAYOUT MUST-REMEMBERS
+Design Imperatives
+========================
+
+THE CENTRAL RULE: Lay out complete current loops—not just connections between pins. The return path is part of every signal and power connection.
+
+
+1. SET THE PHYSICAL CONSTRAINTS FIRST
+------------------------------------
+
+1. Start with the enclosure. Establish the board outline, mounting holes, connector positions, component heights, and cable access before routing.
+
+2. Allow space around components. Include connector plugs, screwdrivers, heatsinks, and insertion/removal clearance—not just the component body. [1]
+
+3. Check every footprint against the actual part. Verify pad numbering, lead pitch, finished-hole size, body dimensions, polarity, and top-view versus bottom-view drawings.
+
+4. Never trust a footprint merely because its name matches. This is especially important for downloaded or AI-generated libraries, connectors, transistors, and tube sockets. [2]
+
+5. Choose the manufacturer’s capabilities before setting design rules. Check trace/space limits, hole sizes, annular rings, copper thickness, solder mask, and board-edge clearances. [3]
+
+6. Choose the layer stack deliberately. Give critical signals a nearby, continuous reference plane; do not select layers solely according to routing convenience. [4]
+
+
+2. PLACEMENT COMES BEFORE ROUTING
+--------------------------------
+
+7. Group components by function. Keep each amplifier stage, regulator, interface, and associated support components together.
+
+8. Separate noise sources from sensitive circuits. Switching power supplies and high-current paths should not occupy the same area as low-level analog inputs. [5]
+
+9. Place the most layout-sensitive components first. Examples include switching-power components, oscillator parts, feedback networks, and bypass capacitors.
+
+10. Follow the component manufacturer’s recommended layout. A correct schematic does not make an arbitrary placement electrically equivalent. [6]
+
+11. Put electrostatic-discharge protection at the connector. Route the incoming signal through the protection location before it reaches the vulnerable circuit.
+
+12. Give protection devices a short discharge-return path. A nearby protection diode with a long, inductive ground connection can still provide poor protection. [7]
+
+
+3. GROUNDING AND RETURN PATHS
+----------------------------
+
+13. Ground is not an ideal zero-voltage surface. Shared return impedance lets one circuit’s current disturb another circuit’s reference. [5]
+
+14. Prefer a continuous ground plane within each non-isolated domain. Separate noisy and quiet functions through placement and current-path control—not automatic plane splitting.
+
+15. Do not route fast signals across ground-plane gaps. The return current must detour, increasing loop area and interference.
+
+16. Check return paths whenever a signal changes layers. When it changes between ground reference planes, provide a nearby stitching via connecting those planes.
+
+17. Keep heavy and pulsed returns out of sensitive reference paths. Rectifier, speaker, and power-stage currents should not share a narrow return section with an input stage.
+
+18. Use star or bus grounding deliberately—not universally. These can suit audio power systems, but “everything must connect to one distant star” is not a universal PCB rule. [8]
+
+
+4. DECOUPLING AND POWER DISTRIBUTION
+-----------------------------------
+
+19. Place bypass capacitors electrically close to their supply pins. Physical proximity is insufficient when the connecting traces take a long detour.
+
+20. Minimize the complete bypass loop. Consider the capacitor, supply pin, device return, and ground connection together.
+
+21. Keep bypass connections short and low-inductance. Avoid long, thin traces between the capacitor and the pins it serves.
+
+22. Do not expect one distant bulk capacitor to replace local bypassing. Bulk energy storage and high-frequency decoupling serve different needs. [5]
+
+23. Follow the device’s specified capacitor placement and connections. Particular regulators and isolated supplies can require capacitors directly between designated supply-and-return pin pairs. [9]
+
+24. Avoid unnecessary shared bottlenecks in power distribution. Separate noisy branches and provide their local decoupling rather than feeding everything through one restrictive path. [10]
+
+
+5. SIGNAL ROUTING
+-----------------
+
+25. Route critical nets before ordinary control signals. Preserve the geometry needed by clocks, feedback, sensitive inputs, and controlled-impedance connections.
+
+26. Keep sensitive traces short and away from aggressors. Long parallel runs increase opportunities for coupling.
+
+27. Judge digital routing by edge speed—not merely clock frequency. A slowly repeating signal can still have very fast transitions.
+
+28. Calculate controlled impedance using the actual stack-up. Trace width alone does not determine impedance.
+
+29. Route differential pairs consistently. Maintain the required width, spacing, reference continuity, and reasonably symmetric transitions.
+
+30. Match lengths only to an actual timing requirement. Avoid adding unnecessary meanders or stubs merely to make traces look equal. [4]
+
+31. Keep amplifier feedback networks compact. Unintended capacitance at sensitive input nodes can alter stability; copper beneath those nodes may need a deliberate keepout. [11]
+
+
+6. HIGH-CURRENT AND SWITCHING-POWER LAYOUT
+----------------------------------------
+
+32. Size traces for current, copper thickness, temperature rise, and voltage drop. There is no universally correct “power trace width.”
+
+33. Check vias as well as traces. A wide trace feeding a single small via can still create an electrical and thermal bottleneck. [12]
+
+34. Identify the switching hot loop. Minimize the loop carrying rapidly changing current; its location depends on the converter topology.
+
+35. Keep switching-node copper controlled. Use enough for current and heat, but do not turn a rapidly switching node into an unnecessarily large copper area.
+
+36. Keep gate-drive loops compact. Route the drive and its return together; do not consider only the gate trace.
+
+37. Keep feedback and sensing away from switching nodes. Short routing is not an improvement when it passes through a noisy region. [10]
+
+38. Use Kelvin connections for current sensing. Run separate sense traces from the intended shunt measurement points, rather than measuring through current-carrying copper. [13]
+
+
+7. HEAT AND COMPONENT RELIABILITY
+--------------------------------
+
+39. Design the heat-removal path, not just the electrical connection. Power parts may depend on copper area and thermal vias to reach their intended performance.
+
+40. Treat thermal reliefs as a trade-off. They improve solderability but can restrict current and heat flow; do not apply them indiscriminately to power connections. [10]
+
+41. Check exposed-pad electrical connections. Follow the exact datasheet; exposed metal and thermal structures are not automatically interchangeable with ground.
+
+42. Respect package-specific keepouts. Some packages contain exposed structures that must not contact PCB copper. [6]
+
+43. Keep precision analog circuits away from thermal gradients. Uneven heating can create measurement errors even when the electrical routing looks correct. [14]
+
+
+8. HIGH VOLTAGE AND ISOLATION
+----------------------------
+
+44. Distinguish clearance from creepage. Clearance is the shortest distance through air; creepage is the shortest path along an insulating surface.
+
+45. Do not choose safety spacing from nominal voltage alone. Consider working voltage, transients, insulation category, pollution degree, material, altitude, and the applicable equipment standard. [15]
+
+46. Check the whole assembled insulation boundary. Include pads, solder, component leads, connectors, mounting hardware, and nearby accessible metal—not just trace spacing.
+
+47. Do not assume a board slot solves every spacing problem. A slot can increase PCB creepage without increasing air clearance or the creepage across a component.
+
+48. Do not casually credit solder mask or coating as safety insulation. Any claimed reduction in required spacing needs an appropriately qualified insulation/coating system. [16]
+
+49. Keep protective earth separate from noise-control decisions. For a Class I metal-chassis build, use a secure dedicated chassis bond; never remove protective earth to cure hum. [8]
+
+
+9. ASSEMBLY, IDENTIFICATION, AND TESTING
+--------------------------------------
+
+50. Check solder-mask openings and the mask between adjacent pads. Copper clearances alone do not guarantee a manufacturable solder-mask pattern.
+
+51. Specify via treatment deliberately. Tented, open, filled, and capped vias are not equivalent manufacturing instructions. [17]
+
+52. Make polarity and pin 1 unmistakable. Ensure markings remain useful when the part is installed.
+
+53. Keep identification readable and off soldering surfaces. Reference designators and connector labels should not disappear beneath components or overlap exposed pads. [2]
+
+54. Provide accessible test points on important nets. Include supplies, returns, and diagnostic signals; allow room for the actual probe.
+
+55. Plan test access around the assembled board. Tall components, heatsinks, and enclosure hardware must not block the points you need to reach. [18]
+
+
+10. FINAL KICAD CHECKS
+---------------------
+
+56. Set meaningful net classes and custom rules. High-voltage, high-current, ordinary signal, and controlled-impedance nets should not all inherit unsuitable defaults.
+
+57. Refill every copper zone before checking the board. Inspect for disconnected islands, narrow connections, and unintentionally interrupted return paths.
+
+58. Run design-rule checking and schematic-to-PCB parity checking. Resolve unintended shorts, unconnected items, clearance violations, and schematic mismatches.
+
+59. Review exclusions instead of hiding problems. Every waived violation should have an understood, documented reason.
+
+60. Inspect the exported manufacturing files. Check copper, solder mask, drill data, board outline, and layer selection—not just the editor view.
+
+61. Treat a clean DRC as necessary, not sufficient. It checks configured rules; it does not establish analog performance, adequate cooling, or product safety. [19]
+
+
+11. EXTRA REMINDERS FOR AUDIO/TUBE-AMP BOARDS
+--------------------------------------------
+
+62. Keep high-gain inputs away from later-stage outputs. Unintended coupling can create feedback, oscillation, or unwanted interaction between stages. [5]
+
+63. Keep the connection after a grid-stopper resistor extremely short. Place it at or very near the tube’s grid connection rather than leaving a long unprotected grid lead. [20]
+
+64. Route heater supply and return together. Use paired PCB routing and tightly twisted off-board AC heater wiring; keep them away from sensitive signal wiring.
+
+65. Keep rectifier charging pulses local. Arrange the transformer-secondary, rectifier, and first reservoir-capacitor circuit so its pulsed current does not travel through preamp returns.
+
+66. Plan grounding across the whole amplifier. Include jacks, pots, cable shields, board interconnects, and chassis connections; PCB grounding alone cannot control paths created elsewhere. [8]
+
+
+REFERENCE LINKS
+===============
+Reference links retained from the original checklist.
+
+[1] KiCad Library Convention — Footprint courtyard requirements
+https://klc.kicad.org/footprint/f5/f5.3/
+
+[2] KiCad Library Convention
+https://klc.kicad.org/
+
+[3] Eurocircuits — PCB Design Guidelines
+https://www.eurocircuits.com/technical-guidelines/pcb-design-guidelines/
+
+[4] Analog Devices — PCB Layout Guidelines for RF and Mixed-Signal
+https://www.analog.com/en/resources/technical-articles/pcbs-layout-guidelines-for-rf--mixedsignal.html
+
+[5] Texas Instruments — Circuit Board Layout Techniques
+https://e2echina.ti.com/cfs-file/__key/telligent-evolution-components-attachments/13-109-00-00-00-01-19-11/Circuit-Board-Layout-Techniques.pdf
+
+[6] Analog Devices — ADIN1300 and ADIN1200 Layout Considerations
+https://wiki.analog.com/resources/eval/user-guides/adin1300-and-adin1200/layout-considerations
+
+[7] Texas Instruments — Application report SLVA680A
+https://www.ti.com/lit/an/slva680a/slva680a.pdf
+
+[8] Valve Wizard — Grounding
+https://www.valvewizard.co.uk/Grounding.pdf
+
+[9] Texas Instruments — Reference design guide TIDUEU7
+https://www.ti.com/lit/ug/tidueu7/tidueu7.pdf
+
+[10] Analog Devices — Application Note 136
+https://www.analog.com/en/resources/app-notes/an-136.html
+
+[11] Analog Devices — Tutorial MT-059
+https://www.analog.com/media/en/training-seminars/tutorials/MT-059.pdf
+
+[12] KiCad 10.0 — PCB Calculator documentation
+https://docs.kicad.org/10.0/en/pcb_calculator/pcb_calculator.html
+
+[13] Texas Instruments — Current-sensing layout reference
+https://www.ti.com/document-viewer/lit/html/SSZT805/GUID-5F278960-BA94-4362-9099-87ABC753A4D6
+
+[14] Analog Devices — Layout for Precision Op Amps
+https://www.analog.com/en/resources/technical-articles/layout-for-precision-op-amps.html
+
+[15] Texas Instruments — Isolation spacing video reference
+https://www.ti.com/video/6146024211001
+
+[16] Texas Instruments — Application report SDAA268
+https://www.ti.com/lit/an/sdaa268/sdaa268.pdf
+
+[17] Eurocircuits — Soldermask guidelines
+https://www.eurocircuits.com/technical-guidelines/pcb-design-guidelines/soldermask/
+
+[18] SF Circuits — Flying Probe Test
+https://www.sfcircuits.com/pcb-school/flying-probe-test
+
+[19] KiCad 10.0 — PCB Editor documentation
+https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html
+
+[20] Valve Wizard — Grid Stoppers
+https://www.valvewizard.co.uk/gridstopper.html

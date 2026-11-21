@@ -1,0 +1,101 @@
+(footprint "KYET_KP473J2J1001"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "KYET KP473J2J1001;630V5% polypropylene; body W12 H11 T5.5, each+/-1mm; pitch10+/-0.5mm; lead0.6+/-0.05mm. Courtyard max body plus0.5mm. No3D model. Temperature<=100C. Peak voltage/ripple and layout isolation require review.")
+	(property "Reference" "REF**"
+		(at 5 -4.75 0)
+		(layer "F.SilkS")
+		(uuid "bb3a0bc7-c07c-4d14-a30c-d60860692796")
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+	)
+	(property "Value" "KP473J2J1001"
+		(at 5 4.75 0)
+		(layer "F.Fab")
+		(uuid "c78c60ca-6201-4e5d-aeda-af3b7570c03d")
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c58770b2-3988-41b3-a3ac-05a257a2f40d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ecadfa78-1d87-416e-9c80-93e9e1395b25")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -1.15 -2.9)
+		(end 11.15 2.9)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "91875627-817c-40ff-8913-ee970547a452")
+	)
+	(fp_rect
+		(start -2 -3.75)
+		(end 12 3.75)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "f19c4b9b-e1a0-46b7-bfcd-a691df878b5d")
+	)
+	(fp_rect
+		(start -1 -2.75)
+		(end 11 2.75)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "37f0a95b-a85f-42fa-89ed-09c0e69f6256")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 1.8 1.8)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "387bb333-c5d4-4d1a-9546-710656bc9aaa")
+	)
+	(pad "2" thru_hole circle
+		(at 10 0)
+		(size 1.8 1.8)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f9fee8d9-32d2-4150-a9c8-0f8823f32198")
+	)
+	(embedded_fonts no)
+)

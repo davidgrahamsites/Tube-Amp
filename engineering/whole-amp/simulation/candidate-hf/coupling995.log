@@ -1,0 +1,173 @@
+stderr Warning: can't find the initialization file spinit.
+stdout ******
+stdout ** ngspice-45.2 shared library
+stdout ******
+stdout Note: Compatibility modes selected: ps
+stderr Warning: Cannot convert 'option cshunt=' to capacitor value, skipped!
+stdout Circuit: renegade full signal path v0.4 baseline
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stderr Note: Starting dynamic gmin stepping
+stderr Note: Dynamic gmin stepping completed
+stdout Initial Transient Solution
+stdout --------------------------
+stdout Node                                   Voltage
+stdout ----                                   -------
+stdout b_main                                     400
+stdout bias_out                                   -40
+stdout input                                        0
+stdout vp                                          15
+stdout vn                                         -15
+stdout xv1_1.ca                               88.6623
+stdout cl_p1                                   182.17
+stdout cl_k1                                  1.43636
+stdout cl_in                                        0
+stdout xv1_1.re                                     1
+stdout b_early                                277.928
+stdout cl_tone                                 182.17
+stdout cl_treble_top                                0
+stdout cl_bass_top                                  0
+stdout cl_bass_bottom                               0
+stdout cl_treble_w                                  0
+stdout cl_g2                                        0
+stdout xv1_6.ca                               88.6623
+stdout cl_p2                                   182.17
+stdout cl_k2                                  1.43636
+stdout xv1_6.re                                     1
+stdout clean_out                                    0
+stdout xv2_1.ca                               71.7451
+stdout dr_p1                                  208.225
+stdout dr_k1                                  1.88198
+stdout dr_in                                        0
+stdout xv2_1.re                                     1
+stdout dr_gain_top                                  0
+stdout dr_gain_w                                    0
+stdout dr_g2                                        0
+stdout xv2_6.ca                               83.5007
+stdout dr_p2                                   190.41
+stdout dr_k2                                  1.57533
+stdout xv2_6.re                                     1
+stdout dr_c3                                        0
+stdout dr_g3                                        0
+stdout xv3_1.ca                                112.55
+stdout dr_p3                                  175.845
+stdout dr_k3                                  1.12304
+stdout xv3_1.re                                     1
+stdout b_pre                                  312.801
+stdout xv3_6.ca                               133.212
+stdout dr_cf                                   176.35
+stdout xv3_6.re                                     1
+stdout dr_tone                                 176.35
+stdout dr_treble_top                                0
+stdout dr_bass_top                                  0
+stdout dr_bass_bottom                               0
+stdout dr_treble_w                                  0
+stdout dirty_out                                    0
+stdout input_stop                                   0
+stdout mix_out                                      0
+stdout pi_g1                                  84.3347
+stdout pi_tail_top                            84.3348
+stdout xv4_1.ca                               95.1285
+stdout pi_p1                                  225.536
+stdout pi_k                                   85.2791
+stdout xv4_1.re                                     1
+stdout xv4_6.ca                               87.8882
+stdout pi_p2                                  218.295
+stdout pi_g2                                  84.3347
+stdout xv4_6.re                                     1
+stdout nfb_node                                64.242
+stdout ot_4                                         0
+stdout pres_top                                     0
+stdout grid_a_feed                                -40
+stdout grid_b_feed                                -40
+stdout el34_ga                                    -40
+stdout el34_gb                                    -40
+stdout b_screen                               399.098
+stdout el34_sa                                391.126
+stdout el34_sb                                391.126
+stdout xv5.at                                0.962362
+stdout ot_pa                                  398.547
+stdout k_a                                  0.0162284
+stdout xv5.gs                                 4.03942
+stdout xv5.gs2                                8.11854
+stdout xv5.cc                                 7.81297
+stdout xv5.sc                                 1.11742
+stdout xv6.at                                0.962362
+stdout ot_pb                                  398.547
+stdout k_b                                  0.0162284
+stdout xv6.gs                                 4.03942
+stdout xv6.gs2                                8.11854
+stdout xv6.cc                                 7.81297
+stdout xv6.sc                                 1.11742
+stdout choke                                  399.098
+stdout fx_send                                      0
+stdout fx_return                                    0
+stdout pa_w                                       400
+stdout pb_w                                       400
+stdout speaker                                      0
+stdout rv_acin                                      0
+stdout rv_dryin                                     0
+stdout b.xv6.bscrn#branch                -1.11742e-12
+stdout b.xv6.bcath#branch                -7.81297e-12
+stdout b.xv6.bgs2#branch                 -8.11854e-12
+stdout b.xv6.bgs#branch                  -4.03942e-12
+stdout b.xv6.bat#branch                  -9.62362e-13
+stdout b.xv5.bscrn#branch                -1.11742e-12
+stdout b.xv5.bcath#branch                -7.81297e-12
+stdout b.xv5.bgs2#branch                 -8.11854e-12
+stdout b.xv5.bgs#branch                  -4.03942e-12
+stdout b.xv5.bat#branch                  -9.62362e-13
+stdout b.xv4_6.bre#branch                      -1e-12
+stdout b.xv4_6.bca#branch                -8.78882e-11
+stdout b.xv4_1.bre#branch                      -1e-12
+stdout b.xv4_1.bca#branch                -9.51285e-11
+stdout b.xv3_6.bre#branch                      -1e-12
+stdout b.xv3_6.bca#branch                -1.33212e-10
+stdout b.xv3_1.bre#branch                      -1e-12
+stdout b.xv3_1.bca#branch                 -1.1255e-10
+stdout b.xv2_6.bre#branch                      -1e-12
+stdout b.xv2_6.bca#branch                -8.35007e-11
+stdout b.xv2_1.bre#branch                      -1e-12
+stdout b.xv2_1.bca#branch                -7.17451e-11
+stdout b.xv1_6.bre#branch                      -1e-12
+stdout b.xv1_6.bca#branch                -8.86623e-11
+stdout b.xv1_1.bre#branch                      -1e-12
+stdout b.xv1_1.bca#branch                -8.86623e-11
+stdout ls#branch                                    0
+stdout lpb#branch                          -0.0145321
+stdout lpa#branch                           0.0145321
+stdout l1#branch                            0.0120222
+stdout enfb#branch                         0.00064242
+stdout vminus#branch                          1.5e-11
+stdout vplus#branch                          -1.5e-11
+stdout vin#branch                                   0
+stdout vbias#branch                             2e-10
+stdout vsup#branch                         -0.0410864
+ Reference value :  1.37614e-04
+ Reference value :  3.56764e-04
+ Reference value :  5.51932e-04
+ Reference value :  7.23032e-04
+ Reference value :  8.92782e-04
+ Reference value :  1.08118e-03
+ Reference value :  1.28568e-03
+ Reference value :  1.49135e-03
+ Reference value :  1.70925e-03
+ Reference value :  1.92820e-03
+ Reference value :  2.12252e-03
+ Reference value :  2.32957e-03
+ Reference value :  2.52650e-03
+ Reference value :  2.71065e-03
+ Reference value :  2.88215e-03
+ Reference value :  3.06370e-03
+ Reference value :  3.25570e-03
+ Reference value :  3.44630e-03
+ Reference value :  3.66120e-03
+ Reference value :  3.87535e-03
+ Reference value :  4.08014e-03
+ Reference value :  4.26409e-03
+ Reference value :  4.45309e-03
+ Reference value :  4.63294e-03
+ Reference value :  4.80804e-03
+ Reference value :  4.98689e-03
+stdout No. of Data Rows : 100047
+stdout binary raw file "coupling995.raw"

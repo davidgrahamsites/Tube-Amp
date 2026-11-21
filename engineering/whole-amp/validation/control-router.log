@@ -1,0 +1,28 @@
+2026-11-11 06:24:31.652 INFO   Freerouting CLI v2.5.0 (build-date: 2026-10-05)
+2026-11-11 06:24:31.718 INFO   Hardware: 10 CPU cores, 8192 MB RAM
+2026-11-11 06:24:31.718 WARN   Deprecated settings path '-mp / --router.max_passes'; use '--router.autorouter.max_passes' instead. The old path will be removed in a future release.
+2026-11-11 06:24:31.841 WARN   Deprecated settings path 'router.max_passes'; use 'router.autorouter.max_passes' instead. The old path will be removed in a future release.
+2026-11-11 06:24:32.116 INFO   [CF1668\CD4CA8] Loading board file 'Renegade_Control.dsn'...
+2026-11-11 06:24:32.197 INFO   [CF1668\CD4CA8] Job 'CF1668\CD4CA8' started at 2026-11-11T14:24:32.197421Z.
+2026-11-11 06:24:32.299 INFO   [CF1668\CD4CA8] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=9.
+2026-11-11 06:24:32.380 INFO   [CF1668\CD4CA8] Fanout stage started on board '6654083bebc02f019e7a7c18cce23edf' with 6 of 6 SMD pins needing fanout (0 already connected, 0 netless).
+2026-11-11 06:24:32.718 INFO   [CF1668\CD4CA8] Fanout pass #1 on board '3a6cd7adc8cfa8d32cf272511c2313c0' completed in 0.30 seconds with 6 SMD pins fanouted, 0 not routed, 0 insert errors, +3 extra vias (0 SMD pins still to check in pass, ripup costs=100).
+2026-11-11 06:24:32.808 INFO   [CF1668\CD4CA8] Fanout pass #2 on board '3a6cd7adc8cfa8d32cf272511c2313c0' completed in 0.07 seconds with 0 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-11-11 06:24:32.810 INFO   [CF1668\CD4CA8] Fanout stage completed: started with 6 total SMD pins, completed in 0.43 seconds, escaped pins: 6/6 (100.0%), using 0.37 total CPU seconds, 0.11 GB total allocated, and 267.5 MB peak heap usage.
+2026-11-11 06:24:32.825 INFO   [CF1668\CD4CA8] Auto-routing stage started on board '3a6cd7adc8cfa8d32cf272511c2313c0' with baseline score 16.00 for 122 unrouted items.
+2026-11-11 06:24:40.482 INFO   [CF1668\CD4CA8] Auto-routing pass #1 on board '3a6cd7adc8cfa8d32cf272511c2313c0' was completed in 7.63 seconds with score 989.33 (1 unrouted and 0 violations), using 4.51 CPU seconds and the job allocated 3.43 GB of memory so far.
+2026-11-11 06:24:40.786 INFO   [CF1668\CD4CA8] Auto-routing pass #2 on board 'd3d0fefd29aa0f21d36698f097b8ec05' was completed in 0.25 seconds with score 1000.00 (0 unrouted and 0 violations), using 4.51 CPU seconds and the job allocated 3.43 GB of memory so far.
+2026-11-11 06:24:40.842 INFO   [CF1668\CD4CA8] Auto-routing pass #3 on board '4e2b15d3fc85ff68a5954e9d3f76ea0f' was completed in 0.04 seconds with score 1000.00 (0 unrouted and 0 violations), using 4.51 CPU seconds and the job allocated 3.43 GB of memory so far.
+2026-11-11 06:24:40.926 INFO   [CF1668\CD4CA8] Auto-routing stage completed: started with 125 unrouted nets, completed in 8.62 seconds, final score: 1000.00 (0 unrouted and 0 violations), using 4.51 total CPU seconds, 3.43 GB total allocated, and 160.3 MB peak heap usage.
+2026-11-11 06:24:41.079 INFO   [CF1668\CD4CA8] Optimization stage started on board '4e2b15d3fc85ff68a5954e9d3f76ea0f'. Baseline router score: 1000.00, optimizer score: 700.64, incomplete connections: 0, clearance violations: 0.
+2026-11-11 06:24:46.412 INFO   [CF1668\CD4CA8] Stopping optimization pass #1 early after 12 consecutive items could not be improved.
+2026-11-11 06:24:46.490 INFO   [CF1668\CD4CA8] Optimizer pass #1 on board 'bb9ac30cf6b08ba45bf1239c63a10de0' was completed in 5.18 seconds with the score of 691.08 (0 unrouted and 0 violations).
+2026-11-11 06:24:46.495 INFO   [CF1668\CD4CA8] Optimizer pass #1 candidate rejected: OPTIMIZER_SCORE_NOT_IMPROVED. Restoring incumbent (optimizer score 700.64, incomplete connections: 0, clearance violations: 0).
+2026-11-11 06:24:46.535 INFO   [CF1668\CD4CA8] Optimizer pass #1: optimizer score 700.64 -> 691.08 (REGRESSED, -1.3636%), router score: 1000.00, incomplete connections: 0, clearance violations: 0.
+2026-11-11 06:24:51.378 INFO   [CF1668\CD4CA8] Optimizer pass #2 on board 'fd0409f90efb7af952a1466cd208513b' was completed in 4.78 seconds with the score of 703.82 (0 unrouted and 0 violations).
+2026-11-11 06:24:51.395 INFO   [CF1668\CD4CA8] Optimizer pass #2: optimizer score 700.64 -> 703.82 (IMPROVED, 0.4545%), router score: 1000.00, incomplete connections: 0, clearance violations: 0.
+2026-11-11 06:24:51.395 INFO   [CF1668\CD4CA8] Stopping optimizer because the improvement in this pass (0.4545%) is below the threshold (5.00%).
+2026-11-11 06:24:51.405 INFO   [CF1668\CD4CA8] Optimization stage completed:. Baseline router score: 1000.00, baseline optimizer score: 700.64, final router score: 1000.00, final optimizer score: 703.82, completed in 10.32 seconds, using 19.86 total CPU seconds, 14.50 GB total allocated, and 294.8 MB peak heap usage.
+2026-11-11 06:24:51.417 INFO   [CF1668\CD4CA8] Job 'CF1668\CD4CA8' finished with state: COMPLETED (elapsed: 19.22 seconds, finished at UTC: 2026-11-11T14:24:51.416579Z).
+2026-11-11 06:24:51.453 INFO   Saving output file '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb/Control/Renegade_Control.ses' (SES)...
+2026-11-11 06:24:51.458 INFO   Successfully saved output file '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb/Control/Renegade_Control.ses' (32540 bytes).

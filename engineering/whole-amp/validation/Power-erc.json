@@ -1,0 +1,67 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-11T06:55:16",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/9bc6c924-79b9-5fb6-80ea-c35bcc3356df",
+            "violations": []
+        },
+        {
+            "path": "/power_01/",
+            "uuid_path": "/9bc6c924-79b9-5fb6-80ea-c35bcc3356df/0f4c8c36-5331-5300-956b-3c5ff89e9d45",
+            "violations": []
+        },
+        {
+            "path": "/power_02/",
+            "uuid_path": "/9bc6c924-79b9-5fb6-80ea-c35bcc3356df/ce113750-5c24-5e9b-82eb-e5fb15bafdd8",
+            "violations": []
+        },
+        {
+            "path": "/power_03/",
+            "uuid_path": "/9bc6c924-79b9-5fb6-80ea-c35bcc3356df/ca313199-e47f-56b0-9e68-333d324aad00",
+            "violations": []
+        },
+        {
+            "path": "/power_04/",
+            "uuid_path": "/9bc6c924-79b9-5fb6-80ea-c35bcc3356df/64e7e90e-192d-58a1-b91d-418a0e4d98fc",
+            "violations": []
+        },
+        {
+            "path": "/power_05/",
+            "uuid_path": "/9bc6c924-79b9-5fb6-80ea-c35bcc3356df/19ff8260-0571-507c-9fd3-d3fade90017f",
+            "violations": []
+        },
+        {
+            "path": "/power_06/",
+            "uuid_path": "/9bc6c924-79b9-5fb6-80ea-c35bcc3356df/efe3b887-0246-5055-9295-a3dc4ae8e09c",
+            "violations": []
+        }
+    ],
+    "source": "Renegade_Power.kicad_sch"
+}

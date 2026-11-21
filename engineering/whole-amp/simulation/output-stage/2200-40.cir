@@ -1,0 +1,24 @@
+Renegade full signal path v0.4 baseline
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/simulation/models/dm12ax7s.inc"
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/simulation/models/6ca7s.inc"
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+.options method=gear maxord=2 reltol=0.003 abstol=1n vntol=10u gmin=1e-10 rshunt=1e12 cshunt=1e-14
+VSUP B_MAIN 0 400
+R41 B_SCREEN EL34_SA 2200.0
+R42 B_SCREEN EL34_SB 2200.0
+XV5 OT_PA EL34_SA EL34_GA K_A 6CA7
+XV6 OT_PB EL34_SB EL34_GB K_B 6CA7
+R110 K_A 0 1
+R111 K_B 0 1
+RPA OT_PA PA_W 100
+RPB OT_PB PB_W 100
+LPA B_MAIN PA_W 10
+LPB PB_W B_MAIN 10
+LS SPEAKER 0 0.04210526316
+KOT LPA LPB LS .999
+RLOAD SPEAKER 0 8
+VSCREEN B_SCREEN 0 400
+VGA EL34_GA 0 SIN(-40 40 1000)
+VGB EL34_GB 0 SIN(-40 -40 1000)
+.options itl1=500 itl4=500
+.end

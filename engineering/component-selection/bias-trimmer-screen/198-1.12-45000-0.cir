@@ -1,0 +1,21 @@
+Bias cap 20C five-minute leakage bounding screen
+.options method=gear reltol=.001
+VAC ac 0 SIN(0 71.276363543604 50)
+R40 ac diode_ac 1k
+D7 raw diode_ac DREF
+.model DREF D(Is=5n Rs=.05 N=1.8 Bv=1000 Ibv=5u)
+C28 0 raw 8u
+R39 raw filt 4.7k
+C27 0 filt 8u
+* Smooth direction-correct leakage saturates at specification; avoids unphysical startup current source.
+BLC28 0 raw I=0*tanh(-v(raw))
+BLC27 0 filt I=0*tanh(-v(filt))
+R38 filt bias 22k
+RPOT bias stop 45000
+R503 stop 0 33k
+R33 ga bias 220k
+R34 gb bias 220k
+RTESTA ga 0 1e12
+RTESTB gb 0 1e12
+.save all @c28[i] @c27[i]
+.end

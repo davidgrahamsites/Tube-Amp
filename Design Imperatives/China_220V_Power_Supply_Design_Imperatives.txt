@@ -1,0 +1,300 @@
+CHINA 220 V POWER-SUPPLY DESIGN: MUST-REMEMBERS
+============================================
+
+SAFETY WARNING
+Mains voltage and tube-amplifier power supplies can be lethal, including after
+unplugging. Have the mains wiring, protective earthing, and insulation reviewed
+by a qualified professional before energizing. [1]
+
+
+1. CHINESE MAINS REQUIREMENTS
+----------------------------
+
+1. Design for 220 V AC RMS, 50 Hz.
+   China's normal single-phase supply is 220 V; 380 V is the three-phase
+   line-to-line voltage—not an alternative connection for a 220 V appliance. [2]
+
+2. Do not design around exactly 220 V.
+   The normal single-phase supply tolerance is +7% / -10%, giving 198–235.4 V.
+   Specify the equipment's operating range separately, and assess surges and
+   abnormal conditions beyond normal variation.
+
+3. Require an explicit 50 Hz transformer rating.
+   A 60-Hz-only transformer can saturate and overheat at 50 Hz, even when its
+   voltage rating looks correct. “220 V” alone is insufficient. [3]
+
+4. Remember RMS versus peak voltage.
+   For a sinusoidal supply:
+
+       V_peak = sqrt(2) × V_RMS
+
+   Therefore, 220 V RMS is approximately 311 V peak. A bridge rectifier and
+   reservoir capacitor do not turn mains into a safe, isolated supply. [4]
+
+
+2. ISOLATION, EARTHING, AND MAINS CONNECTIONS
+-------------------------------------------
+
+5. Provide safety isolation for user-accessible circuits.
+   A low output voltage does not by itself establish safety. An autotransformer
+   has an electrical connection between input and output; it is not a substitute
+   for an isolating transformer. [5]
+
+6. Use protective earth for the metal-chassis tube-amp build.
+   Provide a dedicated, mechanically secure chassis-earth connection with
+   conductive contact and locking hardware—not a connection dependent on paint,
+   an audio jack, or incidental mounting contact. [6]
+
+7. Never switch, fuse, or insert a resistor into protective earth.
+   Never disconnect earth to solve hum; address the signal-ground arrangement
+   instead. [1]
+
+8. Keep neutral, protective earth, and signal return conceptually separate.
+   Do not use neutral as chassis earth or add an internal neutral-to-earth bond
+   in the appliance. [6]
+
+9. Protect the live conductor; never fuse only neutral.
+   For this build, use a suitably rated double-pole mains switch to disconnect
+   both live and neutral. The protective-earth connection remains
+   uninterrupted. [7]
+
+10. Specify the complete power-entry assembly.
+    Use a Chinese-standard cord set, appropriate inlet, strain relief, insulated
+    terminals, and hardware rated for the operating voltage, current, and
+    temperature. China's current plug-and-socket dimensional standard is
+    GB 1002-2024. [8]
+
+
+3. FUSES, SWITCHING, AND SURGE PROTECTION
+---------------------------------------
+
+11. Select the fuse from actual input requirements.
+    Consider RMS current, startup pulses, ambient temperature, time-current
+    characteristics, and breaking capacity. Simply halving the old 120 V fuse
+    rating is not a complete selection method. [9]
+
+12. Check voltage ratings as well as amperage.
+    A 125 V fuse is unsuitable for 220 V mains. Likewise, an AC rating does not
+    establish suitability for interrupting a high-voltage DC rail. Verify the
+    exact fuse and holder specifications. [9]
+
+13. Design for inrush current.
+    Transformer energization and capacitor charging must not damage switches,
+    rectifiers, or wiring. Check both cold startup and rapid off–on cycling;
+    a hot NTC thermistor has less resistance and provides less limiting. [6]
+
+14. Treat MOV protection as a coordinated safety circuit.
+    Select the MOV's continuous-voltage and surge ratings, coordinate its
+    protection, and address thermal runaway. Do not assume an ordinary upstream
+    fuse will always protect an overheating MOV. [10]
+
+15. Use the correct safety capacitors.
+    Across live–neutral, use the appropriate X-rated component; from mains to
+    protective earth, use the appropriate Y-rated component. An ordinary
+    capacitor with a high DC voltage marking is not an equivalent substitute. [11]
+
+16. Budget total leakage current.
+    Y capacitors and multiple mains filters contribute to earth leakage; assess
+    the complete assembly rather than each module independently. [6]
+
+
+4. TRANSFORMER SPECIFICATION AND WINDING CONNECTIONS
+--------------------------------------------------
+
+17. Obtain loaded and unloaded secondary voltages.
+    Also require winding-current ratings, total VA, regulation, insulation
+    details, temperature limits, and thermal-protection information—not just
+    a marketplace description. [12]
+
+18. Do not equate secondary AC current with available DC current.
+    Capacitor-input rectifiers draw charging pulses; transformer heating depends
+    on winding RMS current. [12]
+
+19. Follow the manufacturer's winding-phasing diagram.
+    Dual primaries connected in series must have the correct phasing. Do not
+    infer connections from wire colors alone. [13]
+
+20. Do not casually parallel secondary windings.
+    Confirm that parallel operation is permitted, with matching voltages and
+    correct phasing. Two separate 6.3 V windings are not automatically
+    interchangeable with one larger winding. [13]
+
+
+5. RECTIFICATION, FILTERING, AND STORED ENERGY
+--------------------------------------------
+
+21. Calculate full-wave reservoir ripple at 100 Hz—not 120 Hz.
+    The approximate capacitor-input relationship is:
+
+        DeltaV_pp ≈ I_load / (2 × f_mains × C)
+
+    Consequently, changing from 60 Hz to 50 Hz gives approximately 20% more
+    ripple at the same load and capacitance, under this approximation.
+
+22. Rate capacitors for maximum voltage, not normal operating voltage.
+    Include maximum mains voltage, transformer regulation, startup, and
+    light-load conditions. [12]
+
+23. Choose rectifiers for the actual topology.
+    Check repetitive reverse voltage, charging-current peaks, startup surge,
+    and heat—not merely average output current. [12]
+
+24. Check capacitor ripple-current ratings and temperature.
+    Adequate capacitance and voltage ratings do not guarantee acceptable
+    heating or lifetime. [12]
+
+25. Provide permanent discharge paths for hazardous capacitor banks.
+    A switch or connector must not unintentionally separate the capacitor from
+    its bleeder. Calculate discharge time and resistor dissipation, including:
+
+        P = V^2 / R
+
+    Check the resistor's voltage rating as well as its wattage. [14]
+
+26. Never assume “off” means discharged.
+    An extinguished indicator or an elapsed waiting period is not proof.
+    Verify capacitor voltage with correctly rated equipment before contact. [1]
+
+
+6. PCB, ENCLOSURE, AND THERMAL DESIGN
+-----------------------------------
+
+27. Calculate creepage and clearance rather than choosing a generic gap.
+    Requirements depend on working voltage, transient voltage, insulation
+    category, material, pollution degree, and altitude—not just “220 V.” [15]
+
+28. Check the complete physical insulation barrier.
+    Include PCB copper, component leads, connectors, mounting screws, heatsinks,
+    and enclosure surfaces. A compliant component can become unsafe through
+    incorrect mounting. [6]
+
+29. Account for humidity, contamination, and altitude.
+    Condensation and contamination affect surface insulation; operation above
+    2,000 m can require increased clearance. Do not assume one layout is suitable
+    for every location in China. [15]
+
+30. Validate temperatures inside the finished enclosure.
+    Check the transformer, rectifier, regulators, power resistors, wiring, and
+    capacitors under sustained load. An open-bench temperature test does not
+    establish enclosed operating temperatures. [16]
+
+
+7. SPECIFIC REMINDERS FOR YOUR TUBE AMPLIFIER
+-------------------------------------------
+
+31. Convert every mains-powered branch—not only the main transformer.
+    Your existing relay/control supply also needs a 220 V/50 Hz-compatible input
+    arrangement. Internal heater, relay, and logic rails retain their required
+    operating voltages; they do not all become 220 V.
+
+32. Include the added reverb tubes in the heater budget.
+    One 12AT7 plus one 12AX7 adds 0.6 A at 6.3 V for the cited JJ equivalents.
+    Budget their high-voltage circuit current separately. [17]
+
+33. Do not confuse center-tapped and bridge rectification.
+    A 290–0–290 V winding is 580 V end-to-end. A capacitor-input bridge across
+    both ends can approach 820 V, before losses—not approximately 410 V. [4]
+
+34. Check heater-to-cathode voltage limits.
+    They differ between tube types and manufacturers. A heater winding elevated
+    above chassis potential is not automatically a suitable touch-safe supply
+    for external controls. [17]
+
+35. Keep footswitch connections safely low-voltage and isolated from hazardous
+    rails.
+    Check the complete separation path, including transformer windings, relay
+    contact-to-coil insulation, PCB spacing, and connector wiring. [15]
+
+
+8. VERIFICATION AND CHINA SOURCING
+--------------------------------
+
+36. Require documentation for safety-critical parts.
+    Obtain exact manufacturer part numbers, winding diagrams, ratings, and
+    relevant approval records. A seller's “220 V compatible” claim is not enough
+    to establish 50 Hz operation or adequate insulation. [3]
+
+37. Include electrical-safety testing in the design plan.
+    Have qualified personnel assess protective-earth bonding, insulation
+    strength, leakage/touch current, thermal behavior, and applicable
+    abnormal-fault conditions. [6]
+
+38. Do not mistake a Variac for isolation.
+    A conventional variable autotransformer adjusts voltage but retains an
+    electrical connection to mains. [18]
+
+39. Never lift an oscilloscope's protective earth.
+    Use appropriately rated differential or isolated measurement equipment for
+    floating measurements; a conventional scope ground clip is
+    earth-referenced. [19]
+
+40. Use the applicable Chinese safety standard, not an obsolete schematic's
+    assumptions.
+    GB 4943.1-2022 is the current audio/video/ICT safety standard and replaced
+    GB 8898-2011. For a product intended for sale, separately establish the
+    applicable certification and EMC requirements. [20]
+
+
+SOURCE LINKS
+------------
+Source links retained from the original checklist.
+
+[1] Tektronix — Measurement safety reference
+https://download.tek.com/document/51W_10640_1.pdf
+
+[2] Ministry of Justice of the People's Republic of China — Electricity supply regulations
+https://www.moj.gov.cn/pub/sfbgw/flfggz/flfggzbmgz/202410/t20241031_508786.html
+
+[3] Hammond Power Solutions — Operating a 60 Hz transformer at 50 Hz
+https://americas.hammondpowersolutions.com/en/resources/faq/general/can-you-operate-a-60hz-transformer-at-50-hz
+
+[4] Hammond Manufacturing — Rectifier guide (PDF)
+https://www.hammfg.com/files/products/700/hammond-recitifier-guide.pdf
+
+[5] Schneider Electric — Autotransformer / isolation reference
+https://www.se.com/us/en/faqs/FA123708/
+
+[6] XP Power — Essential Guide to Power Supplies
+https://www.xppower.com/portals/0/brochures/Essential_Guide_to_Power_Supplies.pdf
+
+[7] Schneider Electric — Industrial control transformer fuse protection
+https://www.productinfo.schneider-electric.com/9070ct9901ictcatalog/9070ct9901/9070CT9901%20Industrial%20Control%20Transformers%20Catalog/en/9070CT9901%20%28bookmap%29_0000310476.xml/%24/FuseProtection-7F50E0D1
+
+[8] SAMR — GB 1002-2024
+https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=F8C9E208891B7BB5AF1B3E64933693C2
+
+[9] Littelfuse — Fuses and overcurrent protection
+https://www.littelfuse.com/products/fuses-overcurrent-protection/fuses
+
+[10] Littelfuse — Designing with thermally protected TMOV varistors
+https://www.littelfuse.com/~/media/electronics_technical/application_notes/varistors/littelfuse_designing_with_thermally_protected_tmov_varistors_in_spd_and_ac_line_application_note.pdf
+
+[11] Vishay — Safety capacitor reference
+https://www.vishay.com/doc/?45023=
+
+[12] Hammond Manufacturing — Rectifier design information
+https://www.hammfg.com/electronics/transformers/rectifier
+
+[13] Hammond Manufacturing — Transformer hookup information
+https://www.hammfg.com/electronics/transformers/hookup
+
+[14] Vishay — Resistor reference
+https://www.vishay.com/doc/?13003=
+
+[15] Texas Instruments — Insulation, creepage, and clearance reference
+https://www.ti.com/video/6146024211001
+
+[16] TDK-Lambda — Alpha 400 installation manual
+https://www.emea.lambda.tdk.com/uk/KB/Alpha-400-Installation-Manual.pdf
+
+[17] JJ Electronic — ECC81 / 12AT7 data sheet
+https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc81.pdf
+
+[18] Staco Energy — Variable transformers
+https://www.stacoenergy.com/products-solutions/products/variable-transformers-and-test-sets/variable-transformers/stacovt.html?addfilter=extras&title=Extras&value=Isolated%2C+Ammeter
+
+[19] Tektronix — ABCs of Probes primer
+https://www.tek.com/en/documents/whitepaper/abcs-probes-primer
+
+[20] SAMR — GB 4943.1-2022 standard record
+https://std.samr.gov.cn/gb/search/gbDetailed?id=Y8G8ELIiFZ0%3D&mode=p

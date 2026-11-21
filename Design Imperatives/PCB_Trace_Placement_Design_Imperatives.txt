@@ -1,0 +1,444 @@
+PCB TRACE-PLACEMENT DESIGN IMPERATIVES
+Audio, power distribution, parasitics, RFI, and tube-amplifier layout
+=================================================================
+
+CORE PRINCIPLE
+
+The most important rule: design the complete current loop, not just the
+outgoing trace. A short signal trace with a long, indirect return path can
+still produce noise and interference.
+
+Two clarifications:
+
+All traces have resistance, capacitance, and inductance. The goal is to
+control these effects, not eliminate them.
+
+Two unrelated traces running together create unwanted coupling or
+crosstalk, not an accidental differential interface. Intentional
+differential routing can be beneficial. [1]
+
+
+1. COMPONENT PLACEMENT AND BOARD ORGANIZATION
+-------------------------------------------
+
+1. Place components in signal-flow order. Arrange input, gain stages,
+   processing, and output so the amplified signal does not loop back
+   beside the sensitive input.
+
+2. Separate quiet and noisy regions. Keep low-level audio away from
+   rectifiers, power outputs, switching regulators, relay drivers, and
+   digital clocks.
+
+3. Put the input stage near its connector. Avoid carrying an unamplified,
+   high-impedance signal across the board before it reaches its first
+   amplifier or buffer. [2]
+
+4. Keep sensitive traces away from inductors and transformers on every
+   layer. Routing underneath a magnetic component on the opposite side
+   of the board does not automatically protect the signal. [3]
+
+5. Place feedback components and bypass capacitors before routing general
+   connections. Their positions determine whether the critical local
+   loops can actually be short. [4]
+
+
+2. GROUNDING AND RETURN-CURRENT PATHS
+-----------------------------------
+
+6. Prefer a continuous ground reference within each non-isolated circuit
+   domain. Separate analog and digital functions primarily through
+   placement and controlled current paths, not arbitrary cuts in the plane.
+
+7. Do not route a signal across a break in its reference plane. Slots,
+   cutouts, and fragmented pours force return current around the obstruction.
+
+8. Do not cut up ground merely to eliminate every visible "loop." A
+   continuous plane is not equivalent to an unwanted ground loop between
+   pieces of equipment.
+
+9. Provide a nearby return connection when a critical signal changes
+   layers. Where both reference planes are the same ground, a nearby
+   ground-stitching via keeps the return from taking a long detour.
+   Never use this to bridge an isolation barrier. [5]
+
+10. Do not assume return current always flows directly underneath the
+    trace. At low frequencies it spreads according to resistance; at
+    higher frequencies inductance increasingly favors a nearby return
+    path. [5]
+
+11. Prevent shared-impedance coupling. Speaker, rectifier, heater, relay,
+    and digital currents must not develop voltage drops in copper used
+    as the reference for a sensitive input. [6]
+
+12. Use star or bus grounding where appropriate, but avoid long RF return
+    "spokes." A useful low-frequency grounding arrangement can still
+    have excessive inductance at radio frequencies. [6]
+
+13. Inspect filled copper, not just ground labels. Look for narrow necks,
+    disconnected islands, and long detours. A large-looking pour can still
+    contain a poor current path. [7]
+
+
+3. AUDIO SIGNALS, CROSSTALK, AND DIFFERENTIAL ROUTING
+--------------------------------------------------
+
+14. Route high-impedance nodes first and keep them short. Examples include
+    guitar inputs, tube grids, op-amp summing nodes, and high-value
+    potentiometer wipers.
+
+15. Keep large-signal outputs away from small-signal inputs. Output-to-input
+    coupling can become unintended feedback, not merely audible channel
+    leakage.
+
+16. Avoid long parallel runs between unrelated signals. Reducing the
+    shared parallel length often helps more than making a small increase
+    in spacing. [1]
+
+17. Check broadside coupling between layers. Two traces directly overlapping
+    on adjacent layers can couple capacitively even though they look well
+    separated in a single-layer view.
+
+18. Do not treat fabrication clearance as noise clearance. A gap that
+    prevents manufacturing shorts does not necessarily provide acceptable
+    crosstalk performance. [1]
+
+19. Do not treat "three trace widths apart" as a universal guarantee.
+    Coupling also depends on parallel length, trace-to-plane distance,
+    signal characteristics, and the receiving circuit. [8]
+
+20. For intentional balanced audio, route the two legs together and
+    symmetrically. Match their loading and RF-filter impedances; unequal
+    filtering can convert common-mode interference into differential
+    noise. [9]
+
+21. Do not add serpentine length matching to ordinary analog audio without
+    a demonstrated need. Extra routing creates additional parasitics;
+    transmission-line timing becomes important when propagation delay
+    is significant relative to signal transitions. [10]
+
+
+4. AVOIDING UNWANTED CAPACITANCE AND INDUCTANCE
+--------------------------------------------
+
+22. Minimize loop area, not just conductor length. Keep outgoing and
+    returning currents close together. A straight trace with a distant
+    return can be worse than a slightly longer, tightly coupled route. [11]
+
+23. Avoid unnecessarily large copper areas on sensitive nodes. Wide traces
+    and oversized pads reduce resistance but can increase capacitive
+    loading. "Wider is better" is not a universal audio rule. [1]
+
+24. Keep feedback and summing-node connections compact. Place the relevant
+    resistors close to the amplifier pins, especially the inverting input;
+    avoid unnecessary vias and branches there. [4]
+
+25. Use local ground-plane exclusions only when justified. Some
+    capacitance-sensitive amplifier nodes benefit from a small copper
+    keepout. That is not a reason to remove the reference plane beneath
+    the entire audio path. [4]
+
+26. Do not add arbitrary shunt capacitors to "kill RF." A capacitor directly
+    on an op-amp's inverting node can destabilize it; use a filter topology
+    appropriate to that circuit. [9]
+
+27. Distinguish shielding from guarding. A grounded shield intercepts
+    electric-field interference. A precision guard ring controls surface
+    leakage by operating near the sensitive node's voltage through a
+    low-impedance connection. [12]
+
+28. Do not let trace cosmetics outrank electrical geometry. Straightforward
+    bends are sensible, but shortening critical loops and preserving
+    returns matter more than making an audio board resemble a microwave
+    layout. Apply controlled-impedance techniques where signal speed
+    actually requires them. [10]
+
+
+5. POWER DISTRIBUTION AND HIGH-CURRENT TRACES
+-------------------------------------------
+
+29. Size power traces for current, temperature rise, and voltage drop.
+    Include copper thickness, route length, and thermal conditions; avoid
+    simplistic rules such as "one millimeter per amp." [13]
+
+30. Check every bottleneck. A wide power pour can still feed through a
+    narrow pad connection, thermal-relief spoke, or undersized layer
+    transition. [14]
+
+31. Route each supply with its actual return path. Do not assume that
+    positive and negative supply rails are automatically each other's
+    return; examine the load's current paths. [15]
+
+32. Keep high-current supply paths short and low resistance. Otherwise,
+    changing load current becomes changing supply voltage and can
+    modulate the audio. [2]
+
+33. Branch sensitive and noisy loads deliberately. Do not feed a quiet
+    preamp through copper that also carries large output-stage or
+    relay-current changes. [6]
+
+34. Contain the transformer-rectifier-reservoir charging loop. Connect the
+    amplifier's supply and return at the intended reservoir/distribution
+    nodes, not partway along a rectifier-current path. [16]
+
+35. Use Kelvin sensing for low-level measurements of high-current circuits.
+    Run separate sense connections to the intended resistor or terminal
+    rather than measuring through current-carrying copper. [7]
+
+
+6. DECOUPLING-CAPACITOR PLACEMENT
+-------------------------------
+
+36. Minimize the complete bypass loop. Consider the capacitor, supply pin,
+    device current path, and return connection, not merely the distance
+    from capacitor to supply pin.
+
+37. Keep high-frequency bypass connections short and low inductance. A
+    capacitor connected through long traces cannot provide the same RF
+    bypassing as one connected locally.
+
+38. Provide appropriate local storage as well as high-frequency bypassing.
+    A distant bulk capacitor does not replace local decoupling at the
+    active circuitry. [15]
+
+39. Decouple each required supply pin or rail according to the device
+    documentation. Do not assume one capacitor anywhere on a shared
+    supply serves every device equally well. [15]
+
+40. Check capacitor impedance over frequency, not just capacitance. Above
+    self-resonance, a capacitor behaves inductively. Simply adding a larger
+    capacitor does not guarantee better microwave-frequency suppression. [17]
+
+
+7. SWITCHING REGULATORS, RELAYS, AND DIGITAL CONTROL
+--------------------------------------------------
+
+41. Design for the fastest edges, not just the repetition frequency. A
+    slow control signal can still have fast transitions containing
+    substantial high-frequency energy. [10]
+
+42. Identify and minimize the switching regulator's "hot loop." This is
+    the loop whose current changes abruptly between switching states;
+    it is not necessarily the entire power path through the inductor. [3]
+
+43. Keep switch-node copper compact while meeting current and thermal
+    requirements. Do not extend it into a large pour beneath audio,
+    feedback, or sensing circuitry. [14]
+
+44. Keep relay suppression local. Place the flyback diode or specified
+    clamp close to the coil circuit, and keep the associated
+    switching-current path out of sensitive audio references. [18]
+
+45. Treat ferrite beads as designed filters, not magic fixes. Check
+    impedance at the interference frequency and actual DC current;
+    bead-and-capacitor combinations can create unwanted resonance. [19]
+
+46. Treat class-D outputs as switching-power nets. Follow the amplifier's
+    recommended output-filter and return layout rather than routing them
+    like ordinary line-level audio. [20]
+
+
+8. RFI FILTERING, CABLE ENTRY, AND SHIELDING
+-----------------------------------------
+
+47. Stop RF before it reaches a nonlinear input stage. An amplifier need
+    not amplify a radio carrier normally to rectify it into offsets or
+    unwanted low-frequency interference. Filtering afterward cannot undo
+    the detection. [9]
+
+48. Put cable-entry filtering at the entry point. Do not let an unfiltered
+    external conductor travel through the quiet region before reaching
+    its filter. Use a short, appropriate RF return connection. [21]
+
+49. Keep the dirty and clean sides of a filter physically separated.
+    Nearby traces or overlapping copper can capacitively bypass the
+    filter you just added. [12]
+
+50. Use short, broad shield-to-chassis connections. Long pigtails add
+    inductance. Enclosure seams, openings, and cable penetrations are
+    part of the shielding system, not separate mechanical details. [21]
+
+51. For balanced connections, terminate the cable shield to chassis at the
+    connector entry. Do not route shield current through the quiet
+    audio-reference copper: the classic "pin 1" problem. [22]
+
+52. Do not apply "ground every shield at one end" universally. Balanced
+    shields and unbalanced signal returns have different jobs; an
+    unbalanced cable's shield commonly carries the signal return itself. [22]
+
+53. Do not expect a thin copper pour to solve 50/60 Hz magnetic hum. First
+    reduce loop area, increase distance, and improve transformer/wiring
+    orientation. Low-frequency magnetic shielding may require
+    high-permeability material. [11]
+
+
+9. ADDITIONAL PRIORITIES FOR YOUR TUBE AMPLIFIER
+----------------------------------------------
+
+54. Put grid-stopper resistors at the tube socket's grid connection. Keep
+    the connection between stopper and grid extremely short; a long trace
+    after the stopper remains exposed to interference. [23]
+
+55. Keep plate/anode wiring away from grids and early-stage inputs. Apply
+    this across layers and between the two sections of a dual-triode
+    socket. Large voltage swings make unintended coupling particularly
+    undesirable. [16]
+
+56. Route heater supply and return together. Keep the pair away from input
+    and reverb-recovery circuitry; use tightly paired routing on the PCB
+    and twisted pairs for appropriate off-board wiring. [16]
+
+57. Associate each stage's return with its supply-decoupling node. Keep
+    local stage currents separate from the currents replenishing the
+    supply capacitors. [16]
+
+58. Treat the spring-reverb return as a sensitive input and the send as a
+    potential aggressor. Keep their routes separated rather than bundling
+    them together through the amplifier. This follows the same
+    low-level/high-level separation rule as the main input and output. [2]
+
+59. Keep footswitch-control wiring out of the sensitive audio region.
+    Place switching circuitry to keep audio connections short while
+    containing coil and driver currents locally. [2]
+
+
+10. MAINS AND HIGH-VOLTAGE LAYOUT
+-------------------------------
+
+60. Treat insulation boundaries as mandatory exceptions to
+    continuous-ground advice. Never extend a ground plane, guard trace,
+    or stitching via across a required isolation barrier to improve
+    EMC. [24]
+
+61. Set spacing from actual insulation requirements, not nominal voltage
+    alone. Consider working voltage, transients, insulation grade,
+    material group, pollution conditions, and altitude.
+
+62. Check clearance and creepage separately. Clearance is the shortest
+    air distance; creepage is the shortest path along an insulating
+    surface.
+
+63. Review the assembled geometry. Pads, leads, mounting hardware, board
+    edges, slots, and adjacent components can determine the shortest
+    insulation path, not just trace-to-trace spacing.
+
+64. Do not assume a slot or solder mask automatically makes a layout safe.
+    Slots must meet the relevant dimensional rules; insulation credit
+    requires the applicable construction and qualification. [25]
+
+
+11. TURN THE GUIDELINES INTO KICAD CHECKS
+---------------------------------------
+
+65. Create meaningful net classes. Suggested categories include AUDIO_HIZ,
+    AUDIO_LOWZ, POWER_HIGH_CURRENT, SWITCHING, HEATER, B_PLUS, and MAINS.
+    These are organizational categories, not instructions to split all
+    their grounds.
+
+66. Separate manufacturing rules from electrical requirements. Use
+    appropriate widths and clearances, plus custom rules and keepouts
+    where needed. KiCad 10 supports creepage constraints as well as
+    ordinary clearance checks.
+
+67. Refill zones and inspect all layers before sign-off. Check minimum
+    connection widths, disconnected copper, sensitive routes beneath
+    noisy components, and clearances around real footprints. [26]
+
+68. Do not equate a clean DRC report with a quiet amplifier. DRC checks
+    configured geometric and connectivity rules; prototype testing is
+    still needed to reveal coupling, ringing, instability, and noise. [26]
+
+
+PRIORITY ORDER
+--------------
+
+Safe insulation boundaries
+    -> Deliberate return paths
+    -> Compact high-current loops
+    -> Short sensitive nodes
+    -> Separation of noisy and quiet circuitry
+    -> Effective filtering and shielding
+
+
+REFERENCE LINKS
+---------------
+
+Reference links retained from the original checklist. Bracketed numbers
+in the text identify the corresponding links below.
+
+[1] Texas Instruments - Op-amp PCB layout: trace parasitic effects
+https://www.ti.com/content/dam/videos/external-videos/en-us/7/3816841626001/6218636308001.mp4/subassets/op_amp_pcb_layout_trace_parasitic_effects.pdf
+
+[2] Analog Devices - Minimize Noise in Audio Channels with Smart PCB Layout
+https://www.analog.com/en/resources/technical-articles/minimize-noise-in-audio-channels-with-smart-pcb-layout.html
+
+[3] Analog Devices - Analog Dialogue, RAQ Issue 164
+https://www.analog.com/en/resources/analog-dialogue/raqs/raq-issue-164.html
+
+[4] Texas Instruments - Amplifier PCB layout guidance, SSZT273
+https://www.ti.com/document-viewer/lit/html/SSZT273/GUID-35325469-4DAE-49C6-84D9-2A4C55512BEF
+
+[5] Texas Instruments - Return-current paths, training video
+https://www.ti.com/video/6307562268112
+
+[6] Analog Devices - StudentZone, March 2017
+https://www.analog.com/en/resources/analog-dialogue/studentzone/studentzone-march-2017.html
+
+[7] Texas Instruments - PCB layout guidance, SSZT341
+https://www.ti.com/document-viewer/lit/html/SSZT341/GUID-0660063B-16C2-4085-BB29-A1CD1B5FB09E
+
+[8] Texas Instruments - Application report SCAA082A
+https://www.ti.com/lit/an/scaa082a/scaa082a.pdf
+
+[9] Analog Devices - Tutorial MT-096
+https://www.analog.com/media/en/training-seminars/tutorials/MT-096.pdf
+
+[10] Analog Devices - Tutorial MT-094
+https://www.analog.com/media/en/training-seminars/tutorials/MT-094.pdf
+
+[11] Analog Devices - Tutorial MT-095
+https://www.analog.com/media/en/training-seminars/tutorials/MT-095.pdf
+
+[12] Texas Instruments - PCB layout training video
+https://www.ti.com/video/6244745390001
+
+[13] Texas Instruments E2E - TPS7A85 copper thickness discussion
+https://e2e.ti.com/support/power-management-group/power-management/f/power-management-forum/704594/tps7a85-please-tell-the-copper-thickness-of-evm
+
+[14] Analog Devices - Application note AN-1119
+https://www.analog.com/en/resources/app-notes/an-1119.html
+
+[15] Analog Devices - Tutorial MT-101
+https://www.analog.com/media/en/training-seminars/tutorials/MT-101.pdf
+
+[16] Valve Wizard - Grounding
+https://www.valvewizard.co.uk/Grounding.pdf
+
+[17] Analog Devices - PCB layout guidelines for RF and mixed-signal circuits
+https://www.analog.com/en/resources/technical-articles/pcbs-layout-guidelines-for-rf--mixedsignal.html
+
+[18] Texas Instruments E2E - LM358 relay chatter discussion
+https://e2e.ti.com/support/amplifiers-group/amplifiers/f/amplifiers-forum/1029708/lm358-relay-chatter-issue
+
+[19] Analog Devices - Ferrite Beads Demystified
+https://www.analog.com/en/resources/analog-dialogue/articles/ferrite-beads-demystified.html
+
+[20] Texas Instruments - Home-entertainment audio PCB layout and EMC
+https://e2e.ti.com/cfs-file.ashx/__key/telligent-evolution-components-attachments/00-06-00-00-00-05-21-80/PCBlyt_2D00_home_2D00_ent_2D00_audio_2B00_EMC_2B00_T_2D00_100818.pdf
+
+[21] Texas Instruments - Application report SDYA019
+https://www.ti.com/lit/an/sdya019/sdya019.pdf
+
+[22] Grounding and Shielding of Audio Devices - hosted by Texas Instruments
+https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/6/Grounding_5F0026005F00_Shielding_5F00_of_5F00_Audio_5F00_Devices.pdf
+
+[23] Valve Wizard - Grid Stoppers
+https://www.valvewizard.co.uk/gridstopper.html
+
+[24] Texas Instruments - Isolation training video
+https://www.ti.com/video/6173428079001
+
+[25] Texas Instruments - Power supply design seminar, SLUP421
+https://www.ti.com/lit/ml/slup421/slup421.pdf
+
+[26] KiCad 10 - PCB Editor documentation
+https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html

@@ -1,0 +1,20 @@
+{
+  "status": "superseded - reference target failed",
+  "method": "Actual first ngspice 45.2 bias run; 50VAC ideal tap, 1N4007 reference model, R40=10k, R39=15k, R38=22k, RV10=0..50k, R503=15k",
+  "nominal_220v_results": [
+    {
+      "pot_ohm": 1,
+      "bias_mean_v": -10.59504545110691
+    },
+    {
+      "pot_ohm": 25000,
+      "bias_mean_v": -21.794397800029824
+    },
+    {
+      "pot_ohm": 50000,
+      "bias_mean_v": -28.96671269238929
+    }
+  ],
+  "finding": "Insufficient negative-bias range for the intended conservative EL34 draft. Circuit changed to R40=1k, R39=4.7k, R503=33k and rerun.",
+  "limitations": "Ideal transformer/reference diode, not actual part qualification. First-run values retained from tool output; first raw waveforms were overwritten by the corrected run."
+}

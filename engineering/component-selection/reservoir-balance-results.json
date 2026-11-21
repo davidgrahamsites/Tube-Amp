@@ -1,0 +1,44 @@
+{
+  "scope": "20C five-minute leakage bounds, 5% balancing resistors, assumed510.31V supply. Not hot leakage, startup, aged-cap fault or actual PT validation.",
+  "initial_capacitance_only_max_V": 306.186,
+  "results": [
+    {
+      "mpn": "EHS2GM221M45OT",
+      "total_assumed_V": 510.31,
+      "leakage_bound_A": 0.0017850000000000001,
+      "max_cap_V": 463.771875,
+      "rating_margin_V": -63.77187500000002,
+      "max_balancing_resistor_W": 0.9334346777811005,
+      "passes_static_20C_5min_screen": false,
+      "worst_corner": {
+        "r1": 209000.0,
+        "r2": 231000.0,
+        "i1": 0.0017850000000000001,
+        "i2": 0,
+        "v1": 46.53812500000001,
+        "v2": 463.771875,
+        "p1": 0.010362665447443185,
+        "p2": 0.9311010910866477
+      }
+    },
+    {
+      "mpn": "LGU2G221MELB",
+      "total_assumed_V": 510.31,
+      "leakage_bound_A": 0.0008899438184514795,
+      "max_cap_V": 365.56183547958864,
+      "rating_margin_V": 34.43816452041136,
+      "max_balancing_resistor_W": 0.5799583615280878,
+      "passes_static_20C_5min_screen": true,
+      "worst_corner": {
+        "r1": 231000.0,
+        "r2": 209000.0,
+        "i1": 0,
+        "i2": 0.0008899438184514795,
+        "v1": 365.56183547958864,
+        "v2": 144.74816452041136,
+        "p1": 0.5785084656242676,
+        "p2": 0.10024895278482332
+      }
+    }
+  ]
+}

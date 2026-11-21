@@ -1,0 +1,29 @@
+{
+  "purpose": "Solver/interface qualification only; not an amplifier simulation",
+  "python": "/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3",
+  "architecture": "arm64",
+  "library": "/Applications/KiCad/KiCad.app/Contents/Frameworks/libngspice.0.dylib",
+  "checks": {
+    "dc": {
+      "actual_v": 2.5,
+      "expected_v": 2.5,
+      "absolute_tolerance_v": 1e-06
+    },
+    "rc_one_tau": {
+      "time_s": 0.0010032120579622765,
+      "actual_v": 3.166514988368747,
+      "expected_v": 3.166501565913611,
+      "absolute_tolerance_v": 0.01,
+      "samples": 529
+    }
+  },
+  "input_sha256": {
+    "dc-divider.cir": "055affaca48537c3603463e3d2b22c596810133743e56e1776b83d84b5c2162d",
+    "rc-step.cir": "5f9b22d35a9727d5a6e02cdab5d295ff4dc344ee986bd2f7c4f2648d9ddae046"
+  },
+  "passed": true,
+  "engine_version_output": [
+    "stdout ** ngspice-45.2 shared library",
+    "stdout ** ngspice-45.2 : Circuit level simulation program"
+  ]
+}

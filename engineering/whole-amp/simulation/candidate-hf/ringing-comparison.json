@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "variant": "reference-step",
+      "max_step": "100n",
+      "complete": true,
+      "end_s": 0.005,
+      "points": 51158,
+      "MIX_OUT_peak_V": 19.85265574147452,
+      "FX_RETURN_peak_V": 20.135303443692937,
+      "rv_dryin_peak_V": 1.6513521880451065,
+      "dominant_hf_derivative_peak_Hz": 412000.0
+    },
+    {
+      "variant": "half-step",
+      "max_step": "50n",
+      "complete": true,
+      "end_s": 0.005,
+      "points": 100928,
+      "MIX_OUT_peak_V": 23.32723976280376,
+      "FX_RETURN_peak_V": 22.113153727907907,
+      "rv_dryin_peak_V": 1.7325319028256265,
+      "dominant_hf_derivative_peak_Hz": 416000.0
+    },
+    {
+      "variant": "feedback-zero",
+      "max_step": "100n",
+      "complete": true,
+      "end_s": 0.005,
+      "points": 51374,
+      "MIX_OUT_peak_V": 20.705666966023543,
+      "FX_RETURN_peak_V": 20.70122137929249,
+      "rv_dryin_peak_V": 1.6665834252232916,
+      "dominant_hf_derivative_peak_Hz": 412000.0
+    }
+  ],
+  "half_step_mix_peak_relative_change": 0.1750186003613827,
+  "interpretation": "Material timestep sensitivity: candidate transient is not numerically qualified. Removing global feedback does not remove HF ringing; no physical circuit fix inferred."
+}

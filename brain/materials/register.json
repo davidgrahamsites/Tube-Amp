@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-20",
+  "materials": [
+    {
+      "id": "MAT-001",
+      "name": "Original source and imported starter",
+      "role": "source",
+      "status": "preserved",
+      "owner": "Source intake",
+      "paths": [
+        "Renegade Tube Amp.pptx",
+        "Renegade_KiCad_Library_Starter.zip",
+        "Renegade_Library_Starter",
+        "sources/original-ppt",
+        "sources"
+      ],
+      "notes": "Original files remain evidence; startup/library checks are scoped."
+    },
+    {
+      "id": "MAT-002",
+      "name": "Current requirements and build sequence",
+      "role": "catalog",
+      "status": "current",
+      "owner": "Integration",
+      "paths": [
+        "Renegade_Codex_Handoff.md",
+        "PROJECT_STATUS.md",
+        "plans/renegade-working-prototype",
+        "Design Imperatives/review",
+        "plans",
+        "Design Imperatives"
+      ],
+      "notes": "One functioning prototype first. Apply current explicit corrections over older narrative."
+    },
+    {
+      "id": "MAT-003",
+      "name": "Current received-tank schematic",
+      "role": "product",
+      "status": "engineering draft",
+      "owner": "Reverb600 owner",
+      "paths": [
+        "engineering/whole-amp/reverb-600"
+      ],
+      "notes": "600R-1 current schematic and measured-DC-resistance simulations; pcb-measured-r contains a separate incomplete four-board integration draft."
+    },
+    {
+      "id": "MAT-004",
+      "name": "Exact selected components and purchase candidates",
+      "role": "product",
+      "status": "partial selection",
+      "owner": "Component selection",
+      "paths": [
+        "engineering/component-selection/coverage.json",
+        "engineering/component-selection/candidate-register.json",
+        "engineering/component-selection/selected-engineering-bom.csv",
+        "engineering/component-selection/selected-engineering-summary.json",
+        "engineering/component-selection/footprints",
+        "engineering/component-selection"
+      ],
+      "notes": "Coverage is canonical by reference; selected BOM is generated. Candidate/selected/ordered/received are distinct."
+    },
+    {
+      "id": "MAT-005",
+      "name": "Received cabinet and spring tank",
+      "role": "evidence",
+      "status": "received; fit unqualified",
+      "owner": "Mechanical owner",
+      "paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/tank-specifications.md",
+        "engineering/whole-amp/mechanical/review/measurement-guide.md",
+        "engineering/whole-amp/mechanical/review/received-vs-drawing.md",
+        "engineering/whole-amp/mechanical/review/received-tank-photo-intake-2026-11-20.md",
+        "engineering/whole-amp/mechanical/evidence/received-tank-2026-11-20"
+      ],
+      "notes": "Yellow cabinet and tank delivered. Do not reopen stock/order questions. Dimensions and actual coil characterization remain open."
+    },
+    {
+      "id": "MAT-006",
+      "name": "Speaker, tubes, sockets, magnetics and mounting hardware",
+      "role": "product",
+      "status": "selection/fit incomplete",
+      "owner": "Integration + mechanical",
+      "paths": [
+        "engineering/component-selection/task-card.md",
+        "engineering/component-selection/harness-hardware-candidates.json",
+        "engineering/whole-amp/mechanical/review/repack-work-order.md",
+        "sources/original-ppt/bom-as-printed.csv"
+      ],
+      "notes": "Original part identity is not a current exact-build selection. Full populated fit remains unresolved."
+    },
+    {
+      "id": "MAT-007",
+      "name": "Knobs, pots and expression controls",
+      "role": "product",
+      "status": "partial selection; expression circuit pending",
+      "owner": "Controls",
+      "paths": [
+        "brain/records/CMP-013-pointer-knobs.md",
+        "engineering/whole-amp/expression-control/requirements.md"
+      ],
+      "notes": "Accepted styling differs from final shaft fit; pedal feature remains required but unimplemented."
+    },
+    {
+      "id": "MAT-008",
+      "name": "Whole-amp historical boards and integrated draft",
+      "role": "product",
+      "status": "historical v0.5; preserve native edits",
+      "owner": "Whole-amp owner",
+      "paths": [
+        "engineering/whole-amp/pcb",
+        "engineering/whole-amp/integrated",
+        "engineering/whole-amp/board-plan.json",
+        "engineering/whole-amp/NATIVE_EDIT_GUARD"
+      ],
+      "notes": "Earlier DRC/ERC results do not establish600R-1 board parity or cabinet fit."
+    },
+    {
+      "id": "MAT-009",
+      "name": "Whole-amp simulation evidence",
+      "role": "evidence",
+      "status": "scoped results and unresolved numerical issues",
+      "owner": "Simulation owner",
+      "paths": [
+        "engineering/whole-amp/simulation",
+        "engineering/whole-amp/tools",
+        "simulation"
+      ],
+      "notes": "Real-transformer HF behavior not qualified; ideal-transformer reference is not hardware proof."
+    },
+    {
+      "id": "MAT-010",
+      "name": "Earlier schematic/reverb revisions",
+      "role": "product",
+      "status": "historical preserved snapshots",
+      "owner": "Electrical owner",
+      "paths": [
+        "engineering/updated-schematic",
+        "engineering/solid-state-reverb"
+      ],
+      "notes": "Tube reverb is superseded. Historical scripts and outputs retain original paths; do not rerun guarded generators over native edits."
+    },
+    {
+      "id": "MAT-011",
+      "name": "Supplier/source correspondence and evidence",
+      "role": "evidence",
+      "status": "dated observations",
+      "owner": "Sourcing owner",
+      "paths": [
+        "engineering/cabinet-search",
+        "engineering/component-selection/evidence",
+        "engineering/whole-amp/evidence",
+        "engineering/whole-amp/mechanical/evidence"
+      ],
+      "notes": "Preserve quote/login/message dates. Sent inquiries, drafts and received messages have different status."
+    },
+    {
+      "id": "MAT-012",
+      "name": "Decisions, rules and feedback",
+      "role": "catalog",
+      "status": "current with retained history",
+      "owner": "Active Renegade agent",
+      "paths": [
+        "brain/records",
+        "brain/rules",
+        "brain/feedback/events.json",
+        "brain/sources.md",
+        "CHATGPT_CONVERSATION.md",
+        "brain"
+      ],
+      "notes": "Ledger links to authoritative records; it does not replace them."
+    },
+    {
+      "id": "MAT-013",
+      "name": "Later production/sales plan",
+      "role": "product",
+      "status": "deferred reference",
+      "owner": "Planning owner",
+      "paths": [
+        "plans/renegade-five-unit-build"
+      ],
+      "notes": "Five-unit production is not the first working-prototype milestone."
+    },
+    {
+      "id": "MAT-014",
+      "name": "Supporting tube matcher",
+      "role": "product",
+      "status": "separate proposed instrument",
+      "owner": "Tube matcher owner",
+      "paths": [
+        "engineering/tube-matcher",
+        "brain/records/DEC-006-tube-matcher.md"
+      ],
+      "notes": "EL34/12AX7 instrument proposal; not part of the amp fabrication package."
+    },
+    {
+      "id": "MAT-015",
+      "name": "Project ICM factories and catalogs",
+      "role": "factory",
+      "status": "active",
+      "owner": "Memory owner",
+      "paths": [
+        "brain/tools",
+        "brain/_templates",
+        "brain/materials/register.json",
+        "brain/catalog/CONTEXT.md"
+      ],
+      "notes": "Stable scripts/templates are separated from editable registers and generated catalogs."
+    },
+    {
+      "id": "MAT-016",
+      "name": "Whole-amp integration and mechanical interfaces",
+      "role": "product",
+      "status": "engineering work in progress",
+      "owner": "Whole-amp integration",
+      "paths": [
+        "engineering/whole-amp"
+      ],
+      "notes": "Parent owner for integration files; more-specific routes own circuit revisions, simulations, boards, received hardware and evidence."
+    },
+    {
+      "id": "MAT-017",
+      "name": "Current selected-part PCB reconciliation",
+      "role": "product",
+      "status": "engineering draft; no fabrication release",
+      "owner": "PCB integration",
+      "paths": [
+        "engineering/whole-amp/pcb-measured-r"
+      ],
+      "notes": "Four boards preserve historical originals. Reverb routed with zero DRC violations/unconnected items; Main, Power and Control need routing. Cabinet fit and expression control remain open."
+    }
+  ]
+}

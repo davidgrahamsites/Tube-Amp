@@ -1,0 +1,927 @@
+{
+  "schema_version": 1,
+  "scope": "Available local project plus visible conversation. Not a complete verbatim external chat archive. Original event dates remain null unless known. Existing dated decision records retain their original evidence.",
+  "events": [
+    {
+      "id": "FB-001",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "requirement",
+      "quote": "build the tube amp as shown in the original schematic",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Preserve original amplifier architecture; source establishes four12AX7 and twoEL34. Added tube reverb was superseded.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-007-original-amp-solid-state-reverb.md",
+        "sources/original-ppt/inspection.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-002",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "requirement",
+      "quote": "add a non-tube driven spring reverb element",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Use solid-state drive/recovery and a real spring tank.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-007-original-amp-solid-state-reverb.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-003",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "requirement",
+      "quote": "add wet to dry please.",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Faceplate REVERB adds wet; it is not a crossfade that removes dry.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-007-original-amp-solid-state-reverb.md",
+        "engineering/whole-amp/expression-control/requirements.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-004",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "requirement",
+      "quote": "build the PCB for the whole amp, not just the reverb",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Full amplifier board coverage; prior reverb-only scope is insufficient.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-007-original-amp-solid-state-reverb.md",
+        "engineering/whole-amp/CONTEXT.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-005",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "requirement",
+      "quote": "Resolve the remaining parts and fit issues, run the simulations",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Build-ready includes exact parts, populated fit and relevant simulations; checks must state limits.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "brain/records/DEC-005-220v-selected-component-simulation.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-006",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "approval",
+      "quote": "Yes, send the inquiry",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Authorized specified Mable inquiry only; no order or design upload.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-007-original-amp-solid-state-reverb.md",
+        "engineering/whole-amp/evidence/supplier-contact-log.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-007",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "cancellation",
+      "quote": "that was a mistake, ignore it.",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Withdraw the unrelated green-button upgrade request.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-007-original-amp-solid-state-reverb.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-008",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "correction",
+      "quote": "How could you build a PCB without selecting parts?",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Exact parts and dimensions precede final footprints/layout. Existing boards are drafts.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-007-original-amp-solid-state-reverb.md",
+        "engineering/component-selection/task-card.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-009",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "requirement",
+      "quote": "good audio quality and durabilty, and low price for low unit order",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Source every unique purchase item domestically inChina at low quantities; retain quality/rating and dated price evidence.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/component-selection/task-card.md",
+        "brain/records/CMP-021-domestic-component-sourcing.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-010",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "preference",
+      "quote": "knobs like these are a cool start",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Black pointer/chicken-head knob with white index accepted as styling direction; match exact pot shaft/bore.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/CMP-013-pointer-knobs.md",
+        "engineering/component-selection/task-card.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-011",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "requirement",
+      "quote": "match the pots to the knobs",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Select compatible shaft, bore, bushing, set screw and panel dimensions before purchase.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/component-selection/task-card.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-012",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "historical-action",
+      "quote": "reset it's account and settings",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Mail reset was a separate authorized support task, subsequently reported complete; not an ongoing reset instruction.",
+      "disposition": "historical",
+      "canonical_paths": [
+        "brain/rules/feedback.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-013",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "superseded-preference",
+      "quote": "don't open up the mail app.",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Historical restriction was later changed to warned and confirmed Mail use.",
+      "disposition": "superseded",
+      "canonical_paths": [
+        "brain/rules/feedback.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-014",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "interaction-rule",
+      "quote": "warn me first with a chirping sound and have me confirm before doing it.",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Before native Mail control, chirp and obtain immediate confirmation; avoid taking focus while user types.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/rules/feedback.md",
+        "brain/records/CMP-021-domestic-component-sourcing.md"
+      ],
+      "supersedes": [
+        "FB-013"
+      ],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-015",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "requirement",
+      "quote": "we need to design parts around it, so we need the internal dimensions.",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Actual cabinet geometry constrains the internal parts and board layout.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-016",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "correction",
+      "quote": "I don't want black!!!! I want the yellow tweed",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Yellow tweed cabinet is selected; black alternative rejected.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-007-original-amp-solid-state-reverb.md",
+        "brain/records/CMP-001-mable-5e3-shell.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-017",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "withdrawn-preference",
+      "quote": "actually, red tweed would be the best but nevermind",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Red was a withdrawn preference, not authorization to replace the yellow cabinet.",
+      "disposition": "historical",
+      "canonical_paths": [
+        "brain/records/CMP-001-mable-5e3-shell.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-018",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "procurement-preference",
+      "quote": "pay with wechat or alipay from within china and shipped to shanghai",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Mainland payment inRMB viaWeChatPay/Alipay; destinationShanghai; no new purchasing authority.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "engineering/cabinet-search/2026-11-12.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-019",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "supplier-relayed-by-user",
+      "kind": "supplier-feedback",
+      "quote": "tank  RMB100, 5E3 Cabinet RMB726,Shipping is RMB100,Total is RMB926",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Historical supplier quote as relayed by user; tank/cabinet later arrived. Preserve dated quote, do not treat as current order.",
+      "disposition": "historical",
+      "canonical_paths": [
+        "engineering/cabinet-search/2026-11-12.md",
+        "engineering/whole-amp/mechanical/fit-register.json"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-020",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "requirement",
+      "quote": "adjust the reverb level with a rocker pedal (a potentiometer in a pedal)",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Accepted pedal behavior: heel dry, toe faceplate maximum, unplugged normal knob; protected low-voltage control with audio inside amp; separate on/off footswitch.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/expression-control/requirements.md",
+        "brain/records/DEC-007-original-amp-solid-state-reverb.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-021",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "interaction-rule",
+      "quote": "always talk in aircraft mechanic english",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Use clear shop language, named parts, specific steps and units. Explain technical terms.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/rules/feedback.md",
+        "Renegade_Codex_Handoff.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-022",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "authorization",
+      "quote": "try to run multiple part picks at the same time.",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Parallel independent part picking is authorized; use separate outputs and one canonical integration owner.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/component-selection/task-card.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-023",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "evidence",
+      "quote": "did you get all three?",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Three cabinet drawings supplied: top, side and front. Treat as manufacturer evidence with documented conflicts, not measurements of delivered hardware.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/fit-review.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-024",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "correction",
+      "quote": "the cabinet is already here. What we build needs to fit into that cabinet",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Delivered cabinet is fixed. Redesign internal parts/boards rather than proposing another cabinet.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "brain/records/CMP-001-mable-5e3-shell.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-025",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "evidence",
+      "quote": "Yes, cabinet and tank are here",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Both hardware items are on hand; no remaining arrival question.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-026",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "measurement-request",
+      "quote": "what kind of ruler should i use? the soft kind?",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Explain a steel tape, straight measurement, repeat readings and millimetres; no giant calipers required.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/measurement-guide.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-027",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "supplier-relayed-by-user",
+      "kind": "supplier-feedback",
+      "quote": "3 spring,  input IMP 600ohm,  Output IMP  2250ohm, MEDIUM DECAY , input insulated  Output grounded ,no lock , Mount  horizontal Open side Down",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Use seller-confirmed600/2250 interface; frequency,DC resistance,current limit and actual body dimensions remain unmeasured.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/tank-specifications.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-028",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "engineer",
+      "kind": "engineering-change",
+      "quote": "Updated the full amplifier schematic for your 600 Ω / 2,250 Ω tank.",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Assistant implemented600R-1 attenuated send/passive dry, with fixed insertion loss and scoped checks. This is not user approval of a fabrication release.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/VAL-013-received-tank-revision.md",
+        "engineering/whole-amp/reverb-600/review/review.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-029",
+      "recorded_on": "2026-11-20",
+      "occurred_on": null,
+      "authority": "user",
+      "kind": "reference-material",
+      "quote": "A tube-driven spring reverb uses a vacuum tube",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "User supplied technical comparison/links. Treat as reference, not a request to switch back to tube-driven reverb.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/reverb-600/review/review.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-030",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "requirement",
+      "quote": "backfill this whole project including materials and decisions into ICM architecture",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Organize all available project materials and decisions inICM; retain ownership, sources, checks and history.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-008-continuous-project-memory.md",
+        "brain/rules/feedback.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-031",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "requirement",
+      "quote": "continue collecting feedback as it occurs and log the decisions that are made",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Active project sessions must capture meaningful new feedback/decisions promptly and maintain handoffs. No background surveillance implied.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/rules/feedback.md"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-032",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "clarification-request",
+      "quote": "please give very clear instructions for each measurement",
+      "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
+      "interpretation": "Provide separate setup, start/end points, alignment and reporting fields for cabinet A/B/C. Measurements themselves have not been supplied.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/measurement-guide.md",
+        "engineering/whole-amp/mechanical/fit-register.json"
+      ],
+      "supersedes": [],
+      "next_action": "Follow linked canonical record; incorporation does not mean engineering implementation complete."
+    },
+    {
+      "id": "FB-033",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user-measurement",
+      "kind": "measurement",
+      "quote": "the first measurement A is 3 mm short of 47cm (that's the front face). the back is the same",
+      "source": "Current conversation: first A measurement response after measurement card.",
+      "interpretation": "A-front and A-rear are467mm, converted from470-3. Recorded as requested inside clear widths; height, instrument and uncertainty not independently confirmed. Depth and speaker holes remain unmeasured.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json"
+      ],
+      "supersedes": [],
+      "next_action": "Collect B depth and C opposite-hole centres; retain unknowns until supplied."
+    },
+    {
+      "id": "FB-034",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user-measurement",
+      "kind": "measurement",
+      "quote": "measurement b: 16cm",
+      "source": "Current conversation: B reply after speaker-board-to-rear-edge instructions.",
+      "interpretation": "B160mm, interpreted as instructed rear-edge depth. Exact endpoint and obstruction allowance remain unconfirmed; no whole-assembly fit claim.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json"
+      ],
+      "supersedes": [],
+      "next_action": "Collect C1/C2 opposite speaker-hole centres."
+    },
+    {
+      "id": "FB-035",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "verification-request",
+      "quote": "when we're done, let's check how this measures up to the engineering specification from the lady",
+      "source": "Current conversation after A and B measurement reports.",
+      "interpretation": "After measurement collection, compare delivered cabinet against the seller's supplied top/side/front drawings using matching datums. Classify matches, differences and unclear/unprovided dimensions.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/received-vs-drawing.md",
+        "engineering/whole-amp/mechanical/fit-register.json"
+      ],
+      "supersedes": [],
+      "next_action": "A/B/C comparison completed in linked review. Address actual dimensional discrepancies in component/chassis selection; no assembly release."
+    },
+    {
+      "id": "FB-036",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user-measurement",
+      "kind": "measurement",
+      "quote": "Measurement C1:29.4cm         Measurement C2: 29.4cm",
+      "source": "Current conversation after opposite-hole centre-to-centre instructions.",
+      "interpretation": "Both opposite speaker mounting-hole spacings are294mm, agreeing with one another and18mm smaller than the312mm mounting-circle dimension on supplied drawing. Use actual reported294mm for selection; do not infer complete speaker fit.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/received-vs-drawing.md"
+      ],
+      "supersedes": [],
+      "next_action": "Select speaker against actual294mm pattern, cutout, hardware and depth; retain drawing discrepancy."
+    },
+    {
+      "id": "FB-037",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user-measurement",
+      "kind": "measurement",
+      "quote": "when I measure hole to hole, top left to right right is 21cm",
+      "source": "Current conversation following diagonal/bolt-circle explanation.",
+      "interpretation": "Assume top-left to top-right adjacent centres:210mm. Square prediction is296.985mm diagonal, versus reported294mm. Could reflect reading precision or non-square pattern; do not claim exact-square fit.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/received-vs-drawing.md"
+      ],
+      "supersedes": [],
+      "next_action": "If needed for final speaker fit, recheck centres to nearest millimetre and obtain vertical adjacent spacing; retain reported values."
+    },
+    {
+      "id": "FB-038",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user-measurement",
+      "kind": "measurement",
+      "quote": "bottom left to bottom right is also 21cm",
+      "source": "Current conversation: adjacent lower speaker mounting-hole pair.",
+      "interpretation": "Bottom adjacent centres210mm, agreeing with interpreted top adjacent210mm. Preserve both and294mm diagonals; vertical spacing not yet reported.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/received-vs-drawing.md"
+      ],
+      "supersedes": [],
+      "next_action": "Measure left and right vertical adjacent centres to distinguish near-rectangular geometry from reading/rounding variation."
+    },
+    {
+      "id": "FB-039",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user-measurement",
+      "kind": "measurement-and-method-feedback",
+      "quote": "top right to bottom right also 21cm. Don't you think it's a little hard to measure a tangeant instead of a straight line?",
+      "source": "Current conversation: right vertical measurement and feedback on measurement difficulty.",
+      "interpretation": "Right vertical centres210mm. Clarify that all requested spans are straight centre-to-centre chords/diagonals, not tangents. Three210mm adjacent spans implyabout297mm diagonal under square assumption, versus294mm measured. Earlier exact294mm selection instruction was too firm. Stop repeated tape refinements; preserve discrepancy and use template/trial-fit for final qualification.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/received-vs-drawing.md"
+      ],
+      "supersedes": [],
+      "next_action": "Proceed with preliminary part screening using recorded measurements and explicit uncertainty; final mounting fit requires template/hardware check."
+    },
+    {
+      "id": "FB-040",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "received-part-identity",
+      "quote": "the exact numbers on the tank (serial number and model i think:)  M8EB2C1B, R2610270015",
+      "source": "Current conversation after cabinet measurement session.",
+      "interpretation": "Record M8EB2C1B model marking and R2610270015 serial/production marking as user-transcribed. Do not decode date or infer actual manufacturer/body/impedance solely from code.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/tank-specifications.md"
+      ],
+      "supersedes": [],
+      "next_action": "Record exact-document search and remaining identity/specification limits."
+    },
+    {
+      "id": "FB-041",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "research-request",
+      "quote": "is there a datasheet somewhere for this that you can find?",
+      "source": "Current conversation after cabinet measurement session.",
+      "interpretation": "Find exact-model manufacturer/supplier documentation; separate datasheet, product specification, dimensional drawing and similar-model reference.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/tank-specifications.md"
+      ],
+      "supersedes": [],
+      "next_action": "Search completed: Mable product specification and mechanical drawing found; no full exact-unit electrical datasheet located. Follow recorded measurement/model gaps without repeating supplier requests."
+    },
+    {
+      "id": "FB-042",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "characterization-method-request",
+      "quote": "So how do we find that information? recommended/maximum drive current, coil DC resistance and impedance test conditions. / and what equipment does it need?",
+      "source": "Two consecutive user messages in current conversation after tank datasheet search.",
+      "interpretation": "Explain actual-tank measurement methods and required instrument capabilities; distinguish measurable resistance/impedance and chosen test conditions from manufacturer current ratings. No tool purchases or energized HV work authorized.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/tank-characterization-plan.md",
+        "engineering/whole-amp/mechanical/fit-register.json"
+      ],
+      "supersedes": [],
+      "next_action": "Start with isolated DC coil measurements on ordinary multimeter; inventory available instruments before selecting low-level AC fixture. No actual readings received."
+    },
+    {
+      "id": "FB-043",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "measurement-method-clarification",
+      "quote": "should i measure the resistance with a DC multimeter from the input to the output?",
+      "source": "Current conversation during tank characterization instructions.",
+      "interpretation": "Clarify immediately: two separate coils; measure each RCA jack centre-to-its-own-shell in ohms mode with both cables removed, not between input and output and not against tank case. LeadsCOM andV/ohms; ordinary multimeter sufficient for this step.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/tank-characterization-plan.md"
+      ],
+      "supersedes": [],
+      "next_action": "Await INPUT and OUTPUT DC resistance readings with units; no measured values assumed."
+    },
+    {
+      "id": "FB-044",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "received-hardware-photo-intake",
+      "quote": "First help me learn the chinese for the things on the multimeter with chinese, pinyin, and english translation. Then record the images of the reverb tank to ICM, and any information you can get about it, then repeat the instructions to measure it.",
+      "source": "Current conversation: six tank and DT9205A attachments; original paths and hashes in photo manifest.",
+      "interpretation": "Preserve all six photos; confirm visible markings and socket identity; translate visible labels and tailor isolated-tank DC resistance procedure to this manual-range meter. Do not invent readings or dimensions.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/received-tank-photo-intake-2026-11-20.md",
+        "engineering/whole-amp/mechanical/evidence/received-tank-2026-11-20/manifest.json",
+        "engineering/whole-amp/mechanical/fit-register.json"
+      ],
+      "supersedes": [],
+      "next_action": "User measures each jack centre-to-own-shell and reports exact display plus range; DC coil values remain unknown."
+    },
+    {
+      "id": "FB-045",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "reported-measurement",
+      "quote": "1. Probe tips touching: 000; range 2k\n2. White IN socket: .076 ; range 2k\n3. Red OUT socket: .235 ; range 2k",
+      "source": "Current chat, following meter-specific isolated-tank resistance instructions",
+      "interpretation": "User-reported DT9205A DC resistance: 76 ohm input and 235 ohm output. Shorted tips indicated zero at this range; not proof of exact zero lead resistance. No AC impedance or drive-current measurement.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/received-tank-photo-intake-2026-11-20.md"
+      ],
+      "supersedes": [],
+      "next_action": "Use measured DC resistances in the next tank-model revision; retain uncertainty for inductance, AC test frequency, grounding and drive limits."
+    },
+    {
+      "id": "FB-046",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "engineering-work-request",
+      "quote": "ok, update the reverb simulation with those measured resistances and run it again. Keep going on the parts and PCB, and log the results in ICM.",
+      "source": "Current conversation after user-reported 76/235 ohm DC readings",
+      "interpretation": "Use canonical measured DC coil resistances, rerun bounded simulation, advance exact parts and native board draft with traceable checks; no fabrication release implied.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/reverb-600/review/measured-resistance-results-2026-11-20.md",
+        "engineering/whole-amp/pcb-measured-r/review/final-checks.json",
+        "engineering/component-selection/coverage.json"
+      ],
+      "supersedes": [],
+      "next_action": "Measured-resistance rerun, 13 additional selected positions and four-board draft integration completed. Continue unresolved parts, expression control, remaining board routing and populated cabinet fit; no fabrication release."
+    },
+    {
+      "id": "FB-047",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "equipment-clarification",
+      "quote": "do I need special equipment for the impedance measurements like an oscilloscope and a frequency generator?",
+      "source": "Current conversation after user-reported 76/235 ohm DC readings",
+      "interpretation": "Explain LCR meter with selectable low-level 1kHz impedance measurement as simplest route, or generator plus two-channel scope and resistor; no equipment purchase required now.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/reverb-600/review/review.md",
+        "engineering/whole-amp/mechanical/review/tank-characterization-plan.md"
+      ],
+      "supersedes": [],
+      "next_action": "No purchase; AC characterization remains pending."
+    },
+    {
+      "id": "FB-048",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "engineering-clarification",
+      "quote": "the maximum safe drive current to not burn up the coils? basically to not turn it into a hair dryer / toaster?",
+      "source": "Current conversation while measured-R simulation and PCB integration are underway",
+      "interpretation": "Clarified winding I_RMS squared times measured DC resistance estimates copper heating, not safe current rating; thermal and magnetic/mechanical limits differ.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/tank-characterization-plan.md"
+      ],
+      "supersedes": [],
+      "next_action": "Keep maximum drive current unknown; carry measured DC resistance separately from AC assumptions."
+    },
+    {
+      "id": "FB-049",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "engineering-clarification",
+      "quote": "what design choices does that affect? the impedance test",
+      "source": "Current conversation while measured-R simulation and PCB integration are underway",
+      "interpretation": "Explained implications for driver current/voltage, series resistor, frequency shaping, recovery loading/noise and coil model; audio transfer still needs testing.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/tank-characterization-plan.md"
+      ],
+      "supersedes": [],
+      "next_action": "Keep maximum drive current unknown; carry measured DC resistance separately from AC assumptions."
+    },
+    {
+      "id": "FB-050",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "instrument-use-clarification",
+      "quote": "I tend to use acoustic guitar. I have two guitars: one has a battery and one does not.",
+      "source": "Current conversation; follows passive-pickup answer and battery question",
+      "interpretation": "Primary instrument use is acoustic. Support two guitars, one battery-powered and one battery-free. Battery-free pickup technology and both models remain unknown. Do not infer permission to discard the original tube circuit or received cabinet. High-input-impedance, clean-headroom and speaker compatibility review is now required; specific changes remain engineering proposals.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md"
+      ],
+      "supersedes": [],
+      "next_action": "Identify guitar/pickup models; compare passive piezo versus magnetic loading, active output headroom, and acoustic voicing with the original circuit and proposed speaker before freezing parts/PCB."
+    },
+    {
+      "id": "FB-051",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "instrument-identification",
+      "quote": "It's a night wish 550-D (don't know the pickups etc), and a ENYA Nova Go",
+      "source": "Current conversation",
+      "interpretation": "Instrument names recorded; pickup systems, Nova Go variant and battery-to-guitar mapping still unknown.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "engineering/component-selection/evidence/acoustic-input-speaker-review-2026-11-20.md"
+      ],
+      "supersedes": [],
+      "next_action": "Confirm actual pickup interfaces; assess buffer and acoustic speaker/crossover options before changing CAD or freezing parts."
+    },
+    {
+      "id": "FB-052",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "design-option-question",
+      "quote": "would it be easier to just use an off amp buffer? Shouldn't an acoustic guitar amp also have tweeters?",
+      "source": "Current conversation",
+      "interpretation": "Evaluate FET-input op-amp or external buffer and acoustic two-way speaker/crossover. Questions are not approval of a specific circuit, driver, cabinet alteration or revised original topology.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "engineering/component-selection/evidence/acoustic-input-speaker-review-2026-11-20.md"
+      ],
+      "supersedes": [],
+      "next_action": "Confirm actual pickup interfaces; assess buffer and acoustic speaker/crossover options before changing CAD or freezing parts."
+    },
+    {
+      "id": "FB-053",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "build-split-and-publication",
+      "quote": "yes, I meant an op-amp buffer. Keep going with that and pick a suitable speaker and tweeter with a crossover for acoustic guitar. Make sure everything fits the cabinet I already have, and log the changes in ICM.",
+      "source": "Current conversation, repository https://github.com/davidgrahamsites/Tube-Amp",
+      "interpretation": "Op-amp clarification and acoustic design authorized; retain existing cabinet. Implementation belongs to separate acoustic build.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-009-separate-electric-acoustic-builds.md",
+        "BUILD_VARIANT.md"
+      ],
+      "supersedes": [],
+      "next_action": "Verify electric checkpoint push, create acoustic branch from it, add full handoff and verify second push."
+    },
+    {
+      "id": "FB-054",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "build-split-and-publication",
+      "quote": "Let's make two branches: Electric Guitar Amp and Acoustic Guitar amp, these are two separate builds. and push everything current to the github repo",
+      "source": "Current conversation, repository https://github.com/davidgrahamsites/Tube-Amp",
+      "interpretation": "Create separate valid Git branch names, publish current full project to user-specified Tube-Amp repository. No fabrication or component order.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-009-separate-electric-acoustic-builds.md",
+        "BUILD_VARIANT.md"
+      ],
+      "supersedes": [],
+      "next_action": "Verify electric checkpoint push, create acoustic branch from it, add full handoff and verify second push."
+    },
+    {
+      "id": "FB-055",
+      "recorded_on": "2026-11-20",
+      "occurred_on": "2026-11-20",
+      "authority": "user",
+      "kind": "build-split-and-publication",
+      "quote": "once everything is added to the electric guitar build, we can begin working on the acoustic guitar build. (on that github branch), and I will create a new chat for that, so please make all extensive notes about where we are currently to that new branch,",
+      "source": "Current conversation, repository https://github.com/davidgrahamsites/Tube-Amp",
+      "interpretation": "Sequence electric checkpoint/upload first, then acoustic branch and detailed handoff. User will start the new chat; leave implementation for that chat.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-009-separate-electric-acoustic-builds.md",
+        "BUILD_VARIANT.md"
+      ],
+      "supersedes": [],
+      "next_action": "Verify electric checkpoint push, create acoustic branch from it, add full handoff and verify second push."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+HV supply reference winding stress, 220V primary
+ .options method=gear reltol=.003
+VA a 0 SIN(0 508.4380599443752 50)
+VB b 0 SIN(0 -508.4380599443752 50)
+RA a aa 100
+RB b bb 100
+D3 aa midA DM
+D4 midA raw DM
+D5 bb midB DM
+D6 midB raw DM
+.model DM D(Is=5n Rs=.05 N=1.8 BV=1000 IBV=5u Cjo=15p Tt=2u)
+C29 raw cm 220u
+C30 cm 0 220u
+R501 raw cm 220k
+R502 cm 0 220k
+ILOAD raw 0 0.0
+Rch raw ch 75
+Lch ch screen 8
+C26 screen 0 50u
+R35 screen pre 10k
+C25 pre 0 50u
+C13 pre 0 50u
+R17 pre early 10k
+C12 early 0 50u
+* Resistor load approximation, not tube warmup model.
+Rpre pre 0 1000000000000.0
+Rearly early 0 1000000000000.0
+.end

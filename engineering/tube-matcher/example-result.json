@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "data_origin": "synthetic-example",
+  "run_uuid": "00000000-0000-4000-8000-000000000001",
+  "tube_uuid": "00000000-0000-4000-8000-000000000002",
+  "tube_label": "DEMO-AX7-003",
+  "family": "12AX7",
+  "maker_variant": "unidentified demo; not a physical tube",
+  "run_status": "example",
+  "timestamp_utc": "2026-10-04T12:00:00Z",
+  "timestamp_validity": "synthetic",
+  "sequence": 1,
+  "instrument": {"serial": "DEMO-INSTRUMENT", "hardware_revision": "unbuilt", "firmware_version": "unimplemented"},
+  "profile": {"id": "12AX7-T01-v0.1", "snapshot_hash": null, "qualified": false},
+  "calibration": {"id": "DEMO-NOT-CALIBRATED", "valid": false, "uncertainty_basis": "illustrative bounds; not measured"},
+  "cartridge": {"family": "12AX7-noval-cartridge", "serial": "DEMO", "pin_map_verified": false},
+  "heater_v": 6.3,
+  "warmup_s": 120,
+  "ambient_c": null,
+  "sections": [
+    {
+      "section": "A",
+      "anchor": {"vpk_v": 250, "vgk_v": -2, "vk_return_v": 0.12, "ip_ma": 1.2, "ik_ma": 1.2, "is_ma": 0, "ig_ma": 0},
+      "gm_samples": [
+        {"vpk_v": 250, "vgk_v": -2.1, "ip_ma": 1.04, "censored": false},
+        {"vpk_v": 250, "vgk_v": -1.9, "ip_ma": 1.36, "censored": false}
+      ],
+      "rp_samples": [
+        {"vpk_v": 240, "vgk_v": -2, "ip_ma": 1.04, "censored": false},
+        {"vpk_v": 250, "vgk_v": -2, "ip_ma": 1.2, "censored": false}
+      ],
+      "estimates": {"gm_ma_per_v": 1.6, "rp_kohm": 62.5, "mu": 100},
+      "uncertainty": {"ip_absolute_ma": 0.012, "gm_absolute_ma_per_v": 0.032, "coverage": "demo interval bounds"}
+    },
+    {
+      "section": "B",
+      "anchor": {"vpk_v": 250, "vgk_v": -2, "vk_return_v": 0.122, "ip_ma": 1.22, "ik_ma": 1.22, "is_ma": 0, "ig_ma": 0},
+      "gm_samples": [
+        {"vpk_v": 250, "vgk_v": -2.1, "ip_ma": 1.058, "censored": false},
+        {"vpk_v": 250, "vgk_v": -1.9, "ip_ma": 1.382, "censored": false}
+      ],
+      "rp_samples": [
+        {"vpk_v": 240, "vgk_v": -2, "ip_ma": 1.0533333333333332, "censored": false},
+        {"vpk_v": 250, "vgk_v": -2, "ip_ma": 1.22, "censored": false}
+      ],
+      "estimates": {"gm_ma_per_v": 1.62, "rp_kohm": 60, "mu": 97.2},
+      "uncertainty": {"ip_absolute_ma": 0.0122, "gm_absolute_ma_per_v": 0.0324, "coverage": "demo interval bounds"}
+    }
+  ],
+  "assessments": {"cold_shorts": "untested", "hot_leakage": "untested", "stability": "untested", "secondary_point": "untested", "noise": "untested", "microphonics": "untested"},
+  "fault_events": [],
+  "real_pairing_eligible": false,
+  "notes": "Synthetic display/import example only. No physical measurement, calibrated instrument or tube exists for this record."
+}

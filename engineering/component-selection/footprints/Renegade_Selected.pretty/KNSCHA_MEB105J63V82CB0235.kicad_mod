@@ -1,0 +1,185 @@
+(footprint "KNSCHA_MEB105J63V82CB0235"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "MEB105J63V82CB0235; nominal 7.2 x 5 x H10.5mm, body tolerance +/-0.5mm; pitch5mm +/-0.5; datasheet-specific max-body courtyard.")
+	(tags "C Rect series Radial pin pitch 5.00mm length 7.2mm width 5.0mm Capacitor R82")
+	(property "Reference" "REF**"
+		(at 2.5 -3.75 0)
+		(layer "F.SilkS")
+		(uuid "11080f27-df3a-4338-8669-b7db5825632a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "MEB105J63V82CB0235"
+		(at 2.5 3.75 0)
+		(layer "F.Fab")
+		(uuid "cd350e52-33ed-463f-9541-08fa08bff51d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "72eb05f9-cef9-4f7a-afe2-6c8ea5202ec6")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3a076755-6024-4491-a17a-843c96ac063b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "capacitor/THT/other"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "57e1ff1a-7cd3-4d20-9c68-67f25a035bb3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.22 -2.62)
+		(end 6.22 -2.62)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d78a4e61-26c4-4fd9-9962-d333e66f4259")
+	)
+	(fp_line
+		(start -1.22 2.62)
+		(end -1.22 -2.62)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "63f24a9c-47de-4e67-a00c-89cbed6458a6")
+	)
+	(fp_line
+		(start 6.22 -2.62)
+		(end 6.22 2.62)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fb163118-dc42-43c6-a2b1-1fe7e32c96c3")
+	)
+	(fp_line
+		(start 6.22 2.62)
+		(end -1.22 2.62)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "60255aed-9c4a-4e68-9c15-16820b489702")
+	)
+	(fp_line
+		(start -1.6 -3)
+		(end 6.6 -3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "97f5d30d-dc20-4538-9353-3c1f784ae089")
+	)
+	(fp_line
+		(start -1.6 3)
+		(end -1.6 -3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "e4e57301-7a05-407a-aae8-9ff85e12d4d8")
+	)
+	(fp_line
+		(start 6.6 -3)
+		(end 6.6 3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "a5e6ad31-39af-499e-9d31-216069fadeb5")
+	)
+	(fp_line
+		(start 6.6 3)
+		(end -1.6 3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "b0256e1d-305e-4470-bb06-f31d3538cf08")
+	)
+	(fp_rect
+		(start -1.1 -2.5)
+		(end 6.1 2.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "c11a673a-6fba-41af-a7e6-bcada8a8e698")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 2.5 0 0)
+		(layer "F.Fab")
+		(uuid "aba4886e-b498-49c5-b3e1-cf05c8dfb7c3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 1.8 1.8)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "085c8a7d-1fed-4a70-8ef4-e13de53794a8")
+	)
+	(pad "2" thru_hole circle
+		(at 5 0)
+		(size 1.8 1.8)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "032ad428-c4c9-4678-9448-8b2de036acb5")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,4933 @@
+{
+  "revision": "600R-1",
+  "owner": "Renegade integration",
+  "tank": {
+    "input_impedance_ohm": 600,
+    "output_impedance_ohm": 2250,
+    "test_frequency_Hz": null,
+    "drive_limit_mA": null
+  },
+  "components": [
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "V1",
+      "unit": 2,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "1": "CL_P1",
+        "2": "CL_IN",
+        "3": "CL_K1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R4",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_EARLY",
+        "2": "CL_P1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R2",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CL_IN",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R3",
+      "unit": 1,
+      "value": "1.5k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CL_K1",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C1",
+      "unit": 1,
+      "value": "25u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "CL_K1",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "50 V",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R5",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CL_P1",
+        "2": "CL_TONE"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C2",
+      "unit": 1,
+      "value": "250p",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "CL_P1",
+        "2": "CL_TREBLE_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C3",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "CL_TONE",
+        "2": "CL_BASS_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C4",
+      "unit": 1,
+      "value": "47n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "CL_TONE",
+        "2": "CL_BASS_BOTTOM"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "RV1",
+      "unit": 1,
+      "value": "250k LIN TREBLE",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "CL_TREBLE_TOP",
+        "2": "CL_TREBLE_W",
+        "3": "CL_BASS_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "RV2",
+      "unit": 1,
+      "value": "1M LOG BASS",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "CL_BASS_TOP",
+        "2": "CL_BASS_TOP",
+        "3": "CL_BASS_BOTTOM"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R6",
+      "unit": 1,
+      "value": "15k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CL_BASS_BOTTOM",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "RV3",
+      "unit": 1,
+      "value": "1M LOG VOLUME",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "CL_TREBLE_W",
+        "2": "CL_G2",
+        "3": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "V1",
+      "unit": 1,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "6": "CL_P2",
+        "7": "CL_G2",
+        "8": "CL_K2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R7",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_EARLY",
+        "2": "CL_P2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R8",
+      "unit": 1,
+      "value": "1.5k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CL_K2",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C5",
+      "unit": 1,
+      "value": "25u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "CL_K2",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "50 V",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C6",
+      "unit": 1,
+      "value": "47n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "CL_P2",
+        "2": "CLEAN_OUT"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R43",
+      "unit": 1,
+      "value": "10M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CLEAN_OUT",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "V2",
+      "unit": 2,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "1": "DR_P1",
+        "2": "DR_IN",
+        "3": "DR_K1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R12",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_EARLY",
+        "2": "DR_P1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R10",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_IN",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R11",
+      "unit": 1,
+      "value": "2.7k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_K1",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "C7",
+      "unit": 1,
+      "value": "680n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_K1",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "50 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "C8",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_P1",
+        "2": "DR_GAIN_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "RV4",
+      "unit": 1,
+      "value": "1M LOG GAIN",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "DR_GAIN_TOP",
+        "2": "DR_GAIN_W",
+        "3": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R13",
+      "unit": 1,
+      "value": "470k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_GAIN_W",
+        "2": "DR_G2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "C9",
+      "unit": 1,
+      "value": "470p",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_GAIN_W",
+        "2": "DR_G2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R14",
+      "unit": 1,
+      "value": "470k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_G2",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "V2",
+      "unit": 1,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "6": "DR_P2",
+        "7": "DR_G2",
+        "8": "DR_K2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R15",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_EARLY",
+        "2": "DR_P2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R16",
+      "unit": 1,
+      "value": "1.8k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_K2",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "C10",
+      "unit": 1,
+      "value": "1u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "DR_K2",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "50 V",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "C11",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_P2",
+        "2": "DR_C3"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R18",
+      "unit": 1,
+      "value": "470k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_C3",
+        "2": "DR_G3"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R19",
+      "unit": 1,
+      "value": "470k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_G3",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "V3",
+      "unit": 2,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "1": "DR_P3",
+        "2": "DR_G3",
+        "3": "DR_K3"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R21",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_PRE",
+        "2": "DR_P3"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R20",
+      "unit": 1,
+      "value": "820",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_K3",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "C14",
+      "unit": 1,
+      "value": "1u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "DR_K3",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "50 V",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "V3",
+      "unit": 1,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "6": "B_PRE",
+        "7": "DR_P3",
+        "8": "DR_CF"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "R22",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_CF",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "2 W minimum; Vk stress pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "R23",
+      "unit": 1,
+      "value": "33k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_CF",
+        "2": "DR_TONE"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "C15",
+      "unit": 1,
+      "value": "470p",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_CF",
+        "2": "DR_TREBLE_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "C16",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_TONE",
+        "2": "DR_BASS_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "C17",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_TONE",
+        "2": "DR_BASS_BOTTOM"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "RV5",
+      "unit": 1,
+      "value": "250k LIN TREBLE",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "DR_TREBLE_TOP",
+        "2": "DR_TREBLE_W",
+        "3": "DR_BASS_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "RV6",
+      "unit": 1,
+      "value": "1M LOG BASS",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "DR_BASS_TOP",
+        "2": "DR_BASS_TOP",
+        "3": "DR_BASS_BOTTOM"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "RV7",
+      "unit": 1,
+      "value": "25k LIN MID",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "DR_BASS_BOTTOM",
+        "2": "GND",
+        "3": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "RV8",
+      "unit": 1,
+      "value": "1M LOG MASTER",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "DR_TREBLE_W",
+        "2": "DIRTY_OUT",
+        "3": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "J1",
+      "unit": 1,
+      "value": "INPUT / grounded normal",
+      "symbol": "Connector_Audio_AudioJack2_SwitchT",
+      "pins": {
+        "S": "GND",
+        "T": "INPUT",
+        "TN": "GND"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "R1",
+      "unit": 1,
+      "value": "68k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "INPUT",
+        "2": "INPUT_STOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "K1",
+      "unit": 2,
+      "value": "G5V-2-H1 DC12 (candidate)",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "4": "INPUT_STOP",
+        "6": "CL_IN",
+        "8": "DR_IN"
+      },
+      "source": "",
+      "rating": "12 V high-sensitivity coil; 150 mW reference; verify exact suffix",
+      "status": "proposed",
+      "datasheet": "https://components.omron.com/system/files/2023-01/datasheet_pdf/K046-E1.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "K1",
+      "unit": 3,
+      "value": "G5V-2-H1 DC12 (candidate)",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "13": "GND",
+        "11": "DR_G2",
+        "9": "CL_G2"
+      },
+      "source": "",
+      "rating": "12 V high-sensitivity coil; 150 mW reference; verify exact suffix",
+      "status": "proposed",
+      "datasheet": "https://components.omron.com/system/files/2023-01/datasheet_pdf/K046-E1.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "K2",
+      "unit": 2,
+      "value": "G5V-2-H1 DC12 (candidate)",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "4": "FX_SEND",
+        "6": "CLEAN_OUT",
+        "8": "DIRTY_OUT"
+      },
+      "source": "",
+      "rating": "12 V high-sensitivity coil; 150 mW reference; verify exact suffix",
+      "status": "proposed",
+      "datasheet": "https://components.omron.com/system/files/2023-01/datasheet_pdf/K046-E1.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "K2",
+      "unit": 3,
+      "value": "G5V-2-H1 DC12 (candidate)",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "13": "GND",
+        "11": null,
+        "9": null
+      },
+      "source": "",
+      "rating": "12 V high-sensitivity coil; 150 mW reference; verify exact suffix",
+      "status": "proposed",
+      "datasheet": "https://components.omron.com/system/files/2023-01/datasheet_pdf/K046-E1.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "J3",
+      "unit": 1,
+      "value": "EFFECTS SEND",
+      "symbol": "Connector_Audio_AudioJack2",
+      "pins": {
+        "S": "GND",
+        "T": "FX_SEND"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "J4",
+      "unit": 1,
+      "value": "EFFECTS RETURN / normalled",
+      "symbol": "Connector_Audio_AudioJack2_SwitchT",
+      "pins": {
+        "S": "GND",
+        "T": "FX_RETURN",
+        "TN": "FX_SEND"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "R100",
+      "unit": 1,
+      "value": "1M DNP",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "DNP: remove previous tube-reverb input load",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R24",
+      "unit": 1,
+      "value": "10M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "MIX_OUT",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C19",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "MIX_OUT",
+        "2": "PI_G1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R25",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "PI_G1",
+        "2": "PI_TAIL_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "V4",
+      "unit": 2,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "1": "PI_P1",
+        "2": "PI_G1",
+        "3": "PI_K"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "V4",
+      "unit": 1,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "6": "PI_P2",
+        "7": "PI_G2",
+        "8": "PI_K"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R29",
+      "unit": 1,
+      "value": "82k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_PRE",
+        "2": "PI_P1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R30",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_PRE",
+        "2": "PI_P2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C22",
+      "unit": 1,
+      "value": "47p",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "PI_P1",
+        "2": "PI_P2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R26",
+      "unit": 1,
+      "value": "470",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "PI_K",
+        "2": "PI_TAIL_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R28",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "PI_TAIL_TOP",
+        "2": "NFB_NODE"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R27",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "PI_G2",
+        "2": "PI_TAIL_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C20",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "PI_G2",
+        "2": "NFB_NODE"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R31",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "OT_4",
+        "2": "NFB_NODE"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R32",
+      "unit": 1,
+      "value": "47k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "NFB_NODE",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C21",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "NFB_NODE",
+        "2": "PRES_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "RV9",
+      "unit": 1,
+      "value": "25k LIN PRESENCE",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "PRES_TOP",
+        "2": "GND",
+        "3": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C23",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "PI_P1",
+        "2": "GRID_A_FEED"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C24",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "PI_P2",
+        "2": "GRID_B_FEED"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R33",
+      "unit": 1,
+      "value": "220k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "GRID_A_FEED",
+        "2": "BIAS_OUT"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2 / changed from 220k",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained; tube-specific grid-return limit review required",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R34",
+      "unit": 1,
+      "value": "220k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "GRID_B_FEED",
+        "2": "BIAS_OUT"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2 / changed from 220k",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained; tube-specific grid-return limit review required",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R36",
+      "unit": 1,
+      "value": "1.5k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "GRID_A_FEED",
+        "2": "EL34_GA"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R37",
+      "unit": 1,
+      "value": "1.5k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "GRID_B_FEED",
+        "2": "EL34_GB"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R41",
+      "unit": 1,
+      "value": "1k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_SCREEN",
+        "2": "EL34_SA"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "5 W; screen current stress pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R42",
+      "unit": 1,
+      "value": "1k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_SCREEN",
+        "2": "EL34_SB"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "5 W; screen current stress pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "V5",
+      "unit": 1,
+      "value": "EL34",
+      "symbol": "Valve_EL34",
+      "pins": {
+        "1": "K_A",
+        "3": "OT_PA",
+        "4": "EL34_SA",
+        "5": "EL34_GA",
+        "8": "K_A"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/power_tubes/pdf/el34_e34l.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "V6",
+      "unit": 1,
+      "value": "EL34",
+      "symbol": "Valve_EL34",
+      "pins": {
+        "1": "K_B",
+        "3": "OT_PB",
+        "4": "EL34_SB",
+        "5": "EL34_GB",
+        "8": "K_B"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/power_tubes/pdf/el34_e34l.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R110",
+      "unit": 1,
+      "value": "1",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "K_A",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "1 W 1%; cathode test resistor",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R111",
+      "unit": 1,
+      "value": "1",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "K_B",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "1 W 1%; cathode test resistor",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04b_output_transformer",
+      "reference": "T2",
+      "unit": 1,
+      "value": "1650F reference / 7k6 CT 25 W",
+      "symbol": "OutputTransformer_Logical",
+      "pins": {
+        "PA": "OT_PA",
+        "CT": "B_MAIN",
+        "PB": "OT_PB",
+        "COM": "GND",
+        "4": "OT_4",
+        "8": "OT_8",
+        "16": "OT_16"
+      },
+      "source": "",
+      "rating": "Chinese equivalent not selected; winding phase/leakage/DCR pending",
+      "status": "proposed",
+      "datasheet": "https://www.hammfg.com/part/1650F",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04b_output_transformer",
+      "reference": "J5",
+      "unit": 1,
+      "value": "SPEAKER via 4/8/16 selector",
+      "symbol": "Connector_Audio_AudioJack2",
+      "pins": {
+        "S": "GND",
+        "T": "SPEAKER_TAP"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04b_output_transformer",
+      "reference": "S3",
+      "unit": 1,
+      "value": "4/8/16 OHM SELECT",
+      "symbol": "Switch_SW_SP3T",
+      "pins": {
+        "1": "OT_4",
+        "2": "OT_8",
+        "3": "SPEAKER_TAP",
+        "4": "OT_16"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04b_output_transformer",
+      "reference": "JOT1",
+      "unit": 1,
+      "value": "OT tap leads /insulate unused",
+      "symbol": "Connector_Generic_Conn_01x03",
+      "pins": {
+        "1": "OT_4",
+        "2": "OT_8",
+        "3": "OT_16"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "J7",
+      "unit": 1,
+      "value": "MAINS INLET L/N/PE",
+      "symbol": "Connector_Generic_Conn_01x03",
+      "pins": {
+        "1": "MAINS_L",
+        "2": "MAINS_N",
+        "3": "PE"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "F1",
+      "unit": 1,
+      "value": "T1.6A / 250VAC provisional",
+      "symbol": "Device_Fuse",
+      "pins": {
+        "1": "MAINS_L",
+        "2": "L_FUSED"
+      },
+      "source": "",
+      "rating": "HBC and inrush coordination pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "S1",
+      "unit": 1,
+      "value": "POWER / double pole",
+      "symbol": "Switch_SW_DPST",
+      "pins": {
+        "1": "L_FUSED",
+        "2": "L_SW",
+        "3": "MAINS_N",
+        "4": "N_SW"
+      },
+      "source": "",
+      "rating": "250 VAC / inrush suitability pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "T1",
+      "unit": 1,
+      "value": "372FX ref: 220V 50Hz",
+      "symbol": "PowerTransformer_Logical",
+      "pins": {
+        "L": "L_SW",
+        "N": "N_SW",
+        "HV1": "HV_A",
+        "CT": "GND",
+        "HV2": "HV_B",
+        "B": "BIAS_AC",
+        "H1": "HEAT_A",
+        "H2": "HEAT_B"
+      },
+      "source": "",
+      "rating": "300-0-300VAC 173mA; 6.3VAC 5A; 50V bias tap; unused heater CT/5V leads individually insulated",
+      "status": "proposed",
+      "datasheet": "https://www.hammfg.com/part/372FX",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "D3",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "HV_MID_A",
+        "2": "HV_A"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "1000 V diode reference; charging/inrush stress pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "D4",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "B_RECT",
+        "2": "HV_MID_A"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "1000 V diode reference; charging/inrush stress pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "D5",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "HV_MID_B",
+        "2": "HV_B"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "1000 V diode reference; charging/inrush stress pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "D6",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "B_RECT",
+        "2": "HV_MID_B"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "1000 V diode reference; charging/inrush stress pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "F2",
+      "unit": 1,
+      "value": "HV fuse TBD >=600VDC",
+      "symbol": "Device_Fuse",
+      "pins": {
+        "1": "B_RECT",
+        "2": "B_RAW"
+      },
+      "source": "",
+      "rating": "Value, breaking capacity and DC holder rating pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "C29",
+      "unit": 1,
+      "value": "220u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "B_RAW",
+        "2": "HV_CAP_MID"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "350 V each; series pair",
+      "status": "modified from source",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "C30",
+      "unit": 1,
+      "value": "220u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "HV_CAP_MID",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "350 V each; series pair",
+      "status": "modified from source",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "R501",
+      "unit": 1,
+      "value": "220k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_RAW",
+        "2": "HV_CAP_MID"
+      },
+      "source": "Revision v0.2",
+      "rating": "2 W; 350 V working minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "R502",
+      "unit": 1,
+      "value": "220k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "HV_CAP_MID",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "2 W; 350 V working minimum",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "S2",
+      "unit": 1,
+      "value": "STANDBY / HVDC rated TBD",
+      "symbol": "Switch_SW_SPST",
+      "pins": {
+        "1": "B_RAW",
+        "2": "B_MAIN"
+      },
+      "source": "",
+      "rating": "Bias remains powered; actual HV DC switch/arc rating pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "L1",
+      "unit": 1,
+      "value": "193D ref 8H /150mA",
+      "symbol": "Device_L",
+      "pins": {
+        "1": "B_MAIN",
+        "2": "B_SCREEN"
+      },
+      "source": "",
+      "rating": "Feeds screens and small-signal stages, not output plate current",
+      "status": "proposed",
+      "datasheet": "https://www.hammfg.com/part/193D",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "C26",
+      "unit": 1,
+      "value": "50u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "B_SCREEN",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "600 V minimum",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "R35",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_SCREEN",
+        "2": "B_PRE"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "5 W",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "C25",
+      "unit": 1,
+      "value": "50u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "B_PRE",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "600 V minimum",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "R17",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_PRE",
+        "2": "B_EARLY"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "5 W",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "C13",
+      "unit": 1,
+      "value": "50u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "B_PRE",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "600 V minimum",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05_supplies",
+      "reference": "C12",
+      "unit": 1,
+      "value": "50u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "B_EARLY",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "600 V minimum",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "J2",
+      "unit": 1,
+      "value": "TRS passive pedal assumption",
+      "symbol": "Connector_Audio_AudioJack3",
+      "pins": {
+        "T": "PEDAL_CH",
+        "R": "PEDAL_REV",
+        "S": "GND"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "R301",
+      "unit": 1,
+      "value": "1k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "PEDAL_CH",
+        "2": "BTN_CH"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.25 W; cable current limiter",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "SW1",
+      "unit": 1,
+      "value": "LOCAL CH",
+      "symbol": "Switch_SW_Push",
+      "pins": {
+        "1": "BTN_CH",
+        "2": "GND"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "R302",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "+5V",
+        "2": "BTN_CH"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.25 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "R303",
+      "unit": 1,
+      "value": "15k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "BTN_CH",
+        "2": "DB_CH"
+      },
+      "source": "Revision v0.2",
+      "rating": "1% 0.25 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "C301",
+      "unit": 1,
+      "value": "1u",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DB_CH",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "16 V; effective capacitance/tolerance pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "U1",
+      "unit": 1,
+      "value": "SN74HC14N",
+      "symbol": "74xx_74HC14",
+      "pins": {
+        "1": "DB_CH",
+        "2": "CLK_CH"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/sn74hc14.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "D301",
+      "unit": 1,
+      "value": "BAT43 input clamp",
+      "symbol": "Device_D_Schottky",
+      "pins": {
+        "1": "+5V",
+        "2": "BTN_CH"
+      },
+      "source": "",
+      "rating": "ESD TVS/connector shell termination still requires selection",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "D302",
+      "unit": 1,
+      "value": "BAT43 input clamp",
+      "symbol": "Device_D_Schottky",
+      "pins": {
+        "1": "BTN_CH",
+        "2": "GND"
+      },
+      "source": "",
+      "rating": "ESD TVS/connector shell termination still requires selection",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "R311",
+      "unit": 1,
+      "value": "1k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "PEDAL_REV",
+        "2": "BTN_REV"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.25 W; cable current limiter",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "SW2",
+      "unit": 1,
+      "value": "LOCAL REV",
+      "symbol": "Switch_SW_Push",
+      "pins": {
+        "1": "BTN_REV",
+        "2": "GND"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "R312",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "+5V",
+        "2": "BTN_REV"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.25 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "R313",
+      "unit": 1,
+      "value": "15k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "BTN_REV",
+        "2": "DB_REV"
+      },
+      "source": "Revision v0.2",
+      "rating": "1% 0.25 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "C311",
+      "unit": 1,
+      "value": "1u",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DB_REV",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "16 V; effective capacitance/tolerance pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "U1",
+      "unit": 2,
+      "value": "SN74HC14N",
+      "symbol": "74xx_74HC14",
+      "pins": {
+        "3": "DB_REV",
+        "4": "CLK_REV"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/sn74hc14.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "D311",
+      "unit": 1,
+      "value": "BAT43 input clamp",
+      "symbol": "Device_D_Schottky",
+      "pins": {
+        "1": "+5V",
+        "2": "BTN_REV"
+      },
+      "source": "",
+      "rating": "ESD TVS/connector shell termination still requires selection",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "D312",
+      "unit": 1,
+      "value": "BAT43 input clamp",
+      "symbol": "Device_D_Schottky",
+      "pins": {
+        "1": "BTN_REV",
+        "2": "GND"
+      },
+      "source": "",
+      "rating": "ESD TVS/connector shell termination still requires selection",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "U2",
+      "unit": 1,
+      "value": "SN74HC74N",
+      "symbol": "74xx_74HC74",
+      "pins": {
+        "1": "RESET_N",
+        "2": "CH_QN",
+        "3": "CLK_CH",
+        "4": "+5V",
+        "5": "CH_Q",
+        "6": "CH_QN"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/sn74hc74.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "U2",
+      "unit": 2,
+      "value": "SN74HC74N",
+      "symbol": "74xx_74HC74",
+      "pins": {
+        "8": "REV_QN",
+        "9": "REV_Q",
+        "10": "+5V",
+        "11": "CLK_REV",
+        "12": "REV_QN",
+        "13": "RESET_N"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "U3",
+      "unit": 1,
+      "value": "TPS3808G50DBVR",
+      "symbol": "Power_Supervisor_TPS3808DBV",
+      "pins": {
+        "1": "RESET_N",
+        "2": "GND",
+        "3": "MR_N",
+        "4": "RESET_CT",
+        "5": "+5V",
+        "6": "+5V"
+      },
+      "source": "",
+      "rating": "4.65V sense; CT timing value subject to datasheet tolerance",
+      "status": "proposed",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "C321",
+      "unit": 1,
+      "value": "47n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "RESET_CT",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "16 V",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "R321",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "+5V",
+        "2": "RESET_N"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.25 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "R322",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "+5V",
+        "2": "MR_N"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.25 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "SW3",
+      "unit": 1,
+      "value": "RESET /clean +rev off",
+      "symbol": "Switch_SW_Push",
+      "pins": {
+        "1": "MR_N",
+        "2": "GND"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "R331",
+      "unit": 1,
+      "value": "1k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CH_Q",
+        "2": "CH_GATE"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.25 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "R332",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CH_GATE",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.25 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "Q1",
+      "unit": 1,
+      "value": "2N7000",
+      "symbol": "Transistor_FET_2N7000",
+      "pins": {
+        "1": "GND",
+        "2": "CH_GATE",
+        "3": "COIL_CH"
+      },
+      "source": "",
+      "rating": "60 V; verify coil drain transient and gate drive",
+      "status": "proposed",
+      "datasheet": "https://www.onsemi.com/pdf/datasheet/2n7000-d.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "D331",
+      "unit": 1,
+      "value": "1N4007 flyback",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "+12V",
+        "2": "COIL_CH"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "R341",
+      "unit": 1,
+      "value": "1k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "REV_Q",
+        "2": "REV_GATE"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.25 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "R342",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "REV_GATE",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.25 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "Q2",
+      "unit": 1,
+      "value": "2N7000",
+      "symbol": "Transistor_FET_2N7000",
+      "pins": {
+        "1": "GND",
+        "2": "REV_GATE",
+        "3": "COIL_REV"
+      },
+      "source": "",
+      "rating": "60 V; verify coil drain transient and gate drive",
+      "status": "proposed",
+      "datasheet": "https://www.onsemi.com/pdf/datasheet/2n7000-d.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "D341",
+      "unit": 1,
+      "value": "1N4007 flyback",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "+12V",
+        "2": "COIL_REV"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "10_logic_power",
+      "reference": "U1",
+      "unit": 3,
+      "value": "SN74HC14N",
+      "symbol": "74xx_74HC14",
+      "pins": {
+        "5": "GND",
+        "6": null
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "10_logic_power",
+      "reference": "U1",
+      "unit": 4,
+      "value": "SN74HC14N",
+      "symbol": "74xx_74HC14",
+      "pins": {
+        "9": "GND",
+        "8": null
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "10_logic_power",
+      "reference": "U1",
+      "unit": 5,
+      "value": "SN74HC14N",
+      "symbol": "74xx_74HC14",
+      "pins": {
+        "11": "GND",
+        "10": null
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "10_logic_power",
+      "reference": "U1",
+      "unit": 6,
+      "value": "SN74HC14N",
+      "symbol": "74xx_74HC14",
+      "pins": {
+        "13": "GND",
+        "12": null
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "10_logic_power",
+      "reference": "U1",
+      "unit": 7,
+      "value": "SN74HC14N",
+      "symbol": "74xx_74HC14",
+      "pins": {
+        "7": "GND",
+        "14": "+5V"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "10_logic_power",
+      "reference": "U2",
+      "unit": 3,
+      "value": "SN74HC74N",
+      "symbol": "74xx_74HC74",
+      "pins": {
+        "7": "GND",
+        "14": "+5V"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "10_logic_power",
+      "reference": "C351",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+5V",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "16 V; one at each IC",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "10_logic_power",
+      "reference": "C352",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+5V",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "16 V; one at each IC",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "10_logic_power",
+      "reference": "C353",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+5V",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "16 V; one at each IC",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "JR1",
+      "unit": 1,
+      "value": "JR1 harness",
+      "symbol": "Connector_Generic_Conn_01x02",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Low voltage only; soldered locking harness or retained socket",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "C601",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "IN_AC"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "630V film",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L18.0mm_W5.0mm_P15.00mm_FKS3_FKP3"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R601",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "IN_AC",
+        "2": "SEND_IN"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R602",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "SEND_IN",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "U10",
+      "unit": 1,
+      "value": "OPA2134PA",
+      "symbol": "Amplifier_Operational_OPA2134",
+      "pins": {
+        "3": "SEND_IN",
+        "2": "SEND_BUF",
+        "1": "SEND_BUF"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "PDIP-8; +/-15V; design linear signal limit 10Vpk",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+      "footprint": "Package_DIP:DIP-8_W7.62mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "D601",
+      "unit": 1,
+      "value": "1N4148",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "+15V",
+        "2": "SEND_IN"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "D602",
+      "unit": 1,
+      "value": "1N4148",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "SEND_IN",
+        "2": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "C602",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "SEND_BUF",
+        "2": "SEND_TOP"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "RV601",
+      "unit": 1,
+      "value": "100k SEND trim",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "SEND_TOP",
+        "2": "SEND_W",
+        "3": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Bourns 3296W-1-104LF; commissioning tank drive trim",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "U10",
+      "unit": 2,
+      "value": "OPA2134PA",
+      "symbol": "Amplifier_Operational_OPA2134",
+      "pins": {
+        "5": "SEND_W",
+        "6": "DRV_FB",
+        "7": "DRIVER"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "PDIP-8; +/-15V; design linear signal limit 10Vpk",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+      "footprint": "Package_DIP:DIP-8_W7.62mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R603",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DRV_FB",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R604",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DRIVER",
+        "2": "DRV_FB"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R605",
+      "unit": 1,
+      "value": "220",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DRIVER",
+        "2": "DRIVE_CAP"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "220 ohm; select >=2W flameproof part; tank drive current requires commissioning",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "C603",
+      "unit": 1,
+      "value": "2.2u",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DRIVE_CAP",
+        "2": "TANK_IN"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W7.2mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "JR2",
+      "unit": 1,
+      "value": "JR2 harness",
+      "symbol": "Connector_Generic_Conn_01x02",
+      "pins": {
+        "1": "TANK_IN",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Low voltage only; soldered locking harness or retained socket",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "JR3",
+      "unit": 1,
+      "value": "JR3 harness",
+      "symbol": "Connector_Generic_Conn_01x02",
+      "pins": {
+        "1": "TANK_OUT",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Low voltage only; soldered locking harness or retained socket",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "C604",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "TANK_OUT",
+        "2": "REC_IN"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R606",
+      "unit": 1,
+      "value": "220k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "REC_IN",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "U11",
+      "unit": 1,
+      "value": "OPA2134PA",
+      "symbol": "Amplifier_Operational_OPA2134",
+      "pins": {
+        "3": "REC_IN",
+        "2": "REC_FB",
+        "1": "REC_OUT"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "PDIP-8; +/-15V; design linear signal limit 10Vpk",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+      "footprint": "Package_DIP:DIP-8_W7.62mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R607",
+      "unit": 1,
+      "value": "1k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "REC_FB",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R608",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "REC_OUT",
+        "2": "REC_FB"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "C605",
+      "unit": 1,
+      "value": "330p",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "REC_OUT",
+        "2": "REC_FB"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "C606",
+      "unit": 1,
+      "value": "1u",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "REC_OUT",
+        "2": "WET_TOP"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "JR4",
+      "unit": 1,
+      "value": "JR4 harness",
+      "symbol": "Connector_Generic_Conn_01x03",
+      "pins": {
+        "1": "WET_TOP",
+        "2": "WET_W",
+        "3": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Low voltage only; soldered locking harness or retained socket",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R609",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_W",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "U11",
+      "unit": 2,
+      "value": "OPA2134PA",
+      "symbol": "Amplifier_Operational_OPA2134",
+      "pins": {
+        "5": "WET_W",
+        "6": "WET_BUF",
+        "7": "WET_BUF"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "PDIP-8; +/-15V; design linear signal limit 10Vpk",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+      "footprint": "Package_DIP:DIP-8_W7.62mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R610",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_BUF",
+        "2": "WET_MUTE"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "K3",
+      "unit": 2,
+      "value": "G5V-2-H1 DC12",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "4": "WET_MUTE",
+        "6": "GND",
+        "8": null
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "https://components.omron.com/system/files/2023-01/datasheet_pdf/K046-E1.pdf",
+      "footprint": "Relay_THT:Relay_DPDT_Omron_G5V-2"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R611",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_MUTE",
+        "2": "SUM"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R612",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "MIX_OUT"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "U12",
+      "unit": 1,
+      "value": "OPA2134PA",
+      "symbol": "Amplifier_Operational_OPA2134",
+      "pins": {
+        "3": "GND",
+        "2": "SUM",
+        "1": "SUM_INV"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "PDIP-8; +/-15V; design linear signal limit 10Vpk",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+      "footprint": "Package_DIP:DIP-8_W7.62mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R613",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "SUM_INV",
+        "2": "SUM"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R614",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "SUM_INV",
+        "2": "OUT_FB"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "U12",
+      "unit": 2,
+      "value": "OPA2134PA",
+      "symbol": "Amplifier_Operational_OPA2134",
+      "pins": {
+        "5": "GND",
+        "6": "OUT_FB",
+        "7": "OUT_BUF"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "PDIP-8; +/-15V; design linear signal limit 10Vpk",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+      "footprint": "Package_DIP:DIP-8_W7.62mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R615",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "OUT_BUF",
+        "2": "OUT_FB"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R616",
+      "unit": 1,
+      "value": "100",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "OUT_BUF",
+        "2": "OUT_AC"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C607",
+      "unit": 1,
+      "value": "1u",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "OUT_AC",
+        "2": "WET_AC"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R617",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_AC",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "JR5",
+      "unit": 1,
+      "value": "JR5 harness",
+      "symbol": "Connector_Generic_Conn_01x02",
+      "pins": {
+        "1": "MIX_OUT",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Low voltage only; soldered locking harness or retained socket",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "JR6",
+      "unit": 1,
+      "value": "JR6 harness",
+      "symbol": "Connector_Generic_Conn_01x05",
+      "pins": {
+        "1": "+15V",
+        "2": "GND",
+        "3": "-15V",
+        "4": "+12V",
+        "5": "COIL_REV"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Low voltage only; soldered locking harness or retained socket",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "U10",
+      "unit": 3,
+      "value": "OPA2134PA",
+      "symbol": "Amplifier_Operational_OPA2134",
+      "pins": {
+        "8": "+15V",
+        "4": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Package_DIP:DIP-8_W7.62mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C610",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+15V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C611",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "GND",
+        "2": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "U11",
+      "unit": 3,
+      "value": "OPA2134PA",
+      "symbol": "Amplifier_Operational_OPA2134",
+      "pins": {
+        "8": "+15V",
+        "4": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Package_DIP:DIP-8_W7.62mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C612",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+15V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C613",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "GND",
+        "2": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "U12",
+      "unit": 3,
+      "value": "OPA2134PA",
+      "symbol": "Amplifier_Operational_OPA2134",
+      "pins": {
+        "8": "+15V",
+        "4": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Package_DIP:DIP-8_W7.62mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C614",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+15V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C615",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "GND",
+        "2": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C616",
+      "unit": 1,
+      "value": "47u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "+15V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "50V electrolytic",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C617",
+      "unit": 1,
+      "value": "47u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "GND",
+        "2": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "50V electrolytic",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "K3",
+      "unit": 1,
+      "value": "G5V-2-H1 DC12",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "1": "+12V",
+        "16": "COIL_REV"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Relay_THT:Relay_DPDT_Omron_G5V-2"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "K3",
+      "unit": 3,
+      "value": "G5V-2-H1 DC12",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "13": null,
+        "11": null,
+        "9": null
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Relay_THT:Relay_DPDT_Omron_G5V-2"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07d_reverb_harness",
+      "reference": "RT1",
+      "unit": 1,
+      "value": "Received tank 600:2250 ohm",
+      "symbol": "SpringTank_Logical",
+      "pins": {
+        "1": "TANK_IN",
+        "2": "GND",
+        "3": "TANK_OUT",
+        "4": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Seller: 3 springs, medium decay, input insulated/output grounded; horizontal open side down; drive limit unmeasured",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07d_reverb_harness",
+      "reference": "RV602",
+      "unit": 1,
+      "value": "100k LOG REVERB",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "WET_TOP",
+        "2": "WET_W",
+        "3": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "Panel-mounted Alpha 16mm candidate; CW=wet maximum; exact shaft/bushing pending",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "R40",
+      "unit": 1,
+      "value": "1k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "BIAS_AC",
+        "2": "BIAS_DIODE_AC"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2 / changed from 220k",
+      "rating": "1 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "D7",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "BIAS_DIODE_AC",
+        "2": "BIAS_RAW"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "C28",
+      "unit": 1,
+      "value": "10u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "GND",
+        "2": "BIAS_RAW"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "100 V",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "R39",
+      "unit": 1,
+      "value": "4.7k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "BIAS_RAW",
+        "2": "BIAS_FILTER"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2 / changed from 15k",
+      "rating": "1 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "C27",
+      "unit": 1,
+      "value": "10u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "GND",
+        "2": "BIAS_FILTER"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "100 V",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "R38",
+      "unit": 1,
+      "value": "22k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "BIAS_FILTER",
+        "2": "BIAS_OUT"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2 / changed from 56k",
+      "rating": "1 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "RV10",
+      "unit": 1,
+      "value": "50k LIN BIAS",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "BIAS_OUT",
+        "2": "BIAS_MIN",
+        "3": "BIAS_MIN"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "R503",
+      "unit": 1,
+      "value": "33k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "BIAS_MIN",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "1 W; minimum negative-bias stop",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "R506",
+      "unit": 1,
+      "value": "220k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_SCREEN",
+        "2": "HREF"
+      },
+      "source": "Revision v0.2",
+      "rating": "2 W; voltage rating pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "R507",
+      "unit": 1,
+      "value": "39k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "HREF",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "1 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "C505",
+      "unit": 1,
+      "value": "47u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "HREF",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "160 V",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "R508",
+      "unit": 1,
+      "value": "100",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "HEAT_A",
+        "2": "HREF"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.5 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "05b_bias_reverb_supply",
+      "reference": "R509",
+      "unit": 1,
+      "value": "100",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "HEAT_B",
+        "2": "HREF"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.5 W",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "06_heaters",
+      "reference": "V1",
+      "unit": 3,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "4": "HEAT_A",
+        "5": "HEAT_A",
+        "9": "HEAT_B"
+      },
+      "source": "6.3 V: pins 4+5 together; pin9 opposite",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "06_heaters",
+      "reference": "V2",
+      "unit": 3,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "4": "HEAT_A",
+        "5": "HEAT_A",
+        "9": "HEAT_B"
+      },
+      "source": "6.3 V: pins 4+5 together; pin9 opposite",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "06_heaters",
+      "reference": "V3",
+      "unit": 3,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "4": "HEAT_A",
+        "5": "HEAT_A",
+        "9": "HEAT_B"
+      },
+      "source": "6.3 V: pins 4+5 together; pin9 opposite",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "06_heaters",
+      "reference": "V4",
+      "unit": 3,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "4": "HEAT_A",
+        "5": "HEAT_A",
+        "9": "HEAT_B"
+      },
+      "source": "6.3 V: pins 4+5 together; pin9 opposite",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "06_heaters",
+      "reference": "V5",
+      "unit": 2,
+      "value": "EL34",
+      "symbol": "Valve_EL34",
+      "pins": {
+        "2": "HEAT_A",
+        "7": "HEAT_B"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "06_heaters",
+      "reference": "V6",
+      "unit": 2,
+      "value": "EL34",
+      "symbol": "Valve_EL34",
+      "pins": {
+        "2": "HEAT_A",
+        "7": "HEAT_B"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "06_heaters",
+      "reference": "JH1",
+      "unit": 1,
+      "value": "6.3V PILOT /current TBD",
+      "symbol": "Connector_Generic_Conn_01x02",
+      "pins": {
+        "1": "HEAT_A",
+        "2": "HEAT_B"
+      },
+      "source": "",
+      "rating": "Pilot allowance 0.15 A; actual part pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "06_heaters",
+      "reference": "JPE1",
+      "unit": 1,
+      "value": "CHASSIS PE STUD",
+      "symbol": "Connector_Generic_Conn_01x01",
+      "pins": {
+        "1": "PE"
+      },
+      "source": "",
+      "rating": "Dedicated permanent protective-earth bond; no switch/fuse",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "06_heaters",
+      "reference": "JPE2",
+      "unit": 1,
+      "value": "EXPOSED METAL BOND",
+      "symbol": "Connector_Generic_Conn_01x01",
+      "pins": {
+        "1": "PE"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "06_heaters",
+      "reference": "#FLG15",
+      "unit": 1,
+      "value": "PWR_FLAG",
+      "symbol": "power_PWR_FLAG",
+      "pins": {
+        "1": "HEAT_A"
+      },
+      "source": "Externally supplied winding or physical star ground declaration",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "06_heaters",
+      "reference": "#FLG16",
+      "unit": 1,
+      "value": "PWR_FLAG",
+      "symbol": "power_PWR_FLAG",
+      "pins": {
+        "1": "HEAT_B"
+      },
+      "source": "Externally supplied winding or physical star ground declaration",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "06_heaters",
+      "reference": "#FLG17",
+      "unit": 1,
+      "value": "PWR_FLAG",
+      "symbol": "power_PWR_FLAG",
+      "pins": {
+        "1": "GND"
+      },
+      "source": "Externally supplied winding or physical star ground declaration",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "T3",
+      "unit": 1,
+      "value": "220V 50Hz /18-0-18V 0.25A",
+      "symbol": "ControlTransformer_Logical",
+      "pins": {
+        "L": "L_SW",
+        "N": "N_SW",
+        "S1": "CTRL_AC1",
+        "CT": "GND",
+        "S2": "CTRL_AC2"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "9VA isolation transformer; insulation/fusing/mechanics require vendor evidence",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "D201",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "CTRL_RAW",
+        "2": "CTRL_AC1"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "D202",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "CTRL_RAW",
+        "2": "CTRL_AC2"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "D203",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "CTRL_AC1",
+        "2": "NEG_RAW"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "D204",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "CTRL_AC2",
+        "2": "NEG_RAW"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C201",
+      "unit": 1,
+      "value": "1000u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "CTRL_RAW",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "50V electrolytic, ripple rating required",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C208",
+      "unit": 1,
+      "value": "1000u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "GND",
+        "2": "NEG_RAW"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "50V electrolytic, ripple rating required",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "U6",
+      "unit": 1,
+      "value": "L7815CV",
+      "symbol": "Regulator_Linear_L7815",
+      "pins": {
+        "1": "CTRL_RAW",
+        "2": "GND",
+        "3": "+15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "TO220 heatsink; ST datasheet",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "U7",
+      "unit": 1,
+      "value": "L7915CV",
+      "symbol": "Regulator_Linear_L7915",
+      "pins": {
+        "1": "GND",
+        "2": "NEG_RAW",
+        "3": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "TO220 tab=negative input; isolated heatsink",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "U4",
+      "unit": 1,
+      "value": "L7812CV",
+      "symbol": "Regulator_Linear_L7812",
+      "pins": {
+        "1": "CTRL_RAW",
+        "2": "GND",
+        "3": "+12V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "TO220 heatsink; worst-case dissipation review",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "U5",
+      "unit": 1,
+      "value": "L7805CV",
+      "symbol": "Regulator_Linear_L7805",
+      "pins": {
+        "1": "+12V",
+        "2": "GND",
+        "3": "+5V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C202",
+      "unit": 1,
+      "value": "330n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "CTRL_RAW",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C203",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+12V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C204",
+      "unit": 1,
+      "value": "100u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "+12V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "50V electrolytic",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C205",
+      "unit": 1,
+      "value": "330n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+12V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C206",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+5V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C207",
+      "unit": 1,
+      "value": "47u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "+5V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "50V electrolytic",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C209",
+      "unit": 1,
+      "value": "330n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "CTRL_RAW",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C210",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "+15V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C211",
+      "unit": 1,
+      "value": "10u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "+15V",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "50V electrolytic",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C212",
+      "unit": 1,
+      "value": "2.2u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "GND",
+        "2": "NEG_RAW"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "50V electrolytic",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C213",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "GND",
+        "2": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "C214",
+      "unit": 1,
+      "value": "10u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "GND",
+        "2": "-15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "50V electrolytic",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "D205",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "CTRL_RAW",
+        "2": "+12V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "D206",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "+12V",
+        "2": "+5V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "D207",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "CTRL_RAW",
+        "2": "+15V"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "D208",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "-15V",
+        "2": "NEG_RAW"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "K1",
+      "unit": 1,
+      "value": "G5V-2-H1 DC12 (candidate)",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "1": "+12V",
+        "16": "COIL_CH"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "K2",
+      "unit": 1,
+      "value": "G5V-2-H1 DC12 (candidate)",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "1": "+12V",
+        "16": "COIL_CH"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "#FLG18",
+      "unit": 1,
+      "value": "PWR_FLAG",
+      "symbol": "power_PWR_FLAG",
+      "pins": {
+        "1": "CTRL_RAW"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "#FLG19",
+      "unit": 1,
+      "value": "PWR_FLAG",
+      "symbol": "power_PWR_FLAG",
+      "pins": {
+        "1": "NEG_RAW"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R618",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_AC",
+        "2": "MIX_OUT"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    }
+  ],
+  "layout": {
+    "07a_reverb_send": {
+      "positions": {
+        "JR1": [
+          30.48,
+          60.96,
+          0
+        ],
+        "C601": [
+          66.04,
+          60.96,
+          0
+        ],
+        "R601": [
+          104.14,
+          60.96,
+          0
+        ],
+        "R602": [
+          142.24,
+          99.06,
+          0
+        ],
+        "U10": [
+          190.5,
+          60.96,
+          0
+        ],
+        "D601": [
+          142.24,
+          139.7,
+          0
+        ],
+        "D602": [
+          180.34,
+          139.7,
+          0
+        ],
+        "C602": [
+          228.6,
+          60.96,
+          0
+        ],
+        "RV601": [
+          266.7,
+          99.06,
+          0
+        ],
+        "U10/2": [
+          320.04,
+          60.96,
+          0
+        ],
+        "R603": [
+          299.72,
+          139.7,
+          0
+        ],
+        "R604": [
+          345.44,
+          99.06,
+          0
+        ],
+        "R605": [
+          345.44,
+          177.8,
+          0
+        ],
+        "C603": [
+          266.7,
+          177.8,
+          0
+        ],
+        "JR2": [
+          228.6,
+          177.8,
+          0
+        ]
+      },
+      "notes": [
+        [
+          "C601 / R601 / R602 feed an attenuated SEND only. Dry does not pass through an op-amp.\n600 ohm tank input is seller confirmed; coil R/L and allowable current remain unmeasured.\nSet RV601 to minimum before commissioning. 220R is series isolation, not a guaranteed current limiter.",
+          20,
+          250,
+          1.3
+        ]
+      ],
+      "paper": "A2"
+    },
+    "07b_reverb_recovery": {
+      "positions": {
+        "JR3": [
+          30.48,
+          60.96,
+          0
+        ],
+        "C604": [
+          68.58,
+          60.96,
+          0
+        ],
+        "R606": [
+          104.14,
+          99.06,
+          0
+        ],
+        "U11": [
+          152.4,
+          60.96,
+          0
+        ],
+        "R607": [
+          129.54,
+          139.7,
+          0
+        ],
+        "R608": [
+          190.5,
+          99.06,
+          0
+        ],
+        "C605": [
+          190.5,
+          139.7,
+          0
+        ],
+        "C606": [
+          228.6,
+          60.96,
+          0
+        ],
+        "JR4": [
+          266.7,
+          60.96,
+          0
+        ],
+        "R609": [
+          266.7,
+          104.14,
+          0
+        ],
+        "U11/2": [
+          320.04,
+          60.96,
+          0
+        ],
+        "R610": [
+          320.04,
+          139.7,
+          0
+        ],
+        "K3/2": [
+          370.84,
+          139.7,
+          0
+        ],
+        "R611": [
+          266.7,
+          177.8,
+          0
+        ],
+        "U12": [
+          190.5,
+          215.9,
+          0
+        ],
+        "R613": [
+          228.6,
+          215.9,
+          0
+        ]
+      },
+      "notes": [
+        [
+          "2250 ohm tank output; high impedance recovery input. RV602 controls wet only.\nK3 shorts the wet branch via R610. U12A now processes WET ONLY.\nExpression-pedal gain-control stage remains a separate open interface; this draft does not implement it.",
+          20,
+          300,
+          1.3
+        ]
+      ],
+      "paper": "A2"
+    },
+    "07c_reverb_output": {
+      "positions": {
+        "R614": [
+          40.64,
+          60.96,
+          0
+        ],
+        "U12/2": [
+          104.14,
+          60.96,
+          0
+        ],
+        "R615": [
+          152.4,
+          60.96,
+          0
+        ],
+        "R616": [
+          190.5,
+          60.96,
+          0
+        ],
+        "C607": [
+          228.6,
+          60.96,
+          0
+        ],
+        "R617": [
+          266.7,
+          99.06,
+          0
+        ],
+        "JR5": [
+          419.1,
+          60.96,
+          0
+        ],
+        "JR6": [
+          40.64,
+          152.4,
+          0
+        ],
+        "U10/3": [
+          104.14,
+          152.4,
+          0
+        ],
+        "C610": [
+          83.82,
+          208.28,
+          0
+        ],
+        "C611": [
+          124.46000000000001,
+          208.28,
+          0
+        ],
+        "U11/3": [
+          190.5,
+          152.4,
+          0
+        ],
+        "C612": [
+          170.18,
+          208.28,
+          0
+        ],
+        "C613": [
+          210.82,
+          208.28,
+          0
+        ],
+        "U12/3": [
+          276.86,
+          152.4,
+          0
+        ],
+        "C614": [
+          256.54,
+          208.28,
+          0
+        ],
+        "C615": [
+          297.18,
+          208.28,
+          0
+        ],
+        "C616": [
+          345.44,
+          99.06,
+          0
+        ],
+        "C617": [
+          383.54,
+          99.06,
+          0
+        ],
+        "K3": [
+          345.44,
+          152.4,
+          0
+        ],
+        "K3/3": [
+          383.54,
+          208.28,
+          0
+        ],
+        "R612": [
+          457.2,
+          60.96,
+          0
+        ],
+        "R618": [
+          304.8,
+          99.06,
+          0
+        ]
+      },
+      "notes": [
+        [
+          "R612 carries passive dry from FX_RETURN to MIX_OUT. R618 adds wet through 1M.\nDry gain is independent of RV602 and K3, but passive loading causes fixed attenuation.\nNo dry audio passes through U10/U11/U12. Original C19/R24 and phase inverter remain.\nPCB layout must change; the old 160 x 100 board is not this circuit. Cabinet is already delivered.",
+          20,
+          285,
+          1.3
+        ]
+      ],
+      "paper": "A2"
+    },
+    "07d_reverb_harness": {
+      "positions": {
+        "RT1": [
+          101.6,
+          76.2,
+          0
+        ],
+        "RV602": [
+          228.6,
+          76.2,
+          0
+        ]
+      },
+      "notes": [
+        [
+          "Received Mable tank: 3 springs, 600 ohm input, 2250 ohm output, medium decay, no lock.\nInstall horizontal, OPEN SIDE DOWN. Input insulated; output grounded to tank case.\nKeep tank return shielded; avoid a second audio/chassis ground bond. Preserve protective earth.\nActual tank dimensions and cabinet assembly clearance still require measurement.",
+          20,
+          150,
+          1.3
+        ]
+      ],
+      "paper": "A2"
+    }
+  }
+}

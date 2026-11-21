@@ -1,0 +1,101 @@
+(footprint "KYET_KP104J2J1006"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "KYET KP104J2J1006;630V5% polypropylene; body W12 H11 T5.5, each+/-1mm; pitch10+/-0.5mm; lead0.6+/-0.05mm. Courtyard max body plus0.5mm. No3D model. Temperature<=100C. Peak voltage/ripple and layout isolation require review.")
+	(property "Reference" "REF**"
+		(at 5 -4.75 0)
+		(layer "F.SilkS")
+		(uuid "e5ca5d26-6b91-4600-a4ac-883eadca24ee")
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+	)
+	(property "Value" "KP104J2J1006"
+		(at 5 4.75 0)
+		(layer "F.Fab")
+		(uuid "387876ad-5529-4c5d-a94e-d9db91500579")
+		(effects
+			(font
+				(size 1 1)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "37ba5bc8-8c22-4b2b-a3f3-71c33485c373")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c88e6484-ef67-4691-a2ed-715f2e0895db")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -1.15 -2.9)
+		(end 11.15 2.9)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "11d8571c-c886-4f12-9443-9a019a79f49a")
+	)
+	(fp_rect
+		(start -2 -3.75)
+		(end 12 3.75)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "48639088-5e39-4ab5-9b9e-2facb1232bdf")
+	)
+	(fp_rect
+		(start -1 -2.75)
+		(end 11 2.75)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "f7d9b33b-32c9-45f0-9532-49720ad3d137")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 1.8 1.8)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "0c1b9592-1e07-47e8-a0de-59258592cac9")
+	)
+	(pad "2" thru_hole circle
+		(at 10 0)
+		(size 1.8 1.8)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f12a70ff-17d7-42d5-8e3c-95d03d9013a0")
+	)
+	(embedded_fonts no)
+)

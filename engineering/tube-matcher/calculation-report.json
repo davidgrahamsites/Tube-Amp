@@ -1,0 +1,114 @@
+{
+  "revision": "0.1",
+  "status": "offline-arithmetic-only",
+  "all_tube_values_synthetic": true,
+  "hardware_tests_run": false,
+  "profile_checks": [
+    {
+      "profile": "EL34-P01-v0.1",
+      "result": "range-and-anchor-arithmetic-consistent",
+      "limitation": "does not predict actual tube current or validate protection"
+    },
+    {
+      "profile": "12AX7-T01-v0.1",
+      "result": "range-and-anchor-arithmetic-consistent",
+      "limitation": "does not predict actual tube current or validate protection"
+    }
+  ],
+  "numerical_checks": [
+    "mismatch identity",
+    "mismatch symmetry",
+    "gm analytic example",
+    "rp analytic example",
+    "bin boundary is half-open",
+    "uncertainty can prevent acceptance",
+    "invalid matching value rejected: 0",
+    "invalid matching value rejected: -1",
+    "invalid matching value rejected: nan",
+    "invalid matching value rejected: inf",
+    "uncertainty interval reaching zero rejected",
+    "same coarse bin can fail pair gate",
+    "adjacent coarse bins can match"
+  ],
+  "power_budget": {
+    "regulated_output_capacity_w": 48.6,
+    "estimated_input_with_allowances_w": 89.8,
+    "adapter_capacity_w": 120,
+    "remaining_allowance_w": 30.200000000000003,
+    "efficiency_assumed_not_measured": true
+  },
+  "passive_discharge": {
+    "capacitance_uf": 22,
+    "resistance_ohm": 100000,
+    "start_v": 300,
+    "finish_v": 10,
+    "stored_energy_j": 0.99,
+    "initial_resistor_power_w": 0.9,
+    "ideal_time_s": 7.482634239656741,
+    "scope": "one rail, ideal RC; not a guard-release criterion"
+  },
+  "active_discharge": {
+    "capacitance_uf": 22,
+    "resistance_ohm": 10000,
+    "start_v": 300,
+    "finish_v": 10,
+    "stored_energy_j": 0.99,
+    "initial_resistor_power_w": 9.0,
+    "ideal_time_s": 0.7482634239656742,
+    "scope": "one rail, ideal RC; not a guard-release criterion"
+  },
+  "acquisition_examples": {
+    "triode_shunt_v_at_1p2ma": 0.12,
+    "triode_shunt_v_at_3ma": 0.3,
+    "el34_shunt_v_at_60ma": 0.06,
+    "screen_shunt_v_at_10ma": 0.1,
+    "ideal_bias_dac_step_mv": 0.91552734375,
+    "current_change_ua_at_gm11": 10.07080078125
+  },
+  "synthetic_el34_metric_examples": {
+    "anchor_current": {
+      "central_mismatch_pct": 2.955665024630549,
+      "worst_case_mismatch_pct": 4.954932768556372,
+      "uncertainty_each_pct": 1,
+      "limit_pct": 5,
+      "metric_result": "accept-metric"
+    },
+    "gm": {
+      "central_mismatch_pct": 2.8169014084507107,
+      "worst_case_mismatch_pct": 4.816223067173653,
+      "uncertainty_each_pct": 1,
+      "limit_pct": 10,
+      "metric_result": "accept-metric"
+    },
+    "curve_worst_case_rms_pct": 5.678134779717732,
+    "complete_pair_accepted": false,
+    "reason": "illustrates numeric gates only; no real health, drift, calibration or curve measurements"
+  },
+  "synthetic_12ax7_metric_examples": {
+    "current": {
+      "central_mismatch_pct": 1.6528925619834727,
+      "worst_case_mismatch_pct": 3.6525906949838873,
+      "uncertainty_each_pct": 1,
+      "limit_pct": 5,
+      "metric_result": "accept-metric"
+    },
+    "gm_at_1pct_uncertainty": {
+      "central_mismatch_pct": 1.2422360248447215,
+      "worst_case_mismatch_pct": 3.2420346562325335,
+      "uncertainty_each_pct": 1,
+      "limit_pct": 5,
+      "metric_result": "accept-metric"
+    },
+    "gm_at_2pct_uncertainty": {
+      "central_mismatch_pct": 1.2422360248447215,
+      "worst_case_mismatch_pct": 5.241584896286177,
+      "uncertainty_each_pct": 2,
+      "limit_pct": 5,
+      "metric_result": "uncertain-retest"
+    },
+    "rp_kohm": 62.50000000000003,
+    "mu_estimate": 99.99999999999999,
+    "complete_bottle_accepted": false,
+    "reason": "synthetic local slopes only; no real health, secondary-point or calibration checks"
+  }
+}

@@ -1,0 +1,16 @@
+Bias v0.2 - ideal transformer tap / reference diode, no winding regulation
+VAC ac 0 SIN(0 70.7107 50)
+R40 ac diode_ac 1k
+D7 raw diode_ac DREF
+.model DREF D(Is=5n Rs=0.05 N=1.8 Bv=1000 Ibv=5u)
+C28 0 raw 10u
+R39 raw filt 4.7k
+C27 0 filt 10u
+R38 filt bias 22k
+RPOT bias stop 25000
+R503 stop 0 33k
+R33 ga bias 100k
+R34 gb bias 100k
+RTESTA ga 0 1e12
+RTESTB gb 0 1e12
+.end

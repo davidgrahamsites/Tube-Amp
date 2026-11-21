@@ -1,0 +1,131 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-04T05:12:32",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56",
+            "violations": []
+        },
+        {
+            "path": "/Clean channel - original values and actual valve pins/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800",
+            "violations": []
+        },
+        {
+            "path": "/Dirty channel - gain stages, cathode follower and Marshall tone stack/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b",
+            "violations": []
+        },
+        {
+            "path": "/Dirty cathode follower, tone controls and master volume/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/f6df3650-4c89-5e6e-9389-13cf6b4ae0ad",
+            "violations": []
+        },
+        {
+            "path": "/Channel relays, input and normalled effects loop/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/1c116e34-ac54-5b0c-961d-68eab3d403fb",
+            "violations": []
+        },
+        {
+            "path": "/Long-tail phase inverter, EL34 pair, output and feedback/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa",
+            "violations": []
+        },
+        {
+            "path": "/Output transformer, speaker taps and impedance selector/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/acdbd7dd-8cd1-5895-9f00-564cdfdc388b",
+            "violations": []
+        },
+        {
+            "path": "/Mains, HV, bias, heater elevation and reverb supply/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892",
+            "violations": []
+        },
+        {
+            "path": "/Bias supply, heater elevation and bounded reverb rail/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330",
+            "violations": []
+        },
+        {
+            "path": "/Heater pin wiring, protective earth and chassis interfaces/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d48779ef-2759-56c8-9634-7b15538da9a7",
+            "violations": [
+                {
+                    "description": "Both GND and PE are attached to the same items; GND will be used in the netlist",
+                    "items": [
+                        {
+                            "description": "Global Label 'GND'",
+                            "pos": {
+                                "x": 0.9017,
+                                "y": 2.0955
+                            },
+                            "uuid": "9878993a-1a59-5584-8342-fc91302529d9"
+                        },
+                        {
+                            "description": "Global Label 'PE'",
+                            "pos": {
+                                "x": 0.254,
+                                "y": 2.0955
+                            },
+                            "uuid": "e5fac41f-9753-503f-a3e4-f4aea01f439c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "multiple_net_names"
+                }
+            ]
+        },
+        {
+            "path": "/Parallel 12AT7 spring driver, 12AX7 recovery and common mixer/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2e568992-f617-5884-8b93-9d51e251fa52",
+            "violations": []
+        },
+        {
+            "path": "/Isolated low-voltage relay and 5V logic supply/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3",
+            "violations": []
+        },
+        {
+            "path": "/Debounced momentary controls, reset and relay drivers/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6",
+            "violations": []
+        },
+        {
+            "path": "/Toggle latches, brownout reset and relay drivers/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89",
+            "violations": []
+        },
+        {
+            "path": "/Logic power units, unused inputs and supply decoupling/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/3a2f3a05-76ed-579e-ad89-f7acbc118851",
+            "violations": []
+        }
+    ],
+    "source": "Renegade_220V_Reverb.kicad_sch"
+}

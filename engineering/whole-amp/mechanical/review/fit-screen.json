@@ -1,0 +1,90 @@
+{
+  "scope": "Dimension arithmetic; assumptions are not measured clearances",
+  "single_plane_top_screen": {
+    "board_area_mm2": 109900,
+    "external_top_area_mm2": 109220,
+    "excess_mm2": 680,
+    "passes": false,
+    "limit": "Only one horizontal plane confined to exterior top footprint; not proof that every 3D arrangement fails"
+  },
+  "speaker_existing_holes": {
+    "radial_mismatch_mm": 7.5,
+    "combined_hole_radii_mm": 6.45,
+    "holes_overlap_even_with_zero_size_pin": false,
+    "verdict": "FAIL for unchanged circular holes, same center and matching orientation",
+    "scope": "HISTORICAL seller-drawing comparison only; not the received cabinet measurement"
+  },
+  "baffle_attachment_dimension_conflict_mm": 8,
+  "speaker_front_projection_only": {
+    "left_margin_mm": 49.5,
+    "right_margin_mm": 109.5,
+    "top_bottom_margin_mm_assuming_centered_height": 35.5,
+    "installed_rear_clearance_mm": null
+  },
+  "two_plane_board_only": {
+    "plane_A": {
+      "boards": [
+        "Main",
+        "Reverb"
+      ],
+      "envelope_mm": [
+        458,
+        140
+      ],
+      "fits_assumed_tray": true
+    },
+    "plane_B": {
+      "boards": [
+        "Power",
+        "Control"
+      ],
+      "envelope_mm": [
+        398,
+        175
+      ],
+      "fits_assumed_tray": true
+    }
+  },
+  "tank_screen": {
+    "reference_bare_width_235_vs_baffle_width468_mm": 233,
+    "installed_floor_clearance": null,
+    "note": "Baffle width is not a measured free floor dimension; cable/bag/feet/height still unknown"
+  },
+  "reference_tank_model_consistency": {
+    "RL_equivalent_H_from_800ohm_58ohm_1kHz": 0.12698889033033892,
+    "ohm_from_150mH_58ohm_1kHz": 944.260767001384,
+    "note": "Legacy nominal L and Z do not define one exact constant-RL model; do not silently replace simulation model"
+  },
+  "assembly_fit_cleared": false,
+  "missing_interfaces": [
+    "Actual usable chassis opening/support geometry and tolerances",
+    "Final chassis construction and board mounting planes",
+    "Speaker model, cutout requirement and installed baffle-to-rear clearance",
+    "Final PT/OT/choke/aux transformer drawings and locations",
+    "Six socket/tube/shield/retainer envelopes, thermal and extraction clearances",
+    "Exact quoted tank identity, height, mounting hole pattern, bag/grommets and cable allowance",
+    "Ten controls, jacks and switch body clearances; knob/shaft confirmation",
+    "Handle bolts, braces, back panels and earth-bond keepouts"
+  ],
+  "received_vs_drawing": {
+    "source": "User measurements; exact datums and uncertainty not independently inspected",
+    "A_front_mm": 467,
+    "A_rear_mm": 467,
+    "A_verdict": "Not directly specified: drawing508 is outside width;468 is separate baffle width",
+    "B_mm": 160,
+    "B_verdict": "Not directly specified: drawing215/242 are external top/bottom depths",
+    "C1_mm": 294,
+    "C2_mm": 294,
+    "C_pair_difference_mm": 0,
+    "drawing_speaker_circle_mm": 312,
+    "C1_minus_drawing_mm": -18,
+    "C2_minus_drawing_mm": -18,
+    "C_verdict": "DIFFERS",
+    "design_basis": "Received user-reported spacing; do not drill or select from the conflicting312mm drawing",
+    "reference_speaker_radial_offset_each_pair_mm": [
+      1.5,
+      1.5
+    ],
+    "reference_speaker_fit": "Not qualified: actual studs/holes, cutout, frame and installed depth still need checking"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "revision": "0.3 DRAFT",
+  "date": "2026-10-04",
+  "kicad_version": "10.0.6",
+  "native_parse_export": "Revised wired hierarchy freshly exported successfully; no annotation warnings. Historical baseline unchanged.",
+  "revised_component_count": 204,
+  "erc": {
+    "baseline": {
+      "errors": 0,
+      "warnings": 2,
+      "violations": [
+        {
+          "description": "Both B_MAIN and B_RAW are attached to the same items; B_MAIN will be used in the netlist",
+          "items": [
+            {
+              "description": "Global Label 'B_MAIN'",
+              "pos": {
+                "x": 0.6477,
+                "y": 2.3495
+              },
+              "uuid": "31598659-b615-5cbc-af2e-39020f6b0407"
+            },
+            {
+              "description": "Global Label 'B_RAW'",
+              "pos": {
+                "x": 2.7432,
+                "y": 1.0033
+              },
+              "uuid": "1ec5f728-1585-521c-bd7f-9ff535f6c0fe"
+            }
+          ],
+          "severity": "warning",
+          "type": "multiple_net_names"
+        },
+        {
+          "description": "Both GND and PE are attached to the same items; GND will be used in the netlist",
+          "items": [
+            {
+              "description": "Global Label 'GND'",
+              "pos": {
+                "x": 1.0033,
+                "y": 1.8542
+              },
+              "uuid": "3ff978c1-51e1-5bac-a86a-1a0f810aea02"
+            },
+            {
+              "description": "Global Label 'PE'",
+              "pos": {
+                "x": 1.1684,
+                "y": 1.27
+              },
+              "uuid": "5216dea5-76fe-524b-a69d-2b492f531deb"
+            }
+          ],
+          "severity": "warning",
+          "type": "multiple_net_names"
+        }
+      ]
+    },
+    "revised": {
+      "errors": 0,
+      "warnings": 1,
+      "violations": [
+        {
+          "description": "Both GND and PE are attached to the same items; GND will be used in the netlist",
+          "items": [
+            {
+              "description": "Global Label 'GND'",
+              "pos": {
+                "x": 0.9017,
+                "y": 2.0955
+              },
+              "uuid": "9878993a-1a59-5584-8342-fc91302529d9"
+            },
+            {
+              "description": "Global Label 'PE'",
+              "pos": {
+                "x": 0.254,
+                "y": 2.0955
+              },
+              "uuid": "e5fac41f-9753-503f-a3e4-f4aea01f439c"
+            }
+          ],
+          "severity": "warning",
+          "type": "multiple_net_names"
+        }
+      ]
+    }
+  },
+  "connectivity": [
+    {
+      "project": "Renegade_Source_Baseline",
+      "native_components": 119,
+      "native_nets": 85,
+      "mapped_connected_pins": 317,
+      "explicit_no_connect_pins": 3,
+      "errors": [],
+      "passed": true,
+      "netlist_sha256": "7fc46a858836ae6f1ba6d51912c66339135bbc2a4c9a1b11bc09d74fbf57a929"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "native_components": 204,
+      "native_nets": 137,
+      "mapped_connected_pins": 536,
+      "explicit_no_connect_pins": 11,
+      "errors": [],
+      "passed": true,
+      "netlist_sha256": "010a2012ea2841b629b3764386d2a97a690cb460da6574f74a41ac39a9f5fb45"
+    }
+  ],
+  "visual_review": "All revised pages reviewed at overview scale; critical audio/power/controller pages in detail; collided valve/spare-relay/reverb capacitor fields corrected.",
+  "simulations": "Bias at four mains conditions x three trim settings, plus RC/ideal-Schmitt bounce exploration; selected-component S01-S06 not complete",
+  "icm_check": "clean",
+  "hashes": {
+    "02_dirty.kicad_sch": "dfc06c0d1ff718b717d1b114eed1fc2da3a567445d82dbeb0ff8bc625c73fa69",
+    "05b_bias_reverb_supply.kicad_sch": "3f2ba9602c9dc768d99045c6e8bd01b5e01824c32c76a612ca9039732ec79df9",
+    "Renegade_220V_Reverb.kicad_sch": "95dc6e1220b6270c334c17f68517048382186c8e936c6ded2813f2fd587e2961",
+    "03_routing.kicad_sch": "a73af963ec0f60567e596fbf12c3ac5d51e1750edd4476aa428905c3ad92795b",
+    "02b_dirty_tone.kicad_sch": "41df0d932d66c46a3e478b3eda7415a64a39b437de4d1807c047dc0c9c892304",
+    "07_reverb.kicad_sch": "6c98a94a061bebb83d67b7ad357acdfda401319c3212ed8d1c6a51e7b146f2c5",
+    "09b_latches_drivers.kicad_sch": "ffbf6b2fd673e75432bd9184b3e20e19cb7a4944a71002657babfca45f6b3e95",
+    "05_supplies.kicad_sch": "5629c895472e314f73cee9759a6ee7ddc06ef70014e70ba4d08adc1c6513d765",
+    "09_controller.kicad_sch": "204198622140e01dbf211cbf4c1eafec992bd1b15b75623805fc87867b264d7f",
+    "04_output.kicad_sch": "0f4de74681d8e399d18759448a20d338f8dfd065fc2508969840f02faad466d0",
+    "04b_output_transformer.kicad_sch": "9c29da0f30d665b1f2133b0d3c4e86f2c804fdaba5002a36a0a9a5d247084d27",
+    "08_control_supply.kicad_sch": "3eeb0c8c6d321ce95f2f8eac1ae91dd25b8f5c15543f162ac17e6a4c4860429d",
+    "01_clean.kicad_sch": "8889ae0b6ebb8916b940daf4f80b8ab8fda5aecb051ef48e9916d1bc1fbeefd6",
+    "10_logic_power.kicad_sch": "e919a1a706e24692390a589551319090eba1493c99c9743c0d7e9bd58fb68a4c",
+    "06_heaters.kicad_sch": "4b983046fbd0b0e4c1f37df843a12d76eac60ac9ae2c7a296b5a230031bbb9cf",
+    "baseline/02_dirty.kicad_sch": "7154316cbe43165ab6281742a3e285aae12e876e7dcac1974d5cfab6c0a58290",
+    "baseline/05b_bias_reverb_supply.kicad_sch": "57be51891f03a2ae3ef70cb349d68ae9cecb71a6b6101d3657ead3dab4b15759",
+    "baseline/03_routing.kicad_sch": "4eb72d053641f7c236eeeebb24c545370ab35f50dbda4e2fe287c81b37072676",
+    "baseline/02b_dirty_tone.kicad_sch": "51bb74095d4f54b5c9b45db17a1f129858aa4dd807ac34591c1e9474466e96f2",
+    "baseline/05_supplies.kicad_sch": "f9a0c48a2eaf11fa97d0f8c469474a731dfefc6f22450d99427dde63189c260c",
+    "baseline/04_output.kicad_sch": "c2ebd3bdf2fc12cf395d974a9d3033fd1abff3f6203e68508336092794362d20",
+    "baseline/04b_output_transformer.kicad_sch": "cf7cd7ec8a95b247ca0ca5f514359283b914f654cf498ec2447155302e8c4d48",
+    "baseline/Renegade_Source_Baseline.kicad_sch": "f2920794bf4f7df26f3fac251e20c021ce754f60c22c0f6db75294053c701cce",
+    "baseline/08_control_supply.kicad_sch": "0ad0cdb9406ea238e47c2a0ae32e87484739e3a95e15888ce6bae609b5193b41",
+    "baseline/01_clean.kicad_sch": "af9733fbc93f60c209e3c27114c69b8517af498938f2dc6b644baba57a0e61f1",
+    "baseline/06_heaters.kicad_sch": "8730c65154f8ad5d5d0b9f7b1a1334d5dcec0504cc5fd58d88b85a09c3828eb5",
+    "design-connectivity.json": "149576de02adda06ff5164e059dc777b8e4ac54617dcd90333c7ebc0ce003d80",
+    "libraries/Renegade_Draft.kicad_sym": "1fd6c5bdd216b4d9a594072eac8dcbcb714160fcd9ccc4bfe649b11c64f706cc",
+    "bom-draft.csv": "2de0a559d2ab2deddacb980de7f1ec5fb1ad8e11f442bd8a2aa3d715212389b9",
+    "simulation/explorations.json": "0bb013b9cfdc662ad9c0cd46bd928aa44f3de341aaca401b695cecdfada10cf9",
+    "validation/Renegade_220V_Reverb.pdf": "2812df481b2f6f43da5dfc2d39eba879388970af8dd0991601907961cd310f89",
+    "wire-layout.json": "88a3667619859e7ea942e50344b907764440ff8bded6698c2318f99c35376f86",
+    "wire-layout-files.json": "577400b6631d57926f1bde730bce8f7b93a973338a0ec55d6eb4a5babe44f77f",
+    "validation/layout-equivalence.json": "b2cad84ef6a5ace08e8f191b35078ed18c6463477fa417ceddd082208c6817a8",
+    "validation/wire-layout-report.json": "5d5edf7b6d46b8a1912ecdd8d83315d48b0048355fda5e9e2b61f38a3746fcfc"
+  },
+  "Renegade_220V_Reverb_pdf_pages": 15,
+  "Renegade_Source_Baseline_pdf_pages": 11,
+  "native_cli_run": "wired-native-cli-run.json",
+  "layout_equivalence": {
+    "baseline_revision": "0.2-DRAFT",
+    "presentation_revision": "0.3 DRAFT",
+    "physical_components": 204,
+    "native_nets": 137,
+    "same_component_references": true,
+    "same_component_values": true,
+    "same_pin_partitions": true,
+    "previous_netlist_sha256": "e11714526f75ed9e44b7821fd0b109498e37217c23ade25d9fd1da7c8240d816",
+    "current_netlist_sha256": "010a2012ea2841b629b3764386d2a97a690cb460da6574f74a41ac39a9f5fb45",
+    "passed": true
+  },
+  "wire_layout": "wire-layout-report.json"
+}

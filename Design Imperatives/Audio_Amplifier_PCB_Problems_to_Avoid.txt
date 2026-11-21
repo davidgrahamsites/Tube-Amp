@@ -1,0 +1,283 @@
+AUDIO AMPLIFIER PCB PROBLEMS TO AVOID
+A design-review reference for solid-state and tube amplifiers.
+
+
+1. GROUNDING, HUM, AND BUZZ
+=========================
+
+1. Sharing input-ground paths with speaker current.
+   Keep high-current output returns out of the input and feedback reference
+   paths; shared impedance can create distortion or oscillation.
+   Reference: https://www.ti.com/lit/ds/symlink/lm3886.pdf
+
+2. Large rectifier-reservoir charging loops.
+   Keep the transformer secondary, rectifier, and first reservoir capacitor
+   connections compact and separate from quiet audio returns.
+
+3. Accidental ground connections through hardware.
+   Check jack sleeves, potentiometer bodies, mounting holes, shields, and metal
+   standoffs for unintended circuit-ground-to-chassis connections.
+   Reference: https://www.valvewizard.co.uk/Grounding.pdf
+
+4. Treating every "GND" point as electrically identical.
+   Trace resistance and inductance matter, especially where large or rapidly
+   changing currents flow.
+
+5. Assuming "star ground" or "ground plane" automatically solves everything.
+   Choose the grounding arrangement around actual return-current paths; do not
+   split planes or join grounds indiscriminately.
+   Reference: https://sound-au.com/earthing.htm
+
+
+2. SIGNAL ROUTING AND INTERFERENCE
+==================================
+
+6. Putting the output stage beside the input stage.
+   Arrange the board so large output signals do not couple back into sensitive
+   inputs.
+
+7. Long high-impedance input traces.
+   Keep input wiring and traces short, with the input stage and its associated
+   components nearby.
+
+8. Long parallel runs between sensitive and noisy signals.
+   Avoid running input traces alongside outputs, supply switching nodes, or
+   high-level signals -- including on adjacent layers.
+   Reference: https://www.ti.com/lit/ds/symlink/lm3886.pdf
+
+9. Poorly routed balanced inputs.
+   Route the two signal conductors together and maintain similar surroundings
+   rather than sending them through different parts of the board.
+   Reference: https://www.ti.com/lit/an/sboa237/sboa237.pdf
+
+10. Placing interference sources beside sensitive circuitry.
+    Separate transformers, switching supplies, and high-current switching
+    sections from input and low-level recovery stages; include the off-board
+    wiring in this review.
+    Reference: https://www.valvewizard.co.uk/Grounding.pdf
+
+
+3. FEEDBACK, STABILITY, AND OUTPUT CONNECTIONS
+=============================================
+
+11. Large feedback loops.
+    Place feedback resistors and compensation components close to the amplifier
+    pins.
+
+12. Excess copper around sensitive feedback nodes.
+    Extra pad area, vias, and nearby planes add capacitance. Follow the device's
+    layout guidance rather than automatically pouring ground everywhere.
+    Reference: https://www.analog.com/en/resources/analog-dialogue/articles/high-speed-printed-circuit-board-layout.html
+
+13. Ignoring minimum stable gain.
+    An amplifier may oscillate when used below its specified stable gain, even
+    though the schematic otherwise looks reasonable.
+
+14. Omitting or relocating output-stability components.
+    Implement the required compensation, output isolation, or resistor-capacitor
+    network for the actual amplifier and load -- not a copied universal
+    arrangement.
+    Reference: https://www.ti.com/lit/ds/symlink/lm3886.pdf
+
+15. Grounding a bridge-tied speaker output.
+    In a bridge-tied-load amplifier, neither speaker terminal is necessarily
+    ground. Do not join channel "negative" outputs together unless the design
+    explicitly permits it.
+    Reference: https://www.ti.com/lit/ug/slou020a/slou020a.pdf
+
+
+4. POWER DISTRIBUTION AND DECOUPLING
+===================================
+
+16. Using large reservoir capacitors instead of local bypass capacitors.
+    The main capacitor bank does not replace the bypassing required at each
+    amplifier.
+
+17. Correct bypass values but poor placement.
+    Minimize the complete capacitor-device-return loop, not just the distance
+    from the capacitor to the supply pin.
+    Reference: https://www.analog.com/en/resources/analog-dialogue/articles/high-speed-printed-circuit-board-layout.html
+
+18. Allowing stages to interact through the supply.
+    Provide the intended local filtering and return connections so changing
+    current in one stage does not modulate another.
+    Reference: https://www.valvewizard.co.uk/Grounding.pdf
+
+19. Wide power traces with hidden narrow bottlenecks.
+    Check pad exits, vias, connectors, copper necks, and thermal-relief spokes --
+    not only the main trace width.
+    Reference: https://www.ti.com/lit/pdf/sloa103a
+
+20. Rating capacitors only for nominal running voltage.
+    Check the maximum voltage actually possible, including startup, high mains,
+    and light-load conditions; do not exceed capacitor ratings.
+    Reference: https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-aluminum.pdf
+
+
+5. COMPONENTS, HEAT, AND RELIABILITY
+===================================
+
+21. Reversed electrolytic capacitors.
+    Verify polarity against the actual voltages. On a negative supply rail, the
+    capacitor's positive terminal may connect to ground.
+    Reference: https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-aluminum.pdf
+
+22. Ignoring capacitor ripple-current and temperature ratings.
+    Keep capacitors away from concentrated heat and leave their pressure-relief
+    vents unobstructed.
+    Reference: https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-aluminum.pdf
+
+23. Inadequate thermal paths.
+    Design the heatsink, exposed-pad connection, copper area, and thermal vias as
+    part of the amplifier -- not as additions after routing.
+    Reference: https://www.ti.com/lit/SLYT182
+
+24. Assuming a metal tab or thermal pad is ground.
+    It may be connected to a supply rail. Verify the exact package before
+    attaching it to a grounded heatsink.
+    Reference: https://www.ti.com/lit/ds/symlink/lm3886.pdf
+
+25. Flux residue and contamination around high-impedance nodes.
+    Specify suitable cleaning and inspect these areas carefully; surface leakage
+    can upset bias and increase noise.
+    Reference: https://www.analog.com/en/resources/technical-articles/signal-conditioning-for-high-impedance-sensors.html
+
+
+6. CHANNEL SWITCHING, MUTING, AND FOOTSWITCH CONTROL
+==================================================
+
+26. Assuming debouncing prevents audio pops.
+    Debouncing addresses repeated switching commands; DC discontinuities and
+    stored charge require separate attention.
+
+27. Leaving disconnected audio nodes floating.
+    Provide appropriate DC reference or discharge paths without excessively
+    loading the signal.
+    Reference: https://e2e.ti.com/support/switches-multiplexers-group/switches-multiplexers/f/switches-multiplexers-forum/1114638/faq-how-can-i-reduce-the-click-and-pop-noise-on-my-audio-switch-and-detection-jack
+
+28. Ignoring power-on and power-off transients.
+    Design muting and settling behavior for both directions of the power cycle.
+    Reference: https://www.analog.com/en/resources/technical-articles/how-to-pick-a-clickandpop-suppressor.html
+
+29. Missing or unsuitable relay-coil suppression.
+    Clamp the coil transient, but account for the clamp's effect on relay release
+    time and the driver's voltage rating.
+    Reference: https://www.te.com/en/products/relays-and-contactors/electromechanical-relays/intersection/relay-coil-suppression-dc-relays.html
+
+30. Using power-relay contacts for tiny audio signals without checking suitability.
+    Verify low-level switching performance and minimum-load guidance, not merely
+    the maximum current rating.
+    Reference: https://www.ia.omron.com/support/faq/answer/36/faq02810/
+
+31. Floating logic inputs or slow edges into ordinary CMOS inputs.
+    Define control states and use appropriate input conditioning; do not assume
+    an unused or disconnected input is harmless.
+    Reference: https://e2e.ti.com/support/logic-group/logic/f/logic-forum/737694/faq-how-does-a-slow-or-floating-input-affect-a-cmos-device
+
+
+7. TUBE-AMPLIFIER-SPECIFIC BOARD PROBLEMS
+=======================================
+
+32. Long unprotected grid connections.
+    Keep the connection after a grid-stopper resistor as short as practicable;
+    long grid leads increase susceptibility to parasitic oscillation.
+    Reference: https://www.valvewizard.co.uk/gridstopper.html
+
+33. Large AC-heater loops near signal wiring.
+    Keep heater conductors closely paired, appropriately sized, and away from
+    sensitive signal paths.
+
+34. Floating heater supplies.
+    Provide the intended DC reference or elevation arrangement; a DC heater
+    supply is not automatically hum-free.
+
+35. Exceeding heater-to-cathode voltage limits.
+    Check elevated-cathode stages, particularly cathode followers, against the
+    selected tube's ratings.
+    Reference: https://www.valvewizard.co.uk/heater.html
+
+36. Remote stage-filter capacitors and poorly placed returns.
+    Keep each stage's supply-current loop controlled; inadequate local decoupling
+    can produce low-frequency "motorboating" oscillation.
+    Reference: https://www.valvewizard.co.uk/Grounding.pdf
+
+
+8. MAINS AND HIGH-VOLTAGE SAFETY
+==============================
+
+37. Using ordinary PCB default clearances for mains or tube high voltage.
+    Determine creepage and clearance from working voltage, transients, insulation
+    requirements, board material, environment, and altitude -- not one universal
+    spacing.
+
+38. Checking only visible top-layer spacing.
+    Review every copper layer, connector, component body, mounting fastener, and
+    chassis interface for insulation-barrier problems.
+
+39. Treating an unqualified coating as permission to reduce spacing.
+    Only claim insulation or creepage benefits supported by the applicable
+    coating system and safety requirements.
+    Reference: https://www.ti.com/lit/ml/slup421/slup421.pdf
+
+40. Relying on signal-ground wiring for protective earth.
+    Use a dedicated, secure chassis safety-earth connection.
+    NEVER DISCONNECT PROTECTIVE EARTH TO CURE HUM.
+    Reference: https://sound-au.com/earthing.htm
+
+41. Assuming "unplugged" means safe.
+    Provide a discharge and verification plan for stored energy; treat exposed
+    circuitry as potentially live until its voltage has been checked.
+    Reference: https://www.tek.com/en/documents/technical-brief/floating-oscilloscope-measurements-and-operator-protection
+
+
+9. FOOTPRINTS, CONNECTORS, AND ASSEMBLY
+======================================
+
+42. Trusting a footprint because its name looks correct.
+    Verify symbol pin -> footprint pad -> physical component terminal.
+
+43. Confusing top and bottom views.
+    Check orientation particularly carefully for tube sockets, relays,
+    transistors, and connectors.
+
+44. Incorrect pitch, hole size, or body clearance.
+    Compare footprints against the exact purchased part's drawing.
+
+45. Unclear assembly markings.
+    Make pin 1, polarity, connector functions, and supply labels unambiguous.
+
+46. Mounting hardware colliding with components or copper.
+    Include screws, washers, standoffs, and enclosure clearances in the mechanical
+    review.
+
+47. Poor solderability around large copper areas.
+    Review thermal reliefs, mask openings, paste requirements, and exposed-pad
+    assembly instructions.
+    Reference: https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html
+
+
+10. VERIFICATION BEFORE ORDERING AND ENERGIZING
+==============================================
+
+48. A PCB that no longer matches the schematic.
+    Update it from the schematic and run schematic-parity checks.
+
+49. Treating a clean design-rule check as proof of a good amplifier.
+    Configure the correct rules and review every exception; automated checks do
+    not establish noise performance or stability.
+
+50. Not inspecting the fabrication outputs.
+    Review the generated copper, solder-mask, board-outline, and drill files --
+    not just the editable PCB view.
+    Reference: https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html
+
+51. Assuming no audible squeal means no oscillation.
+    Parasitic oscillation may be ultrasonic; include suitable instrument checks
+    in validation.
+    Reference: https://www.valvewizard.co.uk/gridstopper.html
+
+52. Unsafe oscilloscope grounding.
+    A conventional scope's ground clip is normally earth-referenced. Use
+    appropriately rated differential or isolated measurement equipment where
+    required; never defeat the scope's protective earth.
+    Reference: https://www.tek.com/en/documents/technical-brief/floating-oscilloscope-measurements-and-operator-protection

@@ -1,0 +1,133 @@
+{
+  "revision": "0.2-DRAFT",
+  "purpose": "Preliminary bias/RC exploration and arithmetic only; not full amplifier or selected-component validation",
+  "python": "/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3",
+  "engine": [
+    "stdout ** ngspice-45.2 shared library",
+    "stdout ** ngspice-45.2 : Circuit level simulation program"
+  ],
+  "debounce": {
+    "rising_edges_after_400ms_reset": [
+      0.5255900229000622,
+      1.0233900229001938
+    ],
+    "expected_edges": 2,
+    "final_toggle_state": 0,
+    "schmitt_thresholds_v": [
+      1.5,
+      3.0
+    ],
+    "limitations": "Ideal hysteretic switch, not TI macromodel; thresholds/tolerances/ESD/held switches/brownouts/jack insertion/relay/audio transients not qualified"
+  },
+  "bias": [
+    {
+      "mains_v": 198,
+      "pot_ohm": 1,
+      "bias_mean_v": -30.15722777630724,
+      "bias_ripple_vpp": 0.050211226129828646
+    },
+    {
+      "mains_v": 198,
+      "pot_ohm": 25000,
+      "bias_mean_v": -38.525420925446866,
+      "bias_ripple_vpp": 0.04451728511332931
+    },
+    {
+      "mains_v": 198,
+      "pot_ohm": 50000,
+      "bias_mean_v": -43.30712475412257,
+      "bias_ripple_vpp": 0.03847694801851276
+    },
+    {
+      "mains_v": 220,
+      "pot_ohm": 1,
+      "bias_mean_v": -33.56836591492698,
+      "bias_ripple_vpp": 0.05574097054509508
+    },
+    {
+      "mains_v": 220,
+      "pot_ohm": 25000,
+      "bias_mean_v": -42.79120344573243,
+      "bias_ripple_vpp": 0.04962486216956563
+    },
+    {
+      "mains_v": 220,
+      "pot_ohm": 50000,
+      "bias_mean_v": -48.135348843657695,
+      "bias_ripple_vpp": 0.042906772054791986
+    },
+    {
+      "mains_v": 235.4,
+      "pot_ohm": 1,
+      "bias_mean_v": -35.93235382817114,
+      "bias_ripple_vpp": 0.05940162291980755
+    },
+    {
+      "mains_v": 235.4,
+      "pot_ohm": 25000,
+      "bias_mean_v": -45.798648440321415,
+      "bias_ripple_vpp": 0.052900065308215005
+    },
+    {
+      "mains_v": 235.4,
+      "pot_ohm": 50000,
+      "bias_mean_v": -51.55410704033621,
+      "bias_ripple_vpp": 0.04578535233027736
+    },
+    {
+      "mains_v": 242,
+      "pot_ohm": 1,
+      "bias_mean_v": -36.93441669863073,
+      "bias_ripple_vpp": 0.06122477470159993
+    },
+    {
+      "mains_v": 242,
+      "pot_ohm": 25000,
+      "bias_mean_v": -47.12384829798019,
+      "bias_ripple_vpp": 0.05430968545403658
+    },
+    {
+      "mains_v": 242,
+      "pot_ohm": 50000,
+      "bias_mean_v": -52.99729199602697,
+      "bias_ripple_vpp": 0.047033237549058526
+    }
+  ],
+  "calculations": {
+    "heater_a": 4.8,
+    "pilot_allowance_a": 0.15,
+    "heater_total_allowance_a": 4.95,
+    "reference_heater_capacity_a": 6,
+    "reference_hv_ac_capacity_a": 0.23,
+    "coil_h1_all_on_a": 0.037500000000000006,
+    "nominal_control_budget_a": 0.1,
+    "reverb_transformer_turns_ratio": 53.38539126015655,
+    "reservoir_effective_u": 110.0,
+    "reservoir_series_rating_v": 700,
+    "nominal_unloaded_rectified_v": 424.26406871192853,
+    "high_stress_unloaded_v_assuming_12pct_regulation": 522.693332653096,
+    "h_ref_at_screen_400v": 60.23166023166023,
+    "max_r504_w_at_screen_530v_clamp_240v": 5.6066666666666665
+  },
+  "limitations": [
+    "Ideal transformer secondary; actual regulation/DCR/core and actual 1N4007 model not qualified",
+    "Bias extrema must match the eventual tube operating point; no hardware acceptance inferred",
+    "No nonlinear tube, output transformer, spring tank acoustic, integrated load or startup/shutdown validation",
+    "Complete baseline and selected-component S01-S06 analyses still pending"
+  ],
+  "input_hashes": {
+    "bias-198V-50000ohm.cir": "7a823d77fe17395f4188f28900962cce866caff3217135dd1871ad7c7bc811ce",
+    "bias-242V-25000ohm.cir": "9bfa43bd0e9e03b56f6f68dd934fdcba0d754b85fa71d4577c315d40aab51f40",
+    "bias-220V-50000ohm.cir": "2daaab56eeb286bf2570bf0aa298a9a38497d5887cfb55d964c077a6b9950f29",
+    "bias-235.4V-25000ohm.cir": "016044b74aef4272fe19410e366b17302d4f1acb05417c4c2c1c15b568314df0",
+    "bias-198V-25000ohm.cir": "fae7af249c8697df4d7118eb670378a883bc5da427c1b0a9b675715b7c526016",
+    "debounce-reference.cir": "130176efd060aab7a1f388ec89dd65f0ae4692caa3afee06b8cbcf3a6cd28092",
+    "bias-220V-1ohm.cir": "91b0ba961bfe9622f68ee04213d01dcdee5a91938aea5bea25ff4f28f9b3936e",
+    "bias-242V-50000ohm.cir": "4819b377c37f051480450d1319e41792b47cc1c4b8bd7ec8415c83556f423fa6",
+    "bias-235.4V-50000ohm.cir": "2af955670346a5667d2c4a3127bbf95ffd705b73cd6221ea307562271083a163",
+    "bias-242V-1ohm.cir": "5dfd0e61f4905c67c8772b1ad1071d2227d8f39ea0f027f14682a7dc0cb85e83",
+    "bias-220V-25000ohm.cir": "a7bab95307443eff9243031722ed4d2be89e9291822781d859feb2119018f8b3",
+    "bias-198V-1ohm.cir": "a05f3b40f519cf7ff7ed069b69ce4e297e30716e21442728e41640854ccae83f",
+    "bias-235.4V-1ohm.cir": "33b5616409ef06bf527d740832b41a11556241d4681a674352844e6ae036b91d"
+  }
+}

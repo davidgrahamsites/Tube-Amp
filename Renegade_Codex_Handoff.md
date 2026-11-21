@@ -1,0 +1,133 @@
+# Renegade amplifier — Codex handoff
+
+Photo intake November 20: [six received tank/meter photographs and DT9205A instructions](engineering/whole-amp/mechanical/review/received-tank-photo-intake-2026-11-20.md) are saved. Label and IN/OUT identification confirmed. User subsequently reported 76 Ω IN / 235 Ω OUT on the DT9205A 2k range, with shorted tips indicating zero. Results and limitations are in the mechanical fit register. The measured-resistance rerun and four-board integration draft are now recorded in [the November 20 review](engineering/whole-amp/reverb-600/review/measured-resistance-results-2026-11-20.md). All eight scoped simulation checks pass; AC coil data and safe drive current remain unknown.
+
+## Purpose and current status
+Continue a ChatGPT discussion as a local KiCad project on the user's Mac. Current objective (November 11, 2026): retain the original six-tube Renegade amplifier and add **solid-state-driven real spring reverb**, with a faceplate REVERB knob that adds wet to constant dry. Preserve cabinet choices, 220 V / 50 Hz mains and debounced footswitch requirements. The user also requested a PCB, BOM and build plan. See [DEC-007](brain/records/DEC-007-original-amp-solid-state-reverb.md).
+
+The current [v0.4 engineering package](engineering/solid-state-reverb/README.md) contains an 18-sheet integrated schematic, BOM, build sequence and a routed low-voltage reverb daughterboard. Native PCB DRC/connectivity/parity pass; the integrated schematic retains one intentional GND/PE warning. This is **not a construction release**: exact protective parts, full chosen-component amplifier simulation, purchased-part qualification and chassis fit remain unresolved. The later v0.5 work area also contains routed Main,Power andControl board drafts with native rule checks; these remain provisional. Exact selected-part integration and cabinet fit are not released. See PROJECT_STATUS.md for current component and simulation evidence. The older v0.3 tube-reverb draft below is historical.
+
+This document summarizes the visible conversation. It is not a complete transcript or engineering approval. An [editable v0.3 wired revised schematic draft](engineering/updated-schematic/README.md) now exists with native parsing/connectivity/ERC checks and limited bias/debounce reference runs; full chosen-component simulation, physical fit and design release remain pending. See [VAL-009](brain/records/VAL-009-updated-schematic-draft.md) for the exact scope. The earlier downloadable ZIP remains a three-symbol library preview; it was not overwritten.
+
+## User-confirmed requirements
+- November20 build split: preserve the current electric build on `electric-guitar-amp`; create a separate `acoustic-guitar-amp` branch from the verified upload for an op-amp input buffer and acoustic speaker/tweeter/crossover development. The user will start a new chat for acoustic implementation after an extensive branch handoff. See [DEC-009](brain/records/DEC-009-separate-electric-acoustic-builds.md) and [BUILD_VARIANT.md](BUILD_VARIANT.md). Acoustic-specific requirements below apply to that separate build.
+- November20 instrument clarification: the user primarily plays acoustic guitar and owns two guitars, one battery-powered and one battery-free. Both must be considered during input/loading, clean-headroom and speaker selection. The user identifies the guitars as Night Wish 550-D (pickup unknown) and ENYA Nova Go. Exact Nova Go variant, pickup systems and which guitar uses a battery are not yet confirmed. Battery presence alone does not identify pickup technology. A high-impedance input/buffer or sensitivity option is a proposal pending interface review; this clarification does not itself replace the original tube circuit, received cabinet or tank.
+- November12 expression-pedal requirement confirmed: passive rocker-pot pedal controls wet level only; heel=dry, toe=faceplate REVERB maximum, unplugged=normal faceplate operation. Audio stays inside the amp; cable carries protected low-voltage control. Preserve the separate channel/reverb on-off footswitch. Exact pedal resistance/pinout/control circuit remain to be selected. See engineering/whole-amp/expression-control/requirements.md.
+- November12 communication preference: always use aircraft-mechanic English. Use plain shop language, short sentences and concrete findings: fault, check, repair, result and work still open. Explain technical terms when needed; avoid jargon-heavy status reports.
+- November 12 finish correction: yellow tweed cabinet, explicitly not black. Red tweed was mentioned as preferable then withdrawn with “but nevermind”; retain yellow as the requested finish, with no custom-red requirement.
+- KiCad 10.0 on macOS.
+- Adapt the amplifier for 220 V, 50 Hz mains in China. This applies to every mains-powered supply, including the relay/control supply, not to all internal circuit voltages.
+- October 4 clarification: refactor the complete design for those mains conditions and simulate using the components selected for the build. Require component/model provenance, pin mapping, rated operating conditions, tolerance/load sweeps and stated model limitations before electrical design release; generic models alone do not validate a supplier-specific choice.
+- Buy parts in China, preferably through Alibaba/Taobao or suitable Chinese suppliers. Hammond-branded transformers are not required; select by electrical and mechanical specifications.
+- Add a real spring tank built into the amplifier. November 11 correction supersedes tube-driven reverb: use solid-state drive/recovery for simplicity; retain constant dry and add wet with the faceplate REVERB knob, not a crossfade.
+- Provide footswitch operation for clean/dirty selection and reverb on/off, with debounced switching.
+- Find and configure the necessary KiCad libraries. Keep custom libraries project-local and portable.
+- Planning clarification, October 3, 2026: use a combo cabinet with a built-in speaker; source and deliver in Shanghai, China.
+- Include low-MOQ PCB manufacture with drilled holes, actual cabinet/panel manufacturers, printable cabinet graphics, and a sleek front panel. Compare eligible delivered costs and estimate a five-unit build.
+- Prefer free companion design software and reproducible computer-controlled workflows. Use the custom Circuit Design Skill Ladder for tool, evidence, automation and review routing.
+- Also use the Physical Design Agent Ladder for cabinet/chassis/panel/graphics integration. The Mable 5E3 shell is the user's preferred visual candidate, subject to verified fit and current-stock construction.
+- Control placement, October 4, 2026: the combo's main operating controls must be on the top or front. Both top-facing and front-facing panels are acceptable; the final choice depends on fit, access and cost. A top-facing panel near the rear edge qualifies as top-mounted. This does not establish cabinet dimensions or approve the preferred shell for purchase.
+- Evaluate selling all five, including competition, cost, buyer validation and commercial requirements; actual sales, supplier contact, uploads or purchases have not been authorized by this planning request.
+- The user reports some build experience and substantial test-equipment experience; provide explicit construction and test guidelines. Power target, budget, exact equipment and intended use remain open.
+- Scope correction, October 4, 2026: the first milestone is one working prototype that fits the chosen box. Establish cabinet/chassis geometry and integrated fit early; complete and test the assembled combo before starting repeat builds or sales work. The earlier five-unit production plan remains a future reference. See the [active prototype plan](plans/renegade-working-prototype/plan.md).
+
+## Source received and files to inspect
+1. [Renegade Tube Amp.pptx](<Renegade Tube Amp.pptx>): original source received and visually inspected October 4, 2026. It has three raster-image slides: preamp/channel switching, power amp/power supply, and bill of materials. See [source intake](sources/original-ppt/inspection.md) for image/hash evidence and unresolved BOM conflicts. Do not treat absent editable slide text as an empty schematic.
+2. The extracted `Renegade_KiCad_Library_Starter.zip` project. Previously described filenames include `Renegade_Library_Preview.kicad_pro`, its schematic, `sym-lib-table`, and `libraries/Renegade_Custom.kicad_sym`. Verify actual names and structure before using them.
+3. This handoff document.
+4. [User design-imperative review](<Design Imperatives/review/REVIEW.md>): seven preserved engineering-reference files with scoped findings and a consolidated evidence tracker. Apply relevant guidance to the actual circuit; derive numerical limits from chosen parts, applicable requirements and calculations. Reading a rule does not establish a passing design check.
+
+The user was instructed to place the entire extracted Renegade folder inside their KiCad `projects` folder. Its absolute path is unknown. Do not move its libraries into the unrelated global `symbols` or `footprints` directories.
+
+If source files are absent, request them explicitly. Do not reconstruct the amplifier from this summary or from an unrelated amplifier schematic.
+
+The supplied original BOM specifies four 12AX7s (V1–V4) and two EL34s (V5/V6), resolving the previously unknown original tube count. The current reverb proposal adds one 12AT7 and one 12AX7, for eight tubes if retained. Source labels identify Hammond 272FX, 1650F and 193D parts; these are original identities, not approved replacements. The slides establish no measured output power, chassis dimensions or cabinet fit. Preserve their legacy supply/fuse values as source evidence while designing for the user's 220 V / 50 Hz requirement.
+
+## Proposed reverb architecture — subject to circuit review
+The user accepted the general recommendation of a full-size spring tank, an additional 12AT7 driver, and an additional 12AX7 for recovery/mixing.
+
+The proposed common insertion region is after the effects-loop return and before the phase inverter, so the reverb serves both channels. Preserve a parallel dry path. Proposed wet path:
+
+Send conditioning -> 12AT7 driver -> reverb transformer -> spring tank -> 12AX7 recovery -> Reverb level -> dry/wet mixing.
+
+The final topology and all component values remain to be designed. Check send level and source loading, driver operating point and dissipation, transformer ratio and primary DC capability, tank drive requirements, recovery gain/noise, signal polarity, mix attenuation/headroom, and the phase-inverter input requirements. Do not assume the existing loop can directly drive an added stage without analysis.
+
+## Earlier sourcing leads — NOT approved purchases
+These names were proposed in the earlier chat. Availability, price, dimensions, authenticity, and electrical ratings have not been established by this handoff and must be checked against current listings and supplier documentation.
+
+- Mable Audio MAGT0034A / L2AB3C1B: proposed full-size, two-spring, long-decay tank. The earlier response reported 8-ohm input and 2250-ohm output. Verify impedance versus DC resistance, mounting orientation, connector grounding, and dimensions.
+- Shenzhen Hanlongjia 4AB3C1B replacement: alternative tank lead from Alibaba.
+- Mable Audio MATR0275: reverb-transformer lead. Impedance ratio, permissible primary DC, and insulation ratings were not verified. Do not approve it on its product name alone.
+- A roughly 23–25 kilohm primary / 8-ohm secondary reverb transformer was discussed as a design reference, NOT as a completed transformer specification. Validate against the actual driver operating point.
+- Shuguang 12AT7 and 12AX7B: candidate additional tubes.
+- Mable Audio MATR0277: possible main power-transformer lead only. The earlier chat reported a 220/230 V primary, 290–0–290 V at 220 mA, and two 6.3 V / 3 A heater windings. It was NOT approved; verify its 50 Hz rating, winding arrangement, loaded voltages, regulation, insulation, total VA rating, and the completed amp's requirements. Do not infer that independent heater windings can be paralleled.
+
+Revisit the main power transformer only after calculating the complete amplifier's high-voltage and heater loads, including reverb and pilot lamps. Also review the existing bias supply, rectification, output transformer, choke, and the replacement control supply against the original source and chosen parts.
+
+## Footswitch proposal and unresolved assumptions
+The user typed “TLR.” The earlier assistant interpreted this as a 6.35 mm TRS connector. Treat TRS as a working assumption, not an explicitly confirmed connector specification; confirm before procurement or final connector wiring.
+
+Proposed mapping:
+- Tip: clean/dirty toggle input.
+- Ring: reverb on/off toggle input.
+- Sleeve: low-voltage control return.
+
+The proposed pedal has two normally-open momentary switches. Toggle state is stored in the amplifier; the pedal is passive and battery-free. Only low-voltage control signals go to the pedal, not audio, mains, or tube plate voltage.
+
+A proposed hardware implementation uses RC filtering and 74HC14 Schmitt-trigger debounce, then 74HC74 toggle latches and transistor relay drivers. These are candidate building blocks, not a final circuit. Choose and verify the logic supply, input protection, debounce timing, reset circuit, driver ratings, flyback suppression, relay power budget, and jack insertion/removal behavior. Prevent floating inputs and unintended toggles during power-up or unplugging.
+
+Earlier proposed startup state: clean channel, reverb off. The original channel relays may be retained if their contacts, coil ratings, and switching behavior are suitable. Review front-panel versus pedal control behavior instead of silently eliminating manual controls.
+
+Debouncing does not itself prevent audio pops. Design the analog switching/muting arrangement separately. Decide whether reverb-off permits tails or mutes the wet return immediately; this behavior was not chosen by the user.
+
+## KiCad libraries and project handling
+- Inspect the installed KiCad version, executable locations, project contents, and configured library tables before changing anything.
+- Prefer appropriate official KiCad symbols. Earlier suggestions included ECC81/12AT7, ECC83/12AX7, and EL34; verify actual installed identifiers and every pin mapping.
+- Keep custom symbols in the project and reference them using project-relative paths such as `${KIPRJMOD}`. The earlier custom library nickname was `Renegade_Custom`.
+- Do not blindly trust the starter symbols, their pin types, or their preview schematic. They were not opened in KiCad or ERC-tested in the earlier chat.
+- Do not assign supplier-specific PCB footprints without the actual part and dimensional drawing. Chassis-mounted parts can be documented through connectors/wiring without unnecessary PCB footprints.
+- Do not overwrite global library tables, install unreviewed third-party scripts, change KiCad.app, or discard existing project files without appropriate approval and backups.
+
+## Next work and deliverables
+The user authorized delegating product specifications and related sourcing research to Claude when useful. See [DEC-002](brain/records/DEC-002-combo-shanghai-automation.md) for the recorded preference and source-evidence expectations.
+
+Begin with a local project audit and a concise implementation plan. Then recreate the original amplifier as a traceable baseline before adding modifications. Preserve source references and mark unreadable or conflicting values as unresolved rather than inventing them.
+
+Work toward separate sheets for the preamp/channels, power amp, mains/high-voltage/heater/bias supplies, reverb, and low-voltage switching. Keep the drawings legible and the dry/wet/control interfaces explicit. Produce the editable KiCad project, portable custom libraries, updated BOM, supplier verification notes, calculations, and a record of unresolved decisions.
+
+Detect the installed KiCad command-line tools and use their actual supported commands for validation and exports. Inspect rendered sheets as well as netlists/ERC results. Record commands run, results, and remaining issues; never report a check as passed when it was not run. Do not suppress warnings merely to obtain a clean report.
+
+Create a short project `AGENTS.md` that points to this handoff and preserves the key requirements. Track progress and design decisions in project files. Keep changes reviewable, with backups or version control, and update this status as work proceeds.
+
+## Electrical review boundary
+This is a mains-powered, high-voltage tube amplifier. A valid KiCad file or clean ERC report is not an electrical safety assessment or proof of correct sound/performance. Review power budgets, operating points, component voltage/power ratings, protective earth, fuse selection, mains wiring, capacitor discharge provisions, grounding, creepage/clearance, and the physical layout. Obtain a qualified tube-amplifier technician's review before energizing a build. Do not label the design construction-ready while material checks remain unresolved.
+
+## November19 mechanical evidence update
+
+User supplied top/side/front cabinet drawings and requested complete amplifier/speaker/tank fit review. All three are reviewed in engineering/whole-amp/mechanical/review/fit-review.md. Cabinet remains yellow tweed; no purchase/drill/layout release. Current board area fails a single-plane top footprint screen; speaker candidate bolt pattern mismatches. Exact quoted tank identity is unresolved because Mable MAGT0046 text and3spring chart conflict. Use the canonical mechanical fit-register.json and tank-specifications.md before PCB/chassis changes. Do not reuse a supplier title as an electrical specification.
+
+November16 global user architecture decision: apply ICM to this project. The mechanical module now has a contract, one canonical register, separate source evidence, checking/rendering factories and review products. This scoped update does not claim the entire older workspace has been restructured.
+
+## November19 user correction — cabinet delivered and fixed
+
+The cabinet is already in the user's possession. The amplifier, speaker and spring tank must be designed to fit this actual yellow-tweed cabinet. Treat the existing board dimensions and incompatible part candidates as replaceable drafts; do not suggest changing the cabinet or repeat cabinet purchasing/stock gates. User has already requested the tank datasheet several times. Further supplier requests are not the default next step: use published evidence and, if the tank is on hand, identify/measure it with an unpowered bench procedure. Actual received-unit measurements override unclear catalogue dimensions. Preserve the original six-tube circuit, wet-add reverb and expression function while revising physical implementation.
+
+November19 arrival clarification: user confirms BOTH cabinet and reverb tank are here. Exact tank label and basic actual cabinet clearance checks remain to capture. Provide simple ruler/tape instructions; no volume measurement is needed.
+
+## November19 seller-confirmed received tank interface
+
+User relayed seller confirmation:3springs,input600ohm,output2250ohm,medium decay,input insulated/output grounded,no lock,horizontal/open-side-down. This supersedes800/2575 as the tank design basis. Tank and cabinet are already on hand. The reply does not establish exact body dimensions, DC coil resistance, impedance test frequency or drive current; do not infer them from a similar model code. Historical800/2575 simulations are reference runs, not verification of this tank. Record: engineering/whole-amp/mechanical/review/tank-specifications.md. Continue physical identification/low-level characterization, not repeated datasheet inquiries.
+
+## November19 implementation checkpoint — received tank
+
+The current new schematic revision is engineering/whole-amp/reverb-600/cad/Renegade_220V_Reverb.kicad_sch. See its review/review.md and VAL-013 for scoped checks. R6011M/R602100k attenuate send; R612100k carries passive dry; new R6181M adds wet after C607/R617 at WET_AC. Tank interface600/2250 is recorded. Fixed insertion loss is documented; dry remains independent of wet knob/mute. Original13 amplifier sheets preserved. Historical PCBs do not implement this change; new pcb-measured-r drafts reconcile current nets and selected packages, with routing complete only on Reverb. Parts selection now117positions; cabinet fit, expression control, exact remaining parts and full qualification remain open. User-supplied driver articles are technical reference, not a request to return to tube-driven reverb.
+
+## November20 project memory and measurement checkpoint
+
+User requires project-wide ICM records and continuous feedback/decision capture. Follow brain/rules/feedback.md at startup, during work and before handoff; use brain/catalog/WORKSPACE.md for current material ownership. User requests aircraft-mechanic English and clear separate steps for each measurement. First reported A-front/A-rear widths are saved only as current dimensional evidence in engineering/whole-amp/mechanical/fit-register.json; B depth subsequently reported; both opposite speaker-hole spacings subsequently reported and compared in the mechanical review. A record update is not fit release.
+
+November20 mechanical comparison: user-reported speaker pattern is294mm on both opposite pairs, conflicting with the drawn312mm circle. Received measurements govern selection; retain drawing evidence and all unresolved hardware/cutout/depth clearances. Canonical values remain in the mechanical fit register.
+
+November20 subsequent speaker measurements supersede treating294mm as exact: three adjacent spans210mm implyabout297mm circle if square; tape diagonals remain294mm. Preserve all readings and uncertainty. Preliminary selection can proceed; final template/trial fit resolves mounting. No tangent measurement or further repeated tape refinement is requested now.
+
+November20 received tank label captured in mechanical fit register: M8EB2C1B / R2610270015. Treat second marking as unidentified serial/production code. Supplier product page and drawing found, not a complete electrical datasheet; no automatic change from seller600/2250 basis to other brands'800/2575 values.

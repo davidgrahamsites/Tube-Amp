@@ -1,0 +1,13 @@
+# Internal trimmers — November 12 engineering selections
+
+Choose **Bourns3296W-1-503LF** for RV10 (50k bias adjustment), and **3296W-1-104LF** for RV601 (100k reverb send trim). These are sealed25-turn cermet adjustment parts, not the faceplate pots. Retain the black pointer knobs for the separately sourced panel controls.
+
+Domestic LCSC observations on November11:503LF/C83686 at¥4.92,MOQ1,6042stock;104LF/C48084 at¥4.99,MOQ1,12K+stock. One each costs¥9.91 before shipping. Stock is dated, not a reservation. Sources: https://item.szlcsc.com/84852.html and https://item.szlcsc.com/49091.html . Manufacturer document: evidence/Bourns-3296.pdf, https://www.bourns.com/docs/product-datasheets/3296.pdf .
+
+Manufacturer limits: ±10% total resistance; minimum resistance≤1% or2Ω, whichever greater; contact-resistance variation≤1% or3Ω;0.5W at70°C declining to0W at125°C;300V maximum further constrained by dissipation;200 adjustment cycles. Pin2 is wiper,1 CCW,3 CW. Review the W-style drawing against the exact footprint before integration.
+
+RV10 is wired as a rheostat with wiper tied to pin3. An isolated wiper-contact failure leaves the full track in circuit, moving toward more-negative bias. This is not proof against a broken terminal/track or a safe power-tube operating point. The existing33k fixed stop remains mandatory.
+
+The reproducible check_trimmer_ratings.py uses78V as a rounded bound on the scoped77.14V bias-filter result,22k/33k resistors at-5%,50k track at+10%, and partial-track current density.18 checks pass over70/85/100°C assumptions. Maximum density utilization is53.9% at100°C (see JSON for exact value); select a cool location≤100°C and verify it physically. This does not extend the earlier capacitor simulation to a real unknown transformer. At125°C no power is allowed.
+
+The earlier bias transient fixture used1Ω at minimum and nominal50k at maximum; it does not include this pot's resistance tolerance or up-to550Ω end resistance. A subsequent24-case check_bias_trimmer.py run in bias-trimmer-screen/ tests550Ω,45k and55k with the same mains/regulation/leakage scenarios. All complete; the highest capacitor voltage is77.326V, still below the78V screening bound. The overall bias range is-58.771 to-29.787V. These runs include total-resistance/end-point effects but retain nominal fixed22k/33k values; combine fixed-resistor tolerance, hot leakage and actual PT/tube evidence before qualifying adjustment range. RV601's normal≤15V full-track signal gives≤2.5mW at90k minimum; amplifier transients, wiper load and exact send design remain checks. These two selections are not procurement release or native footprint approval.

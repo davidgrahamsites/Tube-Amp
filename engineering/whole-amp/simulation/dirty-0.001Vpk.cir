@@ -1,0 +1,163 @@
+Renegade full signal path v0.4 baseline
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/simulation/models/dm12ax7s.inc"
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/simulation/models/6ca7s.inc"
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+.options method=gear maxord=2 reltol=0.003 abstol=1n vntol=10u gmin=1e-10 rshunt=1e12 cshunt=1e-14
+VSUP B_MAIN 0 400
+VBIAS BIAS_OUT 0 -40
+VIN INPUT 0 DC 0 AC 1 SIN(0 0.001 1000)
+VPLUS vp 0 15
+VMINUS vn 0 -15
+XV1_1 CL_P1 CL_IN CL_K1 12AX7A
+R4 B_EARLY CL_P1 100k
+R2 CL_IN 0 1meg
+R3 CL_K1 0 1.5k
+C1 CL_K1 0 25u
+R5 CL_P1 CL_TONE 100k
+C2 CL_P1 CL_TREBLE_TOP 250p
+C3 CL_TONE CL_BASS_TOP 100n
+C4 CL_TONE CL_BASS_BOTTOM 47n
+RV1A CL_TREBLE_TOP CL_TREBLE_W 125000.0
+RV1B CL_TREBLE_W CL_BASS_TOP 125000.0
+RV2A CL_BASS_TOP CL_BASS_TOP 500000.0
+RV2B CL_BASS_TOP CL_BASS_BOTTOM 500000.0
+R6 CL_BASS_BOTTOM 0 15k
+RV3A CL_TREBLE_W CL_G2 750000.0
+RV3B CL_G2 0 250000.0
+XV1_6 CL_P2 CL_G2 CL_K2 12AX7A
+R7 B_EARLY CL_P2 100k
+R8 CL_K2 0 1.5k
+C5 CL_K2 0 25u
+C6 CL_P2 CLEAN_OUT 47n
+R43 CLEAN_OUT 0 10meg
+XV2_1 DR_P1 DR_IN DR_K1 12AX7A
+R12 B_EARLY DR_P1 100k
+R10 DR_IN 0 1meg
+R11 DR_K1 0 2.7k
+C7 DR_K1 0 680n
+C8 DR_P1 DR_GAIN_TOP 22n
+RV4A DR_GAIN_TOP DR_GAIN_W 500000.0
+RV4B DR_GAIN_W 0 500000.0
+R13 DR_GAIN_W DR_G2 470k
+C9 DR_GAIN_W DR_G2 470p
+R14 DR_G2 0 470k
+XV2_6 DR_P2 DR_G2 DR_K2 12AX7A
+R15 B_EARLY DR_P2 100k
+R16 DR_K2 0 1.8k
+C10 DR_K2 0 1u
+C11 DR_P2 DR_C3 22n
+R18 DR_C3 DR_G3 470k
+R19 DR_G3 0 470k
+XV3_1 DR_P3 DR_G3 DR_K3 12AX7A
+R21 B_PRE DR_P3 100k
+R20 DR_K3 0 820
+C14 DR_K3 0 1u
+XV3_6 B_PRE DR_P3 DR_CF 12AX7A
+R22 DR_CF 0 100k
+R23 DR_CF DR_TONE 33k
+C15 DR_CF DR_TREBLE_TOP 470p
+C16 DR_TONE DR_BASS_TOP 22n
+C17 DR_TONE DR_BASS_BOTTOM 22n
+RV5A DR_TREBLE_TOP DR_TREBLE_W 125000.0
+RV5B DR_TREBLE_W DR_BASS_TOP 125000.0
+RV6A DR_BASS_TOP DR_BASS_TOP 500000.0
+RV6B DR_BASS_TOP DR_BASS_BOTTOM 500000.0
+RV7A DR_BASS_BOTTOM 0 12500.0
+RV7B 0 0 12500.0
+RV8A DR_TREBLE_W DIRTY_OUT 750000.0
+RV8B DIRTY_OUT 0 250000.0
+R1 INPUT INPUT_STOP 68k
+R24 MIX_OUT 0 10meg
+C19 MIX_OUT PI_G1 22n
+R25 PI_G1 PI_TAIL_TOP 1meg
+XV4_1 PI_P1 PI_G1 PI_K 12AX7A
+XV4_6 PI_P2 PI_G2 PI_K 12AX7A
+R29 B_PRE PI_P1 82k
+R30 B_PRE PI_P2 100k
+C22 PI_P1 PI_P2 47p
+R26 PI_K PI_TAIL_TOP 470
+R28 PI_TAIL_TOP NFB_NODE 10k
+R27 PI_G2 PI_TAIL_TOP 1meg
+C20 PI_G2 NFB_NODE 100n
+R31 OT_4 NFB_NODE 100k
+R32 NFB_NODE 0 47k
+C21 NFB_NODE PRES_TOP 100n
+RV9A PRES_TOP 0 12500.0
+RV9B 0 0 12500.0
+C23 PI_P1 GRID_A_FEED 22n
+C24 PI_P2 GRID_B_FEED 22n
+R33 GRID_A_FEED BIAS_OUT 220k
+R34 GRID_B_FEED BIAS_OUT 220k
+R36 GRID_A_FEED EL34_GA 1.5k
+R37 GRID_B_FEED EL34_GB 1.5k
+R41 B_SCREEN EL34_SA 1k
+R42 B_SCREEN EL34_SB 1k
+XV5 OT_PA EL34_SA EL34_GA K_A 6CA7
+XV6 OT_PB EL34_SB EL34_GB K_B 6CA7
+R110 K_A 0 1
+R111 K_B 0 1
+RL1 B_MAIN CHOKE 75
+L1 CHOKE B_SCREEN 8
+C26 B_SCREEN 0 50u
+R35 B_SCREEN B_PRE 10k
+C25 B_PRE 0 50u
+R17 B_PRE B_EARLY 10k
+C13 B_PRE 0 50u
+C12 B_EARLY 0 50u
+RK106 INPUT_STOP DR_IN .05
+RK107 0 CL_G2 .05
+RK108 FX_SEND DIRTY_OUT .05
+RNORMAL FX_SEND FX_RETURN .05
+RPA OT_PA PA_W 100
+RPB OT_PB PB_W 100
+LPA B_MAIN PA_W 10
+LPB PB_W B_MAIN 10
+LS SPEAKER 0 0.04210526316
+KOT LPA LPB LS .999
+RLOAD SPEAKER 0 8
+ENFB OT_4 0 SPEAKER 0 -.7071067812
+CREV_601 FX_RETURN rv_acin 100n
+RREV_601 rv_acin rv_dryin 100k
+RREV_602 rv_dryin 0 10meg
+DREV_601 rv_dryin vp DC
+DREV_602 vn rv_dryin DC
+.model DC D(Is=2.52n Rs=.568 N=1.906 Cjo=4p Tt=4n)
+XREV_10a rv_dryin rv_drybuf vp vn rv_drybuf OPAx134
+CREV_602 rv_drybuf rv_sendtop 22n
+RREV_PT rv_sendtop rv_sendw 90000
+RREV_PB rv_sendw 0 10000
+XREV_10b rv_sendw rv_drvfb vp vn rv_driver OPAx134
+RREV_603 rv_drvfb 0 10k
+RREV_604 rv_driver rv_drvfb 10k
+RREV_605 rv_driver rv_drivecap 220
+CREV_603 rv_drivecap rv_tankin 2.2u
+RREV_TANK rv_tankin rv_ti 58
+LREV_TANK rv_ti 0 127m
+* Independent tank-output electrical injection: NOT an acoustic transfer model.
+VREV_TANK rv_tanksrc 0 DC 0 AC 0
+RREV_OUTT rv_tanksrc rv_to 200
+LREV_OUTT rv_to rv_tankout 409m
+CREV_604 rv_tankout rv_recin 100n
+RREV_606 rv_recin 0 220k
+XREV_11a rv_recin rv_recfb vp vn rv_recout OPAx134
+RREV_607 rv_recfb 0 1k
+RREV_608 rv_recout rv_recfb 100k
+CREV_605 rv_recout rv_recfb 330p
+CREV_606 rv_recout rv_wettop 1u
+RREV_WT rv_wettop rv_wetw 100000
+RREV_WB rv_wetw 0 1
+RREV_609 rv_wetw 0 1meg
+XREV_11b rv_wetw rv_wetbuf vp vn rv_wetbuf OPAx134
+RREV_610 rv_wetbuf rv_wetmute 10k
+RREV_MUTE rv_wetmute 0 1
+RREV_611 rv_wetmute rv_sum 100k
+RREV_612 rv_drybuf rv_sum 100k
+XREV_12a 0 rv_sum vp vn rv_suminv OPAx134
+RREV_613 rv_suminv rv_sum 100k
+RREV_614 rv_suminv rv_outfb 100k
+XREV_12b 0 rv_outfb vp vn rv_outbuf OPAx134
+RREV_615 rv_outbuf rv_outfb 100k
+RREV_616 rv_outbuf rv_outac 100
+CREV_607 rv_outac MIX_OUT 1u
+RREV_617 MIX_OUT 0 1meg
+.end

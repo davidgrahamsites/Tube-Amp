@@ -1,0 +1,10 @@
+# Exact component sourcing
+2026-11-11. Owner: current Codex chat. Scope: every electrical BOM reference plus speaker, sockets, knobs, controls, chassis/panel hardware, wire and protection parts for one amplifier; China-domestic low-quantity supply, good audio performance, durability and reasonable total cost. Preserve original circuit values unless a documented design change is necessary. User supplied a black pointer/chicken-head style knob with white index as preferred starting direction; select matching pot shaft and screw-secured insert, verify dimensions.
+
+Inputs: v0.5 board-plan and original source values; prior layouts are provisional. Outputs: exact MPN and supplier SKU, reference coverage, quantity/MOQ, quoted currency/unit price at actual buy quantity, inventory evidence date, manufacturer ratings and dimensions, footprint change list, alternatives and unresolved supplier-only details. Search each unique purchase item, mapping repeated references to it. Stock claims must come from observed listing; a search snippet or catalogue is not a stock confirmation. No orders authorized. Existing supplier inquiry authorization remains valid.
+
+Done: every item researched, exact choices supported where available, evidence/price/fit gaps explicit; only then revise PCB footprints/layout. Do not select parts to fit guessed footprints.
+
+November12 scope addition: source the passive expression pedal/pot, dedicated switched jack and cable plus the wet-only control circuit and protection parts. Match resistance/taper/pin wiring before buying. Follow ../whole-amp/expression-control/requirements.md; existing sourcing counts exclude these new parts until the circuit is captured.
+
+November19 hard constraint: cabinet delivered. Prioritize speaker frame/cutout/bolt pattern/depth, actual tank envelope, compact correctly rated magnetics and large capacitor packaging. Board sizes are outputs of this selection, not fixed inputs. Replace incompatible candidates; do not keep asking the supplier for the same missing datasheet. Obtain actual cabinet spot measurements where drawing conflicts affect part selection.

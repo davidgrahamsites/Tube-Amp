@@ -1,0 +1,334 @@
+{
+  "07a_reverb_send": {
+    "positions": {
+      "JR1": [
+        30.48,
+        60.96,
+        0
+      ],
+      "C601": [
+        66.04,
+        60.96,
+        0
+      ],
+      "R601": [
+        104.14,
+        60.96,
+        0
+      ],
+      "R602": [
+        142.24,
+        99.06,
+        0
+      ],
+      "U10": [
+        190.5,
+        60.96,
+        0
+      ],
+      "D601": [
+        142.24,
+        139.7,
+        0
+      ],
+      "D602": [
+        180.34,
+        139.7,
+        0
+      ],
+      "C602": [
+        228.6,
+        60.96,
+        0
+      ],
+      "RV601": [
+        266.7,
+        99.06,
+        0
+      ],
+      "U10/2": [
+        320.04,
+        60.96,
+        0
+      ],
+      "R603": [
+        299.72,
+        139.7,
+        0
+      ],
+      "R604": [
+        345.44,
+        99.06,
+        0
+      ],
+      "R605": [
+        345.44,
+        177.8,
+        0
+      ],
+      "C603": [
+        266.7,
+        177.8,
+        0
+      ],
+      "JR2": [
+        228.6,
+        177.8,
+        0
+      ]
+    },
+    "notes": [
+      [
+        "C601 / R601 / R602 feed an attenuated SEND only. Dry does not pass through an op-amp.\n600 ohm tank input is seller confirmed; coil R/L and allowable current remain unmeasured.\nSet RV601 to minimum before commissioning. 220R is series isolation, not a guaranteed current limiter.",
+        20,
+        250,
+        1.3
+      ]
+    ],
+    "paper": "A2"
+  },
+  "07b_reverb_recovery": {
+    "positions": {
+      "JR3": [
+        30.48,
+        60.96,
+        0
+      ],
+      "C604": [
+        68.58,
+        60.96,
+        0
+      ],
+      "R606": [
+        104.14,
+        99.06,
+        0
+      ],
+      "U11": [
+        152.4,
+        60.96,
+        0
+      ],
+      "R607": [
+        129.54,
+        139.7,
+        0
+      ],
+      "R608": [
+        190.5,
+        99.06,
+        0
+      ],
+      "C605": [
+        190.5,
+        139.7,
+        0
+      ],
+      "C606": [
+        228.6,
+        60.96,
+        0
+      ],
+      "JR4": [
+        266.7,
+        60.96,
+        0
+      ],
+      "R609": [
+        266.7,
+        104.14,
+        0
+      ],
+      "U11/2": [
+        320.04,
+        60.96,
+        0
+      ],
+      "R610": [
+        320.04,
+        139.7,
+        0
+      ],
+      "K3/2": [
+        370.84,
+        139.7,
+        0
+      ],
+      "R611": [
+        266.7,
+        177.8,
+        0
+      ],
+      "U12": [
+        190.5,
+        215.9,
+        0
+      ],
+      "R613": [
+        228.6,
+        215.9,
+        0
+      ]
+    },
+    "notes": [
+      [
+        "2250 ohm tank output; high impedance recovery input. RV602 controls wet only.\nK3 shorts the wet branch via R610. U12A now processes WET ONLY.\nExpression-pedal gain-control stage remains a separate open interface; this draft does not implement it.",
+        20,
+        300,
+        1.3
+      ]
+    ],
+    "paper": "A2"
+  },
+  "07c_reverb_output": {
+    "positions": {
+      "R614": [
+        40.64,
+        60.96,
+        0
+      ],
+      "U12/2": [
+        104.14,
+        60.96,
+        0
+      ],
+      "R615": [
+        152.4,
+        60.96,
+        0
+      ],
+      "R616": [
+        190.5,
+        60.96,
+        0
+      ],
+      "C607": [
+        228.6,
+        60.96,
+        0
+      ],
+      "R617": [
+        266.7,
+        99.06,
+        0
+      ],
+      "JR5": [
+        419.1,
+        60.96,
+        0
+      ],
+      "JR6": [
+        40.64,
+        152.4,
+        0
+      ],
+      "U10/3": [
+        104.14,
+        152.4,
+        0
+      ],
+      "C610": [
+        83.82,
+        208.28,
+        0
+      ],
+      "C611": [
+        124.46000000000001,
+        208.28,
+        0
+      ],
+      "U11/3": [
+        190.5,
+        152.4,
+        0
+      ],
+      "C612": [
+        170.18,
+        208.28,
+        0
+      ],
+      "C613": [
+        210.82,
+        208.28,
+        0
+      ],
+      "U12/3": [
+        276.86,
+        152.4,
+        0
+      ],
+      "C614": [
+        256.54,
+        208.28,
+        0
+      ],
+      "C615": [
+        297.18,
+        208.28,
+        0
+      ],
+      "C616": [
+        345.44,
+        99.06,
+        0
+      ],
+      "C617": [
+        383.54,
+        99.06,
+        0
+      ],
+      "K3": [
+        345.44,
+        152.4,
+        0
+      ],
+      "K3/3": [
+        383.54,
+        208.28,
+        0
+      ],
+      "R612": [
+        457.2,
+        60.96,
+        0
+      ],
+      "R618": [
+        304.8,
+        99.06,
+        0
+      ]
+    },
+    "notes": [
+      [
+        "R612 carries passive dry from FX_RETURN to MIX_OUT. R618 adds wet through 1M.\nDry gain is independent of RV602 and K3, but passive loading causes fixed attenuation.\nNo dry audio passes through U10/U11/U12. Original C19/R24 and phase inverter remain.\nPCB layout must change; the old 160 x 100 board is not this circuit. Cabinet is already delivered.",
+        20,
+        285,
+        1.3
+      ]
+    ],
+    "paper": "A2"
+  },
+  "07d_reverb_harness": {
+    "positions": {
+      "RT1": [
+        101.6,
+        76.2,
+        0
+      ],
+      "RV602": [
+        228.6,
+        76.2,
+        0
+      ]
+    },
+    "notes": [
+      [
+        "Received Mable tank: 3 springs, 600 ohm input, 2250 ohm output, medium decay, no lock.\nInstall horizontal, OPEN SIDE DOWN. Input insulated; output grounded to tank case.\nKeep tank return shielded; avoid a second audio/chassis ground bond. Preserve protective earth.\nActual tank dimensions and cabinet assembly clearance still require measurement.",
+        20,
+        150,
+        1.3
+      ]
+    ],
+    "paper": "A2"
+  }
+}

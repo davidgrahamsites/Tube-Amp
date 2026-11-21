@@ -1,0 +1,658 @@
+{
+  "revision": "600R-1 PCB integration draft, November20",
+  "release": false,
+  "circuit_sha256": "91baf5190ebe6a94537a880749c269ff822a74142a541bb4a3d4a7da68f88c03",
+  "limitations": [
+    "Board outlines retained provisionally; assembled cabinet fit unverified",
+    "Affected copper removed; rerouting and DRC closure required",
+    "Expression-pedal implementation remains pending",
+    "Unselected packages and protection parts remain unresolved"
+  ],
+  "boards": {
+    "Main": {
+      "source": "pcb/Main/Renegade_Main.kicad_pcb",
+      "source_sha256": "ce531393b01c6b0ecd774279925245ba4aa888b2a8a9e0a3b6e345a64ba9a2ec",
+      "source_unchanged": true,
+      "footprints": 103,
+      "remaining_track_items": 70,
+      "footprint_changes": [
+        {
+          "reference": "R8",
+          "mpn": "MFR50SFTE52-1K5",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C20",
+          "mpn": "KP104J2J1006",
+          "from": "C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP104J2J1006"
+        },
+        {
+          "reference": "C6",
+          "mpn": "KP473J2J1001",
+          "from": "C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP473J2J1001"
+        },
+        {
+          "reference": "C5",
+          "mpn": "CD11AT2GM250F170T",
+          "from": "CP_Axial_L25.0mm_D10.0mm_P30.00mm_Horizontal",
+          "to": "CH_CD11AT_25u_400V_D8_P3.5"
+        },
+        {
+          "reference": "R10",
+          "mpn": "MF0207FTE52-1M",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R33",
+          "mpn": "MF0207FTE52-220K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R21",
+          "mpn": "FMP200JR-52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        },
+        {
+          "reference": "R29",
+          "mpn": "MF0207FTE52-82K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C8",
+          "mpn": "KP223J2J1001",
+          "from": "C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP223J2J1001"
+        },
+        {
+          "reference": "R2",
+          "mpn": "MF0207FTE52-1M",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R31",
+          "mpn": "FMP200JR-52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        },
+        {
+          "reference": "R22",
+          "mpn": "FMP200JR-52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        },
+        {
+          "reference": "R19",
+          "mpn": "MF0207FTE52-470K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C16",
+          "mpn": "KP223J2J1001",
+          "from": "C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP223J2J1001"
+        },
+        {
+          "reference": "R11",
+          "mpn": "MFR50SFTE52-2K7",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R12",
+          "mpn": "FMP200JR-52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        },
+        {
+          "reference": "R25",
+          "mpn": "MF0207FTE52-1M",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R5",
+          "mpn": "FMP200JR-52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        },
+        {
+          "reference": "C1",
+          "mpn": "CD11AT2GM250F170T",
+          "from": "CP_Axial_L25.0mm_D10.0mm_P30.00mm_Horizontal",
+          "to": "CH_CD11AT_25u_400V_D8_P3.5"
+        },
+        {
+          "reference": "R15",
+          "mpn": "FMP200JR-52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        },
+        {
+          "reference": "C23",
+          "mpn": "KP223J2J1001",
+          "from": "C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP223J2J1001"
+        },
+        {
+          "reference": "C11",
+          "mpn": "KP223J2J1001",
+          "from": "C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP223J2J1001"
+        },
+        {
+          "reference": "R3",
+          "mpn": "MFR50SFTE52-1K5",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R27",
+          "mpn": "MF0207FTE52-1M",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R13",
+          "mpn": "MF0207FTE52-470K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C17",
+          "mpn": "KP223J2J1001",
+          "from": "C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP223J2J1001"
+        },
+        {
+          "reference": "C10",
+          "mpn": "KP105J2J2002",
+          "from": "C_Rect_L7.2mm_W5.0mm_P5.00mm",
+          "to": "KYET_KP105J2J2002"
+        },
+        {
+          "reference": "R18",
+          "mpn": "MF0207FTE52-470K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R30",
+          "mpn": "FMP200JR-52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        },
+        {
+          "reference": "C21",
+          "mpn": "KP104J2J1006",
+          "from": "C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP104J2J1006"
+        },
+        {
+          "reference": "C19",
+          "mpn": "KP223J2J1001",
+          "from": "C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP223J2J1001"
+        },
+        {
+          "reference": "R34",
+          "mpn": "MF0207FTE52-220K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R28",
+          "mpn": "MF0207FTE52-10K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C7",
+          "mpn": "KP684J2J1502",
+          "from": "C_Rect_L7.2mm_W5.0mm_P5.00mm",
+          "to": "KYET_KP684J2J1502"
+        },
+        {
+          "reference": "R4",
+          "mpn": "FMP200JR-52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        },
+        {
+          "reference": "C3",
+          "mpn": "KP104J2J1006",
+          "from": "C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP104J2J1006"
+        },
+        {
+          "reference": "C24",
+          "mpn": "KP223J2J1001",
+          "from": "C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP223J2J1001"
+        },
+        {
+          "reference": "R32",
+          "mpn": "MF0207FTE52-47K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C14",
+          "mpn": "KP105J2J2002",
+          "from": "C_Rect_L7.2mm_W5.0mm_P5.00mm",
+          "to": "KYET_KP105J2J2002"
+        },
+        {
+          "reference": "R16",
+          "mpn": "MFR50SFTE52-1K8",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C4",
+          "mpn": "KP473J2J1001",
+          "from": "C_Rect_L18.0mm_W7.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP473J2J1001"
+        },
+        {
+          "reference": "R14",
+          "mpn": "MF0207FTE52-470K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R7",
+          "mpn": "FMP200JR-52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        }
+      ],
+      "current_contract_pad_checks": 124,
+      "pad_net_mismatches": [],
+      "explicit_no_connect_pads": [
+        {
+          "ref": "K2",
+          "pad": "9",
+          "actual": "unconnected-(K2-Pad9)",
+          "expected": null
+        },
+        {
+          "ref": "K2",
+          "pad": "11",
+          "actual": "unconnected-(K2-Pad11)",
+          "expected": null
+        }
+      ]
+    },
+    "Power": {
+      "source": "pcb/Power/Renegade_Power.kicad_pcb",
+      "source_sha256": "1a12848fc11546a18b0c82a768fa45fb99ebb46edb1b4e45421594a6d30ef5d6",
+      "source_unchanged": true,
+      "footprints": 43,
+      "remaining_track_items": 28,
+      "footprint_changes": [
+        {
+          "reference": "R502",
+          "mpn": "FMP200JR-52-220K",
+          "from": "R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        },
+        {
+          "reference": "C28",
+          "mpn": "NFA200VB10M8*11.5_LO",
+          "from": "CP_Radial_D10.0mm_P5.00mm",
+          "to": "Samyoung_NFA_10u_200V_D8_P3.5"
+        },
+        {
+          "reference": "R507",
+          "mpn": "FMP200JR-52-39K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        },
+        {
+          "reference": "R508",
+          "mpn": "MF0207FTE52-100R",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R506",
+          "mpn": "FMP200JR-52-220K",
+          "from": "R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        },
+        {
+          "reference": "R509",
+          "mpn": "MF0207FTE52-100R",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C27",
+          "mpn": "NFA200VB10M8*11.5_LO",
+          "from": "CP_Radial_D10.0mm_P5.00mm",
+          "to": "Samyoung_NFA_10u_200V_D8_P3.5"
+        },
+        {
+          "reference": "RV10",
+          "mpn": "3296W-1-503LF",
+          "from": "Potentiometer_Bourns_3296W_Vertical",
+          "to": "Bourns_3296W_TopAdjust_P2.54"
+        },
+        {
+          "reference": "R501",
+          "mpn": "FMP200JR-52-220K",
+          "from": "R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP200_L9.0_D3.9_P15.24"
+        }
+      ],
+      "current_contract_pad_checks": 63,
+      "pad_net_mismatches": [],
+      "explicit_no_connect_pads": []
+    },
+    "Control": {
+      "source": "pcb/Control/Renegade_Control.kicad_pcb",
+      "source_sha256": "85d6c81a25eb6c547d6912a4f27a221d8f1cf796ed1b9a209ce0d0d95f215b46",
+      "source_unchanged": true,
+      "footprints": 72,
+      "remaining_track_items": 102,
+      "footprint_changes": [
+        {
+          "reference": "R341",
+          "mpn": "MF0207FTE52-1K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R332",
+          "mpn": "MFR50SFTE52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R301",
+          "mpn": "MF0207FTE52-1K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R342",
+          "mpn": "MFR50SFTE52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R331",
+          "mpn": "MF0207FTE52-1K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R321",
+          "mpn": "MF0207FTE52-10K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C206",
+          "mpn": "MEB104J63V82CB0236",
+          "from": "C_Rect_L7.2mm_W3.5mm_P5.00mm",
+          "to": "KNSCHA_MEB104J63V82CB0236"
+        },
+        {
+          "reference": "C203",
+          "mpn": "MEB104J63V82CB0236",
+          "from": "C_Rect_L7.2mm_W3.5mm_P5.00mm",
+          "to": "KNSCHA_MEB104J63V82CB0236"
+        },
+        {
+          "reference": "C213",
+          "mpn": "MEB104J63V82CB0236",
+          "from": "C_Rect_L7.2mm_W3.5mm_P5.00mm",
+          "to": "KNSCHA_MEB104J63V82CB0236"
+        },
+        {
+          "reference": "R302",
+          "mpn": "MF0207FTE52-10K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R311",
+          "mpn": "MF0207FTE52-1K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C210",
+          "mpn": "MEB104J63V82CB0236",
+          "from": "C_Rect_L7.2mm_W3.5mm_P5.00mm",
+          "to": "KNSCHA_MEB104J63V82CB0236"
+        },
+        {
+          "reference": "R312",
+          "mpn": "MF0207FTE52-10K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R322",
+          "mpn": "MF0207FTE52-10K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        }
+      ],
+      "current_contract_pad_checks": 144,
+      "pad_net_mismatches": [],
+      "explicit_no_connect_pads": [
+        {
+          "ref": "U1",
+          "pad": "6",
+          "actual": "unconnected-(U1-Pad6)",
+          "expected": null
+        },
+        {
+          "ref": "U1",
+          "pad": "8",
+          "actual": "unconnected-(U1-Pad8)",
+          "expected": null
+        },
+        {
+          "ref": "U1",
+          "pad": "10",
+          "actual": "unconnected-(U1-Pad10)",
+          "expected": null
+        },
+        {
+          "ref": "U1",
+          "pad": "12",
+          "actual": "unconnected-(U1-Pad12)",
+          "expected": null
+        }
+      ]
+    },
+    "Reverb": {
+      "source": "pcb/Reverb/Renegade_Reverb.kicad_pcb",
+      "source_sha256": "b3fc837046e3846d4c6840e26cc445c7f37ecbfc28b9834b28391398584a078f",
+      "source_unchanged": true,
+      "footprints": 50,
+      "remaining_track_items": 0,
+      "footprint_changes": [
+        {
+          "reference": "R606",
+          "mpn": "MF0207FTE52-220K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C611",
+          "mpn": "MEB104J63V82CB0236",
+          "from": "C_Rect_L7.2mm_W2.5mm_P5.00mm",
+          "to": "KNSCHA_MEB104J63V82CB0236"
+        },
+        {
+          "reference": "R604",
+          "mpn": "MF0207FTE52-10K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R608",
+          "mpn": "MFR50SFTE52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C610",
+          "mpn": "MEB104J63V82CB0236",
+          "from": "C_Rect_L7.2mm_W2.5mm_P5.00mm",
+          "to": "KNSCHA_MEB104J63V82CB0236"
+        },
+        {
+          "reference": "R609",
+          "mpn": "MF0207FTE52-1M",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C607",
+          "mpn": "MEB105J63V82CB0235",
+          "from": "C_Rect_L7.2mm_W5.0mm_P5.00mm",
+          "to": "KNSCHA_MEB105J63V82CB0235"
+        },
+        {
+          "reference": "C601",
+          "mpn": "KP104J2J1006",
+          "from": "C_Rect_L18.0mm_W5.0mm_P15.00mm_FKS3_FKP3",
+          "to": "KYET_KP104J2J1006"
+        },
+        {
+          "reference": "R614",
+          "mpn": "MFR50SFTE52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R612",
+          "mpn": "MFR50SFTE52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C606",
+          "mpn": "MEB105J63V82CB0235",
+          "from": "C_Rect_L7.2mm_W5.0mm_P5.00mm",
+          "to": "KNSCHA_MEB105J63V82CB0235"
+        },
+        {
+          "reference": "R613",
+          "mpn": "MFR50SFTE52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R602",
+          "mpn": "MFR50SFTE52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R603",
+          "mpn": "MF0207FTE52-10K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R601",
+          "mpn": "MF0207FTE52-1M",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C615",
+          "mpn": "MEB104J63V82CB0236",
+          "from": "C_Rect_L7.2mm_W2.5mm_P5.00mm",
+          "to": "KNSCHA_MEB104J63V82CB0236"
+        },
+        {
+          "reference": "R611",
+          "mpn": "MFR50SFTE52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R610",
+          "mpn": "MF0207FTE52-10K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C612",
+          "mpn": "MEB104J63V82CB0236",
+          "from": "C_Rect_L7.2mm_W2.5mm_P5.00mm",
+          "to": "KNSCHA_MEB104J63V82CB0236"
+        },
+        {
+          "reference": "C613",
+          "mpn": "MEB104J63V82CB0236",
+          "from": "C_Rect_L7.2mm_W2.5mm_P5.00mm",
+          "to": "KNSCHA_MEB104J63V82CB0236"
+        },
+        {
+          "reference": "C614",
+          "mpn": "MEB104J63V82CB0236",
+          "from": "C_Rect_L7.2mm_W2.5mm_P5.00mm",
+          "to": "KNSCHA_MEB104J63V82CB0236"
+        },
+        {
+          "reference": "RV601",
+          "mpn": "3296W-1-104LF",
+          "from": "Potentiometer_Bourns_3296W_Vertical",
+          "to": "Bourns_3296W_TopAdjust_P2.54"
+        },
+        {
+          "reference": "R607",
+          "mpn": "MF0207FTE52-1K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "C604",
+          "mpn": "MEB104J63V82CB0236",
+          "from": "C_Rect_L7.2mm_W2.5mm_P5.00mm",
+          "to": "KNSCHA_MEB104J63V82CB0236"
+        },
+        {
+          "reference": "R615",
+          "mpn": "MFR50SFTE52-100K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R617",
+          "mpn": "MF0207FTE52-1M",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        },
+        {
+          "reference": "R618",
+          "mpn": "MF0207FTE52-1M",
+          "from": null,
+          "to": "Yageo_MFR50S_MF0207_P10.16"
+        }
+      ],
+      "current_contract_pad_checks": 121,
+      "pad_net_mismatches": [],
+      "explicit_no_connect_pads": []
+    }
+  },
+  "all_current_contract_pad_maps_pass": true
+}

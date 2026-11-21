@@ -1,0 +1,5 @@
+(version 1)
+(rule "Default clearance" (constraint clearance (min 0.25mm)))
+(rule "Tracks" (constraint track_width (min 0.30mm)))
+(rule "Board edge" (constraint edge_clearance (min 1.0mm)))
+(rule "HV functional copper spacing" (condition "A.NetName == 'B_EARLY' || B.NetName == 'B_EARLY' || A.NetName == 'B_PRE' || B.NetName == 'B_PRE' || A.NetName == 'CL_P1' || B.NetName == 'CL_P1' || A.NetName == 'CL_P2' || B.NetName == 'CL_P2' || A.NetName == 'CL_TONE' || B.NetName == 'CL_TONE' || A.NetName == 'DR_CF' || B.NetName == 'DR_CF' || A.NetName == 'DR_P1' || B.NetName == 'DR_P1' || A.NetName == 'DR_P2' || B.NetName == 'DR_P2' || A.NetName == 'DR_P3' || B.NetName == 'DR_P3' || A.NetName == 'DR_TONE' || B.NetName == 'DR_TONE' || A.NetName == 'NFB_NODE' || B.NetName == 'NFB_NODE' || A.NetName == 'PI_G1' || B.NetName == 'PI_G1' || A.NetName == 'PI_G2' || B.NetName == 'PI_G2' || A.NetName == 'PI_K' || B.NetName == 'PI_K' || A.NetName == 'PI_P1' || B.NetName == 'PI_P1' || A.NetName == 'PI_P2' || B.NetName == 'PI_P2' || A.NetName == 'PI_TAIL_TOP' || B.NetName == 'PI_TAIL_TOP'") (constraint clearance (min 5.5mm)))

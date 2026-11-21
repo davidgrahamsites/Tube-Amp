@@ -1,0 +1,75 @@
+[
+  {
+    "command": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "gerbers",
+      "-o",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/fabrication-preview/",
+      "-l",
+      "F.Cu,B.Cu,F.Mask,B.Mask,F.Silkscreen,Edge.Cuts",
+      "--subtract-soldermask",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/Renegade_Reverb.kicad_pcb"
+    ],
+    "returncode": 0,
+    "stdout": "Plotted to '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/fabrication-preview/Renegade_Reverb-F_Cu.gtl'.\nPlotted to '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/fabrication-preview/Renegade_Reverb-B_Cu.gbl'.\nPlotted to '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/fabrication-preview/Renegade_Reverb-F_Silkscreen.gto'.\nPlotted to '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/fabrication-preview/Renegade_Reverb-F_Mask.gts'.\nPlotted to '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/fabrication-preview/Renegade_Reverb-B_Mask.gbs'.\nPlotted to '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/fabrication-preview/Renegade_Reverb-Edge_Cuts.gm1'.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "drill",
+      "-o",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/fabrication-preview/",
+      "--excellon-separate-th",
+      "--generate-map",
+      "--map-format",
+      "pdf",
+      "--generate-report",
+      "--report-path",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/validation/drill-report.txt",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/Renegade_Reverb.kicad_pcb"
+    ],
+    "returncode": 0,
+    "stdout": "Created file '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/fabrication-preview/Renegade_Reverb-PTH.drl'\nCreated file '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/fabrication-preview/Renegade_Reverb-NPTH.drl'\nCreated file '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/fabrication-preview/Renegade_Reverb-PTH-drl_map.pdf'.\nCreated file '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/fabrication-preview/Renegade_Reverb-NPTH-drl_map.pdf'.\nDone.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "svg",
+      "--mode-single",
+      "--page-size-mode",
+      "2",
+      "--exclude-drawing-sheet",
+      "-o",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/validation/pcb-final.svg",
+      "-l",
+      "B.Cu,F.Cu,F.Silkscreen,Edge.Cuts",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/Renegade_Reverb.kicad_pcb"
+    ],
+    "returncode": 0,
+    "stdout": "Plotted to '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/validation/pcb-final.svg'.\nDone.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "sch",
+      "export",
+      "pdf",
+      "--draw-hop-over",
+      "-o",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/Renegade_Reverb.pdf",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/Renegade_Reverb.kicad_sch"
+    ],
+    "returncode": 0,
+    "stdout": "Plotted to '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/pcb/Renegade_Reverb.pdf'.\nDone.\n",
+    "stderr": ""
+  }
+]

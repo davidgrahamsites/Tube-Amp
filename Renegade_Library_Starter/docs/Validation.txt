@@ -1,0 +1,7 @@
+PASS: symbol library has three uniquely named draft symbols.
+PASS: terminal identifiers match the documented logical interfaces; all three parts are off-board with no footprint.
+PASS: project-specific library table resolves to the bundled library.
+PASS: project JSON and schematic basic S-expression structure; preview references resolve to embedded symbols; UUIDs are unique.
+NOT RUN: KiCad application-open / native parser validation / rendering / ERC / DRC / SPICE simulation.
+NOT VERIFIED: supplier pin mappings, physical footprints, component ratings, circuit operation or electrical safety.
+These checks are generic structure checks, not a substitute for KiCad application validation or an engineering review.
