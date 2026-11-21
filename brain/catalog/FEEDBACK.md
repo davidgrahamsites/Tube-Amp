@@ -660,3 +660,15 @@ Source: Current conversation during Git branch publication
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 - [BUILD_VARIANT.md](<../../BUILD_VARIANT.md>)
 
+## FB-057 — acoustic-design-direction
+Authority: user. Disposition: incorporated. Recorded: 2026-11-20. Original date: 2026-11-20.
+
+> it seems like an acoustic guitar amp needs to have an element of a hi-fi amp to it...
+
+Capture hi-fi-like clean reproduction as acoustic design direction with tube circuitry. Quoted high-power/warmth assertions are discussion, not measured facts or an approved numeric power requirement. Establish clean output and response from use and cabinet constraints.
+
+Source: Current conversation with discussion of tube hi-fi, acoustic realism, clean headroom, warmth and transformer/maintenance tradeoffs
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [ACOUSTIC_HANDOFF.md](<../../ACOUSTIC_HANDOFF.md>)
+

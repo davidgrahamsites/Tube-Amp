@@ -59,6 +59,14 @@ Select the driver pair as a system. Obtain manufacturer response/impedance and p
 
 The user's cabinet is open-backed and was sold as a 5E3 shell. A hi-fi woofer needing a sealed/ported alignment cannot be assumed to work as intended there. A coaxial assembly may be worth comparing if it avoids a second baffle opening, but it is only an option, not an accepted substitution or proven fit.
 
+### Later clarification: hi-fi principles in the acoustic build
+
+After the branch upload, the user emphasized accurate acoustic reproduction with tube circuitry and suggested a hi-fi element to the design. Preserve that direction. A tube amplifier can be engineered for low distortion and controlled response; “tube” does not automatically mean deliberate breakup. Conversely, audible warmth is not a guaranteed property of tubes or the same claim as accuracy. Retain a clean foundation and evaluate intentional tonal shaping separately.
+
+Clean output power must follow intended listening level/distance, speaker sensitivity and transient headroom, plus transformer, thermal and cabinet limits. The user did not select a high wattage. Do not automatically enlarge the power supply or choose huge transformers from the quoted discussion. A raw pickup does not contain the same body/room information as a microphone recording; amplification cannot recover information it never received. Loading, EQ, pickup response, crossover and loudspeaker directivity all need attention. A purpose-built acoustic amp may intentionally limit sub-bass and provide feedback controls rather than reproduce the entire hi-fi bandwidth at full power.
+
+Manufacturer example supporting tube hi-fi feasibility: [McIntosh MC275 technical brochure](https://www.mcintoshlabs.com/-/media/Files/mcintoshlabs/DocumentMaster/us/1773_MC275.pdf). This is an example, not the selected circuit or an authorized expensive-parts direction. No new hardware, simulation or acoustic performance validation is claimed by this clarification.
+
 ## 5. Fixed cabinet and physical evidence
 
 **The yellow-tweed cabinet and reverb tank are already delivered.** Do not resume cabinet shopping, ask whether they arrived, or make Mable's unanswered datasheet requests the only path forward. The user explicitly rejected black; red tweed was mentioned and withdrawn. Keep this cabinet.
