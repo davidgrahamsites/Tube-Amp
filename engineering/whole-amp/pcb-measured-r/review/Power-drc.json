@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.kicad.org/drc.v1.json",
     "coordinate_units": "mm",
-    "date": "2026-11-20T21:49:20",
+    "date": "2026-11-21T06:02:11",
     "ignored_checks": [
         {
             "description": "Footprint has no courtyard defined",
@@ -248,7 +248,7 @@
                         "x": 80.6323,
                         "y": 155.0
                     },
-                    "uuid": "cba5dc23-8a99-46d9-896b-053967574df5"
+                    "uuid": "a72aef05-fa92-4ef8-b44c-138b2c3b5cbb"
                 },
                 {
                     "description": "PTH pad 2 [GND] of R507",
@@ -570,7 +570,7 @@
                         "x": 139.08,
                         "y": 140.0
                     },
-                    "uuid": "b661daa0-5982-4f1b-b850-56bcbd52cf9a"
+                    "uuid": "457a38de-76f7-4ed7-b12d-898354ee8d2f"
                 },
                 {
                     "description": "PTH pad 2 [BIAS_RAW] of C28",
@@ -670,7 +670,7 @@
                         "x": 75.6323,
                         "y": 155.0
                     },
-                    "uuid": "896987f4-428b-4e8b-9d8f-38451a1fb661"
+                    "uuid": "eccd5997-c8ee-4ffa-837a-65f37b4aae6c"
                 }
             ],
             "severity": "error",
@@ -708,7 +708,7 @@
                         "x": 75.6323,
                         "y": 155.0
                     },
-                    "uuid": "896987f4-428b-4e8b-9d8f-38451a1fb661"
+                    "uuid": "eccd5997-c8ee-4ffa-837a-65f37b4aae6c"
                 },
                 {
                     "description": "PTH pad 2 [HREF] of R508",
@@ -749,6 +749,29 @@
             "description": "Missing connection between items",
             "items": [
                 {
+                    "description": "PTH pad 1 [BIAS_DIODE_AC] of D7",
+                    "pos": {
+                        "x": 128.92,
+                        "y": 140.0
+                    },
+                    "uuid": "8942dc43-3133-406d-bf1d-cd16fd201cce"
+                },
+                {
+                    "description": "PTH pad 2 [BIAS_DIODE_AC] of R40",
+                    "pos": {
+                        "x": 141.62,
+                        "y": 155.0
+                    },
+                    "uuid": "e2fbba22-17eb-43dd-9e76-73aaebb916df"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
                     "description": "PTH pad 2 [BIAS_FILTER] of C27",
                     "pos": {
                         "x": 135.1323,
@@ -762,7 +785,7 @@
                         "x": 98.38,
                         "y": 110.0
                     },
-                    "uuid": "fa867b3b-9946-410e-97c4-2d01141dc7dd"
+                    "uuid": "74e4dab4-08ca-4daa-a4d2-9b3f481965fd"
                 }
             ],
             "severity": "error",
@@ -805,10 +828,10 @@
                 {
                     "description": "PTH pad 2 [BIAS_OUT] of R38",
                     "pos": {
-                        "x": 113.62,
+                        "x": 111.08,
                         "y": 110.0
                     },
-                    "uuid": "2da71adb-d00f-4f3f-8d0c-ed9b0143d958"
+                    "uuid": "06abb158-2390-4835-b7a8-5519b33ac37f"
                 }
             ],
             "severity": "error",
@@ -820,10 +843,10 @@
                 {
                     "description": "PTH pad 2 [BIAS_OUT] of R38",
                     "pos": {
-                        "x": 113.62,
+                        "x": 111.08,
                         "y": 110.0
                     },
-                    "uuid": "2da71adb-d00f-4f3f-8d0c-ed9b0143d958"
+                    "uuid": "06abb158-2390-4835-b7a8-5519b33ac37f"
                 },
                 {
                     "description": "PTH pad 1 [BIAS_OUT] of JP002",

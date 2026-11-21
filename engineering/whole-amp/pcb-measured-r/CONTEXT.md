@@ -6,3 +6,5 @@ Outputs: boards/*.kicad_pcb and review/integration.json plus native DRC reports.
 Human check: inspect pads, courtyards, remaining routing, full six-tube assembly and delivered-cabinet clearance. Expression pedal is still pending.
 
 Current result: [measured-resistance and PCB review](../reverb-600/review/measured-resistance-results-2026-11-20.md). Reverb is routed under current rules; Main, Power and Control routing is incomplete. Zero DRC findings do not qualify unselected packages, thermal clearances or physical fit.
+
+November21 package checkpoint: `tools/integrate_electric_parts.py` applied11 exact packages; it refuses to overwrite the saved integration record. Current [native check](review/final-checks.json) reports444matching pads and Main/Power/Control105/39/99unconnected items. Six later BOM picks await package integration. Use [VAL-015](../../../brain/records/VAL-015-electric-headroom-and-parts.md) and PROJECT_STATUS for the next work; do not reuse earlier routed status as a current claim.

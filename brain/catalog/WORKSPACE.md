@@ -173,9 +173,16 @@ Four boards preserve historical originals. Reverb routed with zero DRC violation
 
 - [engineering/whole-amp/pcb-measured-r](<../../engineering/whole-amp/pcb-measured-r>)
 
+### MAT-018 — Electric first-stage headroom screen
+Role: product. Status: scoped simulated evidence; hardware qualification pending. Owner: Electric integration.
+
+118 completed isolated preamp cases; generic tube/source model, not full-amp or real-pickup validation. Failed and short-settling attempts retained.
+
+- [engineering/whole-amp/electric-input-headroom](<../../engineering/whole-amp/electric-input-headroom>)
+
 ## Complete file inventory
 
-1251 files cataloged with path, role, owner and SHA256 in [FILES.json](FILES.json). No existence/hash check establishes circuit safety or fit.
+1682 files cataloged with path, role, owner and SHA256 in [FILES.json](FILES.json). No existence/hash check establishes circuit safety or fit.
 
 Historical native snapshots keep their existing paths and original internal layout. Their legacy scripts are not new-work templates. New active work separates tools/templates, editable registers and generated products.
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-20",
+  "as_of": "2026-11-21",
   "materials": [
     {
       "id": "MAT-001",
@@ -229,6 +229,17 @@
         "engineering/whole-amp/pcb-measured-r"
       ],
       "notes": "Four boards preserve historical originals. Reverb routed with zero DRC violations/unconnected items; Main, Power and Control need routing. Cabinet fit and expression control remain open."
+    },
+    {
+      "id": "MAT-018",
+      "name": "Electric first-stage headroom screen",
+      "role": "product",
+      "status": "scoped simulated evidence; hardware qualification pending",
+      "owner": "Electric integration",
+      "paths": [
+        "engineering/whole-amp/electric-input-headroom"
+      ],
+      "notes": "118 completed isolated preamp cases; generic tube/source model, not full-amp or real-pickup validation. Failed and short-settling attempts retained."
     }
   ]
 }

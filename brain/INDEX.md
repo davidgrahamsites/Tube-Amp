@@ -25,6 +25,7 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | DEC-008 | decision | cross-domain | documented | 2026-11-20 | [Project-wide ICM backfill and continuous decision logging](records/DEC-008-continuous-project-memory.md) |
 | DEC-009 | decision | cross-domain | documented | 2026-11-20 | [Separate electric and acoustic builds](records/DEC-009-separate-electric-acoustic-builds.md) |
 | DEC-010 | decision | schematic | selected | 2026-11-21 | [Retain the original electric tube input without an added buffer](records/DEC-010-electric-input-no-buffer.md) |
+| DEC-011 | decision | cross-domain | proposed | 2026-11-21 | [Pot mounting panel and cabinet packaging proposal](records/DEC-011-pot-panel-proposal.md) |
 | VAL-001 | validation | schematic | verified | 2026-10-03 | [Extracted starter matches supplied archive](records/VAL-001-starter-archive-match.md) |
 | VAL-002 | validation | cross-domain | verified | 2026-10-04 | [KiCad MCP installation and scoped smoke checks](records/VAL-002-kicad-mcp-install.md) |
 | VAL-003 | validation | schematic | verified | 2026-10-04 | [Original PowerPoint received and inspected](records/VAL-003-original-ppt-intake.md) |
@@ -39,3 +40,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-012 | validation | cross-domain | proposed | 2026-11-12 | [Whole-amplifier development and unresolved checks](records/VAL-012-whole-amp-development.md) |
 | VAL-013 | validation | cross-domain | verified | 2026-11-19 | [Received 600/2250 tank — scoped circuit revision checks](records/VAL-013-received-tank-revision.md) |
 | VAL-014 | validation | cross-domain | verified | 2026-11-20 | [Measured tank resistance and PCB integration checks](records/VAL-014-measured-resistance-pcb-integration.md) |
+| VAL-015 | validation | cross-domain | verified | 2026-11-21 | [Electric headroom and exact-part checkpoint](records/VAL-015-electric-headroom-and-parts.md) |

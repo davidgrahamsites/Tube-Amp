@@ -673,3 +673,64 @@ Source: Current conversation, electric input review
 - [brain/records/DEC-010-electric-input-no-buffer.md](<../../brain/records/DEC-010-electric-input-no-buffer.md>)
 - [engineering/whole-amp/reverb-600/review/electric-input-loading-2026-11-21.json](<../../engineering/whole-amp/reverb-600/review/electric-input-loading-2026-11-21.json>)
 
+## FB-060 — electric-build-continuation
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> keep going on the electric build. Check the headroom for hotter humbuckers, keep picking the remaining parts and finish the PCB so it fits our cabinet. Log everything in ICM.
+
+Continue original electric build; scoped headroom, remaining exact parts, cabinet-constrained PCB. No extra buffer per DEC-010.
+
+Source: Current conversation
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [brain/records/VAL-015-electric-headroom-and-parts.md](<../../brain/records/VAL-015-electric-headroom-and-parts.md>)
+- [PROJECT_STATUS.md](<../../PROJECT_STATUS.md>)
+
+## FB-061 — control-panel-requirement
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> we also need to think about building the panel that the potentiometrs (pots) attach to
+
+Design a physical pot/control mounting panel with exact shaft/bushing/knob compatibility, wiring clearance, labels and cabinet/chassis mounting.
+
+Source: Current conversation
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [brain/records/DEC-011-pot-panel-proposal.md](<../../brain/records/DEC-011-pot-panel-proposal.md>)
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+
+## FB-062 — measurement-instruction-correction
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> Please be WAY more clear about what measurements you need. Use imagen to create an image of the measurments.
+
+Replace ambiguous multi-measurement wording with illustrated start/end points, orientation and millimetre instructions. Generated illustrations are guidance, never evidence of actual dimensions.
+
+Source: Current conversation; reply to cabinet fit measurement request
+
+- [engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md](<../../engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md>)
+- [engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.png](<../../engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.png>)
+
+## FB-063 — cabinet-obstruction-clarification
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> there is no obestruction on mine; just the top to the bottom
+
+Clear space below opening to inside floor. Simplify P3 to one centre internal-height measurement; illustration crossbar was hypothetical and must not become cabinet data.
+
+Source: Current conversation while measuring P3
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md](<../../engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md>)
+
+## FB-064 — speaker-aperture-measurement-usability
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> it's hard to get the largest measurement of a circle without calipers
+
+Use a simple ruler/tape sweep to find the longest chord horizontally and vertically, with1–2mm preliminary uncertainty. Explain centre-offset error; reserve final fit for actual speaker template/trial. No caliper purchase required.
+
+Source: Current conversation, S1 measurement
+
+- [engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md](<../../engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md>)
+

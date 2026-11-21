@@ -1,10 +1,10 @@
-# Fit calculation factory
-Owner: integration agent. One job: calculate screens from the canonical register.
+# Mechanical study factories
+Owner: integration. One job: generate dimensional screens and printable studies from the fit register.
 ## Inputs
-`../fit-register.json`.
+`../fit-register.json`; `../../reverb-600/circuit.json` supplies pot terminal nets only.
 ## Process
-Run `python3 check_fit.py`; no network, supplier access or CAD mutation. Formula checks are distinct from actual assembly qualification.
+`check_fit.py` checks the original dimensional screens. `panel_study.py` generates panel envelopes and a terminal interface. `print_panel.py` exports full-size and tiled paper PDFs. These factories do not mutate native CAD or approve fabrication.
 ## Outputs
-`../review/fit-screen.json`.
+Generated JSON, CSV, SVG and PDF under `../review/`. Only the register is the dimensional edit surface.
 ## Human check
-Compare assumptions and missing dimensions with actual parts before treating a result as usable fit.
+Check the 100 mm print bar with a ruler, place the paper against the actual opening and compare real knob/pot hardware before machining.

@@ -957,6 +957,92 @@
       ],
       "supersedes": [],
       "next_action": "Retain original input without extra buffer; qualify first-triode headroom and actual instrument/cable noise and loading during subsequent design and commissioning."
+    },
+    {
+      "id": "FB-060",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "electric-build-continuation",
+      "quote": "keep going on the electric build. Check the headroom for hotter humbuckers, keep picking the remaining parts and finish the PCB so it fits our cabinet. Log everything in ICM.",
+      "source": "Current conversation",
+      "interpretation": "Continue original electric build; scoped headroom, remaining exact parts, cabinet-constrained PCB. No extra buffer per DEC-010.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "brain/records/VAL-015-electric-headroom-and-parts.md",
+        "PROJECT_STATUS.md"
+      ],
+      "supersedes": [],
+      "next_action": "Continue remaining package/circuit qualification and physical assembly allocation. PCB unfinished; current routing and fit limits are explicit."
+    },
+    {
+      "id": "FB-061",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "control-panel-requirement",
+      "quote": "we also need to think about building the panel that the potentiometrs (pots) attach to",
+      "source": "Current conversation",
+      "interpretation": "Design a physical pot/control mounting panel with exact shaft/bushing/knob compatibility, wiring clearance, labels and cabinet/chassis mounting.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "brain/records/DEC-011-pot-panel-proposal.md",
+        "engineering/whole-amp/mechanical/fit-register.json"
+      ],
+      "supersedes": [],
+      "next_action": "Obtain clear opening/vertical clearance; validate exact shaft/nut/knob stack and assembly before panel/drill release."
+    },
+    {
+      "id": "FB-062",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "measurement-instruction-correction",
+      "quote": "Please be WAY more clear about what measurements you need. Use imagen to create an image of the measurments.",
+      "source": "Current conversation; reply to cabinet fit measurement request",
+      "interpretation": "Replace ambiguous multi-measurement wording with illustrated start/end points, orientation and millimetre instructions. Generated illustrations are guidance, never evidence of actual dimensions.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md",
+        "engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.png"
+      ],
+      "supersedes": [],
+      "next_action": "Receive P1/P2/P3/S1/T1/T2/T3 readings and record their datums/uncertainty; no dimensions inferred from the illustration."
+    },
+    {
+      "id": "FB-063",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "cabinet-obstruction-clarification",
+      "quote": "there is no obestruction on mine; just the top to the bottom",
+      "source": "Current conversation while measuring P3",
+      "interpretation": "Clear space below opening to inside floor. Simplify P3 to one centre internal-height measurement; illustration crossbar was hypothetical and must not become cabinet data.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md"
+      ],
+      "supersedes": [],
+      "next_action": "Receive P3 numeric internal height; do not infer it by subtracting assumed wood thickness from supplier external height."
+    },
+    {
+      "id": "FB-064",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "speaker-aperture-measurement-usability",
+      "quote": "it's hard to get the largest measurement of a circle without calipers",
+      "source": "Current conversation, S1 measurement",
+      "interpretation": "Use a simple ruler/tape sweep to find the longest chord horizontally and vertically, with1–2mm preliminary uncertainty. Explain centre-offset error; reserve final fit for actual speaker template/trial. No caliper purchase required.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md"
+      ],
+      "supersedes": [],
+      "next_action": "Record reported horizontal/vertical aperture and uncertainty; do not invent a diameter."
     }
   ]
 }

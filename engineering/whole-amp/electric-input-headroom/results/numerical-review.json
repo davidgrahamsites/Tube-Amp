@@ -1,0 +1,253 @@
+{
+  "summary_sha256": "f0352dc20b84ee90181922295a1442516c339372e0c0b994449355d3305e1e69",
+  "total_cases": 118,
+  "scope": "First-stage numerical stability, not real-pickup or whole-amplifier qualification",
+  "max_refinement_gain_change_percent": 0.01535700262049744,
+  "max_refinement_THD_change_percentage_points": 0.010915016400824484,
+  "max_adjacent_window_gain_change_percent": 0.003092189130571299,
+  "max_adjacent_window_THD_change_percentage_points": 0.001356794665948513,
+  "comparisons": [
+    {
+      "baseline": "clean-B278-F82.4-A1-V0.25-S128-C60",
+      "refinement": "clean-B278-F82.4-A1-V0.25-S256-C120",
+      "first_stage_gain_change_percent": 0.015168641608287459,
+      "first_stage_THD_change_percentage_points": 0.00151519343401052
+    },
+    {
+      "baseline": "clean-B278-F82.4-A2-V0.25-S128-C60",
+      "refinement": "clean-B278-F82.4-A2-V0.25-S256-C120",
+      "first_stage_gain_change_percent": 0.014554805594202413,
+      "first_stage_THD_change_percentage_points": 0.006988853243035109
+    },
+    {
+      "baseline": "clean-B278-F1000-A1-V0.25-S128-C500",
+      "refinement": "clean-B278-F1000-A1-V0.25-S256-C1000",
+      "first_stage_gain_change_percent": 0.01535700262049744,
+      "first_stage_THD_change_percentage_points": 0.002471554526680464
+    },
+    {
+      "baseline": "clean-B278-F1000-A2-V0.25-S128-C500",
+      "refinement": "clean-B278-F1000-A2-V0.25-S256-C1000",
+      "first_stage_gain_change_percent": 0.013046004305050651,
+      "first_stage_THD_change_percentage_points": 0.010915016400824484
+    },
+    {
+      "baseline": "dirty-B278-F82.4-A1-V0.25-S128-C60",
+      "refinement": "dirty-B278-F82.4-A1-V0.25-S256-C120",
+      "first_stage_gain_change_percent": -0.009359670486608351,
+      "first_stage_THD_change_percentage_points": -0.0006608409895239031
+    },
+    {
+      "baseline": "dirty-B278-F82.4-A2-V0.25-S128-C60",
+      "refinement": "dirty-B278-F82.4-A2-V0.25-S256-C120",
+      "first_stage_gain_change_percent": -0.005817892702031369,
+      "first_stage_THD_change_percentage_points": -0.0013327760556536283
+    },
+    {
+      "baseline": "dirty-B278-F1000-A1-V0.25-S128-C500",
+      "refinement": "dirty-B278-F1000-A1-V0.25-S256-C1000",
+      "first_stage_gain_change_percent": 0.0131228381470061,
+      "first_stage_THD_change_percentage_points": 0.0006481634300339323
+    },
+    {
+      "baseline": "dirty-B278-F1000-A2-V0.25-S128-C500",
+      "refinement": "dirty-B278-F1000-A2-V0.25-S256-C1000",
+      "first_stage_gain_change_percent": 0.009130208116925331,
+      "first_stage_THD_change_percentage_points": 0.009577077179201865
+    }
+  ],
+  "first_sample_crossings": [
+    {
+      "channel": "clean",
+      "supply_V": 240,
+      "frequency_Hz": 82.4,
+      "diagnostic": "5_percent_THD",
+      "last_below_source_Vpk": 1,
+      "first_at_or_above_source_Vpk": 1.5
+    },
+    {
+      "channel": "clean",
+      "supply_V": 240,
+      "frequency_Hz": 82.4,
+      "diagnostic": "1_dB_gain_compression",
+      "last_below_source_Vpk": 1.5,
+      "first_at_or_above_source_Vpk": 2
+    },
+    {
+      "channel": "clean",
+      "supply_V": 240,
+      "frequency_Hz": 1000,
+      "diagnostic": "5_percent_THD",
+      "last_below_source_Vpk": 1,
+      "first_at_or_above_source_Vpk": 1.5
+    },
+    {
+      "channel": "clean",
+      "supply_V": 240,
+      "frequency_Hz": 1000,
+      "diagnostic": "1_dB_gain_compression",
+      "last_below_source_Vpk": 1.5,
+      "first_at_or_above_source_Vpk": 2
+    },
+    {
+      "channel": "clean",
+      "supply_V": 278,
+      "frequency_Hz": 82.4,
+      "diagnostic": "5_percent_THD",
+      "last_below_source_Vpk": 1,
+      "first_at_or_above_source_Vpk": 1.5
+    },
+    {
+      "channel": "clean",
+      "supply_V": 278,
+      "frequency_Hz": 82.4,
+      "diagnostic": "1_dB_gain_compression",
+      "last_below_source_Vpk": 1.5,
+      "first_at_or_above_source_Vpk": 2
+    },
+    {
+      "channel": "clean",
+      "supply_V": 278,
+      "frequency_Hz": 1000,
+      "diagnostic": "5_percent_THD",
+      "last_below_source_Vpk": 1,
+      "first_at_or_above_source_Vpk": 1.5
+    },
+    {
+      "channel": "clean",
+      "supply_V": 278,
+      "frequency_Hz": 1000,
+      "diagnostic": "1_dB_gain_compression",
+      "last_below_source_Vpk": 1.5,
+      "first_at_or_above_source_Vpk": 2
+    },
+    {
+      "channel": "clean",
+      "supply_V": 320,
+      "frequency_Hz": 82.4,
+      "diagnostic": "5_percent_THD",
+      "last_below_source_Vpk": 1,
+      "first_at_or_above_source_Vpk": 1.5
+    },
+    {
+      "channel": "clean",
+      "supply_V": 320,
+      "frequency_Hz": 82.4,
+      "diagnostic": "1_dB_gain_compression",
+      "last_below_source_Vpk": 2,
+      "first_at_or_above_source_Vpk": 3
+    },
+    {
+      "channel": "clean",
+      "supply_V": 320,
+      "frequency_Hz": 1000,
+      "diagnostic": "5_percent_THD",
+      "last_below_source_Vpk": 1,
+      "first_at_or_above_source_Vpk": 1.5
+    },
+    {
+      "channel": "clean",
+      "supply_V": 320,
+      "frequency_Hz": 1000,
+      "diagnostic": "1_dB_gain_compression",
+      "last_below_source_Vpk": 2,
+      "first_at_or_above_source_Vpk": 3
+    },
+    {
+      "channel": "dirty",
+      "supply_V": 240,
+      "frequency_Hz": 82.4,
+      "diagnostic": "5_percent_THD",
+      "last_below_source_Vpk": 2,
+      "first_at_or_above_source_Vpk": 3
+    },
+    {
+      "channel": "dirty",
+      "supply_V": 240,
+      "frequency_Hz": 82.4,
+      "diagnostic": "1_dB_gain_compression",
+      "last_below_source_Vpk": 3,
+      "first_at_or_above_source_Vpk": null
+    },
+    {
+      "channel": "dirty",
+      "supply_V": 240,
+      "frequency_Hz": 1000,
+      "diagnostic": "5_percent_THD",
+      "last_below_source_Vpk": 1,
+      "first_at_or_above_source_Vpk": 1.5
+    },
+    {
+      "channel": "dirty",
+      "supply_V": 240,
+      "frequency_Hz": 1000,
+      "diagnostic": "1_dB_gain_compression",
+      "last_below_source_Vpk": 1.5,
+      "first_at_or_above_source_Vpk": 2
+    },
+    {
+      "channel": "dirty",
+      "supply_V": 278,
+      "frequency_Hz": 82.4,
+      "diagnostic": "5_percent_THD",
+      "last_below_source_Vpk": 2,
+      "first_at_or_above_source_Vpk": 3
+    },
+    {
+      "channel": "dirty",
+      "supply_V": 278,
+      "frequency_Hz": 82.4,
+      "diagnostic": "1_dB_gain_compression",
+      "last_below_source_Vpk": 3,
+      "first_at_or_above_source_Vpk": null
+    },
+    {
+      "channel": "dirty",
+      "supply_V": 278,
+      "frequency_Hz": 1000,
+      "diagnostic": "5_percent_THD",
+      "last_below_source_Vpk": 1,
+      "first_at_or_above_source_Vpk": 1.5
+    },
+    {
+      "channel": "dirty",
+      "supply_V": 278,
+      "frequency_Hz": 1000,
+      "diagnostic": "1_dB_gain_compression",
+      "last_below_source_Vpk": 1.5,
+      "first_at_or_above_source_Vpk": 2
+    },
+    {
+      "channel": "dirty",
+      "supply_V": 320,
+      "frequency_Hz": 82.4,
+      "diagnostic": "5_percent_THD",
+      "last_below_source_Vpk": 3,
+      "first_at_or_above_source_Vpk": null
+    },
+    {
+      "channel": "dirty",
+      "supply_V": 320,
+      "frequency_Hz": 82.4,
+      "diagnostic": "1_dB_gain_compression",
+      "last_below_source_Vpk": 3,
+      "first_at_or_above_source_Vpk": null
+    },
+    {
+      "channel": "dirty",
+      "supply_V": 320,
+      "frequency_Hz": 1000,
+      "diagnostic": "5_percent_THD",
+      "last_below_source_Vpk": 1,
+      "first_at_or_above_source_Vpk": 1.5
+    },
+    {
+      "channel": "dirty",
+      "supply_V": 320,
+      "frequency_Hz": 1000,
+      "diagnostic": "1_dB_gain_compression",
+      "last_below_source_Vpk": 2,
+      "first_at_or_above_source_Vpk": 3
+    }
+  ]
+}

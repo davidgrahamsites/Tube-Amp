@@ -44,3 +44,5 @@ python3 engineering/whole-amp/reverb-600/tools/check_electric_input.py /tmp/rene
 ```
 
 Native input connectivity/value checks and bounded calculations support this decision. They do not establish flat frequency response, specified clean headroom, hum/RFI performance, channel-switching transients or fabrication readiness. Preserve short, shielded sensitive input wiring and review physical grid-stopper placement during socket/chassis layout; the shared pre-relay stopper requires care with the following grid leads. Revisit buffering only if a defined interface, measured loading/noise problem or new feature justifies it. Validate both channel states with the actual instruments and cable at commissioning.
+
+Follow-up21November: [VAL-015](VAL-015-electric-headroom-and-parts.md) records the completed scoped hot-signal headroom sweep. The no-buffer decision remains; assumed large sine signals show progressive tube distortion and do not establish an actual pickup limit.

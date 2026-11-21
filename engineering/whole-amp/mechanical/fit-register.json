@@ -56,7 +56,15 @@
       "speaker_bottom_adjacent_source": "User2026-11-20: bottom left to bottom right is also 21cm",
       "speaker_right_vertical_centres_mm": 210,
       "speaker_right_vertical_source": "User2026-11-20: top right to bottom right also 21cm. Don't you think it's a little hard to measure a tangeant instead of a straight line?",
-      "speaker_pattern_interpretation": "Three adjacent spacings reported210mm; two opposite diagonals reported294mm. Approximately square pattern is plausible; ideal210mm square implies296.985mm diagonal. Retain3mm discrepancy as unresolved measurement/geometry uncertainty; do not treat294 or297 as exact or as a fabrication tolerance. Enough for preliminary speaker screening; qualify exact fit with manufacturer drawing/template or trial fit, without repeated tape measurements now."
+      "speaker_pattern_interpretation": "Three adjacent spacings reported210mm; two opposite diagonals reported294mm. Approximately square pattern is plausible; ideal210mm square implies296.985mm diagonal. Retain3mm discrepancy as unresolved measurement/geometry uncertainty; do not treat294 or297 as exact or as a fabrication tolerance. Enough for preliminary speaker screening; qualify exact fit with manufacturer drawing/template or trial fit, without repeated tape measurements now.",
+      "P3_obstruction_report": {
+        "reported_on": "2026-11-21",
+        "source": "User: there is no obestruction on mine; just the top to the bottom",
+        "interpretation": "User reports clear space below the top opening down to the inside floor. Measure P3 once vertically through the middle from underside of top wood to top surface of inside floor; exclude wood thickness.",
+        "obstruction_below_opening": "none reported before floor",
+        "P3_inside_height_mm": null,
+        "verification": "User observation; dimension and full populated assembly remain unverified."
+      }
     }
   },
   "boards": {
@@ -242,5 +250,127 @@
       "electrical_bonding_verified": false,
       "scale_present": false
     }
+  },
+  "control_panel_study": {
+    "status": "PROPOSAL / paper-fit study only; no drilling or fabrication release",
+    "source": "engineering/component-selection/evidence/control-panel-parts-2026-11-21.md",
+    "panel_attachment": "Metal panel/chassis carries pot torque; wired solder lugs. Attachment holes and finished perimeter unresolved.",
+    "opening_basis": "Supplier312x67 labels only; actual opening origin/radii/supports not verified. Frame below is a bounding screen, not a cut profile.",
+    "screen_frame_mm": [
+      312,
+      67
+    ],
+    "pot_body_diameter_mm": 24,
+    "pot_body_depth_mm": 11.5,
+    "pot_lug_reach_from_shaft_mm": 18.8,
+    "wire_extension_study_mm": 6,
+    "knob_swept_diameter_mm": 26,
+    "knob_height_mm": 16.5,
+    "bushing": "M8x0.75,6.5mm length, Alpha standard variant",
+    "shaft": "6.35mm smooth;15mm manufacturerL includes6.5mm bushing",
+    "pot_hole_study_mm": 8.2,
+    "hole_status": "Proposed clearance; exact tolerance, antirotation tab and nut/washer stack not released",
+    "metal_thickness_study_mm": 2,
+    "material_study": "Aluminium, stiffness/folds/mounting not yet established",
+    "knob_candidate": "Mable MAKP0437S, specifically6.4mm bore; bore depth/recess/set-screw height pending",
+    "control_coordinates_view": "Top viewed by operator; origin upper-left of rectangular312x67 screen. Pot lugs oriented toward+x in underside envelope study; verify terminal1/2/3 orientation on actual drawing/sample.",
+    "controls": [
+      {
+        "reference": "RV1",
+        "label": "CLEAN TREBLE",
+        "xy_mm": [
+          72,
+          16.5
+        ],
+        "pot_candidate_mpn": "RV24AF-10-15R1-B250K-3LA"
+      },
+      {
+        "reference": "RV2",
+        "label": "CLEAN BASS",
+        "xy_mm": [
+          114,
+          16.5
+        ],
+        "pot_candidate_mpn": "RV24AF-10-15R1-A1M-3LA"
+      },
+      {
+        "reference": "RV3",
+        "label": "CLEAN VOLUME",
+        "xy_mm": [
+          156,
+          16.5
+        ],
+        "pot_candidate_mpn": "RV24AF-10-15R1-A1M-3LA"
+      },
+      {
+        "reference": "RV602",
+        "label": "REVERB",
+        "xy_mm": [
+          198,
+          16.5
+        ],
+        "pot_candidate_mpn": "RV24AF-10-15R1-A100K-3LA"
+      },
+      {
+        "reference": "RV9",
+        "label": "PRESENCE",
+        "xy_mm": [
+          240,
+          16.5
+        ],
+        "pot_candidate_mpn": "RV24AF-10-15R1-B25K-3LA"
+      },
+      {
+        "reference": "RV4",
+        "label": "DIRTY GAIN",
+        "xy_mm": [
+          72,
+          50.5
+        ],
+        "pot_candidate_mpn": "RV24AF-10-15R1-A1M-3LA"
+      },
+      {
+        "reference": "RV5",
+        "label": "DIRTY TREBLE",
+        "xy_mm": [
+          114,
+          50.5
+        ],
+        "pot_candidate_mpn": "RV24AF-10-15R1-B250K-3LA"
+      },
+      {
+        "reference": "RV7",
+        "label": "DIRTY MID",
+        "xy_mm": [
+          156,
+          50.5
+        ],
+        "pot_candidate_mpn": "RV24AF-10-15R1-B25K-3LA"
+      },
+      {
+        "reference": "RV6",
+        "label": "DIRTY BASS",
+        "xy_mm": [
+          198,
+          50.5
+        ],
+        "pot_candidate_mpn": "RV24AF-10-15R1-A1M-3LA"
+      },
+      {
+        "reference": "RV8",
+        "label": "DIRTY MASTER",
+        "xy_mm": [
+          240,
+          50.5
+        ],
+        "pot_candidate_mpn": "RV24AF-10-15R1-A1M-3LA"
+      }
+    ],
+    "reserved_end_bands_mm": 31,
+    "frame_to_cabinet_transform": null,
+    "panel_mounting_holes": null,
+    "antirotation_holes": null,
+    "knob_seating_verified": false,
+    "assembled_fit_verified": false
   }
 }

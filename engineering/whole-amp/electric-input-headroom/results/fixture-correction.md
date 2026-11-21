@@ -1,0 +1,4 @@
+# Fixture correction, 2026-11-21
+First attempt selected only sheet02_dirty and accidentally omitted02b_dirty_tone, leaving DIRTY_OUT atzero. This was detected from non-finite output THD. The archived attempt is invalid for complete dirty-preamp output behavior; do not use it as a passing run. The factory now includes both dirty sheets, asserts a nonzero output and checks the intended tube-half count. Clean runs were unaffected. Corrected current summary supersedes the archived attempt. This is a fixture correction, not a native circuit change.
+
+The corrected dirty fixture exposed small high-drive settling differences at1kHz. A subsequent full sweep extends all cases to at least0.5s and refinements to1s; original short-settling summary retained. Sampled output stores the last30periods while SPICE still integrates the startup.
