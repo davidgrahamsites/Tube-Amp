@@ -2,6 +2,12 @@
 
 Prepared 20 November 2026. Owner: the next acoustic-build chat.
 
+## Fixed brief for the new chat
+
+**Build a clean tube amplifier for acoustic guitar, with an op-amp input buffer and a properly matched main speaker, tweeter and crossover, inside the existing delivered yellow-tweed cabinet.** Use replaceable tube sockets. Retain the solid-state-driven spring reverb and documented wet-only controls. This is the acoustic branch; preserve the separate electric build.
+
+The user is concerned that the project has drifted away from the starter amplifier. Begin with a controlled reuse review of the original Renegade clean channel, phase inverter, push-pull EL34 power section and supplies. Do not assume a complete new amplifier is required or promise the inherited circuit already meets acoustic targets. No specific high wattage or full-power 20Hz bandwidth has been approved.
+
 ## 1. Start here
 
 Repository: https://github.com/davidgrahamsites/Tube-Amp
@@ -144,6 +150,30 @@ Latest selections include KNSCHA MEB104J63V82CB0236 at 11 positions and MEB105J6
 Keep the accepted pointer/chicken-head knob styling and match actual shaft diameter/type/length and panel stack. See `brain/records/CMP-013-pointer-knobs.md`. Do not treat a visual knob choice as shaft-fit verification.
 
 Faceplate REVERB adds wet while dry stays constant. Expression-pedal requirement is confirmed but **not implemented**: passive rocker pot controls wet only, heel=dry, toe=faceplate maximum, unplugged=normal faceplate operation. Audio remains inside the amp; pedal cable carries protected low-voltage control. Preserve the separate debounced channel/reverb on-off footswitch. Pot value/taper, pinout, connector and gain-control circuit are not selected. Read `engineering/whole-amp/expression-control/requirements.md`.
+
+## Feasibility and what actually changes
+
+Engineering assessment at handoff: this is a feasible design-development direction using available techniques and substantial existing project work. It is not yet a proven fit or a construction-ready design. The missing evidence is specific and testable; it does not establish that the concept is out of reach. No cost, loudness or fit guarantee can be made before the remaining constraints are closed.
+
+| Existing work | Acoustic treatment |
+|---|---|
+| Original Renegade clean-channel topology | Starting candidate; quantify gain, input/output headroom and frequency response before changing values. |
+| Phase inverter and EL34 output pair | Starting candidate for clean tube amplification; validate operating point, distortion, stability, transformer/load and actual clean power. |
+| Original dirty channel | Preserved in the source/electric build. Its role in the acoustic branch needs an explicit scope decision; do not silently remove it or force acoustic sound through intentional overdrive. |
+| Mains/heater/bias/control supply work | Reuse requirements and calculations; finish exact220V/50Hz transformer/load/thermal/protection qualification. These were unresolved before the branch split. |
+| Spring tank, drive/recovery and wet controls | Reuse as a starting subsystem; maintain measured resistance and uncertainty limits. Recheck loading and gain after acoustic changes; expression circuit remains unimplemented. |
+| Selected general-purpose parts and libraries | Retain evidence and reuse suitable parts after checking new stresses and packaging. A shared MPN does not prove unchanged qualification. |
+| Cabinet and measured mounting evidence | Fixed existing shell. Actual populated fit still needs a dimensioned assembly and template/trial-fit evidence. |
+| Input interface | Add the authorized op-amp buffer and appropriate loading/protection/headroom for the actual guitars. |
+| Tone shaping and clean gain allocation | Review and adjust for acoustic reproduction. A buffer alone does not undo electric-guitar voicing or prevent later-stage clipping. |
+| Speaker system and output load | New acoustic selection: main driver, tweeter and crossover designed together, with open-back suitability, response, sensitivity, complex impedance and cabinet fit considered. |
+| PCB drafts | Starting artifacts and reusable layout/library work. They are not finished acoustic boards; finish the acoustic block design and exact footprints before rerouting. |
+
+There is enough information now to audit the existing clean path, develop a bounded buffer candidate, set up comparative simulations, research exact driver pairs and prepare dimensional fit templates. There is not yet enough evidence to order a complete acoustic parts kit, release a PCB/crossover or promise an assembly fits.
+
+Critical remaining inputs/checks: intended playing level and setting (home, solo performance, band), guitar pickup interfaces, selected drivers with acoustic/impedance data, exact transformers and tube/socket envelopes, actual clearances around chassis/speaker/tank, real-transformer simulation issues and bench validation. Do not demand a perfect data sheet for every item before independent progress; use qualified measurements or bounded models where appropriate and label their limits.
+
+The next chat should first produce a short **keep / modify / replace** review of the starter amp, an agreed clean-performance target and an updated fit budget. Then implement the smallest justified set of acoustic changes. Preserve the source, existing evidence and electric branch throughout.
 
 ## 9. Next work sequence for the acoustic chat
 

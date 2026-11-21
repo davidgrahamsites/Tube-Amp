@@ -672,3 +672,16 @@ Source: Current conversation with discussion of tube hi-fi, acoustic realism, cl
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 - [ACOUSTIC_HANDOFF.md](<../../ACOUSTIC_HANDOFF.md>)
 
+## FB-058 — acoustic-brief-and-feasibility
+Authority: user. Disposition: incorporated. Recorded: 2026-11-20. Original date: 2026-11-20.
+
+> make sure all of that is in the acoustic branch handoff so the new chat knows we're building a clean tube amp for acoustic guitar, with the op-amp buffer and proper speaker, tweeter and crossover. Can we possibly build that with our current information or is it out of reach?
+
+Explicit acoustic brief recorded. Feasibility assessment must distinguish reusable starter stages, acoustic-specific changes, missing qualification evidence and build-ready status. Preserve electric build and explain that implementation should begin with a keep/modify/replace review rather than assume wholesale replacement.
+
+Source: Current conversation; user also asks about continuity with the starter configuration
+
+- [ACOUSTIC_HANDOFF.md](<../../ACOUSTIC_HANDOFF.md>)
+- [BUILD_VARIANT.md](<../../BUILD_VARIANT.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+
