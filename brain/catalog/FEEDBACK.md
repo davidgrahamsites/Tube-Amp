@@ -1,6 +1,6 @@
 # Feedback and decision trail
 
-Generated as of 2026-11-20; source: ../feedback/events.json. Backfilled original timestamps may be unknown. Incorporated means recorded, not build-complete.
+Generated as of 2026-11-21; source: ../feedback/events.json. Backfilled original timestamps may be unknown. Incorporated means recorded, not build-complete.
 
 ## FB-001 — requirement
 Authority: user. Disposition: incorporated. Recorded: 2026-11-20. Original date: unknown.
@@ -659,4 +659,17 @@ Source: Current conversation during Git branch publication
 
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 - [BUILD_VARIANT.md](<../../BUILD_VARIANT.md>)
+
+## FB-059 — electric-input-simplicity-review
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> check whether our original tube input actually needs the buffer for single coils and humbuckers. Keep the electric build simple, and log the decision in ICM.
+
+Assess the original electric tube input; omit additional buffering if pickup compatibility does not require it. Acoustic buffer authorization remains separate. IDs FB-057/058 are reserved for existing acoustic-branch events.
+
+Source: Current conversation, electric input review
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [brain/records/DEC-010-electric-input-no-buffer.md](<../../brain/records/DEC-010-electric-input-no-buffer.md>)
+- [engineering/whole-amp/reverb-600/review/electric-input-loading-2026-11-21.json](<../../engineering/whole-amp/reverb-600/review/electric-input-loading-2026-11-21.json>)
 

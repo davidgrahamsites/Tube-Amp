@@ -1,6 +1,6 @@
 # Renegade project map
 
-Generated as of 2026-11-20. Edit brain/materials/register.json and brain/feedback/events.json, then rebuild.
+Generated as of 2026-11-21. Edit brain/materials/register.json and brain/feedback/events.json, then rebuild.
 
 ## Start here
 
@@ -175,7 +175,7 @@ Four boards preserve historical originals. Reverb routed with zero DRC violation
 
 ## Complete file inventory
 
-1248 files cataloged with path, role, owner and SHA256 in [FILES.json](FILES.json). No existence/hash check establishes circuit safety or fit.
+1251 files cataloged with path, role, owner and SHA256 in [FILES.json](FILES.json). No existence/hash check establishes circuit safety or fit.
 
 Historical native snapshots keep their existing paths and original internal layout. Their legacy scripts are not new-work templates. New active work separates tools/templates, editable registers and generated products.
 

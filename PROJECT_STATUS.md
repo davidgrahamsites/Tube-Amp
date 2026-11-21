@@ -1,5 +1,7 @@
 # Project status
 
+Electric input review November21: **retain the original tube input; no added buffer** for passive magnetic single coils/humbuckers. Fresh KiCad input export passes10 scoped connectivity/value checks; calculated low-frequency input resistance1.068M ohms in either channel. Native schematic and boards remain unchanged. Clean input headroom and hardware noise/RFI are not yet qualified. [Decision/evidence](brain/records/DEC-010-electric-input-no-buffer.md).
+
 Branch scope: [Electric Guitar Amp](BUILD_VARIANT.md). Acoustic requirements/research below are retained context for the separate acoustic branch. See [build-split decision](brain/records/DEC-009-separate-electric-acoustic-builds.md).
 
 Instrument-use clarification November20: review input compatibility and acoustic voicing for the two guitars described in [user-confirmed requirements](Renegade_Codex_Handoff.md#user-confirmed-requirements) before finalizing input and speaker parts. Pickup models remain pending; no circuit change or new simulation is claimed from this clarification.

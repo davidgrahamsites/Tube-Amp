@@ -24,6 +24,7 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | DEC-007 | decision | cross-domain | documented | 2026-11-19 | [Original amplifier with solid-state spring reverb](records/DEC-007-original-amp-solid-state-reverb.md) |
 | DEC-008 | decision | cross-domain | documented | 2026-11-20 | [Project-wide ICM backfill and continuous decision logging](records/DEC-008-continuous-project-memory.md) |
 | DEC-009 | decision | cross-domain | documented | 2026-11-20 | [Separate electric and acoustic builds](records/DEC-009-separate-electric-acoustic-builds.md) |
+| DEC-010 | decision | schematic | selected | 2026-11-21 | [Retain the original electric tube input without an added buffer](records/DEC-010-electric-input-no-buffer.md) |
 | VAL-001 | validation | schematic | verified | 2026-10-03 | [Extracted starter matches supplied archive](records/VAL-001-starter-archive-match.md) |
 | VAL-002 | validation | cross-domain | verified | 2026-10-04 | [KiCad MCP installation and scoped smoke checks](records/VAL-002-kicad-mcp-install.md) |
 | VAL-003 | validation | schematic | verified | 2026-10-04 | [Original PowerPoint received and inspected](records/VAL-003-original-ppt-intake.md) |
