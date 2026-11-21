@@ -648,3 +648,15 @@ Source: Current conversation, repository https://github.com/davidgrahamsites/Tub
 - [brain/records/DEC-009-separate-electric-acoustic-builds.md](<../../brain/records/DEC-009-separate-electric-acoustic-builds.md>)
 - [BUILD_VARIANT.md](<../../BUILD_VARIANT.md>)
 
+## FB-056 — shared-build-hardware-requirement
+Authority: user. Disposition: incorporated. Recorded: 2026-11-20. Original date: 2026-11-20.
+
+> of course, for any build, we would want to have tube sockets.
+
+Both electric and acoustic builds must use proper replaceable tube sockets. Include socket mounting, ratings, retention and service clearances in parts and fit; no exact socket part or mounting method was selected by this statement.
+
+Source: Current conversation during Git branch publication
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [BUILD_VARIANT.md](<../../BUILD_VARIANT.md>)
+
