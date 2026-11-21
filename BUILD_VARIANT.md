@@ -1,11 +1,13 @@
-# Electric Guitar Amp
+# Acoustic Guitar Amp
 
-Active branch: `electric-guitar-amp`.
+Active branch: `acoustic-guitar-amp`.
 
-This build preserves the original six-tube Renegade amplifier with solid-state-driven spring reverb, constant dry signal and the existing yellow-tweed cabinet requirements. Current schematic, board drafts, selected BOM, simulation evidence, received-hardware photographs, source documents and ICM history are included.
+Start the new chat with [ACOUSTIC_HANDOFF.md](ACOUSTIC_HANDOFF.md). It records the current engineering state, confirmed requirements, unresolved interfaces, exact artifact paths and the next work sequence.
 
-This is an engineering checkpoint, not a fabrication release. Start with [PROJECT_STATUS.md](PROJECT_STATUS.md) and [CONTEXT.md](CONTEXT.md). In particular, three boards still need routing, exact component selection is incomplete, expression control remains pending and assembled fit has not been verified.
+This separate build starts from verified electric checkpoint `6eba80905b44ba7af29efd09fbd587d7280a8521` on `electric-guitar-amp`. The electric branch remains preserved. This branch currently adds handoff/scope records only: inherited native circuits, PCB drafts, BOM and simulations are unchanged from that checkpoint and are not yet qualified as an acoustic amplifier.
 
-The user authorized a separate `acoustic-guitar-amp` build on 20 November 2026. Create it from the verified electric checkpoint after the current project is committed and pushed. Acoustic-specific input buffering and speaker/crossover work belongs on that branch. Acoustic-use research in this checkpoint is retained conversation/evidence; it has not changed the electric circuit.
+Authorized acoustic work: develop an op-amp input buffer and select/design an acoustic speaker, tweeter and crossover to fit the already-delivered yellow-tweed cabinet; retain the spring tank and documented controls. Both builds require proper replaceable tube sockets, with socket/retainer and tube-removal clearances in the physical design. The user will begin implementation in a new chat.
 
-Both builds require proper replaceable tube sockets, with socket/retainer and tube-removal clearances included in the mechanical design. See the canonical requirements in the handoff.
+The original four12AX7/twoEL34 amplifier is the inherited starting point. No wholesale architecture change, purchase, supplier contact or fabrication upload is implied. Canonical requirements live in [Renegade_Codex_Handoff.md](Renegade_Codex_Handoff.md).
+
+Current release state: **engineering draft; not build-ready**. See [PROJECT_STATUS.md](PROJECT_STATUS.md). Keep branch-specific design changes separate and update ICM continuously.

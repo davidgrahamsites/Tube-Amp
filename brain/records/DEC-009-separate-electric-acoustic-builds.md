@@ -29,3 +29,6 @@ The existing original six-tube electric circuit is preserved. Acoustic input buf
 
 ## Open questions and next check
 Verify remote commit identity after each push. The acoustic handoff must distinguish confirmed guitar models from unconfirmed pickup/variant details, existing cabinet evidence from final fit, and proposed parts from selections. Current CAD and simulations are engineering drafts. Preserve the electric branch when beginning acoustic work.
+
+## Acoustic-branch handoff checkpoint
+Electric checkpoint `6eba80905b44ba7af29efd09fbd587d7280a8521` was pushed and verified with `git ls-remote` before creating this branch. See [ACOUSTIC_HANDOFF.md](../../ACOUSTIC_HANDOFF.md) for new-chat startup. Inherited engineering files are unchanged by the handoff. Acoustic implementation remains for the next chat.

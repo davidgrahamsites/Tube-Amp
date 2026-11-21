@@ -9,7 +9,7 @@ Two separate builds are tracked in Git:
 | `electric-guitar-amp` | Original electric-guitar amplifier and spring reverb |
 | `acoustic-guitar-amp` | Acoustic-specific input buffer and speaker/crossover development |
 
-Read [BUILD_VARIANT.md](BUILD_VARIANT.md) to identify the checked-out build. Read [PROJECT_STATUS.md](PROJECT_STATUS.md) for actual completed checks and unresolved work. Neither branch is a construction release.
+For the acoustic build, start with [ACOUSTIC_HANDOFF.md](ACOUSTIC_HANDOFF.md). Read [BUILD_VARIANT.md](BUILD_VARIANT.md) to identify the checked-out build. Read [PROJECT_STATUS.md](PROJECT_STATUS.md) for actual completed checks and unresolved work. Neither branch is a construction release.
 
 ## Project map
 

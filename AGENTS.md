@@ -5,6 +5,7 @@ Start with [CONTEXT.md](CONTEXT.md) for the workspace contract.
 | Task | Read |
 |---|---|
 | Active electric/acoustic build | [Build identity](BUILD_VARIANT.md) |
+| Acoustic new-chat startup | [Detailed handoff](ACOUSTIC_HANDOFF.md) |
 | Project-wide materials and current artifact map | [Workspace catalog](brain/catalog/WORKSPACE.md) |
 | Capture new feedback, corrections and decisions | [Standing capture workflow](brain/rules/feedback.md), then [event ledger](brain/feedback/events.json) |
 | Cabinet, speaker and tank fit | [Mechanical fit contract](engineering/whole-amp/mechanical/CONTEXT.md) |

@@ -2,7 +2,7 @@
 One job: develop the amplifier and retain the knowledge learned.
 
 ## Inputs
-Read [BUILD_VARIANT.md](BUILD_VARIANT.md) first to identify the current branch and keep electric/acoustic changes separate.
+Read [BUILD_VARIANT.md](BUILD_VARIANT.md) first to identify the current branch and keep electric/acoustic changes separate. On this acoustic branch, read [ACOUSTIC_HANDOFF.md](ACOUSTIC_HANDOFF.md) before implementation.
 
 [Handoff](Renegade_Codex_Handoff.md), [recovered conversation](CHATGPT_CONVERSATION.md), [project status](PROJECT_STATUS.md), and the imported `Renegade_Library_Starter/` package.
 

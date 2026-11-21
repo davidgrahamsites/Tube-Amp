@@ -1,6 +1,6 @@
 # Project status
 
-Branch scope: [Electric Guitar Amp](BUILD_VARIANT.md). Acoustic requirements/research below are retained context for the separate acoustic branch. See [build-split decision](brain/records/DEC-009-separate-electric-acoustic-builds.md).
+Branch scope: [Acoustic Guitar Amp](BUILD_VARIANT.md). Start with [the extensive new-chat handoff](ACOUSTIC_HANDOFF.md). This branch inherits the electric engineering checkpoint; acoustic buffer, drivers and crossover are authorized but not implemented or selected. The engineering results below describe the inherited files unless explicitly identified as later acoustic work. See [build-split decision](brain/records/DEC-009-separate-electric-acoustic-builds.md).
 
 Instrument-use clarification November20: review input compatibility and acoustic voicing for the two guitars described in [user-confirmed requirements](Renegade_Codex_Handoff.md#user-confirmed-requirements) before finalizing input and speaker parts. Pickup models remain pending; no circuit change or new simulation is claimed from this clarification.
 

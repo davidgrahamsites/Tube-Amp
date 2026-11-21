@@ -173,9 +173,18 @@ Four boards preserve historical originals. Reverb routed with zero DRC violation
 
 - [engineering/whole-amp/pcb-measured-r](<../../engineering/whole-amp/pcb-measured-r>)
 
+### MAT-018 — Acoustic branch startup and inherited baseline
+Role: catalog. Status: ready for new-chat engineering; acoustic implementation pending. Owner: Acoustic build integration.
+
+Branches split at verified electric checkpoint 6eba80905b44ba7af29efd09fbd587d7280a8521. Handoff documents exact paths, evidence, constraints and unimplemented acoustic work.
+
+- [BUILD_VARIANT.md](<../../BUILD_VARIANT.md>)
+- [ACOUSTIC_HANDOFF.md](<../../ACOUSTIC_HANDOFF.md>)
+- [README.md](<../../README.md>)
+
 ## Complete file inventory
 
-1248 files cataloged with path, role, owner and SHA256 in [FILES.json](FILES.json). No existence/hash check establishes circuit safety or fit.
+1249 files cataloged with path, role, owner and SHA256 in [FILES.json](FILES.json). No existence/hash check establishes circuit safety or fit.
 
 Historical native snapshots keep their existing paths and original internal layout. Their legacy scripts are not new-work templates. New active work separates tools/templates, editable registers and generated products.
 
