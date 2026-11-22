@@ -149,7 +149,7 @@
     "requirement": "0.5 W minimum; exact part pending",
     "status": "candidate identified; qualification incomplete",
     "candidate_mpns": [
-      "MF1/2WS-15KΩ±1% T52"
+      "MF1/2WS-15K\u03a9\u00b11% T52"
     ]
   },
   {
@@ -297,7 +297,7 @@
     "requirement": "0.5 W minimum; exact part pending",
     "status": "candidate identified; qualification incomplete",
     "candidate_mpns": [
-      "RN1WS820ΩFT/BA1"
+      "RN1WS820\u03a9FT/BA1"
     ]
   },
   {
@@ -309,7 +309,7 @@
     "requirement": "2 W minimum; Vk stress pending",
     "status": "selected; nominal DC rating screen passed; integrated qualification pending",
     "candidate_mpns": [
-      "MF2WS-100KΩ±1%T",
+      "MF2WS-100K\u03a9\u00b11%T",
       "FMP200JR-52-100K"
     ],
     "selected_mpn": "FMP200JR-52-100K"
@@ -703,7 +703,7 @@
     "requirement": "5 W",
     "status": "candidate identified; qualification incomplete",
     "candidate_mpns": [
-      "MOF5WS-10KΩ±5% T"
+      "MOF5WS-10K\u03a9\u00b15% T"
     ]
   },
   {
@@ -766,7 +766,7 @@
     "requirement": "1% 0.25 W",
     "status": "selected; scoped rating screen passed; integrated thermal/fault/fit and domestic quote checks remain",
     "candidate_mpns": [
-      "MF1/2WS-15KΩ±1% T52",
+      "MF1/2WS-15K\u03a9\u00b11% T52",
       "MF0207FTE52-15K"
     ],
     "selected_mpn": "MF0207FTE52-15K",
@@ -953,10 +953,19 @@
     ],
     "value": "JR1 harness",
     "requirement": "Low voltage only; soldered locking harness or retained socket",
-    "status": "candidate identified; qualification incomplete",
+    "status": "candidate identified; retention, native geometry, wire/shield and procurement qualification incomplete",
     "candidate_mpns": [
       "B2B-XH-A(LF)(SN)"
-    ]
+    ],
+    "mate_requirements": {
+      "housing": "XHP-2",
+      "contact": "SXH-001T-P0.6",
+      "contacts_per_connector": 2,
+      "retention": "Independent clamp/retainer required; XH has no positive latch",
+      "native_pitch_mm": 2.5,
+      "native_integration": "Replace generic2.54mm footprint only after qualification",
+      "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md"
+    }
   },
   {
     "id": "P078",
@@ -1102,7 +1111,9 @@
     "status": "candidate identified; qualification incomplete",
     "candidate_mpns": [
       "224CL0045"
-    ]
+    ],
+    "qualification_hold": "Exact manufacturer maximum body dimensions, lead diameter and voltage derating missing",
+    "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md"
   },
   {
     "id": "P088",
@@ -1111,10 +1122,19 @@
     ],
     "value": "JR2 harness",
     "requirement": "Low voltage only; soldered locking harness or retained socket",
-    "status": "candidate identified; qualification incomplete",
+    "status": "candidate identified; retention, native geometry, wire/shield and procurement qualification incomplete",
     "candidate_mpns": [
       "B2B-XH-A(LF)(SN)"
-    ]
+    ],
+    "mate_requirements": {
+      "housing": "XHP-2",
+      "contact": "SXH-001T-P0.6",
+      "contacts_per_connector": 2,
+      "retention": "Independent clamp/retainer required; XH has no positive latch",
+      "native_pitch_mm": 2.5,
+      "native_integration": "Replace generic2.54mm footprint only after qualification",
+      "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md"
+    }
   },
   {
     "id": "P089",
@@ -1123,10 +1143,19 @@
     ],
     "value": "JR3 harness",
     "requirement": "Low voltage only; soldered locking harness or retained socket",
-    "status": "candidate identified; qualification incomplete",
+    "status": "candidate identified; retention, native geometry, wire/shield and procurement qualification incomplete",
     "candidate_mpns": [
       "B2B-XH-A(LF)(SN)"
-    ]
+    ],
+    "mate_requirements": {
+      "housing": "XHP-2",
+      "contact": "SXH-001T-P0.6",
+      "contacts_per_connector": 2,
+      "retention": "Independent clamp/retainer required; XH has no positive latch",
+      "native_pitch_mm": 2.5,
+      "native_integration": "Replace generic2.54mm footprint only after qualification",
+      "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md"
+    }
   },
   {
     "id": "P090",
@@ -1187,10 +1216,17 @@
     ],
     "value": "330p",
     "requirement": "63V film/C0G",
-    "status": "candidate identified; qualification incomplete",
+    "status": "candidate qualified electrically; domestic sourcing and1206 native integration pending",
     "candidate_mpns": [
-      "1206CG331J500NT"
-    ]
+      "CC1206JRNPO0BN331"
+    ],
+    "rejected_candidates": [
+      {
+        "mpn": "1206CG331J500NT",
+        "reason": "50V below current63V requirement"
+      }
+    ],
+    "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md"
   },
   {
     "id": "P094",
@@ -1214,10 +1250,19 @@
     ],
     "value": "JR4 harness",
     "requirement": "Low voltage only; soldered locking harness or retained socket",
-    "status": "candidate identified; qualification incomplete",
+    "status": "candidate identified; retention, native geometry, wire/shield and procurement qualification incomplete",
     "candidate_mpns": [
       "B3B-XH-A(LF)(SN)"
-    ]
+    ],
+    "mate_requirements": {
+      "housing": "XHP-3",
+      "contact": "SXH-001T-P0.6",
+      "contacts_per_connector": 3,
+      "retention": "Independent clamp/retainer required; XH has no positive latch",
+      "native_pitch_mm": 2.5,
+      "native_integration": "Replace generic2.54mm footprint only after qualification",
+      "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md"
+    }
   },
   {
     "id": "P096",
@@ -1271,10 +1316,19 @@
     ],
     "value": "JR5 harness",
     "requirement": "Low voltage only; soldered locking harness or retained socket",
-    "status": "candidate identified; qualification incomplete",
+    "status": "candidate identified; retention, native geometry, wire/shield and procurement qualification incomplete",
     "candidate_mpns": [
       "B2B-XH-A(LF)(SN)"
-    ]
+    ],
+    "mate_requirements": {
+      "housing": "XHP-2",
+      "contact": "SXH-001T-P0.6",
+      "contacts_per_connector": 2,
+      "retention": "Independent clamp/retainer required; XH has no positive latch",
+      "native_pitch_mm": 2.5,
+      "native_integration": "Replace generic2.54mm footprint only after qualification",
+      "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md"
+    }
   },
   {
     "id": "P100",
@@ -1283,10 +1337,19 @@
     ],
     "value": "JR6 harness",
     "requirement": "Low voltage only; soldered locking harness or retained socket",
-    "status": "candidate identified; qualification incomplete",
+    "status": "candidate identified; retention, native geometry, wire/shield and procurement qualification incomplete",
     "candidate_mpns": [
       "B5B-XH-A(LF)(SN)"
-    ]
+    ],
+    "mate_requirements": {
+      "housing": "XHP-5",
+      "contact": "SXH-001T-P0.6",
+      "contacts_per_connector": 5,
+      "retention": "Independent clamp/retainer required; XH has no positive latch",
+      "native_pitch_mm": 2.5,
+      "native_integration": "Replace generic2.54mm footprint only after qualification",
+      "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md"
+    }
   },
   {
     "id": "P101",
@@ -1331,7 +1394,7 @@
     "requirement": "1 W",
     "status": "candidate identified; qualification incomplete",
     "candidate_mpns": [
-      "RN1WS1KΩFT/BA1"
+      "RN1WS1K\u03a9FT/BA1"
     ]
   },
   {

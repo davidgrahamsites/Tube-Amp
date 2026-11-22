@@ -42,3 +42,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-014 | validation | cross-domain | verified | 2026-11-20 | [Measured tank resistance and PCB integration checks](records/VAL-014-measured-resistance-pcb-integration.md) |
 | VAL-015 | validation | cross-domain | verified | 2026-11-21 | [Electric headroom and exact-part checkpoint](records/VAL-015-electric-headroom-and-parts.md) |
 | VAL-016 | validation | cross-domain | verified | 2026-11-21 | [Service, panel and selected-package checkpoint](records/VAL-016-service-panel-package-checkpoint.md) |
+| VAL-017 | validation | cross-domain | verified | 2026-11-21 | [Copper geometry and component review](records/VAL-017-copper-and-component-review.md) |

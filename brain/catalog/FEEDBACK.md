@@ -858,3 +858,15 @@ Source: Current conversation: P3 reply; instructed upper rear cover OFF, cabinet
 - [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
 - [brain/records/VAL-016-service-panel-package-checkpoint.md](<../../brain/records/VAL-016-service-panel-package-checkpoint.md>)
 
+## FB-075 — emc-current-and-routing-requirement
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> plan everything to reduce EFI and RFI ... and also EMI ... make sure all traces are wide enough for the current, no sharp corners in the tracing
+
+Include EMI/RFI control throughout chassis, harness, grounding and PCB layout. Size conductors for actual operating and transient currents, copper construction, temperature and voltage drop. Use 45-degree bends or arcs; the electron collision analogy is not the physical design basis. EFI interpreted as electrical interference, not an added subsystem. Preserve functional blocks and service access.
+
+Source: Current conversation
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
+

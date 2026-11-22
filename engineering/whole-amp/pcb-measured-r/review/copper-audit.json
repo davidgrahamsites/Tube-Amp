@@ -1,0 +1,1975 @@
+{
+  "scope": "Current copper only; no unconnected-net, zone-neck, RMS-current, thermal or EMC qualification",
+  "boards": {
+    "Main": {
+      "sha256": "531ad0e55a110d20ebf834fb9f1a0975a2d99ff7a1d20c4688d4411b50742ff1",
+      "nets": {
+        "+12V": {
+          "segments": 21,
+          "length_mm": 160.84,
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "vias": [
+            {
+              "at_mm": [
+                34.8756,
+                25.9453
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.6,
+                "B.Cu": 0.6
+              },
+              "drill_mm": 0.3
+            }
+          ],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CL_G2": {
+          "segments": 4,
+          "length_mm": 92.267,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [
+            {
+              "at_mm": [
+                79.4935,
+                61.1207
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.6,
+                "B.Cu": 0.6
+              },
+              "drill_mm": 0.3
+            }
+          ],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CL_TREBLE_TOP": {
+          "segments": 4,
+          "length_mm": 121.172,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "COIL_CH": {
+          "segments": 6,
+          "length_mm": 115.337,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DIRTY_OUT": {
+          "segments": 2,
+          "length_mm": 20.973,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_TREBLE_TOP": {
+          "segments": 6,
+          "length_mm": 118.272,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "FX_SEND": {
+          "segments": 4,
+          "length_mm": 126.148,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [
+            {
+              "at_mm": [
+                204.9359,
+                16.4117
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.6,
+                "B.Cu": 0.6
+              },
+              "drill_mm": 0.3
+            }
+          ],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "PI_K": {
+          "segments": 9,
+          "length_mm": 46.184,
+          "widths_mm": [
+            0.45,
+            0.6
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        }
+      },
+      "simple_bends_over_45_degrees": [
+        {
+          "net": "PI_K",
+          "layer": "B.Cu",
+          "at_mm": [
+            229.6798,
+            118.0002
+          ],
+          "turn_degrees": 90.0
+        }
+      ],
+      "junctions_for_visual_review": [
+        {
+          "net": "COIL_CH",
+          "layer": "B.Cu",
+          "at_mm": [
+            85.1425,
+            68.1425
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "DR_TREBLE_TOP",
+          "layer": "B.Cu",
+          "at_mm": [
+            189.0763,
+            132.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        }
+      ],
+      "arc_items_not_bend_screened": []
+    },
+    "Power": {
+      "sha256": "ae077516a2cef4b2a3903e653b31cc34df9e2089cd231ce330d2f844503a9723",
+      "nets": {
+        "BIAS_AC": {
+          "segments": 2,
+          "length_mm": 28.591,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "B_EARLY": {
+          "segments": 5,
+          "length_mm": 68.097,
+          "widths_mm": [
+            0.45,
+            0.6
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "B_PRE": {
+          "segments": 9,
+          "length_mm": 119.94,
+          "widths_mm": [
+            0.6
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "B_RECT": {
+          "segments": 4,
+          "length_mm": 42.844,
+          "widths_mm": [
+            0.6
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "HV_A": {
+          "segments": 2,
+          "length_mm": 15.997,
+          "widths_mm": [
+            0.6
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "HV_B": {
+          "segments": 1,
+          "length_mm": 9.0,
+          "widths_mm": [
+            0.6
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "HV_MID_A": {
+          "segments": 2,
+          "length_mm": 20.261,
+          "widths_mm": [
+            0.6
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "HV_MID_B": {
+          "segments": 1,
+          "length_mm": 15.0,
+          "widths_mm": [
+            0.6
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        }
+      },
+      "simple_bends_over_45_degrees": [
+        {
+          "net": "B_EARLY",
+          "layer": "B.Cu",
+          "at_mm": [
+            113.62,
+            87.9998
+          ],
+          "turn_degrees": 90.0
+        }
+      ],
+      "junctions_for_visual_review": [
+        {
+          "net": "B_PRE",
+          "layer": "F.Cu",
+          "at_mm": [
+            82.825,
+            39.125
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "B_PRE",
+          "layer": "F.Cu",
+          "at_mm": [
+            68.275,
+            74.175
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "B_PRE",
+          "layer": "F.Cu",
+          "at_mm": [
+            68.275,
+            63.975
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "B_PRE",
+          "layer": "F.Cu",
+          "at_mm": [
+            82.825,
+            28.925
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "B_EARLY",
+          "layer": "B.Cu",
+          "at_mm": [
+            82.825,
+            74.175
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "B_RECT",
+          "layer": "B.Cu",
+          "at_mm": [
+            36.6872,
+            140.0
+          ],
+          "segments": 3,
+          "in_pad": false,
+          "at_via": false
+        }
+      ],
+      "arc_items_not_bend_screened": []
+    },
+    "Control": {
+      "sha256": "461c76eb58d6150802ed31e22b59a9a95befb9c7d6662e90f7e47b433cb92951",
+      "nets": {
+        "CH_QN": {
+          "segments": 3,
+          "length_mm": 11.229,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CLK_CH": {
+          "segments": 4,
+          "length_mm": 80.863,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [
+            {
+              "at_mm": [
+                19.8806,
+                27.033
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.6,
+                "B.Cu": 0.6
+              },
+              "drill_mm": 0.3
+            }
+          ],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CLK_REV": {
+          "segments": 6,
+          "length_mm": 64.675,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [
+            {
+              "at_mm": [
+                44.9138,
+                39.2005
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.6,
+                "B.Cu": 0.6
+              },
+              "drill_mm": 0.3
+            }
+          ],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "COIL_CH": {
+          "segments": 7,
+          "length_mm": 89.813,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "COIL_REV": {
+          "segments": 10,
+          "length_mm": 109.591,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CTRL_AC1": {
+          "segments": 7,
+          "length_mm": 92.013,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [
+            {
+              "at_mm": [
+                82.7376,
+                91.9885
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.6,
+                "B.Cu": 0.6
+              },
+              "drill_mm": 0.3
+            }
+          ],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CTRL_AC2": {
+          "segments": 9,
+          "length_mm": 111.752,
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CTRL_RAW": {
+          "segments": 20,
+          "length_mm": 228.892,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "NEG_RAW": {
+          "segments": 17,
+          "length_mm": 163.175,
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "RESET_CT": {
+          "segments": 4,
+          "length_mm": 7.175,
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "REV_QN": {
+          "segments": 3,
+          "length_mm": 11.229,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        }
+      },
+      "simple_bends_over_45_degrees": [
+        {
+          "net": "RESET_CT",
+          "layer": "F.Cu",
+          "at_mm": [
+            34.8252,
+            44.375
+          ],
+          "turn_degrees": 46.157
+        }
+      ],
+      "junctions_for_visual_review": [
+        {
+          "net": "COIL_REV",
+          "layer": "F.Cu",
+          "at_mm": [
+            178.1893,
+            45.5793
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "COIL_CH",
+          "layer": "F.Cu",
+          "at_mm": [
+            117.5112,
+            45.5812
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "COIL_CH",
+          "layer": "B.Cu",
+          "at_mm": [
+            116.7867,
+            45.105
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "NEG_RAW",
+          "layer": "F.Cu",
+          "at_mm": [
+            165.014,
+            69.5767
+          ],
+          "segments": 3,
+          "in_pad": false,
+          "at_via": false
+        },
+        {
+          "net": "NEG_RAW",
+          "layer": "B.Cu",
+          "at_mm": [
+            115.2038,
+            89.525
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "CTRL_RAW",
+          "layer": "F.Cu",
+          "at_mm": [
+            108.1395,
+            72.975
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "CTRL_RAW",
+          "layer": "F.Cu",
+          "at_mm": [
+            204.6682,
+            66.6292
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "CTRL_RAW",
+          "layer": "F.Cu",
+          "at_mm": [
+            147.924,
+            68.125
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "CTRL_RAW",
+          "layer": "F.Cu",
+          "at_mm": [
+            175.6198,
+            68.125
+          ],
+          "segments": 3,
+          "in_pad": false,
+          "at_via": false
+        },
+        {
+          "net": "CTRL_RAW",
+          "layer": "B.Cu",
+          "at_mm": [
+            147.924,
+            86.5495
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "CTRL_RAW",
+          "layer": "B.Cu",
+          "at_mm": [
+            74.1144,
+            86.6544
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "CTRL_AC2",
+          "layer": "B.Cu",
+          "at_mm": [
+            87.605,
+            65.9091
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "CTRL_AC2",
+          "layer": "B.Cu",
+          "at_mm": [
+            87.605,
+            66.325
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "RESET_CT",
+          "layer": "F.Cu",
+          "at_mm": [
+            29.1917,
+            45.0008
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        }
+      ],
+      "arc_items_not_bend_screened": []
+    },
+    "Reverb": {
+      "sha256": "d504b26a4a76971c1e9ba0939e9bce23933df0f0b174de679f211cfd2432be03",
+      "nets": {
+        "+12V": {
+          "segments": 9,
+          "length_mm": 37.389,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "+15V": {
+          "segments": 31,
+          "length_mm": 228.561,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [
+            {
+              "at_mm": [
+                51.5,
+                61.0
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            },
+            {
+              "at_mm": [
+                127.0,
+                59.0
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            },
+            {
+              "at_mm": [
+                57.0,
+                59.0
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            }
+          ],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "-15V": {
+          "segments": 43,
+          "length_mm": 281.331,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [
+            {
+              "at_mm": [
+                117.0,
+                81.5
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            },
+            {
+              "at_mm": [
+                118.5,
+                27.5
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            },
+            {
+              "at_mm": [
+                27.5,
+                68.5
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            }
+          ],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "COIL_REV": {
+          "segments": 7,
+          "length_mm": 29.943,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DRIVER": {
+          "segments": 11,
+          "length_mm": 39.402,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DRIVE_CAP": {
+          "segments": 3,
+          "length_mm": 3.32,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DRV_FB": {
+          "segments": 10,
+          "length_mm": 28.374,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "FX_RETURN": {
+          "segments": 4,
+          "length_mm": 137.883,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "GND": {
+          "segments": 113,
+          "length_mm": 505.217,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [
+            {
+              "at_mm": [
+                57.0,
+                50.0
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            },
+            {
+              "at_mm": [
+                139.5,
+                24.0
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            },
+            {
+              "at_mm": [
+                78.0,
+                83.0
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            },
+            {
+              "at_mm": [
+                118.5,
+                75.5
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            },
+            {
+              "at_mm": [
+                142.5,
+                73.5
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            },
+            {
+              "at_mm": [
+                71.0,
+                43.5
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            }
+          ],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "IN_AC": {
+          "segments": 1,
+          "length_mm": 12.0,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "MIX_OUT": {
+          "segments": 11,
+          "length_mm": 59.906,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "OUT_AC": {
+          "segments": 5,
+          "length_mm": 19.203,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "OUT_BUF": {
+          "segments": 11,
+          "length_mm": 39.402,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "OUT_FB": {
+          "segments": 10,
+          "length_mm": 18.311,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "REC_FB": {
+          "segments": 23,
+          "length_mm": 85.463,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "REC_IN": {
+          "segments": 7,
+          "length_mm": 34.043,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "REC_OUT": {
+          "segments": 7,
+          "length_mm": 39.266,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "SEND_BUF": {
+          "segments": 8,
+          "length_mm": 24.346,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "SEND_IN": {
+          "segments": 17,
+          "length_mm": 63.369,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "SEND_TOP": {
+          "segments": 3,
+          "length_mm": 16.883,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "SEND_W": {
+          "segments": 11,
+          "length_mm": 34.568,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "SUM": {
+          "segments": 12,
+          "length_mm": 31.986,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "SUM_INV": {
+          "segments": 6,
+          "length_mm": 53.766,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "TANK_IN": {
+          "segments": 1,
+          "length_mm": 8.0,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "TANK_OUT": {
+          "segments": 1,
+          "length_mm": 9.0,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "WET_AC": {
+          "segments": 6,
+          "length_mm": 22.766,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "WET_BUF": {
+          "segments": 10,
+          "length_mm": 55.307,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "WET_MUTE": {
+          "segments": 8,
+          "length_mm": 85.943,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "WET_TOP": {
+          "segments": 1,
+          "length_mm": 13.0,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "WET_W": {
+          "segments": 10,
+          "length_mm": 47.685,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        }
+      },
+      "simple_bends_over_45_degrees": [],
+      "junctions_for_visual_review": [
+        {
+          "net": "DRIVER",
+          "layer": "B.Cu",
+          "at_mm": [
+            61.0,
+            35.5
+          ],
+          "segments": 3,
+          "in_pad": false,
+          "at_via": false
+        },
+        {
+          "net": "DRIVER",
+          "layer": "B.Cu",
+          "at_mm": [
+            56.5,
+            28.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "DRV_FB",
+          "layer": "F.Cu",
+          "at_mm": [
+            71.0,
+            33.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "DRV_FB",
+          "layer": "F.Cu",
+          "at_mm": [
+            56.5,
+            31.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "FX_RETURN",
+          "layer": "B.Cu",
+          "at_mm": [
+            16.0,
+            15.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "REC_FB",
+          "layer": "F.Cu",
+          "at_mm": [
+            63.0,
+            72.0
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "REC_FB",
+          "layer": "F.Cu",
+          "at_mm": [
+            40.0,
+            63.5
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "REC_IN",
+          "layer": "B.Cu",
+          "at_mm": [
+            40.0,
+            66.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "REC_IN",
+          "layer": "B.Cu",
+          "at_mm": [
+            22.0,
+            66.0
+          ],
+          "segments": 3,
+          "in_pad": false,
+          "at_via": false
+        },
+        {
+          "net": "-15V",
+          "layer": "F.Cu",
+          "at_mm": [
+            48.0,
+            52.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "-15V",
+          "layer": "F.Cu",
+          "at_mm": [
+            117.0,
+            73.5
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "-15V",
+          "layer": "F.Cu",
+          "at_mm": [
+            40.0,
+            68.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "-15V",
+          "layer": "F.Cu",
+          "at_mm": [
+            45.5,
+            44.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "-15V",
+          "layer": "B.Cu",
+          "at_mm": [
+            45.5,
+            44.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "-15V",
+          "layer": "B.Cu",
+          "at_mm": [
+            40.0,
+            68.5
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "-15V",
+          "layer": "B.Cu",
+          "at_mm": [
+            49.0,
+            33.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "-15V",
+          "layer": "B.Cu",
+          "at_mm": [
+            40.0,
+            77.8
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "-15V",
+          "layer": "B.Cu",
+          "at_mm": [
+            148.0,
+            15.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "-15V",
+          "layer": "B.Cu",
+          "at_mm": [
+            139.5,
+            26.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "WET_W",
+          "layer": "B.Cu",
+          "at_mm": [
+            68.0,
+            77.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "WET_W",
+          "layer": "B.Cu",
+          "at_mm": [
+            47.5,
+            68.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "WET_W",
+          "layer": "B.Cu",
+          "at_mm": [
+            73.0,
+            63.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "WET_BUF",
+          "layer": "F.Cu",
+          "at_mm": [
+            47.5,
+            63.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "WET_BUF",
+          "layer": "F.Cu",
+          "at_mm": [
+            47.5,
+            66.0
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "+15V",
+          "layer": "F.Cu",
+          "at_mm": [
+            52.0,
+            42.5
+          ],
+          "segments": 3,
+          "in_pad": false,
+          "at_via": false
+        },
+        {
+          "net": "+15V",
+          "layer": "F.Cu",
+          "at_mm": [
+            56.5,
+            26.0
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "+15V",
+          "layer": "F.Cu",
+          "at_mm": [
+            137.0,
+            15.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "+15V",
+          "layer": "F.Cu",
+          "at_mm": [
+            52.0,
+            54.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "+15V",
+          "layer": "B.Cu",
+          "at_mm": [
+            124.5,
+            59.0
+          ],
+          "segments": 3,
+          "in_pad": false,
+          "at_via": false
+        },
+        {
+          "net": "+15V",
+          "layer": "B.Cu",
+          "at_mm": [
+            124.5,
+            66.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "+15V",
+          "layer": "B.Cu",
+          "at_mm": [
+            47.5,
+            61.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            8.0,
+            17.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            57.0,
+            54.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            38.0,
+            26.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            38.0,
+            22.0
+          ],
+          "segments": 3,
+          "in_pad": false,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            78.0,
+            77.0
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            73.0,
+            66.0
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            143.0,
+            51.5
+          ],
+          "segments": 3,
+          "in_pad": false,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            143.0,
+            39.0
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            71.0,
+            41.0
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            73.0,
+            24.0
+          ],
+          "segments": 3,
+          "in_pad": false,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            139.5,
+            15.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            77.0,
+            22.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            67.0,
+            24.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            139.5,
+            24.0
+          ],
+          "segments": 2,
+          "in_pad": false,
+          "at_via": true
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            148.0,
+            12.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "F.Cu",
+          "at_mm": [
+            148.0,
+            51.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "B.Cu",
+          "at_mm": [
+            104.0,
+            43.5
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "B.Cu",
+          "at_mm": [
+            124.5,
+            73.5
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "B.Cu",
+          "at_mm": [
+            8.0,
+            64.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "B.Cu",
+          "at_mm": [
+            114.0,
+            29.5
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "B.Cu",
+          "at_mm": [
+            117.0,
+            71.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "B.Cu",
+          "at_mm": [
+            137.0,
+            26.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "B.Cu",
+          "at_mm": [
+            27.0,
+            73.0
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "B.Cu",
+          "at_mm": [
+            38.0,
+            84.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "GND",
+          "layer": "B.Cu",
+          "at_mm": [
+            35.0,
+            77.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "WET_AC",
+          "layer": "F.Cu",
+          "at_mm": [
+            133.0,
+            39.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "DRIVE_CAP",
+          "layer": "B.Cu",
+          "at_mm": [
+            88.0,
+            41.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "MIX_OUT",
+          "layer": "B.Cu",
+          "at_mm": [
+            114.0,
+            57.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "MIX_OUT",
+          "layer": "B.Cu",
+          "at_mm": [
+            141.5,
+            32.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "MIX_OUT",
+          "layer": "B.Cu",
+          "at_mm": [
+            142.0,
+            32.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "SUM_INV",
+          "layer": "B.Cu",
+          "at_mm": [
+            104.0,
+            78.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "SUM",
+          "layer": "F.Cu",
+          "at_mm": [
+            117.0,
+            68.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "SUM",
+          "layer": "F.Cu",
+          "at_mm": [
+            103.0,
+            86.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "SUM",
+          "layer": "F.Cu",
+          "at_mm": [
+            114.0,
+            78.0
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "OUT_FB",
+          "layer": "B.Cu",
+          "at_mm": [
+            131.0,
+            70.0
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "OUT_FB",
+          "layer": "B.Cu",
+          "at_mm": [
+            124.5,
+            71.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "OUT_FB",
+          "layer": "B.Cu",
+          "at_mm": [
+            141.0,
+            70.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "OUT_BUF",
+          "layer": "F.Cu",
+          "at_mm": [
+            128.0,
+            68.5
+          ],
+          "segments": 3,
+          "in_pad": false,
+          "at_via": false
+        },
+        {
+          "net": "OUT_BUF",
+          "layer": "F.Cu",
+          "at_mm": [
+            124.5,
+            68.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "+12V",
+          "layer": "B.Cu",
+          "at_mm": [
+            148.0,
+            17.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "WET_MUTE",
+          "layer": "F.Cu",
+          "at_mm": [
+            114.0,
+            24.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "WET_MUTE",
+          "layer": "F.Cu",
+          "at_mm": [
+            90.0,
+            86.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "WET_MUTE",
+          "layer": "F.Cu",
+          "at_mm": [
+            93.0,
+            86.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "COIL_REV",
+          "layer": "B.Cu",
+          "at_mm": [
+            148.0,
+            20.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "COIL_REV",
+          "layer": "B.Cu",
+          "at_mm": [
+            121.5,
+            17.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "SEND_IN",
+          "layer": "B.Cu",
+          "at_mm": [
+            48.0,
+            15.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "SEND_IN",
+          "layer": "B.Cu",
+          "at_mm": [
+            47.5,
+            15.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "SEND_IN",
+          "layer": "B.Cu",
+          "at_mm": [
+            45.5,
+            37.0
+          ],
+          "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "SEND_IN",
+          "layer": "B.Cu",
+          "at_mm": [
+            49.0,
+            31.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "SEND_BUF",
+          "layer": "B.Cu",
+          "at_mm": [
+            49.0,
+            28.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "SEND_BUF",
+          "layer": "B.Cu",
+          "at_mm": [
+            49.0,
+            26.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "OUT_AC",
+          "layer": "F.Cu",
+          "at_mm": [
+            141.0,
+            60.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "SEND_W",
+          "layer": "B.Cu",
+          "at_mm": [
+            79.5,
+            22.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "SEND_W",
+          "layer": "B.Cu",
+          "at_mm": [
+            56.5,
+            33.5
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        }
+      ],
+      "arc_items_not_bend_screened": []
+    }
+  },
+  "fabrication_ready": false
+}

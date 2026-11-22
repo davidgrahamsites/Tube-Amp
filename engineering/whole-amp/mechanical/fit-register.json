@@ -160,9 +160,12 @@
     "hole_diameter_mm": 7.9,
     "depth_mm": 119,
     "magnet_diameter_mm": 134,
-    "required_cutout_mm": null,
+    "required_cutout_mm": 283,
     "source": "https://celestion.com/product/seventy-80/",
-    "note": "Drawing-only312mm rejection is historical. User reports three210mm adjacent spacings and two294mm diagonals; ideal square interpretation impliesabout297mm circle but discrepancy remains. Celestion297mm reference is no longer excluded by the312mm drawing; not selected or verified to fit. Check template/hardware,cutout,frame and depth."
+    "note": "Drawing-only312mm rejection is historical. User reports three210mm adjacent spacings and two294mm diagonals; ideal square interpretation impliesabout297mm circle but discrepancy remains. Celestion297mm reference is no longer excluded by the312mm drawing; not selected or verified to fit. Check template/hardware,cutout,frame and depth.",
+    "cutout_source": "https://celestion.com/wp-content/uploads/2024/01/Guitar_Brochure_2024.pdf",
+    "cutout_status": "Published cutout13mm larger than received270mm aperture; rear-mounted surround/gasket clearance unresolved. Do not enlarge received cabinet automatically.",
+    "evidence": "engineering/component-selection/evidence/electric-speaker-sockets-2026-11-21.md"
   },
   "tank_variants": {
     "reference_8EB2C1B": {
@@ -607,6 +610,36 @@
       "tube_guard_and_removal": null,
       "harness_and_earth_service": null
     },
-    "release": false
+    "release": false,
+    "interference_control_contract": "engineering/whole-amp/pcb-measured-r/routing-requirements.md"
+  },
+  "socket_reference_envelopes": {
+    "status": "provisional mechanical references; not electrical/procurement release",
+    "evidence": "engineering/component-selection/evidence/electric-speaker-sockets-2026-11-21.md",
+    "VTB8-ST": {
+      "quantity": 2,
+      "saddle_mm": [
+        50,
+        34
+      ],
+      "mount_centres_mm": 40,
+      "slot_width_mm": 3.5,
+      "body_diameters_mm": [
+        30,
+        25.4
+      ],
+      "body_plus_terminal_stack_mm": 22.8,
+      "chassis_plane_offset_mm": null,
+      "retainer_envelope_mm": null,
+      "tube_service_envelope_mm": null
+    },
+    "VTB9-ST-2": {
+      "quantity": 4,
+      "body_diameter_mm": 18.5,
+      "body_plus_terminal_stack_mm": 16.5,
+      "mount_hole_diameter_mm": 3.3,
+      "mount_centres_mm": null,
+      "note": "ST-1 pitch must not be copied to ST-2; mounting directions differ."
+    }
   }
 }

@@ -1219,6 +1219,23 @@
       ],
       "supersedes": [],
       "next_action": "Opening and inside height recorded; six packages integrated and staggered panel screened. Next allocate major-part and service envelopes before fixing chassis/PCB outlines; no repeated ruler request."
+    },
+    {
+      "id": "FB-075",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "emc-current-and-routing-requirement",
+      "quote": "plan everything to reduce EFI and RFI ... and also EMI ... make sure all traces are wide enough for the current, no sharp corners in the tracing",
+      "source": "Current conversation",
+      "interpretation": "Include EMI/RFI control throughout chassis, harness, grounding and PCB layout. Size conductors for actual operating and transient currents, copper construction, temperature and voltage drop. Use 45-degree bends or arcs; the electron collision analogy is not the physical design basis. EFI interpreted as electrical interference, not an added subsystem. Preserve functional blocks and service access.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "engineering/whole-amp/pcb-measured-r/routing-requirements.md"
+      ],
+      "supersedes": [],
+      "next_action": "Audit current copper and return paths, establish per-net current budgets, and apply supported rules before routing release. Physical EMC and temperature validation remain required."
     }
   ]
 }

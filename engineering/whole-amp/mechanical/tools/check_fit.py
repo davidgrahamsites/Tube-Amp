@@ -98,6 +98,14 @@ if aperture:
         'source': aperture['source'],
         'fit_cleared': False,
         'note': 'Cutout agreement only; mounting-hole pattern, exact template, basket and installed depth remain separate checks.'}
+    required = speaker.get('required_cutout_mm')
+    if required is not None:
+        result['received_speaker_aperture'].update({
+            'reference_speaker_required_cutout_mm': required,
+            'diameter_shortfall_mm': max(0, required-aperture['diameter_mm']),
+            'radial_shortfall_mm': max(0, required-aperture['diameter_mm'])/2,
+            'meets_published_cutout': aperture['diameter_mm'] >= required,
+            'note': 'Delivered aperture does not meet Seventy80 published283mm cutout. Rear-mounted surround/gasket/basket clearance needs verification; no automatic cabinet cutting or direct-fit claim.'})
 result['received_control_and_height_screen'] = {
     'opening_width_range_mm': measured.get('P1_clear_opening_width_range_mm'),
     'opening_depth_approximate_mm': measured.get('P2_clear_opening_mm'),
