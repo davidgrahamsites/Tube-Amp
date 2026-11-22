@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.kicad.org/drc.v1.json",
     "coordinate_units": "mm",
-    "date": "2026-11-21T06:02:11",
+    "date": "2026-11-21T19:19:53",
     "ignored_checks": [
         {
             "description": "Footprint has no courtyard defined",
@@ -276,10 +276,10 @@
                 {
                     "description": "PTH pad 2 [GND] of R503",
                     "pos": {
-                        "x": 113.62,
+                        "x": 108.54,
                         "y": 140.0
                     },
-                    "uuid": "8ce4087c-c0ea-46fd-8121-56d958cf49c8"
+                    "uuid": "4196951a-f0fd-4e28-991d-3615c4f98839"
                 }
             ],
             "severity": "error",
@@ -291,10 +291,10 @@
                 {
                     "description": "PTH pad 2 [GND] of R503",
                     "pos": {
-                        "x": 113.62,
+                        "x": 108.54,
                         "y": 140.0
                     },
-                    "uuid": "8ce4087c-c0ea-46fd-8121-56d958cf49c8"
+                    "uuid": "4196951a-f0fd-4e28-991d-3615c4f98839"
                 },
                 {
                     "description": "PTH pad 1 [GND] of C28",
@@ -555,7 +555,7 @@
                         "x": 126.38,
                         "y": 110.0
                     },
-                    "uuid": "ddd403e2-8450-4d66-91b9-b816f871d62e"
+                    "uuid": "543cb5c2-2341-42a2-b142-425c1031fc38"
                 }
             ],
             "severity": "error",
@@ -579,6 +579,52 @@
                         "y": 125.0
                     },
                     "uuid": "514cdb58-2a83-426a-815b-4484b1600640"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 3 [BIAS_MIN] of RV10",
+                    "pos": {
+                        "x": 103.46,
+                        "y": 124.995
+                    },
+                    "uuid": "e88086b5-a05c-42b8-8ceb-df1c97bbb016"
+                },
+                {
+                    "description": "PTH pad 1 [BIAS_MIN] of R503",
+                    "pos": {
+                        "x": 98.38,
+                        "y": 140.0
+                    },
+                    "uuid": "011bcb53-f656-4a11-a4cf-cfaaabbe6e1a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 2 [BIAS_MIN] of RV10",
+                    "pos": {
+                        "x": 106.0,
+                        "y": 124.995
+                    },
+                    "uuid": "2dc5af7f-85e7-42ba-a15c-c55c32193355"
+                },
+                {
+                    "description": "PTH pad 3 [BIAS_MIN] of RV10",
+                    "pos": {
+                        "x": 103.46,
+                        "y": 124.995
+                    },
+                    "uuid": "e88086b5-a05c-42b8-8ceb-df1c97bbb016"
                 }
             ],
             "severity": "error",
@@ -772,52 +818,6 @@
             "description": "Missing connection between items",
             "items": [
                 {
-                    "description": "PTH pad 2 [BIAS_FILTER] of C27",
-                    "pos": {
-                        "x": 135.1323,
-                        "y": 95.0
-                    },
-                    "uuid": "f2af27a6-af83-430a-8447-5396bb9e20f2"
-                },
-                {
-                    "description": "PTH pad 1 [BIAS_FILTER] of R38",
-                    "pos": {
-                        "x": 98.38,
-                        "y": 110.0
-                    },
-                    "uuid": "74e4dab4-08ca-4daa-a4d2-9b3f481965fd"
-                }
-            ],
-            "severity": "error",
-            "type": "unconnected_items"
-        },
-        {
-            "description": "Missing connection between items",
-            "items": [
-                {
-                    "description": "PTH pad 2 [BIAS_FILTER] of R39",
-                    "pos": {
-                        "x": 141.62,
-                        "y": 110.0
-                    },
-                    "uuid": "1933162e-0274-4729-9ef2-98775b4ed815"
-                },
-                {
-                    "description": "PTH pad 2 [BIAS_FILTER] of C27",
-                    "pos": {
-                        "x": 135.1323,
-                        "y": 95.0
-                    },
-                    "uuid": "f2af27a6-af83-430a-8447-5396bb9e20f2"
-                }
-            ],
-            "severity": "error",
-            "type": "unconnected_items"
-        },
-        {
-            "description": "Missing connection between items",
-            "items": [
-                {
                     "description": "PTH pad 1 [BIAS_OUT] of RV10",
                     "pos": {
                         "x": 108.54,
@@ -887,20 +887,20 @@
             "description": "Missing connection between items",
             "items": [
                 {
-                    "description": "PTH pad 3 [BIAS_MIN] of RV10",
-                    "pos": {
-                        "x": 103.46,
-                        "y": 124.995
-                    },
-                    "uuid": "e88086b5-a05c-42b8-8ceb-df1c97bbb016"
-                },
-                {
-                    "description": "PTH pad 1 [BIAS_MIN] of R503",
+                    "description": "PTH pad 1 [BIAS_FILTER] of R38",
                     "pos": {
                         "x": 98.38,
-                        "y": 140.0
+                        "y": 110.0
                     },
-                    "uuid": "8e251680-672c-47a7-a948-200d14f17683"
+                    "uuid": "74e4dab4-08ca-4daa-a4d2-9b3f481965fd"
+                },
+                {
+                    "description": "PTH pad 2 [BIAS_FILTER] of R39",
+                    "pos": {
+                        "x": 136.54,
+                        "y": 110.0
+                    },
+                    "uuid": "9ba974a5-38f9-4384-b3f3-872f917a3928"
                 }
             ],
             "severity": "error",
@@ -910,20 +910,20 @@
             "description": "Missing connection between items",
             "items": [
                 {
-                    "description": "PTH pad 2 [BIAS_MIN] of RV10",
+                    "description": "PTH pad 2 [BIAS_FILTER] of R39",
                     "pos": {
-                        "x": 106.0,
-                        "y": 124.995
+                        "x": 136.54,
+                        "y": 110.0
                     },
-                    "uuid": "2dc5af7f-85e7-42ba-a15c-c55c32193355"
+                    "uuid": "9ba974a5-38f9-4384-b3f3-872f917a3928"
                 },
                 {
-                    "description": "PTH pad 3 [BIAS_MIN] of RV10",
+                    "description": "PTH pad 2 [BIAS_FILTER] of C27",
                     "pos": {
-                        "x": 103.46,
-                        "y": 124.995
+                        "x": 135.1323,
+                        "y": 95.0
                     },
-                    "uuid": "e88086b5-a05c-42b8-8ceb-df1c97bbb016"
+                    "uuid": "f2af27a6-af83-430a-8447-5396bb9e20f2"
                 }
             ],
             "severity": "error",

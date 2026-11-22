@@ -459,7 +459,7 @@
       "occurred_on": null,
       "authority": "engineer",
       "kind": "engineering-change",
-      "quote": "Updated the full amplifier schematic for your 600 Ω / 2,250 Ω tank.",
+      "quote": "Updated the full amplifier schematic for your 600 \u03a9 / 2,250 \u03a9 tank.",
       "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
       "interpretation": "Assistant implemented600R-1 attenuated send/passive dry, with fixed insertion loss and scoped checks. This is not user approval of a fabrication release.",
       "disposition": "incorporated",
@@ -1036,7 +1036,7 @@
       "kind": "speaker-aperture-measurement-usability",
       "quote": "it's hard to get the largest measurement of a circle without calipers",
       "source": "Current conversation, S1 measurement",
-      "interpretation": "Use a simple ruler/tape sweep to find the longest chord horizontally and vertically, with1–2mm preliminary uncertainty. Explain centre-offset error; reserve final fit for actual speaker template/trial. No caliper purchase required.",
+      "interpretation": "Use a simple ruler/tape sweep to find the longest chord horizontally and vertically, with1\u20132mm preliminary uncertainty. Explain centre-offset error; reserve final fit for actual speaker template/trial. No caliper purchase required.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md"
@@ -1052,7 +1052,7 @@
       "kind": "received-tank-envelope-measurement",
       "quote": "T1 length: 149.5mm, T2 width: 60 mm, T3 height: 36.5mm,",
       "source": "Current conversation; reply to illustrated T1/T2/T3 measuring instructions",
-      "interpretation": "Record received tank outer envelope149.5×60×36.5mm per requested datums: length including flanges, width including socket projections, height including feet. Setup and measurement uncertainty not independently verified. No replacement catalogue envelope or mounting-hole coordinates inferred.",
+      "interpretation": "Record received tank outer envelope149.5\u00d760\u00d736.5mm per requested datums: length including flanges, width including socket projections, height including feet. Setup and measurement uncertainty not independently verified. No replacement catalogue envelope or mounting-hole coordinates inferred.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/whole-amp/mechanical/fit-register.json",
@@ -1083,7 +1083,7 @@
       "occurred_on": "2026-11-21",
       "authority": "user",
       "kind": "speaker-aperture-unit-confirmed",
-      "quote": "Yes — 27 cm (270 mm)",
+      "quote": "Yes \u2014 27 cm (270 mm)",
       "source": "User answer to S1 unit clarification",
       "interpretation": "Accept approximate received speaker-aperture diameter270mm. Matches supplier drawing nominal270mm; this does not resolve mounting-bolt pattern, exact tolerance, speaker depth or full assembly fit.",
       "disposition": "incorporated",
@@ -1167,6 +1167,58 @@
       ],
       "supersedes": [],
       "next_action": "Size flange and screw setback using actual drill/driver chuck, body and bit envelope; verify straight approach and withdrawal in assembly. Drill/deburr structural holes before installing electronics."
+    },
+    {
+      "id": "FB-072",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "chassis-pcb-service-layout-continuation",
+      "quote": "ok, keep going with the chassis and PCB layout so everything fits, the back comes off easily, and we can reach the mounting screws with a drill. Keep the functional blocks intact and log everything in ICM. what's the measurement you still need? and take it with back on or back off?",
+      "source": "Current conversation",
+      "interpretation": "Continue physical chassis/PCB integration with fixed-structure mounting, independent rear-cover removal, drill/driver screw access and intact functional blocks. Explain installed-cover state and exact measurement endpoints. No new dimensions supplied.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md",
+        "brain/records/VAL-016-service-panel-package-checkpoint.md"
+      ],
+      "supersedes": [],
+      "next_action": "Opening and inside height recorded; six packages integrated and staggered panel screened. Next allocate major-part and service envelopes before fixing chassis/PCB outlines; no repeated ruler request."
+    },
+    {
+      "id": "FB-073",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user-measured",
+      "kind": "installed-control-opening-measurements",
+      "quote": "P1: 2 or 3 mm short of 31cm; P2-clear: it looks like 53mm",
+      "source": "Current conversation: replies to P1/P2-clear with upper rear panel ON",
+      "interpretation": "310 minus 2 to 3 gives307\u2013308mm clear narrow width. Clear depth approximately53mm; no accuracy tolerance supplied. Measurements taken under installed-cover instructions; setup not independently verified.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "brain/records/VAL-016-service-panel-package-checkpoint.md"
+      ],
+      "supersedes": [],
+      "next_action": "Opening and inside height recorded; six packages integrated and staggered panel screened. Next allocate major-part and service envelopes before fixing chassis/PCB outlines; no repeated ruler request."
+    },
+    {
+      "id": "FB-074",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user-measured",
+      "kind": "cabinet-clear-inside-height",
+      "quote": "38.3cm",
+      "source": "Current conversation: P3 reply; instructed upper rear cover OFF, cabinet upright, fixed top underside to inside floor top",
+      "interpretation": "Inside height383mm. Keep measurement uncertainty unspecified; no independent setup verification. This is cabinet height, not available chassis height after speaker and other parts are installed.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "brain/records/VAL-016-service-panel-package-checkpoint.md"
+      ],
+      "supersedes": [],
+      "next_action": "Opening and inside height recorded; six packages integrated and staggered panel screened. Next allocate major-part and service envelopes before fixing chassis/PCB outlines; no repeated ruler request."
     }
   ]
 }

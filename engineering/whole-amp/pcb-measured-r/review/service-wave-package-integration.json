@@ -1,0 +1,235 @@
+{
+  "baseline_git": "e6811e6",
+  "kicad_version": "10.0.6",
+  "scope": "Six exact packages; existing board outlines unchanged; assembled fit unverified",
+  "boards": {
+    "Power": {
+      "before_sha256": "573913889a641ca51157c55107b6acdc6dd21d0a616d8b58412daef4dcc7b728",
+      "after_sha256": "ae077516a2cef4b2a3903e653b31cc34df9e2089cd231ce330d2f844503a9723",
+      "changes": [
+        {
+          "reference": "R39",
+          "mpn": "FMP100JT-52-4K7",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP100_P10.16",
+          "pads": [
+            {
+              "number": "1",
+              "net": "BIAS_RAW",
+              "before_mm": [
+                126.38,
+                110.0
+              ],
+              "after_mm": [
+                126.38,
+                110.0
+              ],
+              "drill_mm": 0.8
+            },
+            {
+              "number": "2",
+              "net": "BIAS_FILTER",
+              "before_mm": [
+                141.62,
+                110.0
+              ],
+              "after_mm": [
+                136.54,
+                110.0
+              ],
+              "drill_mm": 0.8
+            }
+          ],
+          "track_endpoints_adjusted": 0
+        },
+        {
+          "reference": "R503",
+          "mpn": "FMP100JR-52-33K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal",
+          "to": "Yageo_FMP100_P10.16",
+          "pads": [
+            {
+              "number": "1",
+              "net": "BIAS_MIN",
+              "before_mm": [
+                98.38,
+                140.0
+              ],
+              "after_mm": [
+                98.38,
+                140.0
+              ],
+              "drill_mm": 0.8
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "before_mm": [
+                113.62,
+                140.0
+              ],
+              "after_mm": [
+                108.54,
+                140.0
+              ],
+              "drill_mm": 0.8
+            }
+          ],
+          "track_endpoints_adjusted": 0
+        }
+      ]
+    },
+    "Control": {
+      "before_sha256": "be7f81f70bdd76f33cf467ff54d48a25d47941113e56eb2d2b4c0b74e1972e5b",
+      "after_sha256": "37f4474462bfa5ab4eb12a1b47fa5b6c9832da4835a6bc698038f8b4247c7dc2",
+      "changes": [
+        {
+          "reference": "C321",
+          "mpn": "82CL0120",
+          "from": "C_Rect_L7.2mm_W3.5mm_P5.00mm",
+          "to": "KNSCHA_82CL0120",
+          "pads": [
+            {
+              "number": "1",
+              "net": "RESET_CT",
+              "before_mm": [
+                35.305,
+                44.375
+              ],
+              "after_mm": [
+                35.305,
+                44.375
+              ],
+              "drill_mm": 0.9
+            },
+            {
+              "number": "2",
+              "net": "GND",
+              "before_mm": [
+                40.305,
+                44.375
+              ],
+              "after_mm": [
+                40.305,
+                44.375
+              ],
+              "drill_mm": 0.9
+            }
+          ],
+          "track_endpoints_adjusted": 0
+        },
+        {
+          "reference": "R303",
+          "mpn": "MF0207FTE52-15K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16",
+          "pads": [
+            {
+              "number": "1",
+              "net": "BTN_CH",
+              "before_mm": [
+                45.695,
+                21.525
+              ],
+              "after_mm": [
+                45.695,
+                21.525
+              ],
+              "drill_mm": 0.8
+            },
+            {
+              "number": "2",
+              "net": "DB_CH",
+              "before_mm": [
+                55.855,
+                21.525
+              ],
+              "after_mm": [
+                55.855,
+                21.525
+              ],
+              "drill_mm": 0.8
+            }
+          ],
+          "track_endpoints_adjusted": 0
+        },
+        {
+          "reference": "R313",
+          "mpn": "MF0207FTE52-15K",
+          "from": "R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+          "to": "Yageo_MFR50S_MF0207_P10.16",
+          "pads": [
+            {
+              "number": "1",
+              "net": "BTN_REV",
+              "before_mm": [
+                153.7697,
+                21.525
+              ],
+              "after_mm": [
+                153.7697,
+                21.525
+              ],
+              "drill_mm": 0.8
+            },
+            {
+              "number": "2",
+              "net": "DB_REV",
+              "before_mm": [
+                163.9297,
+                21.525
+              ],
+              "after_mm": [
+                163.9297,
+                21.525
+              ],
+              "drill_mm": 0.8
+            }
+          ],
+          "track_endpoints_adjusted": 0
+        }
+      ]
+    },
+    "Reverb": {
+      "before_sha256": "697f2c0c7e066aee78074e208c523ee9a5f5fe8de13786c1b8e923873d51a587",
+      "after_sha256": "4fb74f65b1565dada7cf04d20e376f9fedcab336fe5debdb33c8031359e03e7f",
+      "changes": [
+        {
+          "reference": "C602",
+          "mpn": "KP223J2J1001",
+          "from": "C_Rect_L7.2mm_W2.5mm_P5.00mm",
+          "to": "KYET_KP223J2J1001",
+          "pads": [
+            {
+              "number": "1",
+              "net": "SEND_BUF",
+              "before_mm": [
+                61.0,
+                16.0
+              ],
+              "after_mm": [
+                61.0,
+                16.0
+              ],
+              "drill_mm": 0.9
+            },
+            {
+              "number": "2",
+              "net": "SEND_TOP",
+              "before_mm": [
+                66.0,
+                16.0
+              ],
+              "after_mm": [
+                71.0,
+                16.0
+              ],
+              "drill_mm": 0.9
+            }
+          ],
+          "track_endpoints_adjusted": 1
+        }
+      ]
+    }
+  }
+}

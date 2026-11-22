@@ -1,5 +1,7 @@
 # Renegade amplifier — Codex handoff
 
+Current November21 chassis checkpoint: [VAL-016](brain/records/VAL-016-service-panel-package-checkpoint.md) records received opening/height, revised panel, exact-package integration and pending assembly checks. Canonical dimensions stay in the mechanical fit register. No further ruler measurements requested at this checkpoint.
+
 Photo intake November 20: [six received tank/meter photographs and DT9205A instructions](engineering/whole-amp/mechanical/review/received-tank-photo-intake-2026-11-20.md) are saved. Label and IN/OUT identification confirmed. User subsequently reported 76 Ω IN / 235 Ω OUT on the DT9205A 2k range, with shorted tips indicating zero. Results and limitations are in the mechanical fit register. The measured-resistance rerun and four-board integration draft are now recorded in [the November 20 review](engineering/whole-amp/reverb-600/review/measured-resistance-results-2026-11-20.md). All eight scoped simulation checks pass; AC coil data and safe drive current remain unknown.
 
 ## Purpose and current status

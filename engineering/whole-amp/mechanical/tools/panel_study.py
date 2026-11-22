@@ -17,7 +17,17 @@ for i,a in enumerate(controls):
   distance=math.dist(a['xy_mm'],b['xy_mm'])
   pairs.append({'a':a['reference'],'b':b['reference'],'knob_edge_gap_mm':distance-2*radius})
 margins=[min(x-radius,W-x-radius,y-radius,H-y-radius) for c in controls for x,y in [c['xy_mm']]]
+lug_body_gaps=[]
+for a in controls:
+ ax,ay=a['xy_mm']
+ for b in controls:
+  if a is b:continue
+  bx,by=b['xy_mm']
+  # Distance of other circular pot body from this lug/wire bounding rectangle.
+  dx=max(ax+body-bx,0,bx-(ax+reach));dy=max(abs(by-ay)-5,0)
+  lug_body_gaps.append(math.hypot(dx,dy)-body)
 assert min(margins)>=0 and min(p['knob_edge_gap_mm'] for p in pairs)>0
+assert min(lug_body_gaps)>0
 report={'fit_register_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
  'scope':'Rectangular opening screen and nominal component envelopes only',
  'controls':len(controls),'minimum_knob_pair_gap_mm':min(p['knob_edge_gap_mm'] for p in pairs),
@@ -26,7 +36,8 @@ report={'fit_register_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
  'shaft_top_above_study_metal_mm_before_washers':15-d['metal_thickness_study_mm'],
  'smooth_shaft_length_mm':15-6.5,
  'exposed_bushing_before_washers_mm':6.5-d['metal_thickness_study_mm'],
- 'horizontal_lug_wire_to_next_body_gap_mm':42-reach-body,
+ 'minimum_lug_wire_box_to_other_body_gap_mm':min(lug_body_gaps),
+ 'opening_basis':d['opening_basis'],
  'knob_seating_verified':False,'assembled_fit_verified':False,'drill_release':False,
  'unmodeled':'Actual curved opening/supports, panel mounts, antirotation tabs, nut/washer/knob recess, installed jack/switch/indicator, finger access and full cable harness'}
 OUT=ROOT/'review'
@@ -39,7 +50,7 @@ for underside in [False,True]:
  '<text x="10" y="14" font-family="sans-serif" font-size="2.8">Print at 100%. Check 100 mm scale. Rectangular frame is NOT the actual cabinet cut profile.</text>',
  '<g transform="translate(10 20)">',
  f'<rect width="{W}" height="{H}" fill="none" stroke="#444" stroke-width=".4"/>']
- for x in [0,W-31]:svg.append(f'<rect x="{x}" y="0" width="31" height="{H}" fill="#ddd"/><text transform="translate({x+15} 62) rotate(-90)" font-size="3" font-family="sans-serif">RESERVE / UNPLACED</text>')
+ for x in [0,W-31]:svg.append(f'<rect x="{x}" y="0" width="31" height="{H}" fill="#ddd"/><text transform="translate({x+15} {H-3}) rotate(-90)" font-size="3" font-family="sans-serif">RESERVE / UNPLACED</text>')
  for c in controls:
   x,y=c['xy_mm']; label=escape(c['label'])
   svg.append(f'<circle cx="{x}" cy="{y}" r="{radius}" fill="none" stroke="#296890" stroke-dasharray="1 1" stroke-width=".35"/>')

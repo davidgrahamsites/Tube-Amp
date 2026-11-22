@@ -821,3 +821,40 @@ Source: Current conversation: PCB support and tool access requirement
 - [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
 - [brain/records/DEC-011-pot-panel-proposal.md](<../../brain/records/DEC-011-pot-panel-proposal.md>)
 
+## FB-072 — chassis-pcb-service-layout-continuation
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> ok, keep going with the chassis and PCB layout so everything fits, the back comes off easily, and we can reach the mounting screws with a drill. Keep the functional blocks intact and log everything in ICM. what's the measurement you still need? and take it with back on or back off?
+
+Continue physical chassis/PCB integration with fixed-structure mounting, independent rear-cover removal, drill/driver screw access and intact functional blocks. Explain installed-cover state and exact measurement endpoints. No new dimensions supplied.
+
+Source: Current conversation
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md](<../../engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md>)
+- [brain/records/VAL-016-service-panel-package-checkpoint.md](<../../brain/records/VAL-016-service-panel-package-checkpoint.md>)
+
+## FB-073 — installed-control-opening-measurements
+Authority: user-measured. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> P1: 2 or 3 mm short of 31cm; P2-clear: it looks like 53mm
+
+310 minus 2 to 3 gives307–308mm clear narrow width. Clear depth approximately53mm; no accuracy tolerance supplied. Measurements taken under installed-cover instructions; setup not independently verified.
+
+Source: Current conversation: replies to P1/P2-clear with upper rear panel ON
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [brain/records/VAL-016-service-panel-package-checkpoint.md](<../../brain/records/VAL-016-service-panel-package-checkpoint.md>)
+
+## FB-074 — cabinet-clear-inside-height
+Authority: user-measured. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> 38.3cm
+
+Inside height383mm. Keep measurement uncertainty unspecified; no independent setup verification. This is cabinet height, not available chassis height after speaker and other parts are installed.
+
+Source: Current conversation: P3 reply; instructed upper rear cover OFF, cabinet upright, fixed top underside to inside floor top
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [brain/records/VAL-016-service-panel-package-checkpoint.md](<../../brain/records/VAL-016-service-panel-package-checkpoint.md>)
+

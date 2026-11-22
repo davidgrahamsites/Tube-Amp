@@ -98,6 +98,13 @@ if aperture:
         'source': aperture['source'],
         'fit_cleared': False,
         'note': 'Cutout agreement only; mounting-hole pattern, exact template, basket and installed depth remain separate checks.'}
+result['received_control_and_height_screen'] = {
+    'opening_width_range_mm': measured.get('P1_clear_opening_width_range_mm'),
+    'opening_depth_approximate_mm': measured.get('P2_clear_opening_mm'),
+    'inside_height_mm': measured.get('P3_obstruction_report', {}).get('P3_inside_height_mm'),
+    'drawing_external_height_mm': cab['height'],
+    'note': '383mm inside and420mm outside use different surfaces. Their37mm difference is not a measured wood thickness. Opening depth53mm uses installed rear cover; drawing67mm is not established as the same datum.',
+    'assembly_fit_cleared': False}
 assert area == 109900
 assert offset == 7.5
 assert result['baffle_attachment_dimension_conflict_mm'] == 8

@@ -41,3 +41,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-013 | validation | cross-domain | verified | 2026-11-19 | [Received 600/2250 tank — scoped circuit revision checks](records/VAL-013-received-tank-revision.md) |
 | VAL-014 | validation | cross-domain | verified | 2026-11-20 | [Measured tank resistance and PCB integration checks](records/VAL-014-measured-resistance-pcb-integration.md) |
 | VAL-015 | validation | cross-domain | verified | 2026-11-21 | [Electric headroom and exact-part checkpoint](records/VAL-015-electric-headroom-and-parts.md) |
+| VAL-016 | validation | cross-domain | verified | 2026-11-21 | [Service, panel and selected-package checkpoint](records/VAL-016-service-panel-package-checkpoint.md) |

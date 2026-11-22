@@ -7123,6 +7123,121 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "Renegade_Selected:KYET_KP223J2J1001"
+		(layer "F.Cu")
+		(uuid "77bd50b1-9914-4e98-86e3-e71d549a2933")
+		(at 61 16)
+		(descr "KYET KP223J2J1001;630V5% polypropylene; body W12 H10 T4.5, each+/-1mm; pitch10+/-0.5mm; lead0.6+/-0.05mm. Courtyard max body plus0.5mm. No3D model. Temperature<=100C. Peak voltage/ripple and layout isolation require review.")
+		(property "Reference" "C602"
+			(at 5 -4.25 0)
+			(layer "F.SilkS")
+			(uuid "94400caa-d072-4c5e-9187-17a1d03bb2ad")
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22n"
+			(at 5 4.25 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bef7f53c-1638-44b8-9352-75c3af44fc5f")
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "106300c3-00df-45bb-ac4a-834cf1a3d320")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "97a61c83-99e2-4d97-b3db-dc2211f9498d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Selected_MPN" "KP223J2J1001"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "32f2927b-d9be-4978-b9b5-4e9146e44790")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/efba6506-99a7-5103-a9b0-59186659032d")
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -1.15 -2.4)
+			(end 11.15 2.4)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "24365a96-187c-4525-b747-e5850e1a7935")
+		)
+		(fp_rect
+			(start -2 -3.25)
+			(end 12 3.25)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "354652cf-6e66-4bd1-a4ba-5d748d05268a")
+		)
+		(fp_rect
+			(start -1 -2.25)
+			(end 11 2.25)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "7da5f52a-71f6-4777-8a30-3a16f1634b51")
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 1.8 1.8)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "SEND_BUF")
+			(uuid "53d023b3-edd9-4a61-a8db-0a73eba86ef0")
+		)
+		(pad "2" thru_hole circle
+			(at 10 0)
+			(size 1.8 1.8)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "SEND_TOP")
+			(uuid "b20b9160-3529-43a5-ac6b-0f616589c706")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "7f17a235-5b8a-4a6b-a54a-acab0e96b3a7")
@@ -9433,212 +9548,6 @@
 		)
 		(embedded_fonts no)
 		(model "${KICAD10_3DMODEL_DIR}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.step"
-			(offset
-				(xyz 0 0 0)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 0 0 0)
-			)
-		)
-	)
-	(footprint "Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm"
-		(layer "F.Cu")
-		(uuid "c3cde8bc-190b-42e5-8ee4-9633defaeff3")
-		(at 61 16)
-		(descr "C, Rect series, Radial, pin pitch=5.00mm, length*width=7.2*2.5mm^2, Capacitor, R82, https://content.kemet.com/datasheets/KEM_F3101_R82.pdf")
-		(tags "C Rect series Radial pin pitch 5.00mm length 7.2mm width 2.5mm Capacitor R82")
-		(property "Reference" "C602"
-			(at 2.5 -2.5 0)
-			(layer "F.SilkS")
-			(uuid "c6ff2b54-6e40-48a4-a663-a76f0a7dac36")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "22n"
-			(at 2.5 2.5 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "727d1ace-0650-47c0-b401-350a3eefd9b8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "bf49a7e6-711d-4cce-b10d-5384949757db")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "ee272057-4a86-4651-a340-8ac56e435eb0")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "capacitor/THT/other"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "b815668a-b39b-4928-93c6-9d8aab376bd3")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Source" "DEC-007 v0.4"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "74fbd12d-871d-4992-88ed-1f3a99d9e5b1")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Rating" "63V film/C0G"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "23a1fb19-551e-4eb6-b766-4aba9d34dfa8")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Design_status" "proposed"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "b5377cd1-4782-4538-8e61-c49f5318871b")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(path "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/efba6506-99a7-5103-a9b0-59186659032d")
-		(attr through_hole)
-		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start -1.22 -1.37)
-			(end 6.22 -1.37)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "92ac7dd4-43de-457d-ad5c-bf80de51288b")
-		)
-		(fp_line
-			(start -1.22 1.37)
-			(end -1.22 -1.37)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "7e607ee8-b17b-45e2-853d-428ad8e917db")
-		)
-		(fp_line
-			(start 6.22 -1.37)
-			(end 6.22 1.37)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "16c10306-2a82-4cc2-a009-476cfffae1ef")
-		)
-		(fp_line
-			(start 6.22 1.37)
-			(end -1.22 1.37)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "27f36496-7245-4877-aac9-5dbe8cad2ce3")
-		)
-		(fp_rect
-			(start -1.35 -1.5)
-			(end 6.35 1.5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.CrtYd")
-			(uuid "25dff212-5ee3-4a4c-9db5-09967be7c97f")
-		)
-		(fp_rect
-			(start -1.1 -1.25)
-			(end 6.1 1.25)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "941771a1-3b4b-4b8e-bf61-01b00dd18420")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 2.5 0 0)
-			(layer "F.Fab")
-			(uuid "7a855db5-e335-47be-9ea2-33700266668e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(pad "1" thru_hole circle
-			(at 0 0)
-			(size 1.5 1.5)
-			(drill 0.75)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "SEND_BUF")
-			(uuid "751789fe-6c10-447b-b6bd-59cdf36080f0")
-		)
-		(pad "2" thru_hole circle
-			(at 5 0)
-			(size 1.5 1.5)
-			(drill 0.75)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "SEND_TOP")
-			(uuid "d4e2cbb2-ea5f-42d8-8104-46c149c091b7")
-		)
-		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W2.5mm_P5.00mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -16655,7 +16564,7 @@
 	)
 	(segment
 		(start 82 16)
-		(end 66 16)
+		(end 71 16)
 		(width 0.3)
 		(layer "B.Cu")
 		(net "SEND_TOP")
