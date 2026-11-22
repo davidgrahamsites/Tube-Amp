@@ -11,6 +11,8 @@ This document summarizes the visible conversation. It is not a complete transcri
 
 ## User-confirmed requirements
 
+- November 21 PCB support requirement (FB-071): provide a sufficiently broad flange beneath the circuit board for electric drill/driver access. Working interpretation is a metal support flange extending beyond the PCB edge, with screws accessible without tool contact with electronics. Size against the complete tool envelope, including chuck/body, approach and withdrawal; dimensions remain unverified. Fixed cabinet attachment and independent rear-cover removal still apply.
+
 - November 21 assembly requirement (FB-070): no chassis or control-panel mounting to the removable rear wooden cover, including secondary/shared supports. Attach mounts only to fixed cabinet structure. Keep rear-cover screws and removal path clear; removing the cover must not require releasing chassis/control-panel mounts.
 
 - November 21 rear-slot appearance requirement: where practicable, make natural tube heater glow visible through the two oval slots in the received cabinet’s upper rear cover. Preserve the compartmentalized functional block schema. Electrical performance, shielding/protection, cooling, cabinet fit and service access take priority. No requirement to show every tube or put one behind each slot. Placement remains unverified; see [received-cabinet review](engineering/whole-amp/mechanical/review/received-cabinet-photo-intake-2026-11-21.md).

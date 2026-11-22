@@ -808,3 +808,16 @@ Source: Current conversation: correction to panel mounting proposal
 - [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
 - [brain/records/DEC-011-pot-panel-proposal.md](<../../brain/records/DEC-011-pot-panel-proposal.md>)
 
+## FB-071 — pcb-support-flange-drill-access
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> also, the circuit board should have a broad enough flange underneath it that an electric drill can be used
+
+Provide sufficient flange width beneath the PCB for electric drill/driver access. Working interpretation: a metal support/chassis flange extending beyond the PCB edge with accessible fixing screws; not a load-bearing extension of PCB laminate. Exact tool and whether drilling holes or driving screws was intended are not specified.
+
+Source: Current conversation: PCB support and tool access requirement
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [brain/records/DEC-011-pot-panel-proposal.md](<../../brain/records/DEC-011-pot-panel-proposal.md>)
+

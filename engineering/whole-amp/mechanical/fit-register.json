@@ -431,5 +431,23 @@
     "tube_to_slot_transform": null,
     "sightline_verified": false,
     "guard_and_thermal_clearance_verified": false
+  },
+  "pcb_support_tool_access": {
+    "source_feedback": "FB-071",
+    "requirement": "Broad enough support flange beneath circuit board to allow electric drill/driver use.",
+    "working_interpretation": "Metal support flange extends beyond PCB edge, locating fixing screws outside the obstructed board/component envelope. PCB uses standoffs; not a load-bearing PCB flange.",
+    "interface_to_cabinet": "Fixed cabinet structure only; preserve FB-070 independent rear-cover removal.",
+    "clearance_checks": [
+      "Straight bit approach to screw head and withdrawal",
+      "Chuck and drill/driver body clearance from PCB, components, tubes, wiring and cabinet",
+      "Bit engagement depth and screw installation/removal travel",
+      "Flange stiffness, fastener edge distance and standoff/electrical clearances"
+    ],
+    "tool_model": null,
+    "tool_envelope_mm": null,
+    "flange_width_mm": null,
+    "screw_setback_mm": null,
+    "verified": false,
+    "assembly_sequence": "Drill and deburr structural holes with electronics absent; remove swarf before installing boards. Check driver access for fasteners at the intended assembly/service stage."
   }
 }

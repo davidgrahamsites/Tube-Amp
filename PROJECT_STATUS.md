@@ -1,5 +1,7 @@
 # Project status
 
+PCB support update (FB-071): flange beneath board must permit drill/driver access. Proposed metal support extends beyond the board edge; verify full chuck/body/bit approach and withdrawal before fixing flange width and screw positions. Tool envelope and access check remain open.
+
 Rear-cover correction (FB-070): chassis/control-panel mounts must attach only to fixed cabinet structure, never to the removable rear wooden cover. Independent cover removal, screw access and assembly path are required; bracket geometry remains unverified.
 
 November 21 cabinet photo intake: six original photographs archived and hash-verified. [Mounting/sightline review](engineering/whole-amp/mechanical/review/received-cabinet-photo-intake-2026-11-21.md) proposes flange/bracket-supported folded metalwork with independent rear-cover removal. User requests tube glow through the two oval rear slots where possible, with compartmentalized functional blocks preserved. No exact mounting elevation, slot geometry or sightline fit is established; next step is populated assembly placement and clearance review.

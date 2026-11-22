@@ -27,3 +27,6 @@ User requests natural tube glow through the two oval rear slots **only where com
 
 ## Rear-cover mounting prohibition — FB-070
 User explicitly prohibits mounting the chassis or control panel to the removable rear wooden cover. This includes secondary/shared supports; earlier “not sole support” wording was too permissive. Mount only to fixed cabinet structure. Keep rear-cover screws accessible and allow its removal without releasing chassis/control-panel mounts. Exact fixed-structure brackets and assembly path remain unverified.
+
+## PCB support flange and tool access — FB-071
+User requires a broad flange beneath the board so an electric drill can be used. Working interpretation: a metal chassis/support flange, with its fixing screws beyond the PCB edge; the PCB sits on standoffs. Do not choose a flange width from bit diameter alone. Include chuck/body clearance, screw engagement and removal travel, and straight approach/withdrawal without striking electronics or cabinet wood. Tool model/envelope, flange width and screw setback remain null in the canonical `pcb_support_tool_access` interface. Check stiffness, fastener edge distance and electrical clearance as part of the same assembly. Drill/deburr metalwork before electronics installation and remove swarf. FB-070 continues to prohibit any attachment to the removable rear cover.
