@@ -1,3 +1,5 @@
+> November21 S1 update: user confirmed approximately **270mm (27cm)** across the large speaker opening. This agrees with the supplier drawing's nominal Ø270mm cutout. The earlier27mm wording is superseded by explicit unit confirmation. This is separate from the294mm opposite mounting-hole readings and210mm adjacent readings; those remain unchanged. Exact dimensional uncertainty and a second perpendicular aperture reading were not supplied. Final chosen-speaker template, basket/depth and assembled fit still require checks. Canonical source: `cabinet.user_measurements.S1_aperture` in [fit register](../fit-register.json).
+
 # Received cabinet versus seller drawings — 20 November 2026
 
 Owner: mechanical integration. Scope: requested A/B/C spot-measurement comparison, now completed. This is not whole-assembly fit approval. Canonical dimensions/source statements: [fit register](../fit-register.json). Reproducible arithmetic: [fit screen](fit-screen.json), received_vs_drawing section. All three drawings were inspected previously; the front drawing was visually rechecked for this comparison.

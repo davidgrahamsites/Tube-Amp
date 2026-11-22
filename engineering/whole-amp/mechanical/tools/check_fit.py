@@ -87,6 +87,17 @@ if c1 is not None and c2 is not None:
         'design_basis': 'Received user-reported spacing; do not drill or select from the conflicting312mm drawing',
         'reference_speaker_radial_offset_each_pair_mm': [abs(c-speaker['bolt_circle_mm'])/2 for c in (c1,c2)],
         'reference_speaker_fit': 'Not qualified: actual studs/holes, cutout, frame and installed depth still need checking'}
+aperture = measured.get('S1_aperture')
+if aperture:
+    result['received_speaker_aperture'] = {
+        'reported_diameter_mm': aperture['diameter_mm'],
+        'drawing_cutout_diameter_mm': baf['cutout_diameter_mm'],
+        'difference_mm': aperture['diameter_mm'] - baf['cutout_diameter_mm'],
+        'approximate': aperture['approximate'],
+        'nominal_agreement': aperture['diameter_mm'] == baf['cutout_diameter_mm'],
+        'source': aperture['source'],
+        'fit_cleared': False,
+        'note': 'Cutout agreement only; mounting-hole pattern, exact template, basket and installed depth remain separate checks.'}
 assert area == 109900
 assert offset == 7.5
 assert result['baffle_attachment_dimension_conflict_mm'] == 8

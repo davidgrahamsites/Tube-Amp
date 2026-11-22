@@ -1070,12 +1070,31 @@
       "quote": "S1 Appears to by 27mm. Does that match the drawings?",
       "source": "Current conversation, S1 measurement",
       "interpretation": "Supplier drawing marks speaker cutout diameter270mm (27cm). User typed27mm; likely unit ambiguity but no conversion or accepted measured diameter until user confirms. Clarification requested.",
-      "disposition": "pending",
+      "disposition": "incorporated",
       "canonical_paths": [
         "engineering/whole-amp/mechanical/fit-register.json"
       ],
       "supersedes": [],
-      "next_action": "Confirm whether S1 means27cm/270mm. Keep raw27mm report distinct from drawing270mm and existing speaker bolt measurements."
+      "next_action": "Resolved by FB-067: user confirms27cm/270mm. Preserve original27mm wording as superseded unit ambiguity."
+    },
+    {
+      "id": "FB-067",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "speaker-aperture-unit-confirmed",
+      "quote": "Yes — 27 cm (270 mm)",
+      "source": "User answer to S1 unit clarification",
+      "interpretation": "Accept approximate received speaker-aperture diameter270mm. Matches supplier drawing nominal270mm; this does not resolve mounting-bolt pattern, exact tolerance, speaker depth or full assembly fit.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/received-vs-drawing.md"
+      ],
+      "supersedes": [
+        "FB-066"
+      ],
+      "next_action": "Use approximate270mm aperture for speaker selection screening; verify chosen driver with its template/trial fit. P1/P2/P3 remain pending."
     }
   ]
 }

@@ -747,7 +747,7 @@ Source: Current conversation; reply to illustrated T1/T2/T3 measuring instructio
 - [engineering/whole-amp/mechanical/review/tank-specifications.md](<../../engineering/whole-amp/mechanical/review/tank-specifications.md>)
 
 ## FB-066 — speaker-aperture-unit-clarification
-Authority: user. Disposition: pending. Recorded: 2026-11-21. Original date: 2026-11-21.
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
 
 > S1 Appears to by 27mm. Does that match the drawings?
 
@@ -756,4 +756,16 @@ Supplier drawing marks speaker cutout diameter270mm (27cm). User typed27mm; like
 Source: Current conversation, S1 measurement
 
 - [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+
+## FB-067 — speaker-aperture-unit-confirmed
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> Yes — 27 cm (270 mm)
+
+Accept approximate received speaker-aperture diameter270mm. Matches supplier drawing nominal270mm; this does not resolve mounting-bolt pattern, exact tolerance, speaker depth or full assembly fit.
+
+Source: User answer to S1 unit clarification
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [engineering/whole-amp/mechanical/review/received-vs-drawing.md](<../../engineering/whole-amp/mechanical/review/received-vs-drawing.md>)
 

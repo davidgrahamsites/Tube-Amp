@@ -1,6 +1,6 @@
 # Project status
 
-S1 intake November21: user typed27mm; drawing cutout is270mm (27cm). Unit confirmation requested; no received speaker-aperture diameter accepted yet.
+S1 confirmed November21: user confirms approximately270mm (27cm) speaker aperture, matching the drawing nominal. Earlier27mm wording was a unit error. Speaker bolt-pattern discrepancy, exact template/depth and assembled fit remain open.
 
 Tank measurement November21: received-unit outer envelope now user-reported **149.5×60×36.5mm (T1/T2/T3)**, recorded with datums in the [mechanical register](engineering/whole-amp/mechanical/fit-register.json). Use this envelope for packaging; installed RCA plugs/cables, mounting-hole positions and complete assembly fit remain open.
 
