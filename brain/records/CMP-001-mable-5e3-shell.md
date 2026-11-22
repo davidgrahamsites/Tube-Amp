@@ -3,7 +3,7 @@ id: CMP-001
 type: component
 domain: components
 status: documented
-updated: 2026-11-20
+updated: 2026-11-21
 ---
 # Delivered Mable 5E3 yellow-tweed cabinet — fixed build constraint
 
@@ -45,3 +45,6 @@ Cabinet is on hand and is a fixed requirement. Earlier preferred-candidate/procu
 See the [photo intake](../../engineering/whole-amp/mechanical/review/received-tank-photo-intake-2026-11-20.md): six original photos archived and hash-checked, label and socket identity confirmed. Coil readings and dimensions remain unmeasured; no fit or electrical release follows from photographs.
 
 Subsequent DC readings are now recorded in the [canonical register](../../engineering/whole-amp/mechanical/fit-register.json). The earlier pending-reading note is closed; AC behavior, grounding and dimensional checks remain open. Simulation updates must distinguish measured DC resistance from assumed inductance.
+
+## Received tank dimensions — 2026-11-21
+User reported T1/T2/T3 outer envelope149.5×60×36.5mm. See the [canonical mechanical register](../../engineering/whole-amp/mechanical/fit-register.json) for datums and uncertainty, and [current specification note](../../engineering/whole-amp/mechanical/review/tank-specifications.md). This closes the basic reported-envelope gap, not mounting-hole, cable or assembled fit qualification. Earlier catalogue tank dimensions are not the received-unit design envelope.

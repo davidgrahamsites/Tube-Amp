@@ -12,7 +12,7 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | RULE-MFG | rule-set | manufacture | documented | 2026-10-03 | [Manufacture and release](rules/manufacture.md) |
 | RULE-PCB | rule-set | pcb | documented | 2026-10-04 | [PCB design](rules/pcb.md) |
 | RULE-SCH | rule-set | schematic | documented | 2026-10-04 | [Schematic capture](rules/schematic.md) |
-| CMP-001 | component | components | documented | 2026-11-20 | [Delivered Mable 5E3 yellow-tweed cabinet — fixed build constraint](records/CMP-001-mable-5e3-shell.md) |
+| CMP-001 | component | components | documented | 2026-11-21 | [Delivered Mable 5E3 yellow-tweed cabinet — fixed build constraint](records/CMP-001-mable-5e3-shell.md) |
 | CMP-013 | component | components | proposed | 2026-11-11 | [Pointer knob and potentiometer interface](records/CMP-013-pointer-knobs.md) |
 | CMP-021 | component | components | proposed | 2026-11-20 | [Mainland low-quantity component sourcing](records/CMP-021-domestic-component-sourcing.md) |
 | DEC-001 | decision | cross-domain | superseded | 2026-11-20 | [Reverb and control starting architecture](records/DEC-001-reverb-and-control-baseline.md) |

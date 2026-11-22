@@ -70,7 +70,7 @@ def main():
            '- Current state: '+link('PROJECT_STATUS.md'),
            '- Current circuit: '+link('engineering/whole-amp/reverb-600/review/review.md'),
            '- Selected parts: '+link('engineering/component-selection/selected-engineering-bom.csv'),
-           '- Cabinet measurements: '+link('engineering/whole-amp/mechanical/review/measurement-guide.md'),
+           '- Cabinet measurements: '+link('engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md'),
            '- Feedback workflow: '+link('brain/rules/feedback.md'),
            '- Decisions and evidence: '+link('brain/INDEX.md'),'',
            '## Materials and ownership','']

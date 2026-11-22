@@ -49,6 +49,23 @@ result = {
         'note': 'Legacy nominal L and Z do not define one exact constant-RL model; do not silently replace simulation model'},
     'assembly_fit_cleared': False,
     'missing_interfaces': r['unknowns']}
+# Preserve the old catalogue comparison as history, never as the received envelope.
+result['historical_reference_tank_screen'] = result.pop('tank_screen')
+result['historical_reference_tank_screen']['scope'] = 'Historical catalogue arithmetic only; not received-unit dimensions'
+tank = r.get('tank_received', {}).get('mechanical_measurements')
+if tank:
+    envelope = [tank[k] for k in ('T1_max_length_mm', 'T2_max_width_mm', 'T3_max_height_mm')]
+    assert all(isinstance(x, (int, float)) and x > 0 for x in envelope)
+    result['received_tank_screen'] = {
+        'outer_envelope_mm': envelope,
+        'reported_on': tank['reported_on'],
+        'source': tank['source'],
+        'datum_basis': tank['datum_basis'],
+        'reported_uncertainty_mm': tank['reported_uncertainty_mm'],
+        'bounding_plan_area_mm2': envelope[0] * envelope[1],
+        'installed_floor_clearance': None,
+        'fit_cleared': False,
+        'note': 'Reported outer envelope only. Upper cabinet width/depth are not measured free floor space. Add actual plugged RCA leads, cable bends, mounting and assembly clearances.'}
 result['speaker_existing_holes']['scope'] = 'HISTORICAL seller-drawing comparison only; not the received cabinet measurement'
 measured = r['cabinet'].get('user_measurements', {})
 c1 = measured.get('C1_opposite_hole_centres_mm')

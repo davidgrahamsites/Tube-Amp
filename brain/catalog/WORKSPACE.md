@@ -7,7 +7,7 @@ Generated as of 2026-11-21. Edit brain/materials/register.json and brain/feedbac
 - Current state: [PROJECT_STATUS.md](<../../PROJECT_STATUS.md>)
 - Current circuit: [engineering/whole-amp/reverb-600/review/review.md](<../../engineering/whole-amp/reverb-600/review/review.md>)
 - Selected parts: [engineering/component-selection/selected-engineering-bom.csv](<../../engineering/component-selection/selected-engineering-bom.csv>)
-- Cabinet measurements: [engineering/whole-amp/mechanical/review/measurement-guide.md](<../../engineering/whole-amp/mechanical/review/measurement-guide.md>)
+- Cabinet measurements: [engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md](<../../engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md>)
 - Feedback workflow: [brain/rules/feedback.md](<../../brain/rules/feedback.md>)
 - Decisions and evidence: [brain/INDEX.md](<../../brain/INDEX.md>)
 
@@ -58,7 +58,7 @@ Coverage is canonical by reference; selected BOM is generated. Candidate/selecte
 ### MAT-005 — Received cabinet and spring tank
 Role: evidence. Status: received; fit unqualified. Owner: Mechanical owner.
 
-Yellow cabinet and tank delivered. Do not reopen stock/order questions. Dimensions and actual coil characterization remain open.
+Yellow cabinet and tank received. Tank outer envelope user-reported149.5×60×36.5mm; datums/uncertainty in fit register. Cabinet opening/aperture/height, installed cable/mounting clearances and coil AC/current qualification remain open.
 
 - [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
 - [engineering/whole-amp/mechanical/review/tank-specifications.md](<../../engineering/whole-amp/mechanical/review/tank-specifications.md>)
@@ -66,6 +66,7 @@ Yellow cabinet and tank delivered. Do not reopen stock/order questions. Dimensio
 - [engineering/whole-amp/mechanical/review/received-vs-drawing.md](<../../engineering/whole-amp/mechanical/review/received-vs-drawing.md>)
 - [engineering/whole-amp/mechanical/review/received-tank-photo-intake-2026-11-20.md](<../../engineering/whole-amp/mechanical/review/received-tank-photo-intake-2026-11-20.md>)
 - [engineering/whole-amp/mechanical/evidence/received-tank-2026-11-20](<../../engineering/whole-amp/mechanical/evidence/received-tank-2026-11-20>)
+- [engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md](<../../engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md>)
 
 ### MAT-006 — Speaker, tubes, sockets, magnetics and mounting hardware
 Role: product. Status: selection/fit incomplete. Owner: Integration + mechanical.

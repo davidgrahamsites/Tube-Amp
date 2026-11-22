@@ -734,3 +734,15 @@ Source: Current conversation, S1 measurement
 
 - [engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md](<../../engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md>)
 
+## FB-065 — received-tank-envelope-measurement
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> T1 length: 149.5mm, T2 width: 60 mm, T3 height: 36.5mm,
+
+Record received tank outer envelope149.5×60×36.5mm per requested datums: length including flanges, width including socket projections, height including feet. Setup and measurement uncertainty not independently verified. No replacement catalogue envelope or mounting-hole coordinates inferred.
+
+Source: Current conversation; reply to illustrated T1/T2/T3 measuring instructions
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [engineering/whole-amp/mechanical/review/tank-specifications.md](<../../engineering/whole-amp/mechanical/review/tank-specifications.md>)
+

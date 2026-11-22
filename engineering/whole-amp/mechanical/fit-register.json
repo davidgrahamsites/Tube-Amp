@@ -96,7 +96,7 @@
     "Speaker model, cutout requirement and installed baffle-to-rear clearance",
     "Final PT/OT/choke/aux transformer drawings and locations",
     "Six socket/tube/shield/retainer envelopes, thermal and extraction clearances",
-    "Exact quoted tank identity, height, mounting hole pattern, bag/grommets and cable allowance",
+    "Received tank mounting-hole pattern, installed bag/fasteners and RCA plug/cable allowance; outer envelope now user-reported",
     "Ten controls, jacks and switch body clearances; knob/shaft confirmation",
     "Handle bolts, braces, back panels and earth-bond keepouts"
   ],
@@ -223,7 +223,7 @@
       "setup": "Per instructed isolated-tank procedure; operator reports readings, setup not independently inspected",
       "interpretation": "Finite winding-path DC resistance at both sockets; does not exclude shorted turns or establish acoustic performance, AC impedance, grounding or allowable drive current."
     },
-    "note": "Label photograph-confirmed. User-reported coil DC readings now 76 ohm IN and 235 ohm OUT; provenance in electrical_measurements. Body dimensions and AC characterization remain unresolved. Seller-reported 600/2250 ohm AC impedance basis retains unknown test frequency.",
+    "note": "Label photograph-confirmed. User-reported coil DC readings76ohm IN/235ohm OUT and outer envelope149.5×60×36.5mm now recorded in electrical_measurements/mechanical_measurements. AC test conditions, safe drive current, mounting-hole pattern and installed cable envelope remain unresolved.",
     "supplier_statement_date": "2026-11-19",
     "supplier_statement_source": "User relayed seller reply in chat",
     "supplier_statement": "3 spring, input IMP 600ohm, Output IMP 2250ohm, MEDIUM DECAY, input insulated Output grounded, no lock, Mount horizontal Open side Down",
@@ -249,6 +249,21 @@
       "front_view_output": "Left red RCA socket stamped OUT",
       "electrical_bonding_verified": false,
       "scale_present": false
+    },
+    "mechanical_measurements": {
+      "reported_on": "2026-11-21",
+      "source": "User: T1 length: 149.5mm, T2 width: 60 mm, T3 height: 36.5mm,",
+      "units": "mm",
+      "T1_max_length_mm": 149.5,
+      "T2_max_width_mm": 60,
+      "T3_max_height_mm": 36.5,
+      "datum_basis": "Interpreted according to illustrated guide: T1 includes mounting flanges; T2 includes fixed RCA socket projections with cables unplugged; T3 from tabletop beneath feet to top of case.",
+      "measurement_setup_independently_verified": false,
+      "instrument": null,
+      "reported_uncertainty_mm": null,
+      "mounting_hole_centres_mm": null,
+      "installed_RCA_plug_and_cable_envelope_mm": null,
+      "status": "User-reported received-hardware envelope; not manufacturing tolerance or assembled fit approval"
     }
   },
   "control_panel_study": {

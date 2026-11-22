@@ -1,5 +1,7 @@
 # Project status
 
+Tank measurement November21: received-unit outer envelope now user-reported **149.5×60×36.5mm (T1/T2/T3)**, recorded with datums in the [mechanical register](engineering/whole-amp/mechanical/fit-register.json). Use this envelope for packaging; installed RCA plugs/cables, mounting-hole positions and complete assembly fit remain open.
+
 November21 continuation: [118-case electric headroom review](engineering/whole-amp/electric-input-headroom/results/review.md) completed; keep original input without buffer. At nominal278V supply/1kHz, clean first-plateTHD is3.911% at1Vsource peak and15.358% at2V. Generic preamp fixture only; not a real-guitar clean-power specification or a fix for the unresolved full-amp transformer ringing.
 
 [Pot-panel proposal](brain/records/DEC-011-pot-panel-proposal.md) now includes ten controls, exact pot/knob candidates, separate face/underside envelopes and a terminal interface. Current four board outlines cannot share one467×160mm plane. Repack only after the common assembly reserves speaker, six socket/tube service paths, magnetics, pots and wiring. User requested clearer measuring instructions; [illustrated guide and reply form](engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md) defines the missing opening, aperture and tank measurements. Actual fit remains open.

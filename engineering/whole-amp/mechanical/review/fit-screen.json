@@ -45,11 +45,6 @@
       "fits_assumed_tray": true
     }
   },
-  "tank_screen": {
-    "reference_bare_width_235_vs_baffle_width468_mm": 233,
-    "installed_floor_clearance": null,
-    "note": "Baffle width is not a measured free floor dimension; cable/bag/feet/height still unknown"
-  },
   "reference_tank_model_consistency": {
     "RL_equivalent_H_from_800ohm_58ohm_1kHz": 0.12698889033033892,
     "ohm_from_150mH_58ohm_1kHz": 944.260767001384,
@@ -62,10 +57,31 @@
     "Speaker model, cutout requirement and installed baffle-to-rear clearance",
     "Final PT/OT/choke/aux transformer drawings and locations",
     "Six socket/tube/shield/retainer envelopes, thermal and extraction clearances",
-    "Exact quoted tank identity, height, mounting hole pattern, bag/grommets and cable allowance",
+    "Received tank mounting-hole pattern, installed bag/fasteners and RCA plug/cable allowance; outer envelope now user-reported",
     "Ten controls, jacks and switch body clearances; knob/shaft confirmation",
     "Handle bolts, braces, back panels and earth-bond keepouts"
   ],
+  "historical_reference_tank_screen": {
+    "reference_bare_width_235_vs_baffle_width468_mm": 233,
+    "installed_floor_clearance": null,
+    "note": "Baffle width is not a measured free floor dimension; cable/bag/feet/height still unknown",
+    "scope": "Historical catalogue arithmetic only; not received-unit dimensions"
+  },
+  "received_tank_screen": {
+    "outer_envelope_mm": [
+      149.5,
+      60,
+      36.5
+    ],
+    "reported_on": "2026-11-21",
+    "source": "User: T1 length: 149.5mm, T2 width: 60 mm, T3 height: 36.5mm,",
+    "datum_basis": "Interpreted according to illustrated guide: T1 includes mounting flanges; T2 includes fixed RCA socket projections with cables unplugged; T3 from tabletop beneath feet to top of case.",
+    "reported_uncertainty_mm": null,
+    "bounding_plan_area_mm2": 8970.0,
+    "installed_floor_clearance": null,
+    "fit_cleared": false,
+    "note": "Reported outer envelope only. Upper cabinet width/depth are not measured free floor space. Add actual plugged RCA leads, cable bends, mounting and assembly clearances."
+  },
   "received_vs_drawing": {
     "source": "User measurements; exact datums and uncertainty not independently inspected",
     "A_front_mm": 467,
