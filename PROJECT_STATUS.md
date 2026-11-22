@@ -1,5 +1,7 @@
 # Project status
 
+November 21 cabinet photo intake: six original photographs archived and hash-verified. [Mounting/sightline review](engineering/whole-amp/mechanical/review/received-cabinet-photo-intake-2026-11-21.md) proposes flange/bracket-supported folded metalwork with independent rear-cover removal. User requests tube glow through the two oval rear slots where possible, with compartmentalized functional blocks preserved. No exact mounting elevation, slot geometry or sightline fit is established; next step is populated assembly placement and clearance review.
+
 S1 confirmed November21: user confirms approximately270mm (27cm) speaker aperture, matching the drawing nominal. Earlier27mm wording was a unit error. Speaker bolt-pattern discrepancy, exact template/depth and assembled fit remain open.
 
 Tank measurement November21: received-unit outer envelope now user-reported **149.5×60×36.5mm (T1/T2/T3)**, recorded with datums in the [mechanical register](engineering/whole-amp/mechanical/fit-register.json). Use this envelope for packaging; installed RCA plugs/cables, mounting-hole positions and complete assembly fit remain open.

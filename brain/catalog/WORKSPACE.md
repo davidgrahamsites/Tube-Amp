@@ -58,7 +58,7 @@ Coverage is canonical by reference; selected BOM is generated. Candidate/selecte
 ### MAT-005 — Received cabinet and spring tank
 Role: evidence. Status: received; fit unqualified. Owner: Mechanical owner.
 
-Yellow cabinet and tank received. Tank outer envelope user-reported149.5×60×36.5mm; datums/uncertainty in fit register. Cabinet opening/aperture/height, installed cable/mounting clearances and coil AC/current qualification remain open.
+Yellow cabinet and tank received. Tank envelope user-reported 149.5×60×36.5 mm; speaker aperture approximately 270 mm. Mounting photos and conditional rear-slot tube-visibility requirement recorded. Control-opening geometry, installed clearances, assembled fit and coil AC/current qualification remain open.
 
 - [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
 - [engineering/whole-amp/mechanical/review/tank-specifications.md](<../../engineering/whole-amp/mechanical/review/tank-specifications.md>)
@@ -67,6 +67,8 @@ Yellow cabinet and tank received. Tank outer envelope user-reported149.5×60×36
 - [engineering/whole-amp/mechanical/review/received-tank-photo-intake-2026-11-20.md](<../../engineering/whole-amp/mechanical/review/received-tank-photo-intake-2026-11-20.md>)
 - [engineering/whole-amp/mechanical/evidence/received-tank-2026-11-20](<../../engineering/whole-amp/mechanical/evidence/received-tank-2026-11-20>)
 - [engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md](<../../engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md>)
+- [engineering/whole-amp/mechanical/evidence/received-cabinet-2026-11-21](<../../engineering/whole-amp/mechanical/evidence/received-cabinet-2026-11-21>)
+- [engineering/whole-amp/mechanical/review/received-cabinet-photo-intake-2026-11-21.md](<../../engineering/whole-amp/mechanical/review/received-cabinet-photo-intake-2026-11-21.md>)
 
 ### MAT-006 — Speaker, tubes, sockets, magnetics and mounting hardware
 Role: product. Status: selection/fit incomplete. Owner: Integration + mechanical.
@@ -183,7 +185,7 @@ Role: product. Status: scoped simulated evidence; hardware qualification pending
 
 ## Complete file inventory
 
-1682 files cataloged with path, role, owner and SHA256 in [FILES.json](FILES.json). No existence/hash check establishes circuit safety or fit.
+1691 files cataloged with path, role, owner and SHA256 in [FILES.json](FILES.json). No existence/hash check establishes circuit safety or fit.
 
 Historical native snapshots keep their existing paths and original internal layout. Their legacy scripts are not new-work templates. New active work separates tools/templates, editable registers and generated products.
 

@@ -769,3 +769,29 @@ Source: User answer to S1 unit clarification
 - [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
 - [engineering/whole-amp/mechanical/review/received-vs-drawing.md](<../../engineering/whole-amp/mechanical/review/received-vs-drawing.md>)
 
+## FB-068 — cabinet-panel-mounting-observation
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> the top of the cabinet back piece is flush with as high as the bottom of the cabinet top, so a panel will need to be flange mounted instead of flush mounted i think
+
+User reports approximate alignment of upper rear panel edge with underside of cabinet top. Five photos support mounting-interface review, not exact dimensional metrology. Develop flange/bracket-supported metal chassis; face elevation remains unresolved.
+
+Source: Current conversation: received cabinet photos and circled rear-slot clarification
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [brain/records/DEC-011-pot-panel-proposal.md](<../../brain/records/DEC-011-pot-panel-proposal.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+
+## FB-069 — tube-visibility-with-functional-block-priority
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> I want to see tubes glowing through these holes, if possible (but don't break the compartmentalized functional block schema to make it happen)
+
+Conditional user preference: actual tube heater glow visible through the two circled oval slots in the upper rear cover. Preserve compartmentalized functional blocks and electrical, thermal and service requirements; no requirement for one tube per slot or all tubes visible.
+
+Source: Current conversation: received cabinet photos and circled rear-slot clarification
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [brain/records/DEC-011-pot-panel-proposal.md](<../../brain/records/DEC-011-pot-panel-proposal.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+
