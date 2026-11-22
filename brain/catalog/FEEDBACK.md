@@ -870,3 +870,15 @@ Source: Current conversation
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 - [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
 
+## FB-076 — all-board-requirements-audit
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> Check all PCBS and routing against all requiremetns
+
+Audit all four active electric-build boards against canonical project requirements and imported design imperatives, beyond native DRC. Record pass/fail/unverified scope and repair supported defects without weakening rules. Historical snapshots remain preserved.
+
+Source: Current conversation, after correction that routing rules should have been checked earlier
+
+- [engineering/whole-amp/pcb-measured-r/review/requirements-audit.md](<../../engineering/whole-amp/pcb-measured-r/review/requirements-audit.md>)
+- [brain/records/VAL-018-all-board-requirements-audit.md](<../../brain/records/VAL-018-all-board-requirements-audit.md>)
+

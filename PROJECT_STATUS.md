@@ -1,5 +1,7 @@
 # Project status
 
+November 21 all-board audit: **all four active PCBs fail fabrication release**. Main/Power/Control retain 105/39/99 unconnected items. Reverb is connected, but placement, feedback and return-path qualification remain open. Enabling ignored checks on temporary copies exposed 68 missing wire-pad courtyards. Three simple bends still exceed the 45-degree routing requirement. Current/voltage rules, exact parts, expression control and populated cabinet/service fit remain incomplete. All 364 imported rules are indexed: 21 confirmed failures, 331 not verified, 11 not applicable and one superseded; these are requirement dispositions, not counts of hardware faults. [Audit and repair order](engineering/whole-amp/pcb-measured-r/review/requirements-audit.md), [ICM checkpoint](brain/records/VAL-018-all-board-requirements-audit.md). This audit changed no native CAD. Next: close exact-part and assembly envelopes, correct placement and protection, establish per-net rules, then complete routing and repeat checks.
+
 November21 copper/interference checkpoint: 90 right-angle reverb joins changed to pairs of 45-degree bends. Fresh Reverb native DRC has zero violations and zero unconnected items; all444 checked pad/net assignments match. Main/Power/Control retain243 unconnected items. Current capacity, junction geometry and EMI/RFI performance remain unqualified. Speaker reference requires283mm cutout versus received270mm; fit stays open. C60550V candidate rejected against63V requirement;100V C0G candidate recorded, native footprint and domestic sourcing pending. [Latest checkpoint](brain/records/VAL-017-copper-and-component-review.md).
 
 November21 service/package checkpoint: received opening307–308×approximately53 mm and inside height383 mm recorded (FB-073/074). Revised staggered ten-control study has215×48 mm knob envelope; rectangular screen passes, physical/finger/curved-edge fit remains open. Six remaining selected packages now integrated, including C60210mm pitch and relocated C321. Native DRC: zero violations on all four boards under preserved project rules;243 unconnected items remain across Main/Power/Control. [Checkpoint and next work](brain/records/VAL-016-service-panel-package-checkpoint.md). Fixed-structure removable chassis proposal preserves the independent wooden rear cover and functional blocks; actual tool access and full assembly are not verified. No further ruler measurements requested at this checkpoint.
@@ -40,7 +42,11 @@ Historical Mable quote relayed by the user November12: cabinetRMB726,tankRMB100,
 
 Expression-pedal operation confirmed November12: heel=dry,toe=faceplate REVERB setting,unplugged=normal knob operation. Wet-only control with audio kept inside the amp. [Requirements/work order](engineering/whole-amp/expression-control/requirements.md) saved; circuit/parts/native PCB implementation pending.
 
-## Current revision: original amplifier plus solid-state spring reverb
+## Historical v0.4/v0.5 checkpoints — superseded by the active audit
+
+The following routed-board and supplier-status statements describe earlier revisions. Current CAD is in `engineering/whole-amp/pcb-measured-r/`; current integrated circuit is in `engineering/whole-amp/reverb-600/`. Use the audit at the top of this file for present release status.
+
+### Original amplifier plus solid-state spring reverb
 
 The user's November 11 scope supersedes the added tube-reverb architecture: keep the original six-tube amp and cabinet choices, add solid-state spring drive/recovery, a faceplate knob that adds wet to constant dry, and a PCB. [DEC-007](brain/records/DEC-007-original-amp-solid-state-reverb.md) records the decisions.
 
@@ -48,9 +54,9 @@ The [v0.4 engineering package](engineering/solid-state-reverb/README.md) include
 
 Recovered manufacturer drawings for the preferred Mable 5E3 shell show 508mm width, 420mm height, 215/242mm top/bottom depth and 312mm top-control opening. The China supplier still lists the exact cabinet; stock, current material, delivered quote and usable assembled fit remain unconfirmed. Cabinet choice is unchanged.
 
-**Not released for construction or ordering.** Exact HV standby/fuse selection, full chosen-component amplifier simulation, actual tank/parts, chassis fit and physical testing remain open. At v0.4 only the reverb daughterboard was routed; the subsequent v0.5 section below records the routed Main, Power and Control drafts. Prior drafts/source remain preserved. Start follow-up work in `engineering/solid-state-reverb/` and read its build-plan gates before advancing.
+**Not released for construction or ordering.** Exact HV standby/fuse selection, full chosen-component amplifier simulation, actual tank/parts, chassis fit and physical testing remain open. At v0.4 only the reverb daughterboard was routed; the subsequent v0.5 section below records the routed Main, Power and Control drafts. Prior drafts/source remain preserved. For current work use `engineering/whole-amp/pcb-measured-r/` and `engineering/whole-amp/reverb-600/`; preserve this earlier package as history.
 
-## v0.5 whole-amplifier work in progress
+## Historical v0.5 whole-amplifier checkpoint
 
 The user subsequently required PCB coverage for the whole amplifier. Active work is now in [engineering/whole-amp](engineering/whole-amp/README.md), preserving v0.4. Main, Power and Control board projects and native assembly schematics exist alongside the earlier Reverb board. All three new boards are routed and pass native DRC with zero violations, unconnected items or schematic parity issues. Assembly ERC is clean. A separate integrated v0.5 schematic/PDF, development BOM, terminal schedule and build plan are saved; its electrical pin partitions match v0.4. Parts, functional layout/thermal review, simulation qualification and cabinet fit still prevent a build-ready release.
 

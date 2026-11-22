@@ -1,8 +1,10 @@
-> Current electrical work: [v0.4 solid-state spring reverb package](../../engineering/solid-state-reverb/README.md). This supersedes the earlier tube-reverb architecture; remaining release gates are in its build plan.
+> Current electrical work: [600R-1 circuit](../../engineering/whole-amp/reverb-600/CONTEXT.md) and [active four-board audit](../../engineering/whole-amp/pcb-measured-r/review/requirements-audit.md). Historical v0.4/v0.5 routing results do not qualify current boards.
 
 # One working Renegade prototype
 
-Updated October 4, 2026. This is the active first-stage plan following the user's scope correction.
+Updated November 21, 2026. This is the active first-stage plan following the user's scope correction.
+
+Audit checkpoint: all four boards remain on fabrication hold. Close exact-part/assembly envelopes, local bypass and relay suppression placement, wire-terminal courtyards, current/insulation rules and incomplete routing before P04/P05 release. Rear-cover independence, full drill access and extraction remain unverified. See [VAL-018](../../brain/records/VAL-018-all-board-requirements-audit.md).
 
 ## Goal and completion
 Build **one functioning 220 V / 50 Hz combo that fits the chosen box**, with its speaker, original channel functions, added solid-state-driven real spring reverb and debounced channel/reverb pedal. The yellow-tweed Mable5E3 cabinet is delivered and fixed. Select parts and redesign internal mechanical/PCB arrangements to fit the actual cabinet. The original amplifier is the electrical starting point; a 5E3-looking cabinet does not select a 5E3 circuit.
