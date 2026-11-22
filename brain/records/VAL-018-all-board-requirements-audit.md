@@ -7,6 +7,8 @@ updated: 2026-11-21
 ---
 # All-board requirements audit
 
+Historical initial-audit snapshot. The later [VAL-019 repair checkpoint](VAL-019-layout-reference-and-bounded-repairs.md) supersedes its corner and disabled-check status; linked current report products have been refreshed for those repairs.
+
 ## Claim and limits
 FB-076 requested all PCBs and routing checked against all requirements. All four active electric-build boards were audited. **All four fail fabrication release.** This is a completed evidence/gap review, not completed engineering verification or a repaired design. No native CAD, project rule, schematic, part choice or circuit was changed. No new simulation or powered test was performed.
 

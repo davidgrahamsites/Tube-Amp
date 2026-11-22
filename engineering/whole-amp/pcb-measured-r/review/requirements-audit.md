@@ -1,8 +1,8 @@
 # Four-board requirements audit — 21 November 2026
 
-**Result: FAIL for fabrication release on all four active boards.** The audit is complete as an evidence and gap review. Engineering verification is not complete. No native CAD, project rule, schematic, part selection or circuit was changed by this audit. No new simulation or physical test is claimed.
+**Result: FAIL for fabrication release on all four active boards.** The audit is complete as an evidence and gap review. Engineering verification is not complete. The initial audit was read-only. The subsequent bounded repair changes three corners and restores five ignored check types on Main, Power and Control; no schematic, part selection, net, outline or custom clearance rule changed. No new simulation or physical test is claimed. See [repair evidence](bounded-repair-2026-11-21.json) and [researched comparison](external-guidance-comparison-2026-11-21.md).
 
-Owner: PCB integration. Circuit, parts and mechanical owners close their respective findings before PCB release. Revision: electric 600R-1, starting at commit 8382b4c; exact native inputs are identified in [run manifest](requirements-run.json). Historical boards and the future acoustic design are excluded from active release; their prior results do not qualify these boards.
+Owner: PCB integration. Circuit, parts and mechanical owners close their respective findings before PCB release. Revision: electric 600R-1, initial audit at commit 8382b4c, bounded repair based on 75c7032; current native inputs are identified in [run manifest](requirements-run.json). Historical boards and the future acoustic design are excluded from active release; their prior results do not qualify these boards.
 
 ## Method and coverage
 
@@ -17,11 +17,11 @@ Owner: PCB integration. Circuit, parts and mechanical owners close their respect
 
 ## Board results
 
-| Active board | Outline, mm | Circuit refs / all footprints | Native DRC violations | Unconnected items | Additional strict findings | Simple bends over 45.1 degrees |
+| Active board | Outline, mm | Circuit refs / all footprints | Native DRC violations | Unconnected items | Strict findings (same warnings) | Simple bends over 45.1 degrees |
 |---|---|---|---|---|---|---|
-| Main | 290 × 140 | 56 / 103 | 0 | **105** | 43 missing wire-pad courtyards | 1 |
-| Power | 160 × 175 | 27 / 43 | 0 | **39** | 12 missing wire-pad courtyards | 1 |
-| Control | 230 × 110 | 55 / 72 | 0 | **99** | 13 missing wire-pad courtyards | 1 |
+| Main | 290 × 140 | 56 / 103 | 43 warnings | **105** | 43 missing wire-pad courtyards | 0 |
+| Power | 160 × 175 | 27 / 43 | 12 warnings | **39** | 12 missing wire-pad courtyards | 0 |
+| Control | 230 × 110 | 55 / 72 | 13 warnings | **99** | 13 missing wire-pad courtyards | 0 |
 | Reverb | 160 × 100 | 46 / 50 | 0 | 0 | 0 | 0 |
 
 The 243 unconnected items are DRC connection items, not a count of missing nets. Sources: `*-drc.json`, `*-strict-drc.json`, [native inventory](native-requirements-facts.json), [copper inventory](copper-audit.json). All four have two copper layers and zero copper zones. Missing 3D models: Main 93, Power 33, Control 39, Reverb 31. A missing model is an assembly-evidence gap, not proof of physical interference.
@@ -58,7 +58,9 @@ U1 and U3 placement conflicts with their manufacturers' close-bypass guidance. T
 
 Primary sources inspected for this audit: [TI SN74HC14, sections 8.3–8.4](https://www.ti.com/lit/ds/symlink/sn74hc14.pdf), [TI TPS3808, section 8.4](https://www.ti.com/lit/ds/symlink/tps3808.pdf), [TI OPA2134, sections 7.3–7.4](https://www.ti.com/lit/ds/symlink/opa2134.pdf). These require nearby supply bypassing and appropriate compact layout. A capacitor value alone does not qualify its placement. The distance screen includes rail-tied logic inputs as well as supply pins in raw evidence; the table above selects supply pins deliberately.
 
-Closure: place bypass parts at their device supply/return pins, group each regulator with its required input/output capacitors, compact op-amp feedback and recovery paths, then route the complete local loops. Recheck stability, interference and load transients. Do this before further cosmetic routing work.
+New source-backed discrepancy: selected C353 is KNSCHA MEB104J63V82CB0236 film, while TPS3808 §8.4.1 calls for a nearby 0.1 µF ceramic. U3 exact ordering code remains open. Resolve that part/interface before selecting a replacement; trial capacitor moves were not adopted.
+
+Closure: select the correct bypass parts and place them at their device supply/return pins, group each regulator with its required input/output capacitors, compact op-amp feedback and recovery paths, then route the complete local loops. Recheck stability, interference and load transients. Do this before further cosmetic routing work.
 
 ### F03 — Relay suppression is remote from the coils
 
@@ -70,17 +72,17 @@ Closure: design suppression at each physical coil loop, retain suitable driver p
 
 Strict DRC reveals 43 Main, 12 Power and 13 Control `missing_courtyard` warnings. Every one is a `Renegade_Whole:WirePad_1.3mm` terminal. This is not evidence that 68 component bodies collide. It shows the soldered wire, insulation, bend and strain-relief envelope has not been represented or individually waived.
 
-Main/Power/Control ignored `missing_courtyard`, `footprint_filters_mismatch`, `footprint_type_mismatch`, `track_not_centered_on_via` and `tuning_profile_track_geometries`. Strict copies enabled all five; no additional types were reported. There were no stored DRC exclusions. Reverb had no explicit ignored checks in its project file. A persisted global ignore is not a documented per-item engineering decision.
+Before the bounded repair, Main/Power/Control ignored `missing_courtyard`, `footprint_filters_mismatch`, `footprint_type_mismatch`, `track_not_centered_on_via` and `tuning_profile_track_geometries`. Strict copies enabled all five; no additional types were reported. There were no stored DRC exclusions. Reverb had no explicit ignored checks in its project file. The bounded repair now restores all five to warning on the active boards. Fresh normal and strict runs report the same 68 missing courtyards. No other rule types are reported. The missing assembly envelopes remain open.
 
 Closure: define real wire termination envelopes and keepouts; give any deliberate courtyard exception a specific reason; review restored severities before release. Do not create arbitrary tiny courtyards merely to silence the checker.
 
-### F05 — Trace-shape requirement remains open on three boards
+### F05 — Simple bends repaired; junction review remains open
 
-Main and Power each have a remaining 90-degree joined-segment candidate, including width-transition geometry. Control has a 46.157-degree candidate on RESET_CT near C321. Reverb has no simple bends over the screen threshold following the prior chamfer pass. The exact coordinates and nets are in `copper-audit.json`.
+The three specific remaining bends on Main PI_K, Power B_EARLY and Control RESET_CT were beveled with 0.2 mm leg trims. Candidate checks preserved footprint/pad positions and nets, outlines and custom rules. Native detail exports were visually inspected before adoption. Fresh active-board screening finds zero simple bends above the threshold on all four boards; native DRC finds no added spacing faults. The [repair manifest](bounded-repair-2026-11-21.json) records before/after hashes and scope.
 
-The screen separately reports 2 / 6 / 14 / 85 junction nodes for Main / Power / Control / Reverb. These are not 107 proven violations; branches, pad entries and via entries need separate inspection. Small existing Reverb chamfers can look square in the reduced full-board view. The screen does not prove every copper edge is smooth or free of acute wedges.
+The screen separately reports 2 / 6 / 15 / 85 junction nodes for Main / Power / Control / Reverb. These are not 108 proven violations; branches, width transitions, pad entries and via entries need separate inspection. The screen does not prove every copper edge is smooth or free of acute wedges.
 
-Closure: use 45-degree changes or arcs in the revised routes, then inspect transitions and branch geometry at useful magnification. Keep loop area, clearance and return geometry ahead of cosmetic shape. The electron-wall explanation is not the physical reason for this layout preference.
+Closure: retain 45-degree changes or arcs in future routes, then inspect transitions and branch geometry at useful magnification. Keep loop area, clearance and return geometry ahead of cosmetic shape. The electron-wall explanation is not the physical reason for this layout preference.
 
 ### F06 — Current, insulation and return rules are incomplete
 
@@ -133,7 +135,7 @@ Closure: resolve circuit/model limits, rerun affected simulations after implemen
 | Tubes visible through rear slots if practical | Optional; no proven sightline or thermal guard arrangement. |
 | EMI/RFI control | **Layout defects F02/F03**; assembled return/shield/coupling/EMC tests open. |
 | Trace widths adequate for current | **NOT VERIFIED**, F06. Generic DRC width does not qualify ampacity. |
-| 45-degree/arc routing, no sharp bends | Three remaining simple candidates; junction review incomplete, F05. |
+| 45-degree/arc routing, no sharp bends | Simple-bend screen clear after bounded repair; junction review incomplete, F05. |
 | Simulations, exact BOM, schematic and build plan support release | Artifacts exist as drafts; consistency, selected-model and physical release gates open. |
 | Log decisions in ICM | This audit, evidence, feedback FB-076 and next work saved; catalogs/checks updated at checkpoint. |
 

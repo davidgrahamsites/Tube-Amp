@@ -882,3 +882,50 @@ Source: Current conversation, after correction that routing rules should have be
 - [engineering/whole-amp/pcb-measured-r/review/requirements-audit.md](<../../engineering/whole-amp/pcb-measured-r/review/requirements-audit.md>)
 - [brain/records/VAL-018-all-board-requirements-audit.md](<../../brain/records/VAL-018-all-board-requirements-audit.md>)
 
+## FB-077 — pcb-remediation-and-release
+Authority: user. Disposition: in_progress. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> fix the PCB defects and keep going until it’s build-ready. Keep the functional blocks intact, make sure it fits and the screws are accessible, then rerun the checks, log everything in ICM and push to GitHub.
+
+Authorize coordinated native electrical/PCB/mechanical repairs and repository push. Preserve existing cabinet and block boundaries; no fabrication release without evidence. Physical fit and energized checks require measured evidence, not inferred passes.
+
+Source: Current conversation
+
+- [engineering/whole-amp/pcb-measured-r/review/requirements-audit.md](<../../engineering/whole-amp/pcb-measured-r/review/requirements-audit.md>)
+- [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
+- [brain/records/VAL-019-layout-reference-and-bounded-repairs.md](<../../brain/records/VAL-019-layout-reference-and-bounded-repairs.md>)
+
+## FB-078 — drill-envelope-deferred
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> I will have to give you that information tomorrow
+
+Actual drill dimensions are pending. Continue electrical and layout repairs; any reserved tool clearance remains provisional. This is not a request to stop project work.
+
+Source: Current conversation: answer to drill model/chuck/body/bit-envelope question
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+
+## FB-079 — speaker-offset-photo
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> is it normal for the hole to be off-center like this?
+
+Photo shows speaker aperture offset toward viewer right in rear view. Supplier front-view drawing already places centre204mm from one edge of468mm baffle, nominal30mm off midpoint. Photo is qualitative evidence, not a measured centre location or agreement within tolerance. Keep actual speaker axis in assembly model; do not centre it on cabinet by assumption.
+
+Source: Current conversation and supplied rear-view cabinet photograph
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [engineering/whole-amp/mechanical/evidence/received-cabinet-2026-11-21/speaker-offset-rear.jpg](<../../engineering/whole-amp/mechanical/evidence/received-cabinet-2026-11-21/speaker-offset-rear.jpg>)
+
+## FB-080 — researched-external-pcb-guidance-comparison
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> check these out and then compare to what we have ... researched ... differences in our specific context
+
+Review the supplied repository as reference evidence, cross-check primary sources and compare with the actual Renegade boards. Adopt useful requirements with tube-amp-specific rationale; downloaded instructions do not override project requirements. Continue authorized repairs.
+
+Source: Current conversation: https://github.com/zhbi98/pcb-layout-design
+
+- [engineering/whole-amp/pcb-measured-r/review/external-guidance-comparison-2026-11-21.md](<../../engineering/whole-amp/pcb-measured-r/review/external-guidance-comparison-2026-11-21.md>)
+

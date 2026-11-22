@@ -459,7 +459,7 @@
       "occurred_on": null,
       "authority": "engineer",
       "kind": "engineering-change",
-      "quote": "Updated the full amplifier schematic for your 600 Ω / 2,250 Ω tank.",
+      "quote": "Updated the full amplifier schematic for your 600 \u03a9 / 2,250 \u03a9 tank.",
       "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
       "interpretation": "Assistant implemented600R-1 attenuated send/passive dry, with fixed insertion loss and scoped checks. This is not user approval of a fabrication release.",
       "disposition": "incorporated",
@@ -1036,7 +1036,7 @@
       "kind": "speaker-aperture-measurement-usability",
       "quote": "it's hard to get the largest measurement of a circle without calipers",
       "source": "Current conversation, S1 measurement",
-      "interpretation": "Use a simple ruler/tape sweep to find the longest chord horizontally and vertically, with1–2mm preliminary uncertainty. Explain centre-offset error; reserve final fit for actual speaker template/trial. No caliper purchase required.",
+      "interpretation": "Use a simple ruler/tape sweep to find the longest chord horizontally and vertically, with1\u20132mm preliminary uncertainty. Explain centre-offset error; reserve final fit for actual speaker template/trial. No caliper purchase required.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md"
@@ -1052,7 +1052,7 @@
       "kind": "received-tank-envelope-measurement",
       "quote": "T1 length: 149.5mm, T2 width: 60 mm, T3 height: 36.5mm,",
       "source": "Current conversation; reply to illustrated T1/T2/T3 measuring instructions",
-      "interpretation": "Record received tank outer envelope149.5×60×36.5mm per requested datums: length including flanges, width including socket projections, height including feet. Setup and measurement uncertainty not independently verified. No replacement catalogue envelope or mounting-hole coordinates inferred.",
+      "interpretation": "Record received tank outer envelope149.5\u00d760\u00d736.5mm per requested datums: length including flanges, width including socket projections, height including feet. Setup and measurement uncertainty not independently verified. No replacement catalogue envelope or mounting-hole coordinates inferred.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/whole-amp/mechanical/fit-register.json",
@@ -1083,7 +1083,7 @@
       "occurred_on": "2026-11-21",
       "authority": "user",
       "kind": "speaker-aperture-unit-confirmed",
-      "quote": "Yes — 27 cm (270 mm)",
+      "quote": "Yes \u2014 27 cm (270 mm)",
       "source": "User answer to S1 unit clarification",
       "interpretation": "Accept approximate received speaker-aperture diameter270mm. Matches supplier drawing nominal270mm; this does not resolve mounting-bolt pattern, exact tolerance, speaker depth or full assembly fit.",
       "disposition": "incorporated",
@@ -1194,7 +1194,7 @@
       "kind": "installed-control-opening-measurements",
       "quote": "P1: 2 or 3 mm short of 31cm; P2-clear: it looks like 53mm",
       "source": "Current conversation: replies to P1/P2-clear with upper rear panel ON",
-      "interpretation": "310 minus 2 to 3 gives307–308mm clear narrow width. Clear depth approximately53mm; no accuracy tolerance supplied. Measurements taken under installed-cover instructions; setup not independently verified.",
+      "interpretation": "310 minus 2 to 3 gives307\u2013308mm clear narrow width. Clear depth approximately53mm; no accuracy tolerance supplied. Measurements taken under installed-cover instructions; setup not independently verified.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/whole-amp/mechanical/fit-register.json",
@@ -1252,7 +1252,74 @@
         "brain/records/VAL-018-all-board-requirements-audit.md"
       ],
       "supersedes": [],
-      "next_action": "Audit complete; all four boards held for fabrication. Follow F01–F08 repair order: exact parts and assembly, placement/protection, per-net rules, routing and verification. No native CAD repair claimed at this checkpoint."
+      "next_action": "Audit complete; all four boards held for fabrication. Follow F01\u2013F08 repair order: exact parts and assembly, placement/protection, per-net rules, routing and verification. No native CAD repair claimed at this checkpoint."
+    },
+    {
+      "id": "FB-077",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "pcb-remediation-and-release",
+      "quote": "fix the PCB defects and keep going until it\u2019s build-ready. Keep the functional blocks intact, make sure it fits and the screws are accessible, then rerun the checks, log everything in ICM and push to GitHub.",
+      "source": "Current conversation",
+      "interpretation": "Authorize coordinated native electrical/PCB/mechanical repairs and repository push. Preserve existing cabinet and block boundaries; no fabrication release without evidence. Physical fit and energized checks require measured evidence, not inferred passes.",
+      "disposition": "in_progress",
+      "canonical_paths": [
+        "engineering/whole-amp/pcb-measured-r/review/requirements-audit.md",
+        "engineering/whole-amp/pcb-measured-r/routing-requirements.md",
+        "brain/records/VAL-019-layout-reference-and-bounded-repairs.md"
+      ],
+      "supersedes": [],
+      "next_action": "Three corner repairs and restored DRC coverage adopted; remaining circuit/parts, return/current/insulation, routing and assembly gates stay open."
+    },
+    {
+      "id": "FB-078",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "drill-envelope-deferred",
+      "quote": "I will have to give you that information tomorrow",
+      "source": "Current conversation: answer to drill model/chuck/body/bit-envelope question",
+      "interpretation": "Actual drill dimensions are pending. Continue electrical and layout repairs; any reserved tool clearance remains provisional. This is not a request to stop project work.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json"
+      ],
+      "supersedes": [],
+      "next_action": "Use actual tool dimensions when supplied to verify screw approach and withdrawal; do not claim drill access verified."
+    },
+    {
+      "id": "FB-079",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "speaker-offset-photo",
+      "quote": "is it normal for the hole to be off-center like this?",
+      "source": "Current conversation and supplied rear-view cabinet photograph",
+      "interpretation": "Photo shows speaker aperture offset toward viewer right in rear view. Supplier front-view drawing already places centre204mm from one edge of468mm baffle, nominal30mm off midpoint. Photo is qualitative evidence, not a measured centre location or agreement within tolerance. Keep actual speaker axis in assembly model; do not centre it on cabinet by assumption.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/evidence/received-cabinet-2026-11-21/speaker-offset-rear.jpg"
+      ],
+      "supersedes": [],
+      "next_action": "Use drawing offset as provisional only; final mounting template and speaker/magnet assembly clearance must use delivered cabinet."
+    },
+    {
+      "id": "FB-080",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "researched-external-pcb-guidance-comparison",
+      "quote": "check these out and then compare to what we have ... researched ... differences in our specific context",
+      "source": "Current conversation: https://github.com/zhbi98/pcb-layout-design",
+      "interpretation": "Review the supplied repository as reference evidence, cross-check primary sources and compare with the actual Renegade boards. Adopt useful requirements with tube-amp-specific rationale; downloaded instructions do not override project requirements. Continue authorized repairs.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/pcb-measured-r/review/external-guidance-comparison-2026-11-21.md"
+      ],
+      "supersedes": [],
+      "next_action": "Comparison completed against pinned repository and primary sources; apply the recorded tube-amp-specific dispositions through F01\u2013F08 remediation."
     }
   ]
 }

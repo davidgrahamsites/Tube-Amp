@@ -44,3 +44,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-016 | validation | cross-domain | verified | 2026-11-21 | [Service, panel and selected-package checkpoint](records/VAL-016-service-panel-package-checkpoint.md) |
 | VAL-017 | validation | cross-domain | verified | 2026-11-21 | [Copper geometry and component review](records/VAL-017-copper-and-component-review.md) |
 | VAL-018 | validation | cross-domain | documented | 2026-11-21 | [All-board requirements audit](records/VAL-018-all-board-requirements-audit.md) |
+| VAL-019 | validation | cross-domain | documented | 2026-11-21 | [Researched layout comparison and bounded repairs](records/VAL-019-layout-reference-and-bounded-repairs.md) |

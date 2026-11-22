@@ -1,0 +1,127 @@
+{
+  "operation": "bounded layout repair candidates",
+  "adopted": true,
+  "boards": {
+    "Main": {
+      "source_sha256": "531ad0e55a110d20ebf834fb9f1a0975a2d99ff7a1d20c4688d4411b50742ff1",
+      "candidate_sha256": "baf16ec240e19c16b2b545a8bc78375e55ba3348d51e2ab014543ad07b714a51",
+      "changes": [
+        {
+          "kind": "bevel",
+          "net": "PI_K",
+          "corner_mm": [
+            229.6798,
+            118.0002
+          ],
+          "trim_mm": 0.2,
+          "width_mm": 0.6
+        }
+      ],
+      "restored_checks": [
+        "footprint_filters_mismatch",
+        "footprint_type_mismatch",
+        "missing_courtyard",
+        "track_not_centered_on_via",
+        "tuning_profile_track_geometries"
+      ],
+      "verification": {
+        "footprints_pads_positions_unchanged": true,
+        "outline_unchanged": true,
+        "custom_rules_unchanged": true,
+        "simple_bend_findings": 0,
+        "unconnected_items": 105,
+        "missing_courtyards": 43,
+        "detail_visual_review": "Three modified corners reviewed from native SVG at 4 mm field; no local short or gap apparent. Branches and all-width-transition review remain open."
+      },
+      "source_project_sha256": "771df7c0718e8c150b0a6a077a6b6508a98c9b7b0e2878c01fd5190ab036dea4",
+      "adopted_project_sha256": "80acab9a0075b920668e77b655089abd65ac4aff83e74068bc52b69bade7d6d5"
+    },
+    "Power": {
+      "source_sha256": "ae077516a2cef4b2a3903e653b31cc34df9e2089cd231ce330d2f844503a9723",
+      "candidate_sha256": "95d326c677cafc0bb6c6e2896320e32cb2eb4b116ae5e6ea8058efdcc735c810",
+      "changes": [
+        {
+          "kind": "bevel",
+          "net": "B_EARLY",
+          "corner_mm": [
+            113.62,
+            87.9998
+          ],
+          "trim_mm": 0.2,
+          "width_mm": 0.6
+        }
+      ],
+      "restored_checks": [
+        "footprint_filters_mismatch",
+        "footprint_type_mismatch",
+        "missing_courtyard",
+        "track_not_centered_on_via",
+        "tuning_profile_track_geometries"
+      ],
+      "verification": {
+        "footprints_pads_positions_unchanged": true,
+        "outline_unchanged": true,
+        "custom_rules_unchanged": true,
+        "simple_bend_findings": 0,
+        "unconnected_items": 39,
+        "missing_courtyards": 12,
+        "detail_visual_review": "Three modified corners reviewed from native SVG at 4 mm field; no local short or gap apparent. Branches and all-width-transition review remain open."
+      },
+      "source_project_sha256": "9ac405ac8be5d20192f57ae14fe1c8abfcb72601fe930b0ff7177f8d6a273ab6",
+      "adopted_project_sha256": "3842e06a225401c8500cef2af51a11256af7044f8419c80182686e2a197854fb"
+    },
+    "Control": {
+      "source_sha256": "461c76eb58d6150802ed31e22b59a9a95befb9c7d6662e90f7e47b433cb92951",
+      "candidate_sha256": "57b6fca66783e43059bd2070076fd4ef319179d17e7e38c6e768850e4c7ff15c",
+      "changes": [
+        {
+          "kind": "bevel",
+          "net": "RESET_CT",
+          "corner_mm": [
+            34.8252,
+            44.375
+          ],
+          "trim_mm": 0.2,
+          "width_mm": 0.4
+        }
+      ],
+      "restored_checks": [
+        "footprint_filters_mismatch",
+        "footprint_type_mismatch",
+        "missing_courtyard",
+        "track_not_centered_on_via",
+        "tuning_profile_track_geometries"
+      ],
+      "verification": {
+        "footprints_pads_positions_unchanged": true,
+        "outline_unchanged": true,
+        "custom_rules_unchanged": true,
+        "simple_bend_findings": 0,
+        "unconnected_items": 99,
+        "missing_courtyards": 13,
+        "detail_visual_review": "Three modified corners reviewed from native SVG at 4 mm field; no local short or gap apparent. Branches and all-width-transition review remain open."
+      },
+      "source_project_sha256": "9e1b18cb03233b24b2be789aaae2788c46aebe9e2cd0edcf9484892542724926",
+      "adopted_project_sha256": "f85e8bb33742069a972fa925d8d3a921bb7440e6179da50acef17f3de622e8ba"
+    },
+    "Reverb": {
+      "source_sha256": "d504b26a4a76971c1e9ba0939e9bce23933df0f0b174de679f211cfd2432be03",
+      "candidate_sha256": "d504b26a4a76971c1e9ba0939e9bce23933df0f0b174de679f211cfd2432be03",
+      "changes": [],
+      "restored_checks": [],
+      "verification": {
+        "footprints_pads_positions_unchanged": true,
+        "outline_unchanged": true,
+        "custom_rules_unchanged": true,
+        "simple_bend_findings": 0,
+        "unconnected_items": 0,
+        "missing_courtyards": 0,
+        "detail_visual_review": "unchanged board"
+      }
+    }
+  },
+  "fabrication_ready": false,
+  "date": "2026-11-21",
+  "scope": "Three local corner bevels; restore five ignored check types to warnings on Main, Power and Control. No component, net, footprint, outline or custom clearance-rule changes. Reverb unchanged.",
+  "serialization_note": "KiCad serialized existing default text thickness (0.15 mm) on some footprint text; pad geometry and footprint placement preserved."
+}

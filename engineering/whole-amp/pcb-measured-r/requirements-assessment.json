@@ -1,7 +1,7 @@
 {
   "owner": "PCB integration; discipline owners in group entries",
   "scope": "All four active electric-build PCBs, not historical snapshots or the future acoustic design",
-  "basis_revision": "8382b4c; native hashes in review/requirements-run.json",
+  "basis_revision": "75c7032 plus bounded repairs; native hashes in review/requirements-run.json",
   "groups": [
     {
       "check_id": "IMP-01",
@@ -222,7 +222,7 @@
       "responsible_owner": "PCB and physical designers",
       "check_method": "Native inventory/strict DRC/copper geometry/render review plus existing evidence review; see report for bounds.",
       "acceptance_limit": "Actual stage impedance, edge rates, magnetics and component/layout requirements",
-      "assessment": "F02: Control local bypass placement fails proximity intent; Reverb bypass and feedback paths need re-placement and loop review. Off-board grid, transformer and cable coupling remain unverified."
+      "assessment": "F02: Control local bypass placement fails proximity intent; Reverb bypass and feedback paths need re-placement and loop review. Off-board grid, transformer and cable coupling remain unverified. Selected C353 film dielectric also differs from TPS3808 ceramic-bypass guidance; exact U3 and replacement remain open."
     },
     {
       "check_id": "IMP-14",
@@ -273,7 +273,7 @@
       "responsible_owner": "PCB reviewer",
       "check_method": "Native inventory/strict DRC/copper geometry/render review plus existing evidence review; see report for bounds.",
       "acceptance_limit": "Actual chosen vendor stack/capability plus stricter derived electrical constraints",
-      "assessment": "F01/F04/F05/F06: 243 unconnected items, 68 missing wire-pad courtyards exposed by strict DRC, three remaining simple bend candidates, no qualified current-specific widths or fabrication stackup. Native paired schematic parity unavailable."
+      "assessment": "F01/F04/F06: 243 unconnected items, 68 missing wire-pad courtyards now visible in normal DRC, no qualified current-specific widths or fabrication stackup. Three simple bends repaired; all four simple-bend screens clear, but branch/transition review remains open. Native paired schematic parity unavailable."
     },
     {
       "check_id": "IMP-17",
