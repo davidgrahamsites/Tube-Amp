@@ -746,3 +746,14 @@ Source: Current conversation; reply to illustrated T1/T2/T3 measuring instructio
 - [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
 - [engineering/whole-amp/mechanical/review/tank-specifications.md](<../../engineering/whole-amp/mechanical/review/tank-specifications.md>)
 
+## FB-066 — speaker-aperture-unit-clarification
+Authority: user. Disposition: pending. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> S1 Appears to by 27mm. Does that match the drawings?
+
+Supplier drawing marks speaker cutout diameter270mm (27cm). User typed27mm; likely unit ambiguity but no conversion or accepted measured diameter until user confirms. Clarification requested.
+
+Source: Current conversation, S1 measurement
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+

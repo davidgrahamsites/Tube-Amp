@@ -1,5 +1,7 @@
 # Project status
 
+S1 intake November21: user typed27mm; drawing cutout is270mm (27cm). Unit confirmation requested; no received speaker-aperture diameter accepted yet.
+
 Tank measurement November21: received-unit outer envelope now user-reported **149.5×60×36.5mm (T1/T2/T3)**, recorded with datums in the [mechanical register](engineering/whole-amp/mechanical/fit-register.json). Use this envelope for packaging; installed RCA plugs/cables, mounting-hole positions and complete assembly fit remain open.
 
 November21 continuation: [118-case electric headroom review](engineering/whole-amp/electric-input-headroom/results/review.md) completed; keep original input without buffer. At nominal278V supply/1kHz, clean first-plateTHD is3.911% at1Vsource peak and15.358% at2V. Generic preamp fixture only; not a real-guitar clean-power specification or a fix for the unresolved full-amp transformer ringing.
