@@ -795,3 +795,16 @@ Source: Current conversation: received cabinet photos and circled rear-slot clar
 - [brain/records/DEC-011-pot-panel-proposal.md](<../../brain/records/DEC-011-pot-panel-proposal.md>)
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 
+## FB-070 — removable-rear-cover-mounting-prohibition
+Authority: user. Disposition: incorporated. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> it should not flange mount to the back piece, becasue that comes in and out with screws and that would make it impossible to assesmble and dissasemble
+
+No chassis or control-panel mounting to the removable rear wooden cover, including shared or secondary supports. Fixed cabinet structure must carry the assembly. Keep cover screws accessible and its removal path clear without releasing chassis/control-panel mounts.
+
+Source: Current conversation: correction to panel mounting proposal
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [brain/records/DEC-011-pot-panel-proposal.md](<../../brain/records/DEC-011-pot-panel-proposal.md>)
+
