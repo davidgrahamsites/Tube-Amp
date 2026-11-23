@@ -1,3 +1,6 @@
 # tools
 Owner: electric integration.
-Inputs: circuit contract and retained models. Process: fixture.py builds decks; run.py executes cases using ../../tools/spice_runtime.py. Outputs: ../results. Human check: inspect each explicit substitute and source-part inventory before interpreting results.
+Inputs: source circuit contract or RENEGADE_LOOP_INPUT snapshot, retained tube and TI OPAx134 models.
+Process: fixture.py owns source-derived deck generation; run.py owns bounded AC/transient execution through ../../tools/spice_runtime.py; send_isolation.py screens integrated ideal-branch loading; solver_review.py diagnoses model convergence and compares its optional domain guard; send_driver.py screens the standalone manufacturer SEND model; audit.py checks retained evidence consistency.
+Outputs: ../results. Public interfaces: fixture.deck/fingerprint, run.bounded_case/stats and documented command-line factories. No native CAD mutation.
+Human check: inspect substitutes, failed/timeout cases and voltage scales before interpreting the aggregate audit. A completed solver case is not a hardware pass.

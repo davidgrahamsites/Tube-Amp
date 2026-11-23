@@ -96,17 +96,18 @@ def main():
     (OUT/'summary.json').write_text(json.dumps(data,indent=2,allow_nan=False)+'\n')
     print('Saved',len(ac),'AC and',len(trans)+len(refine),'transient cases',flush=True)
 
-def bounded_case(name, config):
+def bounded_case(name, config, time_limit_s=30):
     start=time.monotonic()
     command=[sys.executable,str(Path(__file__).resolve()),'--worker',name,json.dumps(config)]
     try:
-        result=subprocess.run(command,capture_output=True,text=True,timeout=30)
+        result=subprocess.run(command,capture_output=True,text=True,timeout=time_limit_s)
         if result.returncode:
             row={'status':'failed','config':config,'error':result.stderr[-3000:]}
         else:
             row=json.loads((OUT/(name+'.json')).read_text())
     except subprocess.TimeoutExpired:
-        row={'status':'timeout','config':config,'error':'30 second wall-time limit; worker terminated; no completed nonlinear result.'}
+        row={'status':'timeout','config':config,'error':f'{time_limit_s} second wall-time limit; worker terminated; no completed nonlinear result.'}
+    row['wall_time_limit_s']=time_limit_s
     row['elapsed_s']=time.monotonic()-start
     (OUT/(name+'.json')).write_text(json.dumps(row,indent=2)+'\n')
     print(name,row.get('status'),flush=True)

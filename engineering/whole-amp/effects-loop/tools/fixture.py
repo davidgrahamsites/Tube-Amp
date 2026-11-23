@@ -23,10 +23,19 @@ def fingerprint():
     return {str(p.relative_to(WHOLE.parent.parent)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [CONTRACT,*MODELS]}
 
 def deck(channel='clean', mode='native', stimulus='dry', freq=1000, amp=.01,
-         supply=278, volume=.25, tone=.5, gain=.5, source_ohm=1000, burst=False, feedback_phase=1):
+         supply=278, volume=.25, tone=.5, gain=.5, source_ohm=1000, burst=False, feedback_phase=1,
+         guard_pentode_power=False):
     # Electrical pot fractions; not front-panel rotation or audio taper.
     lines=['Renegade existing loop integrated ideal-transformer reference']
     lines += [f'.include "{p}"' for p in MODELS]
+    if guard_pentode_power:
+        # Bgs defines a nonnegative node. Newton trial values can nevertheless
+        # leave that domain. Guard the subsequent fractional power, retaining
+        # the original file, copyright and all physical model coefficients.
+        model = '\n'.join(line.rstrip() for line in MODELS[1].read_text().replace('\x1a', '').splitlines())
+        assert model.count('V=V(gs)^1.5') == 1
+        model = model.replace('V=V(gs)^1.5', 'V=URAMP(V(gs))^1.5')
+        lines[2] = '* Local numerical domain guard at Bgs2; see solver-review.md\n' + model
     waveform=f'SIN(0 {amp} {freq})'
     if burst:
         waveform='DC 0'  # Gate boundaries must align with sine zero crossings.

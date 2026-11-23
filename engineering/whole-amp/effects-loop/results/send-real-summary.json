@@ -1,0 +1,169 @@
+{
+  "model_path": "engineering/solid-state-reverb/simulation/models/OPAx134.LIB",
+  "model_sha256": "8ff414c678a7f8330b87504d7e0553de20ca87bdc713cecf81ab3448b4d7608f",
+  "ac": [
+    {
+      "load_ohm": 10000,
+      "cable_F": 1e-15,
+      "output_offset_V": 0.0004945541306608016,
+      "gain_normalized_1k": 0.9901029392712869,
+      "max_normalized_gain": 0.9901079374660178,
+      "gain_20k_relative_1k_dB": -0.01573020910310092
+    },
+    {
+      "load_ohm": 10000,
+      "cable_F": 2e-09,
+      "output_offset_V": 0.0004945541306608016,
+      "gain_normalized_1k": 0.9901022283044015,
+      "max_normalized_gain": 0.9901079372170858,
+      "gain_20k_relative_1k_dB": -0.01799151649405625
+    },
+    {
+      "load_ohm": 10000,
+      "cable_F": 1e-08,
+      "output_offset_V": 0.0004945541306608016,
+      "gain_normalized_1k": 0.9900834672852261,
+      "max_normalized_gain": 0.9901079300904916,
+      "gain_20k_relative_1k_dB": -0.07724716301278708
+    },
+    {
+      "load_ohm": 100000,
+      "cable_F": 1e-15,
+      "output_offset_V": 0.0004990006762902264,
+      "gain_normalized_1k": 0.9990049918239884,
+      "max_normalized_gain": 0.9990100291620344,
+      "gain_20k_relative_1k_dB": -0.01573301907964806
+    },
+    {
+      "load_ohm": 100000,
+      "cable_F": 2e-09,
+      "output_offset_V": 0.0004990006762902264,
+      "gain_normalized_1k": 0.9990042615071901,
+      "max_normalized_gain": 0.9990100289063267,
+      "gain_20k_relative_1k_dB": -0.01803515989352467
+    },
+    {
+      "load_ohm": 100000,
+      "cable_F": 1e-08,
+      "output_offset_V": 0.0004990006762902264,
+      "gain_normalized_1k": 0.9989849898920954,
+      "max_normalized_gain": 0.9990100215857732,
+      "gain_20k_relative_1k_dB": -0.07835309100861089
+    }
+  ],
+  "transient": [
+    {
+      "source_peak_V": 100,
+      "shorted": false,
+      "status": "completed",
+      "op": {
+        "v(BUF)": 0.000499499672016865,
+        "v(PORT)": 0.0004945541306608016,
+        "vp#branch": -0.004000064548916342,
+        "vn#branch": 0.004000015090500997
+      },
+      "end_s": 0.03,
+      "buffer": {
+        "min_V": -0.9994944064442698,
+        "max_V": 1.0004934062228916,
+        "mean_V": 0.0004994998767585135,
+        "fundamental_Vpk": 1.0000003484415547,
+        "THD_2_to_10_percent": 1.3759748408839221e-06
+      },
+      "port": {
+        "min_V": -0.9895928760938164,
+        "max_V": 0.9905819847854312,
+        "mean_V": 0.0004945543333791158,
+        "fundamental_Vpk": 0.9900985883437337,
+        "THD_2_to_10_percent": 1.3759746975828032e-06
+      },
+      "peak_series_current_A": 9.983790477174903e-05,
+      "series_resistor_mean_W": 4.978997213020407e-07
+    },
+    {
+      "source_peak_V": 100,
+      "shorted": true,
+      "status": "completed",
+      "op": {
+        "v(BUF)": 0.0004994991160124362,
+        "v(PORT)": 4.994491710953217e-08,
+        "vp#branch": -0.004005009585213251,
+        "vn#branch": 0.004000015090500997
+      },
+      "end_s": 0.03,
+      "buffer": {
+        "min_V": -0.9994934576938841,
+        "max_V": 1.000492463131874,
+        "mean_V": 0.0004995025153320176,
+        "fundamental_Vpk": 0.9999971267453202,
+        "THD_2_to_10_percent": 8.29361646935664e-07
+      },
+      "port": {
+        "min_V": -9.993935179243708e-05,
+        "max_V": 0.00010003924234718058,
+        "mean_V": 4.994525700750197e-08,
+        "fundamental_Vpk": 9.998971370315913e-05,
+        "THD_2_to_10_percent": 8.293616478321722e-07
+      },
+      "peak_series_current_A": 0.010003964260652276,
+      "series_resistor_mean_W": 0.004999034349086734
+    },
+    {
+      "source_peak_V": 200,
+      "shorted": false,
+      "status": "completed",
+      "op": {
+        "v(BUF)": 0.000499499672016865,
+        "v(PORT)": 0.0004945541306608016,
+        "vp#branch": -0.004000064548916342,
+        "vn#branch": 0.004000015090500997
+      },
+      "end_s": 0.03,
+      "buffer": {
+        "min_V": -1.9994878434372545,
+        "max_V": 2.0004868436596737,
+        "mean_V": 0.0004995000861216292,
+        "fundamental_Vpk": 2.000000695033023,
+        "THD_2_to_10_percent": 1.1978185346314534e-06
+      },
+      "port": {
+        "min_V": -1.9796798418407193,
+        "max_V": 1.9806689509717452,
+        "mean_V": 0.0004945545406731311,
+        "fundamental_Vpk": 1.9801971748557,
+        "THD_2_to_10_percent": 1.1978186647747473e-06
+      },
+      "peak_series_current_A": 0.0001996265085159754,
+      "series_resistor_mean_W": 1.9916022705373836e-06
+    },
+    {
+      "source_peak_V": 200,
+      "shorted": true,
+      "status": "completed",
+      "op": {
+        "v(BUF)": 0.0004994991160124362,
+        "v(PORT)": 4.994491710953217e-08,
+        "vp#branch": -0.004005009585213251,
+        "vn#branch": 0.004000015090500997
+      },
+      "end_s": 0.03,
+      "buffer": {
+        "min_V": -1.9994825026337715,
+        "max_V": 2.0004815152868387,
+        "mean_V": 0.0004995059192746565,
+        "fundamental_Vpk": 1.9999942542099265,
+        "THD_2_to_10_percent": 9.30460161625194e-07
+      },
+      "port": {
+        "min_V": -0.00019992825735409774,
+        "max_V": 0.00020002814863027683,
+        "mean_V": 4.99455973677337e-08,
+        "fundamental_Vpk": 0.0001999794274782397,
+        "THD_2_to_10_percent": 9.304601606848596e-07
+      },
+      "peak_series_current_A": 0.020002976810882325,
+      "series_resistor_mean_W": 0.019996289719002035
+    }
+  ],
+  "scope": "Standalone nominal +/-15 V typical manufacturer macro-model. 9.9M/100k provisional pad. 10k/100k loads and up to 10nF cable. No integrated amplifier, supply sequencing, fault protection, component tolerance, noise or physical validation. No return-stage approval."
+}

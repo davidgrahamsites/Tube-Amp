@@ -1,5 +1,7 @@
 # Effects-loop execution checkpoint — 23 November 2026
 
+Latest follow-up: [tube-model correction and real SEND screen](solver-review.md). Ten of twelve heavy cases complete; two remain time-limited.
+
 **Status: model screening only. No circuit, PCB or fabrication release.** Owner: electric-build integration. User authorization: FB-101. This executes the first stage of the [reviewed plan](../../../plans/effects-loop-optical-review/final.md).
 
 ## Findings and disposition
@@ -12,7 +14,7 @@
 | Original return input impedance | About 488 kΩ near 1 kHz, 340 kΩ at 20 kHz in this fixture. | Does not meet the proposed 1 MΩ midband target. Revisit recovery and mix together. |
 | Feedback sign in ideal transformer fixture | Corrected sign reduces closed-loop small-signal gain; earlier sign gave positive feedback. | Correct the test fixture only. Verify actual transformer phase on hardware; no lead-colour conclusion. |
 | Numerical sensitivity | Four bounded transient cases and two timestep refinements completed. Checked amplitudes changed at most 0.046%; THD changed at most 0.0075 percentage points. | Accept these scoped model results only. |
-| Heavy-overdrive coverage | Clean, B_EARLY 240 V, 1 kHz, 1 V peak source fails before the retained window. | No maximum signal, clipping recovery or worst-case headroom qualification. |
+| Heavy-overdrive coverage | Original-model failure reproduced; guarded fractional-power expression completes ten of twelve heavy cases. Two dirty/5 kHz cases time out. | See solver-review.md; no full-envelope qualification. |
 
 The separate SEND branch provides **load decoupling, not galvanic isolation**. The ideal follower can supply unlimited current; its short-circuit test proves only the intended connectivity. A physical part still needs current limiting, clamp/fault analysis, capacitive-load stability and noise checks. A 100:1 pad is a trial ratio, not the final pedal level.
 
@@ -59,7 +61,7 @@ The recorded failure can be reproduced with `bounded_case('overdrive-coverage', 
 
 ## Next engineering work
 
-1. Resolve heavy-overdrive numerical behaviour using stage-by-stage comparison and a less ideal output transformer model. Verify feedback sign and DC operating points at each step; do not loosen tolerances until results appear plausible.
+1. Complete the remaining dirty/5 kHz cases and assess a less ideal output transformer model. The first failure has been localized and guarded as described in solver-review.md. Verify feedback sign and DC operating points at each step; do not loosen tolerances until results appear plausible.
 2. Establish the required return voltage and overload-recovery envelope across supply, controls, pickup level and pedal outputs.
 3. Compare a high-voltage recovery stage against a compensated passive mix interface. Preserve dry, wet and spring-send transfers. Bias, clamp faults, noise and supply sequencing must be included.
 4. Select exact China-source amplifier, protection and connector parts, then draw the readable native schematic and integrate the board interfaces.

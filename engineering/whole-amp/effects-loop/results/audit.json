@@ -8,7 +8,16 @@
     "retained_window_settled_0_1_percent": true,
     "send_branch_within_0_5dB": true,
     "negative_feedback_reduces_gain": true,
-    "large_signal_gap_explicit": true
+    "large_signal_gap_explicit": true,
+    "legacy_failure_and_guard_success_reproduced": true,
+    "nominal_model_guard_agrees_within_0_0001_percent": true,
+    "overdrive_refinement_completed": true,
+    "overdrive_refined_amplitude_within_0_1_percent": true,
+    "overdrive_refined_THD_within_0_02_percentage_points": true,
+    "overdrive_coverage_states_explicit": true,
+    "six_real_send_AC_cases": true,
+    "four_real_send_transients_complete": true,
+    "real_send_AC_flatness_within_0_1dB": true
   },
   "refinement": [
     {
@@ -48,6 +57,23 @@
       "THD_change_percentage_points": 0.007411769746290098
     }
   ],
+  "overdrive_refinement": [
+    {
+      "node": "FX_SEND",
+      "amplitude_change_percent": 0.00011518821055878092,
+      "THD_change_percentage_points": 0.004807698519458725
+    },
+    {
+      "node": "PI_G1",
+      "amplitude_change_percent": 0.0006272179056576732,
+      "THD_change_percentage_points": 0.004806120945445969
+    },
+    {
+      "node": "SPEAKER",
+      "amplitude_change_percent": 0.000526729879268828,
+      "THD_change_percentage_points": 0.0031556347797021544
+    }
+  ],
   "nominal_wet_buffer_changes": [
     {
       "channel": "clean",
@@ -58,10 +84,32 @@
       "change_dB": -6.879446305483514
     }
   ],
+  "guarded_case_statuses": {
+    "guard-nominal-clean-0.01": "completed",
+    "guard-nominal-clean-0.1": "completed",
+    "guard-nominal-dirty-0.001": "completed",
+    "guard-nominal-dirty-0.01": "completed",
+    "guard-heavy-clean-240-82.4": "completed",
+    "guard-heavy-clean-240-1000": "completed",
+    "guard-heavy-clean-240-5000": "completed",
+    "guard-heavy-clean-320-82.4": "completed",
+    "guard-heavy-clean-320-1000": "completed",
+    "guard-heavy-clean-320-5000": "completed",
+    "guard-heavy-dirty-240-82.4": "completed",
+    "guard-heavy-dirty-240-1000": "completed",
+    "guard-heavy-dirty-240-5000": "timeout",
+    "guard-heavy-dirty-320-82.4": "completed",
+    "guard-heavy-dirty-320-1000": "completed",
+    "guard-heavy-dirty-320-5000": "timeout",
+    "guard-heavy-refined": "completed",
+    "guard-heavy-refined-384": "completed"
+  },
   "factory_and_input_hashes": {
-    "engineering/whole-amp/effects-loop/tools/fixture.py": "38e0a64cda8eacfa1b9259163b178e785206cb14f65efdf8a66a873e863ad49b",
-    "engineering/whole-amp/effects-loop/tools/run.py": "4bc0608b64d57b99d7dd1862b51fd7e96b01ef0f8966359739d1913d2077b4d6",
-    "engineering/whole-amp/effects-loop/tools/audit.py": "33ee280a98b80d4038b9624c22ce137df7bb77e57c7de91d3ee29d7e6937b031",
+    "engineering/whole-amp/effects-loop/tools/fixture.py": "10ea514a6a49c35f4c2e3d4766da725b5a0befccb38d2c89d4f7d96d42585cd5",
+    "engineering/whole-amp/effects-loop/tools/run.py": "c46de52f08c9f51878ccd711da127f52836082ea71e57a4a96d7a3b1dc3b5ccd",
+    "engineering/whole-amp/effects-loop/tools/audit.py": "d684e7cdbc54c2c2808ad307a7d87973799a9e1719bedaa8921c22269a0def21",
+    "engineering/whole-amp/effects-loop/tools/send_driver.py": "faad31f4e02a0b034348179e82eb18769b43ba3968f7c434c269a83b866186ee",
+    "engineering/whole-amp/effects-loop/tools/solver_review.py": "940e4e691370575dade72b01521394d19af2829605e47dd368f2ee90bd5ea889",
     "engineering/whole-amp/effects-loop/tools/send_isolation.py": "bfdee995aaa1fb15ed1e2a1313cdb47a3385000679668bced9d31fc9ef1e54d8",
     "engineering/whole-amp/tools/spice_runtime.py": "3df496fbbce173c6f8a602b9a17a731389f011634af809106184418572b9cf9b",
     "engineering/whole-amp/effects-loop/results/source-components.json": "e3d336eebf05515a8e4f74ff83262beaadd20ec18bf507a12cb6e9f5c8837fa9"

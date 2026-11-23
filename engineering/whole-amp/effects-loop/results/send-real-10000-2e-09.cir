@@ -1,0 +1,14 @@
+Padded SEND candidate: TI OPAx134 macro-model, not a released circuit
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+.options method=gear maxord=2 reltol=.001 abstol=1n vntol=10u gmin=1e-10 rshunt=1e12 cshunt=1e-14
+.nodeset v(BUF)=0 v(PORT)=0
+VP VP 0 15
+VN VN 0 -15
+VS PREAMP 0 DC 0 AC 1 SIN(0 100 1000)
+RH PREAMP PAD 9.9meg
+RL PAD 0 100k
+XU PAD BUF VP VN BUF OPAx134
+RO BUF PORT 100
+RLOAD PORT 0 10000
+CCABLE PORT 0 2e-09
+.end
