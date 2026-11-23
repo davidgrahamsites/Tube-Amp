@@ -1,0 +1,1506 @@
+{
+  "components": [
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "V1",
+      "unit": 2,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "1": "CL_P1",
+        "2": "CL_IN",
+        "3": "CL_K1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R4",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_EARLY",
+        "2": "CL_P1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R2",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CL_IN",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R3",
+      "unit": 1,
+      "value": "1.5k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CL_K1",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C1",
+      "unit": 1,
+      "value": "25u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "CL_K1",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "50 V",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R5",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CL_P1",
+        "2": "CL_TONE"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C2",
+      "unit": 1,
+      "value": "250p",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "CL_P1",
+        "2": "CL_TREBLE_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C3",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "CL_TONE",
+        "2": "CL_BASS_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C4",
+      "unit": 1,
+      "value": "47n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "CL_TONE",
+        "2": "CL_BASS_BOTTOM"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "RV1",
+      "unit": 1,
+      "value": "250k LIN TREBLE",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "CL_TREBLE_TOP",
+        "2": "CL_TREBLE_W",
+        "3": "CL_BASS_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "RV2",
+      "unit": 1,
+      "value": "1M LOG BASS",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "CL_BASS_TOP",
+        "2": "CL_BASS_TOP",
+        "3": "CL_BASS_BOTTOM"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R6",
+      "unit": 1,
+      "value": "15k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CL_BASS_BOTTOM",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "RV3",
+      "unit": 1,
+      "value": "1M LOG VOLUME",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "CL_TREBLE_W",
+        "2": "CL_G2",
+        "3": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "V1",
+      "unit": 1,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "6": "CL_P2",
+        "7": "CL_G2",
+        "8": "CL_K2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R7",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_EARLY",
+        "2": "CL_P2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R8",
+      "unit": 1,
+      "value": "1.5k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CL_K2",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C5",
+      "unit": 1,
+      "value": "25u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "CL_K2",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "50 V",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C6",
+      "unit": 1,
+      "value": "47n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "CL_P2",
+        "2": "CLEAN_OUT"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R43",
+      "unit": 1,
+      "value": "10M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CLEAN_OUT",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "V2",
+      "unit": 2,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "1": "DR_P1",
+        "2": "DR_IN",
+        "3": "DR_K1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R12",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_EARLY",
+        "2": "DR_P1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R10",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_IN",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R11",
+      "unit": 1,
+      "value": "2.7k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_K1",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "C7",
+      "unit": 1,
+      "value": "680n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_K1",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "50 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "C8",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_P1",
+        "2": "DR_GAIN_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "RV4",
+      "unit": 1,
+      "value": "1M LOG GAIN",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "DR_GAIN_TOP",
+        "2": "DR_GAIN_W",
+        "3": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R13",
+      "unit": 1,
+      "value": "470k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_GAIN_W",
+        "2": "DR_G2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "C9",
+      "unit": 1,
+      "value": "470p",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_GAIN_W",
+        "2": "DR_G2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R14",
+      "unit": 1,
+      "value": "470k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_G2",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "V2",
+      "unit": 1,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "6": "DR_P2",
+        "7": "DR_G2",
+        "8": "DR_K2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R15",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_EARLY",
+        "2": "DR_P2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R16",
+      "unit": 1,
+      "value": "1.8k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_K2",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "C10",
+      "unit": 1,
+      "value": "1u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "DR_K2",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "50 V",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "C11",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_P2",
+        "2": "DR_C3"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R18",
+      "unit": 1,
+      "value": "470k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_C3",
+        "2": "DR_G3"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R19",
+      "unit": 1,
+      "value": "470k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_G3",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "V3",
+      "unit": 2,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "1": "DR_P3",
+        "2": "DR_G3",
+        "3": "DR_K3"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R21",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_PRE",
+        "2": "DR_P3"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "R20",
+      "unit": 1,
+      "value": "820",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_K3",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02_dirty",
+      "reference": "C14",
+      "unit": 1,
+      "value": "1u",
+      "symbol": "Device_C_Polarized",
+      "pins": {
+        "1": "DR_K3",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "50 V",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "V3",
+      "unit": 1,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "6": "B_PRE",
+        "7": "DR_P3",
+        "8": "DR_CF"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "R22",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_CF",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "2 W minimum; Vk stress pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "R23",
+      "unit": 1,
+      "value": "33k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DR_CF",
+        "2": "DR_TONE"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "C15",
+      "unit": 1,
+      "value": "470p",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_CF",
+        "2": "DR_TREBLE_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "C16",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_TONE",
+        "2": "DR_BASS_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "C17",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "DR_TONE",
+        "2": "DR_BASS_BOTTOM"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "RV5",
+      "unit": 1,
+      "value": "250k LIN TREBLE",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "DR_TREBLE_TOP",
+        "2": "DR_TREBLE_W",
+        "3": "DR_BASS_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "RV6",
+      "unit": 1,
+      "value": "1M LOG BASS",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "DR_BASS_TOP",
+        "2": "DR_BASS_TOP",
+        "3": "DR_BASS_BOTTOM"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "RV7",
+      "unit": 1,
+      "value": "25k LIN MID",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "DR_BASS_BOTTOM",
+        "2": "GND",
+        "3": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "RV8",
+      "unit": 1,
+      "value": "1M LOG MASTER",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "DR_TREBLE_W",
+        "2": "DIRTY_OUT",
+        "3": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "R1",
+      "unit": 1,
+      "value": "68k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "INPUT",
+        "2": "INPUT_STOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R24",
+      "unit": 1,
+      "value": "10M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "MIX_OUT",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C19",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "MIX_OUT",
+        "2": "PI_G1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R25",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "PI_G1",
+        "2": "PI_TAIL_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "V4",
+      "unit": 2,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "1": "PI_P1",
+        "2": "PI_G1",
+        "3": "PI_K"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "V4",
+      "unit": 1,
+      "value": "12AX7 / ECC83S",
+      "symbol": "Valve_ECC83",
+      "pins": {
+        "6": "PI_P2",
+        "7": "PI_G2",
+        "8": "PI_K"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "JJ reference; actual purchased tube/model pending",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R29",
+      "unit": 1,
+      "value": "82k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_PRE",
+        "2": "PI_P1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R30",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_PRE",
+        "2": "PI_P2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C22",
+      "unit": 1,
+      "value": "47p",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "PI_P1",
+        "2": "PI_P2"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R26",
+      "unit": 1,
+      "value": "470",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "PI_K",
+        "2": "PI_TAIL_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R28",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "PI_TAIL_TOP",
+        "2": "NFB_NODE"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R27",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "PI_G2",
+        "2": "PI_TAIL_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C20",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "PI_G2",
+        "2": "NFB_NODE"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R31",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "OT_4",
+        "2": "NFB_NODE"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R32",
+      "unit": 1,
+      "value": "47k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "NFB_NODE",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C21",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "NFB_NODE",
+        "2": "PRES_TOP"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "RV9",
+      "unit": 1,
+      "value": "25k LIN PRESENCE",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "PRES_TOP",
+        "2": "GND",
+        "3": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C23",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "PI_P1",
+        "2": "GRID_A_FEED"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C24",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "PI_P2",
+        "2": "GRID_B_FEED"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R33",
+      "unit": 1,
+      "value": "220k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "GRID_A_FEED",
+        "2": "BIAS_OUT"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2 / changed from 220k",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained; tube-specific grid-return limit review required",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R34",
+      "unit": 1,
+      "value": "220k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "GRID_B_FEED",
+        "2": "BIAS_OUT"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2 / changed from 220k",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained; tube-specific grid-return limit review required",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R36",
+      "unit": 1,
+      "value": "1.5k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "GRID_A_FEED",
+        "2": "EL34_GA"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R37",
+      "unit": 1,
+      "value": "1.5k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "GRID_B_FEED",
+        "2": "EL34_GB"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R41",
+      "unit": 1,
+      "value": "1k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_SCREEN",
+        "2": "EL34_SA"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "5 W; screen current stress pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R42",
+      "unit": 1,
+      "value": "1k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "B_SCREEN",
+        "2": "EL34_SB"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "5 W; screen current stress pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "V5",
+      "unit": 1,
+      "value": "EL34",
+      "symbol": "Valve_EL34",
+      "pins": {
+        "1": "K_A",
+        "3": "OT_PA",
+        "4": "EL34_SA",
+        "5": "EL34_GA",
+        "8": "K_A"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/power_tubes/pdf/el34_e34l.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "V6",
+      "unit": 1,
+      "value": "EL34",
+      "symbol": "Valve_EL34",
+      "pins": {
+        "1": "K_B",
+        "3": "OT_PB",
+        "4": "EL34_SB",
+        "5": "EL34_GB",
+        "8": "K_B"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "https://www.jj-electronic.com/images/stories/product/power_tubes/pdf/el34_e34l.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R110",
+      "unit": 1,
+      "value": "1",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "K_A",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "1 W 1%; cathode test resistor",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R111",
+      "unit": 1,
+      "value": "1",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "K_B",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "1 W 1%; cathode test resistor",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "C601",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "IN_AC"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "630V film",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L18.0mm_W5.0mm_P15.00mm_FKS3_FKP3"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R601",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "IN_AC",
+        "2": "SEND_IN"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R602",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "SEND_IN",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R612",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "MIX_OUT"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R616",
+      "unit": 1,
+      "value": "100",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "OUT_BUF",
+        "2": "OUT_AC"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "C607",
+      "unit": 1,
+      "value": "1u",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "OUT_AC",
+        "2": "WET_AC"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "63V film/C0G",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R617",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_AC",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R618",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_AC",
+        "2": "MIX_OUT"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 id: DEC-014
 type: decision
 domain: schematic
-status: proposed
+status: documented
 updated: 2026-11-23
 ---
 # Effects-loop qualification and optical-control recommendation
@@ -24,3 +24,6 @@ A historical isolated preamp fixture gives approximately11.95Vpeak clean in one 
 
 ## Human check and remaining work
 Read the plan recommendation and compare intended use with the qualified pedal/amp envelope before accepting changed behavior. This review changes no native circuit or PCB. Supplier examples remain unqualified candidates; global indexed USD listings do not prove domestic RMB availability. Full-amp model validity, protection, board consolidation/routing, populated fit and actual drill access remain open. Next action: establish the actual loop/PI baseline and recovery envelope.
+
+## Authorized execution checkpoint — 23 November 2026
+FB-101 authorizes executing the reviewed plan. [Integrated reference and candidate screening](../../engineering/whole-amp/effects-loop/review.md) now records 74 reference AC cases, 108 separate-SEND branch cases, four completed nominal transients and two refinements. A low-output-impedance unity return buffer changes wet contribution by −2.26/−6.88 dB at checked clean/dirty settings and is rejected as a transparent drop-in. The separate SEND branch preserves checked transfers within 0.134 dB in an ideal-follower test; no galvanic isolation or real short-circuit protection is established. Retain relay/MOSFET controls. Corrected ideal-transformer feedback sign is a model correction only. Heavy-overdrive convergence and recovery voltage/mix topology remain unresolved. LND150 is a researched HV candidate, not a BOM release. Next: resolve the large-signal model gap and qualify recovery before native schematic/PCB integration.
