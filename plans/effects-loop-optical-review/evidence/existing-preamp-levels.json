@@ -1,0 +1,59 @@
+{
+  "source": "engineering/whole-amp/electric-input-headroom/results/summary.json",
+  "scope": "Preamp only, original input; ideal fixed supplies and ideal relay selection, no power stage or reverb.",
+  "assumptions": {
+    "source": "20k resistive Thevenin plus470pF cable; not a specific humbucker model",
+    "supplies": "B_EARLY240/278/320V, B_PRE35V higher; sensitivity envelope around historical nominal278V, not supply qualification",
+    "controls": "tone/gain0.5 electrical fraction; clean volume/dirty master0.25. These are not knob rotation percentages.",
+    "output_load": "1M resistive test load, not complete FX/reverb/PI impedance"
+  },
+  "warning": "Extraction of historical preamp fixture, not fresh simulation or integrated loop operating envelope; no power stage or reverb load.",
+  "results": [
+    {
+      "channel": "clean",
+      "nominal_example": {
+        "id": "clean-B278-F1000-A0.1-V0.25-S128-C500",
+        "signal": {
+          "fundamental_Vpk": 11.949943482018776,
+          "THD_2_to_10_percent": 0.2133087775838004,
+          "mean_V": -2.3015139811732865e-06,
+          "min_V": -11.947225604987628,
+          "max_V": 11.950072068014599
+        }
+      },
+      "largest_in_existing_fixture": {
+        "id": "clean-B320-F82.4-A3-V0.25-S128-C60",
+        "signal": {
+          "fundamental_Vpk": 173.75165154837552,
+          "THD_2_to_10_percent": 28.02289535061459,
+          "mean_V": 0.03475410455081303,
+          "min_V": -173.25485212532203,
+          "max_V": 134.20622780819104
+        }
+      }
+    },
+    {
+      "channel": "dirty",
+      "nominal_example": {
+        "id": "dirty-B278-F1000-A0.1-V0.25-S128-C500",
+        "signal": {
+          "fundamental_Vpk": 7.196146457194672,
+          "THD_2_to_10_percent": 63.57930485562928,
+          "mean_V": 0.0020834913229801797,
+          "min_V": -9.475384889949764,
+          "max_V": 11.664560925299476
+        }
+      },
+      "largest_in_existing_fixture": {
+        "id": "dirty-B320-F82.4-A0.5-V0.25-S128-C60",
+        "signal": {
+          "fundamental_Vpk": 23.339010331862767,
+          "THD_2_to_10_percent": 28.79031198749669,
+          "mean_V": -0.0004648111982997527,
+          "min_V": -23.851141480714055,
+          "max_V": 18.94067179358587
+        }
+      }
+    }
+  ]
+}

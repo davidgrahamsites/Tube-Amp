@@ -1,0 +1,523 @@
+{
+  "source": "engineering/whole-amp/reverb-600/circuit.json",
+  "sha256": "52b79a98994940d483516966a57f03cab7bf8332a7a879015afd53e47128ae56",
+  "date": "2026-11-23",
+  "scope": "Interface extraction only; no new simulation or hardware check",
+  "components": [
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "C6",
+      "unit": 1,
+      "value": "47n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "CL_P2",
+        "2": "CLEAN_OUT"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "01_clean",
+      "reference": "R43",
+      "unit": 1,
+      "value": "10M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "CLEAN_OUT",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "02b_dirty_tone",
+      "reference": "RV8",
+      "unit": 1,
+      "value": "1M LOG MASTER",
+      "symbol": "Device_R_Potentiometer",
+      "pins": {
+        "1": "DR_TREBLE_W",
+        "2": "DIRTY_OUT",
+        "3": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 1",
+      "rating": "Off-board; voltage, taper and drawing review pending",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "K1",
+      "unit": 2,
+      "value": "G5V-2-H1 DC12 (candidate)",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "4": "INPUT_STOP",
+        "6": "CL_IN",
+        "8": "DR_IN"
+      },
+      "source": "",
+      "rating": "12 V high-sensitivity coil; 150 mW reference; verify exact suffix",
+      "status": "proposed",
+      "datasheet": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v2.pdf",
+      "footprint": "Renegade_Selected:Omron_G5V_2_H1_PTH1mm",
+      "selected_mpn": "G5V-2-H1 DC12"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "K1",
+      "unit": 3,
+      "value": "G5V-2-H1 DC12 (candidate)",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "13": "GND",
+        "11": "DR_G2",
+        "9": "CL_G2"
+      },
+      "source": "",
+      "rating": "12 V high-sensitivity coil; 150 mW reference; verify exact suffix",
+      "status": "proposed",
+      "datasheet": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v2.pdf",
+      "footprint": "Renegade_Selected:Omron_G5V_2_H1_PTH1mm",
+      "selected_mpn": "G5V-2-H1 DC12"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "K2",
+      "unit": 2,
+      "value": "G5V-2-H1 DC12 (candidate)",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "4": "FX_SEND",
+        "6": "CLEAN_OUT",
+        "8": "DIRTY_OUT"
+      },
+      "source": "",
+      "rating": "12 V high-sensitivity coil; 150 mW reference; verify exact suffix",
+      "status": "proposed",
+      "datasheet": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v2.pdf",
+      "footprint": "Renegade_Selected:Omron_G5V_2_H1_PTH1mm",
+      "selected_mpn": "G5V-2-H1 DC12"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "K2",
+      "unit": 3,
+      "value": "G5V-2-H1 DC12 (candidate)",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "13": "GND",
+        "11": null,
+        "9": null
+      },
+      "source": "",
+      "rating": "12 V high-sensitivity coil; 150 mW reference; verify exact suffix",
+      "status": "proposed",
+      "datasheet": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v2.pdf",
+      "footprint": "Renegade_Selected:Omron_G5V_2_H1_PTH1mm",
+      "selected_mpn": "G5V-2-H1 DC12"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "J3",
+      "unit": 1,
+      "value": "EFFECTS SEND",
+      "symbol": "Connector_Audio_AudioJack2",
+      "pins": {
+        "S": "GND",
+        "T": "FX_SEND"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "J4",
+      "unit": 1,
+      "value": "EFFECTS RETURN / normalled",
+      "symbol": "Connector_Audio_AudioJack2_SwitchT",
+      "pins": {
+        "S": "GND",
+        "T": "FX_RETURN",
+        "TN": "FX_SEND"
+      },
+      "source": "",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "03_routing",
+      "reference": "R100",
+      "unit": 1,
+      "value": "1M DNP",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "GND"
+      },
+      "source": "Revision v0.2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "DNP: remove previous tube-reverb input load",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "R24",
+      "unit": 1,
+      "value": "10M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "MIX_OUT",
+        "2": "GND"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "0.5 W minimum; exact part pending",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "04_output",
+      "reference": "C19",
+      "unit": 1,
+      "value": "22n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "MIX_OUT",
+        "2": "PI_G1"
+      },
+      "source": "OpenValve / AX84 v1.2, 2001-10-17; source slide 2",
+      "rating": "630 V film",
+      "status": "source value retained",
+      "datasheet": "",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "Q1",
+      "unit": 1,
+      "value": "2N7000",
+      "symbol": "Transistor_FET_2N7000",
+      "pins": {
+        "1": "GND",
+        "2": "CH_GATE",
+        "3": "COIL_CH"
+      },
+      "source": "",
+      "rating": "60 V; verify coil drain transient and gate drive",
+      "status": "proposed",
+      "datasheet": "https://www.onsemi.com/pdf/datasheet/2n7000-d.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "D331",
+      "unit": 1,
+      "value": "1N4007 flyback",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "+12V",
+        "2": "COIL_CH"
+      },
+      "source": "",
+      "rating": "Local coil suppression: cathode +12V, anode coil switched return",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Renegade_Selected:Onsemi_1N4007RLG_P10.16",
+      "selected_mpn": "1N4007RLG"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "Q2",
+      "unit": 1,
+      "value": "2N7000",
+      "symbol": "Transistor_FET_2N7000",
+      "pins": {
+        "1": "GND",
+        "2": "REV_GATE",
+        "3": "COIL_REV"
+      },
+      "source": "",
+      "rating": "60 V; verify coil drain transient and gate drive",
+      "status": "proposed",
+      "datasheet": "https://www.onsemi.com/pdf/datasheet/2n7000-d.pdf",
+      "footprint": ""
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "D341",
+      "unit": 1,
+      "value": "1N4007 flyback",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "+12V",
+        "2": "COIL_REV"
+      },
+      "source": "",
+      "rating": "Local coil suppression: cathode +12V, anode coil switched return",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Renegade_Selected:Onsemi_1N4007RLG_P10.16",
+      "selected_mpn": "1N4007RLG"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "C601",
+      "unit": 1,
+      "value": "100n",
+      "symbol": "Device_C",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "IN_AC"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "630V film",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Capacitor_THT:C_Rect_L18.0mm_W5.0mm_P15.00mm_FKS3_FKP3"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R601",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "IN_AC",
+        "2": "SEND_IN"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07a_reverb_send",
+      "reference": "R602",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "SEND_IN",
+        "2": "GND"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R610",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_BUF",
+        "2": "WET_MUTE"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "K3",
+      "unit": 2,
+      "value": "G5V-2-H1 DC12",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "4": "WET_MUTE",
+        "6": "GND",
+        "8": null
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v2.pdf",
+      "footprint": "Renegade_Selected:Omron_G5V_2_H1_PTH1mm",
+      "selected_mpn": "G5V-2-H1 DC12"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07b_reverb_recovery",
+      "reference": "R611",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_MUTE",
+        "2": "SUM"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R612",
+      "unit": 1,
+      "value": "100k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "MIX_OUT"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "K3",
+      "unit": 1,
+      "value": "G5V-2-H1 DC12",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "1": "+12V",
+        "16": "COIL_REV"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v2.pdf",
+      "footprint": "Renegade_Selected:Omron_G5V_2_H1_PTH1mm",
+      "selected_mpn": "G5V-2-H1 DC12"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "K3",
+      "unit": 3,
+      "value": "G5V-2-H1 DC12",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "13": null,
+        "11": null,
+        "9": null
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v2.pdf",
+      "footprint": "Renegade_Selected:Omron_G5V_2_H1_PTH1mm",
+      "selected_mpn": "G5V-2-H1 DC12"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "K1",
+      "unit": 1,
+      "value": "G5V-2-H1 DC12 (candidate)",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "1": "+12V",
+        "16": "COIL_CH"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v2.pdf",
+      "footprint": "Renegade_Selected:Omron_G5V_2_H1_PTH1mm",
+      "selected_mpn": "G5V-2-H1 DC12"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "08_control_supply",
+      "reference": "K2",
+      "unit": 1,
+      "value": "G5V-2-H1 DC12 (candidate)",
+      "symbol": "Relay_G5V-2_Split",
+      "pins": {
+        "1": "+12V",
+        "16": "COIL_CH"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "",
+      "status": "proposed",
+      "datasheet": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v2.pdf",
+      "footprint": "Renegade_Selected:Omron_G5V_2_H1_PTH1mm",
+      "selected_mpn": "G5V-2-H1 DC12"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R618",
+      "unit": 1,
+      "value": "1M",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "WET_AC",
+        "2": "MIX_OUT"
+      },
+      "source": "DEC-007 v0.4",
+      "rating": "1% 0.25W metal film, 250V minimum",
+      "status": "600/2250 received-tank draft; electrical and physical qualification pending",
+      "datasheet": "",
+      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "D332",
+      "unit": 1,
+      "value": "1N4007 flyback",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "+12V",
+        "2": "COIL_CH"
+      },
+      "source": "",
+      "rating": "Local coil suppression: cathode +12V, anode coil switched return",
+      "status": "proposed",
+      "datasheet": "",
+      "footprint": "Renegade_Selected:Onsemi_1N4007RLG_P10.16",
+      "selected_mpn": "1N4007RLG"
+    }
+  ]
+}
