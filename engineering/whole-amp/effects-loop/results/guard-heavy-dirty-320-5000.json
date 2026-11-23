@@ -1,5 +1,4 @@
 {
-  "status": "timeout",
   "config": {
     "channel": "dirty",
     "supply": 320,
@@ -7,12 +6,120 @@
     "amp": 1,
     "guard_pentode_power": true
   },
-  "error": "120 second wall-time limit; worker terminated; no completed nonlinear result.",
-  "wall_time_limit_s": 120,
-  "elapsed_s": 120.01214187499136,
+  "steps_per_cycle": 96,
+  "max_step_s": 2.0833333333333334e-06,
+  "end_s": 0.5,
+  "saved_nodes": [
+    "FX_SEND",
+    "FX_RETURN",
+    "MIX_OUT",
+    "SEND_IN",
+    "PI_G1",
+    "PI_TAIL_TOP",
+    "PI_P1",
+    "PI_P2",
+    "EL34_GA",
+    "EL34_GB",
+    "SPEAKER"
+  ],
+  "signals": {
+    "FX_SEND": {
+      "min_V": -8.53928139121819,
+      "max_V": 10.291024768937648,
+      "mean_V": 0.007872269917045349,
+      "fundamental_Vpk": 10.63032081813274,
+      "THD_2_to_10_percent": 42.47738117356346
+    },
+    "FX_RETURN": {
+      "min_V": -8.539280386860462,
+      "max_V": 10.291023420015753,
+      "mean_V": 0.007872271350527437,
+      "fundamental_Vpk": 10.630319569176123,
+      "THD_2_to_10_percent": 42.4773799685632
+    },
+    "MIX_OUT": {
+      "min_V": -7.324856610991117,
+      "max_V": 8.640285678367498,
+      "mean_V": 0.009672919273126102,
+      "fundamental_Vpk": 9.109399989908411,
+      "THD_2_to_10_percent": 40.08020847656873
+    },
+    "SEND_IN": {
+      "min_V": -0.7783000165426328,
+      "max_V": 0.9340240581796272,
+      "mean_V": -0.0010601840052868656,
+      "fundamental_Vpk": 0.9663930489626102,
+      "THD_2_to_10_percent": 42.47729096629293
+    },
+    "PI_G1": {
+      "min_V": 87.66694218099863,
+      "max_V": 103.62901209232773,
+      "mean_V": 95.00106755392541,
+      "fundamental_Vpk": 9.101925613468428,
+      "THD_2_to_10_percent": 40.08622423564023
+    },
+    "PI_TAIL_TOP": {
+      "min_V": 91.20537027761188,
+      "max_V": 102.11031022838765,
+      "mean_V": 95.89893369435265,
+      "fundamental_Vpk": 6.263692967908352,
+      "THD_2_to_10_percent": 40.40662089524477
+    },
+    "PI_P1": {
+      "min_V": 184.2788239972383,
+      "max_V": 323.85853391152955,
+      "mean_V": 261.85946424384974,
+      "fundamental_Vpk": 84.82919142098787,
+      "THD_2_to_10_percent": 36.91316995145354
+    },
+    "PI_P2": {
+      "min_V": 180.13159152007756,
+      "max_V": 306.96648460346444,
+      "mean_V": 239.09814847255825,
+      "fundamental_Vpk": 78.45873051389984,
+      "THD_2_to_10_percent": 35.50589924810157
+    },
+    "EL34_GA": {
+      "min_V": -137.02533629124088,
+      "max_V": 1.8210367628356572,
+      "mean_V": -59.246832346700806,
+      "fundamental_Vpk": 84.57820011236389,
+      "THD_2_to_10_percent": 36.96499843175454
+    },
+    "EL34_GB": {
+      "min_V": -122.84470973264328,
+      "max_V": 2.6402722636053952,
+      "mean_V": -64.04386168141795,
+      "fundamental_Vpk": 78.13190035309869,
+      "THD_2_to_10_percent": 35.54899276447429
+    },
+    "SPEAKER": {
+      "min_V": -22.591696953452217,
+      "max_V": 22.649424516998558,
+      "mean_V": -1.8504763767855805,
+      "fundamental_Vpk": 28.355443732432526,
+      "THD_2_to_10_percent": 39.15511994808729
+    }
+  },
+  "settling_relative_fundamental": {
+    "FX_SEND": 4.531672658780565e-05,
+    "FX_RETURN": 4.5316724820056816e-05,
+    "MIX_OUT": 4.176414784906787e-05,
+    "SEND_IN": 4.526236270057649e-05,
+    "PI_G1": 4.1631447792014394e-05,
+    "PI_TAIL_TOP": 2.5166918939051653e-05,
+    "PI_P1": 4.483151816584476e-05,
+    "PI_P2": 8.052558055715455e-06,
+    "EL34_GA": 4.2917457641534656e-05,
+    "EL34_GB": 5.593154025659771e-06,
+    "SPEAKER": 3.233734471810936e-05
+  },
+  "status": "completed",
+  "wall_time_limit_s": 300,
+  "elapsed_s": 162.30828954093158,
   "previous_attempt": {
     "status": "timeout",
-    "error": "30 second wall-time limit; worker terminated; no completed nonlinear result.",
-    "elapsed_s": 30.012907833093777
+    "error": "120 second wall-time limit; worker terminated; no completed nonlinear result.",
+    "elapsed_s": 120.01214187499136
   }
 }

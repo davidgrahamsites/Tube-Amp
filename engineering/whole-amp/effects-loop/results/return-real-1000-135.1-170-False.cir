@@ -1,0 +1,21 @@
+RETURN headroom experiment, not selected hardware
+.include "/tmp/renegade-opa462-model/OPA462.LIB"
+.options method=gear maxord=2 reltol=.001 abstol=1n vntol=10u
+.nodeset v(BUF)=0 v(PORT)=0 v(VUP)=85.0 v(VDN)=-85.0
+
+VP VP 0 170
+VN VN 0 -170
+VS SRC 0 DC 0 AC 1 SIN(0 1.351 1000)
+RI SRC INP 1k
+RIN INP 0 1meg
+RF BUF INV 990k
+RG INV 0 10k
+XMAIN INP INV VUP VDN BUF OPA462
+EP VUP 0 VP 0 .5
+EN VDN 0 VN 0 .5
+CB VUP VDN 100n
+
+RO BUF PORT 1k
+RL PORT 0 340k
+CL PORT 0 100p
+.end

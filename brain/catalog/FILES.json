@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-21",
+  "as_of": "2026-11-23",
   "scope": "Visible project files; excludes hidden metadata, caches and generated catalog directory. File role is routing metadata, not a technical validation.",
   "files": [
     {
@@ -118,8 +118,8 @@
       "path": "PROJECT_STATUS.md",
       "role": "catalog",
       "owner_route": "MAT-002",
-      "bytes": 33612,
-      "sha256": "1cb07509b52db81935a9cacd3de85da4cfd4d66ec3b38161f0296e020a3a58b7"
+      "bytes": 36496,
+      "sha256": "ea7abcb54fafee7ce9258bfbb9e5173df9cbdce0cbd5b5ec6b7d79afa2ae84be"
     },
     {
       "path": "README.md",
@@ -139,8 +139,8 @@
       "path": "Renegade_Codex_Handoff.md",
       "role": "editable-product/record",
       "owner_route": "MAT-002",
-      "bytes": 27506,
-      "sha256": "5e5ee2a95aad9fbef540b2a39d7eedcaf6ddd21f9f18536b6cc7ee833d96da8f"
+      "bytes": 31095,
+      "sha256": "2f5a1941c108d867337b438ca436c48d1ccea36f0f00c7fbf454b67e7a812925"
     },
     {
       "path": "Renegade_KiCad_Library_Starter.zip",
@@ -248,13 +248,6 @@
       "sha256": "8b2e177e23f60a4c5410e76b4ac5b1139ce0d03fe0bd9fa4325869015b4894df"
     },
     {
-      "path": "Renegade_Library_Starter/~Renegade_Library_Preview.kicad_pro.lck",
-      "role": "editable-product/record",
-      "owner_route": "MAT-001",
-      "bytes": 50,
-      "sha256": "281f359a18deab88955e2c5edd9fd3167680f12f8a7dc15f68dc696329bf08ef"
-    },
-    {
       "path": "brain/CONTEXT.md",
       "role": "contract",
       "owner_route": "MAT-012",
@@ -265,8 +258,8 @@
       "path": "brain/INDEX.md",
       "role": "catalog",
       "owner_route": "MAT-012",
-      "bytes": 6193,
-      "sha256": "0aa6a901c1f743ae22e8800caea3e7611403507e160a437f0ecf99313056fac9"
+      "bytes": 6368,
+      "sha256": "663466850b8b41fd68fa9af45ce30dab6d9631aa1d99aa4ac40acb054456d500"
     },
     {
       "path": "brain/_templates/CONTEXT.md",
@@ -321,8 +314,8 @@
       "path": "brain/feedback/events.json",
       "role": "editable-product/record",
       "owner_route": "MAT-012",
-      "bytes": 72935,
-      "sha256": "d2316e42c6469dc8f5c4ebdc3e5eb4875ad3c95fbbbd1411b537bfe5f342f485"
+      "bytes": 76752,
+      "sha256": "d60b9e28941ab997f02affb6a185d919bc02dc7680cb897c28ac0b3465e8c3ee"
     },
     {
       "path": "brain/materials/CONTEXT.md",
@@ -442,6 +435,13 @@
       "owner_route": "MAT-012",
       "bytes": 4781,
       "sha256": "a8c859ad42ebc4c6209390e26235892664f0b3f3ada2a863dd93ce32e9f76997"
+    },
+    {
+      "path": "brain/records/DEC-014-effects-loop-optical-review.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-012",
+      "bytes": 7056,
+      "sha256": "ac34ac19e29e5ab2fd6e118c84ffe876e1e7a64e609f7644d9c1b45e1f725d74"
     },
     {
       "path": "brain/records/VAL-001-starter-archive-match.md",
@@ -1998,6 +1998,13 @@
       "sha256": "8297f0b922c10cfd4925edf2fd0b58deae0f6a66b16d1255486f51fb458b675f"
     },
     {
+      "path": "engineering/component-selection/footprints/Renegade_Selected.pretty/Omron_G5V_2_H1_PTH1mm.kicad_mod",
+      "role": "editable-product/record",
+      "owner_route": "MAT-004",
+      "bytes": 7011,
+      "sha256": "6d47988b4c6eb016b2be158cee8e476a0749f9659e7a9180b8becab3c9799ab4"
+    },
+    {
       "path": "engineering/component-selection/footprints/Renegade_Selected.pretty/Onsemi_1N4007RLG_P10.16.kicad_mod",
       "role": "editable-product/record",
       "owner_route": "MAT-004",
@@ -2948,13 +2955,6 @@
       "owner_route": "MAT-010",
       "bytes": 179,
       "sha256": "65412e3c30d3c84aadf3d9abd01b7af675802b67bec64bf6a180fa4ca5de3602"
-    },
-    {
-      "path": "engineering/solid-state-reverb/pcb/~Renegade_Reverb.kicad_pro.lck",
-      "role": "editable-product/record",
-      "owner_route": "MAT-010",
-      "bytes": 50,
-      "sha256": "281f359a18deab88955e2c5edd9fd3167680f12f8a7dc15f68dc696329bf08ef"
     },
     {
       "path": "engineering/solid-state-reverb/simulation/CONTEXT.md",
@@ -4446,6 +4446,1889 @@
       "owner_route": "MAT-016",
       "bytes": 13253,
       "sha256": "18e283fe4cb5cc28d2fb2f13786d6633f96608ed2462a3cc0d2f0b63f37b12c8"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/CONTEXT.md",
+      "role": "contract",
+      "owner_route": "MAT-016",
+      "bytes": 1249,
+      "sha256": "69c587b8d3c2fa0c71136d4b599555427eb1fd66d3e0cf14105ff948bd5ed3b6"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/CONTEXT.md",
+      "role": "contract",
+      "owner_route": "MAT-016",
+      "bytes": 919,
+      "sha256": "39b703d6f5cf19868fb50c0212390b7f16f52f3a6cd34f006d1d769f0b876b58"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-001.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3899,
+      "sha256": "af52338ee8362bf79878cf60987b473a82e0a3f043678c9ad406d4370e5b88a5"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-002.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3899,
+      "sha256": "d32f85c70f0a302e8f55180a93fbb90c1de4b0ce43560550905c92ed79f71bfa"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-003.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3951,
+      "sha256": "5f3f9229664a0a0a819145cc1a586e70982e0b09370b77ce61b45af395c8a479"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-004.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3951,
+      "sha256": "8af97a4c97ac63305496f3c23146b07cb3bd40afbd3cd6d7e6647b7109d8e346"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-005.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3937,
+      "sha256": "1743733126e9f11832c121ed8411efe2fa637d032565aee53dd4fd4d81ce6afc"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-006.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3937,
+      "sha256": "7a5e405ebde5ab81686c5b8f36c58b353b708e1c7b3e7e2f2018c57024dd8772"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-007.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3989,
+      "sha256": "c51c76ee1dc2bcaaf8a5b5aeba860bc277d5ef70094c16094333921f656495ad"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-008.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3989,
+      "sha256": "b091f2dcdcdf6e0acd9554ca8bb4fd209546f4ac5f4d1890f8cb980ddb766b9c"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-009.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3899,
+      "sha256": "733b5e72e5827c207c53d90e05f5d0266857f6df7cfaede67c26d6c7883b6191"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-010.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3899,
+      "sha256": "c28e342bd989939e829dfe1bc53e6abf5da924d4cfa16e97d51ab58281235706"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-011.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3951,
+      "sha256": "e4e13aaeffc2e64c3df69a12e83c5ed2761f0c5885fa87a38d3ed5e25df17135"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-012.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3951,
+      "sha256": "aaa024d1897dc74f1efb4367ca9774f5a0af9075f28c5c00552b37113de11ed8"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-013.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3901,
+      "sha256": "2320e93dc44981fc9042ac6b1ff7f6da0be7984aff6e506c7988976ac712ef67"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-014.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3901,
+      "sha256": "7acaa1120bedd3bc5cfb075d872797e39f1e55a92f1364c9fc498cc07a486f0b"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-015.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3953,
+      "sha256": "d1dec73778bf23524b0545419395e26e2f8dd907125f4141fe78b2e1142a9af3"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-016.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3953,
+      "sha256": "2fcaca9e6c3b02546987dbcf5082b5d944a14fb58335017d8678a1825c08209c"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-017.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3939,
+      "sha256": "a4d6a54f57c5f05a65cd795370ba5fbe980547c5ab5a950c486b08765f744450"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-018.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3939,
+      "sha256": "c6c516610aceeed4c36af2e9e98f7448d485b4ab2fe934197799a95b2ed017ad"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-019.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3991,
+      "sha256": "ced5fb4f8d8b061dcf3ca34bc0344d5c2bb3116842737547e13c3d1b6971e934"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-020.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3991,
+      "sha256": "5e95e36626a050f6b6833eba415ae0096371a2430c9f4dca39243b7467caeac1"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-021.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3901,
+      "sha256": "4da16489795661e0c372aa931f2f89752db626d1303fdb9e238f1f3f4fdc89cd"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-022.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3901,
+      "sha256": "9935d53f7d86ebf499ff4fe5d38bdcc929c46bdc24a278fc753d1668d25ff91d"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-023.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3953,
+      "sha256": "fbe9e066c5442608b78fde570f68471dcb36c0d72d5becf4aaa28cc33a6e9a9c"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-024.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3953,
+      "sha256": "30782ffbc27eaec839f1d0038942c91a244d045ffddb943ad41bc68b210108b6"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-025.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3889,
+      "sha256": "bec267dfb9bba612b81fddd7d42b2d03420f00c540c20872a13f565df6280f1f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-026.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3889,
+      "sha256": "364801c9d34429420c8f74cf45e4101fe46d38eca69a5e0cc22c7a4bd6769dea"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-027.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3941,
+      "sha256": "810348ddb52bb3773a670e8078549d46144565e148d8d43fb3e60efe98a5a92a"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-028.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3941,
+      "sha256": "bfb9d5cb9f956f4a6d7a682e974352eaf9abadd6bcb263617399a656f70ed778"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-029.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3927,
+      "sha256": "578d933a1dec5a32d42e4b703a53de8cbb31969a01b72c6fad8d807b8e402362"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-030.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3927,
+      "sha256": "8fd0e863d92da69650679d5250d6d7676dde8654b4c4aaada7f0d0ba7655c170"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-031.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3979,
+      "sha256": "1eb0fa5883e8422dc3ca890dd7bf41c416f99978e5321d85f8556efee2fe001c"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-032.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3979,
+      "sha256": "eb19ab81c08b5ff61f91378394d51e0b3653ec1ca8b1aafc0023a8a97a0da364"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-033.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3889,
+      "sha256": "df8d8e8adace558c587720bb610822fe32438e4347f2d14fe3217b45c583b835"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-034.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3889,
+      "sha256": "a613f4ea335891860e42e0ac294e36310f093c17db24cddc5eaa06bdcba2b26b"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-035.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3941,
+      "sha256": "a2518ae13fb12ae3edfe299851f1412a2c2fc53e0185b9d5f50fd88fe352eeb4"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-036.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3941,
+      "sha256": "1fb3eb7580a3bd28ad309b9342c761e23b30ab2dba7525412d6f7da6ba383452"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-037.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3899,
+      "sha256": "2092b6d133ec71ca41b266b75a121baaaa5423b3db2fde1161244484163323d8"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-038.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3899,
+      "sha256": "683158a2646b52686114745d7f2601b0a0397b5922c5c1156572b13204c309f8"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-039.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3951,
+      "sha256": "89b44da41316ae5e8acd858a33740b7a219549f18719e93612df716239de91fe"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-040.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3951,
+      "sha256": "9a8b8cd873ce38786752561b92fbf750de5882a55339ac9c8bf3e79dbfe39d71"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-041.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3937,
+      "sha256": "8bb1ed914f4546860f66358c749845af702a65541d9e927c6829e1dc110b8792"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-042.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3937,
+      "sha256": "17608863aded0e5ab46dd6c702269c8717db25e8c2737d3251493350a67bbda2"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-043.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3989,
+      "sha256": "ac9a4e0758f67bbeb0c1add5e5087949db5ed760097a044af2058f1aea383dd5"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-044.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3989,
+      "sha256": "c97f707444225e9d867e1ac77b0a8c7870c2e04dc80a9f69cc6fe810c9585c12"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-045.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3899,
+      "sha256": "249f2130afe2d9742f16443b9584338b450f6fb90069f03e33490aa201188157"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-046.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3899,
+      "sha256": "59f58004fec5a34f84d3dbdff046c8bbae0fa63e0c2c17cb062d5537a8d3c97d"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-047.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3951,
+      "sha256": "8c29f23899ffeb80c7fb4158e6d044bb11201d738bb9551dc1cd5b363927a362"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-048.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3951,
+      "sha256": "49a7d8b844aacd21c679441e0351625bf244b350dea14004f224a2a2deac6f7b"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-049.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3901,
+      "sha256": "0b16142f7356962538c48b44877976439733ac8a6793b68cb7434455b8e1d0b7"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-050.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3901,
+      "sha256": "a3e69ce35f1154910aead706a9d06a13038452bcfb8edd90f5245c812fbcaf62"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-051.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3953,
+      "sha256": "a6cb8729a64eb6d4a47d9cfd84d4041b3ae575ffd9239cb691717e5a53f33383"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-052.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3953,
+      "sha256": "acf76914b42dc6fb2471b380b7f8a29aa63f3a4d1f4b0131045009964fe9fff1"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-053.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3939,
+      "sha256": "08d39732661daf5ab0d5cd5b6cbf8341d4a9893bbb54b383a2bbac2eae3e415c"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-054.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3939,
+      "sha256": "7e01c21b843a73b46e81eb89be62f26c9d14a1518568a8e1e55e96ef960b6cb0"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-055.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3991,
+      "sha256": "fed51b448c0e522e9dd64b90c1085ef9be0547bcfeee0e110dce1fa829030c4f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-056.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3991,
+      "sha256": "0f864dd50539f4ed8d1a99ecef1d760e363f48bfd3f17cb37b149259060deb65"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-057.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3901,
+      "sha256": "ba86ccc04fc4980a16e55bd9c2ef5b2ba017d3d4aa36641410049258964f81b1"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-058.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3901,
+      "sha256": "3efc61a985154af4e4d8eca4d676b0748b4242614de5ee80a34b949c69a8a616"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-059.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3953,
+      "sha256": "4dd56eddb2c0246b57c66386fce91238599f7b04a208a6185fde2b9d1d6aef04"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-060.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3953,
+      "sha256": "8110ff1968d9bc869d3431b25741a78d7b53707c1b8ccd0ba3565a04088070e1"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-061.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3889,
+      "sha256": "16607873131b2d93ad6f91d589885501e28f8e60c1ddfbd27364aae454cc0459"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-062.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3889,
+      "sha256": "7129a5dd69966bedbec6cacb955bf1fb7a1e2f7030dad985161fde54cd119ffe"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-063.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3941,
+      "sha256": "cf1e1a785e2f2e48a807381d214eb667323b7069de31ab90fbb6ecf28b948165"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-064.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3941,
+      "sha256": "a6d28f551d2df7803c1f093d9c2fe52e31ecb849c95ff6b1f5ff00997c55c399"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-065.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3927,
+      "sha256": "90b87896858caa5c0fa8ca515524c4b647fa279621db9bfb0d330c891c5d9ba5"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-066.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3927,
+      "sha256": "0648a85a462c106456b954e1dee608e7924924641039f37460f9c57647234e27"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-067.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3979,
+      "sha256": "748301eaa877d17fef676d5881cfd7f1936636c7d3c9e2084cfb1601dad75f77"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-068.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3979,
+      "sha256": "f140681644a6086af23116f75ad1b0727df57f44b064306792580fc945c21153"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-069.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3889,
+      "sha256": "788ac07a02ae5f8ae95916ff5a2979f5d6e8a1287dd7ae850c26e44e2a15dc78"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-070.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3889,
+      "sha256": "19f15bc9a89a4b140f823f488b26d69f7831781913af30a1295be25a30448c73"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-071.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3941,
+      "sha256": "1de4e8772488ac0a7140ebeadf29c5bfb549da6624e0c839dc13990131c77899"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-072.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3941,
+      "sha256": "91ee6079286da25a85c0e19ead3b030c29ce02b0396456898c9efc6b3609b871"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ac-summary.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 419638,
+      "sha256": "85bb9611025b836a2ef850027370c09e3d6e9612f3d10ea48508d1b7957a0c60"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/audit.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5524,
+      "sha256": "5aa0f6bd309d89515ba8980e9e8e79e6d8aa7cbfcc9a66587cd0454cbffb515d"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/clean-native.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3939,
+      "sha256": "a4d6a54f57c5f05a65cd795370ba5fbe980547c5ab5a950c486b08765f744450"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/clean-send-isolated-short.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 4140,
+      "sha256": "5b4c14bd8fdd006b495e96bf9ce3194cb5732fff902dfb445abd57285f678a64"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/clean-send-isolated.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 4112,
+      "sha256": "ad76dfb02f15b6d36307bb75d3baba7952ce17e1d0299cf07a92e477a5db093f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/dirty-native.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3939,
+      "sha256": "08d39732661daf5ab0d5cd5b6cbf8341d4a9893bbb54b383a2bbac2eae3e415c"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/dirty-send-isolated-short.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 4140,
+      "sha256": "5b4a6eef5ce929e305c9fde322526b0eb7038becf8b98c33f89f21de025cf7c6"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/dirty-send-isolated.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 4112,
+      "sha256": "29167518ddd6df075d883cfbb435a1273db057a700445e0f0947ae90653d4c6a"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-240-1000.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "d9e143370c83158e8facb7b7addb222740d809ec4b7e8f10a50955c379d7d231"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-240-1000.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3188,
+      "sha256": "37b1bdcf313b114358697976947271ce9ec6d9067e18bdec1b0c73aa30689e18"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-240-1000.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8222,
+      "sha256": "8dfef162789088af4e7579d2ed6234e579bb4b2915fad0eb7cab22b5e4bc7b12"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-240-5000.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "16ff9963f82a48e6c61dcd8cffa09f0572e4733b194d3d8f0db51bc77f52501f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-240-5000.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3400,
+      "sha256": "e5c3beeaad8f1cf360984c46d126852e2a1a60964099a297b8e822ff6c4188ea"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-240-5000.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8222,
+      "sha256": "9d81b9117aa96b8025acc65d587ee725f1139123dd2248d53570fdedaab4296e"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-240-82.4.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "0c0a9f590d13a62b8725727d64bf7dbdcb912af799f5d98272307dc425dd5271"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-240-82.4.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3167,
+      "sha256": "c0dbb10e13eed4d516308684af27c08bb05ff8533890695b836f8e982b16bbe0"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-240-82.4.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8319,
+      "sha256": "6ce54b85ac1b42195d447e416dd17b8b3b2c35780b57458d3db8e52394478f20"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-320-1000.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "87e75997fdfc42b7ff805ba69c5fefe57d13fd86d834cd663458eec1255a9bd1"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-320-1000.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3188,
+      "sha256": "8e418287136b65aa2b09ad0035c5043636130c6bde749e08fd859a715b79dca5"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-320-1000.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8222,
+      "sha256": "a4083261c64c7a3e75f969b19571902876169d6831f0027d30f0fc3cd8827c0a"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-320-5000.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "e411629af80383853aa26f311d290d8da2b6131be31d737c833a1a687b391b4f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-320-5000.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3397,
+      "sha256": "be8460b28d81abc4799445f6e9da582093d702c94c8f2b505778113719b31354"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-320-5000.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8254,
+      "sha256": "dec8275182c121e806ca0fdcac7b540591ef732f9e7dd1babb2835335cd13f2c"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-320-82.4.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "c561d3c85cf2e15d1df48eb1fee179f5344c2ccb7c2e2094b5853b9236d520ad"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-320-82.4.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3169,
+      "sha256": "89d43b5cda2fbaa622531c37af16335704f0a64b162290cefdbad1454e72dbd5"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-clean-320-82.4.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8351,
+      "sha256": "e3e7ff499edd793b2a74d1a15d1e8cfd91550431f026294363fd08861161ce8a"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-240-1000.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "7a3c2f3f9ccd591fb5917a53aa94ca2a3b70ac29f33becb72e6ceef35b238dee"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-240-1000.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3394,
+      "sha256": "421a4884b6bd459a3739a386e073b47c5d6991517fa846865248e61fd850ece7"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-240-1000.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8382,
+      "sha256": "e9c75619fb18a3364ccba9b4af921abacaba14b2dae8d5c47a3e248f276e934d"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-240-5000.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5165,
+      "sha256": "9b10708aa3b7aa96243ca94bd1eeba75e1e29cc05b02f846647904bd5596e2c0"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-240-5000.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3582,
+      "sha256": "aaa2ad5b86e2a2282ae802607b23b6a299248f51f3008a12ae7c4887d64ff1d9"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-240-5000.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8286,
+      "sha256": "e56ebd746ff69189b6544bc8a37f0212f892050ba7315319a6086979029a65ff"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-240-82.4.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "9a30cc7b2d9555b93c8bfb0a9278834cbac6117feafe67ed7e8d94221f5f593c"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-240-82.4.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3181,
+      "sha256": "207044b74084476468965cf35c9e913f60ff600bb72aede099e300dc71c564b7"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-240-82.4.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8415,
+      "sha256": "13963a068324eba4e0b3e096fdf2579dc67bf1c07fb4069aa2209b3772337bee"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-320-1000.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "c4b86a2aa52ab468347cf42b9b1dd8a4758416577fd1def96e190a2848972627"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-320-1000.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3394,
+      "sha256": "a49a6b8737a8a0a93d778c6b801041b7d8ff1601bb1565acef4f7ff68a0b1423"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-320-1000.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8382,
+      "sha256": "57854037d20da705559238810f4cb5a9cb83434947e0182da2d05537b275b907"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-320-5000.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5165,
+      "sha256": "3bd3a80c2900bea8633189fb6fb2bd2449d529de7e3bdc374696c6637041cb7e"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-320-5000.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3594,
+      "sha256": "4ddecb0b9ece234234f5339710a5d2e7be43c5a5fb68523e2c56cbb43e9f3ebe"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-320-5000.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8286,
+      "sha256": "44f6e35852ee1fc7bf11e1ecc1e7dda044d524a45a0e778e635a1abf226e2ba5"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-320-82.4.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "b5748be88d2a41248f2772a7f0091ec9a744f839de903a04af0129ae9c9152a7"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-320-82.4.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3156,
+      "sha256": "3064cdd71ec1372f420cc739a226bcafe3a2be5e91310dd34a0b805a24c653bb"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-dirty-320-82.4.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8415,
+      "sha256": "b2db60f2447b175b770a902f2154ed101d4ed6eb1f977eaf38477e33ac46ad70"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-refined-384.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "d9e143370c83158e8facb7b7addb222740d809ec4b7e8f10a50955c379d7d231"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-refined-384.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3213,
+      "sha256": "3f4e87d669b04328e8b0f55b0104c4e5a6460bd426690f277d0ada8e32dfa2bc"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-refined-384.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8254,
+      "sha256": "108280dc2c5adddd2ce314a494fa734ea2df87f4b7acc24bc1976b7dcbd9d295"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-refined.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "d9e143370c83158e8facb7b7addb222740d809ec4b7e8f10a50955c379d7d231"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-refined.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3182,
+      "sha256": "8ca348e4a8563efe2a90783ffdd83403ad238751aa5382b5563812102e1ea528"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-heavy-refined.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8222,
+      "sha256": "2866735583719be24070a8549f5cae8821c72912df88f1d01bf6015c9bee9b03"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-nominal-clean-0.01.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5169,
+      "sha256": "a089979a7c7262284ae74725369864e8c22971b027e1d3f98e8a033d10d014cb"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-nominal-clean-0.01.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3214,
+      "sha256": "2ecdc5c19c7d6985b1a74525be4688d1c3c530953af14f05d70e0178bc43caad"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-nominal-clean-0.01.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8158,
+      "sha256": "7fcaad0c79ab1fb035e7d3aac7ea58d8b6e8df2b2fc7be9318f255a99327f578"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-nominal-clean-0.1.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5168,
+      "sha256": "96869e99e94d2a14f4db3d811e85f263764d18b5702f2f8cf6c4a6e7f8cd7682"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-nominal-clean-0.1.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3202,
+      "sha256": "a62e23fc5a5165e3aeacf1750c194ddb4a2b5e5483ea546c7ff0024fd36e902b"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-nominal-clean-0.1.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8190,
+      "sha256": "8b104d939f848982c2c5c8140919d50bb5e3b1435b6ce1fa5ebad9f190e80ded"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-nominal-dirty-0.001.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5170,
+      "sha256": "f10ecf05ee9ec4665e7bfaebc860b135cf899f9b2821b4e92bbd83aab7e66ba4"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-nominal-dirty-0.001.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3219,
+      "sha256": "2519142700fad5e820b2e8faff5f9f8270527a4123fe9f34066db3214d679f65"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-nominal-dirty-0.001.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8158,
+      "sha256": "a78b4d9c47b1675e1374eb0efedb6035f77695d2ac580df093b74f058685a810"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-nominal-dirty-0.01.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5169,
+      "sha256": "4df020c1c6d26b8c60c68a713c8c50b39456f0b6e506e0befd92f72914a6dc56"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-nominal-dirty-0.01.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3193,
+      "sha256": "1ba3a2bea19f6569abac31dbd56a6f68f4b5dba8f7726a29e76ebff85b5817fb"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/guard-nominal-dirty-0.01.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8222,
+      "sha256": "3c573fc5a3ea9036a0d5bf576433a02991880579debf8246f3646f19af947a40"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/ngspice.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 50141,
+      "sha256": "108a6cc597710548f8ca5602356c2fd5a602264f1590b0e1459e34c43d08f50f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/overdrive-coverage.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3939,
+      "sha256": "16bdd0ed5a50e78df4c06c4bd9bb65f233d12b5d7171c2848d23d71252617fcf"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/overdrive-coverage.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1245,
+      "sha256": "e51b49938ec4556756f9f3e14a921ad58cbcf7929d85cdc1e8ed2eda23659d00"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/overdrive-coverage.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8272,
+      "sha256": "dc3a8daea6c0b1f98a71b87d2f4b8d9612c76681263eaaca99c5434352f9f415"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/polarity--1.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3943,
+      "sha256": "9e912befd990068d19a0ee7a99f37bee8ba274dd989444d0951b6544a130320d"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/polarity-0.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3927,
+      "sha256": "9bb0a3de2ec4d25a0ed501d8257f8a0c21dead5f8ca71584ce3a4b29ec0e2382"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/polarity-1.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3942,
+      "sha256": "2ad5dbbe02d4e44397d2f71da56c455960199048c43497211401bb1f7e06d93c"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/polarity-check.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 17575,
+      "sha256": "066c74503a30d3990736df2029cccf51e71245538199a17fdbce7a9f0eaf18c5"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/refine-clean.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3942,
+      "sha256": "136a93064d9efb4434b92a6651bd3a8d320c2d2fcf00f9c446a56d22192a20bc"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/refine-clean.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3180,
+      "sha256": "4cf0cb4eefd018235dc8d527699156c70a596d6c9b281fe93cd1dd3370820351"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/refine-clean.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8190,
+      "sha256": "e442b5bae69cd3f544ffd6c090ed21829227ebde242de43f30a12055c3020b61"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/refine-dirty.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3943,
+      "sha256": "13e922fd60af5d98d9dcf144edb9c3b45e6364e2e8fe40a047b9acd9467fe025"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/refine-dirty.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3186,
+      "sha256": "31826276e31c2411d8096d030856da4549b18eb3dff4b7d13ccd02836505d25e"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/refine-dirty.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8190,
+      "sha256": "8f87d7a6fd24a7e1a275edcd8bdb60d475e806a94598c2e81a9b505e406be2c2"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-diagnostic-esr.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6710,
+      "sha256": "da3f5b2498037b258f14aef30e53219f841ba91dd578642b27da34f734cd196f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-diagnostic-esr.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 237,
+      "sha256": "20ec93932641fca99e23894e3251251e077379e9361960a6ef6d9a049d41ae2a"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-diagnostic-ramp.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6717,
+      "sha256": "409677bc6511cb9685ef24b2a870c25edbab798e263f1bc3865ad8ac46cda770"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-diagnostic-ramp.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1546,
+      "sha256": "b18e67d48af161f2ba3b633849c00925faac0d61a6eb18428777f46062d72899"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-diagnostic-ramp.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 28140,
+      "sha256": "a1d07abb7182a76df9a7471bc218ed1f83c7e5b27d6b883eb67a24ab1fd3cf5d"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-diagnostic-tight.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6697,
+      "sha256": "8f4e468492589f3bd245f410a30f8bf1eb418df1c4773c4a8614860d093d44b0"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-diagnostic-tight.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1281,
+      "sha256": "8d935a915c4036f9e5126f44b9b3107f9220877b0c9454663dae3ea0af1a3e2f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-diagnostic-tight.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 28140,
+      "sha256": "0c5a53c72eb1134be8e6b7a1a38977c609a7507984159d4356328c2290b19180"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-diagnostic-trap.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6695,
+      "sha256": "641034836bb3c8e68bce1a8f241f8cd13c9623c2738aecfaf2704fea7fca3d9f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-diagnostic-trap.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1281,
+      "sha256": "eb0e1c685f4495f95e5179580544bdd56ab8f7b45d5ea8c9a001f6e88581ca23"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-diagnostic-trap.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 28140,
+      "sha256": "56e80396957112efc294548d274788a9cf5044fe3a1e9aa17cbdc38a00618e6a"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-impedance.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3942,
+      "sha256": "2ad5dbbe02d4e44397d2f71da56c455960199048c43497211401bb1f7e06d93c"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-135.1-166.6-True.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6694,
+      "sha256": "3702126559fbf98534e35209ef9bfdee23fb4af36dbeea65b657a2d05f42e12d"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-135.1-166.6-True.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1726,
+      "sha256": "fe56a2787b8618023bf71e4f6d768b7b41dc1810d567061ff2ec2b8b5087ef7c"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-135.1-166.6-True.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 28277,
+      "sha256": "a6624f6c7c27d5549cb11909238bbe254b0dbb43ceccaae50d85ae5905c61544"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-135.1-170-False.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 469,
+      "sha256": "ba4506800543a2d0a60eeab5dda863ce9fd13cea81b2d1e081fe01ec1f809176"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-135.1-170-False.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1535,
+      "sha256": "da4ba157787a8b7943d98016c9ebd7edd517768e71e954cc6b86c91b6b7fa05b"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-135.1-170-False.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 10851,
+      "sha256": "4c276bb30d1b93c6c87a6673e74d80635b925d5b7f991288f4ecf569c76e395b"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-135.1-173.4-True.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6670,
+      "sha256": "cebc2fe27aeae00f83859a5f6087f644f105c53b3d04c42adc35346f7f05988f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-135.1-173.4-True.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1731,
+      "sha256": "4b57bcfb3e82a0ac9f8016898f61726fe44a6cf6d7cee86b147f6416927cf845"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-135.1-173.4-True.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 28309,
+      "sha256": "8118a2d3d17290247ac9579bd156538994eccae480f24ba4437b4d8ef4b24b86"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-150-166.6-True.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6692,
+      "sha256": "caed2f042452feffef0fd7dd9489adedc01cc20aa710b82af3b4573e7e351eb3"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-150-166.6-True.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1723,
+      "sha256": "53797d144a38934d116e8c069d4033c5a924c7f45e065877f95f944ec8971935"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-150-166.6-True.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 28309,
+      "sha256": "67598f9ee5e499f71ceb565b27ced3de95b461d66a93486a32a05f77775f73de"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-150-173.4-True.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6668,
+      "sha256": "1a1b73be1155edcf84f59f4d12de2a4c5d64bbe8558abfb6f8c813913a1532fa"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-150-173.4-True.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1720,
+      "sha256": "080f24820083c06a649402eb7eb7da81a7bf10927a3f334d7c596d4f4c2fc8d4"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-1000-150-173.4-True.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 28309,
+      "sha256": "2778de68a376418f4f5086bdf35ffd2f4de0a124f554dc1cc7cfc91ea205d7b5"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-20000-135.1-166.6-True.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6695,
+      "sha256": "90dedec5e9a5ba6ceada6901860d0709ed3332320d897fa7641dc6c74aa65860"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-20000-135.1-166.6-True.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1547,
+      "sha256": "1904ada086a28c0b0dc1d7177f9051794d0b3e81b5db83915e0321060c74e2d5"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-20000-135.1-166.6-True.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 28141,
+      "sha256": "4589b9d27a89aac1f173f6df170bc2233f80e06eddfe2eb12189d48f0df4b37b"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-20000-135.1-173.4-True.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6671,
+      "sha256": "9c316f3e9a6a048b3e3d9cc90c4a477cd5e0e0cf0855db6e6bbfc9511e22600d"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-20000-135.1-173.4-True.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1550,
+      "sha256": "3eca1adb101067b7ccbcd626c4d6a94e101d3c0bf51bfb1fbeefa3d22f82e126"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-20000-135.1-173.4-True.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 28141,
+      "sha256": "7a9400c0473f7dff91961759c29959a8d1f18c75e5dce191f7b4e056792795ec"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-5000-135.1-166.6-True.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6694,
+      "sha256": "79a2da9fd58dd6fe00681b108d855769d18fe4879695db971ba9299cc73d468f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-5000-135.1-166.6-True.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1722,
+      "sha256": "9a9361e06894d95edf0b8ce454768fc19dfa78869006f9b20fc25ebc87499f4a"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-5000-135.1-166.6-True.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 28116,
+      "sha256": "59d4810d9d3b1da41b56d6ed9fe2a494f9eaa554f68bc930198a3a79a38eae8e"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-5000-135.1-173.4-True.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6670,
+      "sha256": "519ec022404a17a9936311ed1a38e60282d0d9cc0c051063f73d6b214d5197c0"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-5000-135.1-173.4-True.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1722,
+      "sha256": "20f9b1cfc1bcb739343ec22e03c544b3906457c1bc24b915a928bebfc62134a1"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-5000-135.1-173.4-True.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 28116,
+      "sha256": "8366479bdc5a4d8c74238edf48407d9cb9ba143e60ca30bc8b1f7089390bbbd9"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-82.4-135.1-166.6-True.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6694,
+      "sha256": "42b73d3a5c0183d2869837136b0b9e2f8b68477d590532ea24d94601f16059ab"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-82.4-135.1-166.6-True.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1739,
+      "sha256": "59fab0c9f3e993d5447b71322241dc6a77a0e1b9d1e9f78a474c0db8089f30f8"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-82.4-135.1-166.6-True.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 31446,
+      "sha256": "8d0653ae53cc08af9413a0071e7456bf88730ff0412d8ef7f571b777bc64cab5"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-82.4-135.1-173.4-True.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6670,
+      "sha256": "744e3be1ea9fd2d15cf837d9dd09b0d536ebeb2bb0d582211fd58c484493ae60"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-82.4-135.1-173.4-True.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1741,
+      "sha256": "4dbf0e50c3a5de5899c0d9bf25fcac8c8c2695d1f8fd68a61db45b65e4a0360d"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-82.4-135.1-173.4-True.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 31510,
+      "sha256": "23140bc98c6fc5dc44729df72b046650c77f1a1c843181d053b138b07cce8838"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-initialization-failure.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 41884,
+      "sha256": "43917c215e12819007aed3648e7ea0f37a842388437117328e4dd7db470ebbde"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-initialization-failures.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 15605,
+      "sha256": "9a7baa32d966bcf474ce94152a7311fea3c781356e660d230ef5079e0f3c9150"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-no-nodeset-failure.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 52570,
+      "sha256": "6f9472075e9740f002c175bc35a71af6c8a70abc8cab40ee8e869d3500a2d862"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real-summary.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 21546,
+      "sha256": "b366f41f752fc85a55578c8a0378cd9365677cb2b9ac7e9219930f1917722ae3"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/return-real.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 52610,
+      "sha256": "f89d2453991019daffd7f0860ea7c6ec5840d6c127f1f9f8761bc02783a8259e"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/save-vector-equivalence-check.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 133,
+      "sha256": "4836fdfb3a1f8764575d95e1919f979d4bbba617bee7342f4070eff684fddf22"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/save-vector-equivalence.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5168,
+      "sha256": "751582862738d7e7a86a592675718326c871f1d33646d39b549bcc014228a9e6"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/save-vector-equivalence.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3428,
+      "sha256": "a3d9c3a2c9ab6f343cfee2aea34db8cd98818fa66f39c34b6ae3354c612ba436"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/save-vector-equivalence.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8158,
+      "sha256": "7fcaad0c79ab1fb035e7d3aac7ea58d8b6e8df2b2fc7be9318f255a99327f578"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-isolation-summary.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 841517,
+      "sha256": "e1bc7fbdd80d5f72b24b9c82d186a87d481da31ba09de5f39845bce9257c347f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-isolation.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 69641,
+      "sha256": "6100f9a2b330a16380956a24e9a2becc4bc1dd6628bad83318cc68dc68a52fbd"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-real-10000-1e-08.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 526,
+      "sha256": "63e84c503c074f68dc29c79f333c557accbfbe0878cc2f8e2fa5b11e4b6cd752"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-real-10000-1e-15.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 526,
+      "sha256": "e891edc1d49d2b35eebddc1589598aa236fba9a24a3aae8f4320e46a94d3b273"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-real-10000-2e-09.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 526,
+      "sha256": "4f8baa07e2e40b2ca99002305abec5123669ae3a96df394af2a8432197280154"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-real-100000-1e-08.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 527,
+      "sha256": "d22d468e3628fa66ec4d9cd0b8b58b328c049fcf7e1288aa6fa7ff09a0c87e95"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-real-100000-1e-15.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 527,
+      "sha256": "e2aff7924a7d33f21e7c6cc5b2cc0fd463f6bc703a14d9573879f9e6ae14409b"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-real-100000-2e-09.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 527,
+      "sha256": "15ca15cff1e78dafa71e79fb54acb972ebb19890752da7c5b95d47cf3661246c"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-real-summary.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5657,
+      "sha256": "e19d2f7e7b0bf2641f11e39dc70f152ee168cc4cbff0f827e381d32d8e24aad3"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-real-tran-100-False.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 526,
+      "sha256": "4f8baa07e2e40b2ca99002305abec5123669ae3a96df394af2a8432197280154"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-real-tran-100-True.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 525,
+      "sha256": "1418694967c64853d94bc417093c39c19ff8bdc6cfc7abf25824ec84c05a3edc"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-real-tran-200-False.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 526,
+      "sha256": "6ab77a0a4980ff5ad17bda5d0070b1f086f50080b6965ae019fb2d6bba8fd69f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-real-tran-200-True.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 525,
+      "sha256": "f54b8b45f6d7e64079fc00317f153835dbffe4ec3ac6a4a60417742092c57848"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-real.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 46339,
+      "sha256": "e302cca1d5a7ac45933f5861d74c6656fcfb9c903014ab98c468b5724d24ddcf"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/send-short.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3960,
+      "sha256": "508fc79e8947510cfb9a4394e826a472721509174cd8e62466345be81a05d108"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-attempts.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1333,
+      "sha256": "ecc5c0996cbf6473e88e36da8d83bb065b012e64d7dc139732daf92760dd2c5f"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-baseline.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3939,
+      "sha256": "16bdd0ed5a50e78df4c06c4bd9bb65f233d12b5d7171c2848d23d71252617fcf"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-baseline.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 419,
+      "sha256": "09680fbb5aa0872a1c429bc18f85cd70248e24060e2bffdd40a36932cc2b53cd"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-baseline.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8075,
+      "sha256": "7af126726f77eb65b222674bba55faa571d59b2bfeac47a5246f02dc2fac2ff1"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-guarded-power.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5166,
+      "sha256": "d9e143370c83158e8facb7b7addb222740d809ec4b7e8f10a50955c379d7d231"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-guarded-power.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 313,
+      "sha256": "3ecf022e028e358d6dfd34795baf7287ca91c823666284864a83f1b2b806f289"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-guarded-power.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8122,
+      "sha256": "f2717664b702348fe051a5e602e27f8f065b994e89d333cb7218625cb8e643b3"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-iterations.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3948,
+      "sha256": "a5c234c4feab92c6661d4b553af336a6b652531650a13d36e27f562101e08d40"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-iterations.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 421,
+      "sha256": "70c235c5117a544ced5a9f625f2b673c2f2ba04ac4bcea5e06fff2f466a909f7"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-iterations.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8075,
+      "sha256": "4f114599b1832dd3e59464004c27e45bed6e6fe3ed8b7b1efc7a3dc062c578d1"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-no-output.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3865,
+      "sha256": "a0fdfadfc63f0d13f11c819f1a5c06ff4e8e95186f5dbf0f05cdd097b4e8ff0a"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-no-output.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 309,
+      "sha256": "c60c0023b0ca6d040f8f60f3303860c90edf53e5378a3ec44fd043c137a3621e"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-no-output.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6978,
+      "sha256": "db5be8279735b6a31be980944b7e3e145ada1af57da49f4689ebc9bcf73bd7f8"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-no-shunts.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3914,
+      "sha256": "edcd6ea4a2a206309f169f5cba50388314d848304073313c7b2c8ddc5f4a8986"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-no-shunts.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 420,
+      "sha256": "790af713aec4a909cf6956fafdadc32b227c7ea3c844367ed940461c5a0fba2e"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-no-shunts.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8015,
+      "sha256": "32b087f74b01c9e66c8ff4246738e9d386dc182c10ce68aef0f95a3a3c128e3e"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-preamp.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3805,
+      "sha256": "a5c62424a14ffe3b231803c854508e824c9fc4f3774e766e449c81fd6a43543a"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-preamp.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 346,
+      "sha256": "695fe83914d31baa203b1664e05327201f53c703a7922c1c083b0db77f447595"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-preamp.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6450,
+      "sha256": "4552a3ee266e99dface7b15973c25f03ac809374b5aa4e9e349cf5f617b124ab"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-review.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 71252,
+      "sha256": "f2f2fc0c5d271d0791652de192177b7ce0aa460cf350ec79d6ed3de8ae9248c7"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-trap.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3948,
+      "sha256": "f45ea530d23a276f31ac7bea62e86e464e72cf162fd2ab44b386eb0792ebc7e3"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-trap.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 415,
+      "sha256": "063b55e2d68544fe7139cd6a51abf4c2ef5d0648dccb2a851a46cc2a253c035b"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/solver-trap.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8075,
+      "sha256": "f8faee7cb8cd21fdbfabc6ba5582413b96f797a99e5ceff83cda7f3d0673944e"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/source-components.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 41415,
+      "sha256": "e3d336eebf05515a8e4f74ff83262beaadd20ec18bf507a12cb6e9f5c8837fa9"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/summary.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 469395,
+      "sha256": "7d45ffd2ca61ba02363d3c256b4c437b9e1ebb179a08b7aef9332c5ceb4ac0ef"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/tran-001.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3942,
+      "sha256": "136a93064d9efb4434b92a6651bd3a8d320c2d2fcf00f9c446a56d22192a20bc"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/tran-001.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3180,
+      "sha256": "ea4b3292b615bb146c01383f2e3f3620ac73592044e3b51a984e2b09511b9e98"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/tran-001.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8158,
+      "sha256": "7fcaad0c79ab1fb035e7d3aac7ea58d8b6e8df2b2fc7be9318f255a99327f578"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/tran-002.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3941,
+      "sha256": "718a062126fc2d1bfbbaa69c5e372876878873f86bae9472347f77bdc90f0727"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/tran-002.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3170,
+      "sha256": "9c1775aea300aa876e35e232bb3fd8a1ca4c6e3c6220fe349ff5f4b981137ecd"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/tran-002.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8190,
+      "sha256": "c2e329317d480d29519acaac151d6867f521918a3df1b14c1df62b80f7cef9c7"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/tran-003.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3943,
+      "sha256": "13e922fd60af5d98d9dcf144edb9c3b45e6364e2e8fe40a047b9acd9467fe025"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/tran-003.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3189,
+      "sha256": "802aef66b1a183e5bdbb283ef82fa143f2a02046b3575896c9b5fa4f5595bce8"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/tran-003.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8158,
+      "sha256": "a78b4d9c47b1675e1374eb0efedb6035f77695d2ac580df093b74f058685a810"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/tran-004.cir",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3942,
+      "sha256": "a304ac533fbbbfc443b700f3b9cb8a47d78bfcd0d00bd7c9664dde496df213f4"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/tran-004.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3161,
+      "sha256": "752ef79ee6623e7c3f3f4e111b487850faec44093b9f69a5df87d8ea7d0c05ae"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/tran-004.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8190,
+      "sha256": "384fd330b3c7b3c74322f39099865e1e3b3fc259bcf44541956f6a914372a943"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/results/transient-summary.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 13547,
+      "sha256": "074cd7bf1a2816e188871bbbe0c22b3fa6f35a22283828c59a1ecad8cac9924e"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/return-headroom-review.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5496,
+      "sha256": "c6631622db63af4f7975c5fd396f46f8f35b77cae318c0eccd310d47418aaac9"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/review.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8482,
+      "sha256": "827de1b49373bc106350ba010b772ca154004e2cd1cf81869eebb83c1ae0e58e"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/solver-review.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 8338,
+      "sha256": "bb830b4659506365e817f5c2654b146515efbf6fbd8a9bef9e04b7c9e68adefe"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/tools/CONTEXT.md",
+      "role": "contract",
+      "owner_route": "MAT-016",
+      "bytes": 1066,
+      "sha256": "bb3d4e79551d55e16d225837b194f58434125cd7fbff01d23bcbd4e3b9a2f83d"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/tools/audit.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 5682,
+      "sha256": "5075980943fb77b0f38f112388b6f1328438ab6d4c460f75fbe48f1dbc5fba0e"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/tools/fixture.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 5728,
+      "sha256": "10ea514a6a49c35f4c2e3d4766da725b5a0befccb38d2c89d4f7d96d42585cd5"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/tools/return_diagnostics.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 2027,
+      "sha256": "e78c62e73090760ed4ec49afe9a8c7d0771d7241517cae61c29168fd7dd0d953"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/tools/return_driver.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 7820,
+      "sha256": "0eb426722f309f8eb682fea0312cdccff9ed5b1e57fc6ae2462fb15a0f6235e4"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/tools/run.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 7710,
+      "sha256": "f088be4dd24b15274487e0be674f4a54d00d2cdd45a1c7e41735950cb015c668"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/tools/send_driver.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 3740,
+      "sha256": "faad31f4e02a0b034348179e82eb18769b43ba3968f7c434c269a83b866186ee"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/tools/send_isolation.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 2000,
+      "sha256": "bfdee995aaa1fb15ed1e2a1313cdb47a3385000679668bced9d31fc9ef1e54d8"
+    },
+    {
+      "path": "engineering/whole-amp/effects-loop/tools/solver_review.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 4626,
+      "sha256": "609d5bc7c40b375769e4d93555555c88593ef911ecd998c56d80454342af1ee2"
     },
     {
       "path": "engineering/whole-amp/electric-input-headroom/CONTEXT.md",
@@ -8770,8 +10653,8 @@
       "path": "engineering/whole-amp/pcb-measured-r/boards/Renegade_Control.kicad_pcb",
       "role": "editable-product/record",
       "owner_route": "MAT-017",
-      "bytes": 556498,
-      "sha256": "57b6fca66783e43059bd2070076fd4ef319179d17e7e38c6e768850e4c7ff15c"
+      "bytes": 543818,
+      "sha256": "11e8bc8c81143534be03ad05191090937020ae675bf2e7c8baa86722d0ccfa13"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/boards/Renegade_Control.kicad_prl",
@@ -8798,8 +10681,8 @@
       "path": "engineering/whole-amp/pcb-measured-r/boards/Renegade_Main.kicad_pcb",
       "role": "editable-product/record",
       "owner_route": "MAT-017",
-      "bytes": 373253,
-      "sha256": "baf16ec240e19c16b2b545a8bc78375e55ba3348d51e2ab014543ad07b714a51"
+      "bytes": 379977,
+      "sha256": "5433cd8e9b264b12328099fe6c94a03bbf308f5bdd04fc195e9017b13d799555"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/boards/Renegade_Main.kicad_prl",
@@ -8854,8 +10737,8 @@
       "path": "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb",
       "role": "editable-product/record",
       "owner_route": "MAT-017",
-      "bytes": 330192,
-      "sha256": "d504b26a4a76971c1e9ba0939e9bce23933df0f0b174de679f211cfd2432be03"
+      "bytes": 332977,
+      "sha256": "3f96fa4c4bf79e7f446293e513892c2894fce00e37920ae169b405de88fb625c"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_prl",
@@ -8879,34 +10762,6 @@
       "sha256": "d94858b06c97e69dd102229a7e6b4b0c635f6002b54ea068fbc1f7d3d129051a"
     },
     {
-      "path": "engineering/whole-amp/pcb-measured-r/boards/~Renegade_Control.kicad_pro.lck",
-      "role": "editable-product/record",
-      "owner_route": "MAT-017",
-      "bytes": 50,
-      "sha256": "281f359a18deab88955e2c5edd9fd3167680f12f8a7dc15f68dc696329bf08ef"
-    },
-    {
-      "path": "engineering/whole-amp/pcb-measured-r/boards/~Renegade_Main.kicad_pro.lck",
-      "role": "editable-product/record",
-      "owner_route": "MAT-017",
-      "bytes": 50,
-      "sha256": "281f359a18deab88955e2c5edd9fd3167680f12f8a7dc15f68dc696329bf08ef"
-    },
-    {
-      "path": "engineering/whole-amp/pcb-measured-r/boards/~Renegade_Power.kicad_pro.lck",
-      "role": "editable-product/record",
-      "owner_route": "MAT-017",
-      "bytes": 50,
-      "sha256": "281f359a18deab88955e2c5edd9fd3167680f12f8a7dc15f68dc696329bf08ef"
-    },
-    {
-      "path": "engineering/whole-amp/pcb-measured-r/boards/~Renegade_Reverb.kicad_pro.lck",
-      "role": "editable-product/record",
-      "owner_route": "MAT-017",
-      "bytes": 50,
-      "sha256": "281f359a18deab88955e2c5edd9fd3167680f12f8a7dc15f68dc696329bf08ef"
-    },
-    {
       "path": "engineering/whole-amp/pcb-measured-r/requirements-assessment.json",
       "role": "editable-product/record",
       "owner_route": "MAT-017",
@@ -8917,15 +10772,15 @@
       "path": "engineering/whole-amp/pcb-measured-r/review/CONTEXT.md",
       "role": "contract",
       "owner_route": "MAT-017",
-      "bytes": 3321,
-      "sha256": "5b20c9ee28cdaa76566e0f403a47641993eff0e0cc825f06e1891f87e89ebc47"
+      "bytes": 4215,
+      "sha256": "b145e873751fdd7dbd778a9b084b579600672a68594737a3eeaf76ccbde1d687"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/review/Control-audit.svg",
       "role": "editable-product/record",
       "owner_route": "MAT-017",
-      "bytes": 488231,
-      "sha256": "3b2c1b913c35803769c3dc7ebad704cce8e200b90fa1094b84938ce6170b5345"
+      "bytes": 476887,
+      "sha256": "6438d3bf5d001aa385224c18e63e8a8e616384ed153854d8dbf4960de7b078b8"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/review/Control-corner-detail.svg",
@@ -8945,15 +10800,15 @@
       "path": "engineering/whole-amp/pcb-measured-r/review/Control-strict-drc.json",
       "role": "editable-product/record",
       "owner_route": "MAT-017",
-      "bytes": 83723,
-      "sha256": "ab680491da479a1d9798270936bec6a9681c7c96a6923cb0c07c5a8debf72399"
+      "bytes": 76870,
+      "sha256": "795bf5660662715dc3f6e84f9dc52aeacd01b22ad08fc5fe028dd07105fb6e35"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/review/Main-audit.svg",
       "role": "editable-product/record",
       "owner_route": "MAT-017",
-      "bytes": 390015,
-      "sha256": "fe8cce0629d9cf388a6cdb9278e69e03842786b0e731d0474529a6e3cc8e148f"
+      "bytes": 397865,
+      "sha256": "8f545d2c1bffa78391c82d189f8ed60334702edcebae757ccbe92b0bf6d23861"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/review/Main-corner-detail.svg",
@@ -8974,14 +10829,14 @@
       "role": "editable-product/record",
       "owner_route": "MAT-017",
       "bytes": 102569,
-      "sha256": "446ef9d1b7d79a85bab342cc647c1ee1e78374e2bc990962601be5e1edab838e"
+      "sha256": "11e8ff5b72a163097ba3abe800a4fb839bb89f804f0951662e2c3f2dc060309f"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/review/Power-audit.svg",
       "role": "editable-product/record",
       "owner_route": "MAT-017",
       "bytes": 261049,
-      "sha256": "b6d17e59a7b328c57d70a22385c1bc873d995e6b9255c4a540ce5dd606c28b29"
+      "sha256": "d7ba850596b1c869c5d41492caff6e9f9b9a20b29219f63019b3220ad1a9a1a6"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/review/Power-corner-detail.svg",
@@ -9002,14 +10857,14 @@
       "role": "editable-product/record",
       "owner_route": "MAT-017",
       "bytes": 36512,
-      "sha256": "dd329612d39694552a3e7932a430dd242e674c89381a1446779ebf17a6c0cad5"
+      "sha256": "7580173a2aea30e842c75231e1d452c8b5c697505c220727802aa1fda6e576f1"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/review/Reverb-audit.svg",
       "role": "editable-product/record",
       "owner_route": "MAT-017",
-      "bytes": 368992,
-      "sha256": "05fe80aef95b5f03fb116c4d98f20ef377bc4bbe81c1360fb5bd46b39550e108"
+      "bytes": 373595,
+      "sha256": "c72f44018587fe7a200869f402a79fa2945f1cac48ed0fb5d5c9cd9fdea2279d"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/review/Reverb-drc.json",
@@ -9030,7 +10885,7 @@
       "role": "editable-product/record",
       "owner_route": "MAT-017",
       "bytes": 1093,
-      "sha256": "d5ec2fb06740dae1b4f3bd1b80d548f6f9004dbd25501eb9c0872c8ad01ad56e"
+      "sha256": "5fc3ddc6bc39f05bfb73ac20bc5d12559cc8b67cf3e5d950d8428fd633a54bee"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/review/bounded-repair-2026-11-21.json",
@@ -9064,8 +10919,8 @@
       "path": "engineering/whole-amp/pcb-measured-r/review/copper-audit.json",
       "role": "editable-product/record",
       "owner_route": "MAT-017",
-      "bytes": 44429,
-      "sha256": "37ae7907168f870d6c3289c5131f04381c7a81bbbaa81dfdf08bc9288cf4b827"
+      "bytes": 46502,
+      "sha256": "5e66f998383f5e4d796f5dce84d9dc3e97efbb2799b10095da737d525be905f0"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/review/electric-package-integration.json",
@@ -9101,6 +10956,104 @@
       "owner_route": "MAT-017",
       "bytes": 1121,
       "sha256": "83390d83c4d18036efcb014b20a5489a752bc6543b60196e7dd5ed54d04a661f"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-Control-drc.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 76905,
+      "sha256": "ead1a8eb6d3afee6ad399068eef4937a6193e2514c3e345d8a2bb8366cc4db75"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-Control.svg",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 476892,
+      "sha256": "a8674506b46cd831c942b1a712278b091e1dd3183bea55c26e334082bbc793f3"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-Main-drc.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 102569,
+      "sha256": "69161e143a1356fda8c399f22aff9c1d7d53f4382aa6f4b38e079d3875c0e5ea"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-Main.svg",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 397870,
+      "sha256": "a58bcb35ce3f52045967ee524a98740e975b028705eeea1062b5bad34dee30d1"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-Power-drc.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 36512,
+      "sha256": "ad974e3f42c1d4ff15baa6df1793a82897febdd53fbd410ce156672166cbae21"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-Power.svg",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 261054,
+      "sha256": "ae2b957e3e6c0c60ce9ccb0ebf997700d9c7379e7f25a518d855fcacb7e94eb9"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-Reverb-drc.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 1093,
+      "sha256": "3b0ac2a67f8c67a7b48555fb5006f747215700ede7cb0b81e10b012cf0a3f143"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-Reverb.svg",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 373600,
+      "sha256": "d787336d376ec4d54b8811610fef101a082fbaadc989476d7a86bd89a6a3aebe"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-adoption-guard.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 5681,
+      "sha256": "c9e11886f90dd17394786ac4eac7e74f27e032fedff297cd739d1c2d0c9a3150"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-hole-audit.csv",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 330856,
+      "sha256": "7783a38134c024913cf3ad36e4c494548ae1d869ea2d962ba9f361b1be2281bc"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-hole-audit.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 191362,
+      "sha256": "7448dc9d4af1e6551e1cb933161445d55af7a6830d7523b10067b31c100967ff"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-native-review.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 2626,
+      "sha256": "8e168c95541d6f332c05e84328fdde9bb0ee3a6620d43da5eaf2c4ed8fc82092"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-native.xml",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 460837,
+      "sha256": "383e70f00a4d53629ffc85b8c73a74c3fe5284efd3a6e7b3803fb9be3bc1c0d8"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/review/local-loop-review.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-017",
+      "bytes": 5931,
+      "sha256": "f9edd1f6dab858c2e01fb128cb7f626cb8fd5f5c5afadafb169334fe0217fc9b"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/review/native-requirements-facts.json",
@@ -9149,7 +11102,7 @@
       "role": "editable-product/record",
       "owner_route": "MAT-017",
       "bytes": 3677,
-      "sha256": "afda97cce8002d3ef35cd27e955899c20d17bfbc087b8649b8383c7aabaf0e2c"
+      "sha256": "51ad9041fc0896b7c03570db2a6768a2cefb5a4a3a53383a595ea1895571f31f"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/review/routing.json",
@@ -9197,8 +11150,15 @@
       "path": "engineering/whole-amp/pcb-measured-r/tools/CONTEXT.md",
       "role": "contract",
       "owner_route": "MAT-017",
-      "bytes": 3539,
-      "sha256": "b8df4ffd50d60b0cbe704588a6e978e027a721ede35a22e4dc368e18c571a75f"
+      "bytes": 4595,
+      "sha256": "9828b1b619ad811f11760a8f05350e3849c1b14ec50bfa3a3f4839b0d2844576"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/tools/audit_candidate_holes.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-017",
+      "bytes": 6771,
+      "sha256": "09710a0e5d6ef314ac552e8d6cbae63b71a64571570c29ff049a599f37ebbbe5"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/tools/audit_copper.py",
@@ -9264,6 +11224,13 @@
       "sha256": "56524570deee77dcdb8f3f16eaa7f1c7b3f7dfee6fba44cac7fb4640fc05d23b"
     },
     {
+      "path": "engineering/whole-amp/pcb-measured-r/tools/local_loop_candidates.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-017",
+      "bytes": 7621,
+      "sha256": "d6ab5af3c8d73746794239b3ee9c036e30423ded28f319adb04f563db85f14d0"
+    },
+    {
       "path": "engineering/whole-amp/pcb-measured-r/tools/refine_drafts.py",
       "role": "factory/reference",
       "owner_route": "MAT-017",
@@ -9276,6 +11243,13 @@
       "owner_route": "MAT-017",
       "bytes": 3446,
       "sha256": "63c402a8b50c29eab38b848e3722d2bc4fb75cc8a3a5802a474d712b1db06163"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/tools/review_local_loop_candidates.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-017",
+      "bytes": 1777,
+      "sha256": "2148a699936d5d3f38776df0d3bbcfa7607279ca830e13e36497d32f6ee55c90"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/tools/route_reverb.py",
@@ -9337,8 +11311,8 @@
       "path": "engineering/whole-amp/reverb-600/cad/03_routing.kicad_sch",
       "role": "editable-product/record",
       "owner_route": "MAT-003",
-      "bytes": 36950,
-      "sha256": "b87421684caee563cf5fb8201993d372b66d72b59bc656411a8476744ac04a73"
+      "bytes": 37382,
+      "sha256": "845c199d1ba0d822f13e3edeb5c131db81e3199dca35a75b2f0c68258485e7aa"
     },
     {
       "path": "engineering/whole-amp/reverb-600/cad/04_output.kicad_sch",
@@ -9386,15 +11360,15 @@
       "path": "engineering/whole-amp/reverb-600/cad/07b_reverb_recovery.kicad_sch",
       "role": "editable-product/record",
       "owner_route": "MAT-003",
-      "bytes": 59554,
-      "sha256": "9da72e0f113bef7c43aca61ab2fd41e5fd56396ccae5160a0fe1d75d9fc29fbe"
+      "bytes": 59825,
+      "sha256": "7cd5222840b7c8d849506537cea6243b71fa1890bb83cc3c45cc96817efab18e"
     },
     {
       "path": "engineering/whole-amp/reverb-600/cad/07c_reverb_output.kicad_sch",
       "role": "editable-product/record",
       "owner_route": "MAT-003",
-      "bytes": 78060,
-      "sha256": "62dce8df43486168e25350a123e67d45860bb69739b0ca16ad7b0c47fb75a504"
+      "bytes": 78415,
+      "sha256": "fb42f5104a74ad3e57fa359485e496152feace708dd048776b0a46d9301a9acf"
     },
     {
       "path": "engineering/whole-amp/reverb-600/cad/07d_reverb_harness.kicad_sch",
@@ -9407,8 +11381,8 @@
       "path": "engineering/whole-amp/reverb-600/cad/08_control_supply.kicad_sch",
       "role": "editable-product/record",
       "owner_route": "MAT-003",
-      "bytes": 93625,
-      "sha256": "19ffd4d3b0ad000a9dc55782073086264d819877ecf80b3392f57bca3504d441"
+      "bytes": 93840,
+      "sha256": "1cac8a138dbccea9c5dc1ccaf5fee0001795d9dd53eedf637fd7b006269a91ca"
     },
     {
       "path": "engineering/whole-amp/reverb-600/cad/09_controller.kicad_sch",
@@ -9421,15 +11395,15 @@
       "path": "engineering/whole-amp/reverb-600/cad/09b_latches_drivers.kicad_sch",
       "role": "editable-product/record",
       "owner_route": "MAT-003",
-      "bytes": 58873,
-      "sha256": "5fbbf8045412044e2a136b81203cec8efc0740b32970de0fe7212ddad344c26a"
+      "bytes": 61860,
+      "sha256": "2e328da897965180f61cc0db510100307ac91305d9f826bce0a5fd7e6ce0d6ce"
     },
     {
       "path": "engineering/whole-amp/reverb-600/cad/10_logic_power.kicad_sch",
       "role": "editable-product/record",
       "owner_route": "MAT-003",
-      "bytes": 34268,
-      "sha256": "d30b1d81989d643c7a3cc4ea8bd8e6a0a2522f346557bb6eed66594262a22e09"
+      "bytes": 34823,
+      "sha256": "92f82ac82c0f4819752cbb6886cd2fdf0f31ccc4307cb8de81365778edf57e2e"
     },
     {
       "path": "engineering/whole-amp/reverb-600/cad/CONTEXT.md",
@@ -9547,8 +11521,8 @@
       "path": "engineering/whole-amp/reverb-600/circuit.json",
       "role": "editable-product/record",
       "owner_route": "MAT-003",
-      "bytes": 129108,
-      "sha256": "91baf5190ebe6a94537a880749c269ff822a74142a541bb4a3d4a7da68f88c03"
+      "bytes": 131232,
+      "sha256": "52b79a98994940d483516966a57f03cab7bf8332a7a879015afd53e47128ae56"
     },
     {
       "path": "engineering/whole-amp/reverb-600/review/CONTEXT.md",
@@ -9633,6 +11607,13 @@
       "owner_route": "MAT-003",
       "bytes": 457188,
       "sha256": "28563ae850f8b9463648a372040009fe9d7fb5b7fa4505a03aab8ff3eb5742e9"
+    },
+    {
+      "path": "engineering/whole-amp/reverb-600/review/relay-diode-correction-2026-11-22.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-003",
+      "bytes": 1382,
+      "sha256": "087122f2fe658d76af8282cd760ac4ffe8862f594efe5fdb12260ea08c1384c7"
     },
     {
       "path": "engineering/whole-amp/reverb-600/review/review.md",
@@ -12020,6 +14001,97 @@
       "owner_route": "MAT-002",
       "bytes": 634,
       "sha256": "d622936296d1e8a6d12af3b9f8cdce49c1bef9886fb8e2ef756e7c35b0eee0aa"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/CONTEXT.md",
+      "role": "contract",
+      "owner_route": "MAT-002",
+      "bytes": 917,
+      "sha256": "38123c72b2186cfb040ede31f6d8c7ba048e4dc2c4f8046421ffc3faa4715d0d"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/evidence/CONTEXT.md",
+      "role": "contract",
+      "owner_route": "MAT-002",
+      "bytes": 465,
+      "sha256": "38dfb5a400acbbfa60fd9de72e97c8e880d1a71576cdad66fad3cdd35582a67c"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/evidence/circuit-interface.json",
+      "role": "evidence/source",
+      "owner_route": "MAT-002",
+      "bytes": 15517,
+      "sha256": "3b57e1ad65cbc137ba7ac19b62613c061839280e95305355f057d0b2364f0395"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/evidence/existing-preamp-levels.json",
+      "role": "evidence/source",
+      "owner_route": "MAT-002",
+      "bytes": 2288,
+      "sha256": "e0d97d25dc868e1dce88c4a967422db1a11dd5653fdf4880364af568390d08e6"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/evidence/phase-2-critique.md",
+      "role": "evidence/source",
+      "owner_route": "MAT-002",
+      "bytes": 881,
+      "sha256": "7dc5ff2e4319ff70405aec7b1ad6e3adf695183d9c9bc521d83935aa1448a985"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/evidence/phase-3-research.md",
+      "role": "evidence/source",
+      "owner_route": "MAT-002",
+      "bytes": 6985,
+      "sha256": "18b4abe086032760147786e2726e4926f8d818608662e9cb0fa58c6689fa301d"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/evidence/phase-4-premortem.md",
+      "role": "evidence/source",
+      "owner_route": "MAT-002",
+      "bytes": 874,
+      "sha256": "ddb63522e56f1fa844c57a89ab272fdb1afbf5f504e3019e3e52334d237e60e5"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/evidence/phase-5-fresh-eyes.md",
+      "role": "evidence/source",
+      "owner_route": "MAT-002",
+      "bytes": 757,
+      "sha256": "4b99f07f47b1b0036b0a0f11ab6c8758cd85c67cd4aa4a5dcd2bebad563ccb10"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/final.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-002",
+      "bytes": 9830,
+      "sha256": "fa28aeabecc403b74f2cef165741d191e819b658506e4cc28223ca3c17bf8d49"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/v1.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-002",
+      "bytes": 4785,
+      "sha256": "45d0adcce38d9c59d84907aa53c72c1792570fbf076a4c63a41d66eea89b690e"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/v2.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-002",
+      "bytes": 7662,
+      "sha256": "33ef32c11a753fc0e48632aa69f3183e80c2369099346a06501bcce72c666f5d"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/v3.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-002",
+      "bytes": 11650,
+      "sha256": "00676ba26c1e2e1da0d348fc0080ce844c34219b54295686097c361dbc7764d7"
+    },
+    {
+      "path": "plans/effects-loop-optical-review/v4.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-002",
+      "bytes": 8688,
+      "sha256": "b36c721f5a9509893f747d52190f98243fe6179e3064e79e80bbdb64dfcbc24a"
     },
     {
       "path": "plans/renegade-five-unit-build/CONTEXT.md",

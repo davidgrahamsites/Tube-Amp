@@ -63,7 +63,7 @@ def retry_timeouts():
     todo=[(name,row) for name,row in data['cases'].items() if row['status']=='timeout']
     def retry(pair):
         name,old=pair
-        new=bounded_case(name,old['config'],time_limit_s=120)
+        new=bounded_case(name,old['config'],time_limit_s=300)
         new['previous_attempt']={k:old[k] for k in ['status','error','elapsed_s']}
         (OUT/(name+'.json')).write_text(json.dumps(new,indent=2)+'\n')
         return name,new

@@ -2,11 +2,11 @@
   "scope": "Current copper only; no unconnected-net, zone-neck, RMS-current, thermal or EMC qualification",
   "boards": {
     "Main": {
-      "sha256": "baf16ec240e19c16b2b545a8bc78375e55ba3348d51e2ab014543ad07b714a51",
+      "sha256": "5433cd8e9b264b12328099fe6c94a03bbf308f5bdd04fc195e9017b13d799555",
       "nets": {
         "+12V": {
-          "segments": 21,
-          "length_mm": 160.84,
+          "segments": 23,
+          "length_mm": 171.71,
           "widths_mm": [
             0.3,
             0.4
@@ -57,8 +57,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "COIL_CH": {
-          "segments": 6,
-          "length_mm": 115.337,
+          "segments": 10,
+          "length_mm": 128.111,
           "widths_mm": [
             0.4
           ],
@@ -123,6 +123,17 @@
           "at_mm": [
             85.1425,
             68.1425
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "+12V",
+          "layer": "F.Cu",
+          "at_mm": [
+            85.1425,
+            27.7625
           ],
           "segments": 2,
           "in_pad": true,
@@ -291,8 +302,17 @@
       "arc_items_not_bend_screened": []
     },
     "Control": {
-      "sha256": "57b6fca66783e43059bd2070076fd4ef319179d17e7e38c6e768850e4c7ff15c",
+      "sha256": "11e8bc8c81143534be03ad05191090937020ae675bf2e7c8baa86722d0ccfa13",
       "nets": {
+        "+5V": {
+          "segments": 6,
+          "length_mm": 11.068,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
         "CH_QN": {
           "segments": 3,
           "length_mm": 11.229,
@@ -345,8 +365,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "COIL_CH": {
-          "segments": 7,
-          "length_mm": 89.813,
+          "segments": 4,
+          "length_mm": 72.381,
           "widths_mm": [
             0.4
           ],
@@ -354,8 +374,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "COIL_REV": {
-          "segments": 10,
-          "length_mm": 109.591,
+          "segments": 7,
+          "length_mm": 92.16,
           "widths_mm": [
             0.4
           ],
@@ -402,6 +422,15 @@
           "vias": [],
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
+        "GND": {
+          "segments": 15,
+          "length_mm": 50.2,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
         "NEG_RAW": {
           "segments": 17,
           "length_mm": 163.175,
@@ -435,22 +464,44 @@
       "simple_bends_over_45_degrees": [],
       "junctions_for_visual_review": [
         {
-          "net": "COIL_REV",
+          "net": "GND",
           "layer": "F.Cu",
           "at_mm": [
-            178.1893,
-            45.5793
+            13.855,
+            59.145
           ],
           "segments": 2,
           "in_pad": true,
           "at_via": false
         },
         {
-          "net": "COIL_CH",
+          "net": "GND",
           "layer": "F.Cu",
           "at_mm": [
-            117.5112,
-            45.5812
+            84.88,
+            24.095
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "+5V",
+          "layer": "F.Cu",
+          "at_mm": [
+            84.88,
+            21.555
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "+5V",
+          "layer": "F.Cu",
+          "at_mm": [
+            20.705,
+            43.355
           ],
           "segments": 2,
           "in_pad": true,
@@ -603,13 +654,14 @@
       "arc_items_not_bend_screened": []
     },
     "Reverb": {
-      "sha256": "d504b26a4a76971c1e9ba0939e9bce23933df0f0b174de679f211cfd2432be03",
+      "sha256": "3f96fa4c4bf79e7f446293e513892c2894fce00e37920ae169b405de88fb625c",
       "nets": {
         "+12V": {
-          "segments": 9,
-          "length_mm": 37.389,
+          "segments": 11,
+          "length_mm": 43.415,
           "widths_mm": [
-            0.3
+            0.3,
+            0.4
           ],
           "vias": [],
           "current_qualification": "pending per-path current/stackup/thermal evidence"
@@ -701,10 +753,11 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "COIL_REV": {
-          "segments": 7,
-          "length_mm": 29.943,
+          "segments": 9,
+          "length_mm": 35.969,
           "widths_mm": [
-            0.3
+            0.3,
+            0.4
           ],
           "vias": [],
           "current_qualification": "pending per-path current/stackup/thermal evidence"
@@ -867,8 +920,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "REC_FB": {
-          "segments": 23,
-          "length_mm": 85.463,
+          "segments": 22,
+          "length_mm": 74.465,
           "widths_mm": [
             0.3
           ],
@@ -885,8 +938,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "REC_OUT": {
-          "segments": 7,
-          "length_mm": 39.266,
+          "segments": 8,
+          "length_mm": 33.151,
           "widths_mm": [
             0.3
           ],
@@ -1069,13 +1122,13 @@
           "at_via": false
         },
         {
-          "net": "REC_FB",
+          "net": "REC_OUT",
           "layer": "F.Cu",
           "at_mm": [
-            63.0,
-            72.0
+            37.405,
+            61.0
           ],
-          "segments": 3,
+          "segments": 2,
           "in_pad": true,
           "at_via": false
         },
@@ -1087,6 +1140,39 @@
             63.5
           ],
           "segments": 3,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "REC_FB",
+          "layer": "F.Cu",
+          "at_mm": [
+            63.0,
+            72.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "REC_FB",
+          "layer": "F.Cu",
+          "at_mm": [
+            37.405,
+            63.54
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "REC_FB",
+          "layer": "F.Cu",
+          "at_mm": [
+            40.0,
+            63.54
+          ],
+          "segments": 2,
           "in_pad": true,
           "at_via": false
         },
@@ -1822,6 +1908,17 @@
           "at_mm": [
             93.0,
             86.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false
+        },
+        {
+          "net": "COIL_REV",
+          "layer": "F.Cu",
+          "at_mm": [
+            121.62,
+            17.0
           ],
           "segments": 2,
           "in_pad": true,

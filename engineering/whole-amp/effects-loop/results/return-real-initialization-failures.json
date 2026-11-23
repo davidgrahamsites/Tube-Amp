@@ -1,0 +1,300 @@
+{
+  "model_url": "https://www.ti.com/lit/zip/SBOMAV9",
+  "model_sha256": "66a115944b72948befa0c0c03a4d7123a80253c1e706fca587686838b66ea4a8",
+  "application_note": "https://www.ti.com/lit/an/sboa510/sboa510.pdf",
+  "expected_cases": 11,
+  "cases": [
+    {
+      "hz": 1000,
+      "requested_output_peak_V": 135.1,
+      "supply_magnitude_V": 170,
+      "bootstrap": false,
+      "end_s": 0.03,
+      "elapsed_s": 3.485204834025353,
+      "op": {
+        "BUF": 0.01968642656995544,
+        "PORT": 0.019628695113738565,
+        "VUP": 85.0,
+        "VDN": -85.0
+      },
+      "signals": {
+        "BUF": {
+          "min_V": -84.95074689046623,
+          "max_V": 84.9191407007754,
+          "mean_V": -0.0003352040444042359,
+          "fundamental_Vpk": 100.51540713525141,
+          "THD_2_to_10_percent": 17.094117089219168
+        },
+        "PORT": {
+          "min_V": -84.71570762403552,
+          "max_V": 84.67752193000351,
+          "mean_V": -0.00033225268960279664,
+          "fundamental_Vpk": 100.22063984551995,
+          "THD_2_to_10_percent": 17.09412122971798
+        },
+        "VUP": {
+          "min_V": 85.0,
+          "max_V": 85.0,
+          "mean_V": 85.0,
+          "fundamental_Vpk": 0.0,
+          "THD_2_to_10_percent": null
+        },
+        "VDN": {
+          "min_V": -85.0,
+          "max_V": -85.0,
+          "mean_V": -85.0,
+          "fundamental_Vpk": 0.0,
+          "THD_2_to_10_percent": null
+        },
+        "INP": {
+          "min_V": -1.3496498414784766,
+          "max_V": 1.3496399008342206,
+          "mean_V": -2.830763262684499e-09,
+          "fundamental_Vpk": 1.349633628985552,
+          "THD_2_to_10_percent": 0.0015111878829420003
+        }
+      },
+      "settled_relative_fundamental": 1.271244624012624e-06,
+      "gain_error_percent": -25.524854300714882,
+      "maximum_main_supply_span_V": 170.0,
+      "minimum_upper_output_margin_V": 0.0808592046631702,
+      "minimum_lower_output_margin_V": 0.04925309087489893,
+      "status": "completed"
+    },
+    {
+      "hz": 82.4,
+      "requested_output_peak_V": 135.1,
+      "supply_magnitude_V": 166.6,
+      "bootstrap": true,
+      "status": "failed",
+      "error": "No finite operating point",
+      "elapsed_s": 1.8783557079732418,
+      "final_log": [
+        "stdout v.xmain.v_vcm_max#branch                        nan                  nan",
+        "stdout vs#branch                                       nan                  nan",
+        "stdout vn#branch                                       nan                  nan",
+        "stdout vp#branch                                       nan                  nan",
+        "stdout a.xdn.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xdn.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xmain.x_u19.ag1#branch_1_0                      0                    0",
+        "stdout a.xmain.x_u18.ag1#branch_1_0                      0                    0",
+        "stderr doAnalyses: OP:  Timestep too small; trouble with node \"e.xdn.x_u4.e1#branch\"",
+        "stderr op simulation(s) aborted"
+      ]
+    },
+    {
+      "hz": 1000,
+      "requested_output_peak_V": 135.1,
+      "supply_magnitude_V": 166.6,
+      "bootstrap": true,
+      "status": "failed",
+      "error": "No finite operating point",
+      "elapsed_s": 1.8688158330041915,
+      "final_log": [
+        "stdout v.xmain.v_vcm_max#branch                        nan                  nan",
+        "stdout vs#branch                                       nan                  nan",
+        "stdout vn#branch                                       nan                  nan",
+        "stdout vp#branch                                       nan                  nan",
+        "stdout a.xdn.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xdn.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xmain.x_u19.ag1#branch_1_0                      0                    0",
+        "stdout a.xmain.x_u18.ag1#branch_1_0                      0                    0",
+        "stderr doAnalyses: OP:  Timestep too small; trouble with node \"e.xdn.x_u4.e1#branch\"",
+        "stderr op simulation(s) aborted"
+      ]
+    },
+    {
+      "hz": 5000,
+      "requested_output_peak_V": 135.1,
+      "supply_magnitude_V": 166.6,
+      "bootstrap": true,
+      "status": "failed",
+      "error": "No finite operating point",
+      "elapsed_s": 1.8359590829350054,
+      "final_log": [
+        "stdout v.xmain.v_vcm_max#branch                        nan                  nan",
+        "stdout vs#branch                                       nan                  nan",
+        "stdout vn#branch                                       nan                  nan",
+        "stdout vp#branch                                       nan                  nan",
+        "stdout a.xdn.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xdn.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xmain.x_u19.ag1#branch_1_0                      0                    0",
+        "stdout a.xmain.x_u18.ag1#branch_1_0                      0                    0",
+        "stderr doAnalyses: OP:  Timestep too small; trouble with node \"e.xdn.x_u4.e1#branch\"",
+        "stderr op simulation(s) aborted"
+      ]
+    },
+    {
+      "hz": 20000,
+      "requested_output_peak_V": 135.1,
+      "supply_magnitude_V": 166.6,
+      "bootstrap": true,
+      "status": "failed",
+      "error": "No finite operating point",
+      "elapsed_s": 1.940493666101247,
+      "final_log": [
+        "stdout v.xmain.v_vcm_max#branch                        nan                  nan",
+        "stdout vs#branch                                       nan                  nan",
+        "stdout vn#branch                                       nan                  nan",
+        "stdout vp#branch                                       nan                  nan",
+        "stdout a.xdn.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xdn.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xmain.x_u19.ag1#branch_1_0                      0                    0",
+        "stdout a.xmain.x_u18.ag1#branch_1_0                      0                    0",
+        "stderr doAnalyses: OP:  Timestep too small; trouble with node \"e.xdn.x_u4.e1#branch\"",
+        "stderr op simulation(s) aborted"
+      ]
+    },
+    {
+      "hz": 1000,
+      "requested_output_peak_V": 150,
+      "supply_magnitude_V": 166.6,
+      "bootstrap": true,
+      "status": "failed",
+      "error": "No finite operating point",
+      "elapsed_s": 1.9023171667940915,
+      "final_log": [
+        "stdout v.xmain.v_vcm_max#branch                        nan                  nan",
+        "stdout vs#branch                                       nan                  nan",
+        "stdout vn#branch                                       nan                  nan",
+        "stdout vp#branch                                       nan                  nan",
+        "stdout a.xdn.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xdn.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xmain.x_u19.ag1#branch_1_0                      0                    0",
+        "stdout a.xmain.x_u18.ag1#branch_1_0                      0                    0",
+        "stderr doAnalyses: OP:  Timestep too small; trouble with node \"e.xdn.x_u4.e1#branch\"",
+        "stderr op simulation(s) aborted"
+      ]
+    },
+    {
+      "hz": 82.4,
+      "requested_output_peak_V": 135.1,
+      "supply_magnitude_V": 173.4,
+      "bootstrap": true,
+      "status": "failed",
+      "error": "No finite operating point",
+      "elapsed_s": 2.296803333098069,
+      "final_log": [
+        "stdout v.xmain.v_vcm_max#branch                        nan                  nan",
+        "stdout vs#branch                                       nan                  nan",
+        "stdout vn#branch                                       nan                  nan",
+        "stdout vp#branch                                       nan                  nan",
+        "stdout a.xdn.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xdn.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xmain.x_u19.ag1#branch_1_0                      0                    0",
+        "stdout a.xmain.x_u18.ag1#branch_1_0                      0                    0",
+        "stderr doAnalyses: OP:  Timestep too small; trouble with node \"xup.n161737\"",
+        "stderr op simulation(s) aborted"
+      ]
+    },
+    {
+      "hz": 1000,
+      "requested_output_peak_V": 135.1,
+      "supply_magnitude_V": 173.4,
+      "bootstrap": true,
+      "status": "failed",
+      "error": "No finite operating point",
+      "elapsed_s": 2.294836499961093,
+      "final_log": [
+        "stdout v.xmain.v_vcm_max#branch                        nan                  nan",
+        "stdout vs#branch                                       nan                  nan",
+        "stdout vn#branch                                       nan                  nan",
+        "stdout vp#branch                                       nan                  nan",
+        "stdout a.xdn.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xdn.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xmain.x_u19.ag1#branch_1_0                      0                    0",
+        "stdout a.xmain.x_u18.ag1#branch_1_0                      0                    0",
+        "stderr doAnalyses: OP:  Timestep too small; trouble with node \"xup.n161737\"",
+        "stderr op simulation(s) aborted"
+      ]
+    },
+    {
+      "hz": 5000,
+      "requested_output_peak_V": 135.1,
+      "supply_magnitude_V": 173.4,
+      "bootstrap": true,
+      "status": "failed",
+      "error": "No finite operating point",
+      "elapsed_s": 2.2315049581229687,
+      "final_log": [
+        "stdout v.xmain.v_vcm_max#branch                        nan                  nan",
+        "stdout vs#branch                                       nan                  nan",
+        "stdout vn#branch                                       nan                  nan",
+        "stdout vp#branch                                       nan                  nan",
+        "stdout a.xdn.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xdn.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xmain.x_u19.ag1#branch_1_0                      0                    0",
+        "stdout a.xmain.x_u18.ag1#branch_1_0                      0                    0",
+        "stderr doAnalyses: OP:  Timestep too small; trouble with node \"xup.n161737\"",
+        "stderr op simulation(s) aborted"
+      ]
+    },
+    {
+      "hz": 20000,
+      "requested_output_peak_V": 135.1,
+      "supply_magnitude_V": 173.4,
+      "bootstrap": true,
+      "status": "failed",
+      "error": "No finite operating point",
+      "elapsed_s": 2.3182563341688365,
+      "final_log": [
+        "stdout v.xmain.v_vcm_max#branch                        nan                  nan",
+        "stdout vs#branch                                       nan                  nan",
+        "stdout vn#branch                                       nan                  nan",
+        "stdout vp#branch                                       nan                  nan",
+        "stdout a.xdn.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xdn.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xmain.x_u19.ag1#branch_1_0                      0                    0",
+        "stdout a.xmain.x_u18.ag1#branch_1_0                      0                    0",
+        "stderr doAnalyses: OP:  Timestep too small; trouble with node \"xup.n161737\"",
+        "stderr op simulation(s) aborted"
+      ]
+    },
+    {
+      "hz": 1000,
+      "requested_output_peak_V": 150,
+      "supply_magnitude_V": 173.4,
+      "bootstrap": true,
+      "status": "failed",
+      "error": "No finite operating point",
+      "elapsed_s": 2.399352124892175,
+      "final_log": [
+        "stdout v.xmain.v_vcm_max#branch                        nan                  nan",
+        "stdout vs#branch                                       nan                  nan",
+        "stdout vn#branch                                       nan                  nan",
+        "stdout vp#branch                                       nan                  nan",
+        "stdout a.xdn.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xdn.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u19.ag1#branch_1_0                        0                    0",
+        "stdout a.xup.x_u18.ag1#branch_1_0                        0                    0",
+        "stdout a.xmain.x_u19.ag1#branch_1_0                      0                    0",
+        "stdout a.xmain.x_u18.ag1#branch_1_0                      0                    0",
+        "stderr doAnalyses: OP:  Timestep too small; trouble with node \"xup.n161737\"",
+        "stderr op simulation(s) aborted"
+      ]
+    }
+  ],
+  "all_requested_cases_attempted": true,
+  "native_circuit_changed": false,
+  "headroom_qualified": false,
+  "fabrication_release": false,
+  "scope": "Unmodified manufacturer model experiment. Fixed-supply comparator then three-amplifier bootstrap. Ideal supplies; not integrated with amp. Failed or timed-out cases are NOT electrical results. Gain/mixing, startup, supply tolerances, protection, component cost/stock and fit remain unqualified."
+}

@@ -1,6 +1,6 @@
 # Feedback and decision trail
 
-Generated as of 2026-11-21; source: ../feedback/events.json. Backfilled original timestamps may be unknown. Incorporated means recorded, not build-complete.
+Generated as of 2026-11-23; source: ../feedback/events.json. Backfilled original timestamps may be unknown. Incorporated means recorded, not build-complete.
 
 ## FB-001 — requirement
 Authority: user. Disposition: incorporated. Recorded: 2026-11-20. Original date: unknown.
@@ -928,4 +928,54 @@ Review the supplied repository as reference evidence, cross-check primary source
 Source: Current conversation: https://github.com/zhbi98/pcb-layout-design
 
 - [engineering/whole-amp/pcb-measured-r/review/external-guidance-comparison-2026-11-21.md](<../../engineering/whole-amp/pcb-measured-r/review/external-guidance-comparison-2026-11-21.md>)
+
+## FB-099 — effects-loop-review
+Authority: user. Disposition: incorporated. Recorded: 2026-11-23. Original date: 2026-11-23.
+
+> do a research on the optocoupler idea ... and do a five-times-skill-plus loop on adding the effects send.
+
+Authorize research and five-pass plan for existing passive J3/J4 loop; not approval of a specific optical substitution.
+
+Source: Current build conversation
+
+- [brain/records/DEC-014-effects-loop-optical-review.md](<../../brain/records/DEC-014-effects-loop-optical-review.md>)
+- [plans/effects-loop-optical-review/final.md](<../../plans/effects-loop-optical-review/final.md>)
+
+## FB-100 — optocoupler-relay-combination
+Authority: user. Disposition: incorporated. Recorded: 2026-11-23. Original date: 2026-11-23.
+
+> Many designs use an optocoupler to isolate a control signal and drive a relay ... let’s look into it!
+
+Evaluate combined optical control plus mechanical relay, including actual isolation boundary and benefits in this circuit.
+
+Source: Current build conversation
+
+- [brain/records/DEC-014-effects-loop-optical-review.md](<../../brain/records/DEC-014-effects-loop-optical-review.md>)
+- [plans/effects-loop-optical-review/final.md](<../../plans/effects-loop-optical-review/final.md>)
+
+## FB-101 — effects-loop-execution
+Authority: user. Disposition: incorporated. Recorded: 2026-11-23. Original date: 2026-11-23.
+
+> so you can go ahead and start on all this now, right?
+
+Authorize execution of the reviewed effects-loop plan, starting with integrated signal/loading qualification; no purchase or fabrication release.
+
+Source: Current build conversation
+
+- [brain/records/DEC-014-effects-loop-optical-review.md](<../../brain/records/DEC-014-effects-loop-optical-review.md>)
+- [engineering/whole-amp/effects-loop/CONTEXT.md](<../../engineering/whole-amp/effects-loop/CONTEXT.md>)
+- [engineering/whole-amp/effects-loop/review.md](<../../engineering/whole-amp/effects-loop/review.md>)
+
+## FB-102 — return-headroom-pcb-execution
+Authority: user. Disposition: incorporated. Recorded: 2026-11-23. Original date: 2026-11-23.
+
+> Fix the effects return headroom and the two simulation timeouts, then continue the PCB and fit checks. Keep the blocks intact, log everything in ICM and push to GitHub.
+
+Continue electrical qualification and PCB repairs, preserve functional blocks, verify fit and tool access, retain evidence and push the reviewed checkpoint. No fabrication or purchase release.
+
+Source: Current build conversation
+
+- [brain/records/DEC-014-effects-loop-optical-review.md](<../../brain/records/DEC-014-effects-loop-optical-review.md>)
+- [engineering/whole-amp/effects-loop/solver-review.md](<../../engineering/whole-amp/effects-loop/solver-review.md>)
+- [engineering/whole-amp/pcb-measured-r/review/local-loop-review.md](<../../engineering/whole-amp/pcb-measured-r/review/local-loop-review.md>)
 

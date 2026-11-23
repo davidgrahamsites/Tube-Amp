@@ -4,9 +4,9 @@ Owner: electric integration. Authority: FB-101 / DEC-014. Status: numerical scre
 
 ## Engineering disposition
 
-The first large-signal failure has been localized to the EL34 model's fractional-power expression. A domain guard fixes that failure without changing the intended nonnegative model equation. Ten of twelve heavy-overdrive cases complete; two remain time-limited. The return circuit still needs substantial voltage swing. A padded solid-state SEND branch is promising, but neither its protection nor the return architecture is released.
+The first large-signal failure has been localized to the EL34 model's fractional-power expression. A domain guard fixes that failure without changing the intended nonnegative model equation. All twelve heavy-overdrive cases now complete the requested 0.5-second window. The return circuit still needs substantial voltage swing. A padded solid-state SEND branch is promising, but neither its protection nor the return architecture is released.
 
-No native schematic, PCB, component selection or mechanical geometry is changed by this pass. Existing relay controls remain selected for their existing functions. The quiet signal, reverb and power blocks remain separate.
+This effects-loop experiment changes no native topology or mechanical geometry. Separate local bypass and relay PCB repairs were adopted on 23 November; see the PCB local-loop review. Existing relay controls remain selected for their existing functions. The quiet signal, reverb and power blocks remain separate.
 
 ## Numerical correction
 
@@ -30,7 +30,7 @@ Four guarded normal-signal cases were compared with the retained unguarded resul
 
 ## Heavy-overdrive results and limits
 
-The matrix uses clean/dirty, B_EARLY 240/320 V, 82.4/1000/5000 Hz, and 1 V peak source. Volume fraction is 0.25 and tone/gain fractions are 0.5. B_PRE follows the fixture at B_EARLY +35 V. Ten cases completed. Dirty-channel 5 kHz at both rails exceeded the 120-second wall-clock limit after the original 30-second attempts. Their saved status is **timeout**, not pass. Some completed cases also show residual window-to-window settling; completion alone is not full qualification.
+The matrix uses clean/dirty, B_EARLY 240/320 V, 82.4/1000/5000 Hz, and 1 V peak source. Volume fraction is 0.25 and tone/gain fractions are 0.5. B_PRE follows the fixture at B_EARLY +35 V. All twelve cases completed. Dirty-channel 5 kHz at both rails previously exceeded the 120-second wall-clock limit after the original 30-second attempts. Saving only the eleven measured interface signals, instead of every internal macro-model vector, and allowing a 300-second bounded retry resolved both timeouts. They completed in 130.21 and 162.31 seconds, respectively. Previous timeout attempts remain in the results. The circuit equations, integration settings, tolerances and full 0.5-second window were preserved. A separate same-circuit save-list equivalence check found zero change in the measured fundamental amplitudes. Some completed cases also show residual window-to-window settling; completion alone is not full qualification.
 
 The previously failing clean/240 V/1 kHz case reaches 0.5 seconds. Its coarse-run internal FX_SEND swings approximately **−79.68 to +66.16 V**. This is an internal tube signal, not a pedal-safe level. It demonstrates that a unity buffer on ±15 V cannot transparently reproduce this checked overload waveform.
 
@@ -44,6 +44,8 @@ The first timestep refinement exceeded the 0.02 percentage-point THD comparison 
 
 These pass the scoped numerical comparison of 0.1% amplitude and 0.02 percentage-point THD. They do not validate real output power. The fixture uses stiff supplies, generic tubes, fixed bias and an ideal behavioral transformer with no saturation and nonphysical DC transfer. Power supply sag, component spread, actual transformer response and the full control/pickup envelope remain open.
 
+The largest observed FX_SEND swing in this matrix is **−135.094 to +97.777 V**, or **232.871 V peak-to-peak**, in clean/320 V/5 kHz. These are checked fixture results, not a guaranteed maximum over all controls and component tolerances. The new RETURN experiment is documented in [return-headroom-review.md](return-headroom-review.md).
+
 ## TI macro-model SEND check
 
 The retained TI OPAx134 model was tested as a unity follower on ±15 V, preceded by a provisional 9.9 MΩ /100 kΩ divider and followed by 100 Ω series resistance. This is a standalone branch; its source is ideal. It does not replace the integrated loading study or qualify a return stage. See the [TI OPA2134 datasheet](https://www.ti.com/lit/ds/symlink/opa2134.pdf) for device limits beyond the macro-model.
@@ -56,8 +58,8 @@ Initial shorted runs converged to an invalid operating point: BUF approximately 
 
 ## Reproduction and next work
 
-Factories: `tools/solver_review.py`, `tools/send_driver.py`. Evidence: `results/solver-review.json`, `results/send-real-summary.json`, exact decks/logs and `results/audit.json`. Run the solver factory, then `--retry-timeouts` to allow 120 seconds for time-limited cases. The standalone SEND factory has a 60-second process bound. Use `RENEGADE_LOOP_INPUT` with the saved component snapshot for replay; source/model hashes and runtime requirements are stated in review.md.
+Factories: `tools/solver_review.py`, `tools/send_driver.py`. Evidence: `results/solver-review.json`, `results/send-real-summary.json`, exact decks/logs and `results/audit.json`. Run the solver factory, then `--retry-timeouts` to allow 300 seconds for time-limited cases. The standalone SEND factory has a 60-second process bound. Use `RENEGADE_LOOP_INPUT` with the saved component snapshot for replay; source/model hashes and runtime requirements are stated in review.md.
 
-Next: resolve remaining nonlinear cases; assess a physically valid output transformer representation; define a protected high-voltage return candidate and preserve all three transfers (dry, wet and spring excitation). Only then select exact domestically available parts and integrate a readable schematic, connectors, footprint/drill data and routing. Cabinet fit, removable rear wood and actual drill access remain separate release gates. No manufacture-ready claim is supported by this checkpoint.
+Next: qualify the RETURN recovery and its dry/wet/spring-send interfaces; assess a physically valid output transformer representation; define a protected high-voltage return candidate and preserve all three transfers (dry, wet and spring excitation). Only then select exact domestically available parts and integrate a readable schematic, connectors, footprint/drill data and routing. Cabinet fit, removable rear wood and actual drill access remain separate release gates. No manufacture-ready claim is supported by this checkpoint.
 
 Human check: compare the voltage scale, incomplete cases and return/mixing consequences before accepting a recovery design. Read the circuit alongside these results, not only the aggregate audit pass.

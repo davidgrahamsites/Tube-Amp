@@ -1372,6 +1372,24 @@
       ],
       "supersedes": [],
       "next_action": "First integrated AC/transient screening saved; resolve heavy-overdrive convergence and recovery/mix envelope before native implementation."
+    },
+    {
+      "id": "FB-102",
+      "recorded_on": "2026-11-23",
+      "occurred_on": "2026-11-23",
+      "authority": "user",
+      "kind": "return-headroom-pcb-execution",
+      "quote": "Fix the effects return headroom and the two simulation timeouts, then continue the PCB and fit checks. Keep the blocks intact, log everything in ICM and push to GitHub.",
+      "source": "Current build conversation",
+      "interpretation": "Continue electrical qualification and PCB repairs, preserve functional blocks, verify fit and tool access, retain evidence and push the reviewed checkpoint. No fabrication or purchase release.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-014-effects-loop-optical-review.md",
+        "engineering/whole-amp/effects-loop/solver-review.md",
+        "engineering/whole-amp/pcb-measured-r/review/local-loop-review.md"
+      ],
+      "supersedes": [],
+      "next_action": "Both original timeouts resolved; RETURN 20 kHz model failures remain unqualified. Local PCB bypass/relay repairs adopted: 234 unrouted, 68 provisional courtyards. Qualify recovery/mix, connectors, native bond/linkage, populated fit and actual drill access."
     }
   ]
 }

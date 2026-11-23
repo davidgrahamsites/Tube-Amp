@@ -40,6 +40,10 @@ def stats(t,y,f,end):
 
 def transient_case(steps=96,max_step=20e-6,**kw):
     text,_=deck(**kw);sp.load(text);sp.cmd('op')
+    # Saving internal macro-model vectors is unnecessary for this interface test.
+    # ngspice's save parser requires lowercase node names. This changes storage,
+    # not the equations, tolerances, integration method or integration interval.
+    sp.cmd('save '+' '.join('v('+n.lower()+')' for n in NODES))
     f=kw.get('freq',1000);end=max(.5,30/f);step=min(max_step,1/(f*steps))
     sp.cmd(f'tran {step} {end} {max(0,end-20/f)} {step}')
     t=np.array(sp.vector('time'));assert len(t) and t[-1]>=end*(1-1e-8), sp.logs[-8:]
@@ -48,7 +52,7 @@ def transient_case(steps=96,max_step=20e-6,**kw):
     earlier={n:stats(t,y,f,end-10/f) for n,y in signals.items()}
     settling={n:abs(s[n]['fundamental_Vpk']-earlier[n]['fundamental_Vpk'])/max(s[n]['fundamental_Vpk'],1e-12) for n in NODES}
     sp.cmd('destroy all')
-    return dict(config=kw,steps_per_cycle=steps,max_step_s=step,end_s=float(t[-1]),signals=s,settling_relative_fundamental=settling),text
+    return dict(config=kw,steps_per_cycle=steps,max_step_s=step,end_s=float(t[-1]),saved_nodes=NODES,signals=s,settling_relative_fundamental=settling),text
 
 def main():
     sp.cmd('version');version=list(sp.logs)

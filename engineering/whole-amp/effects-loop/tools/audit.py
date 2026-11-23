@@ -35,7 +35,7 @@ for ch in ['clean','dirty']:
     b=next(r for r in rows if r['config']['mode']=='buffer')['points']['1000']['magnitude']['PI_G1']
     wet.append(dict(channel=ch,change_dB=20*math.log10(b/a)))
 failure=json.loads((out/'overdrive-coverage.json').read_text())
-checks['large_signal_gap_explicit']=failure['status'] in ['failed','timeout']
+checks['historical_unguarded_failure_retained']=failure['status'] in ['failed','timeout']
 solver=json.loads((out/'solver-review.json').read_text())
 diagnostic={r['variant']:r for r in solver['diagnostics']}
 checks['legacy_failure_and_guard_success_reproduced']=diagnostic['baseline']['status']=='failed' and diagnostic['guarded-power']['status']=='completed'
@@ -51,6 +51,14 @@ for node in ['FX_SEND','PI_G1','SPEAKER']:
 checks['overdrive_refined_amplitude_within_0_1_percent']=max(r['amplitude_change_percent'] for r in overdrive_refinement)<.1
 checks['overdrive_refined_THD_within_0_02_percentage_points']=max(r['THD_change_percentage_points'] for r in overdrive_refinement)<.02
 checks['overdrive_coverage_states_explicit']=all(r['status'] in ['completed','failed','timeout'] for r in solver['cases'].values())
+heavy = {k:r for k,r in solver['cases'].items() if k.startswith('guard-heavy-') and 'refined' not in k}
+checks['twelve_heavy_cases_complete_full_window'] = len(heavy)==12 and all(r['status']=='completed' and r['end_s']>=.5*(1-1e-8) for r in heavy.values())
+equivalence=json.loads((out/'save-vector-equivalence-check.json').read_text())
+checks['save_list_equivalence'] = equivalence['passes'] and equivalence['max_relative_fundamental_change'] < 1e-9
+return_result=json.loads((out/'return-real-summary.json').read_text())
+checks['return_cases_have_explicit_status'] = return_result['all_requested_cases_attempted'] and len(return_result['cases']) == return_result['expected_cases'] and all(r['status'] in ['completed','failed','timeout'] for r in return_result['cases'])
+checks['no_premature_return_release'] = return_result['headroom_qualified'] is False and return_result['fabrication_release'] is False
+
 real_send=json.loads((out/'send-real-summary.json').read_text())
 checks['six_real_send_AC_cases']=len(real_send['ac'])==6
 checks['four_real_send_transients_complete']=len(real_send['transient'])==4 and all(r['status']=='completed' for r in real_send['transient'])

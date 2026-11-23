@@ -1,0 +1,5810 @@
+{
+  "scope": "Every drilled footprint pad and via on all four active and candidate boards. Nominal CAD geometry only; no lead fit, manufacturing tolerance, assembled fit or release claim.",
+  "native_xml_sha256": "383e70f00a4d53629ffc85b8c73a74c3fe5284efd3a6e7b3803fb9be3bc1c0d8",
+  "circuit_sha256": "52b79a98994940d483516966a57f03cab7bf8332a7a879015afd53e47128ae56",
+  "boards": {
+    "active_Main": {
+      "sha256": "5433cd8e9b264b12328099fe6c94a03bbf308f5bdd04fc195e9017b13d799555",
+      "pads_checked": 128,
+      "contract_errors": [],
+      "native_net_label_differences": [
+        {
+          "ref": "R8",
+          "pad": "1",
+          "native": "Net-(V1A-K)",
+          "actual": "CL_K2"
+        },
+        {
+          "ref": "C8",
+          "pad": "1",
+          "native": "Net-(V2B-A)",
+          "actual": "DR_P1"
+        },
+        {
+          "ref": "C8",
+          "pad": "2",
+          "native": "Net-(C8-Pad2)",
+          "actual": "DR_GAIN_TOP"
+        },
+        {
+          "ref": "C4",
+          "pad": "1",
+          "native": "Net-(C3-Pad1)",
+          "actual": "CL_TONE"
+        },
+        {
+          "ref": "C4",
+          "pad": "2",
+          "native": "Net-(C4-Pad2)",
+          "actual": "CL_BASS_BOTTOM"
+        },
+        {
+          "ref": "R23",
+          "pad": "1",
+          "native": "Net-(V3A-K)",
+          "actual": "DR_CF"
+        },
+        {
+          "ref": "R23",
+          "pad": "2",
+          "native": "Net-(C16-Pad1)",
+          "actual": "DR_TONE"
+        },
+        {
+          "ref": "C19",
+          "pad": "2",
+          "native": "Net-(V4B-G)",
+          "actual": "PI_G1"
+        },
+        {
+          "ref": "R11",
+          "pad": "1",
+          "native": "Net-(V2B-K)",
+          "actual": "DR_K1"
+        },
+        {
+          "ref": "C21",
+          "pad": "1",
+          "native": "Net-(C20-Pad2)",
+          "actual": "NFB_NODE"
+        },
+        {
+          "ref": "C21",
+          "pad": "2",
+          "native": "Net-(C21-Pad2)",
+          "actual": "PRES_TOP"
+        },
+        {
+          "ref": "K1",
+          "pad": "4",
+          "native": "Net-(K1-Pad4)",
+          "actual": "INPUT_STOP"
+        },
+        {
+          "ref": "C20",
+          "pad": "1",
+          "native": "Net-(V4A-G)",
+          "actual": "PI_G2"
+        },
+        {
+          "ref": "C20",
+          "pad": "2",
+          "native": "Net-(C20-Pad2)",
+          "actual": "NFB_NODE"
+        },
+        {
+          "ref": "R27",
+          "pad": "1",
+          "native": "Net-(V4A-G)",
+          "actual": "PI_G2"
+        },
+        {
+          "ref": "R27",
+          "pad": "2",
+          "native": "Net-(R25-Pad2)",
+          "actual": "PI_TAIL_TOP"
+        },
+        {
+          "ref": "R25",
+          "pad": "1",
+          "native": "Net-(V4B-G)",
+          "actual": "PI_G1"
+        },
+        {
+          "ref": "R25",
+          "pad": "2",
+          "native": "Net-(R25-Pad2)",
+          "actual": "PI_TAIL_TOP"
+        },
+        {
+          "ref": "R29",
+          "pad": "2",
+          "native": "Net-(V4B-A)",
+          "actual": "PI_P1"
+        },
+        {
+          "ref": "R28",
+          "pad": "1",
+          "native": "Net-(R25-Pad2)",
+          "actual": "PI_TAIL_TOP"
+        },
+        {
+          "ref": "R28",
+          "pad": "2",
+          "native": "Net-(C20-Pad2)",
+          "actual": "NFB_NODE"
+        },
+        {
+          "ref": "C7",
+          "pad": "1",
+          "native": "Net-(V2B-K)",
+          "actual": "DR_K1"
+        },
+        {
+          "ref": "C16",
+          "pad": "1",
+          "native": "Net-(C16-Pad1)",
+          "actual": "DR_TONE"
+        },
+        {
+          "ref": "C16",
+          "pad": "2",
+          "native": "Net-(C16-Pad2)",
+          "actual": "DR_BASS_TOP"
+        },
+        {
+          "ref": "R26",
+          "pad": "1",
+          "native": "Net-(V4A-K)",
+          "actual": "PI_K"
+        },
+        {
+          "ref": "R26",
+          "pad": "2",
+          "native": "Net-(R25-Pad2)",
+          "actual": "PI_TAIL_TOP"
+        },
+        {
+          "ref": "R30",
+          "pad": "2",
+          "native": "Net-(V4A-A)",
+          "actual": "PI_P2"
+        },
+        {
+          "ref": "R33",
+          "pad": "1",
+          "native": "Net-(C23-Pad2)",
+          "actual": "GRID_A_FEED"
+        },
+        {
+          "ref": "R5",
+          "pad": "1",
+          "native": "Net-(V1B-A)",
+          "actual": "CL_P1"
+        },
+        {
+          "ref": "R5",
+          "pad": "2",
+          "native": "Net-(C3-Pad1)",
+          "actual": "CL_TONE"
+        },
+        {
+          "ref": "R34",
+          "pad": "1",
+          "native": "Net-(C24-Pad2)",
+          "actual": "GRID_B_FEED"
+        },
+        {
+          "ref": "C14",
+          "pad": "1",
+          "native": "Net-(V3B-K)",
+          "actual": "DR_K3"
+        },
+        {
+          "ref": "C23",
+          "pad": "1",
+          "native": "Net-(V4B-A)",
+          "actual": "PI_P1"
+        },
+        {
+          "ref": "C23",
+          "pad": "2",
+          "native": "Net-(C23-Pad2)",
+          "actual": "GRID_A_FEED"
+        },
+        {
+          "ref": "C11",
+          "pad": "1",
+          "native": "Net-(V2A-A)",
+          "actual": "DR_P2"
+        },
+        {
+          "ref": "C11",
+          "pad": "2",
+          "native": "Net-(C11-Pad2)",
+          "actual": "DR_C3"
+        },
+        {
+          "ref": "C10",
+          "pad": "1",
+          "native": "Net-(V2A-K)",
+          "actual": "DR_K2"
+        },
+        {
+          "ref": "C9",
+          "pad": "1",
+          "native": "Net-(C9-Pad1)",
+          "actual": "DR_GAIN_W"
+        },
+        {
+          "ref": "R3",
+          "pad": "1",
+          "native": "Net-(V1B-K)",
+          "actual": "CL_K1"
+        },
+        {
+          "ref": "R15",
+          "pad": "2",
+          "native": "Net-(V2A-A)",
+          "actual": "DR_P2"
+        },
+        {
+          "ref": "C15",
+          "pad": "1",
+          "native": "Net-(V3A-K)",
+          "actual": "DR_CF"
+        },
+        {
+          "ref": "C15",
+          "pad": "2",
+          "native": "Net-(C15-Pad2)",
+          "actual": "DR_TREBLE_TOP"
+        },
+        {
+          "ref": "C5",
+          "pad": "1",
+          "native": "Net-(V1A-K)",
+          "actual": "CL_K2"
+        },
+        {
+          "ref": "R18",
+          "pad": "1",
+          "native": "Net-(C11-Pad2)",
+          "actual": "DR_C3"
+        },
+        {
+          "ref": "R18",
+          "pad": "2",
+          "native": "Net-(V3B-G)",
+          "actual": "DR_G3"
+        },
+        {
+          "ref": "R13",
+          "pad": "1",
+          "native": "Net-(C9-Pad1)",
+          "actual": "DR_GAIN_W"
+        },
+        {
+          "ref": "R31",
+          "pad": "2",
+          "native": "Net-(C20-Pad2)",
+          "actual": "NFB_NODE"
+        },
+        {
+          "ref": "R16",
+          "pad": "1",
+          "native": "Net-(V2A-K)",
+          "actual": "DR_K2"
+        },
+        {
+          "ref": "C22",
+          "pad": "1",
+          "native": "Net-(V4B-A)",
+          "actual": "PI_P1"
+        },
+        {
+          "ref": "C22",
+          "pad": "2",
+          "native": "Net-(V4A-A)",
+          "actual": "PI_P2"
+        },
+        {
+          "ref": "R20",
+          "pad": "1",
+          "native": "Net-(V3B-K)",
+          "actual": "DR_K3"
+        },
+        {
+          "ref": "R19",
+          "pad": "1",
+          "native": "Net-(V3B-G)",
+          "actual": "DR_G3"
+        },
+        {
+          "ref": "R32",
+          "pad": "1",
+          "native": "Net-(C20-Pad2)",
+          "actual": "NFB_NODE"
+        },
+        {
+          "ref": "K2",
+          "pad": "4",
+          "native": "Net-(J3-PadT)",
+          "actual": "FX_SEND"
+        },
+        {
+          "ref": "C24",
+          "pad": "1",
+          "native": "Net-(V4A-A)",
+          "actual": "PI_P2"
+        },
+        {
+          "ref": "C24",
+          "pad": "2",
+          "native": "Net-(C24-Pad2)",
+          "actual": "GRID_B_FEED"
+        },
+        {
+          "ref": "R6",
+          "pad": "1",
+          "native": "Net-(C4-Pad2)",
+          "actual": "CL_BASS_BOTTOM"
+        },
+        {
+          "ref": "R22",
+          "pad": "1",
+          "native": "Net-(V3A-K)",
+          "actual": "DR_CF"
+        },
+        {
+          "ref": "C1",
+          "pad": "1",
+          "native": "Net-(V1B-K)",
+          "actual": "CL_K1"
+        },
+        {
+          "ref": "R12",
+          "pad": "2",
+          "native": "Net-(V2B-A)",
+          "actual": "DR_P1"
+        },
+        {
+          "ref": "R4",
+          "pad": "2",
+          "native": "Net-(V1B-A)",
+          "actual": "CL_P1"
+        },
+        {
+          "ref": "C3",
+          "pad": "1",
+          "native": "Net-(C3-Pad1)",
+          "actual": "CL_TONE"
+        },
+        {
+          "ref": "C3",
+          "pad": "2",
+          "native": "Net-(C3-Pad2)",
+          "actual": "CL_BASS_TOP"
+        },
+        {
+          "ref": "C2",
+          "pad": "1",
+          "native": "Net-(V1B-A)",
+          "actual": "CL_P1"
+        },
+        {
+          "ref": "C2",
+          "pad": "2",
+          "native": "Net-(C2-Pad2)",
+          "actual": "CL_TREBLE_TOP"
+        },
+        {
+          "ref": "C17",
+          "pad": "1",
+          "native": "Net-(C16-Pad1)",
+          "actual": "DR_TONE"
+        },
+        {
+          "ref": "C17",
+          "pad": "2",
+          "native": "Net-(C17-Pad2)",
+          "actual": "DR_BASS_BOTTOM"
+        },
+        {
+          "ref": "C6",
+          "pad": "1",
+          "native": "Net-(V1A-A)",
+          "actual": "CL_P2"
+        },
+        {
+          "ref": "R1",
+          "pad": "1",
+          "native": "Net-(J1-PadT)",
+          "actual": "INPUT"
+        },
+        {
+          "ref": "R1",
+          "pad": "2",
+          "native": "Net-(K1-Pad4)",
+          "actual": "INPUT_STOP"
+        },
+        {
+          "ref": "R7",
+          "pad": "2",
+          "native": "Net-(V1A-A)",
+          "actual": "CL_P2"
+        }
+      ],
+      "native_path_errors": [
+        {
+          "ref": "R8",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/c9a356ef-7dd8-5bb5-a5f6-ceed1f70497d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/6b095eae-037f-5812-befc-57104a27b989"
+        },
+        {
+          "ref": "C8",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/b8755881-5c2b-5256-b98b-0476c5ecade6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/9dfb01d0-5ecb-5627-b92d-ee4b32b9fbf2"
+        },
+        {
+          "ref": "C4",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/b521c418-4339-5721-90de-d49905ee840a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/eca4c034-5cda-50d4-8450-e42777d54c5f"
+        },
+        {
+          "ref": "R23",
+          "actual": "/927e127f-16da-5a34-9ba6-080c40348e55/c949952e-401f-5d4b-b1fc-9bd165a18beb",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/f6df3650-4c89-5e6e-9389-13cf6b4ae0ad/3df6356e-18e0-52a8-81aa-a590a20a67e0"
+        },
+        {
+          "ref": "R24",
+          "actual": "/2d95e103-cb4f-5627-af47-c822def9b0fd/35cf0cad-f74e-5223-92ef-d295303c9d77",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/7bbd8e49-7cc0-51cc-9570-2abd43701d49"
+        },
+        {
+          "ref": "C19",
+          "actual": "/2d95e103-cb4f-5627-af47-c822def9b0fd/d7f4f8b9-8f8f-5d2b-ac00-276cbe27a08a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/e0cd3d33-4199-56ee-8b10-b3deed1231ac"
+        },
+        {
+          "ref": "R11",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/7dcd6ac1-b078-5220-854c-182fe0fe5417",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/5f4485d3-f39f-55ef-8992-3afa719ee63c"
+        },
+        {
+          "ref": "C21",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/f2121c84-9a96-5c0f-806b-5401435f0253",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/0d6dc11f-fd99-5fa3-a13c-02243e53c645"
+        },
+        {
+          "ref": "K1",
+          "actual": "/927e127f-16da-5a34-9ba6-080c40348e55/4b6a9e22-d8b6-5acb-bab6-d60c5cd0832e",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/1c116e34-ac54-5b0c-961d-68eab3d403fb/e84cb75f-ef5f-5807-9ead-10f3c2e7eba5"
+        },
+        {
+          "ref": "C20",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/dd9b4cb8-ae90-51ed-82cc-0aa519a6df42",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/8a479f10-cb61-512c-922d-754ffd38130d"
+        },
+        {
+          "ref": "R27",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/bce27ccf-9130-5888-b95e-cdd2339efa23",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/015b9df3-f5f3-5d73-b648-cdd29ec4a9bf"
+        },
+        {
+          "ref": "R25",
+          "actual": "/2d95e103-cb4f-5627-af47-c822def9b0fd/e7ff8046-661f-5fd1-b3c5-8a72f924971a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/87c4720b-651d-5995-bf59-8187ded7f579"
+        },
+        {
+          "ref": "R29",
+          "actual": "/2d95e103-cb4f-5627-af47-c822def9b0fd/a20f4ddb-c9dd-52f6-aa67-199a5d1fcb3f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/5fc7d829-5ca3-5327-bc1b-696df408ef2e"
+        },
+        {
+          "ref": "R28",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/2c7b49b8-59f6-5b81-8693-856af92361f5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/3e525bad-7eb0-5ecd-9332-4bef19e31632"
+        },
+        {
+          "ref": "C7",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/7d9a1748-5856-5432-a9f8-ab35c6796ce3",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/d9d397d0-482b-5458-9d47-8fd7ef3109cc"
+        },
+        {
+          "ref": "C16",
+          "actual": "/927e127f-16da-5a34-9ba6-080c40348e55/2116ca76-3ec5-5d30-8583-c4facf1d8cf9",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/f6df3650-4c89-5e6e-9389-13cf6b4ae0ad/11efae0d-5e15-54fe-9ebf-62c406d7279d"
+        },
+        {
+          "ref": "R26",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/32302aa2-4cfb-59bb-93b7-c007d3f2b0e6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/5fd30f68-433f-5872-b1ce-42790dda43b7"
+        },
+        {
+          "ref": "R30",
+          "actual": "/2d95e103-cb4f-5627-af47-c822def9b0fd/807ac61e-feae-5b93-b7f0-e2ada317d5ef",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/dc9a8ffe-d8f0-5e1a-8897-d23bd5dff60d"
+        },
+        {
+          "ref": "R33",
+          "actual": "/7bd28c0d-b305-5313-850f-d9fb6d258990/27098c7e-357b-5b62-a683-3848af0d19b0",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/5d3ea088-e4eb-5dc9-af2a-34449773ab8a"
+        },
+        {
+          "ref": "R5",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/9c1c8bd6-58a1-58a4-ad27-be16e03f6891",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/d5a89986-2fb2-5e3a-87d4-78fe3e000e8b"
+        },
+        {
+          "ref": "R34",
+          "actual": "/7bd28c0d-b305-5313-850f-d9fb6d258990/83d6161c-f2ae-51f8-be93-2f3d973e0611",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/ae980a30-14eb-5d55-8ba9-30e8f0f7eaa7"
+        },
+        {
+          "ref": "C14",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/b26dc97c-bab7-5cd1-815f-ac3f2c1a39e9",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/6b7b5832-ad81-5ec7-ae11-03a6d1650358"
+        },
+        {
+          "ref": "C23",
+          "actual": "/7bd28c0d-b305-5313-850f-d9fb6d258990/c76f9c77-5841-5cea-a0fb-4edd7b657da2",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/59298752-f519-500d-b1e0-04385d06c125"
+        },
+        {
+          "ref": "C11",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/e744e4fd-0f65-5118-bc0b-05eba08af1bc",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/95d791af-f342-5023-8c03-2f587ff5e8ce"
+        },
+        {
+          "ref": "C10",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/c0a67226-0500-58d4-b969-640d32302261",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/2735e681-e600-591e-b1c4-0b96d33eebda"
+        },
+        {
+          "ref": "C9",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/3457032f-7a19-5247-9cae-0792ac01cc7d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/e824d168-0ffd-590d-9097-d3ba32f270dd"
+        },
+        {
+          "ref": "R3",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/1f040331-a020-5dac-8272-a57d93f02e3a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/cdad8c09-f524-5a4f-befe-379453ed2101"
+        },
+        {
+          "ref": "R15",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/22f361c2-4c64-519e-bfd2-b69e97e9ad45",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/5ea0c560-2b19-5971-8179-fd43122e5b79"
+        },
+        {
+          "ref": "C15",
+          "actual": "/927e127f-16da-5a34-9ba6-080c40348e55/52d12c9d-5b7a-5d72-950f-ee44b42d299d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/f6df3650-4c89-5e6e-9389-13cf6b4ae0ad/b4ab5d0b-28f1-5904-8d64-ddf4ffa6f3e8"
+        },
+        {
+          "ref": "C5",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/da9a034f-5482-54cb-8ed4-059599b0d86f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/16df8a78-1496-5187-a030-ae50c1e0996a"
+        },
+        {
+          "ref": "R21",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/b8aad1d9-77f6-500a-a8de-d42131828919",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/74624e94-3313-5cb2-9150-77a8f3a737ce"
+        },
+        {
+          "ref": "R2",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/69811177-2c19-56f7-a229-e65896609c63",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/e7feb085-ecda-5c8f-87c1-84e0183d1c95"
+        },
+        {
+          "ref": "R18",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/8f1aafd6-0c3f-574b-bc9d-f06a24459bb5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/254c2e0f-a8bf-5434-aa9f-3b9ccea98329"
+        },
+        {
+          "ref": "R10",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/60385051-a074-5005-89e3-780c46ff4eab",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/e0b4ad79-524d-5abf-a5fb-f5717df55001"
+        },
+        {
+          "ref": "R13",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/6b2c314a-2185-54fe-aaf9-f35f8abcd864",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/5de32c59-e08c-52bd-a8fd-521bfadc7983"
+        },
+        {
+          "ref": "R14",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/accacce4-f151-5192-b4e3-ef07bd2292c4",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/5c368ad8-56e2-5b3e-8b5e-fbcb7e1769d9"
+        },
+        {
+          "ref": "R43",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/aecba23b-d8cb-51e8-be4e-dbed5907e7af",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/bdfd908c-7013-593b-9119-8918725f1919"
+        },
+        {
+          "ref": "R31",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/58e57a6e-ae9f-514d-93e2-0d238209f850",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/9d299a12-5a7d-577c-a017-dd16bad46fd3"
+        },
+        {
+          "ref": "R16",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/8e28339a-c1e8-5472-8398-134b7f6010c7",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/ca5ad86c-e211-58b3-8d95-d5fb8252e1a7"
+        },
+        {
+          "ref": "C22",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/1ab16a2e-847c-58b5-9a93-42375d71140b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/c1cc62b8-59fa-52a6-a699-f227f9d81ae1"
+        },
+        {
+          "ref": "R20",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/5856afdc-d2e9-5538-becc-58435349ea76",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/b311c9e2-92ab-5173-8a03-1da5d2155a67"
+        },
+        {
+          "ref": "R19",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/b5f7161b-169e-590d-bdb1-eee8cfff4edf",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/761e6302-d977-5568-9cee-7c755825aaf1"
+        },
+        {
+          "ref": "R32",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/9ef06437-f771-5322-a904-58645b418373",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/d2569d70-f521-52fb-860e-c32ff3decf08"
+        },
+        {
+          "ref": "K2",
+          "actual": "/2d95e103-cb4f-5627-af47-c822def9b0fd/a8ee81bc-3931-52ba-b923-1a5aaf165acb",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/1c116e34-ac54-5b0c-961d-68eab3d403fb/a9bb71a7-95bd-5e11-8aa1-fe6af9aaf16c"
+        },
+        {
+          "ref": "C24",
+          "actual": "/7bd28c0d-b305-5313-850f-d9fb6d258990/554faf3f-f99c-59bf-a379-7e18679fee3e",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/2f1f3b75-0b98-57f6-bc43-cfac6eba23ad"
+        },
+        {
+          "ref": "R6",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/806078f8-9627-568b-a1cf-962b5c63437b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/304827bf-5611-5543-a0e8-9f055cc115a5"
+        },
+        {
+          "ref": "R22",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/66cb2256-2f60-5abb-86e5-a16be320557f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/f6df3650-4c89-5e6e-9389-13cf6b4ae0ad/1c6d2418-5da6-5917-afca-dfd5ed4a1686"
+        },
+        {
+          "ref": "C1",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/a9e5b0b8-b1d1-5f2b-846a-7e247138eb99",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/ea0eb92c-4908-5fb6-a7d5-1300862b6619"
+        },
+        {
+          "ref": "R12",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/9f038b6d-2b90-51d5-8de1-68397b161efa",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/0463ba31-0bee-523b-9db4-d9dd7e4952e8"
+        },
+        {
+          "ref": "R4",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/18bc0fb2-da86-5411-8ec0-96620e1053cd",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/e1d4f84c-e885-507a-97b1-305458b7c105"
+        },
+        {
+          "ref": "C3",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/123ffe5d-7083-51d8-9111-f92917d98e70",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/10c00490-5145-554a-ab17-620c81a80539"
+        },
+        {
+          "ref": "C2",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/d12c367f-78dc-533d-97af-892b3ba6a4d9",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/a16b8369-d78f-5c83-b5e6-66046f556e41"
+        },
+        {
+          "ref": "C17",
+          "actual": "/927e127f-16da-5a34-9ba6-080c40348e55/e82d0d8c-b3fe-5b69-8091-4e763258294f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/f6df3650-4c89-5e6e-9389-13cf6b4ae0ad/f0eedf00-423b-53e9-a8c8-ff27f5718064"
+        },
+        {
+          "ref": "C6",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/55bf0b0d-d566-5610-93f0-2ed6bf29a54c",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/558ad9e6-fd23-50dc-a9cd-1924d4741a48"
+        },
+        {
+          "ref": "R1",
+          "actual": "/927e127f-16da-5a34-9ba6-080c40348e55/061d30d8-5865-59ba-a6cf-3a06cdcf1b13",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/1c116e34-ac54-5b0c-961d-68eab3d403fb/1b5bcc00-2450-5244-905f-471286ae8c25"
+        },
+        {
+          "ref": "R7",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/599456e9-a338-5a0b-8600-572339f36bd2",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/229d02dd-8b5f-5490-9695-5b0b6242d544"
+        }
+      ],
+      "drilled_footprint_pads": 175,
+      "via_count": 3,
+      "missing_courtyards": [
+        {
+          "reference": "JM004",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_PRE",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM014",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "COIL_CH",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM037",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "OT_4",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM023",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_IN",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM026",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_K3",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM018",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_CF",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM016",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_BASS_BOTTOM",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM020",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_G3",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM019",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_G2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM003",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_EARLY",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM001",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "+12V",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM030",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_TREBLE_TOP",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM002",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "BIAS_OUT",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM005",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_BASS_BOTTOM",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM017",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_BASS_TOP",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM024",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_K1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM042",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PI_P2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM040",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PI_K",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM028",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_P2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM021",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_GAIN_TOP",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM032",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "GND",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM041",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PI_P1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM015",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DIRTY_OUT",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM027",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_P1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM008",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_IN",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM012",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_P2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM034",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "GRID_B_FEED",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM033",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "GRID_A_FEED",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM013",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_TREBLE_TOP",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM043",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PRES_TOP",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM009",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_K1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM038",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PI_G1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM036",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "MIX_OUT",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM039",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PI_G2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM029",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_P3",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM011",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_P1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM010",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_K2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM022",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_GAIN_W",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM035",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "INPUT",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM007",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_G2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM031",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "FX_SEND",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM025",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_K2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM006",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_BASS_TOP",
+          "selected_mpn": null
+        }
+      ]
+    },
+    "active_Power": {
+      "sha256": "95d326c677cafc0bb6c6e2896320e32cb2eb4b116ae5e6ea8058efdcc735c810",
+      "pads_checked": 55,
+      "contract_errors": [],
+      "native_net_label_differences": [
+        {
+          "ref": "R502",
+          "pad": "1",
+          "native": "Net-(C29-Pad2)",
+          "actual": "HV_CAP_MID"
+        },
+        {
+          "ref": "C28",
+          "pad": "2",
+          "native": "Net-(D7-A)",
+          "actual": "BIAS_RAW"
+        },
+        {
+          "ref": "R503",
+          "pad": "1",
+          "native": "Net-(R503-Pad1)",
+          "actual": "BIAS_MIN"
+        },
+        {
+          "ref": "C29",
+          "pad": "1",
+          "native": "Net-(S2-A)",
+          "actual": "B_RAW"
+        },
+        {
+          "ref": "C29",
+          "pad": "2",
+          "native": "Net-(C29-Pad2)",
+          "actual": "HV_CAP_MID"
+        },
+        {
+          "ref": "R509",
+          "pad": "2",
+          "native": "Net-(C505-Pad1)",
+          "actual": "HREF"
+        },
+        {
+          "ref": "R506",
+          "pad": "2",
+          "native": "Net-(C505-Pad1)",
+          "actual": "HREF"
+        },
+        {
+          "ref": "R40",
+          "pad": "2",
+          "native": "Net-(D7-K)",
+          "actual": "BIAS_DIODE_AC"
+        },
+        {
+          "ref": "D5",
+          "pad": "1",
+          "native": "Net-(D5-K)",
+          "actual": "HV_MID_B"
+        },
+        {
+          "ref": "D5",
+          "pad": "2",
+          "native": "Net-(D5-A)",
+          "actual": "HV_B"
+        },
+        {
+          "ref": "D7",
+          "pad": "1",
+          "native": "Net-(D7-K)",
+          "actual": "BIAS_DIODE_AC"
+        },
+        {
+          "ref": "D7",
+          "pad": "2",
+          "native": "Net-(D7-A)",
+          "actual": "BIAS_RAW"
+        },
+        {
+          "ref": "C30",
+          "pad": "1",
+          "native": "Net-(C29-Pad2)",
+          "actual": "HV_CAP_MID"
+        },
+        {
+          "ref": "C505",
+          "pad": "1",
+          "native": "Net-(C505-Pad1)",
+          "actual": "HREF"
+        },
+        {
+          "ref": "R508",
+          "pad": "2",
+          "native": "Net-(C505-Pad1)",
+          "actual": "HREF"
+        },
+        {
+          "ref": "R507",
+          "pad": "1",
+          "native": "Net-(C505-Pad1)",
+          "actual": "HREF"
+        },
+        {
+          "ref": "R39",
+          "pad": "1",
+          "native": "Net-(D7-A)",
+          "actual": "BIAS_RAW"
+        },
+        {
+          "ref": "R39",
+          "pad": "2",
+          "native": "Net-(C27-Pad2)",
+          "actual": "BIAS_FILTER"
+        },
+        {
+          "ref": "C27",
+          "pad": "2",
+          "native": "Net-(C27-Pad2)",
+          "actual": "BIAS_FILTER"
+        },
+        {
+          "ref": "D3",
+          "pad": "1",
+          "native": "Net-(D3-K)",
+          "actual": "HV_MID_A"
+        },
+        {
+          "ref": "D3",
+          "pad": "2",
+          "native": "Net-(D3-A)",
+          "actual": "HV_A"
+        },
+        {
+          "ref": "D4",
+          "pad": "1",
+          "native": "Net-(D4-K)",
+          "actual": "B_RECT"
+        },
+        {
+          "ref": "D4",
+          "pad": "2",
+          "native": "Net-(D3-K)",
+          "actual": "HV_MID_A"
+        },
+        {
+          "ref": "R501",
+          "pad": "1",
+          "native": "Net-(S2-A)",
+          "actual": "B_RAW"
+        },
+        {
+          "ref": "R501",
+          "pad": "2",
+          "native": "Net-(C29-Pad2)",
+          "actual": "HV_CAP_MID"
+        },
+        {
+          "ref": "R38",
+          "pad": "1",
+          "native": "Net-(C27-Pad2)",
+          "actual": "BIAS_FILTER"
+        },
+        {
+          "ref": "RV10",
+          "pad": "2",
+          "native": "Net-(R503-Pad1)",
+          "actual": "BIAS_MIN"
+        },
+        {
+          "ref": "RV10",
+          "pad": "3",
+          "native": "Net-(R503-Pad1)",
+          "actual": "BIAS_MIN"
+        },
+        {
+          "ref": "D6",
+          "pad": "1",
+          "native": "Net-(D4-K)",
+          "actual": "B_RECT"
+        },
+        {
+          "ref": "D6",
+          "pad": "2",
+          "native": "Net-(D5-K)",
+          "actual": "HV_MID_B"
+        }
+      ],
+      "native_path_errors": [
+        {
+          "ref": "R502",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/38d005c6-a82c-521e-b8d9-f60ff9d3e453",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/4e36b322-e93a-5d86-9167-e811100e25c7"
+        },
+        {
+          "ref": "C26",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/eaf0a9db-7296-5976-934f-aa1cfae3f6e8",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/65e9330a-4f06-55c9-b2ee-02e4e4f0b710"
+        },
+        {
+          "ref": "C28",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/d61255b5-41de-5ff8-a417-19b532bf183f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/70f45bfb-5f9f-51a8-ba0b-75bcb3b86e51"
+        },
+        {
+          "ref": "R503",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/bb6e8c93-ee77-5933-beee-edef0ab05e0e",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/26f78fd3-4057-5260-bba2-98a58e0f63bc"
+        },
+        {
+          "ref": "C29",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/da5f51d3-d295-5bb2-9e16-3bf009aff81d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/da8dfd39-c2b1-50e8-bc5c-0969beece47d"
+        },
+        {
+          "ref": "R509",
+          "actual": "/64e7e90e-192d-58a1-b91d-418a0e4d98fc/9cee9ae3-94af-5952-af32-a735b7513f0b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/e318839f-cf46-556e-9987-d1ee9f190c69"
+        },
+        {
+          "ref": "R506",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/c489151a-abcb-525d-b0a3-ce1a62f2df4f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/1562432d-031f-5fdc-9baf-01a34a2aeaa6"
+        },
+        {
+          "ref": "R40",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/b60c66b4-5adc-5f50-a285-06eb39d958d6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/05562596-0c23-5282-a31d-73951cb8bc84"
+        },
+        {
+          "ref": "C13",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/9d37cb72-23d7-59e6-9809-4e81f89c489f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/c4135222-40b8-5a83-a65a-afa829f1129b"
+        },
+        {
+          "ref": "D5",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/f1ed236d-531f-5a96-b7bc-19deb53a564c",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/6687d2e6-f406-5bf7-9453-f7a221c2838f"
+        },
+        {
+          "ref": "D7",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/4c6fd018-2848-5361-bf66-38b78e9a65fb",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/c6000beb-1227-50f4-b27a-f8d6fc0adc02"
+        },
+        {
+          "ref": "C30",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/5818618e-e3bf-5e2f-9fe7-5ab05f3b87c2",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/09bf8447-3fe5-5d82-a204-acd335cf229d"
+        },
+        {
+          "ref": "C505",
+          "actual": "/64e7e90e-192d-58a1-b91d-418a0e4d98fc/fe1bad7b-da05-54e5-8860-d09204578aa6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/00ab0bfa-91ab-584c-bd1f-7b4a1c89b89e"
+        },
+        {
+          "ref": "R508",
+          "actual": "/64e7e90e-192d-58a1-b91d-418a0e4d98fc/21014cca-1c19-533a-9654-cdc14af5dc2d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/29f1671a-6724-53ef-afde-9efb15425010"
+        },
+        {
+          "ref": "C12",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/a462acce-4a7d-5094-9643-38cd86d83ad9",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/c935ee71-58ca-5c9c-9c00-c443222bef30"
+        },
+        {
+          "ref": "R507",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/2100b6f5-4e7e-5e4c-a714-9e4f0481e054",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/887d6205-1268-5f40-8d58-02eea236793d"
+        },
+        {
+          "ref": "C25",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/3b098acb-8eaf-552f-9d69-8b7a12ff86ce",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/f9f1d285-ae0a-5319-a670-34433474b860"
+        },
+        {
+          "ref": "R39",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/8d828928-15ce-5fa6-ba8e-103485ec3a38",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/dbd9abf6-7f96-5113-af48-b739acb77975"
+        },
+        {
+          "ref": "C27",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/db1487e4-c053-54bb-9864-94ef71518b8b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/169054d0-0be4-5f55-ab3d-0c19bca3eac3"
+        },
+        {
+          "ref": "D3",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/b49fbc08-81f6-572b-b15d-80c84cf6d54b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/5fe46100-4f99-5217-b344-432f96d9792f"
+        },
+        {
+          "ref": "R17",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/ad98fe1e-d7b5-52d4-b647-92df9c85b2f5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/547e27c3-e73c-5413-9f2f-026d12fc69b5"
+        },
+        {
+          "ref": "D4",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/d0de6323-2b70-5647-bae2-76b7408ca72e",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/70f48e1c-5580-52d5-9631-6e3860fc94f9"
+        },
+        {
+          "ref": "R501",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/36c4aba1-9683-50cd-b669-7b7a9ddfab61",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/56e50866-d3f7-5449-990b-794702c4d2ae"
+        },
+        {
+          "ref": "R38",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/55e1a75a-9aa5-5c72-9576-dda873409978",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/23b355a8-217d-5025-aeca-78a36484b229"
+        },
+        {
+          "ref": "RV10",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/62d8ad41-0caa-51ff-b784-96e973828b1f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/923f517a-2c24-5cce-b6fd-85b023bf3a07"
+        },
+        {
+          "ref": "R35",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/366d74de-7e9a-525b-9a5d-9b9550e45035",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/2b1aa156-2e8f-57fa-b637-550374cf3492"
+        },
+        {
+          "ref": "D6",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/a9a293bb-e88b-528e-bdb1-382cf1f68025",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/964d5170-056d-5dda-af9a-452edd07f582"
+        }
+      ],
+      "drilled_footprint_pads": 79,
+      "via_count": 0,
+      "missing_courtyards": [
+        {
+          "reference": "JP012",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "HV_B",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP010",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "HEAT_B",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP005",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_RAW",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP007",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_SCREEN",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP008",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "GND",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP002",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "BIAS_OUT",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP001",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "BIAS_AC",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP004",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_PRE",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP009",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "HEAT_A",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP003",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_EARLY",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP011",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "HV_A",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP006",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_RECT",
+          "selected_mpn": null
+        }
+      ]
+    },
+    "active_Control": {
+      "sha256": "11e8bc8c81143534be03ad05191090937020ae675bf2e7c8baa86722d0ccfa13",
+      "pads_checked": 140,
+      "contract_errors": [],
+      "native_net_label_differences": [
+        {
+          "ref": "R332",
+          "pad": "1",
+          "native": "Net-(Q1-G)",
+          "actual": "CH_GATE"
+        },
+        {
+          "ref": "R301",
+          "pad": "1",
+          "native": "Net-(J2-PadT)",
+          "actual": "PEDAL_CH"
+        },
+        {
+          "ref": "R301",
+          "pad": "2",
+          "native": "Net-(D301-A)",
+          "actual": "BTN_CH"
+        },
+        {
+          "ref": "U1",
+          "pad": "1",
+          "native": "Net-(C301-Pad1)",
+          "actual": "DB_CH"
+        },
+        {
+          "ref": "U1",
+          "pad": "3",
+          "native": "Net-(C311-Pad1)",
+          "actual": "DB_REV"
+        },
+        {
+          "ref": "R311",
+          "pad": "1",
+          "native": "Net-(J2-PadR)",
+          "actual": "PEDAL_REV"
+        },
+        {
+          "ref": "R311",
+          "pad": "2",
+          "native": "Net-(D311-A)",
+          "actual": "BTN_REV"
+        },
+        {
+          "ref": "D301",
+          "pad": "2",
+          "native": "Net-(D301-A)",
+          "actual": "BTN_CH"
+        },
+        {
+          "ref": "Q1",
+          "pad": "2",
+          "native": "Net-(Q1-G)",
+          "actual": "CH_GATE"
+        },
+        {
+          "ref": "R313",
+          "pad": "1",
+          "native": "Net-(D311-A)",
+          "actual": "BTN_REV"
+        },
+        {
+          "ref": "R313",
+          "pad": "2",
+          "native": "Net-(C311-Pad1)",
+          "actual": "DB_REV"
+        },
+        {
+          "ref": "C311",
+          "pad": "1",
+          "native": "Net-(C311-Pad1)",
+          "actual": "DB_REV"
+        },
+        {
+          "ref": "C208",
+          "pad": "2",
+          "native": "Net-(D203-A)",
+          "actual": "NEG_RAW"
+        },
+        {
+          "ref": "D203",
+          "pad": "1",
+          "native": "Net-(D201-A)",
+          "actual": "CTRL_AC1"
+        },
+        {
+          "ref": "D203",
+          "pad": "2",
+          "native": "Net-(D203-A)",
+          "actual": "NEG_RAW"
+        },
+        {
+          "ref": "U7",
+          "pad": "2",
+          "native": "Net-(D203-A)",
+          "actual": "NEG_RAW"
+        },
+        {
+          "ref": "C202",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "D207",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "R312",
+          "pad": "2",
+          "native": "Net-(D311-A)",
+          "actual": "BTN_REV"
+        },
+        {
+          "ref": "U6",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "Q2",
+          "pad": "2",
+          "native": "Net-(Q2-G)",
+          "actual": "REV_GATE"
+        },
+        {
+          "ref": "R342",
+          "pad": "1",
+          "native": "Net-(Q2-G)",
+          "actual": "REV_GATE"
+        },
+        {
+          "ref": "R321",
+          "pad": "2",
+          "native": "Net-(U2A-~{R})",
+          "actual": "RESET_N"
+        },
+        {
+          "ref": "R322",
+          "pad": "2",
+          "native": "Net-(U3-~{MR})",
+          "actual": "MR_N"
+        },
+        {
+          "ref": "D208",
+          "pad": "2",
+          "native": "Net-(D203-A)",
+          "actual": "NEG_RAW"
+        },
+        {
+          "ref": "D312",
+          "pad": "1",
+          "native": "Net-(D311-A)",
+          "actual": "BTN_REV"
+        },
+        {
+          "ref": "R302",
+          "pad": "2",
+          "native": "Net-(D301-A)",
+          "actual": "BTN_CH"
+        },
+        {
+          "ref": "R331",
+          "pad": "1",
+          "native": "Net-(U2A-Q)",
+          "actual": "CH_Q"
+        },
+        {
+          "ref": "R331",
+          "pad": "2",
+          "native": "Net-(Q1-G)",
+          "actual": "CH_GATE"
+        },
+        {
+          "ref": "U3",
+          "pad": "1",
+          "native": "Net-(U2A-~{R})",
+          "actual": "RESET_N"
+        },
+        {
+          "ref": "U3",
+          "pad": "3",
+          "native": "Net-(U3-~{MR})",
+          "actual": "MR_N"
+        },
+        {
+          "ref": "U3",
+          "pad": "4",
+          "native": "Net-(U3-CT)",
+          "actual": "RESET_CT"
+        },
+        {
+          "ref": "D202",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "D202",
+          "pad": "2",
+          "native": "Net-(D202-A)",
+          "actual": "CTRL_AC2"
+        },
+        {
+          "ref": "C209",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "U4",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "D204",
+          "pad": "1",
+          "native": "Net-(D202-A)",
+          "actual": "CTRL_AC2"
+        },
+        {
+          "ref": "D204",
+          "pad": "2",
+          "native": "Net-(D203-A)",
+          "actual": "NEG_RAW"
+        },
+        {
+          "ref": "C201",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "D201",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "D201",
+          "pad": "2",
+          "native": "Net-(D201-A)",
+          "actual": "CTRL_AC1"
+        },
+        {
+          "ref": "R303",
+          "pad": "1",
+          "native": "Net-(D301-A)",
+          "actual": "BTN_CH"
+        },
+        {
+          "ref": "R303",
+          "pad": "2",
+          "native": "Net-(C301-Pad1)",
+          "actual": "DB_CH"
+        },
+        {
+          "ref": "C212",
+          "pad": "2",
+          "native": "Net-(D203-A)",
+          "actual": "NEG_RAW"
+        },
+        {
+          "ref": "R341",
+          "pad": "1",
+          "native": "Net-(U2B-Q)",
+          "actual": "REV_Q"
+        },
+        {
+          "ref": "R341",
+          "pad": "2",
+          "native": "Net-(Q2-G)",
+          "actual": "REV_GATE"
+        },
+        {
+          "ref": "C321",
+          "pad": "1",
+          "native": "Net-(U3-CT)",
+          "actual": "RESET_CT"
+        },
+        {
+          "ref": "C301",
+          "pad": "1",
+          "native": "Net-(C301-Pad1)",
+          "actual": "DB_CH"
+        },
+        {
+          "ref": "D311",
+          "pad": "2",
+          "native": "Net-(D311-A)",
+          "actual": "BTN_REV"
+        },
+        {
+          "ref": "D302",
+          "pad": "1",
+          "native": "Net-(D301-A)",
+          "actual": "BTN_CH"
+        },
+        {
+          "ref": "U2",
+          "pad": "1",
+          "native": "Net-(U2A-~{R})",
+          "actual": "RESET_N"
+        },
+        {
+          "ref": "U2",
+          "pad": "2",
+          "native": "Net-(U2A-D)",
+          "actual": "CH_QN"
+        },
+        {
+          "ref": "U2",
+          "pad": "5",
+          "native": "Net-(U2A-Q)",
+          "actual": "CH_Q"
+        },
+        {
+          "ref": "U2",
+          "pad": "6",
+          "native": "Net-(U2A-D)",
+          "actual": "CH_QN"
+        },
+        {
+          "ref": "U2",
+          "pad": "8",
+          "native": "Net-(U2B-D)",
+          "actual": "REV_QN"
+        },
+        {
+          "ref": "U2",
+          "pad": "9",
+          "native": "Net-(U2B-Q)",
+          "actual": "REV_Q"
+        },
+        {
+          "ref": "U2",
+          "pad": "12",
+          "native": "Net-(U2B-D)",
+          "actual": "REV_QN"
+        },
+        {
+          "ref": "U2",
+          "pad": "13",
+          "native": "Net-(U2A-~{R})",
+          "actual": "RESET_N"
+        },
+        {
+          "ref": "D205",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        }
+      ],
+      "native_path_errors": [
+        {
+          "ref": "R332",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/cdbb8bd8-0131-5cc6-b054-4b2e63257357",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/44b48106-4119-5018-80bc-f8a1e4479741"
+        },
+        {
+          "ref": "R301",
+          "actual": "/91b47c01-f577-5d10-b6ae-108da8255012/2494b1e8-220a-55c2-9e96-35d15b8c3d21",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/5e08dcfd-cf3a-529f-9d9b-7f57af212be7"
+        },
+        {
+          "ref": "U1",
+          "actual": "/91b47c01-f577-5d10-b6ae-108da8255012/82d214af-ca1d-5d0f-8e90-02f6d1f2ba8f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/6182fff2-fa96-500c-a0be-918c502f1867"
+        },
+        {
+          "ref": "R311",
+          "actual": "/4b397655-eb2e-561f-9e3b-73d090d4f372/0e3d932a-29a8-5eea-b77e-92d38daf97c6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/7a8b86c5-89cc-5819-90d4-adbd2bdb486d"
+        },
+        {
+          "ref": "C213",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/c130a0d1-cf9f-53db-8ceb-5e6f34e8e8ec",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/0769b8f7-5a3a-56b4-983f-238b6c9bc7f2"
+        },
+        {
+          "ref": "C205",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/b89e31c5-34aa-53b3-93b2-6565cd9e4ea4",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/e4981240-aed3-514e-9350-2ff2cea506f3"
+        },
+        {
+          "ref": "D301",
+          "actual": "/4b397655-eb2e-561f-9e3b-73d090d4f372/bc3f98c3-1f63-5c74-ad72-04dc09c91972",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/4a4795c6-9e8f-51e4-b962-4bbc2ba20921"
+        },
+        {
+          "ref": "Q1",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/ac900f58-a56c-5399-947c-6b075df8bfd4",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/871c887f-7281-55c3-a1c4-14c4a43cfc5a"
+        },
+        {
+          "ref": "C204",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/20798131-2ca7-58ec-8b73-03edb7127c00",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/7b084da6-d95e-57be-ba70-4c15c3ec299f"
+        },
+        {
+          "ref": "R313",
+          "actual": "/4b397655-eb2e-561f-9e3b-73d090d4f372/fd25cf22-7751-5f80-b678-111c53e2bbb2",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/60dd5df0-1a8f-5587-91e6-df3ae452498c"
+        },
+        {
+          "ref": "D206",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/44d470b9-9722-5839-b818-522872a7cb44",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/f44a3e5e-6cb5-5750-894c-2198f558cd03"
+        },
+        {
+          "ref": "C214",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/8910bee9-8661-5fbd-99ab-fc9e786cdfae",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/a9c943ea-b226-55db-87b3-5e0af249c809"
+        },
+        {
+          "ref": "C351",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/cc58318d-186d-5ce6-a278-ab52263b68f6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/3a2f3a05-76ed-579e-ad89-f7acbc118851/339c325b-c023-5e28-b3f5-0479d63f03ec"
+        },
+        {
+          "ref": "C311",
+          "actual": "/f86b5102-1c92-5c90-8210-83ec411bcc86/3d9ab7c3-4ae2-5cf7-8922-c40241061e21",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/22029121-d814-539b-b9bf-3e0fc389a03f"
+        },
+        {
+          "ref": "C208",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/d7b75bed-afe2-5321-b800-c1aca8346e6b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/10672a54-1c78-5fb5-b1d3-146a303a89a4"
+        },
+        {
+          "ref": "D203",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/6449d4f9-e025-59ea-bd8c-28309dd35e75",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/60aebae4-24c3-59c9-85bd-94fa8fcb27ed"
+        },
+        {
+          "ref": "U7",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/ee5e7fe3-a158-5e98-b37e-147836d31a2a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/69f252b3-0151-564c-ae9d-bf9c3ef93e0e"
+        },
+        {
+          "ref": "C202",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/1cba9868-4512-55c2-a33e-f06be06a4ad1",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/3c64a449-28c3-5dae-984f-b7b8c37d0bee"
+        },
+        {
+          "ref": "C211",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/ae5bea10-677e-57c4-8688-981edca109df",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/9e47f27e-57e0-5149-a692-e53255dd4ab5"
+        },
+        {
+          "ref": "D207",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/328ed57a-7ad9-5a2d-986f-5ecbd6cafbf8",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/613084b8-ea33-50f6-a9e1-83efd18010b4"
+        },
+        {
+          "ref": "R312",
+          "actual": "/4b397655-eb2e-561f-9e3b-73d090d4f372/1bb7e09c-a9f4-53b0-82d9-a378bf819d37",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/63e7ed70-c9c4-5889-a412-b8057a7aea66"
+        },
+        {
+          "ref": "U6",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/f55bf865-f69c-5d83-bf52-81d5b06ff4d1",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/5c0dfd9c-3593-5ed0-8532-657b49f8a937"
+        },
+        {
+          "ref": "Q2",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/859574d6-e66c-5c07-8c9b-9bbc6eeebe26",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/1b475f44-19c6-58a1-82bd-8f28f35c7697"
+        },
+        {
+          "ref": "R342",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/81d279ca-7248-52e2-adfd-9749e9918939",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/904a1eef-3f14-5146-bb7f-1cfa8f9d2f14"
+        },
+        {
+          "ref": "C353",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/75a5fae5-379c-52df-ab8e-94099dd4b4ca",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/3a2f3a05-76ed-579e-ad89-f7acbc118851/f67bfa9a-7f05-5eb6-b626-f0bde175ea9c"
+        },
+        {
+          "ref": "R321",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/2f400074-6e79-55c9-b864-b9e926352447",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/a1675dc6-1c56-531c-b73b-98c1e8111b09"
+        },
+        {
+          "ref": "R322",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/e56c39b3-5c24-5483-9f18-d96a8750aec7",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/4921242a-fd81-5e40-9a43-2fbeab9ff0e8"
+        },
+        {
+          "ref": "D208",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/0f8eda7b-7bb9-5dbc-98a0-a613f3a0619b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/ff82b2be-39df-519b-b9fb-6be64450f119"
+        },
+        {
+          "ref": "D312",
+          "actual": "/f86b5102-1c92-5c90-8210-83ec411bcc86/4e1aa04f-c0ee-5d9b-8090-d297aa7c3c4c",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/b11d5c5f-6e5f-5606-8eff-05485e493f02"
+        },
+        {
+          "ref": "R302",
+          "actual": "/91b47c01-f577-5d10-b6ae-108da8255012/13dc5b40-ae54-5b52-8724-48bd7203c107",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/2839ddd5-9193-5829-ab31-a4e1cfde605b"
+        },
+        {
+          "ref": "C203",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/d1f63782-bf19-55b6-a1b5-88901e5319f5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/04770e0a-cd90-5bb6-9ee2-d4f79bba56c2"
+        },
+        {
+          "ref": "R331",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/7171bb03-e8d2-59d7-b633-6e106a3e7236",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/0723d943-a237-592b-934d-01373b9e244c"
+        },
+        {
+          "ref": "C352",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/683edaac-7329-5d53-9a72-e770f021bd68",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/3a2f3a05-76ed-579e-ad89-f7acbc118851/bf06df98-851b-5ecd-bbb4-af47b9e7bacb"
+        },
+        {
+          "ref": "U3",
+          "actual": "/f86b5102-1c92-5c90-8210-83ec411bcc86/8446993f-e273-5337-8083-cc277cff2041",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/75682971-2076-500c-9184-d30975b25d92"
+        },
+        {
+          "ref": "D202",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/da17d968-9ccf-54b8-b923-5d90ad1cfc61",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/ea57137a-5cd8-58bb-bf18-8a641ee3f97b"
+        },
+        {
+          "ref": "C209",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/67cbb702-bf49-510b-85b2-346239314517",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/203b486a-bb4a-5b1b-8ad9-4aa6d3cd230f"
+        },
+        {
+          "ref": "U4",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/cc528cd4-253e-55ba-acfc-c02c2bb89f09",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/ae05b33f-eabf-50e2-bc4b-a8b58ad02daa"
+        },
+        {
+          "ref": "D204",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/8c8254a2-25ec-542c-8b8d-db96decba3a7",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/65ee0db0-d1db-5030-8f78-8da9df6f7b6d"
+        },
+        {
+          "ref": "C201",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/a1b5b84f-2c5e-5898-b5d9-eb7145099164",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/2004dbd8-0138-5140-9686-59e78d001038"
+        },
+        {
+          "ref": "D201",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/3c06ffdb-af93-5e12-9e48-d35a482bd5f2",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/1c49ccfb-cc0b-5ea5-9fe1-4642a287846d"
+        },
+        {
+          "ref": "R303",
+          "actual": "/91b47c01-f577-5d10-b6ae-108da8255012/c824e500-fb5a-5143-b643-24774ce5d9a8",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/ff77e0a2-d592-53d0-8315-c1572686cd28"
+        },
+        {
+          "ref": "C212",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/a64f9904-9b32-5cf7-9b4b-84a098f0fcde",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/cba753ed-e4e8-5ca2-818f-67ca8f81e699"
+        },
+        {
+          "ref": "R341",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/5d9d0bfc-b6fb-5ce9-be9f-844e1cd2ac14",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/97435e5d-7a3f-50f7-a0a7-ca8dc2fca6fc"
+        },
+        {
+          "ref": "C321",
+          "actual": "/f86b5102-1c92-5c90-8210-83ec411bcc86/6c614b66-a187-5e70-99a7-13fa987e8ceb",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/c20b9903-6d90-52a9-900f-7a9fafedd0e9"
+        },
+        {
+          "ref": "C301",
+          "actual": "/91b47c01-f577-5d10-b6ae-108da8255012/ef6819e6-c5f7-5b0a-b0e9-e3ab83a583c9",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/424b7994-4a32-5de9-a071-295ee4169fa0"
+        },
+        {
+          "ref": "C206",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/7833ee2f-9da4-56db-b041-d5036b05a98d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/543d7dbd-e16b-5f14-a9ce-39682500893a"
+        },
+        {
+          "ref": "D311",
+          "actual": "/f86b5102-1c92-5c90-8210-83ec411bcc86/2e104a72-5b8e-5f4e-b102-f67e331d82ed",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/cbbbbd7e-8f95-5d1f-95b8-c1c3af3dc5be"
+        },
+        {
+          "ref": "C210",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/31414148-0ea2-54e2-abb8-918d30946b4c",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/c88fc44b-1a15-5280-9ca9-71c0b4e19cf2"
+        },
+        {
+          "ref": "D302",
+          "actual": "/4b397655-eb2e-561f-9e3b-73d090d4f372/1546a50e-d9d6-5d8a-a5de-3df0eafa5326",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/a4913287-39c0-522b-ad92-39e6c4fad693"
+        },
+        {
+          "ref": "U5",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/e11946e0-440f-5d7c-84f0-398ebb158e5f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/8b9cf6ca-492a-5992-96cb-24f0438e389a"
+        },
+        {
+          "ref": "U2",
+          "actual": "/f86b5102-1c92-5c90-8210-83ec411bcc86/c96c5796-6c63-5427-85c5-6e092aa30833",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/c1915e60-bb17-5a4e-a9f3-ff6cef7d0486"
+        },
+        {
+          "ref": "C207",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/5694bb3c-8b5a-5c78-954a-d7f4d65ddb0b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/ba1e26fc-57dd-5b1d-873e-b7bf247b25c1"
+        },
+        {
+          "ref": "D205",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/b43a6eaf-5caf-5ac6-a92b-ea8716dc4682",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/0d17fa55-01c8-5b76-b26e-f87c377346be"
+        }
+      ],
+      "drilled_footprint_pads": 145,
+      "via_count": 3,
+      "missing_courtyards": [
+        {
+          "reference": "JC007",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "COIL_REV",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC011",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "MR_N",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC006",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "COIL_CH",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC008",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CTRL_AC1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC013",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PEDAL_REV",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC002",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "+15V",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC003",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "-15V",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC009",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CTRL_AC2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC004",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "BTN_CH",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC010",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "GND",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC001",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "+12V",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC012",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PEDAL_CH",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC005",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "BTN_REV",
+          "selected_mpn": null
+        }
+      ]
+    },
+    "active_Reverb": {
+      "sha256": "3f96fa4c4bf79e7f446293e513892c2894fce00e37920ae169b405de88fb625c",
+      "pads_checked": 123,
+      "contract_errors": [],
+      "native_net_label_differences": [
+        {
+          "ref": "R604",
+          "pad": "1",
+          "native": "Net-(R604-Pad1)",
+          "actual": "DRIVER"
+        },
+        {
+          "ref": "R604",
+          "pad": "2",
+          "native": "Net-(U10B--)",
+          "actual": "DRV_FB"
+        },
+        {
+          "ref": "C601",
+          "pad": "2",
+          "native": "Net-(C601-Pad2)",
+          "actual": "IN_AC"
+        },
+        {
+          "ref": "U11",
+          "pad": "1",
+          "native": "Net-(C605-Pad1)",
+          "actual": "REC_OUT"
+        },
+        {
+          "ref": "U11",
+          "pad": "2",
+          "native": "Net-(U11A--)",
+          "actual": "REC_FB"
+        },
+        {
+          "ref": "U11",
+          "pad": "3",
+          "native": "Net-(U11A-+)",
+          "actual": "REC_IN"
+        },
+        {
+          "ref": "U11",
+          "pad": "6",
+          "native": "Net-(U11B--)",
+          "actual": "WET_BUF"
+        },
+        {
+          "ref": "U11",
+          "pad": "7",
+          "native": "Net-(U11B--)",
+          "actual": "WET_BUF"
+        },
+        {
+          "ref": "R617",
+          "pad": "1",
+          "native": "Net-(C607-Pad2)",
+          "actual": "WET_AC"
+        },
+        {
+          "ref": "C603",
+          "pad": "1",
+          "native": "Net-(C603-Pad1)",
+          "actual": "DRIVE_CAP"
+        },
+        {
+          "ref": "U12",
+          "pad": "2",
+          "native": "Net-(U12A--)",
+          "actual": "SUM"
+        },
+        {
+          "ref": "U12",
+          "pad": "6",
+          "native": "Net-(U12B--)",
+          "actual": "OUT_FB"
+        },
+        {
+          "ref": "U12",
+          "pad": "7",
+          "native": "Net-(R615-Pad1)",
+          "actual": "OUT_BUF"
+        },
+        {
+          "ref": "R606",
+          "pad": "1",
+          "native": "Net-(U11A-+)",
+          "actual": "REC_IN"
+        },
+        {
+          "ref": "R603",
+          "pad": "1",
+          "native": "Net-(U10B--)",
+          "actual": "DRV_FB"
+        },
+        {
+          "ref": "K3",
+          "pad": "4",
+          "native": "Net-(K3-Pad4)",
+          "actual": "WET_MUTE"
+        },
+        {
+          "ref": "R611",
+          "pad": "1",
+          "native": "Net-(K3-Pad4)",
+          "actual": "WET_MUTE"
+        },
+        {
+          "ref": "R611",
+          "pad": "2",
+          "native": "Net-(U12A--)",
+          "actual": "SUM"
+        },
+        {
+          "ref": "R602",
+          "pad": "1",
+          "native": "Net-(D601-A)",
+          "actual": "SEND_IN"
+        },
+        {
+          "ref": "C606",
+          "pad": "1",
+          "native": "Net-(C605-Pad1)",
+          "actual": "REC_OUT"
+        },
+        {
+          "ref": "R607",
+          "pad": "1",
+          "native": "Net-(U11A--)",
+          "actual": "REC_FB"
+        },
+        {
+          "ref": "R610",
+          "pad": "1",
+          "native": "Net-(U11B--)",
+          "actual": "WET_BUF"
+        },
+        {
+          "ref": "R610",
+          "pad": "2",
+          "native": "Net-(K3-Pad4)",
+          "actual": "WET_MUTE"
+        },
+        {
+          "ref": "C602",
+          "pad": "1",
+          "native": "Net-(U10A--)",
+          "actual": "SEND_BUF"
+        },
+        {
+          "ref": "C602",
+          "pad": "2",
+          "native": "Net-(C602-Pad2)",
+          "actual": "SEND_TOP"
+        },
+        {
+          "ref": "D602",
+          "pad": "1",
+          "native": "Net-(D601-A)",
+          "actual": "SEND_IN"
+        },
+        {
+          "ref": "D601",
+          "pad": "2",
+          "native": "Net-(D601-A)",
+          "actual": "SEND_IN"
+        },
+        {
+          "ref": "R605",
+          "pad": "1",
+          "native": "Net-(R604-Pad1)",
+          "actual": "DRIVER"
+        },
+        {
+          "ref": "R605",
+          "pad": "2",
+          "native": "Net-(C603-Pad1)",
+          "actual": "DRIVE_CAP"
+        },
+        {
+          "ref": "C604",
+          "pad": "2",
+          "native": "Net-(U11A-+)",
+          "actual": "REC_IN"
+        },
+        {
+          "ref": "C605",
+          "pad": "1",
+          "native": "Net-(C605-Pad1)",
+          "actual": "REC_OUT"
+        },
+        {
+          "ref": "C605",
+          "pad": "2",
+          "native": "Net-(U11A--)",
+          "actual": "REC_FB"
+        },
+        {
+          "ref": "R616",
+          "pad": "1",
+          "native": "Net-(R615-Pad1)",
+          "actual": "OUT_BUF"
+        },
+        {
+          "ref": "R616",
+          "pad": "2",
+          "native": "Net-(C607-Pad1)",
+          "actual": "OUT_AC"
+        },
+        {
+          "ref": "C607",
+          "pad": "1",
+          "native": "Net-(C607-Pad1)",
+          "actual": "OUT_AC"
+        },
+        {
+          "ref": "C607",
+          "pad": "2",
+          "native": "Net-(C607-Pad2)",
+          "actual": "WET_AC"
+        },
+        {
+          "ref": "R613",
+          "pad": "2",
+          "native": "Net-(U12A--)",
+          "actual": "SUM"
+        },
+        {
+          "ref": "R608",
+          "pad": "1",
+          "native": "Net-(C605-Pad1)",
+          "actual": "REC_OUT"
+        },
+        {
+          "ref": "R608",
+          "pad": "2",
+          "native": "Net-(U11A--)",
+          "actual": "REC_FB"
+        },
+        {
+          "ref": "R614",
+          "pad": "2",
+          "native": "Net-(U12B--)",
+          "actual": "OUT_FB"
+        },
+        {
+          "ref": "U10",
+          "pad": "1",
+          "native": "Net-(U10A--)",
+          "actual": "SEND_BUF"
+        },
+        {
+          "ref": "U10",
+          "pad": "2",
+          "native": "Net-(U10A--)",
+          "actual": "SEND_BUF"
+        },
+        {
+          "ref": "U10",
+          "pad": "3",
+          "native": "Net-(D601-A)",
+          "actual": "SEND_IN"
+        },
+        {
+          "ref": "U10",
+          "pad": "5",
+          "native": "Net-(U10B-+)",
+          "actual": "SEND_W"
+        },
+        {
+          "ref": "U10",
+          "pad": "6",
+          "native": "Net-(U10B--)",
+          "actual": "DRV_FB"
+        },
+        {
+          "ref": "U10",
+          "pad": "7",
+          "native": "Net-(R604-Pad1)",
+          "actual": "DRIVER"
+        },
+        {
+          "ref": "R601",
+          "pad": "1",
+          "native": "Net-(C601-Pad2)",
+          "actual": "IN_AC"
+        },
+        {
+          "ref": "R601",
+          "pad": "2",
+          "native": "Net-(D601-A)",
+          "actual": "SEND_IN"
+        },
+        {
+          "ref": "R615",
+          "pad": "1",
+          "native": "Net-(R615-Pad1)",
+          "actual": "OUT_BUF"
+        },
+        {
+          "ref": "R615",
+          "pad": "2",
+          "native": "Net-(U12B--)",
+          "actual": "OUT_FB"
+        },
+        {
+          "ref": "RV601",
+          "pad": "1",
+          "native": "Net-(C602-Pad2)",
+          "actual": "SEND_TOP"
+        },
+        {
+          "ref": "RV601",
+          "pad": "2",
+          "native": "Net-(U10B-+)",
+          "actual": "SEND_W"
+        },
+        {
+          "ref": "R618",
+          "pad": "1",
+          "native": "Net-(C607-Pad2)",
+          "actual": "WET_AC"
+        }
+      ],
+      "native_path_errors": [
+        {
+          "ref": "R604",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/854fab78-3a4d-513e-b205-012f0f790349",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/854fab78-3a4d-513e-b205-012f0f790349"
+        },
+        {
+          "ref": "C601",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/5e311206-d175-567e-b8c5-e3d277b48838",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/5e311206-d175-567e-b8c5-e3d277b48838"
+        },
+        {
+          "ref": "U11",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/9fdba56c-2d89-51eb-ba07-3750f0cb74bd",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/9fdba56c-2d89-51eb-ba07-3750f0cb74bd"
+        },
+        {
+          "ref": "JR4",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/c8519a07-fd72-5ded-90c1-775f6d5475d6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/c8519a07-fd72-5ded-90c1-775f6d5475d6"
+        },
+        {
+          "ref": "R617",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/6c1009f7-4740-5751-8d3a-239458801f7b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/6c1009f7-4740-5751-8d3a-239458801f7b"
+        },
+        {
+          "ref": "C603",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/6e65ed2c-e783-552a-a584-bf0e5baa2e08",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/6e65ed2c-e783-552a-a584-bf0e5baa2e08"
+        },
+        {
+          "ref": "C615",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/cb73fbd1-32d9-5821-a2e5-9dc1b11d0464",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/cb73fbd1-32d9-5821-a2e5-9dc1b11d0464"
+        },
+        {
+          "ref": "R612",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/8057b090-6240-536d-8f84-1b7a9092e69c",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/2e7f6f10-1e86-5705-a9ce-58e0064646d5"
+        },
+        {
+          "ref": "U12",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/1a203314-1d5f-59d4-aeb1-80715bf1a9f5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/1a203314-1d5f-59d4-aeb1-80715bf1a9f5"
+        },
+        {
+          "ref": "JR3",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/fc7a31b4-3d80-55fc-b6da-94ab4ec8c897",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/fc7a31b4-3d80-55fc-b6da-94ab4ec8c897"
+        },
+        {
+          "ref": "R606",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/760c8179-c96e-5159-9e08-90f9349f79dc",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/760c8179-c96e-5159-9e08-90f9349f79dc"
+        },
+        {
+          "ref": "C611",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/d4f23709-bdee-54a2-9ecd-c0b09d78457a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/d4f23709-bdee-54a2-9ecd-c0b09d78457a"
+        },
+        {
+          "ref": "R603",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/2c0a7991-93d8-5d6e-ac79-61324440c6f3",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/2c0a7991-93d8-5d6e-ac79-61324440c6f3"
+        },
+        {
+          "ref": "JR5",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/1b009add-d2b9-5e53-a540-99816088ebc5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/1b009add-d2b9-5e53-a540-99816088ebc5"
+        },
+        {
+          "ref": "K3",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/4eb26d3c-107a-5d6b-ac69-ac2cec01d29c",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/4eb26d3c-107a-5d6b-ac69-ac2cec01d29c"
+        },
+        {
+          "ref": "R611",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/ab225389-4c42-55b2-903e-e59773966016",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/ab225389-4c42-55b2-903e-e59773966016"
+        },
+        {
+          "ref": "C616",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/d58bc203-1f15-541b-9011-c5609ee3cb18",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/d58bc203-1f15-541b-9011-c5609ee3cb18"
+        },
+        {
+          "ref": "JR2",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/e1db5116-5082-5004-9789-b4e456de50a7",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/e1db5116-5082-5004-9789-b4e456de50a7"
+        },
+        {
+          "ref": "R602",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/0af8986b-8769-5a1d-b69f-8506b3d2c829",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/0af8986b-8769-5a1d-b69f-8506b3d2c829"
+        },
+        {
+          "ref": "C606",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/3c1ecfac-ee27-59b4-8835-e1b041f029d6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/3c1ecfac-ee27-59b4-8835-e1b041f029d6"
+        },
+        {
+          "ref": "R607",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/60b8ec4f-82d9-57af-aac0-e111a592c900",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/60b8ec4f-82d9-57af-aac0-e111a592c900"
+        },
+        {
+          "ref": "R610",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/f6116055-2dcb-5c38-a684-fb644bcec946",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/f6116055-2dcb-5c38-a684-fb644bcec946"
+        },
+        {
+          "ref": "C602",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/efba6506-99a7-5103-a9b0-59186659032d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/efba6506-99a7-5103-a9b0-59186659032d"
+        },
+        {
+          "ref": "D602",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/b82d1c2b-a1c2-55d5-a083-5e8f77f47cff",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/b82d1c2b-a1c2-55d5-a083-5e8f77f47cff"
+        },
+        {
+          "ref": "D601",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/f4ef9efe-5e1c-5860-a647-d81373439d77",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/f4ef9efe-5e1c-5860-a647-d81373439d77"
+        },
+        {
+          "ref": "JR1",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/0ec93d1e-da13-5895-89b3-c99e935d8de5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/0ec93d1e-da13-5895-89b3-c99e935d8de5"
+        },
+        {
+          "ref": "R605",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/a20942c6-e388-542c-962b-7bb8902cb70a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/a20942c6-e388-542c-962b-7bb8902cb70a"
+        },
+        {
+          "ref": "C604",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/287660bf-54de-5fd0-9554-b3813874be3b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/287660bf-54de-5fd0-9554-b3813874be3b"
+        },
+        {
+          "ref": "C605",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/f2d4d7eb-ed90-55ac-81d9-2e07a7fbbd34",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/f2d4d7eb-ed90-55ac-81d9-2e07a7fbbd34"
+        },
+        {
+          "ref": "C613",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/80d6d5e8-e219-511c-8665-ac076e1135c8",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/80d6d5e8-e219-511c-8665-ac076e1135c8"
+        },
+        {
+          "ref": "R609",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/0c17275b-05a5-52d1-9177-b19f038462df",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/0c17275b-05a5-52d1-9177-b19f038462df"
+        },
+        {
+          "ref": "C610",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/280cd3dd-2b3e-5782-a248-af9adbf38740",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/280cd3dd-2b3e-5782-a248-af9adbf38740"
+        },
+        {
+          "ref": "R616",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/710d87e1-f876-5917-9dcd-dbf9f2c23922",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/710d87e1-f876-5917-9dcd-dbf9f2c23922"
+        },
+        {
+          "ref": "C614",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/b04ac169-ac53-5c57-a33a-a603e8d95471",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/b04ac169-ac53-5c57-a33a-a603e8d95471"
+        },
+        {
+          "ref": "C607",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/bee4b957-26bb-55a6-8ec1-89567dbef894",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/bee4b957-26bb-55a6-8ec1-89567dbef894"
+        },
+        {
+          "ref": "JR6",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/bec3c756-3e71-5692-84aa-4d88bbe3a2aa",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/bec3c756-3e71-5692-84aa-4d88bbe3a2aa"
+        },
+        {
+          "ref": "R613",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/16ef475e-dbdf-5ed4-b929-960d3bb49904",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/16ef475e-dbdf-5ed4-b929-960d3bb49904"
+        },
+        {
+          "ref": "C617",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/11d79d59-6f0b-51a5-97ba-10ce3db84a5b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/11d79d59-6f0b-51a5-97ba-10ce3db84a5b"
+        },
+        {
+          "ref": "R608",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/41de8481-8363-59ba-a6bc-96518f7415d5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/41de8481-8363-59ba-a6bc-96518f7415d5"
+        },
+        {
+          "ref": "R614",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/f95fd079-c2ba-550a-801b-690637b5499b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/f95fd079-c2ba-550a-801b-690637b5499b"
+        },
+        {
+          "ref": "C612",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/7cdb8bf3-a1e3-5bcf-9b8b-dbb2628e3c77",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/7cdb8bf3-a1e3-5bcf-9b8b-dbb2628e3c77"
+        },
+        {
+          "ref": "U10",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/bc21c5ab-5d4a-5953-8bf3-32faadb273ca",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/bc21c5ab-5d4a-5953-8bf3-32faadb273ca"
+        },
+        {
+          "ref": "R601",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/8a9cb995-466e-5c4e-afee-087da21a4bc5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/8a9cb995-466e-5c4e-afee-087da21a4bc5"
+        },
+        {
+          "ref": "R615",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/98e0c9b8-c690-5717-b2f8-704abcb72c95",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/98e0c9b8-c690-5717-b2f8-704abcb72c95"
+        },
+        {
+          "ref": "RV601",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/ef337ffa-b411-5c9b-bae3-d7c5be170569",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/ef337ffa-b411-5c9b-bae3-d7c5be170569"
+        },
+        {
+          "ref": "R618",
+          "actual": "",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/937c5d5c-2416-5dc3-8b46-4405c85f6a66"
+        }
+      ],
+      "drilled_footprint_pads": 125,
+      "via_count": 12,
+      "missing_courtyards": []
+    },
+    "candidate_Main": {
+      "sha256": "5433cd8e9b264b12328099fe6c94a03bbf308f5bdd04fc195e9017b13d799555",
+      "pads_checked": 128,
+      "contract_errors": [],
+      "native_net_label_differences": [
+        {
+          "ref": "R8",
+          "pad": "1",
+          "native": "Net-(V1A-K)",
+          "actual": "CL_K2"
+        },
+        {
+          "ref": "C8",
+          "pad": "1",
+          "native": "Net-(V2B-A)",
+          "actual": "DR_P1"
+        },
+        {
+          "ref": "C8",
+          "pad": "2",
+          "native": "Net-(C8-Pad2)",
+          "actual": "DR_GAIN_TOP"
+        },
+        {
+          "ref": "C4",
+          "pad": "1",
+          "native": "Net-(C3-Pad1)",
+          "actual": "CL_TONE"
+        },
+        {
+          "ref": "C4",
+          "pad": "2",
+          "native": "Net-(C4-Pad2)",
+          "actual": "CL_BASS_BOTTOM"
+        },
+        {
+          "ref": "R23",
+          "pad": "1",
+          "native": "Net-(V3A-K)",
+          "actual": "DR_CF"
+        },
+        {
+          "ref": "R23",
+          "pad": "2",
+          "native": "Net-(C16-Pad1)",
+          "actual": "DR_TONE"
+        },
+        {
+          "ref": "C19",
+          "pad": "2",
+          "native": "Net-(V4B-G)",
+          "actual": "PI_G1"
+        },
+        {
+          "ref": "R11",
+          "pad": "1",
+          "native": "Net-(V2B-K)",
+          "actual": "DR_K1"
+        },
+        {
+          "ref": "C21",
+          "pad": "1",
+          "native": "Net-(C20-Pad2)",
+          "actual": "NFB_NODE"
+        },
+        {
+          "ref": "C21",
+          "pad": "2",
+          "native": "Net-(C21-Pad2)",
+          "actual": "PRES_TOP"
+        },
+        {
+          "ref": "K1",
+          "pad": "4",
+          "native": "Net-(K1-Pad4)",
+          "actual": "INPUT_STOP"
+        },
+        {
+          "ref": "C20",
+          "pad": "1",
+          "native": "Net-(V4A-G)",
+          "actual": "PI_G2"
+        },
+        {
+          "ref": "C20",
+          "pad": "2",
+          "native": "Net-(C20-Pad2)",
+          "actual": "NFB_NODE"
+        },
+        {
+          "ref": "R27",
+          "pad": "1",
+          "native": "Net-(V4A-G)",
+          "actual": "PI_G2"
+        },
+        {
+          "ref": "R27",
+          "pad": "2",
+          "native": "Net-(R25-Pad2)",
+          "actual": "PI_TAIL_TOP"
+        },
+        {
+          "ref": "R25",
+          "pad": "1",
+          "native": "Net-(V4B-G)",
+          "actual": "PI_G1"
+        },
+        {
+          "ref": "R25",
+          "pad": "2",
+          "native": "Net-(R25-Pad2)",
+          "actual": "PI_TAIL_TOP"
+        },
+        {
+          "ref": "R29",
+          "pad": "2",
+          "native": "Net-(V4B-A)",
+          "actual": "PI_P1"
+        },
+        {
+          "ref": "R28",
+          "pad": "1",
+          "native": "Net-(R25-Pad2)",
+          "actual": "PI_TAIL_TOP"
+        },
+        {
+          "ref": "R28",
+          "pad": "2",
+          "native": "Net-(C20-Pad2)",
+          "actual": "NFB_NODE"
+        },
+        {
+          "ref": "C7",
+          "pad": "1",
+          "native": "Net-(V2B-K)",
+          "actual": "DR_K1"
+        },
+        {
+          "ref": "C16",
+          "pad": "1",
+          "native": "Net-(C16-Pad1)",
+          "actual": "DR_TONE"
+        },
+        {
+          "ref": "C16",
+          "pad": "2",
+          "native": "Net-(C16-Pad2)",
+          "actual": "DR_BASS_TOP"
+        },
+        {
+          "ref": "R26",
+          "pad": "1",
+          "native": "Net-(V4A-K)",
+          "actual": "PI_K"
+        },
+        {
+          "ref": "R26",
+          "pad": "2",
+          "native": "Net-(R25-Pad2)",
+          "actual": "PI_TAIL_TOP"
+        },
+        {
+          "ref": "R30",
+          "pad": "2",
+          "native": "Net-(V4A-A)",
+          "actual": "PI_P2"
+        },
+        {
+          "ref": "R33",
+          "pad": "1",
+          "native": "Net-(C23-Pad2)",
+          "actual": "GRID_A_FEED"
+        },
+        {
+          "ref": "R5",
+          "pad": "1",
+          "native": "Net-(V1B-A)",
+          "actual": "CL_P1"
+        },
+        {
+          "ref": "R5",
+          "pad": "2",
+          "native": "Net-(C3-Pad1)",
+          "actual": "CL_TONE"
+        },
+        {
+          "ref": "R34",
+          "pad": "1",
+          "native": "Net-(C24-Pad2)",
+          "actual": "GRID_B_FEED"
+        },
+        {
+          "ref": "C14",
+          "pad": "1",
+          "native": "Net-(V3B-K)",
+          "actual": "DR_K3"
+        },
+        {
+          "ref": "C23",
+          "pad": "1",
+          "native": "Net-(V4B-A)",
+          "actual": "PI_P1"
+        },
+        {
+          "ref": "C23",
+          "pad": "2",
+          "native": "Net-(C23-Pad2)",
+          "actual": "GRID_A_FEED"
+        },
+        {
+          "ref": "C11",
+          "pad": "1",
+          "native": "Net-(V2A-A)",
+          "actual": "DR_P2"
+        },
+        {
+          "ref": "C11",
+          "pad": "2",
+          "native": "Net-(C11-Pad2)",
+          "actual": "DR_C3"
+        },
+        {
+          "ref": "C10",
+          "pad": "1",
+          "native": "Net-(V2A-K)",
+          "actual": "DR_K2"
+        },
+        {
+          "ref": "C9",
+          "pad": "1",
+          "native": "Net-(C9-Pad1)",
+          "actual": "DR_GAIN_W"
+        },
+        {
+          "ref": "R3",
+          "pad": "1",
+          "native": "Net-(V1B-K)",
+          "actual": "CL_K1"
+        },
+        {
+          "ref": "R15",
+          "pad": "2",
+          "native": "Net-(V2A-A)",
+          "actual": "DR_P2"
+        },
+        {
+          "ref": "C15",
+          "pad": "1",
+          "native": "Net-(V3A-K)",
+          "actual": "DR_CF"
+        },
+        {
+          "ref": "C15",
+          "pad": "2",
+          "native": "Net-(C15-Pad2)",
+          "actual": "DR_TREBLE_TOP"
+        },
+        {
+          "ref": "C5",
+          "pad": "1",
+          "native": "Net-(V1A-K)",
+          "actual": "CL_K2"
+        },
+        {
+          "ref": "R18",
+          "pad": "1",
+          "native": "Net-(C11-Pad2)",
+          "actual": "DR_C3"
+        },
+        {
+          "ref": "R18",
+          "pad": "2",
+          "native": "Net-(V3B-G)",
+          "actual": "DR_G3"
+        },
+        {
+          "ref": "R13",
+          "pad": "1",
+          "native": "Net-(C9-Pad1)",
+          "actual": "DR_GAIN_W"
+        },
+        {
+          "ref": "R31",
+          "pad": "2",
+          "native": "Net-(C20-Pad2)",
+          "actual": "NFB_NODE"
+        },
+        {
+          "ref": "R16",
+          "pad": "1",
+          "native": "Net-(V2A-K)",
+          "actual": "DR_K2"
+        },
+        {
+          "ref": "C22",
+          "pad": "1",
+          "native": "Net-(V4B-A)",
+          "actual": "PI_P1"
+        },
+        {
+          "ref": "C22",
+          "pad": "2",
+          "native": "Net-(V4A-A)",
+          "actual": "PI_P2"
+        },
+        {
+          "ref": "R20",
+          "pad": "1",
+          "native": "Net-(V3B-K)",
+          "actual": "DR_K3"
+        },
+        {
+          "ref": "R19",
+          "pad": "1",
+          "native": "Net-(V3B-G)",
+          "actual": "DR_G3"
+        },
+        {
+          "ref": "R32",
+          "pad": "1",
+          "native": "Net-(C20-Pad2)",
+          "actual": "NFB_NODE"
+        },
+        {
+          "ref": "K2",
+          "pad": "4",
+          "native": "Net-(J3-PadT)",
+          "actual": "FX_SEND"
+        },
+        {
+          "ref": "C24",
+          "pad": "1",
+          "native": "Net-(V4A-A)",
+          "actual": "PI_P2"
+        },
+        {
+          "ref": "C24",
+          "pad": "2",
+          "native": "Net-(C24-Pad2)",
+          "actual": "GRID_B_FEED"
+        },
+        {
+          "ref": "R6",
+          "pad": "1",
+          "native": "Net-(C4-Pad2)",
+          "actual": "CL_BASS_BOTTOM"
+        },
+        {
+          "ref": "R22",
+          "pad": "1",
+          "native": "Net-(V3A-K)",
+          "actual": "DR_CF"
+        },
+        {
+          "ref": "C1",
+          "pad": "1",
+          "native": "Net-(V1B-K)",
+          "actual": "CL_K1"
+        },
+        {
+          "ref": "R12",
+          "pad": "2",
+          "native": "Net-(V2B-A)",
+          "actual": "DR_P1"
+        },
+        {
+          "ref": "R4",
+          "pad": "2",
+          "native": "Net-(V1B-A)",
+          "actual": "CL_P1"
+        },
+        {
+          "ref": "C3",
+          "pad": "1",
+          "native": "Net-(C3-Pad1)",
+          "actual": "CL_TONE"
+        },
+        {
+          "ref": "C3",
+          "pad": "2",
+          "native": "Net-(C3-Pad2)",
+          "actual": "CL_BASS_TOP"
+        },
+        {
+          "ref": "C2",
+          "pad": "1",
+          "native": "Net-(V1B-A)",
+          "actual": "CL_P1"
+        },
+        {
+          "ref": "C2",
+          "pad": "2",
+          "native": "Net-(C2-Pad2)",
+          "actual": "CL_TREBLE_TOP"
+        },
+        {
+          "ref": "C17",
+          "pad": "1",
+          "native": "Net-(C16-Pad1)",
+          "actual": "DR_TONE"
+        },
+        {
+          "ref": "C17",
+          "pad": "2",
+          "native": "Net-(C17-Pad2)",
+          "actual": "DR_BASS_BOTTOM"
+        },
+        {
+          "ref": "C6",
+          "pad": "1",
+          "native": "Net-(V1A-A)",
+          "actual": "CL_P2"
+        },
+        {
+          "ref": "R1",
+          "pad": "1",
+          "native": "Net-(J1-PadT)",
+          "actual": "INPUT"
+        },
+        {
+          "ref": "R1",
+          "pad": "2",
+          "native": "Net-(K1-Pad4)",
+          "actual": "INPUT_STOP"
+        },
+        {
+          "ref": "R7",
+          "pad": "2",
+          "native": "Net-(V1A-A)",
+          "actual": "CL_P2"
+        }
+      ],
+      "native_path_errors": [
+        {
+          "ref": "R8",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/c9a356ef-7dd8-5bb5-a5f6-ceed1f70497d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/6b095eae-037f-5812-befc-57104a27b989"
+        },
+        {
+          "ref": "C8",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/b8755881-5c2b-5256-b98b-0476c5ecade6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/9dfb01d0-5ecb-5627-b92d-ee4b32b9fbf2"
+        },
+        {
+          "ref": "C4",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/b521c418-4339-5721-90de-d49905ee840a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/eca4c034-5cda-50d4-8450-e42777d54c5f"
+        },
+        {
+          "ref": "R23",
+          "actual": "/927e127f-16da-5a34-9ba6-080c40348e55/c949952e-401f-5d4b-b1fc-9bd165a18beb",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/f6df3650-4c89-5e6e-9389-13cf6b4ae0ad/3df6356e-18e0-52a8-81aa-a590a20a67e0"
+        },
+        {
+          "ref": "R24",
+          "actual": "/2d95e103-cb4f-5627-af47-c822def9b0fd/35cf0cad-f74e-5223-92ef-d295303c9d77",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/7bbd8e49-7cc0-51cc-9570-2abd43701d49"
+        },
+        {
+          "ref": "C19",
+          "actual": "/2d95e103-cb4f-5627-af47-c822def9b0fd/d7f4f8b9-8f8f-5d2b-ac00-276cbe27a08a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/e0cd3d33-4199-56ee-8b10-b3deed1231ac"
+        },
+        {
+          "ref": "R11",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/7dcd6ac1-b078-5220-854c-182fe0fe5417",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/5f4485d3-f39f-55ef-8992-3afa719ee63c"
+        },
+        {
+          "ref": "C21",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/f2121c84-9a96-5c0f-806b-5401435f0253",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/0d6dc11f-fd99-5fa3-a13c-02243e53c645"
+        },
+        {
+          "ref": "K1",
+          "actual": "/927e127f-16da-5a34-9ba6-080c40348e55/4b6a9e22-d8b6-5acb-bab6-d60c5cd0832e",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/1c116e34-ac54-5b0c-961d-68eab3d403fb/e84cb75f-ef5f-5807-9ead-10f3c2e7eba5"
+        },
+        {
+          "ref": "C20",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/dd9b4cb8-ae90-51ed-82cc-0aa519a6df42",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/8a479f10-cb61-512c-922d-754ffd38130d"
+        },
+        {
+          "ref": "R27",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/bce27ccf-9130-5888-b95e-cdd2339efa23",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/015b9df3-f5f3-5d73-b648-cdd29ec4a9bf"
+        },
+        {
+          "ref": "R25",
+          "actual": "/2d95e103-cb4f-5627-af47-c822def9b0fd/e7ff8046-661f-5fd1-b3c5-8a72f924971a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/87c4720b-651d-5995-bf59-8187ded7f579"
+        },
+        {
+          "ref": "R29",
+          "actual": "/2d95e103-cb4f-5627-af47-c822def9b0fd/a20f4ddb-c9dd-52f6-aa67-199a5d1fcb3f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/5fc7d829-5ca3-5327-bc1b-696df408ef2e"
+        },
+        {
+          "ref": "R28",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/2c7b49b8-59f6-5b81-8693-856af92361f5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/3e525bad-7eb0-5ecd-9332-4bef19e31632"
+        },
+        {
+          "ref": "C7",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/7d9a1748-5856-5432-a9f8-ab35c6796ce3",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/d9d397d0-482b-5458-9d47-8fd7ef3109cc"
+        },
+        {
+          "ref": "C16",
+          "actual": "/927e127f-16da-5a34-9ba6-080c40348e55/2116ca76-3ec5-5d30-8583-c4facf1d8cf9",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/f6df3650-4c89-5e6e-9389-13cf6b4ae0ad/11efae0d-5e15-54fe-9ebf-62c406d7279d"
+        },
+        {
+          "ref": "R26",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/32302aa2-4cfb-59bb-93b7-c007d3f2b0e6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/5fd30f68-433f-5872-b1ce-42790dda43b7"
+        },
+        {
+          "ref": "R30",
+          "actual": "/2d95e103-cb4f-5627-af47-c822def9b0fd/807ac61e-feae-5b93-b7f0-e2ada317d5ef",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/dc9a8ffe-d8f0-5e1a-8897-d23bd5dff60d"
+        },
+        {
+          "ref": "R33",
+          "actual": "/7bd28c0d-b305-5313-850f-d9fb6d258990/27098c7e-357b-5b62-a683-3848af0d19b0",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/5d3ea088-e4eb-5dc9-af2a-34449773ab8a"
+        },
+        {
+          "ref": "R5",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/9c1c8bd6-58a1-58a4-ad27-be16e03f6891",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/d5a89986-2fb2-5e3a-87d4-78fe3e000e8b"
+        },
+        {
+          "ref": "R34",
+          "actual": "/7bd28c0d-b305-5313-850f-d9fb6d258990/83d6161c-f2ae-51f8-be93-2f3d973e0611",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/ae980a30-14eb-5d55-8ba9-30e8f0f7eaa7"
+        },
+        {
+          "ref": "C14",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/b26dc97c-bab7-5cd1-815f-ac3f2c1a39e9",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/6b7b5832-ad81-5ec7-ae11-03a6d1650358"
+        },
+        {
+          "ref": "C23",
+          "actual": "/7bd28c0d-b305-5313-850f-d9fb6d258990/c76f9c77-5841-5cea-a0fb-4edd7b657da2",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/59298752-f519-500d-b1e0-04385d06c125"
+        },
+        {
+          "ref": "C11",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/e744e4fd-0f65-5118-bc0b-05eba08af1bc",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/95d791af-f342-5023-8c03-2f587ff5e8ce"
+        },
+        {
+          "ref": "C10",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/c0a67226-0500-58d4-b969-640d32302261",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/2735e681-e600-591e-b1c4-0b96d33eebda"
+        },
+        {
+          "ref": "C9",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/3457032f-7a19-5247-9cae-0792ac01cc7d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/e824d168-0ffd-590d-9097-d3ba32f270dd"
+        },
+        {
+          "ref": "R3",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/1f040331-a020-5dac-8272-a57d93f02e3a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/cdad8c09-f524-5a4f-befe-379453ed2101"
+        },
+        {
+          "ref": "R15",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/22f361c2-4c64-519e-bfd2-b69e97e9ad45",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/5ea0c560-2b19-5971-8179-fd43122e5b79"
+        },
+        {
+          "ref": "C15",
+          "actual": "/927e127f-16da-5a34-9ba6-080c40348e55/52d12c9d-5b7a-5d72-950f-ee44b42d299d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/f6df3650-4c89-5e6e-9389-13cf6b4ae0ad/b4ab5d0b-28f1-5904-8d64-ddf4ffa6f3e8"
+        },
+        {
+          "ref": "C5",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/da9a034f-5482-54cb-8ed4-059599b0d86f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/16df8a78-1496-5187-a030-ae50c1e0996a"
+        },
+        {
+          "ref": "R21",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/b8aad1d9-77f6-500a-a8de-d42131828919",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/74624e94-3313-5cb2-9150-77a8f3a737ce"
+        },
+        {
+          "ref": "R2",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/69811177-2c19-56f7-a229-e65896609c63",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/e7feb085-ecda-5c8f-87c1-84e0183d1c95"
+        },
+        {
+          "ref": "R18",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/8f1aafd6-0c3f-574b-bc9d-f06a24459bb5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/254c2e0f-a8bf-5434-aa9f-3b9ccea98329"
+        },
+        {
+          "ref": "R10",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/60385051-a074-5005-89e3-780c46ff4eab",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/e0b4ad79-524d-5abf-a5fb-f5717df55001"
+        },
+        {
+          "ref": "R13",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/6b2c314a-2185-54fe-aaf9-f35f8abcd864",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/5de32c59-e08c-52bd-a8fd-521bfadc7983"
+        },
+        {
+          "ref": "R14",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/accacce4-f151-5192-b4e3-ef07bd2292c4",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/5c368ad8-56e2-5b3e-8b5e-fbcb7e1769d9"
+        },
+        {
+          "ref": "R43",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/aecba23b-d8cb-51e8-be4e-dbed5907e7af",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/bdfd908c-7013-593b-9119-8918725f1919"
+        },
+        {
+          "ref": "R31",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/58e57a6e-ae9f-514d-93e2-0d238209f850",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/9d299a12-5a7d-577c-a017-dd16bad46fd3"
+        },
+        {
+          "ref": "R16",
+          "actual": "/07534359-dc68-5bfc-8711-e41d4a74aef2/8e28339a-c1e8-5472-8398-134b7f6010c7",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/ca5ad86c-e211-58b3-8d95-d5fb8252e1a7"
+        },
+        {
+          "ref": "C22",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/1ab16a2e-847c-58b5-9a93-42375d71140b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/c1cc62b8-59fa-52a6-a699-f227f9d81ae1"
+        },
+        {
+          "ref": "R20",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/5856afdc-d2e9-5538-becc-58435349ea76",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/b311c9e2-92ab-5173-8a03-1da5d2155a67"
+        },
+        {
+          "ref": "R19",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/b5f7161b-169e-590d-bdb1-eee8cfff4edf",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/761e6302-d977-5568-9cee-7c755825aaf1"
+        },
+        {
+          "ref": "R32",
+          "actual": "/8ed439a0-1fa1-55e0-958b-d769f986c550/9ef06437-f771-5322-a904-58645b418373",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/d2569d70-f521-52fb-860e-c32ff3decf08"
+        },
+        {
+          "ref": "K2",
+          "actual": "/2d95e103-cb4f-5627-af47-c822def9b0fd/a8ee81bc-3931-52ba-b923-1a5aaf165acb",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/1c116e34-ac54-5b0c-961d-68eab3d403fb/a9bb71a7-95bd-5e11-8aa1-fe6af9aaf16c"
+        },
+        {
+          "ref": "C24",
+          "actual": "/7bd28c0d-b305-5313-850f-d9fb6d258990/554faf3f-f99c-59bf-a379-7e18679fee3e",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa/2f1f3b75-0b98-57f6-bc43-cfac6eba23ad"
+        },
+        {
+          "ref": "R6",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/806078f8-9627-568b-a1cf-962b5c63437b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/304827bf-5611-5543-a0e8-9f055cc115a5"
+        },
+        {
+          "ref": "R22",
+          "actual": "/0deb519f-5213-5a86-bb0b-f2391bf9bf35/66cb2256-2f60-5abb-86e5-a16be320557f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/f6df3650-4c89-5e6e-9389-13cf6b4ae0ad/1c6d2418-5da6-5917-afca-dfd5ed4a1686"
+        },
+        {
+          "ref": "C1",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/a9e5b0b8-b1d1-5f2b-846a-7e247138eb99",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/ea0eb92c-4908-5fb6-a7d5-1300862b6619"
+        },
+        {
+          "ref": "R12",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/9f038b6d-2b90-51d5-8de1-68397b161efa",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b/0463ba31-0bee-523b-9db4-d9dd7e4952e8"
+        },
+        {
+          "ref": "R4",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/18bc0fb2-da86-5411-8ec0-96620e1053cd",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/e1d4f84c-e885-507a-97b1-305458b7c105"
+        },
+        {
+          "ref": "C3",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/123ffe5d-7083-51d8-9111-f92917d98e70",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/10c00490-5145-554a-ab17-620c81a80539"
+        },
+        {
+          "ref": "C2",
+          "actual": "/e7cc9756-39de-5fb3-94dc-b0de80358099/d12c367f-78dc-533d-97af-892b3ba6a4d9",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/a16b8369-d78f-5c83-b5e6-66046f556e41"
+        },
+        {
+          "ref": "C17",
+          "actual": "/927e127f-16da-5a34-9ba6-080c40348e55/e82d0d8c-b3fe-5b69-8091-4e763258294f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/f6df3650-4c89-5e6e-9389-13cf6b4ae0ad/f0eedf00-423b-53e9-a8c8-ff27f5718064"
+        },
+        {
+          "ref": "C6",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/55bf0b0d-d566-5610-93f0-2ed6bf29a54c",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/558ad9e6-fd23-50dc-a9cd-1924d4741a48"
+        },
+        {
+          "ref": "R1",
+          "actual": "/927e127f-16da-5a34-9ba6-080c40348e55/061d30d8-5865-59ba-a6cf-3a06cdcf1b13",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/1c116e34-ac54-5b0c-961d-68eab3d403fb/1b5bcc00-2450-5244-905f-471286ae8c25"
+        },
+        {
+          "ref": "R7",
+          "actual": "/a9e5e070-ede0-5bb1-8c07-689be1311eb4/599456e9-a338-5a0b-8600-572339f36bd2",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800/229d02dd-8b5f-5490-9695-5b0b6242d544"
+        }
+      ],
+      "drilled_footprint_pads": 175,
+      "via_count": 3,
+      "missing_courtyards": [
+        {
+          "reference": "JM004",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_PRE",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM014",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "COIL_CH",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM037",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "OT_4",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM023",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_IN",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM026",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_K3",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM018",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_CF",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM016",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_BASS_BOTTOM",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM020",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_G3",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM019",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_G2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM003",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_EARLY",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM001",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "+12V",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM030",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_TREBLE_TOP",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM002",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "BIAS_OUT",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM005",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_BASS_BOTTOM",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM017",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_BASS_TOP",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM024",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_K1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM042",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PI_P2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM040",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PI_K",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM028",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_P2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM021",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_GAIN_TOP",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM032",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "GND",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM041",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PI_P1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM015",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DIRTY_OUT",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM027",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_P1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM008",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_IN",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM012",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_P2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM034",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "GRID_B_FEED",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM033",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "GRID_A_FEED",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM013",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_TREBLE_TOP",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM043",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PRES_TOP",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM009",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_K1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM038",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PI_G1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM036",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "MIX_OUT",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM039",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PI_G2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM029",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_P3",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM011",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_P1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM010",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_K2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM022",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_GAIN_W",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM035",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "INPUT",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM007",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_G2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM031",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "FX_SEND",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM025",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "DR_K2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JM006",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CL_BASS_TOP",
+          "selected_mpn": null
+        }
+      ]
+    },
+    "candidate_Power": {
+      "sha256": "95d326c677cafc0bb6c6e2896320e32cb2eb4b116ae5e6ea8058efdcc735c810",
+      "pads_checked": 55,
+      "contract_errors": [],
+      "native_net_label_differences": [
+        {
+          "ref": "R502",
+          "pad": "1",
+          "native": "Net-(C29-Pad2)",
+          "actual": "HV_CAP_MID"
+        },
+        {
+          "ref": "C28",
+          "pad": "2",
+          "native": "Net-(D7-A)",
+          "actual": "BIAS_RAW"
+        },
+        {
+          "ref": "R503",
+          "pad": "1",
+          "native": "Net-(R503-Pad1)",
+          "actual": "BIAS_MIN"
+        },
+        {
+          "ref": "C29",
+          "pad": "1",
+          "native": "Net-(S2-A)",
+          "actual": "B_RAW"
+        },
+        {
+          "ref": "C29",
+          "pad": "2",
+          "native": "Net-(C29-Pad2)",
+          "actual": "HV_CAP_MID"
+        },
+        {
+          "ref": "R509",
+          "pad": "2",
+          "native": "Net-(C505-Pad1)",
+          "actual": "HREF"
+        },
+        {
+          "ref": "R506",
+          "pad": "2",
+          "native": "Net-(C505-Pad1)",
+          "actual": "HREF"
+        },
+        {
+          "ref": "R40",
+          "pad": "2",
+          "native": "Net-(D7-K)",
+          "actual": "BIAS_DIODE_AC"
+        },
+        {
+          "ref": "D5",
+          "pad": "1",
+          "native": "Net-(D5-K)",
+          "actual": "HV_MID_B"
+        },
+        {
+          "ref": "D5",
+          "pad": "2",
+          "native": "Net-(D5-A)",
+          "actual": "HV_B"
+        },
+        {
+          "ref": "D7",
+          "pad": "1",
+          "native": "Net-(D7-K)",
+          "actual": "BIAS_DIODE_AC"
+        },
+        {
+          "ref": "D7",
+          "pad": "2",
+          "native": "Net-(D7-A)",
+          "actual": "BIAS_RAW"
+        },
+        {
+          "ref": "C30",
+          "pad": "1",
+          "native": "Net-(C29-Pad2)",
+          "actual": "HV_CAP_MID"
+        },
+        {
+          "ref": "C505",
+          "pad": "1",
+          "native": "Net-(C505-Pad1)",
+          "actual": "HREF"
+        },
+        {
+          "ref": "R508",
+          "pad": "2",
+          "native": "Net-(C505-Pad1)",
+          "actual": "HREF"
+        },
+        {
+          "ref": "R507",
+          "pad": "1",
+          "native": "Net-(C505-Pad1)",
+          "actual": "HREF"
+        },
+        {
+          "ref": "R39",
+          "pad": "1",
+          "native": "Net-(D7-A)",
+          "actual": "BIAS_RAW"
+        },
+        {
+          "ref": "R39",
+          "pad": "2",
+          "native": "Net-(C27-Pad2)",
+          "actual": "BIAS_FILTER"
+        },
+        {
+          "ref": "C27",
+          "pad": "2",
+          "native": "Net-(C27-Pad2)",
+          "actual": "BIAS_FILTER"
+        },
+        {
+          "ref": "D3",
+          "pad": "1",
+          "native": "Net-(D3-K)",
+          "actual": "HV_MID_A"
+        },
+        {
+          "ref": "D3",
+          "pad": "2",
+          "native": "Net-(D3-A)",
+          "actual": "HV_A"
+        },
+        {
+          "ref": "D4",
+          "pad": "1",
+          "native": "Net-(D4-K)",
+          "actual": "B_RECT"
+        },
+        {
+          "ref": "D4",
+          "pad": "2",
+          "native": "Net-(D3-K)",
+          "actual": "HV_MID_A"
+        },
+        {
+          "ref": "R501",
+          "pad": "1",
+          "native": "Net-(S2-A)",
+          "actual": "B_RAW"
+        },
+        {
+          "ref": "R501",
+          "pad": "2",
+          "native": "Net-(C29-Pad2)",
+          "actual": "HV_CAP_MID"
+        },
+        {
+          "ref": "R38",
+          "pad": "1",
+          "native": "Net-(C27-Pad2)",
+          "actual": "BIAS_FILTER"
+        },
+        {
+          "ref": "RV10",
+          "pad": "2",
+          "native": "Net-(R503-Pad1)",
+          "actual": "BIAS_MIN"
+        },
+        {
+          "ref": "RV10",
+          "pad": "3",
+          "native": "Net-(R503-Pad1)",
+          "actual": "BIAS_MIN"
+        },
+        {
+          "ref": "D6",
+          "pad": "1",
+          "native": "Net-(D4-K)",
+          "actual": "B_RECT"
+        },
+        {
+          "ref": "D6",
+          "pad": "2",
+          "native": "Net-(D5-K)",
+          "actual": "HV_MID_B"
+        }
+      ],
+      "native_path_errors": [
+        {
+          "ref": "R502",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/38d005c6-a82c-521e-b8d9-f60ff9d3e453",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/4e36b322-e93a-5d86-9167-e811100e25c7"
+        },
+        {
+          "ref": "C26",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/eaf0a9db-7296-5976-934f-aa1cfae3f6e8",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/65e9330a-4f06-55c9-b2ee-02e4e4f0b710"
+        },
+        {
+          "ref": "C28",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/d61255b5-41de-5ff8-a417-19b532bf183f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/70f45bfb-5f9f-51a8-ba0b-75bcb3b86e51"
+        },
+        {
+          "ref": "R503",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/bb6e8c93-ee77-5933-beee-edef0ab05e0e",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/26f78fd3-4057-5260-bba2-98a58e0f63bc"
+        },
+        {
+          "ref": "C29",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/da5f51d3-d295-5bb2-9e16-3bf009aff81d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/da8dfd39-c2b1-50e8-bc5c-0969beece47d"
+        },
+        {
+          "ref": "R509",
+          "actual": "/64e7e90e-192d-58a1-b91d-418a0e4d98fc/9cee9ae3-94af-5952-af32-a735b7513f0b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/e318839f-cf46-556e-9987-d1ee9f190c69"
+        },
+        {
+          "ref": "R506",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/c489151a-abcb-525d-b0a3-ce1a62f2df4f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/1562432d-031f-5fdc-9baf-01a34a2aeaa6"
+        },
+        {
+          "ref": "R40",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/b60c66b4-5adc-5f50-a285-06eb39d958d6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/05562596-0c23-5282-a31d-73951cb8bc84"
+        },
+        {
+          "ref": "C13",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/9d37cb72-23d7-59e6-9809-4e81f89c489f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/c4135222-40b8-5a83-a65a-afa829f1129b"
+        },
+        {
+          "ref": "D5",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/f1ed236d-531f-5a96-b7bc-19deb53a564c",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/6687d2e6-f406-5bf7-9453-f7a221c2838f"
+        },
+        {
+          "ref": "D7",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/4c6fd018-2848-5361-bf66-38b78e9a65fb",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/c6000beb-1227-50f4-b27a-f8d6fc0adc02"
+        },
+        {
+          "ref": "C30",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/5818618e-e3bf-5e2f-9fe7-5ab05f3b87c2",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/09bf8447-3fe5-5d82-a204-acd335cf229d"
+        },
+        {
+          "ref": "C505",
+          "actual": "/64e7e90e-192d-58a1-b91d-418a0e4d98fc/fe1bad7b-da05-54e5-8860-d09204578aa6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/00ab0bfa-91ab-584c-bd1f-7b4a1c89b89e"
+        },
+        {
+          "ref": "R508",
+          "actual": "/64e7e90e-192d-58a1-b91d-418a0e4d98fc/21014cca-1c19-533a-9654-cdc14af5dc2d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/29f1671a-6724-53ef-afde-9efb15425010"
+        },
+        {
+          "ref": "C12",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/a462acce-4a7d-5094-9643-38cd86d83ad9",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/c935ee71-58ca-5c9c-9c00-c443222bef30"
+        },
+        {
+          "ref": "R507",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/2100b6f5-4e7e-5e4c-a714-9e4f0481e054",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/887d6205-1268-5f40-8d58-02eea236793d"
+        },
+        {
+          "ref": "C25",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/3b098acb-8eaf-552f-9d69-8b7a12ff86ce",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/f9f1d285-ae0a-5319-a670-34433474b860"
+        },
+        {
+          "ref": "R39",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/8d828928-15ce-5fa6-ba8e-103485ec3a38",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/dbd9abf6-7f96-5113-af48-b739acb77975"
+        },
+        {
+          "ref": "C27",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/db1487e4-c053-54bb-9864-94ef71518b8b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/169054d0-0be4-5f55-ab3d-0c19bca3eac3"
+        },
+        {
+          "ref": "D3",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/b49fbc08-81f6-572b-b15d-80c84cf6d54b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/5fe46100-4f99-5217-b344-432f96d9792f"
+        },
+        {
+          "ref": "R17",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/ad98fe1e-d7b5-52d4-b647-92df9c85b2f5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/547e27c3-e73c-5413-9f2f-026d12fc69b5"
+        },
+        {
+          "ref": "D4",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/d0de6323-2b70-5647-bae2-76b7408ca72e",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/70f48e1c-5580-52d5-9631-6e3860fc94f9"
+        },
+        {
+          "ref": "R501",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/36c4aba1-9683-50cd-b669-7b7a9ddfab61",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/56e50866-d3f7-5449-990b-794702c4d2ae"
+        },
+        {
+          "ref": "R38",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/55e1a75a-9aa5-5c72-9576-dda873409978",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/23b355a8-217d-5025-aeca-78a36484b229"
+        },
+        {
+          "ref": "RV10",
+          "actual": "/ca313199-e47f-56b0-9e68-333d324aad00/62d8ad41-0caa-51ff-b784-96e973828b1f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330/923f517a-2c24-5cce-b6fd-85b023bf3a07"
+        },
+        {
+          "ref": "R35",
+          "actual": "/ce113750-5c24-5e9b-82eb-e5fb15bafdd8/366d74de-7e9a-525b-9a5d-9b9550e45035",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/2b1aa156-2e8f-57fa-b637-550374cf3492"
+        },
+        {
+          "ref": "D6",
+          "actual": "/0f4c8c36-5331-5300-956b-3c5ff89e9d45/a9a293bb-e88b-528e-bdb1-382cf1f68025",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892/964d5170-056d-5dda-af9a-452edd07f582"
+        }
+      ],
+      "drilled_footprint_pads": 79,
+      "via_count": 0,
+      "missing_courtyards": [
+        {
+          "reference": "JP012",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "HV_B",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP010",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "HEAT_B",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP005",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_RAW",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP007",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_SCREEN",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP008",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "GND",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP002",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "BIAS_OUT",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP001",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "BIAS_AC",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP004",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_PRE",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP009",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "HEAT_A",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP003",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_EARLY",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP011",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "HV_A",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JP006",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "B_RECT",
+          "selected_mpn": null
+        }
+      ]
+    },
+    "candidate_Control": {
+      "sha256": "11e8bc8c81143534be03ad05191090937020ae675bf2e7c8baa86722d0ccfa13",
+      "pads_checked": 140,
+      "contract_errors": [],
+      "native_net_label_differences": [
+        {
+          "ref": "R332",
+          "pad": "1",
+          "native": "Net-(Q1-G)",
+          "actual": "CH_GATE"
+        },
+        {
+          "ref": "R301",
+          "pad": "1",
+          "native": "Net-(J2-PadT)",
+          "actual": "PEDAL_CH"
+        },
+        {
+          "ref": "R301",
+          "pad": "2",
+          "native": "Net-(D301-A)",
+          "actual": "BTN_CH"
+        },
+        {
+          "ref": "U1",
+          "pad": "1",
+          "native": "Net-(C301-Pad1)",
+          "actual": "DB_CH"
+        },
+        {
+          "ref": "U1",
+          "pad": "3",
+          "native": "Net-(C311-Pad1)",
+          "actual": "DB_REV"
+        },
+        {
+          "ref": "R311",
+          "pad": "1",
+          "native": "Net-(J2-PadR)",
+          "actual": "PEDAL_REV"
+        },
+        {
+          "ref": "R311",
+          "pad": "2",
+          "native": "Net-(D311-A)",
+          "actual": "BTN_REV"
+        },
+        {
+          "ref": "D301",
+          "pad": "2",
+          "native": "Net-(D301-A)",
+          "actual": "BTN_CH"
+        },
+        {
+          "ref": "Q1",
+          "pad": "2",
+          "native": "Net-(Q1-G)",
+          "actual": "CH_GATE"
+        },
+        {
+          "ref": "R313",
+          "pad": "1",
+          "native": "Net-(D311-A)",
+          "actual": "BTN_REV"
+        },
+        {
+          "ref": "R313",
+          "pad": "2",
+          "native": "Net-(C311-Pad1)",
+          "actual": "DB_REV"
+        },
+        {
+          "ref": "C311",
+          "pad": "1",
+          "native": "Net-(C311-Pad1)",
+          "actual": "DB_REV"
+        },
+        {
+          "ref": "C208",
+          "pad": "2",
+          "native": "Net-(D203-A)",
+          "actual": "NEG_RAW"
+        },
+        {
+          "ref": "D203",
+          "pad": "1",
+          "native": "Net-(D201-A)",
+          "actual": "CTRL_AC1"
+        },
+        {
+          "ref": "D203",
+          "pad": "2",
+          "native": "Net-(D203-A)",
+          "actual": "NEG_RAW"
+        },
+        {
+          "ref": "U7",
+          "pad": "2",
+          "native": "Net-(D203-A)",
+          "actual": "NEG_RAW"
+        },
+        {
+          "ref": "C202",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "D207",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "R312",
+          "pad": "2",
+          "native": "Net-(D311-A)",
+          "actual": "BTN_REV"
+        },
+        {
+          "ref": "U6",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "Q2",
+          "pad": "2",
+          "native": "Net-(Q2-G)",
+          "actual": "REV_GATE"
+        },
+        {
+          "ref": "R342",
+          "pad": "1",
+          "native": "Net-(Q2-G)",
+          "actual": "REV_GATE"
+        },
+        {
+          "ref": "R321",
+          "pad": "2",
+          "native": "Net-(U2A-~{R})",
+          "actual": "RESET_N"
+        },
+        {
+          "ref": "R322",
+          "pad": "2",
+          "native": "Net-(U3-~{MR})",
+          "actual": "MR_N"
+        },
+        {
+          "ref": "D208",
+          "pad": "2",
+          "native": "Net-(D203-A)",
+          "actual": "NEG_RAW"
+        },
+        {
+          "ref": "D312",
+          "pad": "1",
+          "native": "Net-(D311-A)",
+          "actual": "BTN_REV"
+        },
+        {
+          "ref": "R302",
+          "pad": "2",
+          "native": "Net-(D301-A)",
+          "actual": "BTN_CH"
+        },
+        {
+          "ref": "R331",
+          "pad": "1",
+          "native": "Net-(U2A-Q)",
+          "actual": "CH_Q"
+        },
+        {
+          "ref": "R331",
+          "pad": "2",
+          "native": "Net-(Q1-G)",
+          "actual": "CH_GATE"
+        },
+        {
+          "ref": "U3",
+          "pad": "1",
+          "native": "Net-(U2A-~{R})",
+          "actual": "RESET_N"
+        },
+        {
+          "ref": "U3",
+          "pad": "3",
+          "native": "Net-(U3-~{MR})",
+          "actual": "MR_N"
+        },
+        {
+          "ref": "U3",
+          "pad": "4",
+          "native": "Net-(U3-CT)",
+          "actual": "RESET_CT"
+        },
+        {
+          "ref": "D202",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "D202",
+          "pad": "2",
+          "native": "Net-(D202-A)",
+          "actual": "CTRL_AC2"
+        },
+        {
+          "ref": "C209",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "U4",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "D204",
+          "pad": "1",
+          "native": "Net-(D202-A)",
+          "actual": "CTRL_AC2"
+        },
+        {
+          "ref": "D204",
+          "pad": "2",
+          "native": "Net-(D203-A)",
+          "actual": "NEG_RAW"
+        },
+        {
+          "ref": "C201",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "D201",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        },
+        {
+          "ref": "D201",
+          "pad": "2",
+          "native": "Net-(D201-A)",
+          "actual": "CTRL_AC1"
+        },
+        {
+          "ref": "R303",
+          "pad": "1",
+          "native": "Net-(D301-A)",
+          "actual": "BTN_CH"
+        },
+        {
+          "ref": "R303",
+          "pad": "2",
+          "native": "Net-(C301-Pad1)",
+          "actual": "DB_CH"
+        },
+        {
+          "ref": "C212",
+          "pad": "2",
+          "native": "Net-(D203-A)",
+          "actual": "NEG_RAW"
+        },
+        {
+          "ref": "R341",
+          "pad": "1",
+          "native": "Net-(U2B-Q)",
+          "actual": "REV_Q"
+        },
+        {
+          "ref": "R341",
+          "pad": "2",
+          "native": "Net-(Q2-G)",
+          "actual": "REV_GATE"
+        },
+        {
+          "ref": "C321",
+          "pad": "1",
+          "native": "Net-(U3-CT)",
+          "actual": "RESET_CT"
+        },
+        {
+          "ref": "C301",
+          "pad": "1",
+          "native": "Net-(C301-Pad1)",
+          "actual": "DB_CH"
+        },
+        {
+          "ref": "D311",
+          "pad": "2",
+          "native": "Net-(D311-A)",
+          "actual": "BTN_REV"
+        },
+        {
+          "ref": "D302",
+          "pad": "1",
+          "native": "Net-(D301-A)",
+          "actual": "BTN_CH"
+        },
+        {
+          "ref": "U2",
+          "pad": "1",
+          "native": "Net-(U2A-~{R})",
+          "actual": "RESET_N"
+        },
+        {
+          "ref": "U2",
+          "pad": "2",
+          "native": "Net-(U2A-D)",
+          "actual": "CH_QN"
+        },
+        {
+          "ref": "U2",
+          "pad": "5",
+          "native": "Net-(U2A-Q)",
+          "actual": "CH_Q"
+        },
+        {
+          "ref": "U2",
+          "pad": "6",
+          "native": "Net-(U2A-D)",
+          "actual": "CH_QN"
+        },
+        {
+          "ref": "U2",
+          "pad": "8",
+          "native": "Net-(U2B-D)",
+          "actual": "REV_QN"
+        },
+        {
+          "ref": "U2",
+          "pad": "9",
+          "native": "Net-(U2B-Q)",
+          "actual": "REV_Q"
+        },
+        {
+          "ref": "U2",
+          "pad": "12",
+          "native": "Net-(U2B-D)",
+          "actual": "REV_QN"
+        },
+        {
+          "ref": "U2",
+          "pad": "13",
+          "native": "Net-(U2A-~{R})",
+          "actual": "RESET_N"
+        },
+        {
+          "ref": "D205",
+          "pad": "1",
+          "native": "Net-(D201-K)",
+          "actual": "CTRL_RAW"
+        }
+      ],
+      "native_path_errors": [
+        {
+          "ref": "R332",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/cdbb8bd8-0131-5cc6-b054-4b2e63257357",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/44b48106-4119-5018-80bc-f8a1e4479741"
+        },
+        {
+          "ref": "R301",
+          "actual": "/91b47c01-f577-5d10-b6ae-108da8255012/2494b1e8-220a-55c2-9e96-35d15b8c3d21",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/5e08dcfd-cf3a-529f-9d9b-7f57af212be7"
+        },
+        {
+          "ref": "U1",
+          "actual": "/91b47c01-f577-5d10-b6ae-108da8255012/82d214af-ca1d-5d0f-8e90-02f6d1f2ba8f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/6182fff2-fa96-500c-a0be-918c502f1867"
+        },
+        {
+          "ref": "R311",
+          "actual": "/4b397655-eb2e-561f-9e3b-73d090d4f372/0e3d932a-29a8-5eea-b77e-92d38daf97c6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/7a8b86c5-89cc-5819-90d4-adbd2bdb486d"
+        },
+        {
+          "ref": "C213",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/c130a0d1-cf9f-53db-8ceb-5e6f34e8e8ec",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/0769b8f7-5a3a-56b4-983f-238b6c9bc7f2"
+        },
+        {
+          "ref": "C205",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/b89e31c5-34aa-53b3-93b2-6565cd9e4ea4",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/e4981240-aed3-514e-9350-2ff2cea506f3"
+        },
+        {
+          "ref": "D301",
+          "actual": "/4b397655-eb2e-561f-9e3b-73d090d4f372/bc3f98c3-1f63-5c74-ad72-04dc09c91972",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/4a4795c6-9e8f-51e4-b962-4bbc2ba20921"
+        },
+        {
+          "ref": "Q1",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/ac900f58-a56c-5399-947c-6b075df8bfd4",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/871c887f-7281-55c3-a1c4-14c4a43cfc5a"
+        },
+        {
+          "ref": "C204",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/20798131-2ca7-58ec-8b73-03edb7127c00",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/7b084da6-d95e-57be-ba70-4c15c3ec299f"
+        },
+        {
+          "ref": "R313",
+          "actual": "/4b397655-eb2e-561f-9e3b-73d090d4f372/fd25cf22-7751-5f80-b678-111c53e2bbb2",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/60dd5df0-1a8f-5587-91e6-df3ae452498c"
+        },
+        {
+          "ref": "D206",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/44d470b9-9722-5839-b818-522872a7cb44",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/f44a3e5e-6cb5-5750-894c-2198f558cd03"
+        },
+        {
+          "ref": "C214",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/8910bee9-8661-5fbd-99ab-fc9e786cdfae",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/a9c943ea-b226-55db-87b3-5e0af249c809"
+        },
+        {
+          "ref": "C351",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/cc58318d-186d-5ce6-a278-ab52263b68f6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/3a2f3a05-76ed-579e-ad89-f7acbc118851/339c325b-c023-5e28-b3f5-0479d63f03ec"
+        },
+        {
+          "ref": "C311",
+          "actual": "/f86b5102-1c92-5c90-8210-83ec411bcc86/3d9ab7c3-4ae2-5cf7-8922-c40241061e21",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/22029121-d814-539b-b9bf-3e0fc389a03f"
+        },
+        {
+          "ref": "C208",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/d7b75bed-afe2-5321-b800-c1aca8346e6b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/10672a54-1c78-5fb5-b1d3-146a303a89a4"
+        },
+        {
+          "ref": "D203",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/6449d4f9-e025-59ea-bd8c-28309dd35e75",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/60aebae4-24c3-59c9-85bd-94fa8fcb27ed"
+        },
+        {
+          "ref": "U7",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/ee5e7fe3-a158-5e98-b37e-147836d31a2a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/69f252b3-0151-564c-ae9d-bf9c3ef93e0e"
+        },
+        {
+          "ref": "C202",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/1cba9868-4512-55c2-a33e-f06be06a4ad1",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/3c64a449-28c3-5dae-984f-b7b8c37d0bee"
+        },
+        {
+          "ref": "C211",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/ae5bea10-677e-57c4-8688-981edca109df",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/9e47f27e-57e0-5149-a692-e53255dd4ab5"
+        },
+        {
+          "ref": "D207",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/328ed57a-7ad9-5a2d-986f-5ecbd6cafbf8",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/613084b8-ea33-50f6-a9e1-83efd18010b4"
+        },
+        {
+          "ref": "R312",
+          "actual": "/4b397655-eb2e-561f-9e3b-73d090d4f372/1bb7e09c-a9f4-53b0-82d9-a378bf819d37",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/63e7ed70-c9c4-5889-a412-b8057a7aea66"
+        },
+        {
+          "ref": "U6",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/f55bf865-f69c-5d83-bf52-81d5b06ff4d1",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/5c0dfd9c-3593-5ed0-8532-657b49f8a937"
+        },
+        {
+          "ref": "Q2",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/859574d6-e66c-5c07-8c9b-9bbc6eeebe26",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/1b475f44-19c6-58a1-82bd-8f28f35c7697"
+        },
+        {
+          "ref": "R342",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/81d279ca-7248-52e2-adfd-9749e9918939",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/904a1eef-3f14-5146-bb7f-1cfa8f9d2f14"
+        },
+        {
+          "ref": "C353",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/75a5fae5-379c-52df-ab8e-94099dd4b4ca",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/3a2f3a05-76ed-579e-ad89-f7acbc118851/f67bfa9a-7f05-5eb6-b626-f0bde175ea9c"
+        },
+        {
+          "ref": "R321",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/2f400074-6e79-55c9-b864-b9e926352447",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/a1675dc6-1c56-531c-b73b-98c1e8111b09"
+        },
+        {
+          "ref": "R322",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/e56c39b3-5c24-5483-9f18-d96a8750aec7",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/4921242a-fd81-5e40-9a43-2fbeab9ff0e8"
+        },
+        {
+          "ref": "D208",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/0f8eda7b-7bb9-5dbc-98a0-a613f3a0619b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/ff82b2be-39df-519b-b9fb-6be64450f119"
+        },
+        {
+          "ref": "D312",
+          "actual": "/f86b5102-1c92-5c90-8210-83ec411bcc86/4e1aa04f-c0ee-5d9b-8090-d297aa7c3c4c",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/b11d5c5f-6e5f-5606-8eff-05485e493f02"
+        },
+        {
+          "ref": "R302",
+          "actual": "/91b47c01-f577-5d10-b6ae-108da8255012/13dc5b40-ae54-5b52-8724-48bd7203c107",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/2839ddd5-9193-5829-ab31-a4e1cfde605b"
+        },
+        {
+          "ref": "C203",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/d1f63782-bf19-55b6-a1b5-88901e5319f5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/04770e0a-cd90-5bb6-9ee2-d4f79bba56c2"
+        },
+        {
+          "ref": "R331",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/7171bb03-e8d2-59d7-b633-6e106a3e7236",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/0723d943-a237-592b-934d-01373b9e244c"
+        },
+        {
+          "ref": "C352",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/683edaac-7329-5d53-9a72-e770f021bd68",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/3a2f3a05-76ed-579e-ad89-f7acbc118851/bf06df98-851b-5ecd-bbb4-af47b9e7bacb"
+        },
+        {
+          "ref": "U3",
+          "actual": "/f86b5102-1c92-5c90-8210-83ec411bcc86/8446993f-e273-5337-8083-cc277cff2041",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/75682971-2076-500c-9184-d30975b25d92"
+        },
+        {
+          "ref": "D202",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/da17d968-9ccf-54b8-b923-5d90ad1cfc61",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/ea57137a-5cd8-58bb-bf18-8a641ee3f97b"
+        },
+        {
+          "ref": "C209",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/67cbb702-bf49-510b-85b2-346239314517",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/203b486a-bb4a-5b1b-8ad9-4aa6d3cd230f"
+        },
+        {
+          "ref": "U4",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/cc528cd4-253e-55ba-acfc-c02c2bb89f09",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/ae05b33f-eabf-50e2-bc4b-a8b58ad02daa"
+        },
+        {
+          "ref": "D204",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/8c8254a2-25ec-542c-8b8d-db96decba3a7",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/65ee0db0-d1db-5030-8f78-8da9df6f7b6d"
+        },
+        {
+          "ref": "C201",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/a1b5b84f-2c5e-5898-b5d9-eb7145099164",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/2004dbd8-0138-5140-9686-59e78d001038"
+        },
+        {
+          "ref": "D201",
+          "actual": "/b572f70e-00e1-53b9-bc4d-09ce992f3cf6/3c06ffdb-af93-5e12-9e48-d35a482bd5f2",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/1c49ccfb-cc0b-5ea5-9fe1-4642a287846d"
+        },
+        {
+          "ref": "R303",
+          "actual": "/91b47c01-f577-5d10-b6ae-108da8255012/c824e500-fb5a-5143-b643-24774ce5d9a8",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/ff77e0a2-d592-53d0-8315-c1572686cd28"
+        },
+        {
+          "ref": "C212",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/a64f9904-9b32-5cf7-9b4b-84a098f0fcde",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/cba753ed-e4e8-5ca2-818f-67ca8f81e699"
+        },
+        {
+          "ref": "R341",
+          "actual": "/8c7cb2f7-3756-5eba-b078-a4842948d9ee/5d9d0bfc-b6fb-5ce9-be9f-844e1cd2ac14",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/97435e5d-7a3f-50f7-a0a7-ca8dc2fca6fc"
+        },
+        {
+          "ref": "C321",
+          "actual": "/f86b5102-1c92-5c90-8210-83ec411bcc86/6c614b66-a187-5e70-99a7-13fa987e8ceb",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/c20b9903-6d90-52a9-900f-7a9fafedd0e9"
+        },
+        {
+          "ref": "C301",
+          "actual": "/91b47c01-f577-5d10-b6ae-108da8255012/ef6819e6-c5f7-5b0a-b0e9-e3ab83a583c9",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/424b7994-4a32-5de9-a071-295ee4169fa0"
+        },
+        {
+          "ref": "C206",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/7833ee2f-9da4-56db-b041-d5036b05a98d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/543d7dbd-e16b-5f14-a9ce-39682500893a"
+        },
+        {
+          "ref": "D311",
+          "actual": "/f86b5102-1c92-5c90-8210-83ec411bcc86/2e104a72-5b8e-5f4e-b102-f67e331d82ed",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/cbbbbd7e-8f95-5d1f-95b8-c1c3af3dc5be"
+        },
+        {
+          "ref": "C210",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/31414148-0ea2-54e2-abb8-918d30946b4c",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/c88fc44b-1a15-5280-9ca9-71c0b4e19cf2"
+        },
+        {
+          "ref": "D302",
+          "actual": "/4b397655-eb2e-561f-9e3b-73d090d4f372/1546a50e-d9d6-5d8a-a5de-3df0eafa5326",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6/a4913287-39c0-522b-ad92-39e6c4fad693"
+        },
+        {
+          "ref": "U5",
+          "actual": "/2a7d09fc-e32b-588f-a025-ed10868b5a94/e11946e0-440f-5d7c-84f0-398ebb158e5f",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/8b9cf6ca-492a-5992-96cb-24f0438e389a"
+        },
+        {
+          "ref": "U2",
+          "actual": "/f86b5102-1c92-5c90-8210-83ec411bcc86/c96c5796-6c63-5427-85c5-6e092aa30833",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89/c1915e60-bb17-5a4e-a9f3-ff6cef7d0486"
+        },
+        {
+          "ref": "C207",
+          "actual": "/4b91d14d-a413-557c-97dc-60619ff8a61f/5694bb3c-8b5a-5c78-954a-d7f4d65ddb0b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/ba1e26fc-57dd-5b1d-873e-b7bf247b25c1"
+        },
+        {
+          "ref": "D205",
+          "actual": "/df302452-1168-5061-a1f7-59e6a4f8410a/b43a6eaf-5caf-5ac6-a92b-ea8716dc4682",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/0d17fa55-01c8-5b76-b26e-f87c377346be"
+        }
+      ],
+      "drilled_footprint_pads": 145,
+      "via_count": 3,
+      "missing_courtyards": [
+        {
+          "reference": "JC007",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "COIL_REV",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC011",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "MR_N",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC006",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "COIL_CH",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC008",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CTRL_AC1",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC013",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PEDAL_REV",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC002",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "+15V",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC003",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "-15V",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC009",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "CTRL_AC2",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC004",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "BTN_CH",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC010",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "GND",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC001",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "+12V",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC012",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "PEDAL_CH",
+          "selected_mpn": null
+        },
+        {
+          "reference": "JC005",
+          "footprint": "Renegade_Whole:WirePad_1.3mm",
+          "value": "BTN_REV",
+          "selected_mpn": null
+        }
+      ]
+    },
+    "candidate_Reverb": {
+      "sha256": "3f96fa4c4bf79e7f446293e513892c2894fce00e37920ae169b405de88fb625c",
+      "pads_checked": 123,
+      "contract_errors": [],
+      "native_net_label_differences": [
+        {
+          "ref": "R604",
+          "pad": "1",
+          "native": "Net-(R604-Pad1)",
+          "actual": "DRIVER"
+        },
+        {
+          "ref": "R604",
+          "pad": "2",
+          "native": "Net-(U10B--)",
+          "actual": "DRV_FB"
+        },
+        {
+          "ref": "C601",
+          "pad": "2",
+          "native": "Net-(C601-Pad2)",
+          "actual": "IN_AC"
+        },
+        {
+          "ref": "U11",
+          "pad": "1",
+          "native": "Net-(C605-Pad1)",
+          "actual": "REC_OUT"
+        },
+        {
+          "ref": "U11",
+          "pad": "2",
+          "native": "Net-(U11A--)",
+          "actual": "REC_FB"
+        },
+        {
+          "ref": "U11",
+          "pad": "3",
+          "native": "Net-(U11A-+)",
+          "actual": "REC_IN"
+        },
+        {
+          "ref": "U11",
+          "pad": "6",
+          "native": "Net-(U11B--)",
+          "actual": "WET_BUF"
+        },
+        {
+          "ref": "U11",
+          "pad": "7",
+          "native": "Net-(U11B--)",
+          "actual": "WET_BUF"
+        },
+        {
+          "ref": "R617",
+          "pad": "1",
+          "native": "Net-(C607-Pad2)",
+          "actual": "WET_AC"
+        },
+        {
+          "ref": "C603",
+          "pad": "1",
+          "native": "Net-(C603-Pad1)",
+          "actual": "DRIVE_CAP"
+        },
+        {
+          "ref": "U12",
+          "pad": "2",
+          "native": "Net-(U12A--)",
+          "actual": "SUM"
+        },
+        {
+          "ref": "U12",
+          "pad": "6",
+          "native": "Net-(U12B--)",
+          "actual": "OUT_FB"
+        },
+        {
+          "ref": "U12",
+          "pad": "7",
+          "native": "Net-(R615-Pad1)",
+          "actual": "OUT_BUF"
+        },
+        {
+          "ref": "R606",
+          "pad": "1",
+          "native": "Net-(U11A-+)",
+          "actual": "REC_IN"
+        },
+        {
+          "ref": "R603",
+          "pad": "1",
+          "native": "Net-(U10B--)",
+          "actual": "DRV_FB"
+        },
+        {
+          "ref": "K3",
+          "pad": "4",
+          "native": "Net-(K3-Pad4)",
+          "actual": "WET_MUTE"
+        },
+        {
+          "ref": "R611",
+          "pad": "1",
+          "native": "Net-(K3-Pad4)",
+          "actual": "WET_MUTE"
+        },
+        {
+          "ref": "R611",
+          "pad": "2",
+          "native": "Net-(U12A--)",
+          "actual": "SUM"
+        },
+        {
+          "ref": "R602",
+          "pad": "1",
+          "native": "Net-(D601-A)",
+          "actual": "SEND_IN"
+        },
+        {
+          "ref": "C606",
+          "pad": "1",
+          "native": "Net-(C605-Pad1)",
+          "actual": "REC_OUT"
+        },
+        {
+          "ref": "R607",
+          "pad": "1",
+          "native": "Net-(U11A--)",
+          "actual": "REC_FB"
+        },
+        {
+          "ref": "R610",
+          "pad": "1",
+          "native": "Net-(U11B--)",
+          "actual": "WET_BUF"
+        },
+        {
+          "ref": "R610",
+          "pad": "2",
+          "native": "Net-(K3-Pad4)",
+          "actual": "WET_MUTE"
+        },
+        {
+          "ref": "C602",
+          "pad": "1",
+          "native": "Net-(U10A--)",
+          "actual": "SEND_BUF"
+        },
+        {
+          "ref": "C602",
+          "pad": "2",
+          "native": "Net-(C602-Pad2)",
+          "actual": "SEND_TOP"
+        },
+        {
+          "ref": "D602",
+          "pad": "1",
+          "native": "Net-(D601-A)",
+          "actual": "SEND_IN"
+        },
+        {
+          "ref": "D601",
+          "pad": "2",
+          "native": "Net-(D601-A)",
+          "actual": "SEND_IN"
+        },
+        {
+          "ref": "R605",
+          "pad": "1",
+          "native": "Net-(R604-Pad1)",
+          "actual": "DRIVER"
+        },
+        {
+          "ref": "R605",
+          "pad": "2",
+          "native": "Net-(C603-Pad1)",
+          "actual": "DRIVE_CAP"
+        },
+        {
+          "ref": "C604",
+          "pad": "2",
+          "native": "Net-(U11A-+)",
+          "actual": "REC_IN"
+        },
+        {
+          "ref": "C605",
+          "pad": "1",
+          "native": "Net-(C605-Pad1)",
+          "actual": "REC_OUT"
+        },
+        {
+          "ref": "C605",
+          "pad": "2",
+          "native": "Net-(U11A--)",
+          "actual": "REC_FB"
+        },
+        {
+          "ref": "R616",
+          "pad": "1",
+          "native": "Net-(R615-Pad1)",
+          "actual": "OUT_BUF"
+        },
+        {
+          "ref": "R616",
+          "pad": "2",
+          "native": "Net-(C607-Pad1)",
+          "actual": "OUT_AC"
+        },
+        {
+          "ref": "C607",
+          "pad": "1",
+          "native": "Net-(C607-Pad1)",
+          "actual": "OUT_AC"
+        },
+        {
+          "ref": "C607",
+          "pad": "2",
+          "native": "Net-(C607-Pad2)",
+          "actual": "WET_AC"
+        },
+        {
+          "ref": "R613",
+          "pad": "2",
+          "native": "Net-(U12A--)",
+          "actual": "SUM"
+        },
+        {
+          "ref": "R608",
+          "pad": "1",
+          "native": "Net-(C605-Pad1)",
+          "actual": "REC_OUT"
+        },
+        {
+          "ref": "R608",
+          "pad": "2",
+          "native": "Net-(U11A--)",
+          "actual": "REC_FB"
+        },
+        {
+          "ref": "R614",
+          "pad": "2",
+          "native": "Net-(U12B--)",
+          "actual": "OUT_FB"
+        },
+        {
+          "ref": "U10",
+          "pad": "1",
+          "native": "Net-(U10A--)",
+          "actual": "SEND_BUF"
+        },
+        {
+          "ref": "U10",
+          "pad": "2",
+          "native": "Net-(U10A--)",
+          "actual": "SEND_BUF"
+        },
+        {
+          "ref": "U10",
+          "pad": "3",
+          "native": "Net-(D601-A)",
+          "actual": "SEND_IN"
+        },
+        {
+          "ref": "U10",
+          "pad": "5",
+          "native": "Net-(U10B-+)",
+          "actual": "SEND_W"
+        },
+        {
+          "ref": "U10",
+          "pad": "6",
+          "native": "Net-(U10B--)",
+          "actual": "DRV_FB"
+        },
+        {
+          "ref": "U10",
+          "pad": "7",
+          "native": "Net-(R604-Pad1)",
+          "actual": "DRIVER"
+        },
+        {
+          "ref": "R601",
+          "pad": "1",
+          "native": "Net-(C601-Pad2)",
+          "actual": "IN_AC"
+        },
+        {
+          "ref": "R601",
+          "pad": "2",
+          "native": "Net-(D601-A)",
+          "actual": "SEND_IN"
+        },
+        {
+          "ref": "R615",
+          "pad": "1",
+          "native": "Net-(R615-Pad1)",
+          "actual": "OUT_BUF"
+        },
+        {
+          "ref": "R615",
+          "pad": "2",
+          "native": "Net-(U12B--)",
+          "actual": "OUT_FB"
+        },
+        {
+          "ref": "RV601",
+          "pad": "1",
+          "native": "Net-(C602-Pad2)",
+          "actual": "SEND_TOP"
+        },
+        {
+          "ref": "RV601",
+          "pad": "2",
+          "native": "Net-(U10B-+)",
+          "actual": "SEND_W"
+        },
+        {
+          "ref": "R618",
+          "pad": "1",
+          "native": "Net-(C607-Pad2)",
+          "actual": "WET_AC"
+        }
+      ],
+      "native_path_errors": [
+        {
+          "ref": "R604",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/854fab78-3a4d-513e-b205-012f0f790349",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/854fab78-3a4d-513e-b205-012f0f790349"
+        },
+        {
+          "ref": "C601",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/5e311206-d175-567e-b8c5-e3d277b48838",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/5e311206-d175-567e-b8c5-e3d277b48838"
+        },
+        {
+          "ref": "U11",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/9fdba56c-2d89-51eb-ba07-3750f0cb74bd",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/9fdba56c-2d89-51eb-ba07-3750f0cb74bd"
+        },
+        {
+          "ref": "JR4",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/c8519a07-fd72-5ded-90c1-775f6d5475d6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/c8519a07-fd72-5ded-90c1-775f6d5475d6"
+        },
+        {
+          "ref": "R617",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/6c1009f7-4740-5751-8d3a-239458801f7b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/6c1009f7-4740-5751-8d3a-239458801f7b"
+        },
+        {
+          "ref": "C603",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/6e65ed2c-e783-552a-a584-bf0e5baa2e08",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/6e65ed2c-e783-552a-a584-bf0e5baa2e08"
+        },
+        {
+          "ref": "C615",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/cb73fbd1-32d9-5821-a2e5-9dc1b11d0464",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/cb73fbd1-32d9-5821-a2e5-9dc1b11d0464"
+        },
+        {
+          "ref": "R612",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/8057b090-6240-536d-8f84-1b7a9092e69c",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/2e7f6f10-1e86-5705-a9ce-58e0064646d5"
+        },
+        {
+          "ref": "U12",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/1a203314-1d5f-59d4-aeb1-80715bf1a9f5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/1a203314-1d5f-59d4-aeb1-80715bf1a9f5"
+        },
+        {
+          "ref": "JR3",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/fc7a31b4-3d80-55fc-b6da-94ab4ec8c897",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/fc7a31b4-3d80-55fc-b6da-94ab4ec8c897"
+        },
+        {
+          "ref": "R606",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/760c8179-c96e-5159-9e08-90f9349f79dc",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/760c8179-c96e-5159-9e08-90f9349f79dc"
+        },
+        {
+          "ref": "C611",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/d4f23709-bdee-54a2-9ecd-c0b09d78457a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/d4f23709-bdee-54a2-9ecd-c0b09d78457a"
+        },
+        {
+          "ref": "R603",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/2c0a7991-93d8-5d6e-ac79-61324440c6f3",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/2c0a7991-93d8-5d6e-ac79-61324440c6f3"
+        },
+        {
+          "ref": "JR5",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/1b009add-d2b9-5e53-a540-99816088ebc5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/1b009add-d2b9-5e53-a540-99816088ebc5"
+        },
+        {
+          "ref": "K3",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/4eb26d3c-107a-5d6b-ac69-ac2cec01d29c",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/4eb26d3c-107a-5d6b-ac69-ac2cec01d29c"
+        },
+        {
+          "ref": "R611",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/ab225389-4c42-55b2-903e-e59773966016",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/ab225389-4c42-55b2-903e-e59773966016"
+        },
+        {
+          "ref": "C616",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/d58bc203-1f15-541b-9011-c5609ee3cb18",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/d58bc203-1f15-541b-9011-c5609ee3cb18"
+        },
+        {
+          "ref": "JR2",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/e1db5116-5082-5004-9789-b4e456de50a7",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/e1db5116-5082-5004-9789-b4e456de50a7"
+        },
+        {
+          "ref": "R602",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/0af8986b-8769-5a1d-b69f-8506b3d2c829",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/0af8986b-8769-5a1d-b69f-8506b3d2c829"
+        },
+        {
+          "ref": "C606",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/3c1ecfac-ee27-59b4-8835-e1b041f029d6",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/3c1ecfac-ee27-59b4-8835-e1b041f029d6"
+        },
+        {
+          "ref": "R607",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/60b8ec4f-82d9-57af-aac0-e111a592c900",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/60b8ec4f-82d9-57af-aac0-e111a592c900"
+        },
+        {
+          "ref": "R610",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/f6116055-2dcb-5c38-a684-fb644bcec946",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/f6116055-2dcb-5c38-a684-fb644bcec946"
+        },
+        {
+          "ref": "C602",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/efba6506-99a7-5103-a9b0-59186659032d",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/efba6506-99a7-5103-a9b0-59186659032d"
+        },
+        {
+          "ref": "D602",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/b82d1c2b-a1c2-55d5-a083-5e8f77f47cff",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/b82d1c2b-a1c2-55d5-a083-5e8f77f47cff"
+        },
+        {
+          "ref": "D601",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/f4ef9efe-5e1c-5860-a647-d81373439d77",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/f4ef9efe-5e1c-5860-a647-d81373439d77"
+        },
+        {
+          "ref": "JR1",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/0ec93d1e-da13-5895-89b3-c99e935d8de5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/0ec93d1e-da13-5895-89b3-c99e935d8de5"
+        },
+        {
+          "ref": "R605",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/a20942c6-e388-542c-962b-7bb8902cb70a",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/a20942c6-e388-542c-962b-7bb8902cb70a"
+        },
+        {
+          "ref": "C604",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/287660bf-54de-5fd0-9554-b3813874be3b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/287660bf-54de-5fd0-9554-b3813874be3b"
+        },
+        {
+          "ref": "C605",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/f2d4d7eb-ed90-55ac-81d9-2e07a7fbbd34",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/f2d4d7eb-ed90-55ac-81d9-2e07a7fbbd34"
+        },
+        {
+          "ref": "C613",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/80d6d5e8-e219-511c-8665-ac076e1135c8",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/80d6d5e8-e219-511c-8665-ac076e1135c8"
+        },
+        {
+          "ref": "R609",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/0c17275b-05a5-52d1-9177-b19f038462df",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/0c17275b-05a5-52d1-9177-b19f038462df"
+        },
+        {
+          "ref": "C610",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/280cd3dd-2b3e-5782-a248-af9adbf38740",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/280cd3dd-2b3e-5782-a248-af9adbf38740"
+        },
+        {
+          "ref": "R616",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/710d87e1-f876-5917-9dcd-dbf9f2c23922",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/710d87e1-f876-5917-9dcd-dbf9f2c23922"
+        },
+        {
+          "ref": "C614",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/b04ac169-ac53-5c57-a33a-a603e8d95471",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/b04ac169-ac53-5c57-a33a-a603e8d95471"
+        },
+        {
+          "ref": "C607",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/bee4b957-26bb-55a6-8ec1-89567dbef894",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/bee4b957-26bb-55a6-8ec1-89567dbef894"
+        },
+        {
+          "ref": "JR6",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/bec3c756-3e71-5692-84aa-4d88bbe3a2aa",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/bec3c756-3e71-5692-84aa-4d88bbe3a2aa"
+        },
+        {
+          "ref": "R613",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/16ef475e-dbdf-5ed4-b929-960d3bb49904",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/16ef475e-dbdf-5ed4-b929-960d3bb49904"
+        },
+        {
+          "ref": "C617",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/11d79d59-6f0b-51a5-97ba-10ce3db84a5b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/11d79d59-6f0b-51a5-97ba-10ce3db84a5b"
+        },
+        {
+          "ref": "R608",
+          "actual": "/de99432e-dfbd-5473-9108-d29c4d823fa1/41de8481-8363-59ba-a6bc-96518f7415d5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1/41de8481-8363-59ba-a6bc-96518f7415d5"
+        },
+        {
+          "ref": "R614",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/f95fd079-c2ba-550a-801b-690637b5499b",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/f95fd079-c2ba-550a-801b-690637b5499b"
+        },
+        {
+          "ref": "C612",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/7cdb8bf3-a1e3-5bcf-9b8b-dbb2628e3c77",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/7cdb8bf3-a1e3-5bcf-9b8b-dbb2628e3c77"
+        },
+        {
+          "ref": "U10",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/bc21c5ab-5d4a-5953-8bf3-32faadb273ca",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/bc21c5ab-5d4a-5953-8bf3-32faadb273ca"
+        },
+        {
+          "ref": "R601",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/8a9cb995-466e-5c4e-afee-087da21a4bc5",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/8a9cb995-466e-5c4e-afee-087da21a4bc5"
+        },
+        {
+          "ref": "R615",
+          "actual": "/8fe72301-58ee-52c0-a750-925f875cec11/98e0c9b8-c690-5717-b2f8-704abcb72c95",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/98e0c9b8-c690-5717-b2f8-704abcb72c95"
+        },
+        {
+          "ref": "RV601",
+          "actual": "/905ab7bf-c478-5283-9fbb-463e3e3d1d16/ef337ffa-b411-5c9b-bae3-d7c5be170569",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/ef337ffa-b411-5c9b-bae3-d7c5be170569"
+        },
+        {
+          "ref": "R618",
+          "actual": "",
+          "expected": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/937c5d5c-2416-5dc3-8b46-4405c85f6a66"
+        }
+      ],
+      "drilled_footprint_pads": 125,
+      "via_count": 12,
+      "missing_courtyards": []
+    }
+  },
+  "fabrication_ready": false,
+  "native_contract_endpoint_partition_errors": [
+    {
+      "contract_net": "GND",
+      "pins": [
+        [
+          "C1",
+          "2"
+        ],
+        [
+          "C10",
+          "2"
+        ],
+        [
+          "C12",
+          "2"
+        ],
+        [
+          "C13",
+          "2"
+        ],
+        [
+          "C14",
+          "2"
+        ],
+        [
+          "C201",
+          "2"
+        ],
+        [
+          "C202",
+          "2"
+        ],
+        [
+          "C203",
+          "2"
+        ],
+        [
+          "C204",
+          "2"
+        ],
+        [
+          "C205",
+          "2"
+        ],
+        [
+          "C206",
+          "2"
+        ],
+        [
+          "C207",
+          "2"
+        ],
+        [
+          "C208",
+          "1"
+        ],
+        [
+          "C209",
+          "2"
+        ],
+        [
+          "C210",
+          "2"
+        ],
+        [
+          "C211",
+          "2"
+        ],
+        [
+          "C212",
+          "1"
+        ],
+        [
+          "C213",
+          "1"
+        ],
+        [
+          "C214",
+          "1"
+        ],
+        [
+          "C25",
+          "2"
+        ],
+        [
+          "C26",
+          "2"
+        ],
+        [
+          "C27",
+          "1"
+        ],
+        [
+          "C28",
+          "1"
+        ],
+        [
+          "C30",
+          "2"
+        ],
+        [
+          "C301",
+          "2"
+        ],
+        [
+          "C311",
+          "2"
+        ],
+        [
+          "C321",
+          "2"
+        ],
+        [
+          "C351",
+          "2"
+        ],
+        [
+          "C352",
+          "2"
+        ],
+        [
+          "C353",
+          "2"
+        ],
+        [
+          "C5",
+          "2"
+        ],
+        [
+          "C505",
+          "2"
+        ],
+        [
+          "C610",
+          "2"
+        ],
+        [
+          "C611",
+          "1"
+        ],
+        [
+          "C612",
+          "2"
+        ],
+        [
+          "C613",
+          "1"
+        ],
+        [
+          "C614",
+          "2"
+        ],
+        [
+          "C615",
+          "1"
+        ],
+        [
+          "C616",
+          "2"
+        ],
+        [
+          "C617",
+          "1"
+        ],
+        [
+          "C7",
+          "2"
+        ],
+        [
+          "D302",
+          "2"
+        ],
+        [
+          "D312",
+          "2"
+        ],
+        [
+          "J1",
+          "S"
+        ],
+        [
+          "J1",
+          "TN"
+        ],
+        [
+          "J2",
+          "S"
+        ],
+        [
+          "J3",
+          "S"
+        ],
+        [
+          "J4",
+          "S"
+        ],
+        [
+          "J5",
+          "S"
+        ],
+        [
+          "JR1",
+          "2"
+        ],
+        [
+          "JR2",
+          "2"
+        ],
+        [
+          "JR3",
+          "2"
+        ],
+        [
+          "JR4",
+          "3"
+        ],
+        [
+          "JR5",
+          "2"
+        ],
+        [
+          "JR6",
+          "2"
+        ],
+        [
+          "K1",
+          "13"
+        ],
+        [
+          "K2",
+          "13"
+        ],
+        [
+          "K3",
+          "6"
+        ],
+        [
+          "Q1",
+          "1"
+        ],
+        [
+          "Q2",
+          "1"
+        ],
+        [
+          "R10",
+          "2"
+        ],
+        [
+          "R100",
+          "2"
+        ],
+        [
+          "R11",
+          "2"
+        ],
+        [
+          "R110",
+          "2"
+        ],
+        [
+          "R111",
+          "2"
+        ],
+        [
+          "R14",
+          "2"
+        ],
+        [
+          "R16",
+          "2"
+        ],
+        [
+          "R19",
+          "2"
+        ],
+        [
+          "R2",
+          "2"
+        ],
+        [
+          "R20",
+          "2"
+        ],
+        [
+          "R22",
+          "2"
+        ],
+        [
+          "R24",
+          "2"
+        ],
+        [
+          "R3",
+          "2"
+        ],
+        [
+          "R32",
+          "2"
+        ],
+        [
+          "R332",
+          "2"
+        ],
+        [
+          "R342",
+          "2"
+        ],
+        [
+          "R43",
+          "2"
+        ],
+        [
+          "R502",
+          "2"
+        ],
+        [
+          "R503",
+          "2"
+        ],
+        [
+          "R507",
+          "2"
+        ],
+        [
+          "R6",
+          "2"
+        ],
+        [
+          "R602",
+          "2"
+        ],
+        [
+          "R603",
+          "2"
+        ],
+        [
+          "R606",
+          "2"
+        ],
+        [
+          "R607",
+          "2"
+        ],
+        [
+          "R609",
+          "2"
+        ],
+        [
+          "R617",
+          "2"
+        ],
+        [
+          "R8",
+          "2"
+        ],
+        [
+          "RT1",
+          "2"
+        ],
+        [
+          "RT1",
+          "4"
+        ],
+        [
+          "RV3",
+          "3"
+        ],
+        [
+          "RV4",
+          "3"
+        ],
+        [
+          "RV601",
+          "3"
+        ],
+        [
+          "RV602",
+          "3"
+        ],
+        [
+          "RV7",
+          "2"
+        ],
+        [
+          "RV7",
+          "3"
+        ],
+        [
+          "RV8",
+          "3"
+        ],
+        [
+          "RV9",
+          "2"
+        ],
+        [
+          "RV9",
+          "3"
+        ],
+        [
+          "SW1",
+          "2"
+        ],
+        [
+          "SW2",
+          "2"
+        ],
+        [
+          "SW3",
+          "2"
+        ],
+        [
+          "T1",
+          "CT"
+        ],
+        [
+          "T2",
+          "COM"
+        ],
+        [
+          "T3",
+          "CT"
+        ],
+        [
+          "U1",
+          "11"
+        ],
+        [
+          "U1",
+          "13"
+        ],
+        [
+          "U1",
+          "5"
+        ],
+        [
+          "U1",
+          "7"
+        ],
+        [
+          "U1",
+          "9"
+        ],
+        [
+          "U12",
+          "3"
+        ],
+        [
+          "U12",
+          "5"
+        ],
+        [
+          "U2",
+          "7"
+        ],
+        [
+          "U3",
+          "2"
+        ],
+        [
+          "U4",
+          "2"
+        ],
+        [
+          "U5",
+          "2"
+        ],
+        [
+          "U6",
+          "2"
+        ],
+        [
+          "U7",
+          "1"
+        ]
+      ],
+      "native_net_names": [
+        "GND"
+      ]
+    },
+    {
+      "contract_net": "PE",
+      "pins": [
+        [
+          "J7",
+          "3"
+        ],
+        [
+          "JPE1",
+          "1"
+        ],
+        [
+          "JPE2",
+          "1"
+        ]
+      ],
+      "native_net_names": [
+        "GND"
+      ]
+    }
+  ],
+  "native_contract_expected_nets": 135,
+  "native_contract_observed_nets": 134,
+  "inventory_rows": 1084,
+  "drill_shapes": {
+    "round": 1084
+  }
+}

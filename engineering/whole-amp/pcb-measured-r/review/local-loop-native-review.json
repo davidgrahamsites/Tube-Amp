@@ -1,0 +1,84 @@
+{
+  "Main": {
+    "sha256": "5433cd8e9b264b12328099fe6c94a03bbf308f5bdd04fc195e9017b13d799555",
+    "violations": {
+      "missing_courtyard": 43
+    },
+    "unconnected": 105,
+    "command": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--all-track-errors",
+      "--refill-zones",
+      "-o",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/review/local-loop-Main-drc.json",
+      "engineering/whole-amp/pcb-measured-r/boards/Renegade_Main.kicad_pcb"
+    ],
+    "returncode": 0
+  },
+  "Power": {
+    "sha256": "95d326c677cafc0bb6c6e2896320e32cb2eb4b116ae5e6ea8058efdcc735c810",
+    "violations": {
+      "missing_courtyard": 12
+    },
+    "unconnected": 39,
+    "command": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--all-track-errors",
+      "--refill-zones",
+      "-o",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/review/local-loop-Power-drc.json",
+      "engineering/whole-amp/pcb-measured-r/boards/Renegade_Power.kicad_pcb"
+    ],
+    "returncode": 0
+  },
+  "Control": {
+    "sha256": "11e8bc8c81143534be03ad05191090937020ae675bf2e7c8baa86722d0ccfa13",
+    "violations": {
+      "missing_courtyard": 13
+    },
+    "unconnected": 90,
+    "command": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--all-track-errors",
+      "--refill-zones",
+      "-o",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/review/local-loop-Control-drc.json",
+      "engineering/whole-amp/pcb-measured-r/boards/Renegade_Control.kicad_pcb"
+    ],
+    "returncode": 0
+  },
+  "Reverb": {
+    "sha256": "3f96fa4c4bf79e7f446293e513892c2894fce00e37920ae169b405de88fb625c",
+    "violations": {},
+    "unconnected": 0,
+    "command": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--all-track-errors",
+      "--refill-zones",
+      "-o",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/review/local-loop-Reverb-drc.json",
+      "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb"
+    ],
+    "returncode": 0
+  }
+}
