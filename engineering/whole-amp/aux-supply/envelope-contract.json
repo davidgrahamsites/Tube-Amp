@@ -1,0 +1,135 @@
+{
+  "schema": 1,
+  "revision": "aux-envelope-1",
+  "baseline_commit": "a1ddf8637a3cf8a26734d2719b92005e815e6d7e",
+  "purpose": "Secondary rectifier loading and conditional thermal envelope; not a regulator stability or safety model.",
+  "line_factors": [
+    0.9,
+    1.0,
+    1.1
+  ],
+  "frequency_hz": [
+    50,
+    60
+  ],
+  "reservoir_uF": [
+    800,
+    1200
+  ],
+  "winding_scenarios": [
+    {
+      "name": "10pct_equivalent",
+      "open_circuit_half_rms_V": 19.8,
+      "series_ohm_per_half": 7.2
+    },
+    {
+      "name": "20pct_equivalent",
+      "open_circuit_half_rms_V": 21.6,
+      "series_ohm_per_half": 14.4
+    }
+  ],
+  "winding_basis": "Illustrative 18V at 0.25A with 10/20% resistive voltage-rise approximation. Not measurements or a transformer model; primary loss, leakage and saturation omitted.",
+  "loads": [
+    {
+      "name": "idle",
+      "audio_each_rail_A": 0.03,
+      "logic_5V_A": 0.002,
+      "relays_on": 0
+    },
+    {
+      "name": "working_reserve",
+      "audio_each_rail_A": 0.05,
+      "logic_5V_A": 0.01,
+      "relays_on": 3
+    },
+    {
+      "name": "expansion_stress",
+      "audio_each_rail_A": 0.1,
+      "logic_5V_A": 0.02,
+      "relays_on": 3
+    }
+  ],
+  "load_basis": {
+    "audio": "Six OPA2134 channels at 5mA maximum quiescent per amplifier at stated datasheet conditions gives30mA each rail; 20/70mA added reserve is a test assumption, not a validated maximum signal/fault budget.",
+    "logic": "2/10/20mA scenario assumptions; not a verified current budget. Idle can violate L7805 minimum5mA regulation condition.",
+    "relay": "G5V-2-H1 DC12 960ohm +/-10% at23C; use12.6V/864ohm per energized coil, ignoring transistor voltage drop. Colder operation remains to qualify."
+  },
+  "iq_A": {
+    "U4": 0.0095,
+    "U5": 0.0095,
+    "U6": 0.0095,
+    "U7": 0.0045
+  },
+  "iq_basis": "L78 8mA plus1mA line/0.5mA load variation; L79 3mA plus1mA line/0.5mA load variation. Planning screens using tabulated conditions; not universal guaranteed startup/fault limits.",
+  "relay_voltage_V": 12.6,
+  "relay_min_resistance_ohm": 864,
+  "reservoir_esr_ohm": 0.15,
+  "regulator_output_nominal_V": {
+    "U4": 12,
+    "U5": 5,
+    "U6": 15,
+    "U7": 15
+  },
+  "raw_screen_V": {
+    "positive_min": 17.5,
+    "positive_max": 25,
+    "negative_min_magnitude": 18.5,
+    "negative_max_magnitude": 30,
+    "absolute_max_magnitude": 35
+  },
+  "raw_screen_basis": "Intersection of L7812C/L7815C documented regulation test ranges at modest load, and L7915C range. Outside means unqualified, not an exact predicted dropout transition.",
+  "thermal": {
+    "ambient_C": [
+      40,
+      60
+    ],
+    "junction_design_limit_C": 100,
+    "theta_junction_case_C_per_W": 5,
+    "theta_case_sink_assumed_C_per_W": 1,
+    "theta_junction_ambient_reference_C_per_W": 50
+  },
+  "thermal_basis": "100C junction is engineering target;1C/W insulator/contact path and ambient are assumptions. Shared sink computation includes all four regulators; no selected heatsink or measured chassis temperature.",
+  "simulation": {
+    "stop_s": 0.6,
+    "measure_start_s": 0.4,
+    "max_step_s": 2e-05,
+    "load_ramp_start_s": 0.05,
+    "load_ramp_stop_s": 0.06
+  },
+  "sources": [
+    {
+      "url": "https://www.st.com/resource/en/datasheet/l78.pdf",
+      "revision": "DS0422 Rev38 February2025",
+      "scope": "Tables2,10,15,16, minimum load and regulation ranges"
+    },
+    {
+      "url": "https://www.st.com/resource/en/datasheet/l79.pdf",
+      "revision": "DS0428 Rev24 January2019",
+      "scope": "Tables2,9; section6"
+    },
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+      "revision": "SBOS058B November2024",
+      "scope": "section5.7 quiescent current per amplifier"
+    },
+    {
+      "url": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v2.pdf",
+      "scope": "H1 DC12 coil table page2"
+    }
+  ],
+  "limitations": [
+    "No regulator control-loop/macromodel; loads are imposed on raw rails after a startup ramp.",
+    "No DC-output startup, reverse-current, protection, audio clipping or relay transient qualification.",
+    "Generic exponential diode model is an assumed rectification surrogate, not exact selected1N4007 model.",
+    "No transformer selection, mains-switch/fuse approval or Shanghai procurement qualification.",
+    "No inferred socket qualification from current or thermal results."
+  ],
+  "thermal_output_bound_V": {
+    "U4": 11.4,
+    "U5": 4.75,
+    "U6": 14.25,
+    "U7": 14.3
+  },
+  "thermal_U5_input_bound_V": 12.6,
+  "thermal_electrical_corner_basis": "Use minimum output bounds for device dissipation and maximum12.6V U5 input. Sum of independent worst-direction bounds is conservative; not one simultaneous output-voltage corner. Valid only while regulation holds and within stated current/temperature assumptions."
+}

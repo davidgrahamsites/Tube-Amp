@@ -27,3 +27,6 @@ Full changed-sheet PDF and enlarged C212 region were visually inspected:47µF an
 
 ## Subsequent package checkpoint — November24
 C212 now uses the exact2.5mm Panasonic footprint. [Seven-part package review](../../component-selection/footprints/panasonic-fr/review.md) and VAL-025 supersede the provisional3.5mm pitch hold. The historical value-only checker pins the earlier revision; use the new package integration checker for current source/native preservation. Local bypass placement and regulator electrical/thermal qualification remain open.
+
+## Subsequent supply-envelope checkpoint — November24
+[Raw-supply and thermal review](envelope-review.md) records72 base cases,4 refinement cases and3 unadopted preload cases. It exposes minimum-load, documented-input-range and provisional transformer-current gaps. Regulator control-loop, startup/reset and actual socket/heatsink qualification remain open. No native changes in this checkpoint.

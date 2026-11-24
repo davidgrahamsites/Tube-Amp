@@ -31,3 +31,6 @@ Outputs are checked engineering artifacts in their modules, linked evidence and 
 ## Physical dependencies and human check
 
 Actual drill envelope remains deferred until November 25. Cabinet depth datum, actual speaker fit and 1:1 assembly checks remain open; do not replace them with inferred measurements. Domestic shipping policy establishes a supplier route, not an exact delivered price or accepted order. No purchase, supplier contact or fabrication upload is authorized by this card. At review, trace one part from stock/datasheet through schematic pin, socket/contact, PCB hole and assembly clearance.
+
+## Auxiliary-supply checkpoint — November24
+[VAL-026](../../brain/records/VAL-026-auxiliary-supply-envelope.md) adds72raw-supply cases,4refinement runs and3unadopted820Ωpreload comparisons. Evidence checks pass;48base cases have engineering flags. Raw-winding/thermal assumptions remain unqualified. Contact screening has not selected a regulator socket. Native CAD unchanged; exact auxiliary magnetics, preload integration, startup/reset, socket/heatsink and all populated-fit gates remain open.

@@ -23,3 +23,6 @@ ST [L79](https://www.st.com/resource/en/datasheet/l79.pdf), tables10/11, gives T
 ## Next action
 
 Resolve the supervisor route and exact regulator contacts/heatsink fastening, then carry verified socket geometry and removal envelopes into the three-board assembly. The nearby supply review also found and corrected [C212's aluminium-capacitor value](../../whole-amp/aux-supply/review.md). This inventory does not close electrical, thermal or chassis qualification.
+
+## Subsequent contact/supply screen
+[Contact review](contact-review.md) rejects obsolete Molex sourcing and retains TE/Harwin contacts as unqualified for the actual rectangular leads. The linked auxiliary envelope supplies conditional current and heatsink bounds; it does not qualify any socket.

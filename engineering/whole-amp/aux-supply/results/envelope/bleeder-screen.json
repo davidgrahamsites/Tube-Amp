@@ -1,0 +1,255 @@
+{
+  "proposal": {
+    "resistance_ohm": 820,
+    "tolerance_fraction": 0.01,
+    "rated_power_proposed_W": 0.25,
+    "minimum_current_A": 0.005735329630524028,
+    "maximum_current_A": 0.006467110125646712,
+    "maximum_dissipation_W": 0.03395232815964523,
+    "status": "engineering proposal only; no selected China-stock part or native integration",
+    "caveat": "Initial resistor tolerance only; temperature coefficient/ageing/derating and regulator-startup/reset corners remain to qualify."
+  },
+  "case_count": 3,
+  "cases": [
+    {
+      "baseline_id": "aux066",
+      "result": {
+        "case": {
+          "id": "aux066-preload",
+          "line_factor": 1.1,
+          "frequency_hz": 60,
+          "winding": {
+            "name": "20pct_equivalent",
+            "open_circuit_half_rms_V": 21.6,
+            "series_ohm_per_half": 14.4
+          },
+          "reservoir_uF": 800,
+          "load": {
+            "name": "idle",
+            "audio_each_rail_A": 0.03,
+            "logic_5V_A": 0.008467110125646712,
+            "relays_on": 0
+          }
+        },
+        "step_s": 2e-05,
+        "raw_positive_V": {
+          "min": 28.143429301021534,
+          "mean": 28.386304647607204,
+          "max": 28.627488714458842
+        },
+        "raw_negative_magnitude_V": {
+          "min": 29.851873842639105,
+          "mean": 29.98880322610669,
+          "max": 30.124712218534487
+        },
+        "half_winding_rms_A": {
+          "i(va)": 0.1036210308556301,
+          "i(vb)": 0.10362143435158683
+        },
+        "raw_load_A": {
+          "positive": 0.06696711012564671,
+          "negative": 0.034499999999999996
+        },
+        "conditional_regulator_dissipation_W": {
+          "U4": 0.5748647003836116,
+          "U5": 0.18616681448632666,
+          "U6": 0.6937590335804846,
+          "U7": 0.6056137113006808
+        },
+        "conditional_total_W": 2.0604042597511034,
+        "thermal": [
+          {
+            "ambient_C": 40,
+            "shared_sink_theta_sa_max_C_per_W": 27.10023799177267,
+            "bare_package_reference_junction_C": {
+              "U4": 68.74323501918059,
+              "U5": 49.30834072431633,
+              "U6": 74.68795167902422,
+              "U7": 70.28068556503403
+            }
+          },
+          {
+            "ambient_C": 60,
+            "shared_sink_theta_sa_max_C_per_W": 17.393405021811716,
+            "bare_package_reference_junction_C": {
+              "U4": 88.74323501918059,
+              "U5": 69.30834072431634,
+              "U6": 94.68795167902422,
+              "U7": 90.28068556503403
+            }
+          }
+        ],
+        "screen_flags": [
+          "positive_above_documented_range",
+          "negative_above_documented_range"
+        ],
+        "kcl_max_error_A": 4.2359152480075934e-07,
+        "points": 30289,
+        "completed_time_s": 0.6000000000000001,
+        "deck_sha256": "e4f3508f5d3c944a6492ef50a35091e310a78b765074fade5f8416c0de924fa7"
+      },
+      "deck": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 0 SIN(0 33.601714242 60)\nVB s2 0 SIN(0 33.601714242 60 0 0 180)\nRA s1 ac1 14.4\nRB s2 ac2 14.4\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 800u\nC208 0 cn 800u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.0669671101256)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.0345)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.6 0 2e-05\n.end\n",
+      "conditional_added_regulator_heat_W": 0.14292025091407456
+    },
+    {
+      "baseline_id": "aux070",
+      "result": {
+        "case": {
+          "id": "aux070-preload",
+          "line_factor": 1.1,
+          "frequency_hz": 60,
+          "winding": {
+            "name": "20pct_equivalent",
+            "open_circuit_half_rms_V": 21.6,
+            "series_ohm_per_half": 14.4
+          },
+          "reservoir_uF": 1200,
+          "load": {
+            "name": "working_reserve",
+            "audio_each_rail_A": 0.05,
+            "logic_5V_A": 0.016467110125646712,
+            "relays_on": 3
+          }
+        },
+        "step_s": 2e-05,
+        "raw_positive_V": {
+          "min": 25.31716333177583,
+          "mean": 25.61630745778936,
+          "max": 25.912626349015305
+        },
+        "raw_negative_magnitude_V": {
+          "min": 28.81560643626374,
+          "mean": 28.959787077954896,
+          "max": 29.09924393771272
+        },
+        "half_winding_rms_A": {
+          "i(va)": 0.18132441103730632,
+          "i(vb)": 0.18132772942610415
+        },
+        "raw_load_A": {
+          "positive": 0.1387171101256467,
+          "negative": 0.0545
+        },
+        "conditional_regulator_dissipation_W": {
+          "U4": 1.2344747934637523,
+          "U5": 0.24896681448632668,
+          "U6": 0.811670293738467,
+          "U7": 0.8633083957485418
+        },
+        "conditional_total_W": 3.158420297437088,
+        "thermal": [
+          {
+            "ambient_C": 40,
+            "shared_sink_theta_sa_max_C_per_W": 16.651726586830257,
+            "bare_package_reference_junction_C": {
+              "U4": 101.72373967318762,
+              "U5": 52.44834072431634,
+              "U6": 80.58351468692335,
+              "U7": 83.16541978742708
+            }
+          },
+          {
+            "ambient_C": 60,
+            "shared_sink_theta_sa_max_C_per_W": 10.319447119075736,
+            "bare_package_reference_junction_C": {
+              "U4": 121.72373967318762,
+              "U5": 72.44834072431634,
+              "U6": 100.58351468692335,
+              "U7": 103.16541978742708
+            }
+          }
+        ],
+        "screen_flags": [
+          "positive_above_documented_range"
+        ],
+        "kcl_max_error_A": 1.029426442686332e-06,
+        "points": 30289,
+        "completed_time_s": 0.6000000000000001,
+        "deck_sha256": "8a38d2907ae20df74d7e4cd7f575efded1672c78cd8278948030b6889a2be595"
+      },
+      "deck": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 0 SIN(0 33.601714242 60)\nVB s2 0 SIN(0 33.601714242 60 0 0 180)\nRA s1 ac1 14.4\nRB s2 ac2 14.4\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 1200u\nC208 0 cn 1200u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.138717110126)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.0545)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.6 0 2e-05\n.end\n",
+      "conditional_added_regulator_heat_W": 0.11298103382929714
+    },
+    {
+      "baseline_id": "aux065",
+      "result": {
+        "case": {
+          "id": "aux065-preload",
+          "line_factor": 1.1,
+          "frequency_hz": 60,
+          "winding": {
+            "name": "10pct_equivalent",
+            "open_circuit_half_rms_V": 19.8,
+            "series_ohm_per_half": 7.2
+          },
+          "reservoir_uF": 1200,
+          "load": {
+            "name": "expansion_stress",
+            "audio_each_rail_A": 0.1,
+            "logic_5V_A": 0.02646711012564671,
+            "relays_on": 3
+          }
+        },
+        "step_s": 2e-05,
+        "raw_positive_V": {
+          "min": 23.892200562829053,
+          "mean": 24.341712710538793,
+          "max": 24.785033546949204
+        },
+        "raw_negative_magnitude_V": {
+          "min": 26.055744060115025,
+          "mean": 26.318074370274548,
+          "max": 26.578251160584223
+        },
+        "half_winding_rms_A": {
+          "i(va)": 0.284259237607273,
+          "i(vb)": 0.284259238537672
+        },
+        "raw_load_A": {
+          "positive": 0.19871711012564672,
+          "negative": 0.10450000000000001
+        },
+        "conditional_regulator_dissipation_W": {
+          "U4": 1.2629222081106213,
+          "U5": 0.32746681448632664,
+          "U6": 1.240417541803998,
+          "U7": 1.32023877169369
+        },
+        "conditional_total_W": 4.151045336094636,
+        "thermal": [
+          {
+            "ambient_C": 40,
+            "shared_sink_theta_sa_max_C_per_W": 12.54589221587113,
+            "bare_package_reference_junction_C": {
+              "U4": 103.14611040553106,
+              "U5": 56.373340724316336,
+              "U6": 102.0208770901999,
+              "U7": 106.0119385846845
+            }
+          },
+          {
+            "ambient_C": 60,
+            "shared_sink_theta_sa_max_C_per_W": 7.727828720853682,
+            "bare_package_reference_junction_C": {
+              "U4": 123.14611040553106,
+              "U5": 76.37334072431634,
+              "U6": 122.0208770901999,
+              "U7": 126.0119385846845
+            }
+          }
+        ],
+        "screen_flags": [
+          "half_winding_exceeds_provisional_0p25A"
+        ],
+        "kcl_max_error_A": 1.048437709622041e-06,
+        "points": 30305,
+        "completed_time_s": 0.6000000000000001,
+        "deck_sha256": "04cc0ba7409a4ac068829d614212ea840fd4cab73d9c9c9cdeb5f5dc050b65d3"
+      },
+      "deck": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 0 SIN(0 30.8015713885 60)\nVB s2 0 SIN(0 30.8015713885 60 0 0 180)\nRA s1 ac1 7.2\nRB s2 ac2 7.2\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 1200u\nC208 0 cn 1200u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.198717110126)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.1045)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.6 0 2e-05\n.end\n",
+      "conditional_added_regulator_heat_W": 0.11078233955180661
+    }
+  ],
+  "baseline_screen_sha256": "b322c42066c69fc6213a245dc11398dc46595a1015ba8fba23069376bb16f00f",
+  "limits": "Unadopted preload; only worst-heating baseline case of each profile repeated. Not a new full matrix, regulator startup/stability or physical qualification."
+}

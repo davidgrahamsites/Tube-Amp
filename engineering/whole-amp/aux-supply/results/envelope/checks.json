@@ -1,0 +1,22 @@
+{
+  "status": "evidence checks pass; supply remains unqualified",
+  "cases_checked": 72,
+  "refinement_cases": 4,
+  "negative_controls_rejected": [
+    "missing_case",
+    "wrong_negative_diode",
+    "shared_sink_uses_single_device_heat",
+    "unfinished_run"
+  ],
+  "bleeder_proposal": {
+    "resistance_ohm": 820,
+    "tolerance_fraction": 0.01,
+    "rated_power_proposed_W": 0.25,
+    "minimum_current_A": 0.005735329630524028,
+    "maximum_current_A": 0.006467110125646712,
+    "maximum_dissipation_W": 0.03395232815964523,
+    "status": "engineering proposal only; no selected China-stock part or native integration",
+    "caveat": "Initial resistor tolerance only; temperature coefficient/ageing/derating and regulator-startup/reset corners remain to qualify."
+  },
+  "screen_sha256": "b322c42066c69fc6213a245dc11398dc46595a1015ba8fba23069376bb16f00f"
+}

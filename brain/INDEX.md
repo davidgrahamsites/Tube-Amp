@@ -54,3 +54,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-023 | validation | cross-domain | documented | 2026-11-24 | [Loaded feedback diagnosis and power-capacitor fit defect](records/VAL-023-loaded-feedback-capacitor-fit.md) |
 | VAL-024 | validation | cross-domain | documented | 2026-11-24 | [Socket coverage and negative-regulator bypass correction](records/VAL-024-socket-bypass-checkpoint.md) |
 | VAL-025 | validation | cross-domain | documented | 2026-11-24 | [Exact low-voltage capacitor packages and drill verification](records/VAL-025-panasonic-package-checkpoint.md) |
+| VAL-026 | validation | cross-domain | documented | 2026-11-24 | [Auxiliary supply, replaceable regulators and thermal constraints](records/VAL-026-auxiliary-supply-envelope.md) |

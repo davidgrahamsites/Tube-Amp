@@ -86,3 +86,6 @@ Independent T08–T10 prerequisite: [P057 fit review](../../engineering/whole-am
 
 ## Exact low-voltage capacitor package checkpoint — November24
 T08 prerequisite advanced: seven Panasonic positions now have exact package IDs in source, native sheets and boards;14 selected round plated drill hits match exported Excellon.28 integration checks and18 native package checks pass. A new C212 clearance conflict was repaired in six existing45-degree/H/V trace segments; strict DRC returns to prior counts. T04 remains active, and this is not T08/T10 closure. See [VAL-025](../../brain/records/VAL-025-panasonic-package-checkpoint.md). Next: actual IC/tube sockets, regulator heat/contact/bypass geometry, transformer and HV-capacitor envelopes, then populated three-board repacking. November25 actual drill envelope remains pending.
+
+## Auxiliary-supply checkpoint — November24
+[VAL-026](../../brain/records/VAL-026-auxiliary-supply-envelope.md) adds72raw-supply cases,4refinement runs and3unadopted820Ωpreload comparisons. Evidence checks pass;48base cases have engineering flags. Raw-winding/thermal assumptions remain unqualified. Contact screening has not selected a regulator socket. Native CAD unchanged; exact auxiliary magnetics, preload integration, startup/reset, socket/heatsink and all populated-fit gates remain open.
