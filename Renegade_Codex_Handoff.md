@@ -189,3 +189,9 @@ FB-112 authorizes continued transformer/feedback, PCB and chassis work, ICM capt
 ## Treble retention for occasional acoustic use — November24
 
 FB-113: user says treble matters because an acoustic guitar will likely also be played through this electric build. Preserve usable treble when qualifying feedback compensation, RETURN and speaker selection. Report changes at5,10 and20kHz across Presence settings rather than hiding instability with an unexplained low-pass change. No numeric flatness/bandwidth requirement, pickup type, tweeter/crossover or new dedicated acoustic architecture is inferred. The separate acoustic branch remains distinct; this requirement applies to the current electric build.
+
+## November 24 loaded-winding and capacitor fit checkpoint
+
+November 24 loaded-winding/capacitor checkpoint: [VAL-023](brain/records/VAL-023-loaded-feedback-capacitor-fit.md) records 87 loaded-tap AC cases, four HF bursts and 312 passing evidence checks; 42 cases fail the engineering response screen and no compensation is adopted. Corrected P057 mixed part metadata: all four native power-capacitor footprints have incompatible row pitch for CRC FC6136; two centered maximum-body pairs overlap by 0.95 mm. Native circuit/boards remain unchanged. Exact magnetics and capacitor footprint/placement resolution are next; fabrication and populated fit remain held, drill envelope pending November 25.
+
+Preserve the current functional-block interfaces and native compensation until actual transformer/load evidence supports a change. Correcting the FC6136 coverage entry does not select the part or replace its incompatible Panasonic native footprints. Exact lead/tolerance/support, revised placement and populated service access remain required. No supplier contact, order or manufacturing upload performed.

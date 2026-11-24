@@ -1,0 +1,26 @@
+{
+  "owner": "component selection",
+  "mpn": "FC6136",
+  "status": "candidate only; not a native footprint specification",
+  "source": "engineering/component-selection/evidence/CRC-FC6136.pdf",
+  "drawing": "CRC approval 26124D02, page 1; visually reviewed 2026-11-24",
+  "references": ["C12", "C13", "C25", "C26"],
+  "capacitance_uF": 50,
+  "rated_voltage_VDC": 900,
+  "body_nominal_W_T_H_mm": [57.5, 35, 50],
+  "body_tolerance_plus_minus_mm": [1, 1, 1],
+  "pitch_nominal_mm": [52.5, 20.3],
+  "pitch_tolerance_plus_minus_mm": [1, 0.5],
+  "lead_nominal_diameter_mm": 1.2,
+  "lead_diameter_tolerance_mm": null,
+  "lead_length_nominal_mm": 4,
+  "lead_length_tolerance_plus_minus_mm": 1,
+  "body_projection_assumption": "Centre candidate body on the existing four-pad centroid, preserving current 0/180-degree orientation. A collision screen only; not adoption or complete tolerance-stack qualification.",
+  "pending": [
+    "Maximum lead diameter and finished-hole tolerance/insertion allowance",
+    "Four-lead terminal grouping confirmation from manufacturer or actual part",
+    "Body-to-pin positional tolerances and assembly support",
+    "Ripple, voltage, thermal and lifetime qualification",
+    "Revised placement, routing, populated chassis fit and service clearance"
+  ]
+}

@@ -51,3 +51,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-020 | validation | cross-domain | documented | 2026-11-24 | [Logical grounding proof and approximately 25 W reference](records/VAL-020-grounding-and-power-target.md) |
 | VAL-021 | validation | cross-domain | documented | 2026-11-24 | [Screen protection revision, stress matrix and CAD route](records/VAL-021-output-protection-and-cad-route.md) |
 | VAL-022 | validation | cross-domain | verified | 2026-11-24 | [Transformer diagnosis and board-only FreeCAD seam](records/VAL-022-transformer-feedback-fit.md) |
+| VAL-023 | validation | cross-domain | documented | 2026-11-24 | [Loaded feedback diagnosis and power-capacitor fit defect](records/VAL-023-loaded-feedback-capacitor-fit.md) |

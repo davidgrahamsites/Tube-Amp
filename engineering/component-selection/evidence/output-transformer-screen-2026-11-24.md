@@ -18,3 +18,11 @@ Before selecting a domestic stock or custom unit, prepare this data request (not
 - One-unit RMB price, domestic delivery, quantity/lead time and return/quality terms. Do not infer these from export USD listings.
 
 [Feedback evidence](../../whole-amp/effects-loop/feedback-review.md) shows why selecting compensation before knowing leakage/phase would be premature. Supplier evidence and subsequent bench checks must be reconciled with the finite model, not made to fit an attractive curve.
+
+## Additional domestic supplier screen, November 24
+
+[Mable MATR0280](https://www.mableaudio.com/en/productview.asp?sid=10643) lists 30 W, 8.5k centre-tapped primary and 0/4/8-ohm secondary. Published body dimensions are 86 × 45 × 72 mm, mounting pitches 57 × 60 mm and mass 2.1 kg; the header lists US$57. The mounting pitch exceeding the stated body width means mounting tabs and the full envelope still need a drawing. Listed tube examples include 6P3P/KT66/6L6/6V6/6P13P; this is not evidence of the required EL34 DC-current/imbalance rating. Its 8.5k primary requires a fresh load-line and power/stress analysis, so it is not a drop-in selection for the 7.6k reference.
+
+[Mable MATR0279B](https://www.mableaudio.com/en/productview.asp?sid=10642) lists an uncovered 30 W, 10k primary / 0/4/8-ohm secondary unit, primary DCR 445 ohms and secondary DCR 0.93 ohm to 4 ohms / 1.15 ohms to 8 ohms, 1.45 kg, EI76 core with 40 mm stack, US$54 header price. The advertised 35 Hz/30 W capability lacks a full qualification report. The different ratio and resistance must be modeled; core size is not a complete mounting envelope. [MATR0241](https://mableaudio.com/en/productview.asp?sid=8770) is advertised at only 15 W and is not suitable for the approximately 25 W target on that rating alone.
+
+These are dated page observations, not confirmed current stock, delivered RMB prices or approved components. No supplier contact or purchase occurred. None supplies the leakage/capacitance/phase, DC-bias, insulation and complete dimensional evidence needed for acceptance. The [loaded-winding study](../../whole-amp/effects-loop/loaded-feedback-review.md) rejects all 18 tested output RC damping variants; it strengthens the case for characterizing magnetics before compensating an assumed transformer.

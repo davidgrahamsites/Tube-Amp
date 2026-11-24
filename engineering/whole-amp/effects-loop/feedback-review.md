@@ -17,7 +17,7 @@ Return ratio T is measured by replacing the existing unilateral ideal tap source
 | Earlier extreme transformer at20kHz | Small drive THD1.29%; historical larger drive41.12% | Strong amplitude dependence; the old41% result alone does not prove small-signal oscillation |
 | Independent nominal assumption:40H/20mH/250pF/.2Ω secondary | At20kHz, small drive THD0.078%; larger original drive4.734%, about12.28W fundamental | Better behavior in a different assumed transformer, not a hardware fix or new25W rating |
 | Existing C22=47pF;80mH/250pF; Presence fraction0 | HF peak17.81dB; gain margin2.77dB | Reject as robust design envelope; actual transformer must be characterized |
-| C22 increased to470pF | High-leakage peaking suppressed, but up to2.72dB loss at5kHz for tested Presence settings | Not adopted: substantial voicing tradeoff |
+| C22 increased to470pF | High-leakage peaking suppressed, but up to2.97dB loss at5kHz for tested Presence settings | Not adopted: substantial voicing tradeoff |
 | Add47pF across R31 | High-leakage/Presence0 gain margin14.62dB, downward unity crossing about36.86° from−180°, peak5.87dB | Burst decays, but margin/peaking still inadequate for a blanket approval; not adopted |
 | Add220pF across R31 | High-leakage/Presence0 negative gain margin−0.737dB | Rejected; HF-resolved transient confirms oscillation |
 

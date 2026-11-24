@@ -1,0 +1,352 @@
+{
+  "scope": "FC6136 candidate rejection screen against current native Power board; not universal component fit",
+  "source_hashes": {
+    "engineering/component-selection/fc6136-fit-contract.json": "9deb91c6a0c0414d55d575e80079be6a21a20c2ce978d9af3ec1b971b7e6dfe7",
+    "engineering/component-selection/evidence/CRC-FC6136.pdf": "e4c353e7a42367608486d7b8572f8e364791f31482a40dc8b1398dd7c0bc44e1",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Power.kicad_pcb": "d6032f0975b39f1f5dfc6ff961f04dc38083b8d2f2453a403a1d837c9841f620",
+    "engineering/whole-amp/pcb-measured-r/tools/check_fc6136_fit.py": "f4bb8f5b3e1e877d8d896129852c29f6cd6a6808d3c50b19fbdecc746c7a2b74"
+  },
+  "controls": {
+    "reject_wrong_pitch": true,
+    "aligned_pitch_not_rejected": true,
+    "touching_boxes_not_collision": true,
+    "overlapping_boxes_detected": true,
+    "native_unchanged": true
+  },
+  "audit_completed": true,
+  "candidate_can_drop_into_native": false,
+  "rows": [
+    {
+      "reference": "C12",
+      "native_footprint": "Renegade_Whole:Panasonic_EZPV60506MTC",
+      "pitch_mm": [
+        52.5,
+        10.2
+      ],
+      "pad_centroid_mm": [
+        109.075,
+        69.075
+      ],
+      "drill_sizes_mm": [
+        [
+          1.8,
+          1.8
+        ],
+        [
+          1.8,
+          1.8
+        ],
+        [
+          1.8,
+          1.8
+        ],
+        [
+          1.8,
+          1.8
+        ]
+      ],
+      "impossible_straight_lead_fit_axes": [
+        false,
+        true
+      ],
+      "candidate_max_body_bounds_mm": [
+        79.825,
+        51.075,
+        138.325,
+        87.075
+      ],
+      "candidate_max_body_height_mm": 51,
+      "pads": [
+        {
+          "number": "1",
+          "at_mm": [
+            82.825,
+            63.975
+          ],
+          "net": "B_EARLY"
+        },
+        {
+          "number": "1",
+          "at_mm": [
+            82.825,
+            74.175
+          ],
+          "net": "B_EARLY"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            135.325,
+            63.975
+          ],
+          "net": "GND"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            135.325,
+            74.175
+          ],
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "reference": "C13",
+      "native_footprint": "Renegade_Whole:Panasonic_EZPV60506MTC",
+      "pitch_mm": [
+        52.5,
+        10.2
+      ],
+      "pad_centroid_mm": [
+        42.025000000000006,
+        69.075
+      ],
+      "drill_sizes_mm": [
+        [
+          1.8,
+          1.8
+        ],
+        [
+          1.8,
+          1.8
+        ],
+        [
+          1.8,
+          1.8
+        ],
+        [
+          1.8,
+          1.8
+        ]
+      ],
+      "impossible_straight_lead_fit_axes": [
+        false,
+        true
+      ],
+      "candidate_max_body_bounds_mm": [
+        12.775000000000006,
+        51.075,
+        71.275,
+        87.075
+      ],
+      "candidate_max_body_height_mm": 51,
+      "pads": [
+        {
+          "number": "1",
+          "at_mm": [
+            68.275,
+            74.175
+          ],
+          "net": "B_PRE"
+        },
+        {
+          "number": "1",
+          "at_mm": [
+            68.275,
+            63.975
+          ],
+          "net": "B_PRE"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            15.775,
+            74.175
+          ],
+          "net": "GND"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            15.775,
+            63.975
+          ],
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "reference": "C25",
+      "native_footprint": "Renegade_Whole:Panasonic_EZPV60506MTC",
+      "pitch_mm": [
+        52.5,
+        10.2
+      ],
+      "pad_centroid_mm": [
+        109.075,
+        34.025
+      ],
+      "drill_sizes_mm": [
+        [
+          1.8,
+          1.8
+        ],
+        [
+          1.8,
+          1.8
+        ],
+        [
+          1.8,
+          1.8
+        ],
+        [
+          1.8,
+          1.8
+        ]
+      ],
+      "impossible_straight_lead_fit_axes": [
+        false,
+        true
+      ],
+      "candidate_max_body_bounds_mm": [
+        79.825,
+        16.025,
+        138.325,
+        52.025
+      ],
+      "candidate_max_body_height_mm": 51,
+      "pads": [
+        {
+          "number": "1",
+          "at_mm": [
+            82.825,
+            28.925
+          ],
+          "net": "B_PRE"
+        },
+        {
+          "number": "1",
+          "at_mm": [
+            82.825,
+            39.125
+          ],
+          "net": "B_PRE"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            135.325,
+            28.925
+          ],
+          "net": "GND"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            135.325,
+            39.125
+          ],
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "reference": "C26",
+      "native_footprint": "Renegade_Whole:Panasonic_EZPV60506MTC",
+      "pitch_mm": [
+        52.5,
+        10.2
+      ],
+      "pad_centroid_mm": [
+        42.025000000000006,
+        34.025
+      ],
+      "drill_sizes_mm": [
+        [
+          1.8,
+          1.8
+        ],
+        [
+          1.8,
+          1.8
+        ],
+        [
+          1.8,
+          1.8
+        ],
+        [
+          1.8,
+          1.8
+        ]
+      ],
+      "impossible_straight_lead_fit_axes": [
+        false,
+        true
+      ],
+      "candidate_max_body_bounds_mm": [
+        12.775000000000006,
+        16.025,
+        71.275,
+        52.025
+      ],
+      "candidate_max_body_height_mm": 51,
+      "pads": [
+        {
+          "number": "1",
+          "at_mm": [
+            15.775,
+            28.925
+          ],
+          "net": "B_SCREEN"
+        },
+        {
+          "number": "1",
+          "at_mm": [
+            15.775,
+            39.125
+          ],
+          "net": "B_SCREEN"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            68.275,
+            28.925
+          ],
+          "net": "GND"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            68.275,
+            39.125
+          ],
+          "net": "GND"
+        }
+      ]
+    }
+  ],
+  "projected_body_collisions": [
+    {
+      "references": [
+        "C26",
+        "C13"
+      ],
+      "overlap_xy_mm": [
+        58.5,
+        0.95
+      ]
+    },
+    {
+      "references": [
+        "C12",
+        "C25"
+      ],
+      "overlap_xy_mm": [
+        58.5,
+        0.95
+      ]
+    }
+  ],
+  "projection_assumption": "Centre candidate body on the existing four-pad centroid, preserving current 0/180-degree orientation. A collision screen only; not adoption or complete tolerance-stack qualification.",
+  "pending": [
+    "Maximum lead diameter and finished-hole tolerance/insertion allowance",
+    "Four-lead terminal grouping confirmation from manufacturer or actual part",
+    "Body-to-pin positional tolerances and assembly support",
+    "Ripple, voltage, thermal and lifetime qualification",
+    "Revised placement, routing, populated chassis fit and service clearance"
+  ],
+  "native_modified": false,
+  "fabrication_ready": false
+}

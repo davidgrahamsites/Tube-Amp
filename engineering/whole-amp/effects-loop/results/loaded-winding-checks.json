@@ -1,0 +1,59 @@
+{
+  "scope": "Reciprocal transformer equations and terminal continuity; no physical part qualification",
+  "rows": [
+    {
+      "test": "AC terminals",
+      "load8_ohm": 8,
+      "load4_ohm": 1000000000000.0,
+      "impedance_relative_error": 4.693432118655245e-15,
+      "tap_ratio_error": 6.756133786388279e-16
+    },
+    {
+      "test": "AC terminals",
+      "load8_ohm": 1000000000000.0,
+      "load4_ohm": 4,
+      "impedance_relative_error": 3.881525294665479e-15,
+      "tap_ratio_error": 5.598945964976453e-16
+    },
+    {
+      "test": "AC terminals",
+      "load8_ohm": 8,
+      "load4_ohm": 4,
+      "impedance_relative_error": 6.054098506572464e-15,
+      "tap_ratio_error": 1.22380071127479e-15
+    },
+    {
+      "test": "DC continuity",
+      "node": "speaker",
+      "expected_ohm": 0.2,
+      "measured_ohm": 0.20000000000000007,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "test": "DC continuity",
+      "node": "ot_4",
+      "expected_ohm": 0.1414213562373095,
+      "measured_ohm": 0.1414213562373095,
+      "relative_error": 0.0
+    },
+    {
+      "test": "DC continuity",
+      "node": "speaker",
+      "expected_ohm": 1,
+      "measured_ohm": 1.0,
+      "relative_error": 0.0
+    },
+    {
+      "test": "DC continuity",
+      "node": "ot_4",
+      "expected_ohm": 0.7071067811865475,
+      "measured_ohm": 0.7071067811865475,
+      "relative_error": 0.0
+    }
+  ],
+  "factory_hashes": {
+    "check_loaded_winding.py": "f7c80c30082818191611a9dc008418e3aa9d7de2ae7c404aced800c147ae58c0",
+    "loaded_feedback_model.py": "3843010b9ff006893137760cdddfaac02402c8671a5068ff9b4c15b7e995e736"
+  },
+  "passed": true
+}

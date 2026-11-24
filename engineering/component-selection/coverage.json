@@ -687,11 +687,13 @@
       "C12"
     ],
     "value": "50u",
-    "requirement": "50uF 600VDC film; official RDL0000C251 dimensional table; 57 x 25 x 40mm",
-    "status": "candidate identified; qualification incomplete",
+    "requirement": "50uF film, 600VDC baseline minimum; actual voltage/ripple/thermal qualification pending. CRC FC6136 candidate is 900VDC, nominal 57.5W x 35T x 50H mm (+/-1), four leads on 52.5 x 20.3mm grid; not interchangeable with native Panasonic EZPV60506MTC footprint.",
+    "status": "candidate identified; native footprint and placement incompatible; qualification incomplete",
     "candidate_mpns": [
       "FC6136"
-    ]
+    ],
+    "fit_contract": "engineering/component-selection/fc6136-fit-contract.json",
+    "fit_evidence": "engineering/whole-amp/pcb-measured-r/review/fc6136-fit-review.md"
   },
   {
     "id": "P058",
