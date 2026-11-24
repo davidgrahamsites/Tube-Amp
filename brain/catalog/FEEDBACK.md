@@ -1,6 +1,6 @@
 # Feedback and decision trail
 
-Generated as of 2026-11-23; source: ../feedback/events.json. Backfilled original timestamps may be unknown. Incorporated means recorded, not build-complete.
+Generated as of 2026-11-24; source: ../feedback/events.json. Backfilled original timestamps may be unknown. Incorporated means recorded, not build-complete.
 
 ## FB-001 — requirement
 Authority: user. Disposition: incorporated. Recorded: 2026-11-20. Original date: unknown.
@@ -978,4 +978,29 @@ Source: Current build conversation
 - [brain/records/DEC-014-effects-loop-optical-review.md](<../../brain/records/DEC-014-effects-loop-optical-review.md>)
 - [engineering/whole-amp/effects-loop/solver-review.md](<../../engineering/whole-amp/effects-loop/solver-review.md>)
 - [engineering/whole-amp/pcb-measured-r/review/local-loop-review.md](<../../engineering/whole-amp/pcb-measured-r/review/local-loop-review.md>)
+
+## FB-103 — ordered-remaining-work
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> Please break everything that's left into a series of tasks, and go after them one by one: please give me any decisions that need to be made
+
+Maintain one dependency-ordered remaining-work queue, execute one active task at a time, and distinguish owner choices from engineering work and missing measurements. Existing build constraints and authorization to push reviewed work remain.
+
+Source: Current build conversation
+
+- [plans/renegade-working-prototype/plan.md](<../../plans/renegade-working-prototype/plan.md>)
+- [plans/renegade-working-prototype/tasks.md](<../../plans/renegade-working-prototype/tasks.md>)
+
+## FB-104 — economical-quality-build
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> we should try to keep the budget fairly low - don't sacrifice quality but don't go for hifi parts either
+
+Prefer economical, reliable components suitable for a guitar amplifier; avoid boutique/hi-fi premiums. No numeric spending ceiling or purchase approval supplied. Compare material cost/performance tradeoffs before adopting expensive options.
+
+Source: Current build conversation; reply to remaining-budget question
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [plans/renegade-working-prototype/tasks.md](<../../plans/renegade-working-prototype/tasks.md>)
+- [engineering/component-selection/evidence/prototype-cost-allowance-2026-11-24.md](<../../engineering/component-selection/evidence/prototype-cost-allowance-2026-11-24.md>)
 

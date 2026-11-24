@@ -2,9 +2,11 @@
 
 # One working Renegade prototype
 
-Updated November 21, 2026. This is the active first-stage plan following the user's scope correction.
+Updated November 24, 2026. This is the active first-stage plan following the user's scope correction.
 
 Audit checkpoint: all four boards remain on fabrication hold. Close exact-part/assembly envelopes, local bypass and relay suppression placement, wire-terminal courtyards, current/insulation rules and incomplete routing before P04/P05 release. Rear-cover independence, full drill access and extraction remain unverified. See [VAL-018](../../brain/records/VAL-018-all-board-requirements-audit.md).
+
+Current execution: [ordered tasks, pass criteria and owner decisions](tasks.md). Use that queue for present status; the P01–P08 stages below remain the overall lifecycle. Local bypass/relay repairs and the original two simulation timeout fixes are complete; RETURN qualification, native identity/bonding, connectors, routing and populated fit remain open.
 
 ## Goal and completion
 Build **one functioning 220 V / 50 Hz combo that fits the chosen box**, with its speaker, original channel functions, added solid-state-driven real spring reverb and debounced channel/reverb pedal. The yellow-tweed Mable5E3 cabinet is delivered and fixed. Select parts and redesign internal mechanical/PCB arrangements to fit the actual cabinet. The original amplifier is the electrical starting point; a 5E3-looking cabinet does not select a 5E3 circuit.
@@ -57,4 +59,4 @@ For final in-box acceptance, verify all mounting and wiring clearances against t
 ## Budget and next action
 Price this prototype directly at quantity one. The five-unit budget divided by five is not a reliable prototype estimate: sample prices, minimum board quantities, tooling, freight and rework differ. Prepare a costed minimum build plus a correction allowance once source and dimensions establish the required parts. Existing sourcing leads are leads to recheck, not purchase approvals.
 
-Continue P01 and P02 together. The original source is available; next produce the reconciled circuit brief and actual box dimension sheet, then a reviewed fit layout. Procurement and supplier messages require the owner's authorization; this planning correction does not place orders.
+Follow [tasks.md](tasks.md) one active task at a time. The baseline and native PCB/schematic identity repair are complete; next reconcile the earth/return contract, then qualify the effects-loop envelope. Procurement and supplier messages require the owner's authorization; this planning correction does not place orders.
