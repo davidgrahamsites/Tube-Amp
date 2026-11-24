@@ -1111,3 +1111,28 @@ Source: Current build conversation
 - [engineering/whole-amp/effects-loop/protection-review.md](<../../engineering/whole-amp/effects-loop/protection-review.md>)
 - [plans/renegade-working-prototype/tasks.md](<../../plans/renegade-working-prototype/tasks.md>)
 
+## FB-112 — transformer-feedback-and-fit-continuation
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> Keep going with the transformer and feedback issues, then the PCB and chassis fit. Leave the drill clearance pending until tomorrow. Keep the blocks intact, log everything in ICM and push to GitHub.
+
+Authorize transformer/feedback diagnosis, PCB and chassis engineering and verified GitHub checkpoint. Actual tool dimensions deferred to November 25; no inferred drill access approval or change to functional blocks.
+
+Source: Current build conversation
+
+- [engineering/whole-amp/effects-loop/feedback-review.md](<../../engineering/whole-amp/effects-loop/feedback-review.md>)
+- [plans/renegade-working-prototype/tasks.md](<../../plans/renegade-working-prototype/tasks.md>)
+
+## FB-113 — treble-retention-acoustic-use
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> treble is also important to me, beacuse although it's intended for electric guitar, it's likely i'll play the acoustic guitar through it
+
+Treble retention is an explicit requirement of the active electric build for occasional acoustic-guitar use. Compare stability changes against existing treble/Presence response and carry priority into speaker selection. No new numeric bandwidth limit, flat hi-fi target, pickup model or dedicated acoustic-branch redesign is inferred.
+
+Source: Current build conversation during feedback diagnosis
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [engineering/whole-amp/effects-loop/feedback-review.md](<../../engineering/whole-amp/effects-loop/feedback-review.md>)
+- [plans/renegade-working-prototype/tasks.md](<../../plans/renegade-working-prototype/tasks.md>)
+

@@ -1,0 +1,505 @@
+stderr Warning: can't find the initialization file spinit.
+stdout ******
+stdout ** ngspice-45.2 shared library
+stdout ******
+stdout ******
+stdout ** ngspice-45.2 : Circuit level simulation program
+stdout ** Compiled with KLU Direct Linear Solver
+stdout ** The U. C. Berkeley CAD Group
+stdout ** Copyright 1985-1994, Regents of the University of California.
+stdout ** Copyright 2001-2025, The ngspice team.
+stdout ** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html
+stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+stdout ******
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: renegade coupled-winding sensitivity experiment; not selected magnetics
+stdout Option cshunt: 96 capacitors added with 1e-14 F each
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stderr Note: Starting dynamic gmin stepping
+stderr Note: Dynamic gmin stepping completed
+stdout No. of Data Rows : 1
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stderr Note: Starting dynamic gmin stepping
+stderr Note: Dynamic gmin stepping completed
+stdout Initial Transient Solution
+stdout --------------------------
+stdout Node                                   Voltage
+stdout ----                                   -------
+stdout b_early                                    278
+stdout b_pre                                      313
+stdout b_main                                     400
+stdout b_screen                                   380
+stdout bias_out                                   -40
+stdout pickup                                       0
+stdout input                                        0
+stdout out_buf                                      0
+stdout ret_drive                                    0
+stdout xv1_1.ca                               88.6768
+stdout cl_p1                                  182.219
+stdout cl_k1                                  1.43671
+stdout cl_in                                        0
+stdout xv1_1.re                                     1
+stdout cl_tone                                182.219
+stdout cl_treble_top                                0
+stdout cl_bass_top                                  0
+stdout cl_bass_bottom                               0
+stdout cl_treble_w                                  0
+stdout cl_g2                                        0
+stdout xv1_6.ca                               88.6769
+stdout cl_p2                                  182.219
+stdout cl_k2                                  1.43671
+stdout xv1_6.re                                     1
+stdout clean_out                                    0
+stdout xv2_1.ca                               71.7567
+stdout dr_p1                                   208.28
+stdout dr_k1                                  1.88244
+stdout dr_in                                        0
+stdout xv2_1.re                                     1
+stdout dr_gain_top                                  0
+stdout dr_gain_w                                    0
+stdout dr_g2                                        0
+stdout xv2_6.ca                               83.5143
+stdout dr_p2                                   190.46
+stdout dr_k2                                  1.57571
+stdout xv2_6.re                                     1
+stdout dr_c3                                        0
+stdout dr_g3                                        0
+stdout xv3_1.ca                               112.597
+stdout dr_p3                                  175.959
+stdout dr_k3                                  1.12374
+stdout xv3_1.re                                     1
+stdout xv3_6.ca                               133.269
+stdout dr_cf                                  176.464
+stdout xv3_6.re                                     1
+stdout dr_tone                                176.464
+stdout dr_treble_top                                0
+stdout dr_bass_top                                  0
+stdout dr_bass_bottom                               0
+stdout dr_treble_w                                  0
+stdout dirty_out                                    0
+stdout input_stop                                   0
+stdout mix_out                                      0
+stdout pi_g1                                  84.3859
+stdout pi_tail_top                             84.386
+stdout xv4_1.ca                               95.1673
+stdout pi_p1                                  225.681
+stdout pi_k                                   85.3309
+stdout xv4_1.re                                     1
+stdout xv4_6.ca                               87.9235
+stdout pi_p2                                  218.437
+stdout pi_g2                                  84.3859
+stdout xv4_6.re                                     1
+stdout nfb_node                                64.281
+stdout ot_4                                         0
+stdout pres_top                                     0
+stdout grid_a_feed                                -40
+stdout grid_b_feed                                -40
+stdout el34_ga                                    -40
+stdout el34_gb                                    -40
+stdout el34_sa                                376.241
+stdout el34_sb                                376.241
+stdout xv5_3.at                              0.962433
+stdout ot_pa                                  399.314
+stdout k_a                                 0.00765599
+stdout xv5_3.gs                               2.44793
+stdout xv5_3.gs2                                 3.83
+stdout xv5_3.cc                               3.68612
+stdout xv5_3.sc                              0.526881
+stdout xv6_3.at                              0.962433
+stdout ot_pb                                  399.314
+stdout k_b                                 0.00765599
+stdout xv6_3.gs                               2.44793
+stdout xv6_3.gs2                                 3.83
+stdout xv6_3.cc                               3.68612
+stdout xv6_3.sc                              0.526881
+stdout fx_return                                    0
+stdout in_ac                                        0
+stdout send_in                                      0
+stdout out_ac                                       0
+stdout wet_ac                                       0
+stdout fx_send                                      0
+stdout pa_w                                       400
+stdout pb_w                                       400
+stdout speaker                                      0
+stdout b.xv6_3.bscrn#branch              -5.26881e-13
+stdout b.xv6_3.bcath#branch              -3.68612e-12
+stdout b.xv6_3.bgs2#branch                  -3.83e-12
+stdout b.xv6_3.bgs#branch                -2.44793e-12
+stdout b.xv6_3.bat#branch                -9.62433e-13
+stdout b.xv5_3.bscrn#branch              -5.26881e-13
+stdout b.xv5_3.bcath#branch              -3.68612e-12
+stdout b.xv5_3.bgs2#branch                  -3.83e-12
+stdout b.xv5_3.bgs#branch                -2.44793e-12
+stdout b.xv5_3.bat#branch                -9.62433e-13
+stdout b.xv4_6.bre#branch                      -1e-12
+stdout b.xv4_6.bca#branch                -8.79235e-11
+stdout b.xv4_1.bre#branch                      -1e-12
+stdout b.xv4_1.bca#branch                -9.51673e-11
+stdout b.xv3_6.bre#branch                      -1e-12
+stdout b.xv3_6.bca#branch                -1.33269e-10
+stdout b.xv3_1.bre#branch                      -1e-12
+stdout b.xv3_1.bca#branch                -1.12597e-10
+stdout b.xv2_6.bre#branch                      -1e-12
+stdout b.xv2_6.bca#branch                -8.35143e-11
+stdout b.xv2_1.bre#branch                      -1e-12
+stdout b.xv2_1.bca#branch                -7.17567e-11
+stdout b.xv1_6.bre#branch                      -1e-12
+stdout b.xv1_6.bca#branch                -8.86769e-11
+stdout b.xv1_1.bre#branch                      -1e-12
+stdout b.xv1_1.bca#branch                -8.86768e-11
+stdout ls#branch                                    0
+stdout lpb#branch                          0.00685619
+stdout lpa#branch                         -0.00685619
+stdout enfb#branch                         0.00064281
+stdout vtest#branch                                 0
+stdout vwet#branch                                  0
+stdout vsource#branch                               0
+stdout vbias#branch                             2e-10
+stdout vscreen#branch                     -0.00159961
+stdout vmain#branch                        -0.0137124
+stdout vpre#branch                        -0.00514555
+stdout vearly#branch                      -0.00348821
+ Reference value :  0.00000e+00
+ Reference value :  1.47495e-03
+ Reference value :  2.94474e-03
+ Reference value :  4.41661e-03
+ Reference value :  5.89578e-03
+ Reference value :  7.37755e-03
+ Reference value :  8.86036e-03
+ Reference value :  1.03244e-02
+ Reference value :  1.17989e-02
+ Reference value :  1.32755e-02
+ Reference value :  1.47541e-02
+ Reference value :  1.62369e-02
+ Reference value :  1.77161e-02
+ Reference value :  1.91963e-02
+ Reference value :  2.06765e-02
+ Reference value :  2.21541e-02
+ Reference value :  2.36369e-02
+ Reference value :  2.51197e-02
+ Reference value :  2.66083e-02
+ Reference value :  2.80880e-02
+ Reference value :  2.95677e-02
+ Reference value :  3.10479e-02
+ Reference value :  3.25338e-02
+ Reference value :  3.40177e-02
+ Reference value :  3.54937e-02
+ Reference value :  3.69749e-02
+ Reference value :  3.84588e-02
+ Reference value :  3.99442e-02
+ Reference value :  4.14255e-02
+ Reference value :  4.29109e-02
+ Reference value :  4.43885e-02
+ Reference value :  4.58411e-02
+ Reference value :  4.73182e-02
+ Reference value :  4.87906e-02
+ Reference value :  5.02432e-02
+ Reference value :  5.17161e-02
+ Reference value :  5.31859e-02
+ Reference value :  5.46484e-02
+ Reference value :  5.61119e-02
+ Reference value :  5.75734e-02
+ Reference value :  5.90598e-02
+ Reference value :  6.05442e-02
+ Reference value :  6.20114e-02
+ Reference value :  6.34838e-02
+ Reference value :  6.49541e-02
+ Reference value :  6.64364e-02
+ Reference value :  6.79052e-02
+ Reference value :  6.93760e-02
+ Reference value :  7.08505e-02
+ Reference value :  7.23369e-02
+ Reference value :  7.38156e-02
+ Reference value :  7.52947e-02
+ Reference value :  7.67666e-02
+ Reference value :  7.82479e-02
+ Reference value :  7.97244e-02
+ Reference value :  8.11999e-02
+ Reference value :  8.26718e-02
+ Reference value :  8.41390e-02
+ Reference value :  8.55958e-02
+ Reference value :  8.70661e-02
+ Reference value :  8.85328e-02
+ Reference value :  9.00093e-02
+ Reference value :  9.14885e-02
+ Reference value :  9.29713e-02
+ Reference value :  9.44484e-02
+ Reference value :  9.59348e-02
+ Reference value :  9.74119e-02
+ Reference value :  9.88880e-02
+ Reference value :  1.00363e-01
+ Reference value :  1.01843e-01
+ Reference value :  1.03332e-01
+ Reference value :  1.04817e-01
+ Reference value :  1.06297e-01
+ Reference value :  1.07781e-01
+ Reference value :  1.09263e-01
+ Reference value :  1.10740e-01
+ Reference value :  1.12219e-01
+ Reference value :  1.13697e-01
+ Reference value :  1.15177e-01
+ Reference value :  1.16661e-01
+ Reference value :  1.18142e-01
+ Reference value :  1.19617e-01
+ Reference value :  1.21096e-01
+ Reference value :  1.22577e-01
+ Reference value :  1.24058e-01
+ Reference value :  1.25544e-01
+ Reference value :  1.27023e-01
+ Reference value :  1.28508e-01
+ Reference value :  1.29983e-01
+ Reference value :  1.31460e-01
+ Reference value :  1.32940e-01
+ Reference value :  1.34360e-01
+ Reference value :  1.35833e-01
+ Reference value :  1.37316e-01
+ Reference value :  1.38797e-01
+ Reference value :  1.40280e-01
+ Reference value :  1.41748e-01
+ Reference value :  1.43072e-01
+ Reference value :  1.44553e-01
+ Reference value :  1.46031e-01
+ Reference value :  1.47510e-01
+ Reference value :  1.48986e-01
+ Reference value :  1.50463e-01
+ Reference value :  1.51941e-01
+ Reference value :  1.53423e-01
+ Reference value :  1.54913e-01
+ Reference value :  1.56397e-01
+ Reference value :  1.57871e-01
+ Reference value :  1.59344e-01
+ Reference value :  1.60822e-01
+ Reference value :  1.62298e-01
+ Reference value :  1.63780e-01
+ Reference value :  1.65257e-01
+ Reference value :  1.66742e-01
+ Reference value :  1.68224e-01
+ Reference value :  1.69700e-01
+ Reference value :  1.71178e-01
+ Reference value :  1.72655e-01
+ Reference value :  1.74131e-01
+ Reference value :  1.75608e-01
+ Reference value :  1.77084e-01
+ Reference value :  1.78559e-01
+ Reference value :  1.80045e-01
+ Reference value :  1.81528e-01
+ Reference value :  1.83008e-01
+ Reference value :  1.84489e-01
+ Reference value :  1.85974e-01
+ Reference value :  1.87459e-01
+ Reference value :  1.88942e-01
+ Reference value :  1.90425e-01
+ Reference value :  1.91906e-01
+ Reference value :  1.93386e-01
+ Reference value :  1.94864e-01
+ Reference value :  1.96342e-01
+ Reference value :  1.97816e-01
+ Reference value :  1.99294e-01
+ Reference value :  2.00777e-01
+ Reference value :  2.02259e-01
+ Reference value :  2.03735e-01
+ Reference value :  2.05217e-01
+ Reference value :  2.06693e-01
+ Reference value :  2.08170e-01
+ Reference value :  2.09643e-01
+ Reference value :  2.11127e-01
+ Reference value :  2.12615e-01
+ Reference value :  2.14098e-01
+ Reference value :  2.15572e-01
+ Reference value :  2.17050e-01
+ Reference value :  2.18538e-01
+ Reference value :  2.20021e-01
+ Reference value :  2.21508e-01
+ Reference value :  2.22996e-01
+ Reference value :  2.24482e-01
+ Reference value :  2.25957e-01
+ Reference value :  2.27430e-01
+ Reference value :  2.28902e-01
+ Reference value :  2.30375e-01
+ Reference value :  2.31860e-01
+ Reference value :  2.33334e-01
+ Reference value :  2.34816e-01
+ Reference value :  2.36289e-01
+ Reference value :  2.37766e-01
+ Reference value :  2.39246e-01
+ Reference value :  2.40733e-01
+ Reference value :  2.42218e-01
+ Reference value :  2.43699e-01
+ Reference value :  2.45171e-01
+ Reference value :  2.46648e-01
+ Reference value :  2.48129e-01
+ Reference value :  2.49604e-01
+ Reference value :  2.51030e-01
+ Reference value :  2.52505e-01
+ Reference value :  2.53991e-01
+ Reference value :  2.55469e-01
+ Reference value :  2.56941e-01
+ Reference value :  2.58412e-01
+ Reference value :  2.59885e-01
+ Reference value :  2.61370e-01
+ Reference value :  2.62848e-01
+ Reference value :  2.64317e-01
+ Reference value :  2.65788e-01
+ Reference value :  2.67257e-01
+ Reference value :  2.68726e-01
+ Reference value :  2.70196e-01
+ Reference value :  2.71668e-01
+ Reference value :  2.73145e-01
+ Reference value :  2.74606e-01
+ Reference value :  2.76068e-01
+ Reference value :  2.77511e-01
+ Reference value :  2.78852e-01
+ Reference value :  2.80239e-01
+ Reference value :  2.81670e-01
+ Reference value :  2.83106e-01
+ Reference value :  2.84488e-01
+ Reference value :  2.85815e-01
+ Reference value :  2.87245e-01
+ Reference value :  2.88672e-01
+ Reference value :  2.90118e-01
+ Reference value :  2.91592e-01
+ Reference value :  2.93066e-01
+ Reference value :  2.94541e-01
+ Reference value :  2.96012e-01
+ Reference value :  2.97453e-01
+ Reference value :  2.98922e-01
+ Reference value :  3.00367e-01
+ Reference value :  3.01844e-01
+ Reference value :  3.03319e-01
+ Reference value :  3.04784e-01
+ Reference value :  3.06219e-01
+ Reference value :  3.07624e-01
+ Reference value :  3.09043e-01
+ Reference value :  3.10482e-01
+ Reference value :  3.11952e-01
+ Reference value :  3.13419e-01
+ Reference value :  3.14869e-01
+ Reference value :  3.16309e-01
+ Reference value :  3.17772e-01
+ Reference value :  3.19232e-01
+ Reference value :  3.20709e-01
+ Reference value :  3.22186e-01
+ Reference value :  3.23663e-01
+ Reference value :  3.25141e-01
+ Reference value :  3.26617e-01
+ Reference value :  3.28090e-01
+ Reference value :  3.29557e-01
+ Reference value :  3.31026e-01
+ Reference value :  3.32468e-01
+ Reference value :  3.33928e-01
+ Reference value :  3.35404e-01
+ Reference value :  3.36878e-01
+ Reference value :  3.38352e-01
+ Reference value :  3.39828e-01
+ Reference value :  3.41304e-01
+ Reference value :  3.42768e-01
+ Reference value :  3.44228e-01
+ Reference value :  3.45693e-01
+ Reference value :  3.47153e-01
+ Reference value :  3.48613e-01
+ Reference value :  3.50065e-01
+ Reference value :  3.51529e-01
+ Reference value :  3.52945e-01
+ Reference value :  3.54230e-01
+ Reference value :  3.55709e-01
+ Reference value :  3.57185e-01
+ Reference value :  3.58616e-01
+ Reference value :  3.60075e-01
+ Reference value :  3.61538e-01
+ Reference value :  3.63010e-01
+ Reference value :  3.64475e-01
+ Reference value :  3.65904e-01
+ Reference value :  3.67371e-01
+ Reference value :  3.68827e-01
+ Reference value :  3.70294e-01
+ Reference value :  3.71753e-01
+ Reference value :  3.73212e-01
+ Reference value :  3.74671e-01
+ Reference value :  3.76140e-01
+ Reference value :  3.77612e-01
+ Reference value :  3.79089e-01
+ Reference value :  3.80550e-01
+ Reference value :  3.82003e-01
+ Reference value :  3.83463e-01
+ Reference value :  3.84927e-01
+ Reference value :  3.86384e-01
+ Reference value :  3.87842e-01
+ Reference value :  3.89307e-01
+ Reference value :  3.90772e-01
+ Reference value :  3.92234e-01
+ Reference value :  3.93703e-01
+ Reference value :  3.95145e-01
+ Reference value :  3.96590e-01
+ Reference value :  3.98054e-01
+ Reference value :  3.99521e-01
+ Reference value :  4.00985e-01
+ Reference value :  4.02450e-01
+ Reference value :  4.03902e-01
+ Reference value :  4.05370e-01
+ Reference value :  4.06828e-01
+ Reference value :  4.08300e-01
+ Reference value :  4.09770e-01
+ Reference value :  4.11230e-01
+ Reference value :  4.12695e-01
+ Reference value :  4.14166e-01
+ Reference value :  4.15634e-01
+ Reference value :  4.17103e-01
+ Reference value :  4.18570e-01
+ Reference value :  4.20043e-01
+ Reference value :  4.21515e-01
+ Reference value :  4.22976e-01
+ Reference value :  4.24430e-01
+ Reference value :  4.25883e-01
+ Reference value :  4.27340e-01
+ Reference value :  4.28791e-01
+ Reference value :  4.30244e-01
+ Reference value :  4.31716e-01
+ Reference value :  4.33181e-01
+ Reference value :  4.34646e-01
+ Reference value :  4.36112e-01
+ Reference value :  4.37585e-01
+ Reference value :  4.39046e-01
+ Reference value :  4.40518e-01
+ Reference value :  4.41988e-01
+ Reference value :  4.43448e-01
+ Reference value :  4.44916e-01
+ Reference value :  4.46367e-01
+ Reference value :  4.47832e-01
+ Reference value :  4.49309e-01
+ Reference value :  4.50773e-01
+ Reference value :  4.52246e-01
+ Reference value :  4.53651e-01
+ Reference value :  4.55128e-01
+ Reference value :  4.56603e-01
+ Reference value :  4.58077e-01
+ Reference value :  4.59552e-01
+ Reference value :  4.61024e-01
+ Reference value :  4.62500e-01
+ Reference value :  4.63977e-01
+ Reference value :  4.65441e-01
+ Reference value :  4.66904e-01
+ Reference value :  4.68374e-01
+ Reference value :  4.69836e-01
+ Reference value :  4.71297e-01
+ Reference value :  4.72764e-01
+ Reference value :  4.74238e-01
+ Reference value :  4.75715e-01
+ Reference value :  4.77189e-01
+ Reference value :  4.78658e-01
+ Reference value :  4.80129e-01
+ Reference value :  4.81594e-01
+ Reference value :  4.83059e-01
+ Reference value :  4.84517e-01
+ Reference value :  4.85986e-01
+ Reference value :  4.87268e-01
+ Reference value :  4.88712e-01
+ Reference value :  4.90162e-01
+ Reference value :  4.91611e-01
+ Reference value :  4.93071e-01
+ Reference value :  4.94548e-01
+ Reference value :  4.96018e-01
+ Reference value :  4.97486e-01
+ Reference value :  4.98948e-01
+stdout No. of Data Rows : 960009

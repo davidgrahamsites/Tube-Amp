@@ -80,7 +80,7 @@
         "reported_on": "2026-11-21",
         "diameter_mm": 270,
         "approximate": true,
-        "source": "User confirmed: Yes — 27 cm (270 mm)",
+        "source": "User confirmed: Yes \u2014 27 cm (270 mm)",
         "datum": "Inside edge to opposite inside edge of large round speaker opening, per S1 instructions",
         "horizontal_and_vertical_separately_reported": false,
         "reported_uncertainty_mm": null,
@@ -258,7 +258,7 @@
       "setup": "Per instructed isolated-tank procedure; operator reports readings, setup not independently inspected",
       "interpretation": "Finite winding-path DC resistance at both sockets; does not exclude shorted turns or establish acoustic performance, AC impedance, grounding or allowable drive current."
     },
-    "note": "Label photograph-confirmed. User-reported coil DC readings76ohm IN/235ohm OUT and outer envelope149.5×60×36.5mm now recorded in electrical_measurements/mechanical_measurements. AC test conditions, safe drive current, mounting-hole pattern and installed cable envelope remain unresolved.",
+    "note": "Label photograph-confirmed. User-reported coil DC readings76ohm IN/235ohm OUT and outer envelope149.5\u00d760\u00d736.5mm now recorded in electrical_measurements/mechanical_measurements. AC test conditions, safe drive current, mounting-hole pattern and installed cable envelope remain unresolved.",
     "supplier_statement_date": "2026-11-19",
     "supplier_statement_source": "User relayed seller reply in chat",
     "supplier_statement": "3 spring, input IMP 600ohm, Output IMP 2250ohm, MEDIUM DECAY, input insulated Output grounded, no lock, Mount horizontal Open side Down",
@@ -305,7 +305,7 @@
     "status": "PROPOSAL / paper-fit study only; no drilling or fabrication release",
     "source": "engineering/component-selection/evidence/control-panel-parts-2026-11-21.md",
     "panel_attachment": "Metal panel/chassis carries pot torque; wired solder lugs. Attachment holes and finished perimeter unresolved.",
-    "opening_basis": "FB-073 user measured307–308mm straight narrow width and approximately53mm clear depth, upper rear cover ON. Use307mm width for provisional rectangular screen; actual corner shape, uncertainty and elevation unresolved.",
+    "opening_basis": "FB-073 user measured307\u2013308mm straight narrow width and approximately53mm clear depth, upper rear cover ON. Use307mm width for provisional rectangular screen; actual corner shape, uncertainty and elevation unresolved.",
     "screen_frame_mm": [
       307,
       53
@@ -658,5 +658,41 @@
     "photo_observation": "Aperture offset toward viewer right in rear view; qualitatively consistent with offset drawing.",
     "physical_center_position": "not measured",
     "assembly_requirement": "Reserve speaker basket/magnet volume around actual aperture axis; drawing front view and cabinet rear view are mirrored."
+  },
+  "pcb_envelope_study": {
+    "status": "Board-only diagnostic of existing drafts, not a chosen chassis or three-board redesign",
+    "frame": "Right handed: origin assumed front-left inside floor; X right, Y rear, Z up. Measurement frame registration remains unverified.",
+    "construction_edge_allowance_mm": 10,
+    "side_flange_budget_mm": 15,
+    "board_gap_mm": 8,
+    "upper_plane_below_top_mm": 70,
+    "plane_spacing_mm": 60,
+    "planes": [
+      [
+        "Main",
+        "Reverb"
+      ],
+      [
+        "Power",
+        "Control"
+      ]
+    ],
+    "rotate_90": [
+      "Power"
+    ],
+    "allowance_basis": "Explicit packaging trial values, not electrical clearance, thermal spacing, actual drill clearance or fabrication dimensions.",
+    "drill_tool_envelope": null,
+    "drill_check_status": "Deferred by user until 2026-11-25; no access pass",
+    "mounting_rule": "Any eventual carrier attaches to fixed cabinet supports only; removable wooden rear cover carries no electronics.",
+    "exclusions": [
+      "component heights",
+      "speaker basket and magnet",
+      "tubes and sockets",
+      "transformers",
+      "harnesses and plugs",
+      "cover and chassis withdrawal sweeps",
+      "thermal envelopes",
+      "fixed-support positions"
+    ]
   }
 }

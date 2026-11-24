@@ -1,0 +1,139 @@
+{
+  "scope": "Existing four-board diagnostic; NOT a populated assembly or manufactured chassis",
+  "version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "source_hashes": {
+    "fit-register-used-fields": "93bb698c1afee45c95ae22c420896cf1d5e34cf42ef260c52d4a8a014c3ba39f",
+    "mechanical-inventory.json": "416d4200e997c46c457dc921b067654b46dc22d0daa3d793a5578f9b4c745ff0",
+    "factory": "122535f158158eb03c01d867dd2545cac0fe1af6cb90dd83e9d647bf8890e86e"
+  },
+  "assumed_datum_mm": [
+    467,
+    160,
+    383
+  ],
+  "poses": {
+    "Main": {
+      "bbox_min_mm": [
+        25,
+        10,
+        313
+      ],
+      "bbox_size_mm": [
+        290.0,
+        140.0,
+        1.6
+      ],
+      "rotation_z_deg": 0,
+      "within_assumed_datum_box": true
+    },
+    "Reverb": {
+      "bbox_min_mm": [
+        323.0,
+        10,
+        313
+      ],
+      "bbox_size_mm": [
+        160.0,
+        100.0,
+        1.6
+      ],
+      "rotation_z_deg": 0,
+      "within_assumed_datum_box": false
+    },
+    "Power": {
+      "bbox_min_mm": [
+        25,
+        10,
+        253
+      ],
+      "bbox_size_mm": [
+        175.0,
+        160.0,
+        1.6
+      ],
+      "rotation_z_deg": 90,
+      "within_assumed_datum_box": false
+    },
+    "Control": {
+      "bbox_min_mm": [
+        208.0,
+        10,
+        253
+      ],
+      "bbox_size_mm": [
+        230.0,
+        110.0,
+        1.6
+      ],
+      "rotation_z_deg": 0,
+      "within_assumed_datum_box": true
+    }
+  },
+  "planes": [
+    {
+      "boards": [
+        "Main",
+        "Reverb"
+      ],
+      "required_support_budget_mm": [
+        508.0,
+        160.0
+      ],
+      "width_excess_mm": 41.0,
+      "depth_excess_mm": 0
+    },
+    {
+      "boards": [
+        "Power",
+        "Control"
+      ],
+      "required_support_budget_mm": [
+        463.0,
+        180.0
+      ],
+      "width_excess_mm": 0,
+      "depth_excess_mm": 20.0
+    }
+  ],
+  "solid_checks": {
+    "Main": {
+      "valid_solid": true,
+      "volume_matches_drilled_outline": true
+    },
+    "Reverb": {
+      "valid_solid": true,
+      "volume_matches_drilled_outline": true
+    },
+    "Power": {
+      "valid_solid": true,
+      "volume_matches_drilled_outline": true
+    },
+    "Control": {
+      "valid_solid": true,
+      "volume_matches_drilled_outline": true
+    }
+  },
+  "native_reopen_checks": {
+    "Main": true,
+    "Reverb": true,
+    "Power": true,
+    "Control": true
+  },
+  "step_round_trip": true,
+  "step_positions_match": true,
+  "geometry_checks_passed": true,
+  "missing_component_models": 196,
+  "drill_clearance": "PENDING until tool dimensions supplied",
+  "rear_cover_removal": "Not geometrically qualified; fixed-support constraint retained",
+  "assembly_fit_cleared": false,
+  "fabrication_ready": false
+}
