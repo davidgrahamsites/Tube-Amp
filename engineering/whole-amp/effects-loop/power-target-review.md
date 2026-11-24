@@ -40,3 +40,5 @@ The original [Hammond 1650F](https://www.hammfg.com/part/1650F) is rated 25 W, 7
 ## Human check
 
 Before declaring output power, measure the actual amplifier into a known load at stated frequency, supply and distortion, and record tube/screen/transformer stress. Continue all existing cabinet, independent-back-removal, drill-access, grounding and fabrication gates.
+
+November24 follow-up: [coupled magnetics and adopted screen protection](protection-review.md) supersedes this ideal-transformer output reference for the current resistor revision. The 25 W /1.77% figure above is historical; revised modeled near-target output is24.536W near5% THD.

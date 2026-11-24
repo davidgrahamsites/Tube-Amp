@@ -1,0 +1,97 @@
+{
+  "scope": "Two screen resistor values and engineering fields only; pins, wires and boards preserved",
+  "baseline_commit": "fea220801c9c5204e2b5ff21307464ff6c3eb09c",
+  "before_hashes": {
+    "engineering/whole-amp/reverb-600/circuit.json": "52b79a98994940d483516966a57f03cab7bf8332a7a879015afd53e47128ae56",
+    "engineering/whole-amp/reverb-600/cad/04_output.kicad_sch": "2cc9b87e3b274e3947f0579754a4077cf1ecfb68e8a5962120f0cb4718d6e191"
+  },
+  "after_hashes": {
+    "engineering/whole-amp/reverb-600/circuit.json": "5a4e36ba512a3566326d50b18e674cc3060b26695f19b6dac7cba9ce5f36087f",
+    "engineering/whole-amp/reverb-600/cad/04_output.kicad_sch": "3fec27dc2d082dbdd12fbfbff195a3adcee6880485edec06adb807e0ecaee944"
+  },
+  "changes": [
+    {
+      "reference": "R41",
+      "before": {
+        "Value": "1k",
+        "Rating": "5 W; screen current stress pending",
+        "Design_status": "source value retained"
+      },
+      "after": {
+        "Value": "4.7k",
+        "Rating": "10 W minimum; exact part, derating, pulse and thermal qualification pending",
+        "Design_status": "Output protection engineering revision 2026-11-24; finite stress matrix only"
+      }
+    },
+    {
+      "reference": "R42",
+      "before": {
+        "Value": "1k",
+        "Rating": "5 W; screen current stress pending",
+        "Design_status": "source value retained"
+      },
+      "after": {
+        "Value": "4.7k",
+        "Rating": "10 W minimum; exact part, derating, pulse and thermal qualification pending",
+        "Design_status": "Output protection engineering revision 2026-11-24; finite stress matrix only"
+      }
+    }
+  ],
+  "native_reverse_delta_exact": true,
+  "native_connectivity_comparison": "PASS",
+  "fabrication_ready": false,
+  "native_checks": {
+    "exact_named_net_and_endpoint_preservation": true,
+    "only_authorized_component_fields_changed": true,
+    "only_authorized_contract_fields_changed": true,
+    "stress_matrix_uses_exact_prechange_circuit": true,
+    "protected_boards_unchanged": true,
+    "other_native_sheets_unchanged": true,
+    "no_new_ERC": true
+  },
+  "before_xml_sha256": "243785144c5ac2ae4a21c3a1c4eba03c318f5156c9fcfa1f18af50f50f71d86b",
+  "after_xml_sha256": "6443b72d9682e53bd58c56aa9a776976d608771711eea3a0194010308465996b",
+  "components": 231,
+  "named_nets": 144,
+  "erc_before": 13,
+  "erc_after": 1,
+  "remaining_erc": [
+    {
+      "sheet": "/06_heaters/",
+      "violation": {
+        "description": "Both GND and PE are attached to the same items; GND will be used in the netlist",
+        "items": [
+          {
+            "description": "Global Label 'GND'",
+            "pos": {
+              "x": 0.9017,
+              "y": 2.0955
+            },
+            "uuid": "9878993a-1a59-5584-8342-fc91302529d9"
+          },
+          {
+            "description": "Global Label 'PE'",
+            "pos": {
+              "x": 0.3937,
+              "y": 2.0955
+            },
+            "uuid": "e5fac41f-9753-503f-a3e4-f4aea01f439c"
+          }
+        ],
+        "severity": "warning",
+        "type": "multiple_net_names"
+      }
+    }
+  ],
+  "library_repair": "Added existing Renegade_Selected library and made library paths project-relative; no check suppression",
+  "visual_review": {
+    "scope": "Changed output sheet only; no all-project readability certification",
+    "full_page": "engineering/whole-amp/reverb-600/review/protection-output.pdf",
+    "inspected": [
+      "Full output sheet",
+      "Enlarged V5/R41 and V6/R42 branches"
+    ],
+    "changed_values_readable": true,
+    "changed_text_overlap": false
+  }
+}

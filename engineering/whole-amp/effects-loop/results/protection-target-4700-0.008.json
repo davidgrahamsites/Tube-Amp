@@ -1,0 +1,150 @@
+{
+  "status": "completed",
+  "config": {
+    "channel": "clean",
+    "mode": "native",
+    "freq": 1000,
+    "amp": 0.008,
+    "supply": 278,
+    "volume": 1,
+    "tone": 0.5,
+    "gain": 0.5,
+    "guard_pentode_power": true
+  },
+  "transformer": {},
+  "steps_per_cycle": 96,
+  "end_s": 0.5,
+  "max_step_s": 1.0416666666666666e-05,
+  "op_speaker_DC_V": 0.0,
+  "signals": {
+    "FX_SEND": {
+      "min_V": -3.647560076432749,
+      "max_V": 3.654370520648186,
+      "mean_V": 0.007238302546839326,
+      "fundamental_Vpk": 3.6507844560056992,
+      "THD_2_to_10_percent": 0.10823081646998396
+    },
+    "FX_RETURN": {
+      "min_V": -3.6475596921454265,
+      "max_V": 3.65437013912647,
+      "mean_V": 0.0072383025744195304,
+      "fundamental_Vpk": 3.650784074039241,
+      "THD_2_to_10_percent": 0.10823079897830587
+    },
+    "MIX_OUT": {
+      "min_V": -3.2112577148978536,
+      "max_V": 3.2228723992886543,
+      "mean_V": 0.0072784172992393596,
+      "fundamental_Vpk": 3.2189751464682486,
+      "THD_2_to_10_percent": 0.1121847993980267
+    },
+    "SEND_IN": {
+      "min_V": -0.3322715559369326,
+      "max_V": 0.33154457194567966,
+      "mean_V": -1.5046449352988656e-05,
+      "fundamental_Vpk": 0.33188897788929705,
+      "THD_2_to_10_percent": 0.10823627514044369
+    },
+    "PI_G1": {
+      "min_V": 81.40622284728906,
+      "max_V": 87.83634821058001,
+      "mean_V": 84.62275774911879,
+      "fundamental_Vpk": 3.2157207475417966,
+      "THD_2_to_10_percent": 0.11277988150547662
+    },
+    "PI_TAIL_TOP": {
+      "min_V": 82.23151916891207,
+      "max_V": 87.06612345411286,
+      "mean_V": 84.62885692621686,
+      "fundamental_Vpk": 2.4357000988990465,
+      "THD_2_to_10_percent": 1.0979045586301766
+    },
+    "PI_P1": {
+      "min_V": 190.49764649663632,
+      "max_V": 260.5248802625239,
+      "mean_V": 225.35718372670425,
+      "fundamental_Vpk": 34.3196786119749,
+      "THD_2_to_10_percent": 1.8766375707138758
+    },
+    "PI_P2": {
+      "min_V": 182.24916185957218,
+      "max_V": 253.7353950241114,
+      "mean_V": 218.25247272413725,
+      "fundamental_Vpk": 35.051508072080416,
+      "THD_2_to_10_percent": 1.9194023663364146
+    },
+    "EL34_GA": {
+      "min_V": -74.7890180744369,
+      "max_V": -4.9046817796756175,
+      "mean_V": -40.00099869302819,
+      "fundamental_Vpk": 34.26086828534238,
+      "THD_2_to_10_percent": 1.8796201573604727
+    },
+    "EL34_GB": {
+      "min_V": -75.9357170445361,
+      "max_V": -4.587904817426068,
+      "mean_V": -40.00175539907756,
+      "fundamental_Vpk": 34.99159439316818,
+      "THD_2_to_10_percent": 1.9226124821117434
+    },
+    "SPEAKER": {
+      "min_V": -17.930265526891567,
+      "max_V": 17.868758240432932,
+      "mean_V": 5.118261800340917e-06,
+      "fundamental_Vpk": 18.680540627047154,
+      "THD_2_to_10_percent": 3.8228370522001285
+    }
+  },
+  "fundamental_load_W": 21.810162382422455,
+  "total_load_W": 21.858268517976658,
+  "stress": {
+    "A": {
+      "screen_resistor_ohm": 4700.0,
+      "screen_resistor_W": 0.9739889770921826,
+      "screen_W": 2.3709570949889125,
+      "plate_W": 7.987845901169386
+    },
+    "B": {
+      "screen_resistor_ohm": 4700.0,
+      "screen_resistor_W": 1.004425930447417,
+      "screen_W": 2.4103696409071973,
+      "plate_W": 8.240792241416763
+    }
+  },
+  "main_supply_mean_A": 0.098131592693791,
+  "screen_supply_mean_A": 0.017795639311053844,
+  "settling_relative_fundamental": {
+    "FX_SEND": 5.7945607563779104e-06,
+    "FX_RETURN": 5.794560696161549e-06,
+    "MIX_OUT": 5.658440757287382e-06,
+    "SEND_IN": 5.824767551316899e-06,
+    "PI_G1": 5.285855167305678e-06,
+    "PI_TAIL_TOP": 4.884668401343139e-06,
+    "PI_P1": 1.9978841828749566e-06,
+    "PI_P2": 1.2443528840951102e-06,
+    "EL34_GA": 2.3249518183158676e-06,
+    "EL34_GB": 1.4936956540318795e-06,
+    "SPEAKER": 3.4312232951195254e-06
+  },
+  "simulator_version_log": [
+    "stderr Warning: can't find the initialization file spinit.",
+    "stdout ******",
+    "stdout ** ngspice-45.2 shared library",
+    "stdout ******",
+    "stdout ******",
+    "stdout ** ngspice-45.2 : Circuit level simulation program",
+    "stdout ** Compiled with KLU Direct Linear Solver",
+    "stdout ** The U. C. Berkeley CAD Group",
+    "stdout ** Copyright 1985-1994, Regents of the University of California.",
+    "stdout ** Copyright 2001-2025, The ngspice team.",
+    "stdout ** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html",
+    "stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html",
+    "stdout ******"
+  ],
+  "experiment": {
+    "screen_ohm": 4700
+  },
+  "physical_qualified": false,
+  "elapsed_s": 6.0082952499979,
+  "wall_time_limit_s": 120
+}

@@ -1548,6 +1548,39 @@
       ],
       "supersedes": [],
       "next_action": "T04: evaluate the approximately 25 W target with a physically credible output-stage/load model and report 1% and 5% THD points plus clipping; then select suitable China-source transformer and speaker."
+    },
+    {
+      "id": "FB-110",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "cad-toolchain-capability-question",
+      "quote": "what is the 3d cad program all this will be rendered in / production files for the chassis, etc? does KiCAD have everything? do we have freecad already, and can you control it / produce the files for it?",
+      "source": "Current build conversation",
+      "interpretation": "Explain electrical versus mechanical CAD ownership and verify installed FreeCAD automation. This question does not establish completed chassis geometry, sheet-metal drawings or fabrication approval.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/cad-toolchain.md"
+      ],
+      "supersedes": [],
+      "next_action": "Use the verified native/STEP route for populated assembly; separately prove sheet-metal unfolding/drawing/render exports before release."
+    },
+    {
+      "id": "FB-111",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "output-protection-execution",
+      "quote": "Fix the output-stage protection issues and finish the stress simulations, then continue the PCB and chassis fit checks. Keep the blocks intact, log everything in ICM and push to GitHub.",
+      "source": "Current build conversation",
+      "interpretation": "Authorize bounded output-protection engineering, stress diagnosis, PCB and fit checks, records and GitHub checkpoint. No feature deletion, purchases or fabrication release.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/protection-review.md",
+        "plans/renegade-working-prototype/tasks.md"
+      ],
+      "supersedes": [],
+      "next_action": "Qualify protection changes before native adoption; retain numerical and physical limits."
     }
   ]
 }

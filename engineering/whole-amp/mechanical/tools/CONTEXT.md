@@ -8,3 +8,5 @@ Owner: integration. One job: generate dimensional screens and printable studies 
 Generated JSON, CSV, SVG and PDF under `../review/`. Only the register is the dimensional edit surface.
 ## Human check
 Check the 100 mm print bar with a ruler, place the paper against the actual opening and compare real knob/pot hardware before machining.
+
+freecad_probe.py tests the installed FreeCAD Python/native/STEP route using a synthetic coupon in temporary storage. It owns no amplifier dimensions. Retain only its receipt in review/freecad-automation-check.json; read review/cad-toolchain.md for tested versus pending formats.

@@ -12,3 +12,5 @@ Confirm actual cabinet/tank identity and measure installed chassis, speaker, tub
 Current user measuring instructions: [illustrated start/end guide](review/measurement-guide-2026-11-21.md). This generated picture is guidance, not dimensional evidence. Preserve the user-reported A/B/C readings until new measurements arrive.
 
 Current received opening/height are recorded under cabinet.user_measurements (FB-073/074). Service constraints live under chassis_service_study; illustration and area checks are not dimensioned CAD or fit approval. No repeat measurement request is active.
+
+Output-protection package and service constraints: [socket-side resistor handoff](review/output-protection-fit.md). No populated chassis/tool clearance is inferred from candidate body dimensions.

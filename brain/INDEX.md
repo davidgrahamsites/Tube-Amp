@@ -49,3 +49,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-018 | validation | cross-domain | documented | 2026-11-21 | [All-board requirements audit](records/VAL-018-all-board-requirements-audit.md) |
 | VAL-019 | validation | cross-domain | documented | 2026-11-21 | [Researched layout comparison and bounded repairs](records/VAL-019-layout-reference-and-bounded-repairs.md) |
 | VAL-020 | validation | cross-domain | documented | 2026-11-24 | [Logical grounding proof and approximately 25 W reference](records/VAL-020-grounding-and-power-target.md) |
+| VAL-021 | validation | cross-domain | documented | 2026-11-24 | [Screen protection revision, stress matrix and CAD route](records/VAL-021-output-protection-and-cad-route.md) |

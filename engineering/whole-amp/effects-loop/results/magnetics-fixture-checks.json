@@ -1,0 +1,149 @@
+{
+  "source_hashes": {
+    "engineering/whole-amp/reverb-600/circuit.json": "52b79a98994940d483516966a57f03cab7bf8332a7a879015afd53e47128ae56",
+    "engineering/whole-amp/simulation/models/dm12ax7s.inc": "ffa293249bd62b4d1d0b710b4bd42177221325d9533ddad8f0fa88dcecb0e7f6",
+    "engineering/whole-amp/simulation/models/6ca7s.inc": "02768bad91f6497d718e33c09493b8d471c6c3aafee92fb226b5c3376c068b01"
+  },
+  "simulator_version_log": [
+    "stderr Warning: can't find the initialization file spinit.",
+    "stdout ******",
+    "stdout ** ngspice-45.2 shared library",
+    "stdout ******",
+    "stdout ******",
+    "stdout ** ngspice-45.2 : Circuit level simulation program",
+    "stdout ** Compiled with KLU Direct Linear Solver",
+    "stdout ** The U. C. Berkeley CAD Group",
+    "stdout ** Copyright 1985-1994, Regents of the University of California.",
+    "stdout ** Copyright 2001-2025, The ngspice team.",
+    "stdout ** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html",
+    "stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html",
+    "stdout ******"
+  ],
+  "rows": [
+    {
+      "frequency_Hz": 50,
+      "polarity": 1,
+      "secondary_DC_V": 0.0,
+      "secondary_AC": [
+        0.9741247172357597,
+        0.015106146229667938
+      ],
+      "primary_admittance": [
+        0.00012937641382120316,
+        -7.553073114833982e-05
+      ],
+      "checks": {
+        "dc_secondary_zero": true,
+        "signed_loaded_turns_ratio": true,
+        "primary_admittance": true,
+        "real_power_balance": true
+      }
+    },
+    {
+      "frequency_Hz": 50,
+      "polarity": -1,
+      "secondary_DC_V": 0.0,
+      "secondary_AC": [
+        -0.9741247172357597,
+        -0.015106146229667938
+      ],
+      "primary_admittance": [
+        0.00012937641382120316,
+        -7.553073114833982e-05
+      ],
+      "checks": {
+        "dc_secondary_zero": true,
+        "signed_loaded_turns_ratio": true,
+        "primary_admittance": true,
+        "real_power_balance": true
+      }
+    },
+    {
+      "frequency_Hz": 1000,
+      "polarity": 1,
+      "secondary_DC_V": 0.0,
+      "secondary_AC": [
+        0.9743583885756835,
+        0.0007554884932870799
+      ],
+      "primary_admittance": [
+        0.00012820805712158314,
+        -3.7774424664261754e-06
+      ],
+      "checks": {
+        "dc_secondary_zero": true,
+        "signed_loaded_turns_ratio": true,
+        "primary_admittance": true,
+        "real_power_balance": true
+      }
+    },
+    {
+      "frequency_Hz": 1000,
+      "polarity": -1,
+      "secondary_DC_V": 0.0,
+      "secondary_AC": [
+        -0.9743583885756835,
+        -0.0007554884932870799
+      ],
+      "primary_admittance": [
+        0.00012820805712158314,
+        -3.7774424664261754e-06
+      ],
+      "checks": {
+        "dc_secondary_zero": true,
+        "signed_loaded_turns_ratio": true,
+        "primary_admittance": true,
+        "real_power_balance": true
+      }
+    },
+    {
+      "frequency_Hz": 20000,
+      "polarity": 1,
+      "secondary_DC_V": 0.0,
+      "secondary_AC": [
+        0.9743589728945152,
+        3.777444720262039e-05
+      ],
+      "primary_admittance": [
+        0.0001282051355274246,
+        -1.8887223660228546e-07
+      ],
+      "checks": {
+        "dc_secondary_zero": true,
+        "signed_loaded_turns_ratio": true,
+        "primary_admittance": true,
+        "real_power_balance": true
+      }
+    },
+    {
+      "frequency_Hz": 20000,
+      "polarity": -1,
+      "secondary_DC_V": 0.0,
+      "secondary_AC": [
+        -0.9743589728945152,
+        -3.777444720262039e-05
+      ],
+      "primary_admittance": [
+        0.0001282051355274246,
+        -1.8887223660228546e-07
+      ],
+      "checks": {
+        "dc_secondary_zero": true,
+        "signed_loaded_turns_ratio": true,
+        "primary_admittance": true,
+        "real_power_balance": true
+      }
+    }
+  ],
+  "feedback_gain": {
+    "0": 14.59187347301933,
+    "1": 7.186580384225444,
+    "-1": 259.5403981468892
+  },
+  "checks": {
+    "all_analytical_checks": true,
+    "intended_feedback_reduces_gain": true
+  },
+  "passed": true,
+  "physical_qualified": false
+}

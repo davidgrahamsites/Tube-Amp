@@ -1,0 +1,19 @@
+{
+  "status": "failed",
+  "error": "Traceback (most recent call last):\n  File \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/effects-loop/tools/transformer_run.py\", line 108, in <module>\n    if '--worker' in sys.argv:worker(name,json.loads(sys.argv[3]),json.loads(sys.argv[4]),int(sys.argv[5]))\n                              ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/effects-loop/tools/transformer_run.py\", line 31, in worker\n    if len(t) == 0 or t[-1] < end*(1-1e-8):raise RuntimeError('Transient stopped early')\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Transient stopped early\n",
+  "config": {
+    "channel": "dirty",
+    "mode": "native",
+    "freq": 1000,
+    "amp": 1,
+    "supply": 278,
+    "volume": 1,
+    "tone": 0.5,
+    "gain": 0.5,
+    "guard_pentode_power": true
+  },
+  "transformer": {},
+  "steps_per_cycle": 96,
+  "elapsed_s": 33.46618258300077,
+  "wall_time_limit_s": 60
+}

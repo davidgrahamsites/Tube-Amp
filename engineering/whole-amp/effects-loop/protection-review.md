@@ -1,0 +1,44 @@
+# Output protection and coupled-transformer qualification
+
+Owner: electric integration. Authority: FB-111. Date: 2026-11-24. **Engineering revision adopted; fabrication remains held.**
+
+## Task card and decision
+Inputs: circuit at `fea220801c9c5204e2b5ff21307464ff6c3eb09c`, retained generic tube models, linear magnetics and native boards. Outputs: reproducible experiments, finite stress matrix, scoped native change, PCB/mechanical checks. Owner: integration. Dependencies: real magnetics, selected resistor/tube ratings, supply corners and thermal/access evidence. Done for this checkpoint: complete the bounded matrix and adopt the justified resistor-value change without changing block interfaces. Full output-stage/fault/stability qualification remains T04/T06. Effort: one engineering pass.
+
+R41/R42 are now **4.7 kΩ, minimum 10 W**, replacing 1 kΩ / 5 W. They remain socket-local screen resistors. No new tube, signal path, functional block or PCB geometry was introduced. Exact MPN selection is still open; 10 W is a minimum nominal requirement subject to actual derating, voltage, pulse and mounting qualification. `tools/adopt_protection.py` refuses to overwrite an already-adopted revision.
+
+## Model correction and comparisons
+The former ideal transformer passed a nonphysical speaker DC component. The coupled-winding fixture blocks it and passes independent signed ratio, primary admittance, real-power balance and feedback-polarity checks. The 10 H half-primary, coupling and winding resistance are assumptions, not a purchased transformer model. No core saturation, measured leakage/capacitance, complete power supply or acoustic tank model is claimed.
+
+The unchanged 1 kΩ baseline reached approximately 14.40 W in one modeled screen and 9.62 W in its 5 W resistor during heavy clean-channel drive. Increasing only the wattage would not protect the screen. Compared 2.2, 3.3 and 4.7 kΩ: the larger resistance gives more screen protection but changes gain/compression. At the same original input, 4.7 kΩ reduces output to 16.5 W; increasing drive recovers the target range. This is an intentional electrical tradeoff, not a claim of identical sound.
+
+The 3.3 kΩ alternative reaches 25.00 W at about 4.1% modeled distortion, but one nominal overload resistor already exceeds 5 W and screen stress is higher. The 4.7 kΩ revision is preferred for protection margin: refined target **24.536 W fundamental, approximately 5% harmonic distortion (harmonics 2–10)**, 1 kHz / 8 Ω / stiff 400 V main and 380 V screen rails. Refining the timestep changes power by 0.043%. This is about 25 W near 5% distortion, not 25 W at 1% distortion or a bench rating.
+
+## Completed finite stress matrix
+`results/protection-acceptance-summary.json` contains ten completed full 0.5 s transients: target and refinement; clean overload; dirty overload at 1/5 kHz; bass overload at 82.4 Hz; pessimistic linear-transformer 20 kHz case; and three high-rail/weak-bias/low-resistance cases. Each worker pins source, factory and emitted deck hashes. `tools/audit_protection.py` passes **104 checks** of the finite matrix, settling, source products, reference limits and target refinement.
+
+The corner is an explicit sensitivity experiment: main 440 V, screen 418 V, early 306 V, preamp 344 V, bias −36 V and screen resistors 4465 Ω (−5%). It is not a derived worst case for either mains setting. Maximum checked average screen power is **5.232 W**, resistor power **5.512 W**. JJ's EL34 reference limits are 8 W screen and 25 W plate; the finally selected tube still requires its own data. The conditional RESI 10 W candidate allowance at assumed 125°C ambient is 7.315 W; actual ambient and cooling are not established.
+
+Dirty 1 kHz completes with the resistor change where the old circuit's coupled-model case failed. Dirty 5 kHz needs about 165 s in the exploratory run: its old 60 s wall-time limit was insufficient. The pessimistic 20 kHz case needs about 312 s in the exploratory retry; only the wall limit was increased, with the same 0.5 s electrical interval, timestep and solver settings. Failed and timed-out exploratory products remain explicit. Do not describe a different circuit completing as proof that the baseline convergence problem was merely solved by a setting.
+
+**Completion is not stability acceptance:** the pessimistic 40 H half-primary / k=0.995 case has about 41% modeled distortion and only 0.237 W fundamental at 20 kHz. Small-signal HF peaking and strong large-signal degradation keep transformer/feedback qualification open. No invented snubber or arbitrary damping was added to hide this behavior. Heavy clipping can exceed the nominal 25 W target, so transformer and speaker selection must cover the actual clipping envelope.
+
+## Native and PCB verification
+Only R41/R42 Value, Rating and Design_status fields changed on the native output sheet; reverse-delta comparison is byte-exact. All named net/endpoint memberships and all other native component fields match before/after; 231 components / 599 connected pins remain mapped. The explicit GND/PE cut-wire proof still passes. The changed sheet and both enlarged resistor branches were rendered and inspected; ratings and qualification limits also live here and in native engineering fields. This is not a new all-sheet readability certification.
+
+Fixed a separate missing `Renegade_Selected` footprint-library entry and changed local library paths to project-relative paths. Native ERC drops from 13 to **one unchanged GND/PE alias warning**, supported by the explicit bond proof. No check was suppressed. All four PCB hashes are unchanged. Fresh KiCad 10.0.6 strict DRC: Main105, Power39, Control90, Reverb0 unconnected items; 68 provisional wire-port courtyards; no other native DRC categories. Pad-net inventory passes. Existing sources still need exact connectors and routing; DRC is not current capacity or insulation qualification.
+
+A broader value comparison also found a pre-existing contract discrepancy: D3–D6 are `1N4007` in circuit.json and `STTH112` in native CAD. This was not introduced by the protection change. T06 must reconcile intended diode selection/model/BOM; full all-component value parity is not claimed by the existing connected-pin checker.
+
+## Parts, fit and remaining gates
+[Mechanical handoff](../mechanical/review/output-protection-fit.md) records candidate bodies, lead diameters, independent rear-cover support and tool access. The four unchanged boards cannot fit on one provisional 467×160 mm plane. The reference 283 mm speaker cutout fails the received approximately 270 mm aperture. Actual drill dimensions, populated chassis, socket/retainer/magnetics, heat exclusion and withdrawal sweeps remain unresolved. No chassis drawing or panel is released.
+
+Next: characterize the real transformer and feedback response; derive both mains/supply corners and bias/fault cases (including load loss/short, startup/shutdown and bias loss); reconcile D3–D6; finalize exact protected parts and loop headroom; then consolidate/route boards and populate the FreeCAD assembly. Maintain PCB-side connectors, insulated harnesses and the current block interfaces.
+
+## Sources and reproducibility
+- [JJ EL34 manufacturer data](https://www.jj-electronic.com/images/stories/product/power_tubes/pdf/el34_e34l.pdf), checked 2026-11-24; reference limits, not selected Chinese-tube proof.
+- [ngspice manual](https://ngspice.sourceforge.io/docs/ngspice-manual.pdf), coupled inductors; tested runtime is ngspice45.2, not the newer manual's version47+.
+- [RESI EWWR manufacturer data served by distributor](https://atta.szlcsc.com/upload/public/pdf/source/20230201/1B3D2D7E42CE9D2055BF95E570A62506.pdf) and [dated research](../../component-selection/evidence/screen-resistor-research-2026-11-12.md). [China catalogue](https://item.szlcsc.com/325584.html) rechecked November24: part identity/package confirmed; live stock/price not returned. November12 price/stock remains dated evidence.
+- [Yageo SQP/NSP manufacturer data, April10 2026 V5](https://yageogroup.com/content/datasheet/asset/file/yageo-sqp_nsp_datasheet) and [China distributor listing](https://www.lcsc.com/product-detail/through-hole-resistors_yageo-sqp10ajb-4k7_C1403087.html). SQP10A body48±1.5×9.5±1×9±1mm, lead0.8±0.05mm,10W at40°C,500V maximum working voltage; actual allowable voltage is also power/resistance limited. Not selected.
+
+Run `python3 tools/protection_run.py acceptance` from this module, then `python3 tools/audit_protection.py`. The original matrix used the pre-change circuit with explicit resistor overrides; the adopted native value matches those overrides. Earlier reference results retain their own source hashes and are historical after this change. Use the final acceptance matrix for this revision's finite protection evidence. Re-run source-derived simulations after any further electrical change.

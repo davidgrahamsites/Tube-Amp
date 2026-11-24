@@ -1088,3 +1088,26 @@ Source: Current build conversation; reply to output-power target question
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 - [plans/renegade-working-prototype/tasks.md](<../../plans/renegade-working-prototype/tasks.md>)
 
+## FB-110 — cad-toolchain-capability-question
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> what is the 3d cad program all this will be rendered in / production files for the chassis, etc? does KiCAD have everything? do we have freecad already, and can you control it / produce the files for it?
+
+Explain electrical versus mechanical CAD ownership and verify installed FreeCAD automation. This question does not establish completed chassis geometry, sheet-metal drawings or fabrication approval.
+
+Source: Current build conversation
+
+- [engineering/whole-amp/mechanical/review/cad-toolchain.md](<../../engineering/whole-amp/mechanical/review/cad-toolchain.md>)
+
+## FB-111 — output-protection-execution
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> Fix the output-stage protection issues and finish the stress simulations, then continue the PCB and chassis fit checks. Keep the blocks intact, log everything in ICM and push to GitHub.
+
+Authorize bounded output-protection engineering, stress diagnosis, PCB and fit checks, records and GitHub checkpoint. No feature deletion, purchases or fabrication release.
+
+Source: Current build conversation
+
+- [engineering/whole-amp/effects-loop/protection-review.md](<../../engineering/whole-amp/effects-loop/protection-review.md>)
+- [plans/renegade-working-prototype/tasks.md](<../../plans/renegade-working-prototype/tasks.md>)
+

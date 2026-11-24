@@ -1,0 +1,221 @@
+{
+  "scope": "Coupled linear magnetics overload and peaking diagnostics; assumed parameters, no core saturation",
+  "source_hashes": {
+    "engineering/whole-amp/reverb-600/circuit.json": "52b79a98994940d483516966a57f03cab7bf8332a7a879015afd53e47128ae56",
+    "engineering/whole-amp/simulation/models/dm12ax7s.inc": "ffa293249bd62b4d1d0b710b4bd42177221325d9533ddad8f0fa88dcecb0e7f6",
+    "engineering/whole-amp/simulation/models/6ca7s.inc": "02768bad91f6497d718e33c09493b8d471c6c3aafee92fb226b5c3376c068b01"
+  },
+  "cases": [
+    {
+      "name": "magnetics-clean-overload-1k",
+      "status": "completed",
+      "config": {
+        "channel": "clean",
+        "mode": "native",
+        "freq": 1000,
+        "amp": 0.1,
+        "supply": 278,
+        "volume": 1,
+        "tone": 0.5,
+        "gain": 0.5,
+        "guard_pentode_power": true
+      },
+      "transformer": {},
+      "steps_per_cycle": 96,
+      "end_s": 0.5,
+      "max_step_s": 1.0416666666666666e-05,
+      "op_speaker_DC_V": 0.0,
+      "signals": {
+        "FX_SEND": {
+          "min_V": -44.981400618352815,
+          "max_V": 42.481291799965874,
+          "mean_V": 0.04091279507585881,
+          "fundamental_Vpk": 44.14315627766429,
+          "THD_2_to_10_percent": 2.76510629233297
+        },
+        "FX_RETURN": {
+          "min_V": -44.98139448620187,
+          "max_V": 42.48128473955059,
+          "mean_V": 0.04091279533414553,
+          "fundamental_Vpk": 44.14315004460283,
+          "THD_2_to_10_percent": 2.765107644480518
+        },
+        "MIX_OUT": {
+          "min_V": -36.813913064979424,
+          "max_V": 32.22148594748725,
+          "mean_V": 0.03979305544000624,
+          "fundamental_Vpk": 35.69072973004807,
+          "THD_2_to_10_percent": 6.314674322175011
+        },
+        "SEND_IN": {
+          "min_V": -4.094666603146816,
+          "max_V": 3.856575738552135,
+          "mean_V": -0.001636331061670626,
+          "fundamental_Vpk": 4.013004520386085,
+          "THD_2_to_10_percent": 2.7651398110178285
+        },
+        "PI_G1": {
+          "min_V": 51.05151874517328,
+          "max_V": 120.05463163630175,
+          "mean_V": 87.89706035076543,
+          "fundamental_Vpk": 35.67225906402056,
+          "THD_2_to_10_percent": 6.324058312998563
+        },
+        "PI_TAIL_TOP": {
+          "min_V": 91.67543480464086,
+          "max_V": 113.55644731327531,
+          "mean_V": 99.87466640782179,
+          "fundamental_Vpk": 11.88948965321646,
+          "THD_2_to_10_percent": 43.397445541355474
+        },
+        "PI_P1": {
+          "min_V": 115.92845024199103,
+          "max_V": 283.89386392107184,
+          "mean_V": 213.54549067765524,
+          "fundamental_Vpk": 98.2630872955071,
+          "THD_2_to_10_percent": 41.390808925141286
+        },
+        "PI_P2": {
+          "min_V": 141.13182464122997,
+          "max_V": 268.35830466675907,
+          "mean_V": 196.29530438372154,
+          "fundamental_Vpk": 76.60048872021376,
+          "THD_2_to_10_percent": 41.83360480129534
+        },
+        "EL34_GA": {
+          "min_V": -163.57280998251727,
+          "max_V": 2.357712546202307,
+          "mean_V": -64.03753871683521,
+          "fundamental_Vpk": 97.73657108010406,
+          "THD_2_to_10_percent": 41.55681227732565
+        },
+        "EL34_GB": {
+          "min_V": -120.958937985748,
+          "max_V": 2.632307572732719,
+          "mean_V": -65.20544766947937,
+          "fundamental_Vpk": 76.14315160287069,
+          "THD_2_to_10_percent": 41.884473125461305
+        },
+        "SPEAKER": {
+          "min_V": -20.275880227177986,
+          "max_V": 24.542420432268337,
+          "mean_V": -0.0031059882661473638,
+          "fundamental_Vpk": 27.874510759737536,
+          "THD_2_to_10_percent": 43.850247496074246
+        }
+      },
+      "fundamental_load_W": 48.561771880920226,
+      "total_load_W": 58.53618246138406,
+      "stress": {
+        "A": {
+          "screen_resistor_W": 4.276230478421783,
+          "screen_W": 13.924364993702708,
+          "plate_W": 10.334365165576632
+        },
+        "B": {
+          "screen_resistor_W": 9.615557800339813,
+          "screen_W": 14.399408729123845,
+          "plate_W": 0.5885590286310081
+        }
+      },
+      "main_supply_mean_A": 0.18450342112304216,
+      "screen_supply_mean_A": 0.11117905820383146,
+      "settling_relative_fundamental": {
+        "FX_SEND": 2.2441741919243056e-05,
+        "FX_RETURN": 2.244174587370366e-05,
+        "MIX_OUT": 3.22514363556135e-05,
+        "SEND_IN": 2.241348924959303e-05,
+        "PI_G1": 3.181415844571925e-05,
+        "PI_TAIL_TOP": 0.00013388277722231246,
+        "PI_P1": 3.335783645075681e-05,
+        "PI_P2": 5.2896762748195926e-05,
+        "EL34_GA": 4.09272056386522e-05,
+        "EL34_GB": 5.3398201248888376e-05,
+        "SPEAKER": 1.8345007817813669e-06
+      },
+      "simulator_version_log": [
+        "stderr Warning: can't find the initialization file spinit.",
+        "stdout ******",
+        "stdout ** ngspice-45.2 shared library",
+        "stdout ******",
+        "stdout ******",
+        "stdout ** ngspice-45.2 : Circuit level simulation program",
+        "stdout ** Compiled with KLU Direct Linear Solver",
+        "stdout ** The U. C. Berkeley CAD Group",
+        "stdout ** Copyright 1985-1994, Regents of the University of California.",
+        "stdout ** Copyright 2001-2025, The ngspice team.",
+        "stdout ** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html",
+        "stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html",
+        "stdout ******"
+      ],
+      "physical_qualified": false,
+      "elapsed_s": 11.583114665998437,
+      "wall_time_limit_s": 60
+    },
+    {
+      "name": "magnetics-dirty-overload-1k",
+      "status": "failed",
+      "error": "Traceback (most recent call last):\n  File \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/effects-loop/tools/transformer_run.py\", line 108, in <module>\n    if '--worker' in sys.argv:worker(name,json.loads(sys.argv[3]),json.loads(sys.argv[4]),int(sys.argv[5]))\n                              ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/effects-loop/tools/transformer_run.py\", line 31, in worker\n    if len(t) == 0 or t[-1] < end*(1-1e-8):raise RuntimeError('Transient stopped early')\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Transient stopped early\n",
+      "config": {
+        "channel": "dirty",
+        "mode": "native",
+        "freq": 1000,
+        "amp": 1,
+        "supply": 278,
+        "volume": 1,
+        "tone": 0.5,
+        "gain": 0.5,
+        "guard_pentode_power": true
+      },
+      "transformer": {},
+      "steps_per_cycle": 96,
+      "elapsed_s": 33.46618258300077,
+      "wall_time_limit_s": 60
+    },
+    {
+      "name": "magnetics-dirty-overload-5k",
+      "status": "timeout",
+      "error": "Worker terminated at 60 seconds; no complete result",
+      "config": {
+        "channel": "dirty",
+        "mode": "native",
+        "freq": 5000,
+        "amp": 1,
+        "supply": 278,
+        "volume": 1,
+        "tone": 0.5,
+        "gain": 0.5,
+        "guard_pentode_power": true
+      },
+      "transformer": {},
+      "steps_per_cycle": 96,
+      "elapsed_s": 60.016061124999396,
+      "wall_time_limit_s": 60
+    },
+    {
+      "name": "magnetics-peaking-20k",
+      "status": "timeout",
+      "error": "Worker terminated at 60 seconds; no complete result",
+      "config": {
+        "channel": "clean",
+        "mode": "native",
+        "freq": 20000,
+        "amp": 0.00672,
+        "supply": 278,
+        "volume": 1,
+        "tone": 0.5,
+        "gain": 0.5,
+        "guard_pentode_power": true
+      },
+      "transformer": {
+        "half_primary_H": 40,
+        "coupling": 0.995
+      },
+      "steps_per_cycle": 96,
+      "elapsed_s": 60.012519125000836,
+      "wall_time_limit_s": 60
+    }
+  ],
+  "physical_qualified": false,
+  "fabrication_ready": false
+}
