@@ -1667,6 +1667,25 @@
       ],
       "supersedes": [],
       "next_action": "Inventory every current/proposed IC and tube, select sockets/adapters with current/voltage/thermal/retention evidence, then update PCB/assembly and simulations."
+    },
+    {
+      "id": "FB-117",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "socket-preference-performance-exceptions",
+      "quote": "Does that affect the operation of the board? if so, then it doesn't need it, but I think it makes it better working with sensitive chips",
+      "source": "Current build conversation, after clarification that a socket should be beneath DIP chips",
+      "interpretation": "Keep actual IC sockets as the default for serviceability. Permit a documented component-specific exception where a socket materially degrades electrical, thermal or mechanical operation; do not remove sockets merely for convenience or claim a DIP package alone provides one. Tubes retain proper replaceable sockets. No IC exception adopted by this clarification.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "engineering/component-selection/socketing/policy.md"
+      ],
+      "supersedes": [
+        "FB-116"
+      ],
+      "next_action": "Evaluate installed socket/contact parasitics, bypass loops and retention; retain the default unless evidence justifies an explicit exception."
     }
   ]
 }

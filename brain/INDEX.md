@@ -56,3 +56,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-025 | validation | cross-domain | documented | 2026-11-24 | [Exact low-voltage capacitor packages and drill verification](records/VAL-025-panasonic-package-checkpoint.md) |
 | VAL-026 | validation | cross-domain | documented | 2026-11-24 | [Auxiliary supply, replaceable regulators and thermal constraints](records/VAL-026-auxiliary-supply-envelope.md) |
 | VAL-027 | validation | cross-domain | documented | 2026-11-24 | [5 V minimum-load repair integrated and checked](records/VAL-027-preload-native-integration.md) |
+| VAL-028 | validation | cross-domain | documented | 2026-11-24 | [Logic-level relay drivers and local clamps](records/VAL-028-control-driver-reset-checkpoint.md) |

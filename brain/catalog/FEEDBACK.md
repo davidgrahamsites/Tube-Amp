@@ -1172,3 +1172,15 @@ Source: Current build conversation and active goal
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 - [plans/renegade-working-prototype/through-chassis.md](<../../plans/renegade-working-prototype/through-chassis.md>)
 
+## FB-117 — socket-preference-performance-exceptions
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> Does that affect the operation of the board? if so, then it doesn't need it, but I think it makes it better working with sensitive chips
+
+Keep actual IC sockets as the default for serviceability. Permit a documented component-specific exception where a socket materially degrades electrical, thermal or mechanical operation; do not remove sockets merely for convenience or claim a DIP package alone provides one. Tubes retain proper replaceable sockets. No IC exception adopted by this clarification.
+
+Source: Current build conversation, after clarification that a socket should be beneath DIP chips
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [engineering/component-selection/socketing/policy.md](<../../engineering/component-selection/socketing/policy.md>)
+

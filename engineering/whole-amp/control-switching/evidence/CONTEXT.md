@@ -1,0 +1,2 @@
+# Manufacturer evidence
+Owner: Renegade integration. Inputs: exact AOS datasheet/package URLs recorded in manufacturer-documents.json. Process: retain original bytes and source hashes; compare dimensions and pinout with selected native footprint. Outputs: primary source PDFs for the control-switching review. Human check: verify the delivered AOS-marked part and actual assembly against these exact drawings; a listing title alone is insufficient.

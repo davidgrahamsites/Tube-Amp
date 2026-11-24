@@ -846,10 +846,12 @@
     ],
     "value": "TPS3808G50DBVR",
     "requirement": "4.65V sense; CT timing value subject to datasheet tolerance",
-    "status": "candidate identified; qualification incomplete",
+    "status": "native TPS3808G50 unqualified; TPS3890 candidate has model/timing and carrier holds",
     "candidate_mpns": [
-      "TPS3808G50DBVR"
-    ]
+      "TPS3808G50DBVR",
+      "TPS389001DSER"
+    ],
+    "evaluation_evidence": "../whole-amp/control-switching/review.md"
   },
   {
     "id": "P070",
@@ -910,27 +912,33 @@
       "Q1",
       "Q2"
     ],
-    "value": "2N7000",
-    "requirement": "60 V; verify coil drain transient and gate drive",
-    "status": "candidate identified; qualification incomplete",
+    "value": "AO3400A",
+    "requirement": "AOS exact G1/S2/D3; local and remote clamps required; 30V absolute maximum; harness transient qualification pending",
+    "status": "selected and native integrated; bounded surrogate passed with local clamp; assembled qualification pending",
     "candidate_mpns": [
-      "2N7000"
-    ]
+      "AO3400A"
+    ],
+    "selected_mpn": "AO3400A",
+    "selection_evidence": "../whole-amp/control-switching/review.md"
   },
   {
     "id": "P075",
     "refs": [
       "D331",
-      "D341"
+      "D332",
+      "D341",
+      "D333",
+      "D342"
     ],
     "value": "1N4007 flyback",
     "requirement": "",
-    "status": "engineering selected; coil transient and footprint integration pending",
+    "status": "selected and integrated at coils and controller drains; final harness transients and release timing pending",
     "candidate_mpns": [
       "1N4007RLG"
     ],
     "selected_mpn": "1N4007RLG",
-    "selection_evidence": "lv-semiconductor-selection-2026-11-15.md"
+    "selection_evidence": "lv-semiconductor-selection-2026-11-15.md",
+    "local_clamp_evidence": "../whole-amp/control-switching/review.md"
   },
   {
     "id": "P076",

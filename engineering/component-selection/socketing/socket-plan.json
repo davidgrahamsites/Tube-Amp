@@ -284,5 +284,12 @@
       "status": "rejected/unadopted; both 20 kHz cases fail",
       "requirement": "Any adopted replacement must enter this manifest and be socketed or use a qualified removable adapter."
     }
-  ]
+  ],
+  "policy": {
+    "authority": "FB-117",
+    "default": "socket required",
+    "exceptions_allowed": "documented material electrical, thermal or mechanical degradation for an IC",
+    "adopted_exceptions": [],
+    "tube_sockets_required": true
+  }
 }

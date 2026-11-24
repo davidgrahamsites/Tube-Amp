@@ -2422,18 +2422,19 @@
       "sheet": "09b_latches_drivers",
       "reference": "Q1",
       "unit": 1,
-      "value": "2N7000",
-      "symbol": "Transistor_FET_2N7000",
+      "value": "AO3400A",
+      "symbol": "Transistor_FET_AO3400A",
       "pins": {
-        "1": "GND",
-        "2": "CH_GATE",
+        "1": "CH_GATE",
+        "2": "GND",
         "3": "COIL_CH"
       },
-      "source": "",
-      "rating": "60 V; verify coil drain transient and gate drive",
-      "status": "proposed",
-      "datasheet": "https://www.onsemi.com/pdf/datasheet/2n7000-d.pdf",
-      "footprint": ""
+      "source": "VAL-028",
+      "rating": "30V; 48mOhm max at2.5V/25C; local drain clamp",
+      "status": "engineering integrated; actual transient and thermal qualification pending",
+      "datasheet": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf",
+      "footprint": "Renegade_Selected:AOS_SOT23_PO00001N",
+      "selected_mpn": "AO3400A"
     },
     {
       "project": "Renegade_220V_Reverb",
@@ -2492,18 +2493,19 @@
       "sheet": "09b_latches_drivers",
       "reference": "Q2",
       "unit": 1,
-      "value": "2N7000",
-      "symbol": "Transistor_FET_2N7000",
+      "value": "AO3400A",
+      "symbol": "Transistor_FET_AO3400A",
       "pins": {
-        "1": "GND",
-        "2": "REV_GATE",
+        "1": "REV_GATE",
+        "2": "GND",
         "3": "COIL_REV"
       },
-      "source": "",
-      "rating": "60 V; verify coil drain transient and gate drive",
-      "status": "proposed",
-      "datasheet": "https://www.onsemi.com/pdf/datasheet/2n7000-d.pdf",
-      "footprint": ""
+      "source": "VAL-028",
+      "rating": "30V; 48mOhm max at2.5V/25C; local drain clamp",
+      "status": "engineering integrated; actual transient and thermal qualification pending",
+      "datasheet": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf",
+      "footprint": "Renegade_Selected:AOS_SOT23_PO00001N",
+      "selected_mpn": "AO3400A"
     },
     {
       "project": "Renegade_220V_Reverb",
@@ -4645,6 +4647,42 @@
       "datasheet": "https://www.uni-royal.cn/images/upload/UniroyalCatalog2024.06.07.pdf",
       "footprint": "Renegade_Selected:UNI_ROYAL_MF0W4_P12.70mm",
       "selected_mpn": "MFR0W4F8200A50"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "D333",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "+12V",
+        "2": "COIL_CH"
+      },
+      "source": "VAL-028",
+      "rating": "Controller local drain clamp; retain remote coil diode",
+      "status": "engineering integrated; assembled forward-recovery/transient qualification pending",
+      "datasheet": "https://www.onsemi.com/pdf/datasheet/1n4001-d.pdf",
+      "footprint": "Renegade_Selected:Onsemi_1N4007RLG_P10.16",
+      "selected_mpn": "1N4007RLG"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09b_latches_drivers",
+      "reference": "D342",
+      "unit": 1,
+      "value": "1N4007",
+      "symbol": "Device_D",
+      "pins": {
+        "1": "+12V",
+        "2": "COIL_REV"
+      },
+      "source": "VAL-028",
+      "rating": "Controller local drain clamp; retain remote coil diode",
+      "status": "engineering integrated; assembled forward-recovery/transient qualification pending",
+      "datasheet": "https://www.onsemi.com/pdf/datasheet/1n4001-d.pdf",
+      "footprint": "Renegade_Selected:Onsemi_1N4007RLG_P10.16",
+      "selected_mpn": "1N4007RLG"
     }
   ],
   "layout": {

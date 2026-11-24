@@ -206,3 +206,7 @@ FB-115 requires exact available parts to drive the schematic and PCB. Select/eva
 ## November 24 socket and regulator-bypass checkpoint
 
 All current IC/tube references now have explicit socket qualification gates in `engineering/component-selection/socketing/socket-plan.json`. C212 is corrected to47µF/50V aluminium per ST L79 local input guidance, with P127 selecting EEUFR1H470. Native connectivity/geometry are preserved; the provisional3.5mm footprint must still be replaced for the2.5mm part. See `engineering/whole-amp/aux-supply/review.md`. Supplier stock observations are dated evidence, not purchase or Shanghai delivered-price confirmation. No native socket implementation, complete supply simulation, populated fit or fabrication readiness is claimed.
+
+## Socket clarification — November 24 (FB-117)
+
+Actual sockets under DIP ICs remain the default for serviceability. The user permits a component-specific exception if socketing materially harms operation. Document the affected device, electrical/thermal/mechanical evidence and mounting choice; no silent blanket exemption or convenience-only removal. All tubes retain proper replaceable sockets. No exception has yet been adopted. This qualifies the earlier unconditional IC requirement in FB-116. See [socket policy](engineering/component-selection/socketing/policy.md).

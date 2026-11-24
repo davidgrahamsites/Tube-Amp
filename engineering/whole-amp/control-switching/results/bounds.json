@@ -1,0 +1,55 @@
+{
+  "contract_sha256": "67b5316dc035eee7354e7febcabff62919fd0fdf29d50e16972db30cd381eea8",
+  "fresh_thresholds": {
+    "falling_min_V": 4.544438858113233,
+    "rising_max_V": 4.7074985303639245,
+    "falling_margin_above_4p5V": 0.04443885811323334,
+    "rising_margin_below_supply_min_V": 0.042501469636075484,
+    "dc_window_pass": true,
+    "corners": 16
+  },
+  "endurance_sensitivity": {
+    "falling_min_V": 4.510511030319846,
+    "rising_max_V": 4.743074972798768,
+    "falling_margin_above_4p5V": 0.010511030319846348,
+    "rising_margin_below_supply_min_V": 0.006925027201232226,
+    "dc_window_pass": true,
+    "corners": 16
+  },
+  "timing": {
+    "nominal_equation_s": 0.23542500000000002,
+    "initial_fast_s": 0.1811333333333333,
+    "initial_slow_s": 0.33110000000000006,
+    "slow_with_provisional_leakage_s": 0.3505764705882354
+  },
+  "reset_edge_screen": [
+    {
+      "capacitance_F": 2e-11,
+      "rise_10_90_s": 4.3944491546724387e-07,
+      "under_500ns": true
+    },
+    {
+      "capacitance_F": 5e-11,
+      "rise_10_90_s": 1.0986122886681098e-06,
+      "under_500ns": false
+    },
+    {
+      "capacitance_F": 1e-10,
+      "rise_10_90_s": 2.1972245773362196e-06,
+      "under_500ns": false
+    }
+  ],
+  "reset_edge_qualification_complete": false,
+  "driver": {
+    "gate_min_V": 3.801119898010199,
+    "gate_margin_over_2p5V_V": 1.301119898010199,
+    "cold_coil_resistance_ohm": 701.01504,
+    "two_coil_max_current_A": 0.03594787352921843,
+    "hot_surrogate_power_W": 0.00018608394402326638
+  },
+  "negative_controls_rejected": [
+    "32k_top_resistor_exceeds_release_window",
+    "original_2N7000_not_guaranteed_at_available_gate_voltage"
+  ],
+  "fabrication_ready": false
+}

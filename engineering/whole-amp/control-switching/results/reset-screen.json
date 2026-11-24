@@ -1,0 +1,269 @@
+{
+  "model_sha256": "0d2f974f84e65ffdad0f69f1381d6a0bd4a3767f96137cab6875ecdc45e2a18e",
+  "contract_sha256": "67b5316dc035eee7354e7febcabff62919fd0fdf29d50e16972db30cd381eea8",
+  "cases": [
+    {
+      "id": "start-4.75-0.0001",
+      "step_s": 2e-05,
+      "completed_time_s": 0.65,
+      "transitions": [
+        {
+          "time_s": 0.3030730539477961,
+          "state": "released",
+          "rail_V": 4.75
+        }
+      ],
+      "flags": [],
+      "final_reset_V": 4.702970297029703,
+      "maximum_ct_V": 1.282415484926486,
+      "samples": 32748,
+      "deck_sha256": "c90aa865d1092ec0a2b68fdc134db75cc7f55970248665aeae57082c1c367a13"
+    },
+    {
+      "id": "start-4.75-0.1",
+      "step_s": 2e-05,
+      "completed_time_s": 0.65,
+      "transitions": [
+        {
+          "time_s": 0.40064525016632907,
+          "state": "released",
+          "rail_V": 4.75
+        }
+      ],
+      "flags": [],
+      "final_reset_V": 4.702970297029703,
+      "maximum_ct_V": 1.2824154849267912,
+      "samples": 32671,
+      "deck_sha256": "3b00bf3c24e8a7131feef99a04a8025636aa66eae856a9484d72eecf674d014b"
+    },
+    {
+      "id": "start-5.25-0.0001",
+      "step_s": 2e-05,
+      "completed_time_s": 0.65,
+      "transitions": [
+        {
+          "time_s": 0.30306696223336116,
+          "state": "released",
+          "rail_V": 5.25
+        }
+      ],
+      "flags": [],
+      "final_reset_V": 5.198019801980198,
+      "maximum_ct_V": 1.2824154849266731,
+      "samples": 32714,
+      "deck_sha256": "4595d4ba3e35c29b38093d70b189883d5ee2a845d10a563433ad2f8458c6859b"
+    },
+    {
+      "id": "start-5.25-0.1",
+      "step_s": 2e-05,
+      "completed_time_s": 0.65,
+      "transitions": [
+        {
+          "time_s": 0.39134119213151336,
+          "state": "released",
+          "rail_V": 5.25
+        }
+      ],
+      "flags": [],
+      "final_reset_V": 5.198019801980198,
+      "maximum_ct_V": 1.2824154849267133,
+      "samples": 32652,
+      "deck_sha256": "f6a0cfb2afb1370b79af89f13b77acbe604be4b0d5281f0e80aee15bce5f5d5d"
+    },
+    {
+      "id": "slow-brownout",
+      "step_s": 2e-05,
+      "completed_time_s": 1.0,
+      "transitions": [
+        {
+          "time_s": 0.3122464544564353,
+          "state": "released",
+          "rail_V": 5.0
+        },
+        {
+          "time_s": 0.43238419174718823,
+          "state": "asserted",
+          "rail_V": 4.611389699033742
+        },
+        {
+          "time_s": 0.8219304192616157,
+          "state": "released",
+          "rail_V": 5.0
+        }
+      ],
+      "flags": [],
+      "final_reset_V": 4.95049504950495,
+      "maximum_ct_V": 1.2824154849266916,
+      "samples": 50402,
+      "deck_sha256": "a58848ef7e1ffdbec9fd1b01ce2041d9efcfff82407ac7da0351548abe416604"
+    },
+    {
+      "id": "fast-brownout",
+      "step_s": 2e-05,
+      "completed_time_s": 0.9,
+      "transitions": [
+        {
+          "time_s": 0.3122464544564353,
+          "state": "released",
+          "rail_V": 5.0
+        },
+        {
+          "time_s": 0.4000094660510936,
+          "state": "asserted",
+          "rail_V": 4.4
+        },
+        {
+          "time_s": 0.7519784619438062,
+          "state": "released",
+          "rail_V": 5.0
+        }
+      ],
+      "flags": [
+        "fast_rail_drop_crosses_4p5V_before_reset_assertion"
+      ],
+      "final_reset_V": 4.9504950495049505,
+      "maximum_ct_V": 1.282415484926134,
+      "samples": 45513,
+      "deck_sha256": "3c585de2bc0fbce32a3087c0267cf32f3aad22a1f533b128143bc5c4be0cbf2b"
+    },
+    {
+      "id": "repeated-dips",
+      "step_s": 2e-05,
+      "completed_time_s": 1.0,
+      "transitions": [
+        {
+          "time_s": 0.3122464544564353,
+          "state": "released",
+          "rail_V": 5.0
+        },
+        {
+          "time_s": 0.4000163647731075,
+          "state": "asserted",
+          "rail_V": 4.4
+        },
+        {
+          "time_s": 0.8219802169957763,
+          "state": "released",
+          "rail_V": 5.0
+        }
+      ],
+      "flags": [],
+      "final_reset_V": 4.95049504950495,
+      "maximum_ct_V": 1.2824154849266405,
+      "samples": 50746,
+      "deck_sha256": "4aa63e5f93d10a8f0ec2fc1680e76738fbf7a8ae7b1d477591a73db6298a629a"
+    },
+    {
+      "id": "manual-reset",
+      "step_s": 2e-05,
+      "completed_time_s": 0.9,
+      "transitions": [
+        {
+          "time_s": 0.3122464544564353,
+          "state": "released",
+          "rail_V": 5.0
+        },
+        {
+          "time_s": 0.4000007317357261,
+          "state": "asserted",
+          "rail_V": 5.0
+        },
+        {
+          "time_s": 0.4200009922018962,
+          "state": "released",
+          "rail_V": 5.0
+        }
+      ],
+      "flags": [
+        "manufacturer_model_does_not_repeat_CT_delay_after_manual_reset"
+      ],
+      "final_reset_V": 4.9504950495049505,
+      "maximum_ct_V": 1.2824154849271212,
+      "samples": 45390,
+      "deck_sha256": "1764c23a03a59a586c14e4c633901a5d0469fec4bdc2d1ac1e295b3c41c5d2cc"
+    }
+  ],
+  "refinements": [
+    {
+      "id": "fast-brownout",
+      "maximum_transition_delta_s": 9.21770977008185e-06,
+      "result": {
+        "id": "fast-brownout",
+        "step_s": 5e-06,
+        "completed_time_s": 0.9,
+        "transitions": [
+          {
+            "time_s": 0.31225567216620537,
+            "state": "released",
+            "rail_V": 5.0
+          },
+          {
+            "time_s": 0.40000944545082995,
+            "state": "asserted",
+            "rail_V": 4.4
+          },
+          {
+            "time_s": 0.751976496109,
+            "state": "released",
+            "rail_V": 5.0
+          }
+        ],
+        "flags": [
+          "fast_rail_drop_crosses_4p5V_before_reset_assertion"
+        ],
+        "final_reset_V": 4.95049504950495,
+        "maximum_ct_V": 1.2824154849252634,
+        "samples": 180498,
+        "deck_sha256": "99173863a38f229b8cc14646859d145675ffdc532c5e49b4a6ad47647a3a0305"
+      }
+    },
+    {
+      "id": "manual-reset",
+      "maximum_transition_delta_s": 9.21770977008185e-06,
+      "result": {
+        "id": "manual-reset",
+        "step_s": 5e-06,
+        "completed_time_s": 0.9,
+        "transitions": [
+          {
+            "time_s": 0.31225567216620537,
+            "state": "released",
+            "rail_V": 5.0
+          },
+          {
+            "time_s": 0.4000007329699054,
+            "state": "asserted",
+            "rail_V": 5.0
+          },
+          {
+            "time_s": 0.4200009922018962,
+            "state": "released",
+            "rail_V": 5.0
+          }
+        ],
+        "flags": [
+          "manufacturer_model_does_not_repeat_CT_delay_after_manual_reset"
+        ],
+        "final_reset_V": 4.9504950495049505,
+        "maximum_ct_V": 1.2824154849252634,
+        "samples": 180357,
+        "deck_sha256": "1a85c0798ecc73186985972dba5f752ac7079f02be4522a71d4e0c670bbce00e"
+      }
+    }
+  ],
+  "decks": {
+    "start-4.75-0.0001": "TPS389001 manufacturer nominal model; candidate, not native adopted\n.include \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/control-switching/models/TPS389001_TRANS.LIB\"\nV5 v5 0 PWL(0 0 .001 0 0.0011 4.75 .65 4.75)\nVmanual manual 0 PWL(0 1 .65 1)\nBmr mr 0 V=V(manual)*V(v5)\nRtop v5 sense 30100\nRbottom sense 0 10000\nRpull v5 rst 10000\nCct ct 0 2.2e-07\nCrst rst 0 50p\nXsupervisor rst ct v5 mr sense 0 TPS389001_TRANS\n.save v(v5) v(rst) v(ct) v(sense)\n.tran 2e-05 0.65 0 2e-05\n.end\n",
+    "start-4.75-0.1": "TPS389001 manufacturer nominal model; candidate, not native adopted\n.include \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/control-switching/models/TPS389001_TRANS.LIB\"\nV5 v5 0 PWL(0 0 .001 0 0.101 4.75 .65 4.75)\nVmanual manual 0 PWL(0 1 .65 1)\nBmr mr 0 V=V(manual)*V(v5)\nRtop v5 sense 30100\nRbottom sense 0 10000\nRpull v5 rst 10000\nCct ct 0 2.2e-07\nCrst rst 0 50p\nXsupervisor rst ct v5 mr sense 0 TPS389001_TRANS\n.save v(v5) v(rst) v(ct) v(sense)\n.tran 2e-05 0.65 0 2e-05\n.end\n",
+    "start-5.25-0.0001": "TPS389001 manufacturer nominal model; candidate, not native adopted\n.include \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/control-switching/models/TPS389001_TRANS.LIB\"\nV5 v5 0 PWL(0 0 .001 0 0.0011 5.25 .65 5.25)\nVmanual manual 0 PWL(0 1 .65 1)\nBmr mr 0 V=V(manual)*V(v5)\nRtop v5 sense 30100\nRbottom sense 0 10000\nRpull v5 rst 10000\nCct ct 0 2.2e-07\nCrst rst 0 50p\nXsupervisor rst ct v5 mr sense 0 TPS389001_TRANS\n.save v(v5) v(rst) v(ct) v(sense)\n.tran 2e-05 0.65 0 2e-05\n.end\n",
+    "start-5.25-0.1": "TPS389001 manufacturer nominal model; candidate, not native adopted\n.include \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/control-switching/models/TPS389001_TRANS.LIB\"\nV5 v5 0 PWL(0 0 .001 0 0.101 5.25 .65 5.25)\nVmanual manual 0 PWL(0 1 .65 1)\nBmr mr 0 V=V(manual)*V(v5)\nRtop v5 sense 30100\nRbottom sense 0 10000\nRpull v5 rst 10000\nCct ct 0 2.2e-07\nCrst rst 0 50p\nXsupervisor rst ct v5 mr sense 0 TPS389001_TRANS\n.save v(v5) v(rst) v(ct) v(sense)\n.tran 2e-05 0.65 0 2e-05\n.end\n",
+    "slow-brownout": "TPS389001 manufacturer nominal model; candidate, not native adopted\n.include \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/control-switching/models/TPS389001_TRANS.LIB\"\nV5 v5 0 PWL(0 0 .001 0 .011 5 .4 5 .45 4.4 .50 4.4 .55 5 1 5)\nVmanual manual 0 PWL(0 1 1 1)\nBmr mr 0 V=V(manual)*V(v5)\nRtop v5 sense 30100\nRbottom sense 0 10000\nRpull v5 rst 10000\nCct ct 0 2.2e-07\nCrst rst 0 50p\nXsupervisor rst ct v5 mr sense 0 TPS389001_TRANS\n.save v(v5) v(rst) v(ct) v(sense)\n.tran 2e-05 1 0 2e-05\n.end\n",
+    "fast-brownout": "TPS389001 manufacturer nominal model; candidate, not native adopted\n.include \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/control-switching/models/TPS389001_TRANS.LIB\"\nV5 v5 0 PWL(0 0 .001 0 .011 5 .4 5 .400001 4.4 .45 4.4 .450001 5 .9 5)\nVmanual manual 0 PWL(0 1 .9 1)\nBmr mr 0 V=V(manual)*V(v5)\nRtop v5 sense 30100\nRbottom sense 0 10000\nRpull v5 rst 10000\nCct ct 0 2.2e-07\nCrst rst 0 50p\nXsupervisor rst ct v5 mr sense 0 TPS389001_TRANS\n.save v(v5) v(rst) v(ct) v(sense)\n.tran 2e-05 0.9 0 2e-05\n.end\n",
+    "fast-brownout-fine": "TPS389001 manufacturer nominal model; candidate, not native adopted\n.include \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/control-switching/models/TPS389001_TRANS.LIB\"\nV5 v5 0 PWL(0 0 .001 0 .011 5 .4 5 .400001 4.4 .45 4.4 .450001 5 .9 5)\nVmanual manual 0 PWL(0 1 .9 1)\nBmr mr 0 V=V(manual)*V(v5)\nRtop v5 sense 30100\nRbottom sense 0 10000\nRpull v5 rst 10000\nCct ct 0 2.2e-07\nCrst rst 0 50p\nXsupervisor rst ct v5 mr sense 0 TPS389001_TRANS\n.save v(v5) v(rst) v(ct) v(sense)\n.tran 5e-06 0.9 0 5e-06\n.end\n",
+    "repeated-dips": "TPS389001 manufacturer nominal model; candidate, not native adopted\n.include \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/control-switching/models/TPS389001_TRANS.LIB\"\nV5 v5 0 PWL(0 0 .001 0 .011 5 .4 5 .40001 4.4 .42 4.4 .42001 5 .5 5 .50001 4.4 .52 4.4 .52001 5 1 5)\nVmanual manual 0 PWL(0 1 1 1)\nBmr mr 0 V=V(manual)*V(v5)\nRtop v5 sense 30100\nRbottom sense 0 10000\nRpull v5 rst 10000\nCct ct 0 2.2e-07\nCrst rst 0 50p\nXsupervisor rst ct v5 mr sense 0 TPS389001_TRANS\n.save v(v5) v(rst) v(ct) v(sense)\n.tran 2e-05 1 0 2e-05\n.end\n",
+    "manual-reset": "TPS389001 manufacturer nominal model; candidate, not native adopted\n.include \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/control-switching/models/TPS389001_TRANS.LIB\"\nV5 v5 0 PWL(0 0 .001 0 .011 5 .9 5)\nVmanual manual 0 PWL(0 1 .4 1 .400001 0 .42 0 .420001 1 .9 1)\nBmr mr 0 V=V(manual)*V(v5)\nRtop v5 sense 30100\nRbottom sense 0 10000\nRpull v5 rst 10000\nCct ct 0 2.2e-07\nCrst rst 0 50p\nXsupervisor rst ct v5 mr sense 0 TPS389001_TRANS\n.save v(v5) v(rst) v(ct) v(sense)\n.tran 2e-05 0.9 0 2e-05\n.end\n",
+    "manual-reset-fine": "TPS389001 manufacturer nominal model; candidate, not native adopted\n.include \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/control-switching/models/TPS389001_TRANS.LIB\"\nV5 v5 0 PWL(0 0 .001 0 .011 5 .9 5)\nVmanual manual 0 PWL(0 1 .4 1 .400001 0 .42 0 .420001 1 .9 1)\nBmr mr 0 V=V(manual)*V(v5)\nRtop v5 sense 30100\nRbottom sense 0 10000\nRpull v5 rst 10000\nCct ct 0 2.2e-07\nCrst rst 0 50p\nXsupervisor rst ct v5 mr sense 0 TPS389001_TRANS\n.save v(v5) v(rst) v(ct) v(sense)\n.tran 5e-06 0.9 0 5e-06\n.end\n"
+  },
+  "nominal_model_runs_completed": true,
+  "guaranteed_timing_qualified": false,
+  "fabrication_ready": false
+}

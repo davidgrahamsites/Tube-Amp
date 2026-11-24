@@ -6,7 +6,7 @@ Owner: Renegade integration. Updated 2026-11-24. Authority: FB-114–116 and the
 
 Use the active `reverb-600/circuit.json`, current `pcb-measured-r` boards, exact component coverage and the measured cabinet contract. Use the latest verified package checkpoint (VAL-025 follows3efa8d9); preserve unrelated in-progress edits. Select available parts before freezing dependent values, footprints or geometry. A substitute reopens its affected electrical and mechanical checks.
 
-All ICs and all six tubes must be socketed. Include regulators, the supervisor and any future effects-loop IC. Surface-mount adapters are only candidates until their contacts, pin map, spacing, retention, bypass placement and thermal path are qualified. Never equate a DIP footprint with an installed socket. Include socket height and extraction space in the populated assembly.
+All six tubes require sockets. IC sockets remain the default; FB-117 permits a documented device-specific exception if socketing materially harms operation. No exception is currently adopted. Include regulators, the supervisor and any future effects-loop IC. Surface-mount adapters are only candidates until their contacts, pin map, spacing, retention, bypass placement and thermal path are qualified. Never equate a DIP footprint with an installed socket. Include socket height and extraction space in the populated assembly.
 
 ## Six scopes and closure evidence
 
@@ -38,3 +38,7 @@ Actual drill envelope remains deferred until November 25. Cabinet depth datum, a
 ## R215 checkpoint — 24 November 2026
 
 [VAL-027](../../brain/records/VAL-027-preload-native-integration.md):5V preload integrated and native delta/holes checked;72raw-supply runs plus2refinements complete. Minimum-load defect fixed within declared bounds; no new ERC/DRC findings. Transformer range/current, reset release, socket implementation and populated chassis remain open. Current native source hash is recorded in the preload checks, superseding prior byte-preservation claims only for the declared R215 addition. Next: use the existing supervisor/relay-chain candidate review, select exact socket-compatible parts and close brownout behavior; then exact auxiliary transformer and heatsink/contacts. No Chinese purchase-readiness or fabrication claim.
+
+## Control switching checkpoint — November 24
+
+[VAL-028](../../brain/records/VAL-028-control-driver-reset-checkpoint.md) integrates logic-level relay drivers/local clamps with native preservation and drill-delta checks. 55 simulation runs have retained provenance and explicit limits; supervisor/carrier/rail-collapse qualification remains open. Current Control has 84 unconnected items and 13 existing DRC findings. Functional blocks and fixed mounting holes are preserved. No three-board fit or fabrication release is implied.
