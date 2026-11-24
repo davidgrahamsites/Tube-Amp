@@ -120,6 +120,7 @@ def main():
     circuit=MODULE.parent/'reverb-600/circuit.json'
     source=json.loads(circuit.read_text())
     components={x['reference']:x for x in source['components']}
+    assert 'R215' not in components, 'Historical unloaded model: use screen_adopted_preload.py for the repaired circuit'
     expected={'U4':{'1':'CTRL_RAW','2':'GND','3':'+12V'},
               'U5':{'1':'+12V','2':'GND','3':'+5V'},
               'U6':{'1':'CTRL_RAW','2':'GND','3':'+15V'},

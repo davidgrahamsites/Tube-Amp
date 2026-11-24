@@ -13,3 +13,5 @@ The local files listed above and their children remain the module outputs. `brai
 
 ## Human check
 Open the local output with its source/reference and confirm revision, unresolved limits and actual part or circuit identity before using it for the build. For native CAD, inspect the render and pin/geometry checks; for runs, inspect assumptions and logs.
+
+Shared native inspection seam: `native_sexpr.py` preserves quoted atoms and exposes parse/children/field/fps/nets to scoped mutation and verification tools. It does not generate boards or own circuit decisions.

@@ -20775,4 +20775,11 @@
 		(uuid "d34fb54b-26bf-41b8-b247-2ed13e9c92ad")
 	)
 	(embedded_fonts no)
-)
+
+(footprint "Renegade_Selected:UNI_ROYAL_MF0W4_P12.70mm" (layer "F.Cu") (descr "UNI-ROYAL MF0W4; max body7.5x2.5; round lead0.54+/-0.05; formed pitch12.7; finished hole0.90+/-0.10") (property "Reference" "R215" (at 6.35 -2.25) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15)))) (property "Value" "820" (at 6.35 2.25) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15)))) (attr through_hole) (fp_rect (start 2.6 -1.25) (end 10.1 1.25) (stroke (width 0.1) (type solid)) (fill none) (layer "F.Fab")) (fp_rect (start 2.5 -1.35) (end 10.2 1.35) (stroke (width 0.12) (type solid)) (fill none) (layer "F.SilkS")) (fp_rect (start -1.15 -1.5) (end 13.85 1.5) (stroke (width 0.05) (type solid)) (fill none) (layer "F.CrtYd")) (fp_line (start 0 0) (end 2.6 0) (stroke (width 0.1) (type solid)) (layer "F.Fab")) (fp_line (start 10.1 0) (end 12.7 0) (stroke (width 0.1) (type solid)) (layer "F.Fab")) (pad "1" thru_hole circle (at 0 0) (size 1.8 1.8) (drill 0.9) (layers "*.Cu" "*.Mask") (net "+5V") (uuid "1d2f2d93-5c4f-5ce9-a081-16e732900a27")) (pad "2" thru_hole circle (at 12.7 0) (size 1.8 1.8) (drill 0.9) (layers "*.Cu" "*.Mask") (net "GND") (uuid "cea55438-ea91-5fb7-af05-f1db9387326d")) (uuid "e8dd780b-105f-5ace-b8f3-ce49f3f8edea") (at 196.654 75.5) (path "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3/b15de993-1053-51c8-bcfa-4e68364fd888") (property "Selected_MPN" "MFR0W4F8200A50" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1)))))
+(segment (start 196.654 68.125) (end 196.654 75.5) (width 0.4) (layer "F.Cu") (net "+5V") (uuid "e1000e1c-269c-5291-b507-d05151dc3b4b"))
+(segment (start 209.354 75.5) (end 209.354 77) (width 0.4) (layer "B.Cu") (net "GND") (uuid "1700bad4-8a07-5128-8bce-7b50fba70313"))
+(segment (start 209.354 77) (end 208.354 78) (width 0.4) (layer "B.Cu") (net "GND") (uuid "89f8a23b-36f7-518e-bec2-57694e2e63e6"))
+(segment (start 208.354 78) (end 195.114 78) (width 0.4) (layer "B.Cu") (net "GND") (uuid "5860b5b7-1f7a-5dcb-bcf0-e6ed6e0aa901"))
+(segment (start 195.114 78) (end 194.114 77) (width 0.4) (layer "B.Cu") (net "GND") (uuid "2efefdac-684a-5b28-8cb2-6b3b18720d12"))
+(segment (start 194.114 77) (end 194.114 68.125) (width 0.4) (layer "B.Cu") (net "GND") (uuid "effe1a4a-2a98-5205-af74-0884b4212bdf")))

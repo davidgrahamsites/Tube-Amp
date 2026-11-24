@@ -118,8 +118,8 @@
       "path": "PROJECT_STATUS.md",
       "role": "catalog",
       "owner_route": "MAT-002",
-      "bytes": 42959,
-      "sha256": "361c6e3925037e893d3e2f50dd4debfb8d39eb0dd775c07dc3875534f227605f"
+      "bytes": 43762,
+      "sha256": "0466c31790de7591390b396c4fba990e16a3375403db68b69e833b399e35dcd4"
     },
     {
       "path": "README.md",
@@ -258,8 +258,8 @@
       "path": "brain/INDEX.md",
       "role": "catalog",
       "owner_route": "MAT-012",
-      "bytes": 7921,
-      "sha256": "09226c43621620c3d91a63654d456bfd4f5fe8ecb7d29714a0ed524b1ddaa82a"
+      "bytes": 8085,
+      "sha256": "f4efcb25cccd1450a63297d3a16425e12e4db93841c7197a7982d9a2156406e9"
     },
     {
       "path": "brain/_templates/CONTEXT.md",
@@ -638,6 +638,13 @@
       "owner_route": "MAT-012",
       "bytes": 2532,
       "sha256": "c002b5c4aa7feb9422b955215d0d8ba5114815d648fd5c35fe8efb5e3c2ff84f"
+    },
+    {
+      "path": "brain/records/VAL-027-preload-native-integration.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-012",
+      "bytes": 1968,
+      "sha256": "68f3bac61b1486fb53a97b8bab1f8d72a70c7884d7d04df90e69ed0e9067dab0"
     },
     {
       "path": "brain/rules/CONTEXT.md",
@@ -1280,8 +1287,8 @@
       "path": "engineering/component-selection/coverage.json",
       "role": "editable-product/record",
       "owner_route": "MAT-004",
-      "bytes": 44204,
-      "sha256": "889b839d7fbe1bba0c02759c70b847eb587a5a0b53021ea942124d3d4c69fb30"
+      "bytes": 44699,
+      "sha256": "a515732f20b7b8eab88b5fda791ccd05aabaaaa6206bc4f80e1acc333fb7495b"
     },
     {
       "path": "engineering/component-selection/dirty-resistor-op.cir",
@@ -2001,8 +2008,8 @@
       "path": "engineering/component-selection/footprints/CONTEXT.md",
       "role": "contract",
       "owner_route": "MAT-004",
-      "bytes": 1211,
-      "sha256": "851d5717e0b7c1fb89708697ed5d595a275160b94d8d61f4b559f3c938cb2090"
+      "bytes": 1541,
+      "sha256": "3adb6408adfe29a7d5aec75ba4fc33240685d04f9b3ea8f475a5b38f5f022f15"
     },
     {
       "path": "engineering/component-selection/footprints/Renegade_Selected.pretty/Aishi_EGW2CM470G16OT_D10.5_P5.kicad_mod",
@@ -2129,6 +2136,13 @@
       "owner_route": "MAT-004",
       "bytes": 1246,
       "sha256": "63ba46d1a3f4b85f94019d92a7bf081456a0d0180ffa88c508d540460934fb33"
+    },
+    {
+      "path": "engineering/component-selection/footprints/Renegade_Selected.pretty/UNI_ROYAL_MF0W4_P12.70mm.kicad_mod",
+      "role": "editable-product/record",
+      "owner_route": "MAT-004",
+      "bytes": 1132,
+      "sha256": "dcc2e568759c3d399f7b4c85fb0af5daf237789b491c42c17a599b699855f6b2"
     },
     {
       "path": "engineering/component-selection/footprints/Renegade_Selected.pretty/Vishay_PR01_22K_P12.7.kicad_mod",
@@ -4864,8 +4878,8 @@
       "path": "engineering/whole-amp/aux-supply/CONTEXT.md",
       "role": "contract",
       "owner_route": "MAT-016",
-      "bytes": 957,
-      "sha256": "b8e271d5d3fea518b2a27ee1c8070435fa8364b7a5d4c334a8177237f46d1cab"
+      "bytes": 1256,
+      "sha256": "b2dfe949c1f889642bbdcc80f54df46066adc3747d5592ad87400030f5ff34d1"
     },
     {
       "path": "engineering/whole-amp/aux-supply/envelope-contract.json",
@@ -4878,8 +4892,22 @@
       "path": "engineering/whole-amp/aux-supply/envelope-review.md",
       "role": "editable-product/record",
       "owner_route": "MAT-016",
-      "bytes": 6504,
-      "sha256": "cb3ee6a39bbbabdb3303f68d90ac17da361ec00eef6eed2bbd2b2568b3a4df02"
+      "bytes": 6697,
+      "sha256": "11cab6164c9f51a434f84b07b8454afe75770b1b83c7b2aa1849d366e96bd246"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/preload-contract.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1403,
+      "sha256": "d89d7ee3408cd90cee20d2cf081b6601f90416771c9de8d88164f5085dbd81c7"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/preload-review.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 7080,
+      "sha256": "0986b28b4fd2f93d5f9de812837cf4437af6d3a64cb3f6244316c6207348347f"
     },
     {
       "path": "engineering/whole-amp/aux-supply/results/CONTEXT.md",
@@ -5008,6 +5036,118 @@
       "sha256": "0200c259234a4bf63eb910dd7095e74321ea733fb8c079261283443cfa8eaf4d"
     },
     {
+      "path": "engineering/whole-amp/aux-supply/results/preload/CONTEXT.md",
+      "role": "contract",
+      "owner_route": "MAT-016",
+      "bytes": 479,
+      "sha256": "6d0628ad504e5a0f47be526276d45341a9cba60300bbc66c76436ba6b436b6a6"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/after-drc.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 76959,
+      "sha256": "a585e6513b170e2fe7ec56466d50841015fe6455722e51a7177a59e197eb468b"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/after-erc.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5293,
+      "sha256": "29dd1990b2a1559873a8708a8966670eda8ba2ba9177f6ac122607afad380028"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/after.xml",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 462894,
+      "sha256": "7c275660051636a2fe5c4893eba39dedb3fa5cf8939902b8fcd1751fa00b4691"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/before-drc.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 76847,
+      "sha256": "c1fb07480008346b6ce31df496d6a9365a6acae375f5833dbd731a25d011c4f1"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/before-erc.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 5293,
+      "sha256": "f2b8738e41eaa0190f0debbb171e2d8b31d494df345e3c33c119c01e5807532b"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/before.xml",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 461224,
+      "sha256": "37643528918ada8350b03a435b641bfc3a98a094dcb66695cb15a2e32b8fa15f"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/checks.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1172,
+      "sha256": "de1790120d06f3af9aa6166f3451c95d03c7b028d5aa28588de944fe4784fce9"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/control-board.pdf",
+      "role": "evidence/source",
+      "owner_route": "MAT-016",
+      "bytes": 113727,
+      "sha256": "b561b3b743ebf76b1c329862eeeab244dedd3960423b462484766034aac9bfda"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/drill-checks.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 613,
+      "sha256": "e7b183d102aa5f9b11ebd135dfd561167c0f7d85d86a4b25169f5b3863fa266c"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/integration.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 1074,
+      "sha256": "7e35bd28066db964a65011afc9735bd2d94016c72ec1561e23228ebf43d041c0"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/raw-screen.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 213298,
+      "sha256": "d3287e4fbcce544574cd4fee8f56a7c9b728018da3df1f9f1c310e7922663d63"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/review-checks.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 465,
+      "sha256": "6d7703f3fb1ef66168a5f57317dd674a0fe8346910d8e0f19e4e1c402eadc70a"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/simulator.log",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 76739,
+      "sha256": "157fcce3f60fd5b415911a3494ead052109f82f189f6d2b829f80463bd00eb7d"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/supply-sheet.pdf",
+      "role": "evidence/source",
+      "owner_route": "MAT-016",
+      "bytes": 151500,
+      "sha256": "7eefca89c8b36bf30ba9dbab05ae29214d905f0687f017ba4c7e3983ec773a11"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/results/preload/uniroyal-mf-excerpt.pdf",
+      "role": "evidence/source",
+      "owner_route": "MAT-016",
+      "bytes": 558632,
+      "sha256": "d0f5368b4eabb052e81c37151f9401bbf875ae7f366dcfd86a0acd7cd0475794"
+    },
+    {
       "path": "engineering/whole-amp/aux-supply/results/visual-audit.json",
       "role": "editable-product/record",
       "owner_route": "MAT-016",
@@ -5025,15 +5165,22 @@
       "path": "engineering/whole-amp/aux-supply/tools/CONTEXT.md",
       "role": "contract",
       "owner_route": "MAT-016",
-      "bytes": 884,
-      "sha256": "52045a0f1bf076069b6be55fe2490da116f8bf74b461d65c93dce2a0cbe4db38"
+      "bytes": 1338,
+      "sha256": "ea89047d39a14d6e0bc220dbcfffc49dce2036e43feb2be7603db4d6c1867b07"
     },
     {
       "path": "engineering/whole-amp/aux-supply/tools/check_envelope.py",
       "role": "factory/reference",
       "owner_route": "MAT-016",
-      "bytes": 3662,
-      "sha256": "45517916cba0d30ca40da27546bc5ec42fbeff1f9d5f0e006cbf26380f8f9e5a"
+      "bytes": 3879,
+      "sha256": "9d4731abfc367e092e63313321f574abca94ad071f5748eb16ee019c3b09ae79"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/tools/check_preload.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 6838,
+      "sha256": "120f0c2fa59cee746bb8179bd8161c842374cb39003c6f1b8aaa114824755621"
     },
     {
       "path": "engineering/whole-amp/aux-supply/tools/correct_c212.py",
@@ -5041,6 +5188,20 @@
       "owner_route": "MAT-016",
       "bytes": 2844,
       "sha256": "63be68830987392ab0af328d9809ff9b2e2ead74f8171f9d89fe541460194520"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/tools/integrate_preload.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 7604,
+      "sha256": "fce95f64ccdcda6d3112323f227abc218670995b25cb61be49f2970dcc56c9c1"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/tools/screen_adopted_preload.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 2658,
+      "sha256": "976fdc3abcee4c202ea6b8022c26c3b9eabf6721fe3ef489c03099e9049dc02a"
     },
     {
       "path": "engineering/whole-amp/aux-supply/tools/screen_bleeder.py",
@@ -5053,8 +5214,8 @@
       "path": "engineering/whole-amp/aux-supply/tools/screen_envelope.py",
       "role": "factory/reference",
       "owner_route": "MAT-016",
-      "bytes": 9843,
-      "sha256": "46c72d1f24ea958ef56a5354cb4d3e7285c0083f7d0c6877807e0b330d224188"
+      "bytes": 9964,
+      "sha256": "768a86087aaa8b75f6aaadfdc52f3b6933337e6817308cdf22c050e13f9a5ef4"
     },
     {
       "path": "engineering/whole-amp/aux-supply/tools/verify_c212.py",
@@ -5062,6 +5223,13 @@
       "owner_route": "MAT-016",
       "bytes": 4053,
       "sha256": "63d5a36c6da3748d456ef417a0c9b3e0a47d6c79f1e0ee8447868eb8dd6d26b9"
+    },
+    {
+      "path": "engineering/whole-amp/aux-supply/tools/verify_preload_drill.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 1619,
+      "sha256": "473a7c118ce797034f356bdec45dbb445853c22c41230d52b3e71434bba3bfca"
     },
     {
       "path": "engineering/whole-amp/board-plan.json",
@@ -17114,8 +17282,8 @@
       "path": "engineering/whole-amp/pcb-measured-r/boards/Renegade_Control.kicad_pcb",
       "role": "editable-product/record",
       "owner_route": "MAT-017",
-      "bytes": 398904,
-      "sha256": "4aff06b7b6aa13bc5195dbd8f8bb04efd3129dee038c4f2c573773703008eb49"
+      "bytes": 401200,
+      "sha256": "ee3e86b774ce9f39131da32c07d283e316ea95b77d19690d50279199685968f8"
     },
     {
       "path": "engineering/whole-amp/pcb-measured-r/boards/Renegade_Control.kicad_prl",
@@ -17947,8 +18115,8 @@
       "path": "engineering/whole-amp/reverb-600/cad/08_control_supply.kicad_sch",
       "role": "editable-product/record",
       "owner_route": "MAT-003",
-      "bytes": 93839,
-      "sha256": "bc60ab8511bef2c1f672445aae88b8eae6c2472473cc8cd7b390fab11f044efd"
+      "bytes": 97816,
+      "sha256": "f843d66f2d019d26f9da1e6e0a86d74d2970a3258bcd99759b74c7ad1fd82f29"
     },
     {
       "path": "engineering/whole-amp/reverb-600/cad/09_controller.kicad_sch",
@@ -18087,8 +18255,8 @@
       "path": "engineering/whole-amp/reverb-600/circuit.json",
       "role": "editable-product/record",
       "owner_route": "MAT-003",
-      "bytes": 131617,
-      "sha256": "9b151955ceaa015b1e3779ee9151c00452f2c23b585d7b3d18fb7478b356e539"
+      "bytes": 132267,
+      "sha256": "60f6493d3d2ed3be83ad14fde640c0a7d04716e9d9c17ffe1313277d902bcea7"
     },
     {
       "path": "engineering/whole-amp/reverb-600/grounding-contract.json",
@@ -20187,8 +20355,8 @@
       "path": "engineering/whole-amp/tools/CONTEXT.md",
       "role": "contract",
       "owner_route": "MAT-009",
-      "bytes": 1366,
-      "sha256": "9ebcc032b833a7197ed2b10a3c8a338f0f33e4bc6c19ef43b36333a364cdf20f"
+      "bytes": 1578,
+      "sha256": "f11e3a0478b9f2844e488e18470afbace9b2a3ae8fec82d296a26bf12393981c"
     },
     {
       "path": "engineering/whole-amp/tools/board_schematics.py",
@@ -20294,6 +20462,13 @@
       "owner_route": "MAT-009",
       "bytes": 1042,
       "sha256": "174bf825ca1d56e2d8908f8a7ab42dda17ea5fcb100e8189544da80906cc07d4"
+    },
+    {
+      "path": "engineering/whole-amp/tools/native_sexpr.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-009",
+      "bytes": 1072,
+      "sha256": "c020b127fd0e976784ea0fcdd8cdb2c8ba2d5a1a457482d879ee512f0281e80d"
     },
     {
       "path": "engineering/whole-amp/tools/place_main.py",
@@ -20775,15 +20950,15 @@
       "path": "plans/renegade-working-prototype/tasks.md",
       "role": "editable-product/record",
       "owner_route": "MAT-002",
-      "bytes": 20794,
-      "sha256": "03b67e2566033f7e40155212564ac6d66b1c0620e0afff1ac5608673084d8065"
+      "bytes": 21557,
+      "sha256": "e6c0a3e6f32eeda02c22c7633896b80747416419b85fa87a07d2bfde811d78e9"
     },
     {
       "path": "plans/renegade-working-prototype/through-chassis.md",
       "role": "editable-product/record",
       "owner_route": "MAT-002",
-      "bytes": 4452,
-      "sha256": "d9e46e1fc0d00e2d0988e8a9e84b653124d6b842bc099b012284d7c16258cbef"
+      "bytes": 5215,
+      "sha256": "64ab5e5ae39626a2a334a36eaa55ac1a5e9fce59e08e6172be307df14a198ee5"
     },
     {
       "path": "simulation/CONTEXT.md",

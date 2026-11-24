@@ -34,3 +34,7 @@ Actual drill envelope remains deferred until November 25. Cabinet depth datum, a
 
 ## Auxiliary-supply checkpoint — November24
 [VAL-026](../../brain/records/VAL-026-auxiliary-supply-envelope.md) adds72raw-supply cases,4refinement runs and3unadopted820Ωpreload comparisons. Evidence checks pass;48base cases have engineering flags. Raw-winding/thermal assumptions remain unqualified. Contact screening has not selected a regulator socket. Native CAD unchanged; exact auxiliary magnetics, preload integration, startup/reset, socket/heatsink and all populated-fit gates remain open.
+
+## R215 checkpoint — 24 November 2026
+
+[VAL-027](../../brain/records/VAL-027-preload-native-integration.md):5V preload integrated and native delta/holes checked;72raw-supply runs plus2refinements complete. Minimum-load defect fixed within declared bounds; no new ERC/DRC findings. Transformer range/current, reset release, socket implementation and populated chassis remain open. Current native source hash is recorded in the preload checks, superseding prior byte-preservation claims only for the declared R215 addition. Next: use the existing supervisor/relay-chain candidate review, select exact socket-compatible parts and close brownout behavior; then exact auxiliary transformer and heatsink/contacts. No Chinese purchase-readiness or fabrication claim.

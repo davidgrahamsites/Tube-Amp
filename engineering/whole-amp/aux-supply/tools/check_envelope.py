@@ -1,9 +1,10 @@
-"""Read-only audit of raw-supply screening evidence, not circuit acceptance."""
+"""Read-only audit of historical pre-R215 evidence, not current circuit acceptance."""
 from pathlib import Path
 import copy
 import hashlib
 import json
 import math
+import subprocess
 
 M=Path(__file__).resolve().parents[1]
 
@@ -36,7 +37,9 @@ def main():
     cp=M/'envelope-contract.json';rp=M/'results/envelope/screen.json'
     c=json.loads(cp.read_text());d=json.loads(rp.read_text())
     assert hashlib.sha256(cp.read_bytes()).hexdigest()==d['contract_sha256']
-    assert hashlib.sha256((M.parent/'reverb-600/circuit.json').read_bytes()).hexdigest()==d['circuit_sha256']
+    # Historical baseline screen must remain tied to its immutable circuit, not later repairs.
+    baseline=subprocess.check_output(['/usr/bin/git','show',c['baseline_commit']+':engineering/whole-amp/reverb-600/circuit.json'],cwd=M)
+    assert hashlib.sha256(baseline).hexdigest()==d['circuit_sha256']
     check(c,d)
     mutations={
         'missing_case':lambda x:x['cases'].pop(),

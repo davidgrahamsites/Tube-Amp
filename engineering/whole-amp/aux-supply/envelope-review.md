@@ -1,3 +1,5 @@
+> Historical pre-R215 baseline. See [the implemented preload review](preload-review.md) for the later native correction and updated72-case screen. The original results below remain unchanged.
+
 # Auxiliary supply and socket thermal envelope — November24
 
 **The provisional supply is not qualified.** Seventy-two rectifier/load cases, four limiting-case timestep repeats and three proposed-preload repeats completed. Evidence checks pass;48 of72 baseline cases have at least one engineering-screen flag. These flags are not48 measured failures, nor do unflagged cases establish build readiness.

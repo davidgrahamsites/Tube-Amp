@@ -7,3 +7,5 @@ Human check: compare physical purchased parts and manufacturer maximum dimension
 November21 explicit KNSCHA_82CL0120 and Yageo_FMP100_P10.16 library entries are prepared by the guarded package factory in ../../whole-amp/pcb-measured-r/tools/integrate_service_wave_parts.py using dimensional equivalence documented in the LV/bias-resistor dossiers. PCB placement and route repair remain owned by that module.
 
 November24: [Panasonic FR-A module](panasonic-fr/CONTEXT.md) owns the three exact long-lead packages used at seven references, explicit finished-hole assumptions and manufacturer excerpt. Its tools generate the local library and validate native integration/drill evidence; PCB mutation remains in the PCB integration module.
+
+November24 R215: the auxiliary-supply module owns the guarded single-resistor native repair and `UNI_ROYAL_MF0W4_P12.70mm` library geometry; see ../../whole-amp/aux-supply/preload-review.md. Maximum body/round-lead dimensions and two exported drill hits are checked; final placement with regulator sockets/heatsink remains open.
