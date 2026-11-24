@@ -24,3 +24,6 @@ Full changed-sheet PDF and enlarged C212 region were visually inspected:47µF an
 2. Finish local input/output capacitance and reverse-protection review for all regulators, considering socket/adapter inductance. C214 remains10µF aluminium: review tolerance/temperature/ESR margin against ST guidance rather than assuming nominal value is enough.
 3. Complete auxiliary supply load, line/no-load voltage, dropout, fault and thermal corners using the actual transformer and adopted loop load. ST L78/L79 TO-220 thermal data gives5°C/W junction-case and50°C/W junction-ambient under stated conditions; the socket itself is not a heatsink.
 4. Select rated, retained regulator sockets/contacts and preserve a removable thermal connection. Actual drill envelope and chassis fit remain open.
+
+## Subsequent package checkpoint — November24
+C212 now uses the exact2.5mm Panasonic footprint. [Seven-part package review](../../component-selection/footprints/panasonic-fr/review.md) and VAL-025 supersede the provisional3.5mm pitch hold. The historical value-only checker pins the earlier revision; use the new package integration checker for current source/native preservation. Local bypass placement and regulator electrical/thermal qualification remain open.

@@ -53,3 +53,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-022 | validation | cross-domain | verified | 2026-11-24 | [Transformer diagnosis and board-only FreeCAD seam](records/VAL-022-transformer-feedback-fit.md) |
 | VAL-023 | validation | cross-domain | documented | 2026-11-24 | [Loaded feedback diagnosis and power-capacitor fit defect](records/VAL-023-loaded-feedback-capacitor-fit.md) |
 | VAL-024 | validation | cross-domain | documented | 2026-11-24 | [Socket coverage and negative-regulator bypass correction](records/VAL-024-socket-bypass-checkpoint.md) |
+| VAL-025 | validation | cross-domain | documented | 2026-11-24 | [Exact low-voltage capacitor packages and drill verification](records/VAL-025-panasonic-package-checkpoint.md) |

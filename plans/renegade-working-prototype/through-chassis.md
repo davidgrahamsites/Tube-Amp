@@ -4,7 +4,7 @@ Owner: Renegade integration. Updated 2026-11-24. Authority: FB-114–116 and the
 
 ## Inputs and process
 
-Use the active `reverb-600/circuit.json`, current `pcb-measured-r` boards, exact component coverage and the measured cabinet contract. Start from the pushed `d0fae8a` checkpoint; preserve unrelated in-progress edits. Select available parts before freezing dependent values, footprints or geometry. A substitute reopens its affected electrical and mechanical checks.
+Use the active `reverb-600/circuit.json`, current `pcb-measured-r` boards, exact component coverage and the measured cabinet contract. Use the latest verified package checkpoint (VAL-025 follows3efa8d9); preserve unrelated in-progress edits. Select available parts before freezing dependent values, footprints or geometry. A substitute reopens its affected electrical and mechanical checks.
 
 All ICs and all six tubes must be socketed. Include regulators, the supervisor and any future effects-loop IC. Surface-mount adapters are only candidates until their contacts, pin map, spacing, retention, bypass placement and thermal path are qualified. Never equate a DIP footprint with an installed socket. Include socket height and extraction space in the populated assembly.
 
