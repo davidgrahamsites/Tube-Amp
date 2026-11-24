@@ -1,0 +1,9 @@
+# Warm-gold textured panel reference — 24 November 2026
+
+Owner: mechanical/panel design. Authority: FB-107; source is the user-attached [reference image](gold-panel-reference.png), archived unchanged. The image suggests warm-gold metal with a fine raised diamond texture. Actual material, dimensions, texture pitch/depth, plating/anodizing and price are unknown; no measurements are taken from this perspective image.
+
+Appearance direction: use this visual character on the visible control-panel portion of the chassis, coordinated with the existing tweed. This is not approval to replace the structural chassis with brass or a new dimensional panel design.
+
+Engineering proposal for T10/T11/T16: compare a textured decorative faceplate/overlay on simple structural metalwork with an economical directly finished panel. Reserve smooth label areas and flat seats for pots/jacks/switches, nuts and washers. Determine overlay/embossing thickness and available component bushing thread, antirotation features, label readability/durability, edges, hole tolerances and bonding of any exposed conductive trim. Do not rely on paint, plating or anodizing as an unverified protective-earth connection. Include the new recessed 120/220 V selector without compromising independent rear wood removal or screw/drill access.
+
+Task card: inputs = this image, fit-register.json, selected control drawings and DEC-015; output = material/finish comparison and dimensioned panel variant at T10, full-scale proof at T11, quote at T16. Owner = mechanical integration. Effort = medium. Human evidence = inspect real finish sample, washer seating, label contrast and full-size installed fit. Done only after supplier capability, exact stackup and cost are checked. No purchase, fabrication release, finish sample or exact material choice yet. Apply the low-cost/reliable-quality policy FB-104.

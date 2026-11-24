@@ -26,7 +26,9 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | DEC-009 | decision | cross-domain | documented | 2026-11-20 | [Separate electric and acoustic builds](records/DEC-009-separate-electric-acoustic-builds.md) |
 | DEC-010 | decision | schematic | selected | 2026-11-21 | [Retain the original electric tube input without an added buffer](records/DEC-010-electric-input-no-buffer.md) |
 | DEC-011 | decision | cross-domain | proposed | 2026-11-21 | [Pot mounting panel and cabinet packaging proposal](records/DEC-011-pot-panel-proposal.md) |
+| DEC-012 | decision | cross-domain | superseded | 2026-11-24 | [Keep current mains supply; defer multi-voltage variant](records/DEC-012-defer-multi-voltage-variant.md) |
 | DEC-014 | decision | schematic | documented | 2026-11-23 | [Effects-loop qualification and optical-control recommendation](records/DEC-014-effects-loop-optical-review.md) |
+| DEC-015 | decision | cross-domain | documented | 2026-11-24 | [Include switchable 120 V / 220 V mains in this build](records/DEC-015-switchable-mains.md) |
 | VAL-001 | validation | schematic | verified | 2026-10-03 | [Extracted starter matches supplied archive](records/VAL-001-starter-archive-match.md) |
 | VAL-002 | validation | cross-domain | verified | 2026-10-04 | [KiCad MCP installation and scoped smoke checks](records/VAL-002-kicad-mcp-install.md) |
 | VAL-003 | validation | schematic | verified | 2026-10-04 | [Original PowerPoint received and inspected](records/VAL-003-original-ppt-intake.md) |
@@ -46,3 +48,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-017 | validation | cross-domain | verified | 2026-11-21 | [Copper geometry and component review](records/VAL-017-copper-and-component-review.md) |
 | VAL-018 | validation | cross-domain | documented | 2026-11-21 | [All-board requirements audit](records/VAL-018-all-board-requirements-audit.md) |
 | VAL-019 | validation | cross-domain | documented | 2026-11-21 | [Researched layout comparison and bounded repairs](records/VAL-019-layout-reference-and-bounded-repairs.md) |
+| VAL-020 | validation | cross-domain | documented | 2026-11-24 | [Logical grounding proof and approximately 25 W reference](records/VAL-020-grounding-and-power-target.md) |

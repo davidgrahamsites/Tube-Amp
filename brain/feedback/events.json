@@ -1322,6 +1322,41 @@
       "next_action": "Comparison completed against pinned repository and primary sources; apply the recorded tube-amp-specific dispositions through F01\u2013F08 remediation."
     },
     {
+      "id": "FB-084",
+      "recorded_on": "2026-11-21",
+      "occurred_on": "2026-11-21",
+      "authority": "user",
+      "kind": "dual-mains-feasibility",
+      "quote": "is it possible to make it work with 220 or 120 volts?",
+      "source": "Current conversation",
+      "interpretation": "Evaluate dual-mains 120 and 220\u2013240 V 50/60 Hz feasibility. Proposed transformer primary/taps plus recessed selector and voltage-specific fusing, all auxiliary supplies included. Not yet an implemented or qualified electrical change. Manufacturer explanation: https://www.hammfg.com/electronics/transformers/faq",
+      "disposition": "superseded",
+      "canonical_paths": [
+        "brain/records/DEC-012-defer-multi-voltage-variant.md"
+      ],
+      "supersedes": [],
+      "next_action": "Deferred by FB-085; preserve feasibility context for a future variant handoff."
+    },
+    {
+      "id": "FB-085",
+      "recorded_on": "2026-11-22",
+      "occurred_on": "2026-11-22",
+      "authority": "user",
+      "kind": "defer-multi-voltage-variant",
+      "quote": "let's just keep that as another option. Let's keep the current build how it is. We can later hand it off for multiple voltage build",
+      "source": "Current conversation, following dual-mains feasibility answer",
+      "interpretation": "Retain active electric build at 220 V / 50 Hz. Defer multi-voltage work to a future separate handoff. No selector, primary rewiring or voltage-driven component changes in the active build. Existing authorized defect repairs and readability work continue.",
+      "disposition": "superseded",
+      "canonical_paths": [
+        "brain/records/DEC-012-defer-multi-voltage-variant.md",
+        "Renegade_Codex_Handoff.md"
+      ],
+      "supersedes": [
+        "FB-084"
+      ],
+      "next_action": "Superseded by FB-106 / DEC-015 on November 24: integrate selectable mains in the current build; retain this earlier decision as history."
+    },
+    {
       "id": "FB-099",
       "recorded_on": "2026-11-23",
       "occurred_on": "2026-11-23",
@@ -1425,6 +1460,94 @@
       ],
       "supersedes": [],
       "next_action": "Replace provisional quantity-one allowances with verified mainland-China quotes as exact parts and fabrication geometry close; keep required ratings and reliability."
+    },
+    {
+      "id": "FB-105",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "switchable-mains-cost-question",
+      "quote": "how much more expensive would making it 220/120 switchable make it?",
+      "source": "Current build conversation",
+      "interpretation": "Request incremental cost research; not itself adoption. Engineering allowance \u00a5150\u2013400 remains unquoted and excludes paid engineering/testing.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/component-selection/evidence/prototype-cost-allowance-2026-11-24.md"
+      ],
+      "supersedes": [],
+      "next_action": "Integrate into the ordered electrical, sourcing and panel task gates; no manufacturing release."
+    },
+    {
+      "id": "FB-106",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "adopt-switchable-mains",
+      "quote": "I would like to build it in",
+      "source": "Current build conversation",
+      "interpretation": "Adopt selectable 120 V / 220 V operation in the current electric build, superseding deferral. Planned validation includes 120 V/60 Hz and 220 V/50 Hz; exact line ranges, transformers, selector, fuses and protection remain engineering work. No purchase or qualification claim.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-015-switchable-mains.md",
+        "BUILD_VARIANT.md",
+        "Renegade_Codex_Handoff.md",
+        "plans/renegade-working-prototype/tasks.md"
+      ],
+      "supersedes": [
+        "FB-085"
+      ],
+      "next_action": "Integrate into the ordered electrical, sourcing and panel task gates; no manufacturing release."
+    },
+    {
+      "id": "FB-107",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "gold-textured-panel-reference",
+      "quote": "something like this would be cool for the panel part of the chassis",
+      "source": "Current build conversation",
+      "interpretation": "Adopt supplied warm-gold fine raised diamond texture as appearance direction. Photograph does not establish metal, thickness, texture pitch or dimensions. Compare economical durable finish options; preserve readable labels, fastening, bonding and service access.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/evidence/gold-panel-reference.md",
+        "Renegade_Codex_Handoff.md"
+      ],
+      "supersedes": [],
+      "next_action": "Integrate into the ordered electrical, sourcing and panel task gates; no manufacturing release."
+    },
+    {
+      "id": "FB-108",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "tig-panel-alternative",
+      "quote": "Something like this with tig welding would also be cool",
+      "source": "Current build conversation with TIG-bead appearance image",
+      "interpretation": "Explore visible TIG-bead / blue-purple-gold heat-colour appearance as an alternative or accent to gold diamond texture. No final material, structural weld procedure or finish selection established.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/evidence/tig-panel-reference.md",
+        "plans/renegade-working-prototype/tasks.md"
+      ],
+      "supersedes": [],
+      "next_action": "Compare real samples, durability, flat control/fastener/label areas and China fabrication quotes before selecting panel finish."
+    },
+    {
+      "id": "FB-109",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "25w-output-target",
+      "quote": "Aim for about 25 W; keep cost and size down (Recommended)",
+      "source": "Current build conversation; reply to output-power target question",
+      "interpretation": "Set approximately 25 W as the electric amplifier design target. Not a measured or guaranteed output rating. Qualify selected magnetics/supplies, tube stress and load power at explicit distortion/frequency limits; avoid unrequested higher-power redesign.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "plans/renegade-working-prototype/tasks.md"
+      ],
+      "supersedes": [],
+      "next_action": "T04: evaluate the approximately 25 W target with a physically credible output-stage/load model and report 1% and 5% THD points plus clipping; then select suitable China-source transformer and speaker."
     }
   ]
 }

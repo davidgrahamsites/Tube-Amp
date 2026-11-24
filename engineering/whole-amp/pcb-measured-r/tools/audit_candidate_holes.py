@@ -8,6 +8,9 @@ import csv, hashlib, json, sys, xml.etree.ElementTree as ET
 import pcbnew as p
 ROOT=Path(__file__).resolve().parents[1]; WHOLE=ROOT.parent
 candidate=Path(sys.argv[1]); native=Path(sys.argv[2]); output=Path(sys.argv[3])
+sys.path.insert(0,str(WHOLE/'reverb-600/tools'))
+from grounding_contract import verified_aliases
+aliases=verified_aliases(native)
 parts={}
 for c in json.loads((WHOLE/'reverb-600/circuit.json').read_text())['components']:
  if not c['reference'].startswith('#'):parts.setdefault(c['reference'],{}).update(c['pins'])
@@ -20,14 +23,14 @@ contract_groups={}; native_groups={}
 for ref,pins in parts.items():
  for pin,net in pins.items():
   if net is not None:
-   contract_groups.setdefault(net,set()).add((ref,pin))
+   contract_groups.setdefault(aliases.get(net,net),set()).add((ref,pin))
    if (ref,pin) in nativepins:native_groups.setdefault(nativepins[ref,pin],set()).add((ref,pin))
 partition_errors=[{'contract_net':n,'pins':sorted(g),'native_net_names':sorted({nativepins.get(t,'MISSING') for t in g})} for n,g in contract_groups.items() if not any(g==h for h in native_groups.values())]
 root_uuid='97ca3088-a174-52f9-956d-0a38bb8e2f56'
 paths={c.attrib['ref']:'/'+root_uuid+c.find('sheetpath').attrib['tstamps']+c.findtext('tstamps').split()[0] for c in xml.findall('./components/comp')}
 def xy(v):return [round(p.ToMM(v.x),5),round(p.ToMM(v.y),5)]
 def sha(f):return hashlib.sha256(f.read_bytes()).hexdigest()
-rows=[]; report={'scope':'Every drilled footprint pad and via on all four active and candidate boards. Nominal CAD geometry only; no lead fit, manufacturing tolerance, assembled fit or release claim.','native_xml_sha256':sha(native),'circuit_sha256':sha(WHOLE/'reverb-600/circuit.json'),'boards':{},'fabrication_ready':False,'native_contract_endpoint_partition_errors':partition_errors,'native_contract_expected_nets':len(contract_groups),'native_contract_observed_nets':len(native_groups)}; keep=[]
+rows=[]; report={'declared_external_bond':'GB1; current native cut-wire proof required','scope':'Every drilled footprint pad and via on all four active and candidate boards. Nominal CAD geometry only; no lead fit, manufacturing tolerance, assembled fit or release claim.','native_xml_sha256':sha(native),'circuit_sha256':sha(WHOLE/'reverb-600/circuit.json'),'boards':{},'fabrication_ready':False,'native_contract_endpoint_partition_errors':partition_errors,'native_contract_expected_nets':len(contract_groups),'native_contract_observed_nets':len(native_groups)}; keep=[]
 for variant,directory in [('active',ROOT/'boards'),('candidate',candidate)]:
  for name in ['Main','Power','Control','Reverb']:
   file=directory/f'Renegade_{name}.kicad_pcb'; b=p.LoadBoard(str(file));keep.append(b)

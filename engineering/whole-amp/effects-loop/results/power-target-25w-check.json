@@ -1,0 +1,52 @@
+{
+  "scope": "Near-target timestep comparison only; ideal transformer; not hardware rating",
+  "source_hashes": {
+    "engineering/whole-amp/reverb-600/circuit.json": "52b79a98994940d483516966a57f03cab7bf8332a7a879015afd53e47128ae56",
+    "engineering/whole-amp/simulation/models/dm12ax7s.inc": "ffa293249bd62b4d1d0b710b4bd42177221325d9533ddad8f0fa88dcecb0e7f6",
+    "engineering/whole-amp/simulation/models/6ca7s.inc": "02768bad91f6497d718e33c09493b8d471c6c3aafee92fb226b5c3376c068b01"
+  },
+  "factory_hashes": {
+    "tools/power_target.py": "3109115471728e99d39d7675158fa42446ebae69d363a9fce51075544174a1d2",
+    "tools/fixture.py": "10ea514a6a49c35f4c2e3d4766da725b5a0befccb38d2c89d4f7d96d42585cd5",
+    "tools/run.py": "f088be4dd24b15274487e0be674f4a54d00d2cdd45a1c7e41735950cb015c668"
+  },
+  "cases": [
+    {
+      "name": "power-target-25w-nominal",
+      "status": "completed",
+      "input_Vpk": 0.00672,
+      "fundamental_load_W": 25.018633146008987,
+      "speaker_THD_2_to_10_percent": 1.7701474245130826,
+      "speaker_DC_V": 0.123418209532376,
+      "ideal_load_DC_W": 0.0019040068055221834,
+      "speaker_settling_relative_fundamental": 4.682007803239338e-06,
+      "internal_FX_SEND": {
+        "min_V": -3.069434138400545,
+        "max_V": 3.0715104777984297,
+        "mean_V": 0.0038968130716413142,
+        "fundamental_Vpk": 3.070084601830235,
+        "THD_2_to_10_percent": 0.0943019560446525
+      },
+      "end_s": 0.5
+    },
+    {
+      "name": "power-target-25w-refined",
+      "status": "completed",
+      "input_Vpk": 0.00672,
+      "fundamental_load_W": 25.002343780933682,
+      "speaker_THD_2_to_10_percent": 1.76666567231887,
+      "speaker_DC_V": 0.12325334761542264,
+      "ideal_load_DC_W": 0.0018989234623010263,
+      "speaker_settling_relative_fundamental": 1.586029410635025e-06,
+      "internal_FX_SEND": {
+        "min_V": -3.067137173884108,
+        "max_V": 3.0692102165874537,
+        "mean_V": 0.0038901219278545617,
+        "fundamental_Vpk": 3.068699532272168,
+        "THD_2_to_10_percent": 0.094270271978544
+      },
+      "end_s": 0.5
+    }
+  ],
+  "fabrication_ready": false
+}

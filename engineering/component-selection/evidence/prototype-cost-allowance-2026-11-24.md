@@ -32,3 +32,7 @@ Largest uncertainties are exact PT/OT requirements and sourcing, speaker fit, fi
 Exclude paid assembly/engineering/bench-review labor, new test equipment, a separately purchased expression pedal, commercial compliance/sales expenses, and a full replacement build. Normal two-button channel/reverb footswitch is included. No exact duty/tax assumptions: obtain delivered mainland-China quotes and reconcile inclusions before purchase.
 
 Human check: compare actual quoted totals to these categories, verify owned-item receipts if a total-spent ledger is needed, and inspect any omission or double count. Replace allowances with dated exact MPN, quantity/MOQ, tax/shipping, fabrication setup and revision evidence as tasks T08–T16 close. Low price does not justify reduced mains insulation, inadequate ratings or unreliable parts.
+
+## Adopted scope addition — switchable mains (FB-106)
+
+After the above 220 V baseline estimate, the user requested selectable 120/220 V. Carry **¥150–400 additional materials/fabrication allowance**, unquoted, if integrated before ordering. Includes possible transformer premium, rated selector/fuse arrangement, wiring and panel change; paid engineering/validation excluded. Revised provisional remaining total **¥3,150–5,900**; including recorded ¥926 cabinet/tank/shipping **¥4,076–6,826**. These are arithmetic allowance sums, not new supplier quotations. Choice of textured gold panel finish (FB-107) is not yet priced; first try to accommodate it within the existing chassis/panel allowance and flag any meaningful premium.

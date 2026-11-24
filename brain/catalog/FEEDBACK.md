@@ -929,6 +929,29 @@ Source: Current conversation: https://github.com/zhbi98/pcb-layout-design
 
 - [engineering/whole-amp/pcb-measured-r/review/external-guidance-comparison-2026-11-21.md](<../../engineering/whole-amp/pcb-measured-r/review/external-guidance-comparison-2026-11-21.md>)
 
+## FB-084 — dual-mains-feasibility
+Authority: user. Disposition: superseded. Recorded: 2026-11-21. Original date: 2026-11-21.
+
+> is it possible to make it work with 220 or 120 volts?
+
+Evaluate dual-mains 120 and 220–240 V 50/60 Hz feasibility. Proposed transformer primary/taps plus recessed selector and voltage-specific fusing, all auxiliary supplies included. Not yet an implemented or qualified electrical change. Manufacturer explanation: https://www.hammfg.com/electronics/transformers/faq
+
+Source: Current conversation
+
+- [brain/records/DEC-012-defer-multi-voltage-variant.md](<../../brain/records/DEC-012-defer-multi-voltage-variant.md>)
+
+## FB-085 — defer-multi-voltage-variant
+Authority: user. Disposition: superseded. Recorded: 2026-11-22. Original date: 2026-11-22.
+
+> let's just keep that as another option. Let's keep the current build how it is. We can later hand it off for multiple voltage build
+
+Retain active electric build at 220 V / 50 Hz. Defer multi-voltage work to a future separate handoff. No selector, primary rewiring or voltage-driven component changes in the active build. Existing authorized defect repairs and readability work continue.
+
+Source: Current conversation, following dual-mains feasibility answer
+
+- [brain/records/DEC-012-defer-multi-voltage-variant.md](<../../brain/records/DEC-012-defer-multi-voltage-variant.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+
 ## FB-099 — effects-loop-review
 Authority: user. Disposition: incorporated. Recorded: 2026-11-23. Original date: 2026-11-23.
 
@@ -1003,4 +1026,65 @@ Source: Current build conversation; reply to remaining-budget question
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 - [plans/renegade-working-prototype/tasks.md](<../../plans/renegade-working-prototype/tasks.md>)
 - [engineering/component-selection/evidence/prototype-cost-allowance-2026-11-24.md](<../../engineering/component-selection/evidence/prototype-cost-allowance-2026-11-24.md>)
+
+## FB-105 — switchable-mains-cost-question
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> how much more expensive would making it 220/120 switchable make it?
+
+Request incremental cost research; not itself adoption. Engineering allowance ¥150–400 remains unquoted and excludes paid engineering/testing.
+
+Source: Current build conversation
+
+- [engineering/component-selection/evidence/prototype-cost-allowance-2026-11-24.md](<../../engineering/component-selection/evidence/prototype-cost-allowance-2026-11-24.md>)
+
+## FB-106 — adopt-switchable-mains
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> I would like to build it in
+
+Adopt selectable 120 V / 220 V operation in the current electric build, superseding deferral. Planned validation includes 120 V/60 Hz and 220 V/50 Hz; exact line ranges, transformers, selector, fuses and protection remain engineering work. No purchase or qualification claim.
+
+Source: Current build conversation
+
+- [brain/records/DEC-015-switchable-mains.md](<../../brain/records/DEC-015-switchable-mains.md>)
+- [BUILD_VARIANT.md](<../../BUILD_VARIANT.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [plans/renegade-working-prototype/tasks.md](<../../plans/renegade-working-prototype/tasks.md>)
+
+## FB-107 — gold-textured-panel-reference
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> something like this would be cool for the panel part of the chassis
+
+Adopt supplied warm-gold fine raised diamond texture as appearance direction. Photograph does not establish metal, thickness, texture pitch or dimensions. Compare economical durable finish options; preserve readable labels, fastening, bonding and service access.
+
+Source: Current build conversation
+
+- [engineering/whole-amp/mechanical/evidence/gold-panel-reference.md](<../../engineering/whole-amp/mechanical/evidence/gold-panel-reference.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+
+## FB-108 — tig-panel-alternative
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> Something like this with tig welding would also be cool
+
+Explore visible TIG-bead / blue-purple-gold heat-colour appearance as an alternative or accent to gold diamond texture. No final material, structural weld procedure or finish selection established.
+
+Source: Current build conversation with TIG-bead appearance image
+
+- [engineering/whole-amp/mechanical/evidence/tig-panel-reference.md](<../../engineering/whole-amp/mechanical/evidence/tig-panel-reference.md>)
+- [plans/renegade-working-prototype/tasks.md](<../../plans/renegade-working-prototype/tasks.md>)
+
+## FB-109 — 25w-output-target
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> Aim for about 25 W; keep cost and size down (Recommended)
+
+Set approximately 25 W as the electric amplifier design target. Not a measured or guaranteed output rating. Qualify selected magnetics/supplies, tube stress and load power at explicit distortion/frequency limits; avoid unrequested higher-power redesign.
+
+Source: Current build conversation; reply to output-power target question
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [plans/renegade-working-prototype/tasks.md](<../../plans/renegade-working-prototype/tasks.md>)
 

@@ -1,10 +1,13 @@
 """Compare ALL native connected-pin partitions and changed values to the contract."""
 from pathlib import Path
 from collections import defaultdict
-import json,re,xml.etree.ElementTree as ET
+import argparse,json,re,xml.etree.ElementTree as ET
+from grounding_contract import verified_aliases
 ROOT=Path(__file__).resolve().parents[1]
 spec=json.loads((ROOT/'circuit.json').read_text())['components']
-actual=ET.parse(ROOT/'review/netlist.xml').getroot()
+parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--netlist',type=Path,default=ROOT/'review/grounding-native.xml');args=parser.parse_args()
+aliases=verified_aliases(args.netlist)
+actual=ET.parse(args.netlist).getroot()
 pins={};expected={};errors=[]
 for net in actual.findall('./nets/net'):
     for pin in net.findall('node'):
@@ -16,7 +19,7 @@ for c in spec:
         key=(c['reference'],p)
         if n is None:
             if key in pins:errors.append(['NC connected',key,pins[key]])
-        else:expected[key]='GND' if n=='PE' else n
+        else:expected[key]=aliases.get(n,n)
 for key,n in expected.items():
     if key not in pins:errors.append(['missing pin',key,n])
 e2a=defaultdict(set);a2e=defaultdict(set)
@@ -44,7 +47,7 @@ for ref,e in elements.items():
     c=next(c for c in spec if c['reference']==ref)
     if numeric(e[3])!=numeric(c['value']):errors.append(['SPICE value',ref,e[3],c['value']])
     if {e[1],e[2]}!={nodes[n] for n in c['pins'].values()}:errors.append(['SPICE endpoints',ref,e[1:3],c['pins']])
-out={'passed':not errors,'native_components':len(vals),'mapped_connected_pins':len(expected),'errors':errors}
+out={'declared_external_bond':'GB1 (native cut-wire proof in grounding-audit.json)','passed':not errors,'native_components':len(vals),'mapped_connected_pins':len(expected),'errors':errors}
 out['modeled_RC_elements_compared']=len(elements)
 (ROOT/'review/connectivity.json').write_text(json.dumps(out,indent=2)+'\n')
 print(json.dumps(out,indent=2));assert not errors

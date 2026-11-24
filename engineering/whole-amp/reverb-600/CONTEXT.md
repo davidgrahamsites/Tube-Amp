@@ -7,3 +7,5 @@ Outputs: full integrated schematic revision, change list, scoped simulations and
 Human check: compare actual tank label, dimensions, coil resistance and low-level drive behavior with the recorded assumptions before commissioning. Check cabinet measurements and the eventual populated 3D assembly before ordering boards.
 
 Done for this pass: editable circuit and full schematic capture; repeatable scoped checks; exact resistor choices where evidence supports them; explicit remaining interface/fit work. No claim of actual-tank or full-amplifier validation.
+
+November 24 T03: `grounding-contract.json` owns the explicit external GB1 signal/chassis bond and permanent PE constraints. `tools/check_grounding.py` proves native topology with a temporary cut-wire negative control, preserving active CAD. `tools/grounding_contract.py` exposes the hash-checked alias seam to native/PCB audits; no general PE-to-GND equivalence is allowed. `review/grounding-review.md` owns the engineering interpretation and physical qualification limits. Native copper/geometry and panel manufacture are not approved by this check.

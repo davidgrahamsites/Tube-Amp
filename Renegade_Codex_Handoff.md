@@ -165,3 +165,15 @@ Next engineering action: resolve remaining nonlinear cases and ideal-transformer
 November 24 ordered execution (FB-103): [remaining-work queue](plans/renegade-working-prototype/tasks.md) now separates 18 tasks, acceptance evidence, owner choices and physical inputs. T01 baseline verified; T02 repaired 182 native schematic links on four PCBs with every non-path byte unchanged. Native reload, independent path/pad audit and idempotent recheck pass. Next T03: explicit protective-earth/signal-ground contract; then full-amp/RETURN envelope. Still 234 unconnected items and 68 provisional courtyards from the geometry-identical prior DRC; no new routing or fabrication release. Budget input requested; actual drill dimensions remain deferred.
 
 Budget policy, November 24 (FB-104): keep the prototype economical without sacrificing suitable quality; avoid boutique/hi-fi parts premiums. No numeric spending cap or purchase approval was supplied. Use reliable guitar-amplifier-grade parts, retain required electrical/thermal/mechanical margins, and present material cost/performance tradeoffs. [Quantity-one planning allowance](engineering/component-selection/evidence/prototype-cost-allowance-2026-11-24.md) is an engineering estimate, not a quote or owner commitment.
+
+## November 24 mains and panel scope update
+
+FB-106 supersedes the earlier multi-voltage deferral: include selectable 120 V / 220 V operation in the active electric build; plan validation at 120 V/60 Hz and 220 V/50 Hz. [DEC-015](brain/records/DEC-015-switchable-mains.md) owns transformer/selector/fuse/harness and dual-setting qualification gates. Existing 220 V native CAD is not yet a dual-voltage implementation.
+
+FB-107: use the supplied [warm-gold fine diamond texture](engineering/whole-amp/mechanical/evidence/gold-panel-reference.md) as visible chassis/control-panel appearance direction. Material/thickness/finish remains to be selected for cost, durability, readable labels, flat fastener seats, bonding and the existing service/fit requirements.
+
+FB-109: target approximately **25 W output**, keeping size and cost down. This is a design objective, not a verified clean-output rating. Report output into the specified load at defined frequency/distortion conditions, including 1% and 5% THD points and onset of clipping, before stating an amplifier rating. No 40–50 W redesign requested.
+
+FB-108 adds the [TIG-bead/heat-colour panel reference](engineering/whole-amp/mechanical/evidence/tig-panel-reference.md) as an alternative or accent, not a final finish selection. Preserve flat control/label/fastener areas and independent service access.
+
+November 24 engineering checkpoint: [grounding proof](engineering/whole-amp/reverb-600/review/grounding-review.md) closes T03 logical connectivity only; physical earth hardware remains open. [Power-target review](engineering/whole-amp/effects-loop/power-target-review.md) records the near-25 W reference and numerical refinement. T04 stays active until real-transformer behavior and remaining envelopes are qualified; no RETURN circuit or native PCB change is adopted.

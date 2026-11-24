@@ -1,0 +1,30 @@
+{
+  "schema": "renegade-external-ground-bond-v1",
+  "owner": "electrical integration",
+  "status": "schematic topology contract; physical realization unverified",
+  "safety_earth_endpoints": [["J7", "3"], ["JPE1", "1"], ["JPE2", "1"]],
+  "signal_net": "GND",
+  "safety_net": "PE",
+  "bond": {
+    "id": "GB1",
+    "kind": "permanent direct signal-common to chassis bond",
+    "native_sheet": "06_heaters.kicad_sch",
+    "native_wire_uuid": "44dd1fac-813f-5245-aeb3-8055f6fa18ff",
+    "native_wire_endpoints_mm": [[39.37, 215.9], [90.17, 215.9]],
+    "native_net_name": "GND",
+    "physical_location": "dedicated signal-to-chassis connection near quiet input reference; exact assembly coordinate pending",
+    "allowed_net_equivalence": ["GND", "PE"],
+    "qualification": "Removing ONLY the identified wire in a temporary native schematic must separate all PE endpoints from every GND endpoint, with all other endpoint partitions unchanged."
+  },
+  "physical_rules": [
+    "J7.3 protective earth goes directly to dedicated chassis safety stud JPE1; no PCB, switch, fuse or signal harness in series.",
+    "Bond other exposed conductive chassis/panel parts through independently verified protective bonds, represented by JPE2; detail every actual metal part in the assembly schedule.",
+    "GB1 is separate from the dedicated safety stud fastening and is not a ground-lift switch, resistor, capacitor or removable audio connector.",
+    "No normal signal, heater or reservoir charging current is intentionally carried through the chassis.",
+    "Insulate signal jack sleeves and other signal-grounded hardware from the chassis except the declared GB1 connection; inspect the tank-case return and mechanical mounting for a second bond.",
+    "Retain one logical GND with physically controlled local return loops and interboard paths; final populated return routing belongs to T09/T12/T14.",
+    "Protective bonds and GB1 do not attach to the removable rear wooden cover; chassis removal procedure must preserve or explicitly reconnect and verify protective bonds before energizing.",
+    "120/220 selector and all fuses act only on the defined mains circuits; PE is permanent in both modes."
+  ],
+  "release_holds": ["selected bonding hardware and conductor sizing", "fastener stack and paint/anodizing contact preparation", "all exposed metal inventory including decorative panel", "mated harness and return routing", "physical bond continuity and applicable fault-current/insulation tests"]
+}

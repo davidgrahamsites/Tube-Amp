@@ -5,3 +5,5 @@ Process: tools builds explicit source-derived decks and runs the existing ngspic
 Outputs/public seam: results/summary.json, decks and logs; review.md is the entry point; solver-review.md records the domain correction, resolved timeouts and manufacturer SEND-model limits.
 Human check: compare the actual loop voltages and dry/wet balance with the modeled cases before accepting any buffer or releasing boards.
 Task card: FB-101 / FB-102 authorizes execution of reviewed plan. Root owns extraction, simulations and interpretation. Dependencies: current circuit and generic tube models, existing simulator. First done-condition: repeatable integrated electrical reference, source hashes, loading comparisons and timestep check; not final real-transformer, mains, noise or cabinet qualification. Estimated effort: one engineering pass; full plan remains staged.
+
+T04 approximately 25 W reference: power-target-review.md owns interpretation; results/power-target-summary.json and power-target-25w-check.json own the bounded sweep/refinement evidence. Model limitations, especially nonphysical secondary DC, prevent hardware-rating or RETURN acceptance.

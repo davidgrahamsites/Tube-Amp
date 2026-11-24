@@ -1,0 +1,204 @@
+{
+  "scope": "1 kHz clean-channel reference, full volume, nominal stiff rails; NOT hardware rating",
+  "target_W": 25,
+  "source_hashes": {
+    "engineering/whole-amp/reverb-600/circuit.json": "52b79a98994940d483516966a57f03cab7bf8332a7a879015afd53e47128ae56",
+    "engineering/whole-amp/simulation/models/dm12ax7s.inc": "ffa293249bd62b4d1d0b710b4bd42177221325d9533ddad8f0fa88dcecb0e7f6",
+    "engineering/whole-amp/simulation/models/6ca7s.inc": "02768bad91f6497d718e33c09493b8d471c6c3aafee92fb226b5c3376c068b01"
+  },
+  "load_ohm": 8,
+  "main_supply_V": 400,
+  "screen_supply_V": 380,
+  "bias_V": -40,
+  "early_supply_V": 278,
+  "cases": [
+    {
+      "name": "power-target-clean-0p001",
+      "status": "completed",
+      "input_Vpk": 0.001,
+      "fundamental_load_W": 0.630360723654104,
+      "speaker_THD_2_to_10_percent": 1.6483765293617192,
+      "speaker_DC_V": 0.014436555036812715,
+      "ideal_load_DC_W": 2.605176516636532e-05,
+      "speaker_settling_relative_fundamental": 5.949094636497517e-06,
+      "internal_FX_SEND": {
+        "min_V": -0.45705055617515356,
+        "max_V": 0.4571537322767617,
+        "mean_V": 0.00010865147184041524,
+        "fundamental_Vpk": 0.4570236983862062,
+        "THD_2_to_10_percent": 0.019174267960822344
+      },
+      "end_s": 0.5
+    },
+    {
+      "name": "power-target-clean-0p003",
+      "status": "completed",
+      "input_Vpk": 0.003,
+      "fundamental_load_W": 5.11729987223352,
+      "speaker_THD_2_to_10_percent": 0.9613086502699583,
+      "speaker_DC_V": 0.06550708552521241,
+      "ideal_load_DC_W": 0.0005363972817509366,
+      "speaker_settling_relative_fundamental": 5.219739940251972e-06,
+      "internal_FX_SEND": {
+        "min_V": -1.3707735168792856,
+        "max_V": 1.371379315154606,
+        "mean_V": 0.0008612059703528574,
+        "fundamental_Vpk": 1.370696393939593,
+        "THD_2_to_10_percent": 0.04230817692599702
+      },
+      "end_s": 0.5
+    },
+    {
+      "name": "power-target-clean-0p005",
+      "status": "completed",
+      "input_Vpk": 0.005,
+      "fundamental_load_W": 14.4596782246475,
+      "speaker_THD_2_to_10_percent": 0.4727811360795714,
+      "speaker_DC_V": 0.10966202360308044,
+      "ideal_load_DC_W": 0.0015032199275903215,
+      "speaker_settling_relative_fundamental": 4.9588502427504015e-06,
+      "internal_FX_SEND": {
+        "min_V": -2.2845837946364753,
+        "max_V": 2.2857763044306134,
+        "mean_V": 0.002177915398878516,
+        "fundamental_Vpk": 2.2845687995242248,
+        "THD_2_to_10_percent": 0.06904734128624483
+      },
+      "end_s": 0.5
+    },
+    {
+      "name": "power-target-clean-0p006",
+      "status": "completed",
+      "input_Vpk": 0.006,
+      "fundamental_load_W": 20.52591553465124,
+      "speaker_THD_2_to_10_percent": 0.7389829766138424,
+      "speaker_DC_V": 0.12149613682051923,
+      "ideal_load_DC_W": 0.001845163907788791,
+      "speaker_settling_relative_fundamental": 4.771803326197718e-06,
+      "internal_FX_SEND": {
+        "min_V": -2.7411220873351154,
+        "max_V": 2.742725617433696,
+        "mean_V": 0.003085453322561682,
+        "fundamental_Vpk": 2.7413624640058467,
+        "THD_2_to_10_percent": 0.08328190481595991
+      },
+      "end_s": 0.5
+    },
+    {
+      "name": "power-target-clean-0p007",
+      "status": "completed",
+      "input_Vpk": 0.007,
+      "fundamental_load_W": 26.712839358936886,
+      "speaker_THD_2_to_10_percent": 2.318184993914111,
+      "speaker_DC_V": 0.12299262693653353,
+      "ideal_load_DC_W": 0.001890898285093664,
+      "speaker_settling_relative_fundamental": 4.5633934583352455e-06,
+      "internal_FX_SEND": {
+        "min_V": -3.1970160477892446,
+        "max_V": 3.199349009244154,
+        "mean_V": 0.004261532747033225,
+        "fundamental_Vpk": 3.197869985931314,
+        "THD_2_to_10_percent": 0.0988637538874925
+      },
+      "end_s": 0.5
+    },
+    {
+      "name": "power-target-clean-0p008",
+      "status": "completed",
+      "input_Vpk": 0.008,
+      "fundamental_load_W": 32.22385658196533,
+      "speaker_THD_2_to_10_percent": 4.768247149763558,
+      "speaker_DC_V": 0.12008635091912039,
+      "ideal_load_DC_W": 0.0018025914596337656,
+      "speaker_settling_relative_fundamental": 3.0659069365969222e-06,
+      "internal_FX_SEND": {
+        "min_V": -3.6518288908920784,
+        "max_V": 3.6555856080372267,
+        "mean_V": 0.005862334033820327,
+        "fundamental_Vpk": 3.653956055991798,
+        "THD_2_to_10_percent": 0.1163660568693773
+      },
+      "end_s": 0.5
+    },
+    {
+      "name": "power-target-clean-0p01",
+      "status": "completed",
+      "input_Vpk": 0.01,
+      "fundamental_load_W": 39.60211618405854,
+      "speaker_THD_2_to_10_percent": 10.056934535460316,
+      "speaker_DC_V": 0.1273933237322235,
+      "ideal_load_DC_W": 0.0020286323664428876,
+      "speaker_settling_relative_fundamental": 7.114982460152728e-06,
+      "internal_FX_SEND": {
+        "min_V": -4.566034901399917,
+        "max_V": 4.549388144432824,
+        "mean_V": 0.002286663707918768,
+        "fundamental_Vpk": 4.563085474921753,
+        "THD_2_to_10_percent": 0.19568184691269527
+      },
+      "end_s": 0.5
+    },
+    {
+      "name": "power-target-clean-0p03",
+      "status": "completed",
+      "input_Vpk": 0.03,
+      "fundamental_load_W": 49.740424311981556,
+      "speaker_THD_2_to_10_percent": 30.930502116333844,
+      "speaker_DC_V": -0.17313137648861474,
+      "ideal_load_DC_W": 0.0037468091906053074,
+      "speaker_settling_relative_fundamental": 3.108839079058493e-06,
+      "internal_FX_SEND": {
+        "min_V": -13.535933239483194,
+        "max_V": 13.558244177452444,
+        "mean_V": 0.06090128599188786,
+        "fundamental_Vpk": 13.554439728882635,
+        "THD_2_to_10_percent": 0.46130063153305134
+      },
+      "end_s": 0.5
+    },
+    {
+      "name": "power-target-clean-0p1",
+      "status": "completed",
+      "input_Vpk": 0.1,
+      "fundamental_load_W": 49.873746129741505,
+      "speaker_THD_2_to_10_percent": 44.2321940910527,
+      "speaker_DC_V": -2.6580332538682314,
+      "ideal_load_DC_W": 0.8831425973336673,
+      "speaker_settling_relative_fundamental": 1.2173214699767525e-06,
+      "internal_FX_SEND": {
+        "min_V": -44.98918925828192,
+        "max_V": 42.4724676435622,
+        "mean_V": 0.03620754083381037,
+        "fundamental_Vpk": 44.14511351843856,
+        "THD_2_to_10_percent": 2.7609025521025328
+      },
+      "end_s": 0.5
+    },
+    {
+      "name": "power-target-clean-0p3",
+      "status": "completed",
+      "input_Vpk": 0.3,
+      "fundamental_load_W": 50.469123158239576,
+      "speaker_THD_2_to_10_percent": 45.116181617526706,
+      "speaker_DC_V": -2.33458490730541,
+      "ideal_load_DC_W": 0.6812858361772761,
+      "speaker_settling_relative_fundamental": 3.990284573740663e-06,
+      "internal_FX_SEND": {
+        "min_V": -106.94263843693237,
+        "max_V": 75.33026260380971,
+        "mean_V": -0.40175840346512215,
+        "fundamental_Vpk": 99.59671695113471,
+        "THD_2_to_10_percent": 19.512766800099865
+      },
+      "end_s": 0.5
+    }
+  ],
+  "limitations": [
+    "ideal transformer: no core/leakage/saturation/real losses",
+    "generic unqualified 6CA7 and 12AX7 models",
+    "no mains transformer regulation or 120/220 V line corners",
+    "no physical thermal/current/insulation test",
+    "finite drive points do not determine exact 1%/5% THD crossings"
+  ],
+  "fabrication_ready": false
+}
