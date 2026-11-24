@@ -13,3 +13,5 @@ A dependency-ordered prototype plan, explicit unknowns and acceptance gates. Act
 
 ## Human check
 Review the cabinet fit evidence, quantity-one spending proposal and electrical review before irreversible manufacture or energizing.
+
+The active through-chassis goal and parts/socket dependency overlay are recorded in through-chassis.md; it links the existing queue rather than creating a second task order.

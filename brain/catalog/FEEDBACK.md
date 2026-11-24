@@ -1136,3 +1136,39 @@ Source: Current build conversation during feedback diagnosis
 - [engineering/whole-amp/effects-loop/feedback-review.md](<../../engineering/whole-amp/effects-loop/feedback-review.md>)
 - [plans/renegade-working-prototype/tasks.md](<../../plans/renegade-working-prototype/tasks.md>)
 
+## FB-114 — through-chassis-shanghai-goal
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> keep going until 6 is finished. Make sure everything is purchaseable on chinese sites shippable to shanghai, china
+
+Complete the six numbered scopes in the preceding assistant answer: transformer/output qualification, effects loop, power/protection including 120/220V, exact parts/footprints, harnesses and populated three-board chassis/service access. Every remaining purchase item needs a Chinese-site order route and Shanghai delivery evidence. Not permission to order, contact suppliers or upload fabrication files.
+
+Source: Current build conversation and active goal
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [plans/renegade-working-prototype/through-chassis.md](<../../plans/renegade-working-prototype/through-chassis.md>)
+
+## FB-115 — parts-drive-design
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> the matching parts will also determine the schematic / pcb
+
+Available exact parts must drive schematic values, pin maps, footprint/placement and mechanical dimensions. Research availability before freezing dependent circuits/PCB; requalify changes rather than force-fit substitutes.
+
+Source: Current build conversation and active goal
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [plans/renegade-working-prototype/through-chassis.md](<../../plans/renegade-working-prototype/through-chassis.md>)
+
+## FB-116 — socket-all-ics-and-tubes
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> So keep doing whatever simulations you need in order to be sure. Make sure any chips / tubes are socketed.
+
+Continue necessary simulations and require all ICs, including regulators/supervisor and future loop ICs, plus all tubes, to be replaceable in qualified sockets. Prefer socket-compatible packages; evaluate keyed replaceable adapters where necessary. Do not exempt TO220 or SMD ICs silently. Model evidence does not substitute for physical measurements.
+
+Source: Current build conversation and active goal
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [plans/renegade-working-prototype/through-chassis.md](<../../plans/renegade-working-prototype/through-chassis.md>)
+

@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "one_row_per_device": true,
+    "complete_reference_coverage": true,
+    "values_match_source": true,
+    "all_require_sockets": true,
+    "qualification_has_evidence": true,
+    "unqualified_devices_have_actions": true
+  },
+  "inventory_passed": true,
+  "device_count": 16,
+  "unqualified_references": [
+    "U1",
+    "U2",
+    "U10",
+    "U11",
+    "U12",
+    "U3",
+    "U4",
+    "U5",
+    "U6",
+    "U7",
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6"
+  ],
+  "fabrication_ready": false,
+  "negative_controls": {
+    "missing_negative_regulator_detected": true,
+    "added_ic_detected": true,
+    "unsupported_socket_release_detected": true
+  },
+  "source_sha256": {
+    "engineering/whole-amp/reverb-600/circuit.json": "be0bfd7a56a2312b78d5cb033ac395844f751b44a75fc57e800a94f67a56f815",
+    "engineering/component-selection/socketing/socket-plan.json": "d0d2e47f79b7db8a8c8e7c9b569182c3497888290e09d6b920b11f3d118b5de5",
+    "engineering/component-selection/socketing/tools/audit_socketing.py": "1ed1525bf3e7228d40719c3badfa27faed9fbc709d267b7e1c1605e2ab138508"
+  },
+  "scope": "All current source IC/tube references; native socket implementation and physical qualification remain open."
+}

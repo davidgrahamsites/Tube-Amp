@@ -1,0 +1,38 @@
+{
+  "schema": "schematic-visual-audit-v1",
+  "status": "BLOCKED",
+  "source_type": "KiCad",
+  "adapter": "KiCad10.0.6 XML/ERC/PDF plus value-only reverse-delta byte comparison",
+  "authoritative_sources": [
+    "engineering/whole-amp/reverb-600/cad/08_control_supply.kicad_sch"
+  ],
+  "baseline_connectivity": "before.xml",
+  "final_connectivity": "after.xml",
+  "connectivity_result": "PASS",
+  "erc_or_lint": {
+    "before": "1 existing GND/PE alias warning",
+    "after": "same warning"
+  },
+  "protected_artifacts_unchanged": true,
+  "sheets": [
+    {
+      "name": "08_control_supply",
+      "full_page_render": "after-supply.pdf",
+      "status": "BLOCKED",
+      "scoped_edit_result": "C212 value only; readable and no new overlap"
+    }
+  ],
+  "dense_crops": [
+    {
+      "region": "C212 value/polarity",
+      "render": "after-supply.pdf, lower capacitor row",
+      "status": "PASS"
+    }
+  ],
+  "remaining_limitations": [
+    "Full-project readability not assessed in this electrical-value checkpoint",
+    "Existing long local bypass routes and U7 text crowding need humanizer layout pass",
+    "PCB footprint and local bypass placement remain provisional"
+  ],
+  "final_snapshot": "after-supply.pdf"
+}

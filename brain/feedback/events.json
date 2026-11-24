@@ -1616,6 +1616,57 @@
       ],
       "supersedes": [],
       "next_action": "Report compensation differences at5/10/20kHz across Presence positions; preserve usable treble and assess speaker response/actual pickup before selection."
+    },
+    {
+      "id": "FB-114",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "through-chassis-shanghai-goal",
+      "quote": "keep going until 6 is finished. Make sure everything is purchaseable on chinese sites shippable to shanghai, china",
+      "source": "Current build conversation and active goal",
+      "interpretation": "Complete the six numbered scopes in the preceding assistant answer: transformer/output qualification, effects loop, power/protection including 120/220V, exact parts/footprints, harnesses and populated three-board chassis/service access. Every remaining purchase item needs a Chinese-site order route and Shanghai delivery evidence. Not permission to order, contact suppliers or upload fabrication files.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "plans/renegade-working-prototype/through-chassis.md"
+      ],
+      "supersedes": [],
+      "next_action": "Work parts-first through the six scopes; preserve physical verification and actual drill-envelope dependencies."
+    },
+    {
+      "id": "FB-115",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "parts-drive-design",
+      "quote": "the matching parts will also determine the schematic / pcb",
+      "source": "Current build conversation and active goal",
+      "interpretation": "Available exact parts must drive schematic values, pin maps, footprint/placement and mechanical dimensions. Research availability before freezing dependent circuits/PCB; requalify changes rather than force-fit substitutes.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "plans/renegade-working-prototype/through-chassis.md"
+      ],
+      "supersedes": [],
+      "next_action": "Prioritize magnetics, speaker, capacitors, socketed IC packages and connectors; feed accepted evidence into native revisions."
+    },
+    {
+      "id": "FB-116",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "socket-all-ics-and-tubes",
+      "quote": "So keep doing whatever simulations you need in order to be sure. Make sure any chips / tubes are socketed.",
+      "source": "Current build conversation and active goal",
+      "interpretation": "Continue necessary simulations and require all ICs, including regulators/supervisor and future loop ICs, plus all tubes, to be replaceable in qualified sockets. Prefer socket-compatible packages; evaluate keyed replaceable adapters where necessary. Do not exempt TO220 or SMD ICs silently. Model evidence does not substitute for physical measurements.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "plans/renegade-working-prototype/through-chassis.md"
+      ],
+      "supersedes": [],
+      "next_action": "Inventory every current/proposed IC and tube, select sockets/adapters with current/voltage/thermal/retention evidence, then update PCB/assembly and simulations."
     }
   ]
 }

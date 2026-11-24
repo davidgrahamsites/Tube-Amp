@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "native_named_nets_and_pins_unchanged": true,
+    "only_c212_component_value_changed": true,
+    "new_cap_minimum_uF_above_22": true,
+    "old_aluminium_value_detected_as_inadequate": true,
+    "contract_only_value_changed": true,
+    "reverse_exact_kicad_sch": true,
+    "reverse_exact_kicad_pcb": true,
+    "erc_unchanged": true,
+    "control_unconnected_count_unchanged": true,
+    "control-drc_unchanged": true,
+    "six_output_experiment_decks_identical": true
+  },
+  "passed": true,
+  "baseline_commit": "d0fae8a9c8fa76af2f63d5e79e54405b1211b579",
+  "source_sha256": {
+    "engineering/whole-amp/reverb-600/circuit.json": "be0bfd7a56a2312b78d5cb033ac395844f751b44a75fc57e800a94f67a56f815",
+    "engineering/whole-amp/reverb-600/cad/08_control_supply.kicad_sch": "513678484ecf33a7987aaa3116969334fde8b7e799738390b0261cedcd0ac4bf",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Control.kicad_pcb": "f27946cbfacd1d9c56c978c8c38e12ec6d5ad43055ec49ca4a87d3fd964d00df"
+  },
+  "corrected_minimum_uF": 37.6,
+  "required_aluminium_nominal_minimum_uF": 22,
+  "effects_experiment_scope": "Supply sheet excluded; six emitted decks identical. No new transient run and no regulator stability claim.",
+  "footprint_hold": "C212 selected EEUFR1H470 pitch2.5mm; provisional native pitch3.5mm must change before fabrication.",
+  "drc_comparison_note": "Native DRC selected different endpoints within two already-unconnected nets; all non-airwire findings match, count remains90, and reverse-delta byte proof establishes unchanged board geometry/nets. Neither report is a routing pass.",
+  "fabrication_ready": false
+}

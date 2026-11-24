@@ -1688,12 +1688,14 @@
     "refs": [
       "C212"
     ],
-    "value": "2.2u",
-    "requirement": "50V electrolytic",
-    "status": "candidate identified; qualification incomplete",
+    "value": "47u",
+    "requirement": "50V aluminium electrolytic; local at U7 input; minimum 22uF following ST L79 section6",
+    "status": "engineering value/MPN selected; native value corrected; 2.5mm part pitch versus 3.5mm provisional native footprint remains a fabrication hold",
     "candidate_mpns": [
-      "224CL0045"
-    ]
+      "EEUFR1H470"
+    ],
+    "selected_mpn": "EEUFR1H470",
+    "selection_evidence": "../whole-amp/aux-supply/review.md"
   },
   {
     "id": "P128",

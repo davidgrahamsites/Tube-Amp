@@ -1,0 +1,145 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-24T06:33:36",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56",
+            "violations": []
+        },
+        {
+            "path": "/01_clean/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/4d009151-54ee-5db2-9e88-35a59ea57800",
+            "violations": []
+        },
+        {
+            "path": "/02_dirty/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/bdc76ce9-5e3b-5476-bcdf-754b0b4e433b",
+            "violations": []
+        },
+        {
+            "path": "/02b_dirty_tone/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/f6df3650-4c89-5e6e-9389-13cf6b4ae0ad",
+            "violations": []
+        },
+        {
+            "path": "/03_routing/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/1c116e34-ac54-5b0c-961d-68eab3d403fb",
+            "violations": []
+        },
+        {
+            "path": "/04_output/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/57e6272d-c60f-5b65-875d-150fd6bdf0aa",
+            "violations": []
+        },
+        {
+            "path": "/04b_output_transformer/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/acdbd7dd-8cd1-5895-9f00-564cdfdc388b",
+            "violations": []
+        },
+        {
+            "path": "/05_supplies/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d10e9146-3ce4-5260-b263-459b85716892",
+            "violations": []
+        },
+        {
+            "path": "/05b_bias_reverb_supply/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/2c971003-9cd5-5413-941d-0394c54ff330",
+            "violations": []
+        },
+        {
+            "path": "/06_heaters/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/d48779ef-2759-56c8-9634-7b15538da9a7",
+            "violations": [
+                {
+                    "description": "Both GND and PE are attached to the same items; GND will be used in the netlist",
+                    "items": [
+                        {
+                            "description": "Global Label 'GND'",
+                            "pos": {
+                                "x": 0.9017,
+                                "y": 2.0955
+                            },
+                            "uuid": "9878993a-1a59-5584-8342-fc91302529d9"
+                        },
+                        {
+                            "description": "Global Label 'PE'",
+                            "pos": {
+                                "x": 0.3937,
+                                "y": 2.0955
+                            },
+                            "uuid": "e5fac41f-9753-503f-a3e4-f4aea01f439c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "multiple_net_names"
+                }
+            ]
+        },
+        {
+            "path": "/07a_reverb_send/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16",
+            "violations": []
+        },
+        {
+            "path": "/07b_reverb_recovery/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/de99432e-dfbd-5473-9108-d29c4d823fa1",
+            "violations": []
+        },
+        {
+            "path": "/07c_reverb_output/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11",
+            "violations": []
+        },
+        {
+            "path": "/07d_reverb_harness/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/071c6043-2437-5929-9c22-f7ea0ce0e18a",
+            "violations": []
+        },
+        {
+            "path": "/08_control_supply/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/06576ab5-afa1-5e26-bb42-7027176470f3",
+            "violations": []
+        },
+        {
+            "path": "/09_controller/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/ec32d9d4-9b48-5b52-9c2f-397185e020d6",
+            "violations": []
+        },
+        {
+            "path": "/09b_latches_drivers/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/0774e6be-6282-5572-be57-238f3edfef89",
+            "violations": []
+        },
+        {
+            "path": "/10_logic_power/",
+            "uuid_path": "/97ca3088-a174-52f9-956d-0a38bb8e2f56/3a2f3a05-76ed-579e-ad89-f7acbc118851",
+            "violations": []
+        }
+    ],
+    "source": "Renegade_220V_Reverb.kicad_sch"
+}
