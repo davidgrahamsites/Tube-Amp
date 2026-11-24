@@ -2302,7 +2302,7 @@
       "value": "TPS3808G50DBVR",
       "symbol": "Power_Supervisor_TPS3808DBV",
       "pins": {
-        "1": "RESET_N",
+        "1": "RESET_RAW_N",
         "2": "GND",
         "3": "MR_N",
         "4": "RESET_CT",
@@ -2341,7 +2341,7 @@
       "symbol": "Device_R",
       "pins": {
         "1": "+5V",
-        "2": "RESET_N"
+        "2": "RESET_RAW_N"
       },
       "source": "Revision v0.2",
       "rating": "0.25 W",
@@ -2527,14 +2527,14 @@
     },
     {
       "project": "Renegade_220V_Reverb",
-      "sheet": "10_logic_power",
+      "sheet": "09b_latches_drivers",
       "reference": "U1",
       "unit": 3,
       "value": "SN74HC14N",
       "symbol": "74xx_74HC14",
       "pins": {
-        "5": "GND",
-        "6": null
+        "5": "RESET_RAW_N",
+        "6": "RESET_INV"
       },
       "source": "",
       "rating": "",
@@ -2544,14 +2544,14 @@
     },
     {
       "project": "Renegade_220V_Reverb",
-      "sheet": "10_logic_power",
+      "sheet": "09b_latches_drivers",
       "reference": "U1",
       "unit": 4,
       "value": "SN74HC14N",
       "symbol": "74xx_74HC14",
       "pins": {
-        "9": "GND",
-        "8": null
+        "9": "RESET_INV",
+        "8": "RESET_N"
       },
       "source": "",
       "rating": "",

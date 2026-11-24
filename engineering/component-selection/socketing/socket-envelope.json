@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "status": "planning envelope for preferred TE candidates; not fabrication qualified",
+  "authority": "FB-117",
+  "drawing": {
+    "file": "evidence/te-2199298-rev-a.pdf",
+    "manufacturer": "TE Connectivity",
+    "number": "C-2199298",
+    "revision": "A",
+    "date": "2013-11-18",
+    "sha256": "f929c13c7f64a0a8da5ef04bd42eaaebb13d205ee084285712fb9f4debbb6f77",
+    "source_url": "https://www.ariat-tech.tw/datasheet/1c/1-2199298-1.pdf",
+    "current_revision_comparison_pending": true
+  },
+  "common": {
+    "pitch_mm": 2.54,
+    "row_spacing_mm": 7.62,
+    "socket_width_max_mm": 10.2,
+    "socket_height_max_mm": 5.3,
+    "ic_seating_height_max_mm": 5.08,
+    "combined_height_bound_mm": 10.38,
+    "design_height_reserve_mm": 12,
+    "extra_extraction_reserve_mm": 15,
+    "pcb_hole_nominal_mm": 1.0,
+    "provisional_finished_hole_tolerance_mm": 0.05,
+    "tail_width_max_mm": 0.7,
+    "tail_thickness_max_mm": 0.22,
+    "accepted_ic_lead_thickness_mm": [
+      0.2,
+      0.3
+    ],
+    "selected_ic_lead_thickness_nominal_mm": 0.25,
+    "full_ic_lead_thickness_tolerance_known": false,
+    "current_per_contact_A": 1,
+    "contact_resistance_max_ohm": 0.02,
+    "working_voltage_V": 250,
+    "temperature_C": [
+      -40,
+      105
+    ],
+    "mating_cycles_min": 50
+  },
+  "packages": {
+    "DIP-8": {
+      "mpn": "1-2199298-2",
+      "refs": [
+        "U10",
+        "U11",
+        "U12"
+      ],
+      "socket_length_max_mm": 10.36,
+      "ic_length_max_mm": 10.16,
+      "pin_span_mm": 7.62
+    },
+    "DIP-14": {
+      "mpn": "1-2199298-3",
+      "refs": [
+        "U1",
+        "U2"
+      ],
+      "socket_length_max_mm": 17.98,
+      "ic_length_max_mm": 19.69,
+      "pin_span_mm": 15.24
+    }
+  },
+  "fabrication_ready": false
+}

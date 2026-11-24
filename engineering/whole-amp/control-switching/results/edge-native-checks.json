@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "baseline_commit": "91b0a9cd795a7ac52f01c5e79e92b8dbbe1414f4",
+  "checks": {
+    "source_only_six_pins_and_two_unit_sheet_moves": true,
+    "native_export_matches_exact_pin_contract": true,
+    "all_old_geometry_and_copper_preserved": true,
+    "five_reset_links_layer_aware_connected_HV45_min_0p3mm": true,
+    "erc_no_new_violations": true,
+    "drc_no_new_violations": true,
+    "native_drill_delta_only_one_0p4mm_via_slots_preserved": true
+  },
+  "new_tracks": 27,
+  "new_vias": 1,
+  "negative_controls_rejected": [
+    "omitted_reset_link",
+    "wrong_via_drill",
+    "wrong_reset_polarity_net"
+  ],
+  "control_unconnected_items": 79,
+  "control_existing_drc_violations": 13,
+  "native_erc_existing_violations": 1,
+  "source_sha256": {
+    "engineering/whole-amp/reverb-600/circuit.json": "9ae5b420ca867ec443b87da96ec9955fd8e1bf3a435c9f6baf4adba5e680320f",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Control.kicad_pcb": "458229be2ab76eae69b5329674efb1ab1ef125df7ed614511ea564b1563a06e6",
+    "engineering/whole-amp/reverb-600/cad/09b_latches_drivers.kicad_sch": "b9b461bc9f02b13079e6f6caa74c28416b884e6e34d29061d4c614c17d626648",
+    "engineering/whole-amp/reverb-600/cad/10_logic_power.kicad_sch": "eec7da1c05b131ad61cd1bbcb00ad17c73f3668dfb08affcfa07a8ef63560438"
+  },
+  "fabrication_ready": false
+}

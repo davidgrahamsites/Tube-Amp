@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "baseline_commit": "91b0a9cd795a7ac52f01c5e79e92b8dbbe1414f4",
+  "method": "Replayed initial mutation and finalizer on temporary baseline files; semantic top-level objects match current two sheets and Control PCB after UUID/order/numeric-format normalization",
+  "commands": [
+    "integrate_reset_edges.py --apply",
+    "finalize_reset_edges.py --apply"
+  ],
+  "scope": "Factory reproducibility; independent electrical/geometry checks in edge-native-checks.json",
+  "factory_sha256": {
+    "integrate_reset_edges.py": "1a2c43d64b45b72919fcf75e311e195a4cda16758d5f0dbb83ef39b0a791b9d7",
+    "finalize_reset_edges.py": "533497653965a8406196b7814b3bac97178f224915997009b75204c8b6555ce2",
+    "edge-routes.json": "4bb5b31fb4b0dcd2742931aceca919cb7f36d19af3d931b4693e6d311640b1dd"
+  }
+}

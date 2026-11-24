@@ -1,0 +1,22 @@
+{
+  "reviewed_on": "2026-11-24",
+  "method": "Native KiCad PDF exports rendered through macOS PDFKit; whole sheets and dense crops inspected",
+  "passed_for_changed_region": true,
+  "checks": [
+    "U3 to U1C to U1D visible local wiring with active-low RESET_N output",
+    "raw/interstage labels on stubs rather than overlapping wire text",
+    "U1G/U2C display and reference clear of VCC labels",
+    "Control board inspected against route continuity and DRC receipts"
+  ],
+  "limits": [
+    "Unfinished global routing and provisional footprints remain",
+    "Full human-readable schematic acceptance remains a project-level gate"
+  ],
+  "pdf_sha256": {
+    "edge-control-board.pdf": "39750cc2fd041f858861061588919f22a1688944bad6ff48af78daec09a53b9e",
+    "edge-after-10_logic_power.pdf": "04290d3b159f17c263ad6f4552d4ec73d164f446812b06ef24faceb9b5e76e12",
+    "edge-before-10_logic_power.pdf": "750c014708edce39fbf57293a07ae4aae03433939ea0f384164c82b2c7390ff7",
+    "edge-after-09b_latches_drivers.pdf": "fc0e2b8d3308e7769598a485ddebb75a17d405f1164723f13543c4044760f55c"
+  },
+  "previous_latch_export": "driver-sheet.pdf"
+}

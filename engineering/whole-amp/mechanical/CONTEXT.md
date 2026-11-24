@@ -16,3 +16,5 @@ Current received opening/height are recorded under cabinet.user_measurements (FB
 Output-protection package and service constraints: [socket-side resistor handoff](review/output-protection-fit.md). No populated chassis/tool clearance is inferred from candidate body dimensions.
 
 PCB envelope diagnostic: fit-register.json/pcb_envelope_study owns trial placement and allowance parameters. tools/board_fit_cad.py consumes the read-only native mechanical-inventory.json from pcb-measured-r and generates review/board-fit-diagnostic.FCStd/STEP/JSON. tools/plot_board_fit.py renders the receipt. Read review/board-fit-review.md: actual board outlines/holes are distinct from unqualified component/support/thermal/tool geometry. Drill clearance deferred by user until November25.
+
+Socket envelope seam: component-selection/socketing/socket-envelope.json is consumed read-only by tools/check_socket_fit.py. review/socket-fit-checks.json compares provisional DIP bodies and holes with native boards; it does not establish populated chassis, retention or drill access.

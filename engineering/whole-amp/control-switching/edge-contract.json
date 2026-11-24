@@ -1,0 +1,27 @@
+{
+  "baseline_commit": "91b0a9cd795a7ac52f01c5e79e92b8dbbe1414f4",
+  "status": "bounded reset edge repair; supervisor replacement remains pending",
+  "pin_changes": {
+    "U3.1": ["RESET_N", "RESET_RAW_N"],
+    "R321.2": ["RESET_N", "RESET_RAW_N"],
+    "U1.5": ["GND", "RESET_RAW_N"],
+    "U1.6": [null, "RESET_INV"],
+    "U1.9": ["GND", "RESET_INV"],
+    "U1.8": [null, "RESET_N"]
+  },
+  "hc14": {
+    "mpn": "SN74HC14N",
+    "temperature_C": [-40, 85],
+    "datasheet_test_supply_V": 4.5,
+    "test_load_max_F": 5e-11,
+    "transition_max_s": 1.9e-8,
+    "propagation_each_max_s": 3.1e-8,
+    "input_capacitance_max_F": 1e-11,
+    "slow_input_permitted": true
+  },
+  "hc74": {"input_capacitance_max_F": 1e-11, "clear_inputs": 2, "input_transition_limit_s_at_4p5V": 5e-7},
+  "raw_pullup_ohm": 10000,
+  "raw_capacitance_screen_F": [2e-11, 5e-11, 1e-10],
+  "physical_capacitance_measured": false,
+  "fabrication_ready": false
+}

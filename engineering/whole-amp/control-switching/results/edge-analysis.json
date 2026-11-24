@@ -1,0 +1,49 @@
+{
+  "scope": "Steady powered logic edge bound; startup and rail-collapse behavior NOT qualified",
+  "model_sha256": "0d2f974f84e65ffdad0f69f1381d6a0bd4a3767f96137cab6875ecdc45e2a18e",
+  "vendor_model_relevant_lines": [
+    "X_U34         SENSE_CT FALLING_EDGE_VDD MR_OUT N17060149 AND3_BASIC_GEN PARAMS:",
+    "X_U1_U18         SENSE_CT U1_SENSE_BAR INV_BASIC_GEN PARAMS: VDD=1 VSS=0",
+    "G_U1_ABMI2         0 CT VALUE { IF(V(SENSE_CT)>0.5,1.19u,0)    }",
+    "X_U1_S4    U1_SENSE_BAR 0 CT 0 CTDELAY_U1_S4 ",
+    "X_U50         N17060149 CT_OK CT_VDD_OK AND2_BASIC_GEN PARAMS: VDD=1 VSS=0"
+  ],
+  "manual_reset_model_release_time_s": 0.4200009922018962,
+  "manual_reset_input_fully_high_time_s": 0.420001,
+  "model_release_delay_after_MR_rise_s": -7.798103829337322e-09,
+  "model_limitation": "MR gates RESET but does not discharge CT in this model; datasheet requires CT discharge and repeated delay. Do not treat this as a physical-device failure or patch the model to obtain a pass.",
+  "raw_RC_10_to_90_s": [
+    {
+      "capacitance_F": 2e-11,
+      "rise_s": 4.3944491546724387e-07
+    },
+    {
+      "capacitance_F": 5e-11,
+      "rise_s": 1.0986122886681098e-06
+    },
+    {
+      "capacitance_F": 1e-10,
+      "rise_s": 2.1972245773362196e-06
+    }
+  ],
+  "conditioned_edge_max_s": 1.9e-08,
+  "hc74_transition_limit_s": 5e-07,
+  "edge_margin_factor": 26.31578947368421,
+  "two_gate_propagation_bound_s": 6.2e-08,
+  "output_socket_trace_capacitance_budget_F": 3e-11,
+  "existing_TPS3808G50_conservative_release_max_V": 4.861575,
+  "minimum_5V_rail_V": 4.75,
+  "existing_supervisor_release_guaranteed": false,
+  "assumptions": [
+    "4.5 V datasheet test point, -40..85 C, <=50 pF each gate output",
+    "Two HC74 clear inputs at <=10 pF each; no extra output loads",
+    "2% TPS3808 threshold and 2.5% hysteresis combined multiplicatively as conservative screen"
+  ],
+  "pending": [
+    "actual output capacitance and socket parasitics",
+    "supervisor threshold/carrier selection",
+    "fast rail collapse and power-up state",
+    "reset release coincident with external clocks; HC74 recovery timing"
+  ],
+  "fabrication_ready": false
+}

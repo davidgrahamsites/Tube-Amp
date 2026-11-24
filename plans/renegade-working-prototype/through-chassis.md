@@ -42,3 +42,7 @@ Actual drill envelope remains deferred until November 25. Cabinet depth datum, a
 ## Control switching checkpoint — November 24
 
 [VAL-028](../../brain/records/VAL-028-control-driver-reset-checkpoint.md) integrates logic-level relay drivers/local clamps with native preservation and drill-delta checks. 55 simulation runs have retained provenance and explicit limits; supervisor/carrier/rail-collapse qualification remains open. Current Control has 84 unconnected items and 13 existing DRC findings. Functional blocks and fixed mounting holes are preserved. No three-board fit or fabrication release is implied.
+
+## Reset-edge and socket-envelope checkpoint — November 24
+
+[VAL-029](../../brain/records/VAL-029-reset-edges-and-socket-fit.md) adopts U1C/D edge conditioning with exact native/route/drill preservation checks. Control79 unconnected/13 existing DRC; no new ERC/DRC finding. G50 release margin, replacement carrier, physical MR/brownout and clock coincidence remain open. TE socket candidates have domestic stock and dimensional evidence; current five DIP footprints need 1.0 mm holes and larger courtyards. The 10.38 mm assembly height and provisional extraction reserve are consumed read-only by the mechanical screen; populated three-board fit and drill access remain unqualified. Next: exact supervisor/carrier and socket footprint qualification, then populated placement.

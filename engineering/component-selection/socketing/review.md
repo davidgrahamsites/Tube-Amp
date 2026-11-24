@@ -26,3 +26,7 @@ Resolve the supervisor route and exact regulator contacts/heatsink fastening, th
 
 ## Subsequent contact/supply screen
 [Contact review](contact-review.md) rejects obsolete Molex sourcing and retains TE/Harwin contacts as unqualified for the actual rectangular leads. The linked auxiliary envelope supplies conditional current and heatsink bounds; it does not qualify any socket.
+
+## November 24 TE candidate update
+
+Read [the TE review](te-candidate-review.md) for domestic stock, exact tail/hole geometry and the 10.38 mm stacked-height planning bound. Preferred candidates changed in socket-plan.json; no part is fabrication-qualified and no socket exception is adopted.
