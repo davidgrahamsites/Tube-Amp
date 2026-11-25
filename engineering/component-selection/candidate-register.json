@@ -889,7 +889,6 @@
   },
   {
     "coverage_ids": [
-      "P076",
       "P090"
     ],
     "mpn": "MEB104J63V82CB0236",
@@ -1192,5 +1191,19 @@
     "stock_location": "other locations; mainland stock not established",
     "evidence": "engineering/component-selection/power-film/review.md",
     "notes": "50uF10%600VDC. Native nominal grid matches but full rigid-lead tolerance witness fails 1.8mm holes. Four centered maximum-body gaps9.05mm versus10mm recommended. RS China delivery policy supports Shanghai route; exact address/date unqueried. No order/adoption."
+  },
+  {
+    "mpn": "CC0805KRX7R9BB104",
+    "coverage_ids": [
+      "P076"
+    ],
+    "supplier_sku": "C49678",
+    "supplier_url": "https://item.szlcsc.com/50686.html",
+    "status": "engineering selected; native source, schematic and 0805 board agree; stock and Shanghai checkout pending",
+    "observed": "2026-11-25",
+    "unit_price_cny": null,
+    "minimum_quantity": null,
+    "observed_domestic_stock": null,
+    "notes": "Yageo primary spec100nF10%50VX7R0805; exact domestic LCSC identity verified by web. Direct HTTP retrieval405; no current stock/price claim. Preserves existing native ceramic implementation; supersedes stale P076 film coverage. See evidence/local-bypass-selection-2026-11-25.md."
   }
 ]

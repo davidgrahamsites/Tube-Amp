@@ -302,3 +302,7 @@ R304/R31410k now separate C301/C311 from U1 inputs in source, readable native sc
 ## November 25 — VAL-057 film identity parity
 
 [VAL-057](brain/records/VAL-057-film-capacitor-parity.md) synchronizes 15 adopted film capacitor identities across source and four native sheets. All144 named net partitions,236 component identities apart from declared hidden metadata,18 rendered pages and four unchanged boards pass preservation checks; ERC remains one existing finding. ICkey has a matching 100nF mainland listing; its 1uF listing has a package contradiction, and direct LCSC stock refresh failed. Shanghai checkout is unverified. C351–C353 native ceramic implementation is preserved; stale committed P076 coverage and a missing evidence pointer are next. Full power sequencing, circuit integration/routing and populated three-board/drill fit remain incomplete; no fabrication release.
+
+## November25 — VAL-058 bypass selection record repaired
+
+[VAL-058](brain/records/VAL-058-bypass-selection-parity.md) resolves stale P076 film coverage to the already adopted Yageo CC0805KRX7R9BB104 ceramic and replaces the missing evidence pointer with a dated manufacturer-backed record. Source/schematic/Control board identities agree; all23 native files are unchanged. Chinese LCSC identity verified, live stock/Shanghai checkout unverified. Next is complete power sequencing, including phantom-power handling and C351 ground-return preservation when U1F is reused; remaining native routing and populated three-board fit follow. All six scopes remain incomplete.

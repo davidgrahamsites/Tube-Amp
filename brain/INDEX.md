@@ -88,3 +88,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-055 | validation | schematic | documented | 2026-11-25 | [Shared reference and logic-input backfeed](records/VAL-055-control-input-backfeed.md) |
 | VAL-056 | validation | schematic | documented | 2026-11-25 | [Native debounce capacitor input-current limits](records/VAL-056-debounce-input-repair.md) |
 | VAL-057 | validation | schematic | documented | 2026-11-25 | [Adopted film-capacitor identity parity](records/VAL-057-film-capacitor-parity.md) |
+| VAL-058 | validation | components | documented | 2026-11-25 | [Existing ceramic bypass selection reconciled](records/VAL-058-bypass-selection-parity.md) |
