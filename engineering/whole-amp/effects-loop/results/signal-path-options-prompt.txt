@@ -1,0 +1,25 @@
+Use case: infographic-diagram.
+Create a highly legible, polished functional audio signal-path comparison image for a tube guitar amplifier. One landscape technical poster with THREE clearly separated numbered columns, showing all three complete concepts. Large clean sans-serif labels, ample whitespace, flat vector-like boxes and crisp directed arrows. No decorative photo objects. Title: "THREE EFFECTS-LOOP OPTIONS". Subtitle: "All place external effects BEFORE the spring reverb". Use consistent colors by FUNCTION across the three columns: blue main audio, amber external pedal route, teal spring wet route, purple proposed compensation. Dashed gray arrows mean bypass. Legend: "Dashed = bypass • Selector chooses ONE path". Unambiguous connections matter more than decoration.
+
+EXACT LOGIC for each column:
+Column 1 heading: "1  CONSISTENT BUFFERED PATH". Small subheading: "Recommended direction".
+Top "Clean / dirty preamp" → "SEND buffer + level reduction".
+From SEND buffer two alternate paths: solid arrow through "SEND → pedals → RETURN" into a selector; dashed bypass arrow directly from SEND buffer to the SAME selector. Label selector "Loop / bypass".
+Selector → "RETURN gain recovery" → a split point.
+At this split, left branch "Dry path" directly to "Dry + wet mix"; right branch through "Spring driver" → "Spring tank" → "Recovery + REVERB knob" to the SAME "Dry + wet mix".
+Mix → "Tube phase inverter" → "EL34 pair + output transformer" → "Speaker".
+Note beneath column: "Same SEND and RETURN stages in both modes. Recalibrate the mix."
+
+Column 2 heading: "2  ORIGINAL BYPASS".
+Top "Clean / dirty preamp". A SOLID effects route from preamp → "SEND buffer + level reduction" → "SEND → pedals → RETURN" → "RETURN gain recovery" → selector "Loop / bypass".
+A DASHED bypass route goes from the PREAMP directly to that selector, skipping ALL SEND, pedals and RETURN stages. It must NOT start at SEND buffer.
+Selector → split into exactly the same complete dry and spring branches as column1, then same mix → phase inverter → EL34/output transformer → speaker.
+Note: "Original direct path in bypass. Effects mode can change dry / reverb balance."
+
+Column 3 heading: "3  COMPENSATED EFFECTS PATH".
+Top "Clean / dirty preamp". SOLID effects route → "SEND buffer + level reduction" → "SEND → pedals → RETURN" → "RETURN gain recovery" → purple box "Loading + gain compensation" → selector "Loop / bypass".
+DASHED bypass goes from PREAMP directly to that selector, skipping SEND, pedals, RETURN and compensation.
+Selector → split into same full dry branch and spring driver → spring tank → Recovery + REVERB knob branch, converging at same dry+wet mixer, then phase inverter → EL34 pair + output transformer → speaker.
+Note: "Compensation must track changing source behavior. Not yet proven."
+
+Keep the three lower dry/reverb/output sections visually aligned and identical. Each column has its OWN complete spring and speaker path; no connections between columns. The spring path is PARALLEL to the dry path, never serial with dry. The REVERB knob is on the wet branch only. Do not draw feedback arrows or an electronic controller: this is a functional comparison, not a finished schematic. Footer: "Concepts only — no option selected. Buffers do not imply extra tubes." Optimize for readable comparison rather than tiny text.

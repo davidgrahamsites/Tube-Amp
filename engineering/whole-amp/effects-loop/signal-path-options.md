@@ -1,6 +1,6 @@
 # Three effects-loop behavior options
 
-Owner: electric integration. User request FB-121,25 November2026. These are functional diagrams for choosing behavior, not selected components or manufacturing schematics. No option has been approved. Each option keeps the effects loop before the spring-reverb split, preserves the clean/dirty preamps, and retains constant dry with adjustable wet. Power supply and switching-control wiring are omitted from these audio-path diagrams.
+Owner: electric integration. User request FB-121,25 November2026. These are functional diagrams for choosing behavior, not selected components or manufacturing schematics. Option 1 was approved on 25 November 2026 (FB-123; DEC-016). Each option keeps the effects loop before the spring-reverb split, preserves the clean/dirty preamps, and retains constant dry with adjustable wet. Power supply and switching-control wiring are omitted from these audio-path diagrams.
 
 Solid arrows show signal paths. A bypass/on selector chooses ONE input; it does not mix the two. The SEND and RETURN circuitry can use discrete transistors; a block labeled buffer does not select an amplifier IC or add a tube.
 
@@ -67,4 +67,4 @@ flowchart LR
 
 The REVERB knob changes the wet contribution; it is not a dry/wet crossfade. External effects are applied before the signal excites the spring in every option. Main audio, power and reverb board ownership stays intact; these diagrams do not settle their physical placement.
 
-Evidence: [port-envelope review](return-port-review.md), results/return-port-audit.json. The choice remains open pending the user's review of these diagrams. Continue independent parts and physical qualification without treating a diagram request as acceptance of option1.
+Evidence: [port-envelope review](return-port-review.md), results/return-port-audit.json. Option 1 is now selected; see brain/records/DEC-016-buffered-loop-expression-selector.md. The generated results/signal-path-options.png is the historical comparison shown before approval; its footer is superseded.

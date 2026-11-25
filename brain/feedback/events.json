@@ -1752,6 +1752,71 @@
       ],
       "supersedes": [],
       "next_action": "Provide all three functional signal paths and common dry/spring/output section; keep behavior selection pending."
+    },
+    {
+      "id": "FB-122",
+      "recorded_on": "2026-11-25",
+      "occurred_on": "2026-11-25",
+      "authority": "user",
+      "kind": "generated-signal-path-comparison",
+      "quote": "I meant, use imagen to show the signal path of all 3",
+      "source": "Current conversation; correction after Mermaid diagrams",
+      "interpretation": "Use the built-in image-generation tool to show all three proposed signal paths. The request is for an image, not Mermaid text, and does not select a circuit option.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/signal-path-options.md",
+        "engineering/whole-amp/effects-loop/results/signal-path-options.png"
+      ],
+      "supersedes": [],
+      "next_action": "Image generated and inspected; its no-option-selected footer predates FB-123 approval of option 1."
+    },
+    {
+      "id": "FB-123",
+      "recorded_on": "2026-11-25",
+      "occurred_on": "2026-11-25",
+      "authority": "user",
+      "kind": "buffered-loop-approved",
+      "quote": "go with the recommendation",
+      "source": "Current build conversation",
+      "interpretation": "Adopt option 1: common SEND and RETURN stages in effects and bypass modes; recalibrate reverb mixing. Approval is architecture, not component qualification.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-016-buffered-loop-expression-selector.md"
+      ],
+      "supersedes": [],
+      "next_action": "Implement and qualify the selected behavior; exact parts and native CAD remain pending."
+    },
+    {
+      "id": "FB-124",
+      "recorded_on": "2026-11-25",
+      "occurred_on": "2026-11-25",
+      "authority": "user",
+      "kind": "reverb-expression-selector",
+      "quote": "I want an expression pedal jack for the reverb, and a switch to switch from the potentiometer",
+      "source": "Current build conversation",
+      "interpretation": "Require a dedicated expression connection and PANEL / EXPRESSION selector; preserve constant dry and the separate reverb on/off footswitch.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "brain/records/DEC-016-buffered-loop-expression-selector.md"
+      ],
+      "supersedes": [],
+      "next_action": "Implement and qualify the selected behavior; exact parts and native CAD remain pending."
+    },
+    {
+      "id": "FB-125",
+      "recorded_on": "2026-11-25",
+      "occurred_on": "2026-11-25",
+      "authority": "user",
+      "kind": "expression-pot-switch-proposal",
+      "quote": "The expression pedal could be the same ohmage as the potentiometer with the wet/dry control, so it basicallly reroutes the potentiometer (with debounce). Does that sound reasonable?",
+      "source": "Current build conversation",
+      "interpretation": "User proposes toggle style, matching pot resistance and debounce. Evaluate rather than treat photograph as an exact part selection. Current RV602 is 100k logarithmic audio; prefer protected low-voltage selection and transition smoothing.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/expression-control/selector-review.md"
+      ],
+      "supersedes": [],
+      "next_action": "Implement and qualify the selected behavior; exact parts and native CAD remain pending."
     }
   ]
 }

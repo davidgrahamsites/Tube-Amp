@@ -2,18 +2,22 @@
 
 User confirmed November12,2026. Owner: current Codex chat. Status: requirements recorded; circuit, exact parts and PCB work not yet implemented.
 
-## Required operation
+## Latest selector request — 25 November 2026
+
+FB-124/125 now require a PANEL / EXPRESSION toggle. See [selector review](selector-review.md) and DEC-016. The newer replacement wording suggests independent pedal control; the older knob-as-maximum law below is historical pending resolution of that interpretation. Protected low-voltage cable, constant dry, fault handling and separate on/off remain required. No native implementation yet.
+
+## Current selector design targets
 
 - A passive rocker pedal with a potentiometer controls wet/reverb level only.
 - Heel down: dry only.
-- Toe down: wet level reaches the maximum set by the faceplate REVERB knob.
+- PANEL selects the faceplate knob. EXPRESSION selects the pedal; toe reaches calibrated maximum wet. Independent pedal range is the stated interpretation of the latest replacement wording, superseding the older knob-as-maximum proposal.
 - Pedal unplugged: faceplate REVERB knob works normally.
 - Dry gain stays constant throughout pedal movement.
 - Keep audio inside the amplifier. The pedal cable carries only a protected low-voltage control signal and its return.
 - Preserve the existing channel/reverb on-off footswitch. Use a separate expression connection, clearly marked REVERB EXP. Do not silently repurpose the existing footswitch jack.
 - Existing reverb-off command still overrides wet level. Existing immediate wet-mute behavior remains unless separately changed.
 
-Control relationship: wet output = recovered wet signal × faceplate setting × pedal factor × reverb-enable state. Pedal factor runs0–1; unplugged factor is1. This is a functional requirement, not a fixed electrical control-voltage law.
+Current design relationship: wet output = recovered wet signal × selected control factor × reverb-enable state. The factor comes from the knob in PANEL mode and from the pedal in EXPRESSION mode. Unplugged selects the panel factor with a smooth transition. This is a functional target, not a selected electrical control law. The older multiplicative knob-times-pedal behavior is retained in DEC-007 as history.
 
 ## Work order
 
@@ -25,7 +29,7 @@ Proceed with a passive linear-pot pedal as the design direction. Pot resistance,
 
 ## Checks before release
 
-1. Verify both endpoints and smooth, monotonic travel. Faceplate zero must give dry only at every pedal position.
+1. Verify both endpoints and smooth, monotonic travel. Faceplate zero must give dry only in PANEL mode; heel must give dry only in EXPRESSION mode.
 2. Measure dry gain with heel/toe/intermediate positions, reverb mute and pedal unplugged. Retain the proposed0.1dB dry-level acceptance band; it is not a measured result.
 3. Test insertion/removal at every pedal position. Restore faceplate operation without a sharp level step or pop. Define and test the control ramp/filter.
 4. Test open wiper, broken cable and each jack-contact short. Current-limit/protect the reference output. A plugged-in faulty control cable should not command an uncontrolled wet-level jump. Distinguish a real unplug from a broken wiper.

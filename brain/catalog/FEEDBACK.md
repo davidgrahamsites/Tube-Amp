@@ -1230,3 +1230,48 @@ Source: Current conversation; reply to effects-loop behavior question
 
 - [engineering/whole-amp/effects-loop/signal-path-options.md](<../../engineering/whole-amp/effects-loop/signal-path-options.md>)
 
+## FB-122 — generated-signal-path-comparison
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> I meant, use imagen to show the signal path of all 3
+
+Use the built-in image-generation tool to show all three proposed signal paths. The request is for an image, not Mermaid text, and does not select a circuit option.
+
+Source: Current conversation; correction after Mermaid diagrams
+
+- [engineering/whole-amp/effects-loop/signal-path-options.md](<../../engineering/whole-amp/effects-loop/signal-path-options.md>)
+- [engineering/whole-amp/effects-loop/results/signal-path-options.png](<../../engineering/whole-amp/effects-loop/results/signal-path-options.png>)
+
+## FB-123 — buffered-loop-approved
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> go with the recommendation
+
+Adopt option 1: common SEND and RETURN stages in effects and bypass modes; recalibrate reverb mixing. Approval is architecture, not component qualification.
+
+Source: Current build conversation
+
+- [brain/records/DEC-016-buffered-loop-expression-selector.md](<../../brain/records/DEC-016-buffered-loop-expression-selector.md>)
+
+## FB-124 — reverb-expression-selector
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> I want an expression pedal jack for the reverb, and a switch to switch from the potentiometer
+
+Require a dedicated expression connection and PANEL / EXPRESSION selector; preserve constant dry and the separate reverb on/off footswitch.
+
+Source: Current build conversation
+
+- [brain/records/DEC-016-buffered-loop-expression-selector.md](<../../brain/records/DEC-016-buffered-loop-expression-selector.md>)
+
+## FB-125 — expression-pot-switch-proposal
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> The expression pedal could be the same ohmage as the potentiometer with the wet/dry control, so it basicallly reroutes the potentiometer (with debounce). Does that sound reasonable?
+
+User proposes toggle style, matching pot resistance and debounce. Evaluate rather than treat photograph as an exact part selection. Current RV602 is 100k logarithmic audio; prefer protected low-voltage selection and transition smoothing.
+
+Source: Current build conversation
+
+- [engineering/whole-amp/expression-control/selector-review.md](<../../engineering/whole-amp/expression-control/selector-review.md>)
+

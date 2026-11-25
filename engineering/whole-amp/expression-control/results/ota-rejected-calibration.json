@@ -1,0 +1,415 @@
+{
+  "scope": "Rejected initial calibration: operating-point fallback and unconstrained secant extrapolation. Not hardware rejection.",
+  "source_hash": {
+    "engineering/whole-amp/expression-control/models/LM13700.MOD": "666df501773da5e65f7fd3b3c806b2c1ae7770784685dd8191a9df33b382f390",
+    "engineering/solid-state-reverb/simulation/models/OPAx134.LIB": "8ff414c678a7f8330b87504d7e0553de20ca87bdc713cecf81ab3448b4d7608f",
+    "engineering/whole-amp/expression-control/tools/ota_screen.py": "9e9ca936efe038e7f0e2bf9e4220e783414e0df06dce8c4d31a31222140ff253"
+  },
+  "trim_V": -0.09692220149849884,
+  "cases": [
+    {
+      "name": "dc-untrimmed",
+      "case": {
+        "dc_only": true,
+        "trim": 0
+      },
+      "status": "complete",
+      "op": {
+        "out": -1.3224877362527583,
+        "plus": 0.49779195909357216,
+        "minus": 0.49778690399516434,
+        "db": 1.212463499370434
+      },
+      "thd_percent": null,
+      "dc_V": null
+    },
+    {
+      "name": "dc-trim-probe",
+      "case": {
+        "dc_only": true,
+        "trim": 0.001
+      },
+      "status": "complete",
+      "op": {
+        "out": -1.3211343677122398,
+        "plus": 0.49607859175332775,
+        "minus": 0.49579399002196023,
+        "db": 1.210609967359941
+      },
+      "thd_percent": null,
+      "dc_V": null
+    },
+    {
+      "name": "dc-trimmed",
+      "case": {
+        "dc_only": true,
+        "trim": 0.9771822653318837
+      },
+      "status": "complete",
+      "op": {
+        "out": -14.491466735095848,
+        "plus": 1.0205775306739766,
+        "minus": 0.9430326518125755,
+        "db": 1.6743758387986996
+      },
+      "thd_percent": null,
+      "dc_V": null
+    },
+    {
+      "name": "dc-untrimmed-0",
+      "case": {
+        "dc_only": true,
+        "trim": 0,
+        "bias": 0
+      },
+      "status": "complete",
+      "op": {
+        "out": 0.0005006584799473972,
+        "plus": 0.5000000182649554,
+        "minus": 0.5000000084954093,
+        "db": 1.2146740813297452
+      },
+      "thd_percent": null,
+      "dc_V": null
+    },
+    {
+      "name": "dc-trimmed-0",
+      "case": {
+        "dc_only": true,
+        "trim": -0.09692220149849884,
+        "bias": 0
+      },
+      "status": "complete",
+      "op": {
+        "out": 0.0005009155408639502,
+        "plus": 0.44914888936734304,
+        "minus": 0.4539289359931764,
+        "db": 1.166102713488173
+      },
+      "thd_percent": null,
+      "dc_V": null
+    },
+    {
+      "name": "dc-untrimmed-5e-05",
+      "case": {
+        "dc_only": true,
+        "trim": 0,
+        "bias": 5e-05
+      },
+      "status": "complete",
+      "op": {
+        "out": -0.13366985997764255,
+        "plus": 0.4997519405067721,
+        "minus": 0.49975090508122166,
+        "db": 1.214425490738379
+      },
+      "thd_percent": null,
+      "dc_V": null
+    },
+    {
+      "name": "dc-trimmed-5e-05",
+      "case": {
+        "dc_only": true,
+        "trim": -0.09692220149849884,
+        "bias": 5e-05
+      },
+      "status": "complete",
+      "op": {
+        "out": 0.8666489100789618,
+        "plus": 0.44890186023836526,
+        "minus": 0.45367865166093835,
+        "db": 1.1658542066771882
+      },
+      "thd_percent": null,
+      "dc_V": null
+    },
+    {
+      "name": "dc-untrimmed-0.00025",
+      "case": {
+        "dc_only": true,
+        "trim": 0,
+        "bias": 0.00025
+      },
+      "status": "complete",
+      "op": {
+        "out": -0.6671224711787478,
+        "plus": 0.49886537446414964,
+        "minus": 0.49886177008313576,
+        "db": 1.21353764016042
+      },
+      "thd_percent": null,
+      "dc_V": null
+    },
+    {
+      "name": "dc-trimmed-0.00025",
+      "case": {
+        "dc_only": true,
+        "trim": -0.09692220149849884,
+        "bias": 0.00025
+      },
+      "status": "complete",
+      "op": {
+        "out": 4.118737782996879,
+        "plus": 0.4460015165402361,
+        "minus": 0.45055793719180337,
+        "db": 1.1628535906187323
+      },
+      "thd_percent": null,
+      "dc_V": null
+    },
+    {
+      "name": "dc-untrimmed-0.0005",
+      "case": {
+        "dc_only": true,
+        "trim": 0,
+        "bias": 0.0005
+      },
+      "status": "complete",
+      "op": {
+        "out": -1.3224877362527583,
+        "plus": 0.49779195909357216,
+        "minus": 0.49778690399516434,
+        "db": 1.212463499370434
+      },
+      "thd_percent": null,
+      "dc_V": null
+    },
+    {
+      "name": "dc-trimmed-0.0005",
+      "case": {
+        "dc_only": true,
+        "trim": -0.09692220149849884,
+        "bias": 0.0005
+      },
+      "status": "complete",
+      "op": {
+        "out": 8.037998371262754,
+        "plus": 0.44493669045327344,
+        "minus": 0.44948327730476245,
+        "db": 1.161784279137436
+      },
+      "thd_percent": null,
+      "dc_V": null
+    },
+    {
+      "name": "audio-100-0.1",
+      "case": {
+        "hz": 100,
+        "amplitude": 0.1,
+        "trim": -0.09692220149849884
+      },
+      "status": "complete",
+      "op": {
+        "out": 8.037998371262754,
+        "plus": 0.44493669045327344,
+        "minus": 0.44948327730476245,
+        "db": 1.161784279137436
+      },
+      "thd_percent": 0.011471840423717483,
+      "dc_V": 8.44524532276968
+    },
+    {
+      "name": "audio-100-1",
+      "case": {
+        "hz": 100,
+        "amplitude": 1,
+        "trim": -0.09692220149849884
+      },
+      "status": "complete",
+      "op": {
+        "out": 8.037998371262754,
+        "plus": 0.44493669045327344,
+        "minus": 0.44948327730476245,
+        "db": 1.161784279137436
+      },
+      "thd_percent": 0.012987555535663855,
+      "dc_V": 8.440857937810001
+    },
+    {
+      "name": "audio-100-10",
+      "case": {
+        "hz": 100,
+        "amplitude": 10,
+        "trim": -0.09692220149849884
+      },
+      "status": "complete",
+      "op": {
+        "out": 8.037998371262754,
+        "plus": 0.44493669045327344,
+        "minus": 0.44948327730476245,
+        "db": 1.161784279137436
+      },
+      "thd_percent": 17.756553471322345,
+      "dc_V": 7.433771756546202
+    },
+    {
+      "name": "audio-1000-0.1",
+      "case": {
+        "hz": 1000,
+        "amplitude": 0.1,
+        "trim": -0.09692220149849884
+      },
+      "status": "complete",
+      "op": {
+        "out": 8.037998371262754,
+        "plus": 0.44493669045327344,
+        "minus": 0.44948327730476245,
+        "db": 1.161784279137436
+      },
+      "thd_percent": 0.0007082666218197329,
+      "dc_V": 8.445598631072096
+    },
+    {
+      "name": "audio-1000-1",
+      "case": {
+        "hz": 1000,
+        "amplitude": 1,
+        "trim": -0.09692220149849884
+      },
+      "status": "complete",
+      "op": {
+        "out": 8.037998371262754,
+        "plus": 0.44493669045327344,
+        "minus": 0.44948327730476245,
+        "db": 1.161784279137436
+      },
+      "thd_percent": 0.0062293355441845645,
+      "dc_V": 8.444390793290113
+    },
+    {
+      "name": "audio-1000-10",
+      "case": {
+        "hz": 1000,
+        "amplitude": 10,
+        "trim": -0.09692220149849884
+      },
+      "status": "complete",
+      "op": {
+        "out": 8.037998371262754,
+        "plus": 0.44493669045327344,
+        "minus": 0.44948327730476245,
+        "db": 1.161784279137436
+      },
+      "thd_percent": 17.92881650570971,
+      "dc_V": 7.457948388518459
+    },
+    {
+      "name": "audio-10000-0.1",
+      "case": {
+        "hz": 10000,
+        "amplitude": 0.1,
+        "trim": -0.09692220149849884
+      },
+      "status": "complete",
+      "op": {
+        "out": 8.037998371262754,
+        "plus": 0.44493669045327344,
+        "minus": 0.44948327730476245,
+        "db": 1.161784279137436
+      },
+      "thd_percent": 0.000606509992045963,
+      "dc_V": 8.44572400099218
+    },
+    {
+      "name": "audio-10000-1",
+      "case": {
+        "hz": 10000,
+        "amplitude": 1,
+        "trim": -0.09692220149849884
+      },
+      "status": "complete",
+      "op": {
+        "out": 8.037998371262754,
+        "plus": 0.44493669045327344,
+        "minus": 0.44948327730476245,
+        "db": 1.161784279137436
+      },
+      "thd_percent": 0.0060587578791304105,
+      "dc_V": 8.44564444889031
+    },
+    {
+      "name": "audio-10000-10",
+      "case": {
+        "hz": 10000,
+        "amplitude": 10,
+        "trim": -0.09692220149849884
+      },
+      "status": "complete",
+      "op": {
+        "out": 8.037998371262754,
+        "plus": 0.44493669045327344,
+        "minus": 0.44948327730476245,
+        "db": 1.161784279137436
+      },
+      "thd_percent": 18.871186778492568,
+      "dc_V": 7.528515594794996
+    },
+    {
+      "name": "gain-5e-05",
+      "case": {
+        "hz": 1000,
+        "amplitude": 10,
+        "trim": -0.09692220149849884,
+        "bias": 5e-05
+      },
+      "status": "complete",
+      "op": {
+        "out": 0.8666489100789618,
+        "plus": 0.44890186023836526,
+        "minus": 0.45367865166093835,
+        "db": 1.1658542066771882
+      },
+      "thd_percent": 0.039331594527665416,
+      "dc_V": 0.8656082721680918
+    },
+    {
+      "name": "gain-0.00025",
+      "case": {
+        "hz": 1000,
+        "amplitude": 10,
+        "trim": -0.09692220149849884,
+        "bias": 0.00025
+      },
+      "status": "complete",
+      "op": {
+        "out": 4.118737782996879,
+        "plus": 0.4460015165402361,
+        "minus": 0.45055793719180337,
+        "db": 1.1628535906187323
+      },
+      "thd_percent": 0.04976341231374104,
+      "dc_V": 4.278037670399927
+    },
+    {
+      "name": "rail12",
+      "case": {
+        "hz": 1000,
+        "amplitude": 8,
+        "trim": -0.09692220149849884,
+        "rail": 12
+      },
+      "status": "timeout",
+      "op": null,
+      "thd_percent": null,
+      "dc_V": null
+    },
+    {
+      "name": "refinement",
+      "case": {
+        "hz": 10000,
+        "amplitude": 10,
+        "trim": -0.09692220149849884,
+        "refine": 2
+      },
+      "status": "complete",
+      "op": {
+        "out": 8.037998371262754,
+        "plus": 0.44493669045327344,
+        "minus": 0.44948327730476245,
+        "db": 1.161784279137436
+      },
+      "thd_percent": 18.8719489003886,
+      "dc_V": 7.528419501666836
+    }
+  ]
+}

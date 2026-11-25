@@ -42,3 +42,6 @@ The user was presented with three behavior directions and asked to see the funct
 No option was selected by the diagram request. Continue independent exact-device/source research while awaiting that decision; do not route an assumed option into PCB files. In particular, the commercial LND150 loop precedent has not been shown to preserve this mixer or the required clean/overload envelope. China stock/MOQ/Shanghai delivery, socketing where applicable, thermal and protection qualification are still required before part adoption.
 
 Reproduce with KiCad's NumPy-equipped Python: `tools/return_port_envelope.py`, then `tools/audit_return_ports.py`. Public products are `results/return-port-summary.json`, `return-port-audit.json`, and the two compact CSV comparisons. No procurement or fabrication release.
+
+
+November 25 follow-up: FB-123 / DEC-016 selects option 1, consistent buffering in effects and bypass modes with reverb recalibration. Earlier choice-pending language above describes the experiment checkpoint; component and circuit qualification remain open.
