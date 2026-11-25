@@ -1,0 +1,32 @@
+{
+  "revision": "HI-001",
+  "adopted_in_native_cad": false,
+  "panel_pots": {"RV1":"Main", "RV2":"Main", "RV3":"Main", "RV4":"Main", "RV5":"Main", "RV6":"Main", "RV7":"Main", "RV8":"Main", "RV9":"Main", "RV602":"Reverb"},
+  "excluded_adjustments": ["RV10", "RV601"],
+  "candidate": {
+    "header": "430450402", "housing": "430250400", "contact": "430300008",
+    "mating_finish": "gold", "tool": "638190000",
+    "cavities": 4, "pot_terminal_to_cavity": {"1":"1", "2":"2", "3":"3"},
+    "cavity4": "Unassigned; no shield or ground connection authorized",
+    "footprint": "Molex_Micro-Fit_3.0_43045-0400_2x02_P3.00mm_Horizontal",
+    "native_library": "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Connector_Molex.pretty",
+    "contact_holes_nominal_mm": 1.02, "contact_hole_tolerance_mm": 0.05,
+    "locator_hole_nominal_mm": 3.0, "locator_hole_tolerance_mm": 0.05,
+    "contact_xy_mm": {"1":[0,0], "2":[3,0], "3":[0,3], "4":[3,3]},
+    "locator_xy_mm": [1.5,-4.32],
+    "drill_shape": "round",
+    "board_edge_limit_mm": 10.16,
+    "board_edge_datum": "Use SD-43045-001 location-detail datum; not a generic body-to-edge distance. Visual datum confirmation pending.",
+    "drawing": {"document":"SD-43045-001", "revision":"H1", "date":"2024-09-27", "url":"https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/430/43045/430450400_sd.pdf"},
+    "drawing_review": "Text and installed footprint cross-check only; PDF visual confirmation and full tolerance review pending"
+  },
+  "wire_tool_limits": {
+    "awg": [20,22,24], "insulation_diameter_min_mm":1.42, "insulation_diameter_max_mm":1.85,
+    "strip_length_min_mm":2.54, "strip_length_max_mm":2.92,
+    "24awg_pull_force_min_n":22.2,
+    "24awg_conductor_crimp_height_reference_mm":[0.83,0.93],
+    "pull_test": "Exclude insulation-crimp contribution; manufacturer requires force exceeding minimum. Reference crimp height is not a substitute for sample qualification.",
+    "drawing": {"document":"ATS-638190000", "revision":"G", "date":"2016-06-23", "url":"https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190000-001.pdf"}
+  },
+  "release_holds": ["Complete voltage/fault and insulation review per net", "Exact insulated cable and capacitance/length", "Physical cavity view and exact finished-hole tolerance confirmation", "Mated and extraction envelope, wrong-plug prevention", "Qualified crimps and pull/continuity test", "Chinese small-quantity stock and Shanghai delivery evidence", "Native schematic/PCB integration with no topology loss"]
+}

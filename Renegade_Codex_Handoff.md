@@ -220,3 +220,7 @@ Actual sockets under DIP ICs remain the default for serviceability. The user per
 ## November24 routing and drill clarification — FB-118–120
 
 Every copper path must meet its actual continuous/transient current, stackup, heating and voltage-drop budget, including neckdowns, vias and shared returns. Zero simple-bend findings does not clear branch or pad-entry geometry; the U12 square T is tracked for correction. Received chuck diameter is46mm; canonical partial tool dimensions live in engineering/whole-amp/mechanical/fit-register.json. A2mm radial handling allowance is proposed, not measured. Full drill access remains pending; rear wood must remain independently removable.
+
+## Panel connector checkpoint — 24 November 2026
+
+[VAL-035](brain/records/VAL-035-panel-connector-interface-audit.md) records ten circuit-derived pot interfaces (thirty terminals), preserving block ownership. Two existing pot-to-pot nets need Main-board nodes for individual PCB plugs; current wire pads/generic JR4 are not the completed harness. Manufacturer tooling evidence adds the missing 1.42 mm minimum insulation diameter and resolves tool/contact applicability. Native board hashes are unchanged; nominal candidate drilling and mapping controls pass. Exact wire, full mating geometry, fault-voltage review, Shanghai procurement and physical assembly remain open. Continue connector qualification and three-board integration while the transformer inquiry awaits sending approval; no mail/order sent.

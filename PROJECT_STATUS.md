@@ -223,3 +223,7 @@ November20 measurement reconciliation: right vertical also210mm; top/bottom/righ
 November20 tank identification: user transcribed M8EB2C1B and R2610270015. Mable MAGT0046 specification page and dimensioned drawing saved; prose matches seller600/2250ohm. No full exact-unit electrical datasheet located; model string reused on conflicting listings. See mechanical/review/tank-specifications.md.
 
 November20 tank characterization plan saved: engineering/whole-amp/mechanical/review/tank-characterization-plan.md. Multimeter can establish coil DC resistance; controlled low-level AC testing establishes impedance at recorded conditions. Guaranteed current rating is not inferred from these measurements. Actual tests remain pending; no equipment purchase.
+
+## Panel connector checkpoint — 24 November 2026
+
+[VAL-035](brain/records/VAL-035-panel-connector-interface-audit.md) records ten circuit-derived pot interfaces (thirty terminals), preserving block ownership. Two existing pot-to-pot nets need Main-board nodes for individual PCB plugs; current wire pads/generic JR4 are not the completed harness. Manufacturer tooling evidence adds the missing 1.42 mm minimum insulation diameter and resolves tool/contact applicability. Native board hashes are unchanged; nominal candidate drilling and mapping controls pass. Exact wire, full mating geometry, fault-voltage review, Shanghai procurement and physical assembly remain open. Continue connector qualification and three-board integration while the transformer inquiry awaits sending approval; no mail/order sent.

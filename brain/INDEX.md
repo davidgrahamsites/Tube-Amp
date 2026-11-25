@@ -63,3 +63,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-032 | validation | pcb | documented | 2026-11-24 | [Reverb branch repair and reset-divider stability](records/VAL-032-reverb-branches-divider-stability.md) |
 | VAL-033 | validation | schematic | documented | 2026-11-24 | [Supply cold-load correction and current-path evidence](records/VAL-033-supply-cold-loads.md) |
 | VAL-034 | validation | components | documented | 2026-11-24 | [Dual-mains auxiliary transformer options and inquiry](records/VAL-034-transformer-options-inquiry.md) |
+| VAL-035 | validation | components | documented | 2026-11-24 | [Panel connector and crimp interface audit](records/VAL-035-panel-connector-interface-audit.md) |
