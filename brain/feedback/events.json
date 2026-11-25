@@ -1686,6 +1686,54 @@
         "FB-116"
       ],
       "next_action": "Evaluate installed socket/contact parasitics, bypass loops and retention; retain the default unless evidence justifies an explicit exception."
+    },
+    {
+      "id": "FB-118",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "all-trace-current-sizing",
+      "quote": "the traces all need to be the correct size for the current running through them",
+      "source": "Current build conversation; FB-119 attached cropped Reverb PCB plot",
+      "interpretation": "Reaffirm per-net and per-path current sizing across every PCB, including copper stackup, thermal and voltage-drop limits, shared returns, vias and neckdowns. Default widths and clean DRC do not qualify current capacity.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/pcb-measured-r/routing-requirements.md"
+      ],
+      "supersedes": [],
+      "next_action": "Audit current native geometry and current budgets; preserve circuit blocks and report unresolved qualification."
+    },
+    {
+      "id": "FB-119",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "visible-square-copper-turns",
+      "quote": "these look a lot like 90 degree turns, are they?",
+      "source": "Current build conversation; FB-119 attached cropped Reverb PCB plot",
+      "interpretation": "Inspect user-marked Reverb copper around U12, C615 and R616 in native geometry, including branches and pad approaches; correct square corners within the existing no-right-angle routing requirement. Do not dismiss a rendered concern based on a simple-bend checker.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/pcb-measured-r/routing-requirements.md"
+      ],
+      "supersedes": [],
+      "next_action": "Audit current native geometry and current budgets; preserve circuit blocks and report unresolved qualification."
+    },
+    {
+      "id": "FB-120",
+      "recorded_on": "2026-11-24",
+      "occurred_on": "2026-11-24",
+      "authority": "user",
+      "kind": "drill-chuck-measurement",
+      "quote": "the chuck is 46 mm diameter at the turning part",
+      "source": "Current build conversation; user-supplied photograph of orange drill",
+      "interpretation": "46 mm rotating chuck diameter is user-reported. Exact tool model, axial chuck length, bit projection, motor body envelope and overall approach length remain unknown. A 2 mm radial handling allowance is an engineering proposal, not a user measurement.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json"
+      ],
+      "supersedes": [],
+      "next_action": "Use measured diameter for the chuck cross-section; qualify full screw approach and withdrawal after remaining tool dimensions and actual fastener positions are known."
     }
   ]
 }

@@ -46,3 +46,7 @@ Actual drill envelope remains deferred until November 25. Cabinet depth datum, a
 ## Reset-edge and socket-envelope checkpoint — November 24
 
 [VAL-029](../../brain/records/VAL-029-reset-edges-and-socket-fit.md) adopts U1C/D edge conditioning with exact native/route/drill preservation checks. Control79 unconnected/13 existing DRC; no new ERC/DRC finding. G50 release margin, replacement carrier, physical MR/brownout and clock coincidence remain open. TE socket candidates have domestic stock and dimensional evidence; current five DIP footprints need 1.0 mm holes and larger courtyards. The 10.38 mm assembly height and provisional extraction reserve are consumed read-only by the mechanical screen; populated three-board fit and drill access remain unqualified. Next: exact supervisor/carrier and socket footprint qualification, then populated placement.
+
+## November24 socket and partial-tool checkpoint
+
+[VAL-030](../../brain/records/VAL-030-sockets-brownout-tool-measurement.md): five DIP socket drafts corrected with52 larger holes and C352 clearance repair; no new native findings. Brownout runs complete but threshold/clock/collapse qualification remains open. User supplied46mm chuck diameter; earlier deferral is superseded only for that dimension. Body/bit reach and actual access still pending. Existing board support trial fails; no populated chassis release.

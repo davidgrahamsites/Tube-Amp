@@ -1,0 +1,27 @@
+{
+  "scope": "Reported chuck cross-section only; not a swept tool collision test",
+  "source_feedback": "FB-120",
+  "measured_chuck_diameter_mm": 46,
+  "chuck_radius_mm": 23.0,
+  "proposed_radial_allowance_mm": 2,
+  "proposed_cross_section_diameter_mm": 50,
+  "conditional_axis_to_obstruction_mm": 25.0,
+  "condition": "Only where an obstruction overlaps the chuck axially. This is not a flange width; fastener edge distance and the larger body must also be allowed for.",
+  "missing_tool_measurements": [
+    "chuck_axial_length_mm",
+    "bit_projection_beyond_chuck_mm",
+    "motor_body_width_mm",
+    "motor_body_height_mm",
+    "motor_body_offset_from_axis_mm",
+    "bit_tip_to_tool_back_mm"
+  ],
+  "fastener_positions_known": false,
+  "full_swept_access_checked": false,
+  "screw_access_verified": false,
+  "fabrication_ready": false,
+  "source_used_fields": [
+    "drill_tool_measurements",
+    "chassis_service_study.fastener_positions_mm"
+  ],
+  "source_used_fields_sha256": "82cdd22f429e2d76d8fe68edf43647063e16b3fc844499ab8f3bec744856340c"
+}

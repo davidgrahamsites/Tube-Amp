@@ -1,0 +1,92 @@
+{
+  "computation_completed": true,
+  "qualification_pass": false,
+  "threshold_margins": {
+    "fresh": {
+      "falling_V": 0.04443885811323334,
+      "rising_V": 0.042501469636075484,
+      "meets_proposed_20mV_allocation": true
+    },
+    "endurance": {
+      "falling_V": 0.010511030319846348,
+      "rising_V": 0.006925027201232226,
+      "meets_proposed_20mV_allocation": false
+    }
+  },
+  "conditional_collapse_budgets": [
+    {
+      "assumed_total_supervisor_and_raw_edge_s": 1e-05,
+      "post_edge_logic_bound_s": 1.2000000000000002e-07,
+      "conditional_max_linear_fall_rate_V_per_s": 1038.6393596686114,
+      "with_noise_allocation_has_positive_budget": false
+    },
+    {
+      "assumed_total_supervisor_and_raw_edge_s": 5e-05,
+      "post_edge_logic_bound_s": 1.2000000000000002e-07,
+      "conditional_max_linear_fall_rate_V_per_s": 209.71728491313544,
+      "with_noise_allocation_has_positive_budget": false
+    },
+    {
+      "assumed_total_supervisor_and_raw_edge_s": 0.0001,
+      "post_edge_logic_bound_s": 1.2000000000000002e-07,
+      "conditional_max_linear_fall_rate_V_per_s": 104.98432201204902,
+      "with_noise_allocation_has_positive_budget": false
+    },
+    {
+      "assumed_total_supervisor_and_raw_edge_s": 0.001,
+      "post_edge_logic_bound_s": 1.2000000000000002e-07,
+      "conditional_max_linear_fall_rate_V_per_s": 10.509769147548642,
+      "with_noise_allocation_has_positive_budget": false
+    }
+  ],
+  "maximum_qualified_collapse_rate_V_per_s": null,
+  "external_clock_recovery_checks": [
+    {
+      "offset_s": 0,
+      "meets_clear_inactive_setup": false
+    },
+    {
+      "offset_s": 1e-09,
+      "meets_clear_inactive_setup": false
+    },
+    {
+      "offset_s": 5e-09,
+      "meets_clear_inactive_setup": false
+    },
+    {
+      "offset_s": 6e-09,
+      "meets_clear_inactive_setup": true
+    },
+    {
+      "offset_s": 1e-08,
+      "meets_clear_inactive_setup": true
+    },
+    {
+      "offset_s": 1e-06,
+      "meets_clear_inactive_setup": true
+    }
+  ],
+  "arbitrary_clock_coincidence_qualified": false,
+  "explanation": "HC74 operates down to 2V, but the adopted gate-drive bounds use 4.5V. Crossing 4.5V first means those bounds no longer prove performance; it does not itself prove physical malfunction.",
+  "tlv803e_4p63V_alternative": {
+    "falling_min_V": 4.5374,
+    "rising_max_V": 4.793438999999999,
+    "adopted": false,
+    "reason": "Maximum release exceeds 4.75V minimum rail; standard 3-pin packages also lack MR"
+  },
+  "unresolved": [
+    "TPS3808G50 native threshold versus low-rail release",
+    "Candidate endurance/noise margin",
+    "Missing guaranteed supervisor/raw-output assertion bound",
+    "Actual regulator/rail collapse and relay-rail persistence",
+    "Reset release versus asynchronous clock setup",
+    "Hot CT and board leakage",
+    "Removable U3 carrier and full socket capacitance"
+  ],
+  "source_sha256": {
+    "contract.json": "67b5316dc035eee7354e7febcabff62919fd0fdf29d50e16972db30cd381eea8",
+    "brownout-contract.json": "eae84c7e30c41e7d2b3c504aa7258920d40230b14f1e5191fad27df3d1c736f4",
+    "edge-contract.json": "10b32756103b5faab29f222acfa31c65d1bffb12e57809708478919fbbefcff5"
+  },
+  "fabrication_ready": false
+}

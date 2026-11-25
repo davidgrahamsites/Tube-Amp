@@ -575,7 +575,8 @@
     "flange_width_mm": null,
     "screw_setback_mm": null,
     "verified": false,
-    "assembly_sequence": "Drill and deburr structural holes with electronics absent; remove swarf before installing boards. Check driver access for fasteners at the intended assembly/service stage."
+    "assembly_sequence": "Drill and deburr structural holes with electronics absent; remove swarf before installing boards. Check driver access for fasteners at the intended assembly/service stage.",
+    "tool_measurement_interface": "drill_tool_measurements"
   },
   "chassis_service_study": {
     "status": "engineering proposal; not dimensioned or fabrication-ready",
@@ -611,7 +612,8 @@
       "harness_and_earth_service": null
     },
     "release": false,
-    "interference_control_contract": "engineering/whole-amp/pcb-measured-r/routing-requirements.md"
+    "interference_control_contract": "engineering/whole-amp/pcb-measured-r/routing-requirements.md",
+    "tool_measurement_interface": "drill_tool_measurements"
   },
   "socket_reference_envelopes": {
     "status": "provisional mechanical references; not electrical/procurement release",
@@ -645,9 +647,10 @@
   "drill_measurement_followup": {
     "source": "FB-078",
     "reported_on": "2026-11-21",
-    "status": "pending-user-measurement",
+    "status": "partial-user-measurement-received",
     "user_reply": "I will have to give you that information tomorrow",
-    "verification": "No actual tool envelope supplied; screw-access release check remains open."
+    "verification": "46 mm chuck diameter received November24; bit reach and full drill body/length remain pending. No screw-access pass.",
+    "latest_source": "FB-120"
   },
   "speaker_offset_photo_review": {
     "source": "FB-079",
@@ -682,7 +685,7 @@
     ],
     "allowance_basis": "Explicit packaging trial values, not electrical clearance, thermal spacing, actual drill clearance or fabrication dimensions.",
     "drill_tool_envelope": null,
-    "drill_check_status": "Deferred by user until 2026-11-25; no access pass",
+    "drill_check_status": "PARTIAL: chuck diameter recorded in drill_tool_measurements; full access pending.",
     "mounting_rule": "Any eventual carrier attaches to fixed cabinet supports only; removable wooden rear cover carries no electronics.",
     "exclusions": [
       "component heights",
@@ -693,6 +696,25 @@
       "cover and chassis withdrawal sweeps",
       "thermal envelopes",
       "fixed-support positions"
-    ]
+    ],
+    "tool_measurement_interface": "drill_tool_measurements"
+  },
+  "drill_tool_measurements": {
+    "source_feedback": "FB-120",
+    "reported_on": "2026-11-24",
+    "source_quote": "the chuck is 46 mm diameter at the turning part",
+    "units": "mm",
+    "chuck_diameter_mm": 46,
+    "reported_uncertainty_mm": null,
+    "chuck_axial_length_mm": null,
+    "bit_projection_beyond_chuck_mm": null,
+    "motor_body_width_mm": null,
+    "motor_body_height_mm": null,
+    "motor_body_offset_from_axis_mm": null,
+    "bit_tip_to_tool_back_mm": null,
+    "exact_model": null,
+    "provisional_radial_allowance_mm": 2,
+    "allowance_authority": "engineering proposal; not a measured tolerance or access qualification",
+    "status": "partial measurement; full approach/withdrawal not verified"
   }
 }

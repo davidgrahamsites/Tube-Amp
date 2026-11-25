@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "baseline_commit": "9e6a6237baf4bcd4c63cbccf099a5132ed292512",
+  "boards": {
+    "Control": {
+      "changed_round_plated_holes": 28,
+      "other_drills_slots_and_nets_unchanged": true,
+      "copper_delta": "four C352 endpoint adjustments only",
+      "unconnected_counts_by_net": {
+        "GND": 29,
+        "PEDAL_CH": 1,
+        "BTN_CH": 5,
+        "DB_CH": 2,
+        "DB_REV": 2,
+        "+5V": 15,
+        "PEDAL_REV": 1,
+        "BTN_REV": 5,
+        "-15V": 4,
+        "MR_N": 2,
+        "+12V": 7,
+        "+15V": 4,
+        "CH_Q": 1,
+        "REV_Q": 1
+      },
+      "drc_violations": 13,
+      "unconnected": 79,
+      "new_violations": 0
+    },
+    "Reverb": {
+      "changed_round_plated_holes": 24,
+      "other_drills_slots_and_nets_unchanged": true,
+      "copper_delta": "unchanged",
+      "unconnected_counts_by_net": {},
+      "drc_violations": 0,
+      "unconnected": 0,
+      "new_violations": 0
+    }
+  },
+  "changed_holes": 52,
+  "source_and_schematic_only_footprint_metadata_changed": true,
+  "native_netlist_unchanged": true,
+  "negative_controls_rejected": [
+    "undersize drill",
+    "mirrored pin1"
+  ],
+  "fabrication_ready": false,
+  "source_sha256": {
+    "engineering/component-selection/socketing/footprint-contract.json": "0a8583d97961fa3c56411a099dd3ba76fbd968e3c75ef9ae6e5195f2f933b4c2",
+    "engineering/component-selection/socketing/socket-envelope.json": "354d82343b12859a9e8ea9ab4654a0d48dec4e7a53bee7d77a393ac39e4c992c",
+    "engineering/whole-amp/reverb-600/circuit.json": "716488a59e1699fbe48ecb58312fe400da6f06a3180f42444ebbd34e9b981c40",
+    "engineering/whole-amp/reverb-600/cad/02_dirty.kicad_sch": "b8c8bc3192cb8626ad893eb323ef44a2aa8b0297c3a9dd247559c5ed7b129774",
+    "engineering/whole-amp/reverb-600/cad/05b_bias_reverb_supply.kicad_sch": "a02659b6fb93079eb06705580cefecffb0b8d13682ae12354b0a7002cf4a8513",
+    "engineering/whole-amp/reverb-600/cad/07b_reverb_recovery.kicad_sch": "57c4c00807692896431b5c42cef076779a8c93e972d6670e95735a384b0b97ca",
+    "engineering/whole-amp/reverb-600/cad/Renegade_220V_Reverb.kicad_sch": "88c5b4d1389c74b74faf11ed053af4e4a0f2cd285b99abf78d45f1bcafbf29da",
+    "engineering/whole-amp/reverb-600/cad/03_routing.kicad_sch": "845c199d1ba0d822f13e3edeb5c131db81e3199dca35a75b2f0c68258485e7aa",
+    "engineering/whole-amp/reverb-600/cad/02b_dirty_tone.kicad_sch": "1987279a558a68fda187cbc5028d67d1256472d0fed5892c70f6936ce380321f",
+    "engineering/whole-amp/reverb-600/cad/09b_latches_drivers.kicad_sch": "49197628a255bbd034f3fdc9fc63dabbcef156f802245f46caeacbc3bf2e049d",
+    "engineering/whole-amp/reverb-600/cad/05_supplies.kicad_sch": "f1ff8d0b66c3827d285e02bd4920c472d34aff096d453d755da4ae727e045c45",
+    "engineering/whole-amp/reverb-600/cad/09_controller.kicad_sch": "370ac59cb6fadff775978784cdbb69a0181978a7f87e3bed6498fd6c1604248f",
+    "engineering/whole-amp/reverb-600/cad/04_output.kicad_sch": "3fec27dc2d082dbdd12fbfbff195a3adcee6880485edec06adb807e0ecaee944",
+    "engineering/whole-amp/reverb-600/cad/04b_output_transformer.kicad_sch": "f7f9b036693bf01258414722be0becf19c413d7fe422df83272d99d97c82e518",
+    "engineering/whole-amp/reverb-600/cad/08_control_supply.kicad_sch": "f843d66f2d019d26f9da1e6e0a86d74d2970a3258bcd99759b74c7ad1fd82f29",
+    "engineering/whole-amp/reverb-600/cad/01_clean.kicad_sch": "17c5a20300546c04f3cfa1bc0dd674d11e07e5dc08874ac0156d6313b5381b43",
+    "engineering/whole-amp/reverb-600/cad/07c_reverb_output.kicad_sch": "15f6d914436fcacc10b798b6ac1fdc02c778a6537b8b365e5fedb309224181c0",
+    "engineering/whole-amp/reverb-600/cad/07d_reverb_harness.kicad_sch": "d71bd6e68e8fa2c52e73375762af8fbfda24cc7f8eadf8796c0bc0a71c5879dc",
+    "engineering/whole-amp/reverb-600/cad/07a_reverb_send.kicad_sch": "0c9dba97832aaae13057949b9417ef642c5aa167a458250be3930cbc6ce53a79",
+    "engineering/whole-amp/reverb-600/cad/10_logic_power.kicad_sch": "16534078ff00c95265f1c8ae63dd2dbaf9c369a70943fa2acb1bd20739cd53eb",
+    "engineering/whole-amp/reverb-600/cad/06_heaters.kicad_sch": "f99c9f7ab06a7f3c6594ecdc9b4587834542d4c5005cbcdb1c415303edd19b29",
+    "engineering/component-selection/footprints/Renegade_Selected.pretty/TE_1-2199298-2_DIP8_Socket.kicad_mod": "4ef9cc9edf3d6c6496d2e68a785ac5513c546d53023448c10466b9279775c5f3",
+    "engineering/component-selection/footprints/Renegade_Selected.pretty/TE_1-2199298-3_DIP14_Socket.kicad_mod": "b3618c004d1edf671b1d9413c0e531c75fb271767ad52f31e81ecc4ed920322d",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Control.kicad_pcb": "496e221113ba00da9311cbe71cb4cacf1b09a1ce07f2bd1519b02530b384fca5",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Control.kicad_pro": "f85e8bb33742069a972fa925d8d3a921bb7440e6179da50acef17f3de622e8ba",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Control.kicad_dru": "5c15838b787d3e4df0c09496a0f0343a102a1b2a409bcffa08e7bd8b9aec7945",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "d3323b93e3fad765f77c028c3f298e7eb8bbaa8b76ec1edf6db35a31a645476f",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pro": "e6c1b0d530ae9b468410499cfe5db55c20ad2a38f872adf2e8b3979fe0d33f73",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_dru": "73f186e622da26cc3cf4477c4df492a46550aecf6366a40e86f26a81b1f8fb5f"
+  }
+}

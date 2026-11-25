@@ -7,3 +7,5 @@ Outputs/public seam: review.md, contract.json and results/*.json. Candidate supe
 Human check: measure reset startup/brownout, HC74 outputs, driver drain transients and relay pickup/release on the assembled harness at actual temperatures. Check every IC/tube is removable and the installed socket carrier pin mapping matches its drawing.
 
 Current reset-edge seam: edge-contract.json and edge-routes.json define the bounded repair; edge-review.md and results/edge-native-checks.json supersede earlier native hashes only for this declared change. analyze_reset_edges.py diagnoses the unchanged vendor-model limitation.
+
+Brownout screen: brownout-contract.json owns the matrix; brownout-review.md records limits. check_brownout_limits.py, simulate_brownout_matrix.py and refine_brownout_matrix.py keep qualification false when completed nominal models cannot prove hardware corners.

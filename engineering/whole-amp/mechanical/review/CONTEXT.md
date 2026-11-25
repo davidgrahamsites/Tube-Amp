@@ -10,3 +10,5 @@ Keep measured, published, inferred and assumed data distinct. Record failed scre
 Review the complete installed assembly and supplier clarification before a fit release.
 
 Current generated products also include panel face/underside SVG/PDFs, A4 paper tiles, dimensional JSON and a pot terminal CSV. The measurement-guide PNG is a generated teaching illustration accompanied by exact written start/end instructions; it is not source geometry or proof of cabinet fit.
+
+socket-fit-diagnostic.FCStd/STEP and socket-fit-cad-checks.json retain the current five-DIP envelope trial. tool-access-review.md/checks.json separate received chuck diameter from proposed handling margin and pending full approach.

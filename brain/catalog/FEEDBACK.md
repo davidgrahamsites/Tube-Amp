@@ -1184,3 +1184,36 @@ Source: Current build conversation, after clarification that a socket should be 
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 - [engineering/component-selection/socketing/policy.md](<../../engineering/component-selection/socketing/policy.md>)
 
+## FB-118 — all-trace-current-sizing
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> the traces all need to be the correct size for the current running through them
+
+Reaffirm per-net and per-path current sizing across every PCB, including copper stackup, thermal and voltage-drop limits, shared returns, vias and neckdowns. Default widths and clean DRC do not qualify current capacity.
+
+Source: Current build conversation; FB-119 attached cropped Reverb PCB plot
+
+- [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
+
+## FB-119 — visible-square-copper-turns
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> these look a lot like 90 degree turns, are they?
+
+Inspect user-marked Reverb copper around U12, C615 and R616 in native geometry, including branches and pad approaches; correct square corners within the existing no-right-angle routing requirement. Do not dismiss a rendered concern based on a simple-bend checker.
+
+Source: Current build conversation; FB-119 attached cropped Reverb PCB plot
+
+- [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
+
+## FB-120 — drill-chuck-measurement
+Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.
+
+> the chuck is 46 mm diameter at the turning part
+
+46 mm rotating chuck diameter is user-reported. Exact tool model, axial chuck length, bit projection, motor body envelope and overall approach length remain unknown. A 2 mm radial handling allowance is an engineering proposal, not a user measurement.
+
+Source: Current build conversation; user-supplied photograph of orange drill
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+

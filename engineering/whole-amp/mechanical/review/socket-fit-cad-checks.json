@@ -1,0 +1,135 @@
+{
+  "scope": "Five socket/IC envelopes in existing trial board poses; NOT chassis approval",
+  "rows": [
+    {
+      "reference": "U1",
+      "board": "Control",
+      "body_at_mm": [
+        281.4697,
+        29.33,
+        254.6
+      ],
+      "body_size_mm": [
+        10.200000000000003,
+        19.689999999999998,
+        10.38
+      ],
+      "service_height_mm": 27.0,
+      "nominal_headroom_to_assumed_ceiling_mm": 101.39999999999998
+    },
+    {
+      "reference": "U2",
+      "board": "Control",
+      "body_at_mm": [
+        219.79500000000002,
+        51.68,
+        254.6
+      ],
+      "body_size_mm": [
+        10.2,
+        19.690000000000005,
+        10.38
+      ],
+      "service_height_mm": 27.0,
+      "nominal_headroom_to_assumed_ceiling_mm": 101.39999999999998
+    },
+    {
+      "reference": "U10",
+      "board": "Reverb",
+      "body_at_mm": [
+        370.71,
+        34.629999999999995,
+        314.6
+      ],
+      "body_size_mm": [
+        10.199999999999996,
+        10.360000000000003,
+        10.38
+      ],
+      "service_height_mm": 27.0,
+      "nominal_headroom_to_assumed_ceiling_mm": 41.39999999999998
+    },
+    {
+      "reference": "U11",
+      "board": "Reverb",
+      "body_at_mm": [
+        361.71,
+        69.63,
+        314.6
+      ],
+      "body_size_mm": [
+        10.199999999999996,
+        10.359999999999992,
+        10.38
+      ],
+      "service_height_mm": 27.0,
+      "nominal_headroom_to_assumed_ceiling_mm": 41.39999999999998
+    },
+    {
+      "reference": "U12",
+      "board": "Reverb",
+      "body_at_mm": [
+        438.71,
+        74.63,
+        314.6
+      ],
+      "body_size_mm": [
+        10.200000000000003,
+        10.36,
+        10.38
+      ],
+      "service_height_mm": 27.0,
+      "nominal_headroom_to_assumed_ceiling_mm": 41.39999999999998
+    }
+  ],
+  "known_solid_service_intersections": [],
+  "native_reopen_pass": true,
+  "step_nine_solids_and_positions_match": true,
+  "existing_board_support_plane_failures": [
+    {
+      "boards": [
+        "Main",
+        "Reverb"
+      ],
+      "required_support_budget_mm": [
+        508.0,
+        160.0
+      ],
+      "width_excess_mm": 41.0,
+      "depth_excess_mm": 0
+    },
+    {
+      "boards": [
+        "Power",
+        "Control"
+      ],
+      "required_support_budget_mm": [
+        463.0,
+        180.0
+      ],
+      "width_excess_mm": 0,
+      "depth_excess_mm": 20.0
+    }
+  ],
+  "missing_component_models": 213,
+  "limits": [
+    "Other component/harness/thermal and retention envelopes omitted",
+    "27mm service reserve is provisional, not a measured extraction path",
+    "Cabinet common datum and three-board consolidation unverified",
+    "No rear cover or whole-chassis withdrawal sweep modeled"
+  ],
+  "drill_clearance": "PENDING \u2014 see fit-register.json/drill_tool_measurements and tool-access-checks.json for partial measurements",
+  "rear_cover_attachment_allowed": false,
+  "assembly_fit_cleared": false,
+  "fabrication_ready": false,
+  "source_sha256": {
+    "engineering/whole-amp/mechanical/review/board-fit-diagnostic.json": "a8b005772a68c986262a6dec8f635cefa55cd6766230ff414e282fdb4bd2e2a5",
+    "engineering/whole-amp/mechanical/review/socket-fit-checks.json": "8329ce048e543f8ef10f4d949d844fd3d570637ddfa82ae168f0759bde7ba38a",
+    "engineering/whole-amp/pcb-measured-r/review/mechanical-inventory.json": "2224ea76ad19ec79e37cea756d42e9bc5e59c16de7f4c1bbe8a55708364411c4",
+    "engineering/whole-amp/mechanical/tools/socket_fit_cad.py": "a243dd50328472ba26369832cff0e6d1860b238d1c964fd27f817a0dfbc26991"
+  },
+  "output_sha256": {
+    "socket-fit-diagnostic.FCStd": "11d9241c774713796d3e23b02541430809aa4e3a11c02c0118c0de0672a25e2d",
+    "socket-fit-diagnostic.step": "78b423740733b35452495b653feae238e245275fe28ef1803b64699b7f17d552"
+  }
+}

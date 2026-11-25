@@ -1,0 +1,34 @@
+{
+  "baseline_commit": "9e6a6237baf4bcd4c63cbccf099a5132ed292512",
+  "status": "Engineering draft correction; current drawing revision and physical sample remain release gates",
+  "envelope": "socket-envelope.json",
+  "pad_size_mm": 1.6,
+  "drill_mm": 1.0,
+  "courtyard_margin_mm": 0.25,
+  "finished_hole_max_mm": 1.05,
+  "provisional_registration_allowance_mm": 0.075,
+  "minimum_residual_annulus_mm": 0.2,
+  "assignments": {
+    "U1": "TE_1-2199298-3_DIP14_Socket",
+    "U2": "TE_1-2199298-3_DIP14_Socket",
+    "U10": "TE_1-2199298-2_DIP8_Socket",
+    "U11": "TE_1-2199298-2_DIP8_Socket",
+    "U12": "TE_1-2199298-2_DIP8_Socket"
+  },
+  "local_clearance_repair": {
+    "reference": "C352",
+    "board": "Control",
+    "from_y_mm": 40.5,
+    "to_y_mm": 40.2,
+    "reason": "Enlarged U2 socket/IC courtyard revealed 0.05 mm overlap; move bypass 0.3 mm, retaining local loop and 45-degree bends",
+    "track_endpoint_y_changes": {
+      "602cda16-fbb7-4889-aa77-99d9ef5b4cfc": {"start": [41.55, 41.25]},
+      "7c3d2578-4464-4ba1-988d-c93640caebe8": {"start": [40.5, 40.2], "end": [41.55, 41.25]},
+      "937b3ae8-f5b3-486b-9422-1df1b350afa4": {"start": [40.5, 40.2], "end": [43.355, 43.055]},
+      "dc9f74ed-95c2-4207-bff4-bb9fa50c4534": {"start": [43.355, 43.055]}
+    }
+  },
+  "preserve": ["all socket pad centers and numbers", "all nets", "all copper except four C352 endpoints", "mounting holes", "schematic readability and functional blocks", "IC identities"],
+  "verification": ["native netlist parity", "native DRC delta", "52 exported round plated holes changed from 0.8 to 1.0 mm", "all other drills and slots preserved", "socket envelope containment"],
+  "fabrication_ready": false
+}

@@ -12,3 +12,5 @@ Check the 100 mm print bar with a ruler, place the paper against the actual open
 freecad_probe.py tests the installed FreeCAD Python/native/STEP route using a synthetic coupon in temporary storage. It owns no amplifier dimensions. Retain only its receipt in review/freecad-automation-check.json; read review/cad-toolchain.md for tested versus pending formats.
 
 board_fit_cad.py owns the native/STEP current-board fit diagnostic from ../fit-register.json and ../../pcb-measured-r/review/mechanical-inventory.json. It checks drilled volumes, native reopening, STEP positions/rotation/solids and records explicit missing populations. plot_board_fit.py draws those retained poses. Native files are not fabrication chassis. Human check: compare the board-only trial and excluded service/component volumes with the real cabinet.
+
+check_tool_access.py consumes only the partial drill measurement seam and emits conditional cross-section arithmetic; it never grants access. socket_fit_cad.py consumes the current board diagnostic and socket-fit screen, verifies native/STEP roundtrips and reports only modeled-solid collisions.

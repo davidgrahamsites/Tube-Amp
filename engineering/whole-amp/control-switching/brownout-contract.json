@@ -1,0 +1,23 @@
+{
+  "status": "Qualification screen, not an adopted supervisor replacement",
+  "model": "models/TPS389001_TRANS.LIB",
+  "model_sha256": "0d2f974f84e65ffdad0f69f1381d6a0bd4a3767f96137cab6875ecdc45e2a18e",
+  "supply_floor_V": [4.7, 4.6, 4.4, 2.0],
+  "fall_and_rise_time_s": [0.000001, 0.01],
+  "low_plateau_s": [0.000001, 0.0001, 0.02],
+  "base_step_s": 0.00001,
+  "refined_step_s": 0.000001,
+  "refine_case": {"floor_V": 4.4, "ramp_s": 0.000001, "plateau_s": 0.0001},
+  "maximum_refinement_transition_difference_s": 0.000025,
+  "steady_rail_min_V": 4.75,
+  "gate_drive_characterization_floor_V": 4.5,
+  "threshold_noise_allocation_V": 0.02,
+  "noise_allocation_basis": "Proposed engineering screening allowance each side, not measured ripple or a manufacturer specification",
+  "hc74_clear_inactive_setup_s": 0.000000006,
+  "hc74_clear_to_Q_max_s": 0.000000058,
+  "clock_offsets_after_reset_s": [0, 0.000000001, 0.000000005, 0.000000006, 0.000000010, 0.000001],
+  "timing_basis": "TI SN74HC74 SCLS094F tables 6.7 and 6.9: 4.5V, -40..85C, specified output load",
+  "actual_collapse_rate_V_per_s": null,
+  "actual_reset_load_F": null,
+  "fabrication_ready": false
+}

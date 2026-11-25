@@ -210,3 +210,7 @@ All current IC/tube references now have explicit socket qualification gates in `
 ## Socket clarification — November 24 (FB-117)
 
 Actual sockets under DIP ICs remain the default for serviceability. The user permits a component-specific exception if socketing materially harms operation. Document the affected device, electrical/thermal/mechanical evidence and mounting choice; no silent blanket exemption or convenience-only removal. All tubes retain proper replaceable sockets. No exception has yet been adopted. This qualifies the earlier unconditional IC requirement in FB-116. See [socket policy](engineering/component-selection/socketing/policy.md).
+
+## November24 routing and drill clarification — FB-118–120
+
+Every copper path must meet its actual continuous/transient current, stackup, heating and voltage-drop budget, including neckdowns, vias and shared returns. Zero simple-bend findings does not clear branch or pad-entry geometry; the U12 square T is tracked for correction. Received chuck diameter is46mm; canonical partial tool dimensions live in engineering/whole-amp/mechanical/fit-register.json. A2mm radial handling allowance is proposed, not measured. Full drill access remains pending; rear wood must remain independently removable.

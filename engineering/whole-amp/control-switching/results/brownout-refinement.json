@@ -1,0 +1,45 @@
+{
+  "prior_matrix_sha256": "1b9e1ce15b8853f2ebe4248021a0a5a6b7873da199ef2588042756864be5bfcc",
+  "coarse_check_passed": false,
+  "prior_step_s": 1e-06,
+  "refined_step_s": 2e-07,
+  "transition_differences_s": [
+    8.654405745378568e-07,
+    7.080250619129203e-08,
+    8.373699231234433e-06
+  ],
+  "tolerance_s": 2.5e-05,
+  "refinement_passed": true,
+  "result": {
+    "floor_V": 4.4,
+    "ramp_s": 1e-06,
+    "plateau_s": 0.0001,
+    "step_s": 2e-07,
+    "completed_time_s": 0.8001019999999999,
+    "events": [
+      {
+        "time_s": 0.3122550629722888,
+        "state": "released",
+        "rail_V": 5.0
+      },
+      {
+        "time_s": 0.4000092383873197,
+        "state": "asserted",
+        "rail_V": 4.4
+      },
+      {
+        "time_s": 0.671985477254568,
+        "state": "released",
+        "rail_V": 5.0
+      }
+    ],
+    "dip_detected": true,
+    "assertions_below_characterized_rail": 1,
+    "release_after_final_rail_recovery_s": 0.2718834772545681,
+    "samples": 4001027,
+    "deck_sha256": "83bda9a313998530565f286e34222e81e02b7657114b280dd99f741e9e0ec9de"
+  },
+  "deck": "TPS389001 unmodified nominal brownout matrix\n.include \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/control-switching/models/TPS389001_TRANS.LIB\"\nV5 v5 0 PWL(0 0 .001 0 .011 5 0.4 5 0.400001 4.4 0.400101 4.4 0.400102 5 0.800102 5)\nRtop v5 sense 30100\nRbottom sense 0 10000\nRpull v5 rst 10000\nCct ct 0 2.2e-07\nCrst rst 0 50p\nXsupervisor rst ct v5 v5 sense 0 TPS389001_TRANS\n.save v(v5) v(rst) v(ct)\n.tran 2e-07 0.800102 0 2e-07\n.end\n",
+  "qualification_pass": false,
+  "fabrication_ready": false
+}

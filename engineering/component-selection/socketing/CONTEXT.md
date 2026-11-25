@@ -6,3 +6,5 @@ Outputs/public seam: results/socket-audit.json and review.md. The manifest suppl
 Human check: trace each physical package to its socket drawing, pin-1 orientation, lead acceptance range, maximum fitted height, extraction path and retention. Verify an actual sample before releasing footprints.
 
 Current dimensional seam: socket-envelope.json carries provisional TE DIP candidate bounds to mechanical/tools/check_socket_fit.py. te-candidate-review.md separates nominal compatibility from release qualification. No native footprint or purchase is silently changed by this manifest.
+
+Draft footprint correction: footprint-contract.json declares the five native package changes and C352 clearance repair. Read footprint-review.md and results/footprint-checks.json; adopted draft geometry is distinct from final socket qualification.

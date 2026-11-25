@@ -49,3 +49,5 @@ Primary references checked2026-11-21:
 - TI, PCB Design Guidelines for Reduced EMI, SZZA009: https://www.ti.com/lit/an/szza009/szza009.pdf (loop area, layout and bypassing principles; digital examples require application-specific interpretation).
 - TI, Grounding in mixed-signal systems demystified, Part2: https://www.ti.com/lit/an/slyt512/slyt512.pdf (partitioning and return paths; not a tube-amplifier earthing standard).
 - IPC-2152 public contents: https://www.electronics.org/TOC/IPC-2152.pdf (conductor thickness, environment, temperature-rise and via scope; full charts not accessed).
+
+November 24, FB-118/119: recheck every current path for actual current, stackup, temperature and voltage drop, including vias and pad necks. Inspect the user-marked Reverb U12/C615/R616 turns in native geometry and rendered copper; a simple-bend screen does not clear branches or pad transitions. No all-board ampacity claim is authorized by a default trace width or DRC pass.
