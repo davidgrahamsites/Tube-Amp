@@ -118,8 +118,8 @@
       "path": "PROJECT_STATUS.md",
       "role": "catalog",
       "owner_route": "MAT-002",
-      "bytes": 58796,
-      "sha256": "16b99fa7e3d8490fa3d408801f0d06204eb4ddeb08b1858505a558c16fd25a9c"
+      "bytes": 59485,
+      "sha256": "f85692b304014a05860646f1daff1aee8b8b874e147ac93499e8759e7752af4b"
     },
     {
       "path": "README.md",
@@ -139,8 +139,8 @@
       "path": "Renegade_Codex_Handoff.md",
       "role": "editable-product/record",
       "owner_route": "MAT-002",
-      "bytes": 52990,
-      "sha256": "a6730e48af891cb8267ca4d1c64e50b9f5a5f7ad951f95a81218cf8ae2479a98"
+      "bytes": 53679,
+      "sha256": "51e53a89421b784446f0f92e39b78a0fbf5efe0b1c43d7304e939ff0e1f01089"
     },
     {
       "path": "Renegade_KiCad_Library_Starter.zip",
@@ -258,8 +258,8 @@
       "path": "brain/INDEX.md",
       "role": "catalog",
       "owner_route": "MAT-012",
-      "bytes": 11426,
-      "sha256": "1ba02d5087a485593b1871e76bd021e3077b779b1d6bfb7c805804675b08c8f7"
+      "bytes": 11573,
+      "sha256": "0e0bf2f20858bafc9c24aea47573114071c60ec42526f811d208fdcb15b19d1d"
     },
     {
       "path": "brain/_templates/CONTEXT.md",
@@ -792,6 +792,13 @@
       "owner_route": "MAT-012",
       "bytes": 1891,
       "sha256": "1cbb70445cbcb845e2de323e788edcff1b7375632e1f861cd56b182873446139"
+    },
+    {
+      "path": "brain/records/VAL-047-rail-inhibit-delay.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-012",
+      "bytes": 1179,
+      "sha256": "c9ce5be900d6a79854befcd582acb221e4a44f52ffe0ff45f84bb6b50997ff00"
     },
     {
       "path": "brain/rules/CONTEXT.md",
@@ -5774,8 +5781,8 @@
       "path": "engineering/whole-amp/control-switching/CONTEXT.md",
       "role": "contract",
       "owner_route": "MAT-016",
-      "bytes": 2676,
-      "sha256": "55501e6eb6d080bc44d21a4cb0979d106117d72abaaa51af90c6eb4fd0d10e54"
+      "bytes": 2977,
+      "sha256": "891a2bd4215ab9692e8a8dc0cdcd65f8be11461a2ac2a339c708e9f46592c9a6"
     },
     {
       "path": "engineering/whole-amp/control-switching/HANDOFF.md",
@@ -5844,8 +5851,8 @@
       "path": "engineering/whole-amp/control-switching/evidence/CONTEXT.md",
       "role": "contract",
       "owner_route": "MAT-016",
-      "bytes": 963,
-      "sha256": "4a08bfe852e6882ecd5bec8e7ac3a1737e1c290122efeeca3de57cd801b9df25"
+      "bytes": 1216,
+      "sha256": "7e77da87de0dcd341dddbb48541da3459b0955d39a9f4c7d2dd4ad96a0b64e33"
     },
     {
       "path": "engineering/whole-amp/control-switching/evidence/Diodes-BAV199-2026.pdf",
@@ -5855,11 +5862,32 @@
       "sha256": "9f9bf1807d06ef4c3fa850872613796971618ea841d48f8298f64ecf36848654"
     },
     {
+      "path": "engineering/whole-amp/control-switching/evidence/Diodes-MMBT3904-2025.pdf",
+      "role": "evidence/source",
+      "owner_route": "MAT-016",
+      "bytes": 349108,
+      "sha256": "483284b10e2a58c8ddafea3c1c3f77388edf9efd394ca30f9559e605f644f2dc"
+    },
+    {
+      "path": "engineering/whole-amp/control-switching/evidence/KNSCHA-CL23-2023.pdf",
+      "role": "evidence/source",
+      "owner_route": "MAT-016",
+      "bytes": 543587,
+      "sha256": "25ab0e1dae6df035aad98b680d53fd84a5404f2a0d324c9ebe50c19ad272d375"
+    },
+    {
       "path": "engineering/whole-amp/control-switching/evidence/TI-LM393-AH.pdf",
       "role": "evidence/source",
       "owner_route": "MAT-016",
       "bytes": 3290405,
       "sha256": "a1f63934820e27c1f345a4d2c01c46fa2d58591df0f406a1bfca0fe97d8731bb"
+    },
+    {
+      "path": "engineering/whole-amp/control-switching/evidence/TI-SN74HC14-L.pdf",
+      "role": "evidence/source",
+      "owner_route": "MAT-016",
+      "bytes": 2079245,
+      "sha256": "24911ae018ad9bf6f8f069158b8689d0d941e3cde9f48924e2421276ae10e397"
     },
     {
       "path": "engineering/whole-amp/control-switching/evidence/TI-comparator-guidelines-SNOAA35F.pdf",
@@ -5918,6 +5946,20 @@
       "sha256": "749df624b188edae3d267a424f13fedeee06f208b5115f5b8e9455b4f6ec938f"
     },
     {
+      "path": "engineering/whole-amp/control-switching/rail-delay-contract.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 3566,
+      "sha256": "e5e4df8fe44d77b1bc8945b99126a4ec5c47cf2041f344ab9ff6a0394922a718"
+    },
+    {
+      "path": "engineering/whole-amp/control-switching/rail-delay-review.md",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6231,
+      "sha256": "eee568062400f0f5d12b2d5564177011cfbdb73e294aaa35ba35a3c399f5734a"
+    },
+    {
       "path": "engineering/whole-amp/control-switching/rail-monitor-buffered-contract.json",
       "role": "editable-product/record",
       "owner_route": "MAT-016",
@@ -5949,8 +5991,8 @@
       "path": "engineering/whole-amp/control-switching/results/CONTEXT.md",
       "role": "contract",
       "owner_route": "MAT-016",
-      "bytes": 1580,
-      "sha256": "64f23c6db5e44095493b52da34e8ef01d34903841b9720e5cf09bc03deaaa908"
+      "bytes": 1824,
+      "sha256": "57ac1807ead0681e57560679db66218fcc3f21a5aa87076e30cca9baef380a8b"
     },
     {
       "path": "engineering/whole-amp/control-switching/results/adoption.json",
@@ -6240,6 +6282,20 @@
       "sha256": "664a4cd308c787ae2e4d8ef86a303a814def10b569781480136b919d5fa31e30"
     },
     {
+      "path": "engineering/whole-amp/control-switching/results/rail-delay-budget.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 6861,
+      "sha256": "63a8cc631c96b0e49706781f795982d0864bfb1c6b6f89d6e1dd613f762d9e25"
+    },
+    {
+      "path": "engineering/whole-amp/control-switching/results/rail-delay-sources.json",
+      "role": "editable-product/record",
+      "owner_route": "MAT-016",
+      "bytes": 2927,
+      "sha256": "1485d3ac8a50d7f01cb712ad82d7354951f36830a6fdc364a8f41de3f509315f"
+    },
+    {
       "path": "engineering/whole-amp/control-switching/results/rail-impedance-screen.json",
       "role": "editable-product/record",
       "owner_route": "MAT-016",
@@ -6348,8 +6404,8 @@
       "path": "engineering/whole-amp/control-switching/tools/CONTEXT.md",
       "role": "contract",
       "owner_route": "MAT-016",
-      "bytes": 2204,
-      "sha256": "def87dbed2ce9b6597bbc1bc078c2f9aca020763172ab66fad3f7854eed173a9"
+      "bytes": 2502,
+      "sha256": "a27c526d37d522f35f89df19e7134d078360a486534cd3ef0a7c03b49202a0b8"
     },
     {
       "path": "engineering/whole-amp/control-switching/tools/analyze_reset_edges.py",
@@ -6434,6 +6490,13 @@
       "owner_route": "MAT-016",
       "bytes": 7240,
       "sha256": "1a2c43d64b45b72919fcf75e311e195a4cda16758d5f0dbb83ef39b0a791b9d7"
+    },
+    {
+      "path": "engineering/whole-amp/control-switching/tools/rail_delay_budget.py",
+      "role": "factory/reference",
+      "owner_route": "MAT-016",
+      "bytes": 9617,
+      "sha256": "7a9959023b7833041f06919790bb66a6fcdfba115b443b830485d5d721dbb8e8"
     },
     {
       "path": "engineering/whole-amp/control-switching/tools/rail_monitor_budget.py",
@@ -27460,8 +27523,8 @@
       "path": "plans/renegade-working-prototype/through-chassis.md",
       "role": "editable-product/record",
       "owner_route": "MAT-002",
-      "bytes": 12492,
-      "sha256": "c4be4ffc4df2c4b9d03bc2db023f3003a2f562bba26607574a3543322e289b1e"
+      "bytes": 13264,
+      "sha256": "5212b466d5c93ed56a547ccdce3de8a02df585e74444b35a7cdd04cdbf23144f"
     },
     {
       "path": "plans/renegade-working-prototype/transformer-inquiry.md",

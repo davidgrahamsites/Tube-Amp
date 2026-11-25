@@ -15,3 +15,5 @@ Divider comparison: divider-contract.json is a separate candidate interface; too
 Analog-rail inhibit candidate: rail-monitor-contract.json defines the proposed two-comparator sense/feedback network and REV_GATE interface; rail-monitor-review.md interprets tools/rail_monitor_budget.py endpoint results. It is not native. Only the earlier K3 final-contact repair is adopted (VAL-046).
 
 Buffered rail candidate: rail-monitor-buffered-contract.json owns the reduced-impedance network and spare-U1E interface. rail-monitor-buffered-review.md separates conditional static success from unresolved sourcing/timing/native adoption. Original rail-monitor-contract.json now uses corrected full-temperature comparator limits.
+
+Delay candidate: rail-delay-contract.json extends that candidate with spare-U1F and a direct fault path. rail-delay-review.md owns the interpretation, including a failed brief-fault hold screen. The interface is still candidate-only; hot-component and full driver/contact response are not qualified.

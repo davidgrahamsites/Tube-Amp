@@ -1,0 +1,242 @@
+{
+  "scope": "Conditional RC/base-drive analysis, not full-circuit or quiet-audio qualification.",
+  "qualified": false,
+  "corners": 192,
+  "checks": [
+    {
+      "name": "independent current integration agrees within1ppm",
+      "passed": true
+    },
+    {
+      "name": "all allocated corners cross both thresholds",
+      "passed": true
+    },
+    {
+      "name": "release at least50ms",
+      "passed": true
+    },
+    {
+      "name": "release at most1s",
+      "passed": true
+    },
+    {
+      "name": "timer discharges below falling threshold within2ms",
+      "passed": true
+    },
+    {
+      "name": "QDIS forced beta within allocation",
+      "passed": true
+    },
+    {
+      "name": "QINHIBIT one-high-one-low base OR within allocation",
+      "passed": true
+    },
+    {
+      "name": "U1E load line supports4mA VOH test",
+      "passed": true
+    },
+    {
+      "name": "both logic lows below allocated turn-on voltage",
+      "passed": true
+    },
+    {
+      "name": "fault and user-OFF retain command priority",
+      "passed": true
+    }
+  ],
+  "passed": 10,
+  "total": 10,
+  "release_range_s": [
+    0.05465006272669698,
+    0.8643861111788157
+  ],
+  "timer_discharge_range_s": [
+    0.00013086298297745476,
+    0.0013545396744864095
+  ],
+  "short_faults": {
+    "0.0001": {
+      "timer_inhibit_asserted": 0,
+      "timer_not_asserted": 192,
+      "hold_below50ms": 192,
+      "minimum_recovery_hold_s": 0,
+      "minimum_voltage_V": 3.4681218177743345,
+      "maximum_voltage_V": 4.592167415375627
+    },
+    "0.0005": {
+      "timer_inhibit_asserted": 64,
+      "timer_not_asserted": 128,
+      "hold_below50ms": 128,
+      "minimum_recovery_hold_s": 0,
+      "minimum_voltage_V": 1.2244974041826653,
+      "maximum_voltage_V": 2.5216751522539766
+    },
+    "0.001": {
+      "timer_inhibit_asserted": 148,
+      "timer_not_asserted": 44,
+      "hold_below50ms": 56,
+      "minimum_recovery_hold_s": 0,
+      "minimum_voltage_V": 0.3373717015778254,
+      "maximum_voltage_V": 1.3085113728606355
+    },
+    "0.002": {
+      "timer_inhibit_asserted": 192,
+      "timer_not_asserted": 0,
+      "hold_below50ms": 0,
+      "minimum_recovery_hold_s": 0.0534014583413385,
+      "minimum_voltage_V": 0.03220691028018438,
+      "maximum_voltage_V": 0.5721956548510209
+    },
+    "0.005": {
+      "timer_inhibit_asserted": 192,
+      "timer_not_asserted": 0,
+      "hold_below50ms": 0,
+      "minimum_recovery_hold_s": 0.05464949081516251,
+      "minimum_voltage_V": 0.008084387833305095,
+      "maximum_voltage_V": 0.41024614874032395
+    }
+  },
+  "every_short_fault_gets50ms_hold": false,
+  "worst_release_case": {
+    "v5": 4.75,
+    "charge_ohm": 121200.0,
+    "discharge_ohm": 217.8,
+    "cap_F": 2.64e-06,
+    "leakage_A": 2.05e-06,
+    "saturation_V": 0,
+    "rise_V": 4.2,
+    "fall_V": 0.9,
+    "healthy_delay_V": 4.50154,
+    "fault_delay_V": 0.008074890271442902,
+    "release_s": 0.8643861111788157,
+    "discharge_s": 0.0009280926733075483
+  },
+  "fastest_release_case": {
+    "v5": 5.25,
+    "charge_ohm": 118800.0,
+    "discharge_ohm": 222.2,
+    "cap_F": 1.76e-06,
+    "leakage_A": -1e-06,
+    "saturation_V": 0.4,
+    "rise_V": 1.55,
+    "fall_V": 0.9,
+    "healthy_delay_V": 5.3688,
+    "fault_delay_V": 0.40927614646679356,
+    "release_s": 0.05465006272669698,
+    "discharge_s": 0.0009029324657726834
+  },
+  "worst_discharge_case": {
+    "v5": 5.25,
+    "charge_ohm": 121200.0,
+    "discharge_ohm": 222.2,
+    "cap_F": 2.64e-06,
+    "leakage_A": -1e-06,
+    "saturation_V": 0.4,
+    "rise_V": 1.55,
+    "fall_V": 0.9,
+    "healthy_delay_V": 5.3712,
+    "fault_delay_V": 0.40909718848777243,
+    "release_s": 0.08359647004941383,
+    "discharge_s": 0.0013545396744864095
+  },
+  "drive": {
+    "qdis_base_min_A": 0.0026017401740174016,
+    "qinhibit_base_min_A": 0.000128052805280528,
+    "qdis_collector_max_A": 0.024661157024793386,
+    "qinhibit_collector_max_A": 0.0011283043197936814,
+    "hc14_load_at_min_voh_A": 0.0036555555555555556
+  },
+  "command_truth": [
+    {
+      "fault": false,
+      "timer_ready": false,
+      "rev_q": false,
+      "driver_enable": false
+    },
+    {
+      "fault": false,
+      "timer_ready": false,
+      "rev_q": true,
+      "driver_enable": false
+    },
+    {
+      "fault": false,
+      "timer_ready": true,
+      "rev_q": false,
+      "driver_enable": false
+    },
+    {
+      "fault": false,
+      "timer_ready": true,
+      "rev_q": true,
+      "driver_enable": true
+    },
+    {
+      "fault": true,
+      "timer_ready": false,
+      "rev_q": false,
+      "driver_enable": false
+    },
+    {
+      "fault": true,
+      "timer_ready": false,
+      "rev_q": true,
+      "driver_enable": false
+    },
+    {
+      "fault": true,
+      "timer_ready": true,
+      "rev_q": false,
+      "driver_enable": false
+    },
+    {
+      "fault": true,
+      "timer_ready": true,
+      "rev_q": true,
+      "driver_enable": false
+    }
+  ],
+  "limitations": [
+    "Comparator response, logic propagation and mechanical relay release not included in RC timing.",
+    "Direct driver inhibit does not imply immediate opening of relay contacts or pop-free audio.",
+    "A brief fault may inhibit the driver without fully rearming the RC delay; report this instead of claiming every pulse gets the full hold.",
+    "Power loss/back-powering through HC14 input protection and the existing5V reset chain require full-circuit validation.",
+    "Transistor full-temperature allocations, capacitor total tolerance/leakage and intermediate-supply logic thresholds remain unqualified.",
+    "No CAD change, socket exception, purchase or fabrication release."
+  ],
+  "inputs": {
+    "rail-delay-contract.json": "e5e4df8fe44d77b1bc8945b99126a4ec5c47cf2041f344ab9ff6a0394922a718",
+    "tools/rail_delay_budget.py": "7a9959023b7833041f06919790bb66a6fcdfba115b443b830485d5d721dbb8e8"
+  },
+  "independent_integration": {
+    "method": "RK4 from branch KCL,4096 steps per crossing window; linear event interpolation",
+    "comparisons": 384,
+    "maximum_relative_error": 2.0125910391032345e-08,
+    "worst": {
+      "corner": 67,
+      "phase": "release_s",
+      "analytic_s": 0.8643861111788157,
+      "numerical_s": 0.8643861285753731,
+      "relative_error": 2.0125910391032345e-08
+    }
+  },
+  "qualification_gates": [
+    {
+      "name": "every tested short fault restarts at least50ms inhibit",
+      "passed": false,
+      "note": "A diagnostic screen, not yet a justified audio requirement; direct driver inhibit remains separate."
+    },
+    {
+      "name": "hot component limits and intermediate-supply threshold envelope verified",
+      "passed": null
+    },
+    {
+      "name": "full circuit power sequence and actual relay/contact timing qualified",
+      "passed": null
+    },
+    {
+      "name": "exact Chinese small-quantity parts and Shanghai delivery verified",
+      "passed": null
+    }
+  ]
+}

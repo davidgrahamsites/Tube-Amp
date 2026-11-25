@@ -80,3 +80,7 @@ The follow-on LM393P rail-inhibit budget enumerates10,240 endpoint cases;4/7 scr
 ### 2026-11-25 — corrected rail limits and buffered candidate
 
 The earlier rail-monitor calculation used25°C bias/output-low limits; corrected full-temperature limits reduce it from4/7 to3/7. A reduced-impedance candidate reusing spareU1E passes11/11 conditional static checks with2,004 independent nodal comparisons. No schematic/PCB change. Exact resistor stock, clamp temperature behavior, startup/release timing and NPN selection remain open. See engineering/whole-amp/control-switching/rail-monitor-buffered-review.md. All six scopes remain active; manufacturing held. Next: source or requalify the precision resistor set, then qualify the complete fault-inhibit interface before native integration.
+
+### 2026-11-25 — rail-inhibit delay candidate
+
+[VAL-047](../../brain/records/VAL-047-rail-inhibit-delay.md) adds192 conditional timing corners and384 independent branch-current comparisons. Ten calculation screens pass, while the separate brief-fault hold screen fails:0.1–1ms pulses may not restart50ms inhibit. The direct fault path does not establish mechanical contact timing or quiet audio. KNSCHA82CL0117 domestic listing reports356/minimum1;33k TNPW candidate reports zero stock. Hot limits, full-circuit timing, exact Chinese purchasing and Shanghai delivery remain open. No native change; all six scopes remain active. Next: establish audio fault-width/contact response before adding further timing complexity, then exact parts and populated chassis checks.

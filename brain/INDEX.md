@@ -77,3 +77,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-044 | validation | schematic | documented | 2026-11-25 | [Expression trim margin and controller isolation](records/VAL-044-expression-trim-isolation.md) |
 | VAL-045 | validation | schematic | documented | 2026-11-25 | [Expression controller stationary DC](records/VAL-045-expression-stationary-dc.md) |
 | VAL-046 | validation | schematic | documented | 2026-11-25 | [Final wet mute and supply-sequencing holds](records/VAL-046-final-wet-mute.md) |
+| VAL-047 | validation | schematic | documented | 2026-11-25 | [Rail-inhibit delay and short-fault limit](records/VAL-047-rail-inhibit-delay.md) |

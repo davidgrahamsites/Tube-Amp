@@ -1,0 +1,75 @@
+{
+  "observed_on": "2026-11-25",
+  "primary_documents": [
+    {
+      "file": "evidence/TI-SN74HC14-L.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74hc14.pdf",
+      "sha256": "24911ae018ad9bf6f8f069158b8689d0d941e3cde9f48924e2421276ae10e397"
+    },
+    {
+      "file": "evidence/Diodes-MMBT3904-2025.pdf",
+      "url": "https://www.diodes.com/datasheet/download/MMBT3904.pdf",
+      "sha256": "483284b10e2a58c8ddafea3c1c3f77388edf9efd394ca30f9559e605f644f2dc"
+    },
+    {
+      "file": "evidence/KNSCHA-CL23-2023.pdf",
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20230921/9A0E89BF4739CE2429C2EA53D972C1F0.pdf",
+      "sha256": "25ab0e1dae6df035aad98b680d53fd84a5404f2a0d324c9ebe50c19ad272d375"
+    }
+  ],
+  "listings": [
+    {
+      "url": "https://item.szlcsc.com/6172074.html",
+      "mpn": "82CL0117",
+      "sku": "C5359298",
+      "html_sha256": "17e8770ba2329ad18efd688a26453b43ecc059ab2c4451c36e62a25915412808",
+      "fields": {
+        "stockNumber": 356,
+        "validStockNumber": 356,
+        "minBuyNumber": 1
+      },
+      "note": "Dated page observation, not reservation or address-specific shipping proof."
+    },
+    {
+      "url": "https://item.szlcsc.com/903640.html",
+      "mpn": "TNPW080533K0BEEA",
+      "sku": "C844066",
+      "html_sha256": "831e7aeb794d8be81ea9b0b6f8adc6c7030d7970e562cb0ca7ed369dc0076f6a",
+      "fields": {
+        "stockNumber": 0,
+        "validStockNumber": 0,
+        "minBuyNumber": 1
+      },
+      "note": "Dated page observation, not reservation or address-specific shipping proof."
+    }
+  ],
+  "purchased": false,
+  "shanghai_checkout_verified": false,
+  "transistor": {
+    "mpn": "MMBT3904-7-F",
+    "sku": "C94514",
+    "catalog_url": "https://www.lcsc.com/zh-CN/product-detail/C94514.html",
+    "domestic_stock_verified": false,
+    "note": "No substitution of ChipNobo or another manufacturer under a similar name. PCN2549 replaces Lite-On MMBT3904 with Diodes MMBT3904-7-F; it does not discontinue this Diodes MPN.",
+    "pcn_url": "https://www.diodes.com/assets/PCN-Files/Diodes_PCN_2549_EOL_Rev1.pdf?v=2"
+  },
+  "capacitor_limits": {
+    "initial_tolerance_fraction": 0.05,
+    "body_WHT_mm": [
+      7.2,
+      11,
+      6
+    ],
+    "body_tolerance_mm": 0.5,
+    "lead_diameter_mm": 0.6,
+    "lead_tolerance_mm": 0.05,
+    "pitch_mm": 5,
+    "pitch_tolerance_mm": 0.5,
+    "initial_RC_min_s": 1000,
+    "IR_test": "20C,10V,1min",
+    "heat_endurance": "110C,125% rated voltage,1000h; capacitance change8%, IR>=50%initial after cooling",
+    "damp_heat": "40C90-95%RH,rated voltage,500h; capacitance change10%, IR>=50%initial after cooling",
+    "solder_heat": "260C5s,pitch5mm; capacitance change3% after cooling",
+    "qualification_note": "These separate post-test limits do not guarantee continuous hot capacitance/leakage or a combined lifetime envelope.20%totalC and50nA film leakage remain engineering allocations."
+  }
+}

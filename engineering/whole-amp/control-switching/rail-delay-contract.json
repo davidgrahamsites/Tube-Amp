@@ -1,0 +1,86 @@
+{
+  "status": "candidate-not-native",
+  "owner": "control-switching integration",
+  "baseline": "19f45a84887e072efc20b368ca6403594030604c",
+  "job": "Delay reverb enable after valid analog rails while permitting a direct fault inhibit and preserving REV_Q priority.",
+  "interface": {
+    "inputs": [
+      "RAIL_OK",
+      "+5V",
+      "REV_Q",
+      "GND"
+    ],
+    "output": "REV_GATE",
+    "connections": [
+      "U1E pin11=RAIL_OK, pin10=FAULT; existing SN74HC14N socket remains.",
+      "FAULT through1k to QDIS base,100k base-emitter. QDIS emitterGND, collector through220ohm toDELAY.",
+      "+5V through120k toDELAY;2.2uF film fromDELAY toGND.",
+      "U1F pin13=DELAY, pin12=NOT_READY.",
+      "FAULT and NOT_READY each through its own10k to QINHIBIT base;100k base-emitter. QINHIBIT emitterGND, collectorREV_GATE.",
+      "REV_Q through4.7k toREV_GATE;100k gate-ground. Both command states remain subordinate to the existing reset/latch interface."
+    ],
+    "note": "Two-resistor base OR is checked with one high and the other low; no ideal diode OR is assumed. No capacitor is connected directly to comparator feedback."
+  },
+  "parts": {
+    "transistors": "2x Diodes MMBT3904-7-F candidates; exact temperature saturation/leakage bounds and Chinese domestic listing pending",
+    "capacitor": "KNSCHA 82CL0117, C5359298, 2.2uF5%100V,5mm pitch; domestic stock356/minimum1 observed2026-11-25. Candidate only; continuous hot behavior and Shanghai checkout unverified."
+  },
+  "supply_V": [
+    4.75,
+    5.25
+  ],
+  "charge_resistor_ohm": 120000,
+  "discharge_resistor_ohm": 220,
+  "resistor_fraction": 0.01,
+  "capacitor_F": 2.2e-06,
+  "capacitor_total_fraction_allocation": 0.2,
+  "net_delay_leakage_A": [
+    -1e-06,
+    2.05e-06
+  ],
+  "leakage_basis": "HC14 input\u00b11uA plus proposed QDIS off-leak\u22641uA and film\u226450nA. Last two are engineering allocations requiring temperature evidence, not25C limits extended silently.",
+  "threshold_rise_V": [
+    1.55,
+    4.2
+  ],
+  "threshold_fall_V": [
+    0.9,
+    3.2
+  ],
+  "threshold_basis": "Envelope of TI HC14 full-temperature4.5V and6V table endpoints. Intermediate-supply containment is an engineering assumption; no linear interpolation of guaranteed thresholds.",
+  "saturation_allocation_V": [
+    0,
+    0.4
+  ],
+  "hc14_voh_min_V": 3.84,
+  "hc14_vol_max_V": 0.33,
+  "base_emitter_max_allocation_V": 1.2,
+  "base_emitter_min_allocation_V": 0.55,
+  "qdis_base_ohm": 1000,
+  "qinhibit_input_ohm": 10000,
+  "base_pulldown_ohm": 100000,
+  "gate_series_ohm": 4700,
+  "gate_pulldown_ohm": 100000,
+  "screens": {
+    "release_min_s": 0.05,
+    "release_max_s": 1.0,
+    "timer_discharge_max_s": 0.002,
+    "forced_beta_max": 10
+  },
+  "short_fault_duration_s": [
+    0.0001,
+    0.0005,
+    0.001,
+    0.002,
+    0.005
+  ],
+  "limitations": [
+    "Comparator response, logic propagation and mechanical relay release not included in RC timing.",
+    "Direct driver inhibit does not imply immediate opening of relay contacts or pop-free audio.",
+    "A brief fault may inhibit the driver without fully rearming the RC delay; report this instead of claiming every pulse gets the full hold.",
+    "Power loss/back-powering through HC14 input protection and the existing5V reset chain require full-circuit validation.",
+    "Transistor full-temperature allocations, capacitor total tolerance/leakage and intermediate-supply logic thresholds remain unqualified.",
+    "No CAD change, socket exception, purchase or fabrication release."
+  ],
+  "source_record": "results/rail-delay-sources.json"
+}
