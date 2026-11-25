@@ -1275,3 +1275,15 @@ Source: Current build conversation
 
 - [engineering/whole-amp/expression-control/selector-review.md](<../../engineering/whole-amp/expression-control/selector-review.md>)
 
+## FB-126 — small-quantity-marketplace-sourcing
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> if there's any parts that are perfect but that site has a MOQ that's too high, it's also possible they could be on taobao etc ... or on pinduoduo
+
+Check Taobao and Pinduoduo as alternative small-quantity China purchasing routes before rejecting an otherwise suitable exact part solely for another supplier minimum order. Retain identity and quality checks; this is not purchase authorization.
+
+Source: Current build conversation
+
+- [brain/records/DEC-017-small-quantity-marketplaces.md](<../../brain/records/DEC-017-small-quantity-marketplaces.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+

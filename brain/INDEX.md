@@ -30,6 +30,7 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | DEC-014 | decision | schematic | documented | 2026-11-23 | [Effects-loop qualification and optical-control recommendation](records/DEC-014-effects-loop-optical-review.md) |
 | DEC-015 | decision | cross-domain | documented | 2026-11-24 | [Include switchable 120 V / 220 V mains in this build](records/DEC-015-switchable-mains.md) |
 | DEC-016 | decision | cross-domain | documented | 2026-11-25 | [Buffered loop approved; expression selector requested](records/DEC-016-buffered-loop-expression-selector.md) |
+| DEC-017 | decision | cross-domain | documented | 2026-11-25 | [Small-quantity marketplace sources](records/DEC-017-small-quantity-marketplaces.md) |
 | VAL-001 | validation | schematic | verified | 2026-10-03 | [Extracted starter matches supplied archive](records/VAL-001-starter-archive-match.md) |
 | VAL-002 | validation | cross-domain | verified | 2026-10-04 | [KiCad MCP installation and scoped smoke checks](records/VAL-002-kicad-mcp-install.md) |
 | VAL-003 | validation | schematic | verified | 2026-10-04 | [Original PowerPoint received and inspected](records/VAL-003-original-ppt-intake.md) |
@@ -72,3 +73,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-040 | validation | schematic | documented | 2026-11-25 | [RETURN supply/bypass diagnosis](records/VAL-040-return-supply-diagnostics.md) |
 | VAL-041 | validation | schematic | documented | 2026-11-25 | [Effects-loop port behavior and pending choice](records/VAL-041-return-port-behavior.md) |
 | VAL-042 | validation | schematic | documented | 2026-11-25 | [Expression wet gain-cell screen](records/VAL-042-expression-gain-cell.md) |
+| VAL-043 | validation | schematic | documented | 2026-11-25 | [Expression supply diagnostics and practical bias](records/VAL-043-expression-supply-bias.md) |

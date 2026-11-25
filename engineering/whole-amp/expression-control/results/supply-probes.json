@@ -1,0 +1,309 @@
+{
+  "scope": "Solver diagnostics only; original invalid OP retained as negative control. A rail-bounded OP is necessary, not sufficient for circuit qualification.",
+  "cases": [
+    {
+      "name": "baseline12",
+      "case": {
+        "rail": 12,
+        "hz": 1000,
+        "amplitude": 8,
+        "trim_fraction": 0.3013762988632852
+      },
+      "deck": "supply-baseline12.cir",
+      "deck_sha256": "4762b0d03f9ed1706552b76ed81777a93b14490670f3f46e921c309219162687",
+      "status": "timeout",
+      "seconds": 25
+    },
+    {
+      "name": "dc12",
+      "case": {
+        "rail": 12,
+        "hz": 1000,
+        "amplitude": 8,
+        "trim_fraction": 0.3013762988632852,
+        "dc_only": true
+      },
+      "deck": "supply-dc12.cir",
+      "deck_sha256": "4762b0d03f9ed1706552b76ed81777a93b14490670f3f46e921c309219162687",
+      "status": "complete",
+      "op": {
+        "out": -497.9421770632406,
+        "plus": 0.49217458420875826,
+        "minus": 0.49269420173888817,
+        "db": 1.2071071560463131
+      },
+      "op_within_supply": false,
+      "interpretation": "REJECT: output outside supply rails despite solver success"
+    },
+    {
+      "name": "shunt12",
+      "case": {
+        "rail": 12,
+        "hz": 1000,
+        "amplitude": 8,
+        "trim_fraction": 0.3013762988632852,
+        "rshunt": 10000000000.0
+      },
+      "deck": "supply-shunt12.cir",
+      "deck_sha256": "76150edb0ae40c3b559d08c6ccf33d8e381980d959dc7e86f412b8246f71a51c",
+      "status": "complete",
+      "op": {
+        "out": -497.94217222061815,
+        "plus": 0.49217442575702214,
+        "minus": 0.49269403750808555,
+        "db": 1.207106991643117
+      },
+      "end_s": 0.016,
+      "fundamental_peak_V": 8.020545385457355,
+      "gain": 1.0025681731821694,
+      "thd_percent": 0.04392693421945702,
+      "dc_V": -0.25196013744106077,
+      "peak_V": 8.269574360360652,
+      "harmonics_peak_V": [
+        0.003522078640687565,
+        8.676033451475383e-05,
+        8.926210545520472e-06,
+        7.2879981357551985e-06,
+        5.9500853595428574e-06,
+        5.10006895507235e-06,
+        4.462777362163964e-06,
+        3.967024038195446e-06
+      ],
+      "op_within_supply": false,
+      "interpretation": "REJECT: output outside supply rails despite solver success"
+    },
+    {
+      "name": "nodeset12",
+      "case": {
+        "rail": 12,
+        "hz": 1000,
+        "amplitude": 8,
+        "trim_fraction": 0.3013762988632852,
+        "nodeset": true
+      },
+      "deck": "supply-nodeset12.cir",
+      "deck_sha256": "f135e774f763f0c5968d331c9f3be8fbfb6f9b04ccadc36c367fc94d8bf703d5",
+      "status": "complete",
+      "op": {
+        "out": -0.24419568779116202,
+        "plus": 0.49217458420875426,
+        "minus": 0.49269420173888423,
+        "db": 1.2071071560463091
+      },
+      "end_s": 0.016,
+      "fundamental_peak_V": 8.020500719615912,
+      "gain": 1.002562589951989,
+      "thd_percent": 0.043926105545252656,
+      "dc_V": -0.25194584579994544,
+      "peak_V": 8.269652800694784,
+      "harmonics_peak_V": [
+        0.0035219925730937203,
+        8.675861652939642e-05,
+        8.926077655838867e-06,
+        7.287877103253004e-06,
+        5.9499799160371324e-06,
+        5.0999627162786155e-06,
+        4.46268299916183e-06,
+        3.966922540838807e-06
+      ],
+      "op_within_supply": true,
+      "interpretation": "physical OP bound passes"
+    },
+    {
+      "name": "seed-minus",
+      "case": {
+        "rail": 12,
+        "hz": 1000,
+        "amplitude": 8,
+        "trim_fraction": 0.3013762988632852,
+        "nodeset": true,
+        "seed": -1
+      },
+      "deck": "supply-seed-minus.cir",
+      "deck_sha256": "f97eae2fbd5f72ff49bfc8a0a62a2e8cc015ceac8c6fb783b9c8dedf1e458822",
+      "status": "complete",
+      "op": {
+        "out": -0.24419568779197087,
+        "plus": 0.4921745842087575,
+        "minus": 0.4926942017388872,
+        "db": 1.2071071560463122
+      },
+      "end_s": 0.016,
+      "fundamental_peak_V": 8.020500719374247,
+      "gain": 1.002562589921781,
+      "thd_percent": 0.04392610554151624,
+      "dc_V": -0.25194584579997326,
+      "peak_V": 8.269652798814441,
+      "harmonics_peak_V": [
+        0.0035219925726882044,
+        8.675861651216054e-05,
+        8.926077640593806e-06,
+        7.287877112589821e-06,
+        5.949979901375733e-06,
+        5.099962723720817e-06,
+        4.462683018875482e-06,
+        3.966922530586861e-06
+      ],
+      "op_within_supply": true,
+      "interpretation": "physical OP bound passes"
+    },
+    {
+      "name": "seed-plus",
+      "case": {
+        "rail": 12,
+        "hz": 1000,
+        "amplitude": 8,
+        "trim_fraction": 0.3013762988632852,
+        "nodeset": true,
+        "seed": 1
+      },
+      "deck": "supply-seed-plus.cir",
+      "deck_sha256": "4181981193b426e8439716596069e56f1a57106527828b540bf66c97c9be133d",
+      "status": "complete",
+      "op": {
+        "out": -0.24419568779197087,
+        "plus": 0.4921745842087575,
+        "minus": 0.4926942017388872,
+        "db": 1.2071071560463122
+      },
+      "end_s": 0.016,
+      "fundamental_peak_V": 8.020500719374247,
+      "gain": 1.002562589921781,
+      "thd_percent": 0.04392610554151624,
+      "dc_V": -0.25194584579997326,
+      "peak_V": 8.269652798814441,
+      "harmonics_peak_V": [
+        0.0035219925726882044,
+        8.675861651216054e-05,
+        8.926077640593806e-06,
+        7.287877112589821e-06,
+        5.949979901375733e-06,
+        5.099962723720817e-06,
+        4.462683018875482e-06,
+        3.966922530586861e-06
+      ],
+      "op_within_supply": true,
+      "interpretation": "physical OP bound passes"
+    },
+    {
+      "name": "refined12",
+      "case": {
+        "rail": 12,
+        "hz": 1000,
+        "amplitude": 8,
+        "trim_fraction": 0.3013762988632852,
+        "nodeset": true,
+        "refine": 2
+      },
+      "deck": "supply-refined12.cir",
+      "deck_sha256": "f135e774f763f0c5968d331c9f3be8fbfb6f9b04ccadc36c367fc94d8bf703d5",
+      "status": "complete",
+      "op": {
+        "out": -0.24419568779116202,
+        "plus": 0.49217458420875426,
+        "minus": 0.49269420173888423,
+        "db": 1.2071071560463091
+      },
+      "end_s": 0.016,
+      "fundamental_peak_V": 8.02080389923767,
+      "gain": 1.0026004874047088,
+      "thd_percent": 0.043931035176535835,
+      "dc_V": -0.25194626205067616,
+      "peak_V": 8.269740880773258,
+      "harmonics_peak_V": [
+        0.003522520651814394,
+        8.67851727679803e-05,
+        8.926455194759858e-06,
+        7.288340990148125e-06,
+        5.95027030856506e-06,
+        5.1002262592042226e-06,
+        4.462938215899882e-06,
+        3.967162373890761e-06
+      ],
+      "op_within_supply": true,
+      "interpretation": "physical OP bound passes"
+    },
+    {
+      "name": "nodeset15",
+      "case": {
+        "rail": 15,
+        "hz": 1000,
+        "amplitude": 8,
+        "trim_fraction": 0.3013762988632852,
+        "nodeset": true
+      },
+      "deck": "supply-nodeset15.cir",
+      "deck_sha256": "330744eefdbb95ceb99bf3ba9fc80756d053295b3be6d7bb981e67e09b2d3687",
+      "status": "complete",
+      "op": {
+        "out": -4.199775014524069e-05,
+        "plus": 0.49090302248914053,
+        "minus": 0.4915414164469579,
+        "db": 1.205894317843562
+      },
+      "end_s": 0.016,
+      "fundamental_peak_V": 8.020952956082947,
+      "gain": 1.0026191195103684,
+      "thd_percent": 0.044094047644053135,
+      "dc_V": -0.007779053451673401,
+      "peak_V": 8.026025329360639,
+      "harmonics_peak_V": [
+        0.00353566623381158,
+        8.675006167958648e-05,
+        8.929648337844988e-06,
+        7.288565278145218e-06,
+        5.950393015105302e-06,
+        5.100366920736382e-06,
+        4.46301020290821e-06,
+        3.967268681550841e-06
+      ],
+      "op_within_supply": true,
+      "interpretation": "physical OP bound passes"
+    },
+    {
+      "name": "weak-shunt12",
+      "case": {
+        "rail": 12,
+        "hz": 1000,
+        "amplitude": 8,
+        "trim_fraction": 0.3013762988632852,
+        "nodeset": true,
+        "rshunt": 10000000000000.0
+      },
+      "deck": "supply-weak-shunt12.cir",
+      "deck_sha256": "e62d5aadbd09975b266b22742693f1d4dbd9efd8a01ccba4cd30133d1b09faa9",
+      "status": "complete",
+      "op": {
+        "out": -0.24419555867724818,
+        "plus": 0.49217458564922667,
+        "minus": 0.4926942032318936,
+        "db": 1.2071071575408856
+      },
+      "end_s": 0.016,
+      "fundamental_peak_V": 8.020500256824882,
+      "gain": 1.0025625321031102,
+      "thd_percent": 0.04392609699364536,
+      "dc_V": -0.25194571602503285,
+      "peak_V": 8.269652217348478,
+      "harmonics_peak_V": [
+        0.0035219916841867926,
+        8.675859525866507e-05,
+        8.926075625074764e-06,
+        7.28787544985045e-06,
+        5.949978561252091e-06,
+        5.0999615679587705e-06,
+        4.462681982842692e-06,
+        3.966921629462965e-06
+      ],
+      "op_within_supply": true,
+      "interpretation": "physical OP bound passes"
+    }
+  ],
+  "provenance": {
+    "engineering/whole-amp/expression-control/tools/supply_probe.py": "ac01b8f5e020ef5a7a0419b355335b00f67d16200345bde85b59a13dffbbffaa",
+    "engineering/whole-amp/expression-control/tools/ota_screen.py": "4f1bc096811638c562a6ca202fd5edc556a772cb7fc77c741f92bfd1e64af418",
+    "engineering/whole-amp/expression-control/models/LM13700.MOD": "666df501773da5e65f7fd3b3c806b2c1ae7770784685dd8191a9df33b382f390",
+    "engineering/solid-state-reverb/simulation/models/OPAx134.LIB": "8ff414c678a7f8330b87504d7e0553de20ca87bdc713cecf81ab3448b4d7608f",
+    "engineering/whole-amp/expression-control/results/ota-screen.json": "6d7022fa39a398e61a7b26cd279ab282a17d1132befa6a409bc5cab405d8ce4c"
+  }
+}

@@ -36,3 +36,6 @@ The 81-check evidence audit passes: input/deck hashes, duration, independent har
 Resolve the ±12V simulation failure without silently replacing the real op-amp; compare noise and control-feedthrough burden against a dedicated VCA. Build real bias-current and protected pedal-reference circuits, implement PANEL/EXPRESSION and unplug detection, and test control slew, shorts, open wiper, supply sequencing and fault override. Preserve the separate reverb-off function. Prove loaded wet gain, dry invariance and output polarity in the integrated circuit before editing native CAD.
 
 The TI OTA model explicitly overestimates bandwidth and stability margin by more than twofold. It is one amplifier, not a complete dual-IC current budget. No actual tank acoustic transfer, socket parasitics, tolerances, PCB layout or assembled fit is modeled here. All six build scopes remain open.
+
+## Follow-up — VAL-043
+The old ±12V timeout is diagnosed in supply-bias-review.md; the VAL-042 data above remains the original run. A physical starting solution is now demonstrated with seed/refinement checks. A separate practical bias circuit is under test with explicit unresolved low-current, trim and thermal limits; it is not a native replacement.
