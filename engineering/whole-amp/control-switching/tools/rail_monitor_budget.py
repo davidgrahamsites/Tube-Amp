@@ -10,7 +10,7 @@ from pathlib import Path
 BASE=Path(__file__).resolve().parents[1]
 C=json.loads((BASE/'rail-monitor-contract.json').read_text())
 
-def threshold(kind,r,v5,offset,ip,im,gate):
+def threshold(kind,r,v5,offset,ip,im,gate,clamp_leak=0):
     if kind=='positive':
         ref=(v5/r['ref_top']+im)/(1/r['ref_top']+1/r['ref_bottom'])
         target=ref+offset
@@ -18,22 +18,24 @@ def threshold(kind,r,v5,offset,ip,im,gate):
     ref=(v5/r['ref_top']+gate/r['feedback']+ip)/(1/r['ref_top']+1/r['ref_bottom']+1/r['feedback'])
     sense=ref+offset
     clamp=sense*(1+r['clamp_to_sense']/r['sense_to_ground'])-im*r['clamp_to_sense']
-    return r['rail_to_clamp']*(clamp*(1/r['ref_to_clamp']+1/r['rail_to_clamp']+1/r['clamp_to_sense'])-v5/r['ref_to_clamp']-sense/r['clamp_to_sense'])
+    return r['rail_to_clamp']*(clamp*(1/r['ref_to_clamp']+1/r['rail_to_clamp']+1/r['clamp_to_sense'])-v5/r['ref_to_clamp']-sense/r['clamp_to_sense']+clamp_leak)
 
-def corners(kind):
-    nominal=C[kind+'_resistors_ohm']; names=list(nominal)
+def corners(kind,config=None):
+    config = C if config is None else config
+    nominal=config[kind+'_resistors_ohm']; names=list(nominal)
     lo=None;hi=None;minimum_hyst=None;count=0
     ranges={'enable':[],'disable':[]}
-    for factors in itertools.product([1-C['resistor_fraction'],1+C['resistor_fraction']],repeat=len(names)):
+    for factors in itertools.product([1-config['resistor_fraction'],1+config['resistor_fraction']],repeat=len(names)):
         r={k:nominal[k]*f for k,f in zip(names,factors)}
-        for v5,offset,ip,im in itertools.product(C['reference_V'],C['offset_V'],C['input_current_A'],C['input_current_A']):
+        leaks=config.get('clamp_leakage_A',[0]) if kind=='negative' else [0]
+        for v5,offset,ip,im,leak in itertools.product(config['reference_V'],config['offset_V'],config['input_current_A'],config['input_current_A'],leaks):
             values={}
-            for state,gates in [('enable',C['gate_off_V']),('disable',C['gate_on_assumed_V'])]:
+            for state,gates in [('enable',config['gate_off_V']),('disable',config['gate_on_assumed_V'])]:
                 values[state]=[]
                 for gate in gates:
-                    voltage=threshold(kind,r,v5,offset,ip,im,gate)
+                    voltage=threshold(kind,r,v5,offset,ip,im,gate,leak)
                     absolute=voltage if kind=='positive' else -voltage
-                    case=dict(state=state,rail_threshold_V=voltage,abs_threshold_V=absolute,resistors_ohm=r,v5=v5,offset_V=offset,ip_A=ip,im_A=im,gate_V=gate)
+                    case=dict(state=state,rail_threshold_V=voltage,abs_threshold_V=absolute,resistors_ohm=r,v5=v5,offset_V=offset,ip_A=ip,im_A=im,gate_V=gate,clamp_leak_A=leak)
                     ranges[state].append(absolute);values[state].append(absolute);count+=1
                     if lo is None or absolute<lo['abs_threshold_V']:lo=case
                     if hi is None or absolute>hi['abs_threshold_V']:hi=case

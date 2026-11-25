@@ -10,3 +10,5 @@ Brownout factories consume ../brownout-contract.json and unmodified TI model. ch
 check_divider_options.py reads ../divider-contract.json, verifies retained manufacturer/baseline hashes, and compares independent resistor, threshold, leakage, temperature and solder/endurance limits. It preserves the historical contract and native CAD. A passing arithmetic receipt includes explicit failed engineering profiles; inspect ../divider-review.md.
 
 rail_monitor_budget.py owns static endpoint analysis of rail-monitor-contract.json. It writes rail-monitor-budget.json with failed constraints and qualification=false. It is not a transient comparator model or CAD writer.
+
+buffered_rail_budget.py consumes the buffered contract, calls the shared endpoint calculator and checks the equations with an independent nodal solver. Outputs are static evidence only; no native mutation or vendor-model substitution.

@@ -1,0 +1,196 @@
+{
+  "scope": "Candidate settled threshold screen only; no CAD or transient qualification.",
+  "results": {
+    "positive": {
+      "corners": 2048,
+      "nominal_enable_V": 10.966052013117142,
+      "nominal_disable_V": 10.437976255541386,
+      "abs_ranges_V": {
+        "enable": [
+          10.139413100484056,
+          11.775928557024763
+        ],
+        "disable": [
+          9.611772913520454,
+          11.258219215962605
+        ]
+      },
+      "minimum_same_corner_hysteresis_V": 0.43175932633103997,
+      "lowest_case": {
+        "state": "disable",
+        "rail_threshold_V": 9.611772913520454,
+        "abs_threshold_V": 9.611772913520454,
+        "resistors_ohm": {
+          "rail": 3814.68,
+          "ground": 500.996,
+          "feedback": 32868.0,
+          "ref_top": 3012.0,
+          "ref_bottom": 996.0
+        },
+        "v5": 4.75,
+        "offset_V": -0.009,
+        "ip_A": 5.25e-07,
+        "im_A": -5.25e-07,
+        "gate_V": 5.25,
+        "clamp_leak_A": 0
+      },
+      "highest_case": {
+        "state": "enable",
+        "rail_threshold_V": 11.775928557024763,
+        "abs_threshold_V": 11.775928557024763,
+        "resistors_ohm": {
+          "rail": 3845.32,
+          "ground": 497.004,
+          "feedback": 32868.0,
+          "ref_top": 2988.0,
+          "ref_bottom": 1004.0
+        },
+        "v5": 5.25,
+        "offset_V": 0.009,
+        "ip_A": -5.25e-07,
+        "im_A": 5.25e-07,
+        "gate_V": 0,
+        "clamp_leak_A": 0
+      }
+    },
+    "negative": {
+      "corners": 16384,
+      "nominal_enable_V": -10.766326913643383,
+      "nominal_disable_V": -10.277043990574619,
+      "abs_ranges_V": {
+        "enable": [
+          9.594201829953036,
+          11.93738757423014
+        ],
+        "disable": [
+          9.101671732761085,
+          11.46156284645578
+        ]
+      },
+      "minimum_same_corner_hysteresis_V": 0.39533155182950885,
+      "lowest_case": {
+        "state": "disable",
+        "rail_threshold_V": -9.101671732761085,
+        "abs_threshold_V": 9.101671732761085,
+        "resistors_ohm": {
+          "ref_to_clamp": 1004.0,
+          "rail_to_clamp": 5079.6,
+          "clamp_to_sense": 3022.04,
+          "sense_to_ground": 996.0,
+          "ref_top": 9063.6,
+          "ref_bottom": 1014.04,
+          "feedback": 248004.0
+        },
+        "v5": 4.75,
+        "offset_V": 0.009,
+        "ip_A": 5.25e-07,
+        "im_A": -5.25e-07,
+        "gate_V": 5.25,
+        "clamp_leak_A": 8e-08
+      },
+      "highest_case": {
+        "state": "enable",
+        "rail_threshold_V": -11.93738757423014,
+        "abs_threshold_V": 11.93738757423014,
+        "resistors_ohm": {
+          "ref_to_clamp": 996.0,
+          "rail_to_clamp": 5120.4,
+          "clamp_to_sense": 2997.96,
+          "sense_to_ground": 1004.0,
+          "ref_top": 9136.4,
+          "ref_bottom": 1005.96,
+          "feedback": 248004.0
+        },
+        "v5": 5.25,
+        "offset_V": -0.009,
+        "ip_A": -5.25e-07,
+        "im_A": 5.25e-07,
+        "gate_V": 0,
+        "clamp_leak_A": -8e-08
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "positive enable below allocated maximum",
+      "passed": true
+    },
+    {
+      "name": "positive disable above allocated minimum",
+      "passed": true
+    },
+    {
+      "name": "positive hysteresis above allocation",
+      "passed": true
+    },
+    {
+      "name": "negative enable below allocated maximum",
+      "passed": true
+    },
+    {
+      "name": "negative disable above allocated minimum",
+      "passed": true
+    },
+    {
+      "name": "negative hysteresis above allocation",
+      "passed": true
+    },
+    {
+      "name": "independent nodal comparison within1nV",
+      "passed": true
+    },
+    {
+      "name": "feedback high lower bound supported by pullup budget",
+      "passed": true
+    },
+    {
+      "name": "comparator sink below4mA test condition",
+      "passed": true
+    },
+    {
+      "name": "conditional clamp magnitude below0.3V",
+      "passed": true
+    },
+    {
+      "name": "conditional resistor error allocation covers declared profile",
+      "passed": true
+    }
+  ],
+  "passed": 11,
+  "total": 11,
+  "qualified": false,
+  "nodal_comparisons": 2004,
+  "nodal_max_error_V": 1.5987211554602254e-14,
+  "rail_ok_high_min_V": 4.4713932546615816,
+  "comparator_sink_upper_A": 0.0037172523771610727,
+  "clamp_input_abs_allocation_V": 0.2764918772591431,
+  "clamp_current_upper_A": 0.0032482872667139143,
+  "resistor_error_fractions": {
+    "positive.rail": 0.003832832898172324,
+    "positive.ground": 0.003885120240480962,
+    "positive.feedback": 0.003825909090909091,
+    "positive.ref_top": 0.0038350000000000003,
+    "positive.ref_bottom": 0.0038550000000000004,
+    "negative.ref_to_clamp": 0.0038550000000000004,
+    "negative.rail_to_clamp": 0.0038308823529411766,
+    "negative.clamp_to_sense": 0.003834966777408638,
+    "negative.sense_to_ground": 0.0038550000000000004,
+    "negative.ref_top": 0.003828296703296704,
+    "negative.ref_bottom": 0.0038844059405940597,
+    "negative.feedback": 0.003825120481927711
+  },
+  "limitations": [
+    "Only bounded settled threshold calculations; startup and mechanical relay response unqualified",
+    "0.4% resistor total depends on declared8000h/film-temperature profile and sourcing; environment/assembly qualification still open",
+    "BAV1991.1V allocation not verified over temperature; leakage80nA is a conservative150\u00b0C published endpoint",
+    "Comparator output VOL tested with1V differential; near-threshold transfer and delay require evaluation",
+    "U1E and NPN interface not native; exact transistor and release timing pending",
+    "Existing+5V supervisor and simultaneous-fault protection remain open",
+    "No fabrication or Shanghai checkout approval"
+  ],
+  "inputs": {
+    "rail-monitor-buffered-contract.json": "2936cb6ce3f52dcce822da5dd6337507ed9543a2064df2bd4d3a95e37088db61",
+    "tools/buffered_rail_budget.py": "04f7c718b654733c887ec8e1ce40da66d0cb9f1af44d73f5cdb9d8005ec617df",
+    "tools/rail_monitor_budget.py": "5a2a6f4c56aeab2095c076c5d37821885e0350b198cfa556b3e8c4b14e47a726"
+  }
+}

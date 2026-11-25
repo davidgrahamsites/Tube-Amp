@@ -41,12 +41,12 @@
     0.009
   ],
   "input_current_A": [
-    -2.5e-07,
-    2.5e-07
+    -5.25e-07,
+    5.25e-07
   ],
   "gate_off_V": [
     0,
-    0.4
+    0.7
   ],
   "gate_on_assumed_V": [
     3.5,
@@ -69,5 +69,6 @@
     "Existing +5V supervisor limits remain an independent open item",
     "No manufacturing or exact resistor sourcing approval"
   ],
-  "gate_high_basis": "Provisional lower bound using the existing HC74 3.84V VOH guarantee, 4.7k series resistance and combined feedback/pulldown loading; validate full DC network and output leakage."
+  "gate_high_basis": "Provisional lower bound using the existing HC74 3.84V VOH guarantee, 4.7k series resistance and combined feedback/pulldown loading; validate full DC network and output leakage.",
+  "datasheet_correction": "TI SLCS005AH p8: full-range IIB magnitude400nA, IIO250nA; conservative independent input magnitude525nA =400+250/2. Full-range VOL700mV; prior250nA/400mV were room-temperature values. No candidate was native."
 }

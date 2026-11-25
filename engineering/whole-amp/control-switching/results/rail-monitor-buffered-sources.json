@@ -1,0 +1,60 @@
+{
+  "observed_on": "2026-11-25",
+  "primary_documents": [
+    {
+      "file": "evidence/Vishay-TNPW-e3-2026.pdf",
+      "url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "sha256": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5"
+    },
+    {
+      "file": "evidence/Diodes-BAV199-2026.pdf",
+      "url": "https://www.diodes.com/datasheet/download/BAV199.pdf",
+      "sha256": "9f9bf1807d06ef4c3fa850872613796971618ea841d48f8298f64ecf36848654"
+    }
+  ],
+  "diode": {
+    "url": "https://item.szlcsc.com/166590.html",
+    "html_sha256": "74708423ff8c280a9544fd069b1f1a2037b2f3f0ff37c518d688f58348065690",
+    "fields": {
+      "productModel": "BAV199-7-F",
+      "productCode": "C155248",
+      "stockNumber": 11302,
+      "validStockNumber": 2260,
+      "minBuyNumber": 1,
+      "encapsulationModel": "SOT-23"
+    },
+    "note": "Raw stock fields differ; no quantity reservation. Published website listing is not address-specific checkout.",
+    "shanghai_checkout_verified": false
+  },
+  "resistors": {
+    "status": "not-purchase-qualified",
+    "family": "Vishay TNPW e3 0.1%25ppm",
+    "candidate_values_ohm": [
+      10,
+      499,
+      1000,
+      3000,
+      3010,
+      3830,
+      5100,
+      9100,
+      33000,
+      249000
+    ],
+    "observations": [
+      {
+        "url": "https://www.lcsc.com/product-detail/C844466.html",
+        "mpn": "TNPW0805499RBEEA",
+        "result": "Catalog identity found. Availability not established; related product search showed zero stock."
+      },
+      {
+        "url": "https://www.lcsc.com/product-detail/C1854567.html",
+        "mpn": "TNPW080538K3BEEA",
+        "result": "Catalog identity for earlier38.3k network; not the revised3.83k part."
+      }
+    ],
+    "note": "No substitute family inherits TNPW endurance/solder allowance. Find exact stocked Chinese SKUs or requalify another family."
+  },
+  "shipping_policy": "https://www.szlcsc.com/help/1102.html",
+  "purchased": false
+}

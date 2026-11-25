@@ -1,0 +1,106 @@
+{
+  "status": "candidate-not-native",
+  "job": "Inhibit K3 while either low-voltage analog supply is below threshold; preserve the existing user reverb latch and reset priority.",
+  "interface": {
+    "inputs": [
+      "+15V",
+      "-15V",
+      "+12V",
+      "+5V",
+      "REV_Q",
+      "GND"
+    ],
+    "output": "REV_GATE",
+    "comparator": "TI LM393P PDIP-8, socket required; powered by +12V/GND",
+    "connections": "Comparator collectors join RAIL_OK with1.5k pull-up to+5V. Feedback comes fromRAIL_OK. Existing spare U1E (pin11 input/pin10 output) invertsRAIL_OK toFAULT. FAULT via10k drives an NPN with100k base/emitter; collectorREV_GATE/emitterGND. REV_Q still drivesREV_GATE through4.7k;100k gate pull-down retained. Exact transistor and timing pending."
+  },
+  "positive_resistors_ohm": {
+    "rail": 3830.0,
+    "ground": 499.0,
+    "feedback": 33000.0,
+    "ref_top": 3000.0,
+    "ref_bottom": 1000.0
+  },
+  "negative_resistors_ohm": {
+    "ref_to_clamp": 1000.0,
+    "rail_to_clamp": 5100.0,
+    "clamp_to_sense": 3010.0,
+    "sense_to_ground": 1000.0,
+    "ref_top": 9100.0,
+    "ref_bottom": 1010,
+    "feedback": 249000
+  },
+  "negative_clamp": "Diodes BAV199-7-F candidate: one junction anodeGND cathodeCLAMP. 1.1V is a temperature qualification allocation, not the25\u00b0C datasheet guarantee. Exact footprint mapping pending.",
+  "resistor_fraction": 0.004,
+  "reference_V": [
+    4.75,
+    5.25
+  ],
+  "offset_V": [
+    -0.009,
+    0.009
+  ],
+  "input_current_A": [
+    -5.25e-07,
+    5.25e-07
+  ],
+  "gate_off_V": [
+    0,
+    0.7
+  ],
+  "gate_on_assumed_V": [
+    4.45,
+    5.25
+  ],
+  "gate_series_ohm": 4700,
+  "gate_pulldown_ohm": 100000,
+  "allocated_negative_clamp_max_V": 1.1,
+  "largest_analog_rail_abs_V": 16.5,
+  "screen": {
+    "latest_enable_abs_V": 12,
+    "earliest_disable_abs_V": 9,
+    "minimum_hysteresis_V": 0.35
+  },
+  "limitations": [
+    "Only bounded settled threshold calculations; startup and mechanical relay response unqualified",
+    "0.4% resistor total depends on declared8000h/film-temperature profile and sourcing; environment/assembly qualification still open",
+    "BAV1991.1V allocation not verified over temperature; leakage80nA is a conservative150\u00b0C published endpoint",
+    "Comparator output VOL tested with1V differential; near-threshold transfer and delay require evaluation",
+    "U1E and NPN interface not native; exact transistor and release timing pending",
+    "Existing+5V supervisor and simultaneous-fault protection remain open",
+    "No fabrication or Shanghai checkout approval"
+  ],
+  "gate_high_basis": "RAIL_OK feedback output, independent ofREV_GATE. Conservative resistor/leakage load with1.5k\u00b11% pull-up; calculated separately. Comparator low still0..0.7V.",
+  "datasheet_correction": "TI SLCS005AH p8: full-range IIB magnitude400nA, IIO250nA; conservative independent input magnitude525nA =400+250/2. Full-range VOL700mV; prior250nA/400mV were room-temperature values. No candidate was native.",
+  "clamp_leakage_A": [
+    -8e-08,
+    8e-08
+  ],
+  "tolerance_profile": {
+    "family_candidate": "Vishay TNPW e3,0.1%,25ppm/K; exact Chinese low-quantity SKUs unqualified",
+    "film_temperature_C": [
+      0,
+      85
+    ],
+    "reference_temperature_C": 20,
+    "initial_fraction": 0.001,
+    "tcr_per_K": 2.5e-05,
+    "endurance_hours": 8000,
+    "endurance_fraction": 0.001,
+    "endurance_absolute_ohm": 0.02,
+    "solder_fraction": 0.0002,
+    "solder_absolute_ohm": 0.01,
+    "ref_bottom_series_ohm": [
+      1000,
+      10
+    ],
+    "note": "Sum initial,TCR,general-mode8000h and solder test allowances. Does not establish lifetime/environmental qualification. Series effective error is resistance-weighted."
+  },
+  "pullup": {
+    "ohm": 1500,
+    "fraction": 0.01,
+    "comparator_leak_each_A": 1e-06,
+    "hc14_input_leak_A": 1e-06,
+    "maximum_sink_A": 0.004
+  }
+}

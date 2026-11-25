@@ -7,19 +7,19 @@
       "nominal_disable_V": 10.437976255541386,
       "abs_ranges_V": {
         "enable": [
-          9.954672895654213,
-          12.029454612526427
+          9.892393335311487,
+          12.058640258899954
         ],
         "disable": [
-          9.393523107313063,
-          11.620093214515942
+          9.365367543796848,
+          11.649274001216101
         ]
       },
-      "minimum_same_corner_hysteresis_V": 0.3526633663366354,
+      "minimum_same_corner_hysteresis_V": 0.31853465346534726,
       "lowest_case": {
         "state": "disable",
-        "rail_threshold_V": 9.393523107313063,
-        "abs_threshold_V": 9.393523107313063,
+        "rail_threshold_V": 9.365367543796848,
+        "abs_threshold_V": 9.365367543796848,
         "resistors_ohm": {
           "rail": 37917.0,
           "ground": 5039.9,
@@ -29,14 +29,15 @@
         },
         "v5": 4.75,
         "offset_V": -0.009,
-        "ip_A": 2.5e-07,
-        "im_A": -2.5e-07,
-        "gate_V": 5.25
+        "ip_A": 5.25e-07,
+        "im_A": -5.25e-07,
+        "gate_V": 5.25,
+        "clamp_leak_A": 0
       },
       "highest_case": {
         "state": "enable",
-        "rail_threshold_V": 12.029454612526427,
-        "abs_threshold_V": 12.029454612526427,
+        "rail_threshold_V": 12.058640258899954,
+        "abs_threshold_V": 12.058640258899954,
         "resistors_ohm": {
           "rail": 38683.0,
           "ground": 4940.1,
@@ -46,9 +47,10 @@
         },
         "v5": 5.25,
         "offset_V": 0.009,
-        "ip_A": -2.5e-07,
-        "im_A": 2.5e-07,
-        "gate_V": 0
+        "ip_A": -5.25e-07,
+        "im_A": 5.25e-07,
+        "gate_V": 0,
+        "clamp_leak_A": 0
       }
     },
     "negative": {
@@ -57,19 +59,19 @@
       "nominal_disable_V": -10.301747461928933,
       "abs_ranges_V": {
         "enable": [
-          9.229330079546267,
-          12.661849436167012
+          9.051679511529539,
+          12.799280561947661
         ],
         "disable": [
-          8.575826673567114,
-          12.204097561301499
+          8.438396807721267,
+          12.341535132849875
         ]
       },
-      "minimum_same_corner_hysteresis_V": 0.3911071091403038,
+      "minimum_same_corner_hysteresis_V": 0.35325803406220935,
       "lowest_case": {
         "state": "disable",
-        "rail_threshold_V": -8.575826673567114,
-        "abs_threshold_V": 8.575826673567114,
+        "rail_threshold_V": -8.438396807721267,
+        "abs_threshold_V": 8.438396807721267,
         "resistors_ohm": {
           "ref_to_clamp": 10100.0,
           "rail_to_clamp": 50490.0,
@@ -81,14 +83,15 @@
         },
         "v5": 4.75,
         "offset_V": 0.009,
-        "ip_A": 2.5e-07,
-        "im_A": -2.5e-07,
-        "gate_V": 5.25
+        "ip_A": 5.25e-07,
+        "im_A": -5.25e-07,
+        "gate_V": 5.25,
+        "clamp_leak_A": 0
       },
       "highest_case": {
         "state": "enable",
-        "rail_threshold_V": -12.661849436167012,
-        "abs_threshold_V": 12.661849436167012,
+        "rail_threshold_V": -12.799280561947661,
+        "abs_threshold_V": 12.799280561947661,
         "resistors_ohm": {
           "ref_to_clamp": 9900.0,
           "rail_to_clamp": 51510.0,
@@ -100,13 +103,14 @@
         },
         "v5": 5.25,
         "offset_V": -0.009,
-        "ip_A": -2.5e-07,
-        "im_A": 2.5e-07,
-        "gate_V": 0
+        "ip_A": -5.25e-07,
+        "im_A": 5.25e-07,
+        "gate_V": 0,
+        "clamp_leak_A": 0
       }
     }
   },
-  "clamp_input_abs_bound_V": 0.2556641764204617,
+  "clamp_input_abs_bound_V": 0.2584416764204617,
   "clamp_current_upper_A": 0.000326797385620915,
   "checks": [
     {
@@ -119,7 +123,7 @@
     },
     {
       "name": "positive hysteresis above allocation",
-      "passed": true
+      "passed": false
     },
     {
       "name": "negative enable below 12V",
@@ -138,11 +142,11 @@
       "passed": true
     }
   ],
-  "passed": 4,
+  "passed": 3,
   "total": 7,
   "qualified": false,
   "inputs": {
-    "tools/rail_monitor_budget.py": "7620d49e239eb01c018bb93140125a9bf5249211c0489750e9aab5c534f66c63",
-    "rail-monitor-contract.json": "beecfc69c14ab925869c4dc19bad189ff1cb23f8d9458c585e687f401d50a5a9"
+    "tools/rail_monitor_budget.py": "5a2a6f4c56aeab2095c076c5d37821885e0350b198cfa556b3e8c4b14e47a726",
+    "rail-monitor-contract.json": "6b443ba96e7baa4785e9284c7151d24ac33126cf8f0728d2d92e69f291d0fb28"
   }
 }

@@ -261,3 +261,7 @@ K3 spare NC contact now grounds WET_AC when deenergized. Native circuit/schemati
 ### 2026-11-25 — analog-rail monitor candidate
 
 The follow-on LM393P rail-inhibit budget enumerates10,240 endpoint cases;4/7 screens pass, with three threshold failures retained. It is not adopted. TI SLCJ016 contains an LM2903B model despite its LM393 download label, so no classic-part transient qualification was inferred. C5209 domestic listing has minimum buy1, with differing raw stock fields retained. See engineering/whole-amp/control-switching/rail-monitor-review.md. Next: improve the reference/ratio budget using exact China-sourceable parts, prove gate loading and fault timing, then integrate only after native gates.
+
+### 2026-11-25 — corrected rail limits and buffered candidate
+
+The earlier rail-monitor calculation used25°C bias/output-low limits; corrected full-temperature limits reduce it from4/7 to3/7. A reduced-impedance candidate reusing spareU1E passes11/11 conditional static checks with2,004 independent nodal comparisons. No schematic/PCB change. Exact resistor stock, clamp temperature behavior, startup/release timing and NPN selection remain open. See engineering/whole-amp/control-switching/rail-monitor-buffered-review.md. All six scopes remain active; manufacturing held. Next: source or requalify the precision resistor set, then qualify the complete fault-inhibit interface before native integration.
