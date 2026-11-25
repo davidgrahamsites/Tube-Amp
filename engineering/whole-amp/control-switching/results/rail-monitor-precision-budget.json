@@ -1,0 +1,192 @@
+{
+  "scope": "Conditional static precision candidate; reference-valid sequencing and timing unresolved.",
+  "results": {
+    "positive": {
+      "corners": 256,
+      "abs_ranges_V": {
+        "enable": [
+          13.90282515249474,
+          14.170175191506216
+        ],
+        "disable": [
+          13.768686962765772,
+          14.041182905723343
+        ]
+      },
+      "minimum_same_corner_hysteresis_V": 0.11125501226113066
+    },
+    "negative": {
+      "corners": 16384,
+      "nominal_enable_V": -13.645459485996364,
+      "nominal_disable_V": -13.352858417444242,
+      "abs_ranges_V": {
+        "enable": [
+          13.073671616744909,
+          14.211109593848317
+        ],
+        "disable": [
+          12.769466089752685,
+          13.926523752041774
+        ]
+      },
+      "minimum_same_corner_hysteresis_V": 0.245832037924405,
+      "lowest_case": {
+        "state": "disable",
+        "rail_threshold_V": -12.769466089752685,
+        "abs_threshold_V": 12.769466089752685,
+        "resistors_ohm": {
+          "ref_to_clamp": 1004.0,
+          "rail_to_clamp": 6232.968,
+          "clamp_to_sense": 3022.04,
+          "sense_to_ground": 996.0,
+          "ref_top": 9063.6,
+          "ref_bottom": 1014.04,
+          "feedback": 497004.0
+        },
+        "v5": 4.985,
+        "offset_V": 0.004,
+        "ip_A": 6.25e-08,
+        "im_A": -6.25e-08,
+        "gate_V": 5.25,
+        "clamp_leak_A": 8e-08
+      },
+      "highest_case": {
+        "state": "enable",
+        "rail_threshold_V": -14.211109593848317,
+        "abs_threshold_V": 14.211109593848317,
+        "resistors_ohm": {
+          "ref_to_clamp": 996.0,
+          "rail_to_clamp": 6283.032,
+          "clamp_to_sense": 2997.96,
+          "sense_to_ground": 1004.0,
+          "ref_top": 9136.4,
+          "ref_bottom": 1005.96,
+          "feedback": 497004.0
+        },
+        "v5": 5.015,
+        "offset_V": -0.004,
+        "ip_A": -6.25e-08,
+        "im_A": 6.25e-08,
+        "gate_V": 0,
+        "clamp_leak_A": -8e-08
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "positive enables within regulator healthy minimum",
+      "passed": true
+    },
+    {
+      "name": "positive disables above allocated audio floor",
+      "passed": true
+    },
+    {
+      "name": "positive hysteresis exceeds new noise allocation",
+      "passed": true
+    },
+    {
+      "name": "negative enables within regulator healthy minimum",
+      "passed": true
+    },
+    {
+      "name": "negative disables above allocated audio floor",
+      "passed": true
+    },
+    {
+      "name": "negative hysteresis exceeds new noise allocation",
+      "passed": true
+    },
+    {
+      "name": "independent nodal comparison below1nV",
+      "passed": true
+    },
+    {
+      "name": "reference pullup supports feedback high bound",
+      "passed": true
+    },
+    {
+      "name": "sink below4mA test current",
+      "passed": true
+    },
+    {
+      "name": "declared static reference terms fit allocation",
+      "passed": true
+    },
+    {
+      "name": "reference settled load within10mA allocation",
+      "passed": true
+    },
+    {
+      "name": "series rail resistor matches explicit parts",
+      "passed": true
+    },
+    {
+      "name": "effective resistor allowance covers declared series profiles",
+      "passed": true
+    },
+    {
+      "name": "passive reference-off backfeed below0.9V allocation",
+      "passed": true
+    }
+  ],
+  "passed": 14,
+  "total": 14,
+  "qualified": false,
+  "nodal_comparisons": 2000,
+  "nodal_max_error_V": 1.7763568394002505e-14,
+  "reference_static_error_fraction": 0.002884,
+  "reference_load_upper_A": 0.00958344508486284,
+  "rail_ok_high_min_V": 4.841933088093192,
+  "comparator_sink_upper_A": 0.0034695379823233923,
+  "resistor_error_fractions": {
+    "positive.rail": 0.00384185393258427,
+    "positive.ground": 0.0038550000000000004,
+    "positive.feedback": 0.00382548465266559,
+    "negative.ref_to_clamp": 0.0038550000000000004,
+    "negative.rail_to_clamp": 0.0038345877277085336,
+    "negative.clamp_to_sense": 0.003834966777408638,
+    "negative.sense_to_ground": 0.0038550000000000004,
+    "negative.ref_top": 0.003828296703296704,
+    "negative.ref_bottom": 0.0038844059405940597,
+    "negative.feedback": 0.0038250601202404816
+  },
+  "minimum_disable_headroom_margin_V": {
+    "positive": 0.26868696276577175,
+    "negative": 0.2694660897526848
+  },
+  "passive_reference_off_rail_ok_upper_V": 0.8473943200777354,
+  "conditional_isolated_hold_s_by_rail_and_load_A": {
+    "positive": {
+      "0.03": 0.00041127017767347466,
+      "0.05": 0.00024676210660408475,
+      "0.1": 0.00012338105330204238
+    },
+    "negative": {
+      "0.03": 0.00041246276138144297,
+      "0.05": 0.00024747765682886573,
+      "0.1": 0.00012373882841443286
+    }
+  },
+  "limitations": [
+    "Conditional settled network only; no native adoption or full startup/power-down proof.",
+    "Reference +/-0.3% includes declared static terms but ageing, solder and hysteresis are not guaranteed; total needs validation.",
+    "Resistor total +/-0.4% remains conditional on exact sourced family and profile; series68ohm component included.",
+    "0.1V hysteresis is a new noise allocation, not proof of sufficient ripple immunity.",
+    "REF5 pullup and8.2k bleeder replace logic pullup to reduce false healthy on reference loss. Passive zero-source off-state is screened; semiconductor backfeed, reference collapse, and +5V logic sequencing remain unqualified.",
+    "Comparator delay and output transition near threshold are not guaranteed by VOL or typical1us.",
+    "Negative clamp1.1V and hot behavior remain conditional.",
+    "Socket/carrier footprint, sourceable resistor set, populated fit and Shanghai checkout pending.",
+    "Actual mute path delay and rail decay remain unqualified; no arbitrary-hard-fault silence guarantee."
+  ],
+  "inputs": {
+    "rail-monitor-precision-contract.json": "c52993576e1904b3b9ed100881c0d2c8bae78a908f4d0f10dd0b8dca5e83989c",
+    "tools/precision_rail_budget.py": "73119b74fdf6b163f3c4e86ef51b24d2ffa2dbf65a254f97b32e2dffa732d8d9",
+    "tools/rail_monitor_budget.py": "5a2a6f4c56aeab2095c076c5d37821885e0350b198cfa556b3e8c4b14e47a726",
+    "tools/buffered_rail_budget.py": "04f7c718b654733c887ec8e1ce40da66d0cb9f1af44d73f5cdb9d8005ec617df",
+    "results/audio-headroom-budget.json": "78f0620e1be3f195beee118b524873cb53ab6b8ec19c9765f29e6fdad098ada6",
+    "evidence/TI-REF50-O.pdf": "33b13191ad54693f9a4f52e226b354757ad092d2cec6b2c31dba2fecb710d0c6",
+    "evidence/TI-LM393-AH.pdf": "a1f63934820e27c1f345a4d2c01c46fa2d58591df0f406a1bfca0fe97d8731bb",
+    "evidence/TI-SN74HC14-L.pdf": "24911ae018ad9bf6f8f069158b8689d0d941e3cde9f48924e2421276ae10e397"
+  }
+}

@@ -270,3 +270,7 @@ The earlier rail-monitor calculation used25°C bias/output-low limits; corrected
 ### 2026-11-25 — passive wet-fault checkpoint
 
 [VAL-049](brain/records/VAL-049-wet-fault-transfer.md) retains30 AC/120 transient cases and six independent SPICE runs; eight scoped screens and the module ICM check pass. A47kΩ/fast-shunt proposal has small dry/treble effects but leaves the initial imposed fault spike, so it is not adopted. Exact Chinese J113/MMBFJ113 listings are recorded; physical sales quantity and Shanghai checkout remain pending. Native CAD, blocks and mounting geometry are unchanged. Next: establish rail-warning lead time against valid audio headroom before choosing a fast-mute circuit. All six scopes remain open; no fabrication release.
+
+### 2026-11-25 — audio headroom and precision monitor
+
+[VAL-050](brain/records/VAL-050-rail-headroom-precision.md) rejects the former monitor against the retained10Vpeak target. A separate REF5050AIDR/LM393BIDR candidate passes14 conditional static screens with2,000 independent nodal comparisons; exact domestic stock supports small quantities. Minimum warning margin about0.27V gives only0.123ms in the isolated100mA capacitor screen. Full reference/logic sequencing, actual mute response, resistor/socket sourcing and Shanghai checkout remain open. Native boards/blocks/fit unchanged; all six scopes remain active. Next: complete startup/power-down mute interface and exact removable parts before native adoption.

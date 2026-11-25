@@ -6,3 +6,5 @@ Owner: Renegade integration. Inputs: exact AOS datasheet/package URLs recorded i
 TI-LM393-AH.pdf and TI-comparator-guidelines-SNOAA35F.pdf are primary inputs for the proposed analog-rail monitor. Their source URLs/hashes are in ../results/rail-monitor-source-observation.json. Classic and B-version characteristics must not be interchanged.
 
 Vishay-TNPW-e3-2026.pdf and Diodes-BAV199-2026.pdf support the buffered rail candidate. URLs/hashes and incomplete Chinese sourcing are in ../results/rail-monitor-buffered-sources.json. Exact temperature/life test conditions must accompany each limit.
+
+TI-REF50-O.pdf and precision-source-observation.json retain the precision-reference manufacturer source and dated exact domestic comparator/reference listing fields. The record links reused comparator/HC14 source hashes and the domestic shipping policy. Listings are not checkout confirmations.

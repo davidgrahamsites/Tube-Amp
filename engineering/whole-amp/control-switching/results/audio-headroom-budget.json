@@ -1,0 +1,357 @@
+{
+  "qualified": false,
+  "scope": "Bind rail-inhibit thresholds to the retained audio signal target and assess warning-time feasibility before choosing a mute circuit.",
+  "native_capacitor_inventory_F": {
+    "positive": {
+      "C610": 1.0000000000000001e-07,
+      "C612": 1.0000000000000001e-07,
+      "C614": 1.0000000000000001e-07,
+      "C616": 4.7e-05,
+      "C210": 1.0000000000000001e-07,
+      "C211": 9.999999999999999e-06
+    },
+    "negative": {
+      "C611": 1.0000000000000001e-07,
+      "C613": 1.0000000000000001e-07,
+      "C615": 1.0000000000000001e-07,
+      "C617": 4.7e-05,
+      "C213": 1.0000000000000001e-07,
+      "C214": 9.999999999999999e-06
+    }
+  },
+  "sides": {
+    "positive": {
+      "target_peak_V": 10,
+      "allocated_valid_rail_floor_V": 13.5,
+      "existing_disable_range_V": [
+        9.611772913520454,
+        11.258219215962605
+      ],
+      "existing_enable_range_V": [
+        10.139413100484056,
+        11.775928557024763
+      ],
+      "late_warning_margin_to_allocated_floor_V": -3.888227086479546,
+      "even_ideal_output_rail_margin_V": -0.38822708647954585,
+      "native_nominal_capacitance_F": 5.74e-05,
+      "screen_low_capacitance_F": 4.592e-05,
+      "regulated_minimum_V": 14.25,
+      "available_static_window_V": 0.75,
+      "existing_monitor_supports_full_target": false
+    },
+    "negative": {
+      "target_peak_V": 10,
+      "allocated_valid_rail_floor_V": 12.5,
+      "existing_disable_range_V": [
+        9.101671732761085,
+        11.46156284645578
+      ],
+      "existing_enable_range_V": [
+        9.594201829953036,
+        11.93738757423014
+      ],
+      "late_warning_margin_to_allocated_floor_V": -3.398328267238915,
+      "even_ideal_output_rail_margin_V": -0.8983282672389148,
+      "native_nominal_capacitance_F": 5.74e-05,
+      "screen_low_capacitance_F": 4.592e-05,
+      "regulated_minimum_V": 14.3,
+      "available_static_window_V": 1.8000000000000007,
+      "existing_monitor_supports_full_target": false
+    }
+  },
+  "ideal_reference_retune": {
+    "positive": {
+      "ideal_low_trip_V": 13.5,
+      "unavoidable_high_trip_V": 14.921052631578949,
+      "healthy_minimum_V": 14.25,
+      "fits_without_offset_hysteresis_or_resistor_errors": false
+    },
+    "negative": {
+      "ideal_low_trip_V": 12.5,
+      "unavoidable_high_trip_V": 13.815789473684212,
+      "healthy_minimum_V": 14.3,
+      "fits_without_offset_hysteresis_or_resistor_errors": true
+    }
+  },
+  "timing_sensitivity": [
+    {
+      "side": "positive",
+      "load": "idle",
+      "current_A": 0.03,
+      "hypothetical_warning_V": 13.75,
+      "assumed_delay_s": 5e-05,
+      "conditional_isolated_cap_hold_s": 0.0003826666666666667,
+      "required_effective_cap_F": 6e-06,
+      "existing_cap_sufficient_in_isolated_screen": true
+    },
+    {
+      "side": "positive",
+      "load": "idle",
+      "current_A": 0.03,
+      "hypothetical_warning_V": 13.75,
+      "assumed_delay_s": 0.0002,
+      "conditional_isolated_cap_hold_s": 0.0003826666666666667,
+      "required_effective_cap_F": 2.4e-05,
+      "existing_cap_sufficient_in_isolated_screen": true
+    },
+    {
+      "side": "positive",
+      "load": "idle",
+      "current_A": 0.03,
+      "hypothetical_warning_V": 13.75,
+      "assumed_delay_s": 0.005,
+      "conditional_isolated_cap_hold_s": 0.0003826666666666667,
+      "required_effective_cap_F": 0.0006,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "positive",
+      "load": "idle",
+      "current_A": 0.03,
+      "hypothetical_warning_V": 13.75,
+      "assumed_delay_s": 0.015,
+      "conditional_isolated_cap_hold_s": 0.0003826666666666667,
+      "required_effective_cap_F": 0.0018,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "positive",
+      "load": "working_reserve",
+      "current_A": 0.05,
+      "hypothetical_warning_V": 13.75,
+      "assumed_delay_s": 5e-05,
+      "conditional_isolated_cap_hold_s": 0.0002296,
+      "required_effective_cap_F": 1e-05,
+      "existing_cap_sufficient_in_isolated_screen": true
+    },
+    {
+      "side": "positive",
+      "load": "working_reserve",
+      "current_A": 0.05,
+      "hypothetical_warning_V": 13.75,
+      "assumed_delay_s": 0.0002,
+      "conditional_isolated_cap_hold_s": 0.0002296,
+      "required_effective_cap_F": 4e-05,
+      "existing_cap_sufficient_in_isolated_screen": true
+    },
+    {
+      "side": "positive",
+      "load": "working_reserve",
+      "current_A": 0.05,
+      "hypothetical_warning_V": 13.75,
+      "assumed_delay_s": 0.005,
+      "conditional_isolated_cap_hold_s": 0.0002296,
+      "required_effective_cap_F": 0.001,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "positive",
+      "load": "working_reserve",
+      "current_A": 0.05,
+      "hypothetical_warning_V": 13.75,
+      "assumed_delay_s": 0.015,
+      "conditional_isolated_cap_hold_s": 0.0002296,
+      "required_effective_cap_F": 0.003,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "positive",
+      "load": "expansion_stress",
+      "current_A": 0.1,
+      "hypothetical_warning_V": 13.75,
+      "assumed_delay_s": 5e-05,
+      "conditional_isolated_cap_hold_s": 0.0001148,
+      "required_effective_cap_F": 2e-05,
+      "existing_cap_sufficient_in_isolated_screen": true
+    },
+    {
+      "side": "positive",
+      "load": "expansion_stress",
+      "current_A": 0.1,
+      "hypothetical_warning_V": 13.75,
+      "assumed_delay_s": 0.0002,
+      "conditional_isolated_cap_hold_s": 0.0001148,
+      "required_effective_cap_F": 8e-05,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "positive",
+      "load": "expansion_stress",
+      "current_A": 0.1,
+      "hypothetical_warning_V": 13.75,
+      "assumed_delay_s": 0.005,
+      "conditional_isolated_cap_hold_s": 0.0001148,
+      "required_effective_cap_F": 0.002,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "positive",
+      "load": "expansion_stress",
+      "current_A": 0.1,
+      "hypothetical_warning_V": 13.75,
+      "assumed_delay_s": 0.015,
+      "conditional_isolated_cap_hold_s": 0.0001148,
+      "required_effective_cap_F": 0.006,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "negative",
+      "load": "idle",
+      "current_A": 0.03,
+      "hypothetical_warning_V": 12.75,
+      "assumed_delay_s": 5e-05,
+      "conditional_isolated_cap_hold_s": 0.0003826666666666667,
+      "required_effective_cap_F": 6e-06,
+      "existing_cap_sufficient_in_isolated_screen": true
+    },
+    {
+      "side": "negative",
+      "load": "idle",
+      "current_A": 0.03,
+      "hypothetical_warning_V": 12.75,
+      "assumed_delay_s": 0.0002,
+      "conditional_isolated_cap_hold_s": 0.0003826666666666667,
+      "required_effective_cap_F": 2.4e-05,
+      "existing_cap_sufficient_in_isolated_screen": true
+    },
+    {
+      "side": "negative",
+      "load": "idle",
+      "current_A": 0.03,
+      "hypothetical_warning_V": 12.75,
+      "assumed_delay_s": 0.005,
+      "conditional_isolated_cap_hold_s": 0.0003826666666666667,
+      "required_effective_cap_F": 0.0006,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "negative",
+      "load": "idle",
+      "current_A": 0.03,
+      "hypothetical_warning_V": 12.75,
+      "assumed_delay_s": 0.015,
+      "conditional_isolated_cap_hold_s": 0.0003826666666666667,
+      "required_effective_cap_F": 0.0018,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "negative",
+      "load": "working_reserve",
+      "current_A": 0.05,
+      "hypothetical_warning_V": 12.75,
+      "assumed_delay_s": 5e-05,
+      "conditional_isolated_cap_hold_s": 0.0002296,
+      "required_effective_cap_F": 1e-05,
+      "existing_cap_sufficient_in_isolated_screen": true
+    },
+    {
+      "side": "negative",
+      "load": "working_reserve",
+      "current_A": 0.05,
+      "hypothetical_warning_V": 12.75,
+      "assumed_delay_s": 0.0002,
+      "conditional_isolated_cap_hold_s": 0.0002296,
+      "required_effective_cap_F": 4e-05,
+      "existing_cap_sufficient_in_isolated_screen": true
+    },
+    {
+      "side": "negative",
+      "load": "working_reserve",
+      "current_A": 0.05,
+      "hypothetical_warning_V": 12.75,
+      "assumed_delay_s": 0.005,
+      "conditional_isolated_cap_hold_s": 0.0002296,
+      "required_effective_cap_F": 0.001,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "negative",
+      "load": "working_reserve",
+      "current_A": 0.05,
+      "hypothetical_warning_V": 12.75,
+      "assumed_delay_s": 0.015,
+      "conditional_isolated_cap_hold_s": 0.0002296,
+      "required_effective_cap_F": 0.003,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "negative",
+      "load": "expansion_stress",
+      "current_A": 0.1,
+      "hypothetical_warning_V": 12.75,
+      "assumed_delay_s": 5e-05,
+      "conditional_isolated_cap_hold_s": 0.0001148,
+      "required_effective_cap_F": 2e-05,
+      "existing_cap_sufficient_in_isolated_screen": true
+    },
+    {
+      "side": "negative",
+      "load": "expansion_stress",
+      "current_A": 0.1,
+      "hypothetical_warning_V": 12.75,
+      "assumed_delay_s": 0.0002,
+      "conditional_isolated_cap_hold_s": 0.0001148,
+      "required_effective_cap_F": 8e-05,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "negative",
+      "load": "expansion_stress",
+      "current_A": 0.1,
+      "hypothetical_warning_V": 12.75,
+      "assumed_delay_s": 0.005,
+      "conditional_isolated_cap_hold_s": 0.0001148,
+      "required_effective_cap_F": 0.002,
+      "existing_cap_sufficient_in_isolated_screen": false
+    },
+    {
+      "side": "negative",
+      "load": "expansion_stress",
+      "current_A": 0.1,
+      "hypothetical_warning_V": 12.75,
+      "assumed_delay_s": 0.015,
+      "conditional_isolated_cap_hold_s": 0.0001148,
+      "required_effective_cap_F": 0.006,
+      "existing_cap_sufficient_in_isolated_screen": false
+    }
+  ],
+  "checks": [
+    {
+      "name": "native signal/capacitor inventory bound to source",
+      "passed": true
+    },
+    {
+      "name": "existing positive and negative warning can occur below the 10V ideal output floor",
+      "passed": true
+    },
+    {
+      "name": "both existing candidates fail retained common-mode headroom allocation",
+      "passed": true
+    },
+    {
+      "name": "5V reference spread alone prevents positive-rail retune inside allocated window",
+      "passed": true
+    },
+    {
+      "name": "hold-time boundary scales consistently with each inherited load",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "10Vpeak is the existing design target, not a measured tank signal or mandatory instantaneous voltage during every fault.",
+    "Normal startup/power-down and control switching need qualification; no requirement for absolute silence under every arbitrary internal hard fault is invented here.",
+    "A warning-time estimate after loss of regulator feed assumes isolated rail capacitance and constant load. Actual raw reservoir, regulator, protection diode, harness and reference sequencing remain to model or measure.",
+    "Current reserve scenarios are inherited planning loads, not a qualified maximum audio or fault-current budget.",
+    "Hypothetical delays and warning floors do not select a comparator, relay release time, JFET or new capacitor.",
+    "No native circuit, PCB, functional-block, socket, cabinet or fabrication change."
+  ],
+  "provenance": {
+    "control-switching/audio-headroom-contract.json": "e93896c57190f31e07088e7956a170164e0aa6703d8f62eb410f3cf7f58aa375",
+    "control-switching/../reverb-600/circuit.json": "41771da777078e68a30d2fd17daf078548e916d2c724030e8752947f1fd7ea18",
+    "control-switching/results/rail-monitor-buffered-budget.json": "5ce2ddce8c86b0183adb29d7260c0a2254865eecb41905155180a74f8430771a",
+    "control-switching/../aux-supply/envelope-contract.json": "e6f54dc3ed85f7f5be889d6796bbc8be2505da7548a72de92ddd88bb32aaa746",
+    "control-switching/tools/audio_headroom_budget.py": "f0815b30b235deeac040e4a63753650cc0646d249eb92be80405740939dc9b99",
+    "effects-loop/tools/fixture.py": "10ea514a6a49c35f4c2e3d4766da725b5a0befccb38d2c89d4f7d96d42585cd5",
+    "control-switching/rail-monitor-buffered-contract.json": "1974374fe29c1c33506b7c6970c94ce8d973de9e070763b3d79702b4dfc5b1fc"
+  }
+}

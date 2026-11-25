@@ -1,0 +1,140 @@
+{
+  "status": "precision-candidate-not-native",
+  "job": "Inhibit K3 while either low-voltage analog supply is below threshold; preserve the existing user reverb latch and reset priority.",
+  "interface": {
+    "inputs": [
+      "+15V",
+      "-15V",
+      "+12V",
+      "+5V",
+      "REV_Q",
+      "GND"
+    ],
+    "output": "REV_GATE",
+    "comparator": "TI LM393BIDR SOIC-8 on removable carrier/socket; powered by +12V/GND",
+    "connections": "Positive comparator minus directly REF5; plus PSENSE from +15 through1.78k, GND through1k, RAIL_OK through61.9k. Negative network retains attenuated clamp topology, fed by REF5. Comparator collectors join RAIL_OK with1.5k to REF5, plus8.2k REF5-to-GND bleeder. Subsequent inhibit/delay interface retains candidate status; R341 is still native1k.",
+    "reference": "TI REF5050AIDR SOIC-8 on removable carrier/socket; +12V input, separate REF5 output; 1uF output capacitor per datasheet test condition; exact stability network pending."
+  },
+  "positive_resistors_ohm": {
+    "rail": 1780,
+    "ground": 1000,
+    "feedback": 61900
+  },
+  "negative_resistors_ohm": {
+    "ref_to_clamp": 1000.0,
+    "rail_to_clamp": 6258,
+    "clamp_to_sense": 3010.0,
+    "sense_to_ground": 1000.0,
+    "ref_top": 9100.0,
+    "ref_bottom": 1010,
+    "feedback": 499000
+  },
+  "negative_clamp": "Diodes BAV199-7-F candidate: one junction anodeGND cathodeCLAMP. 1.1V is a temperature qualification allocation, not the25\u00b0C datasheet guarantee. Exact footprint mapping pending.",
+  "resistor_fraction": 0.004,
+  "reference_V": [
+    4.985,
+    5.015
+  ],
+  "offset_V": [
+    -0.004,
+    0.004
+  ],
+  "input_current_A": [
+    -6.25e-08,
+    6.25e-08
+  ],
+  "gate_off_V": [
+    0,
+    0.55
+  ],
+  "gate_on_assumed_V": [
+    4.45,
+    5.25
+  ],
+  "gate_series_ohm": 4700,
+  "gate_pulldown_ohm": 100000,
+  "allocated_negative_clamp_max_V": 1.1,
+  "largest_analog_rail_abs_V": 16.5,
+  "screen": {
+    "positive": {
+      "enable_max_V": 14.25,
+      "disable_min_V": 13.5
+    },
+    "negative": {
+      "enable_max_V": 14.3,
+      "disable_min_V": 12.5
+    },
+    "minimum_hysteresis_allocation_V": 0.1
+  },
+  "limitations": [
+    "Conditional settled network only; no native adoption or full startup/power-down proof.",
+    "Reference +/-0.3% includes declared static terms but ageing, solder and hysteresis are not guaranteed; total needs validation.",
+    "Resistor total +/-0.4% remains conditional on exact sourced family and profile; series68ohm component included.",
+    "0.1V hysteresis is a new noise allocation, not proof of sufficient ripple immunity.",
+    "REF5 pullup and8.2k bleeder replace logic pullup to reduce false healthy on reference loss. Passive zero-source off-state is screened; semiconductor backfeed, reference collapse, and +5V logic sequencing remain unqualified.",
+    "Comparator delay and output transition near threshold are not guaranteed by VOL or typical1us.",
+    "Negative clamp1.1V and hot behavior remain conditional.",
+    "Socket/carrier footprint, sourceable resistor set, populated fit and Shanghai checkout pending.",
+    "Actual mute path delay and rail decay remain unqualified; no arbitrary-hard-fault silence guarantee."
+  ],
+  "gate_high_basis": "RAIL_OK now pulls up to REF5, separately from HC14 logic supply. Retain conservative4.45..5.25 feedback bounds; test output-low reference load and reference-off passive backfeed.",
+  "datasheet_correction": "LM393B SOIC full-temperature offset4mV; average input bias50nA plus half offset-current25nA =>62.5nA independent bound. VOL0.55V at4mA/VID=-1V. Typical propagation delay not a maximum.",
+  "clamp_leakage_A": [
+    -8e-08,
+    8e-08
+  ],
+  "tolerance_profile": {
+    "family_candidate": "Vishay TNPW e3,0.1%,25ppm/K; exact Chinese low-quantity SKUs unqualified",
+    "film_temperature_C": [
+      0,
+      85
+    ],
+    "reference_temperature_C": 20,
+    "initial_fraction": 0.001,
+    "tcr_per_K": 2.5e-05,
+    "endurance_hours": 8000,
+    "endurance_fraction": 0.001,
+    "endurance_absolute_ohm": 0.02,
+    "solder_fraction": 0.0002,
+    "solder_absolute_ohm": 0.01,
+    "ref_bottom_series_ohm": [
+      1000,
+      10
+    ],
+    "note": "Sum initial,TCR,general-mode8000h and solder test allowances. Does not establish lifetime/environmental qualification. Series effective error is resistance-weighted."
+  },
+  "pullup": {
+    "ohm": 1500,
+    "fraction": 0.01,
+    "comparator_leak_each_A": 1e-06,
+    "hc14_input_leak_A": 1e-06,
+    "maximum_sink_A": 0.004
+  },
+  "logic_supply_V": [
+    4.75,
+    5.25
+  ],
+  "negative_rail_series_ohm": [
+    6190,
+    68
+  ],
+  "reference_budget": {
+    "initial_fraction": 0.001,
+    "box_drift_ppm_per_K": 8,
+    "full_specified_span_K": 165,
+    "line_ppm_per_V": 5,
+    "full_input_span_V": 12.8,
+    "load_ppm_per_mA": 50,
+    "allocated_load_mA": 10,
+    "total_fraction_allocation": 0.003,
+    "note": "Full-span box drift rather than local linear TCR. Static sum0.2884%; residual0.0116% is allocation only, not guaranteed lifetime/hysteresis/solder coverage. Load regulation specified at Vin=Vout+0.75; applicability to12V input needs validation."
+  },
+  "reference_bleeder_ohm": 8200,
+  "reference_bleeder_fraction": 0.01,
+  "rejected_bleeder_trial": {
+    "ohm": 10000,
+    "passive_reference_off_upper_V": 0.9805789471888509,
+    "screen_max_V": 0.9,
+    "reason": "Fails declared passive off-state screen; replaced with8.2k while retaining10mA reference load budget."
+  }
+}

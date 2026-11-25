@@ -1,0 +1,29 @@
+{
+  "status": "design-boundary-correction-not-native",
+  "owner": "control-switching integration",
+  "job": "Bind rail-inhibit thresholds to the retained audio signal target and assess warning-time feasibility before choosing a mute circuit.",
+  "baseline": "1537482fcaab5dc33d0090fa0d0c1fd7ccf272b5",
+  "circuit": "../reverb-600/circuit.json",
+  "threshold_result": "results/rail-monitor-buffered-budget.json",
+  "load_contract": "../aux-supply/envelope-contract.json",
+  "peak_signal_target_V": 10,
+  "audio_amplifier_refs": ["U10", "U11", "U12"],
+  "positive_cm_headroom_allocation_V": 3.5,
+  "negative_cm_headroom_allocation_V": 2.5,
+  "cm_basis": "TI OPA2134 SBOS058B table5.7 at25C/+/-15V lists input range V-+2.5 to V+-3.5. Applying these offsets during rail decay is an engineering screening allocation, not a new full-temperature guarantee.",
+  "minimum_regulated_rail_magnitude_V": {"positive": 14.25, "negative": 14.3},
+  "regulator_basis": "ST L7815C table16 and L7915C table9 at stated load/input/temperature limits. These are not guarantees outside the documented input range or of a particular shutdown waveform.",
+  "capacitor_fraction_allocation": 0.2,
+  "capacitor_basis": "Uniform +/-20 percent sensitivity allowance only; exact ESR, temperature, ageing, wire impedance and remaining regulator/backfeed current are not represented.",
+  "hypothetical_post_warning_delay_s": [0.00005, 0.0002, 0.005, 0.015],
+  "hypothetical_future_positive_warning_floor_V": 13.75,
+  "hypothetical_future_negative_warning_floor_V": 12.75,
+  "limitations": [
+    "10Vpeak is the existing design target, not a measured tank signal or mandatory instantaneous voltage during every fault.",
+    "Normal startup/power-down and control switching need qualification; no requirement for absolute silence under every arbitrary internal hard fault is invented here.",
+    "A warning-time estimate after loss of regulator feed assumes isolated rail capacitance and constant load. Actual raw reservoir, regulator, protection diode, harness and reference sequencing remain to model or measure.",
+    "Current reserve scenarios are inherited planning loads, not a qualified maximum audio or fault-current budget.",
+    "Hypothetical delays and warning floors do not select a comparator, relay release time, JFET or new capacitor.",
+    "No native circuit, PCB, functional-block, socket, cabinet or fabrication change."
+  ]
+}

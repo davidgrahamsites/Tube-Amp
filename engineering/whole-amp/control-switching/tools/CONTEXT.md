@@ -16,3 +16,5 @@ check_divider_options.py reads ../divider-contract.json, verifies retained manuf
 rail_monitor_budget.py owns static endpoint analysis of rail-monitor-contract.json. It writes rail-monitor-budget.json with failed constraints and qualification=false. It is not a transient comparator model or CAD writer.
 
 buffered_rail_budget.py consumes the buffered contract, calls the shared endpoint calculator and checks the equations with an independent nodal solver. Outputs are static evidence only; no native mutation or vendor-model substitution.
+
+audio_headroom_budget.py guards native signal/capacitor inventory and rejects the previous rail-warning boundary. precision_rail_budget.py consumes that hashed evidence plus the precision contract, enumerates settled corners and independently checks KCL. Its passive reference-off check is explicitly conditional; it never writes native CAD.

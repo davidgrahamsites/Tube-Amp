@@ -14,3 +14,5 @@ brownout-limits.json and brownout-matrix.json retain engineering failures explic
 divider-options.json is a candidate stability comparison, not supervisor or purchase qualification. Failed long-duration and combined-environment profiles are retained; see ../divider-review.md.
 
 rail-monitor-budget.json retains the initial static candidate, including failed thresholds. rail-monitor-source-observation.json records TI sources, raw Chinese stock fields and a rejected LM2903B model download; no stock reservation, Shanghai checkout or exact-resistor approval is implied.
+
+audio-headroom-budget.json records the old threshold rejection. rail-monitor-precision-budget.json records the new candidate static bounds, numerical cross-check and unresolved timing/reference conditions. Passing evidence checks do not imply hardware qualification.

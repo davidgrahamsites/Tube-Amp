@@ -1,0 +1,63 @@
+{
+  "observed_on": "2026-11-25",
+  "scope": "Public domestic product records; not checkout or an order.",
+  "shipping_policy": "https://www.szlcsc.com/help/202.html",
+  "shipping_status": "Domestic courier route supports Shanghai in principle; address-specific quote not obtained.",
+  "parts": [
+    {
+      "url": "https://item.szlcsc.com/28554.html",
+      "raw_html_sha256": "d5b4f64c7a4af10044bad73391326b418e885b152c998de654870f16b5c0ea0a",
+      "record": {
+        "productModel": "REF5050AIDR",
+        "productCode": "C27804",
+        "productId": "28554",
+        "stockNumber": 9688,
+        "minBuyNumber": 1,
+        "theRatio": 1,
+        "convesionRatio": 1,
+        "encapsulationModel": "SOIC-8",
+        "productArrange": "\u7f16\u5e26"
+      },
+      "status": "Candidate only; socket assembly not yet qualified."
+    },
+    {
+      "url": "https://item.szlcsc.com/3069736.html",
+      "raw_html_sha256": "ce14c64984826017d4eac01d03f9146d55f900db260bb8c00025476d889b76a8",
+      "record": {
+        "productModel": "LM393BIDR",
+        "productCode": "C2865059",
+        "productId": "3069736",
+        "stockNumber": 98286,
+        "minBuyNumber": 1,
+        "theRatio": 5,
+        "convesionRatio": 5,
+        "encapsulationModel": "SOIC-8",
+        "productArrange": "\u7f16\u5e26"
+      },
+      "status": "Candidate only; socket assembly not yet qualified."
+    }
+  ],
+  "manufacturer_sources": [
+    {
+      "path": "evidence/TI-REF50-O.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/ref50.pdf",
+      "sha256": "33b13191ad54693f9a4f52e226b354757ad092d2cec6b2c31dba2fecb710d0c6"
+    },
+    {
+      "path": "evidence/TI-LM393-AH.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/lm393.pdf",
+      "sha256": "a1f63934820e27c1f345a4d2c01c46fa2d58591df0f406a1bfca0fe97d8731bb"
+    },
+    {
+      "path": "evidence/TI-SN74HC14-L.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74hc14.pdf",
+      "sha256": "24911ae018ad9bf6f8f069158b8689d0d941e3cde9f48924e2421276ae10e397"
+    }
+  ],
+  "observations": [
+    "REF5050AIDR listing parameters agree with standard0.1%/8ppm grade; marketing3ppm description conflicts and was not used.",
+    "LM393BIDR minBuyNumber1 and theRatio5 are distinct fields: budget five physical pieces pending basket confirmation.",
+    "Tube REF5050AID C962942 route had minimum1000 and was rejected; exact tapevariant has minimum1/ratio1.",
+    "No reference or comparator substituted for native parts; removable carrier design still required."
+  ]
+}
