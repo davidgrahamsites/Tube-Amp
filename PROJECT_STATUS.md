@@ -313,3 +313,7 @@ R304/R31410k now separate C301/C311 from U1 inputs in source, readable native sc
 ## November25 — ground-plane clarification
 
 [VAL-059](brain/records/VAL-059-ground-plane-audit.md): all four native boards currently contain zero copper-zone definitions. Broad continuous low-voltage reference planes, deliberate noisy-current returns and HV keepouts remain to implement after T03 GND/PE/interboard return mapping. No grounding completion or fabrication release is claimed.
+
+## November25 — VAL-060 ground-plane voltage hold
+
+[VAL-060](brain/records/VAL-060-reverb-ground-plane-voltage-hold.md) checks a Reverb B.Cu candidate with one14,061.69mm² filled region, exact original-object/drill preservation and0strict DRC/0opens. It is not adopted: native FX_RETURN/dry interfaces carry tube-level swings; prior overload evidence reaches−135.094/+97.777V, invalidating blanket low-voltage classification and global0.25mm clearance as qualification. All31 active native/source/settings files remain unchanged. Next: correct JR1/JR5 voltage metadata, derive normal/transient/fault envelopes and C607 differential stress, qualify connectors/spacing, then implement domain-aware planes. T03 logical earth bond is already complete; populated returns/China sourcing/three-board fit remain open. All six scopes remain incomplete.

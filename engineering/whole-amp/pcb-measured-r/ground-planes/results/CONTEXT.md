@@ -1,0 +1,2 @@
+# Ground-plane evidence
+Owner: PCB integration. Inputs: baseline and candidate native files and project rules. Process: retain strict DRC reports, geometry/identity comparisons, fill/connectivity facts and visual plots. Outputs: current receipts and review images only, no duplicate build or historical board copies. Human check: compare the filled copper with the return-loop map and mounting/voltage constraints; a passing DRC is not an EMI or physical qualification.

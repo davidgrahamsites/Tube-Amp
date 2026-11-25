@@ -1,0 +1,2 @@
+# Ground-plane factories
+Owner: PCB integration. Inputs: ../contract.json and declared native baseline. Process: create a temporary candidate with KiCad; independently compare all native atoms, filled zones, DRC and unchanged companion files. Outputs: candidate PCB outside repository and ../results receipts, then explicitly adopted active PCB. Human check: inspect final copper renders and scoped change report. No schematic, pad, track or drill edits are authorized by these factories.

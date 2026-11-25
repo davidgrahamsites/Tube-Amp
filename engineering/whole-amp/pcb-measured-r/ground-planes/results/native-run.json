@@ -1,0 +1,103 @@
+{
+  "kicad_version": "10.0.6",
+  "input_sha256": {
+    "/private/tmp/renegade-reverb-ground-plane-exact/Renegade_Reverb.kicad_pcb": "f76316b7099eb07011b6350bb3cd078f0a26b5c80748d44e0b0203ee4295fc13",
+    "/private/tmp/renegade-reverb-ground-plane-exact/Renegade_Reverb.kicad_pro": "e6c1b0d530ae9b468410499cfe5db55c20ad2a38f872adf2e8b3979fe0d33f73",
+    "/private/tmp/renegade-reverb-ground-plane-exact/Renegade_Reverb.kicad_dru": "73f186e622da26cc3cf4477c4df492a46550aecf6366a40e86f26a81b1f8fb5f"
+  },
+  "target_sha256": "f76316b7099eb07011b6350bb3cd078f0a26b5c80748d44e0b0203ee4295fc13",
+  "inputs_unchanged": true,
+  "re_enabled_ignored_checks": [],
+  "removed_exclusions": [],
+  "output_sha256": {
+    "reverb-candidate-drc.json": "07cb8fd6046c7549a195c229c5f78f2d19fbd3db939ce220a4a4e25b89951d70",
+    "reverb-bottom.svg": "621f5ca200f3bfa3eb8b606474c6e46ad00f69653b44e3fde7464dfa43a9d303",
+    "reverb-bottom.png": "d2f232e233beca64d4ba8fe7a2318583082c497f184143b98a7cb506ae9ef611",
+    "reverb-overlay.svg": "757f63c1befe4551e61d4a15bce1877af9fadef38155199266f6e5e6a22cf2a9",
+    "reverb-overlay.png": "4ed92168280e8732d9aa70f8b19eaa7040653952ae97f7212bfd7d310d692fc8"
+  },
+  "commands": [
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--all-track-errors",
+        "--refill-zones",
+        "-o",
+        "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/ground-planes/results/reverb-candidate-drc.json",
+        "/var/folders/k5/slv6r3fn5fj2wy0_vgspl0q00000gn/T/renegade-plane-drc-vy5db1we/Renegade_Reverb.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nFound 0 unconnected items\nSaved DRC Report to /Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/ground-planes/results/reverb-candidate-drc.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "export",
+        "svg",
+        "--layers",
+        "B.Cu,Edge.Cuts",
+        "--mode-single",
+        "--fit-page-to-board",
+        "--exclude-drawing-sheet",
+        "-o",
+        "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/ground-planes/results/reverb-bottom.svg",
+        "/private/tmp/renegade-reverb-ground-plane-exact/Renegade_Reverb.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Plotted to '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/ground-planes/results/reverb-bottom.svg'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/local/bin/rsvg-convert",
+        "-w",
+        "1600",
+        "-o",
+        "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/ground-planes/results/reverb-bottom.png",
+        "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/ground-planes/results/reverb-bottom.svg"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "export",
+        "svg",
+        "--layers",
+        "B.Cu,F.Cu,F.Silkscreen,Edge.Cuts",
+        "--mode-single",
+        "--fit-page-to-board",
+        "--exclude-drawing-sheet",
+        "-o",
+        "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/ground-planes/results/reverb-overlay.svg",
+        "/private/tmp/renegade-reverb-ground-plane-exact/Renegade_Reverb.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Plotted to '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/ground-planes/results/reverb-overlay.svg'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/local/bin/rsvg-convert",
+        "-w",
+        "1600",
+        "-o",
+        "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/ground-planes/results/reverb-overlay.png",
+        "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/ground-planes/results/reverb-overlay.svg"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}
