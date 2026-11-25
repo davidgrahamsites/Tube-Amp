@@ -1,0 +1,44 @@
+stderr Warning: can't find the initialization file spinit.
+stdout ******
+stdout ** ngspice-45.2 shared library
+stdout ******
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: isolated expression ota candidate, not released hardware
+stdout Reducing trtol to 1 for xspice 'A' devices
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout Operating point simulation skipped by 'uic',
+stdout now using transient initial conditions.
+ Reference value :  1.83704e-06
+ Reference value :  7.38710e-03
+ Reference value :  2.43836e-02
+ Reference value :  4.17036e-02
+ Reference value :  5.90736e-02
+ Reference value :  7.63736e-02
+ Reference value :  9.36836e-02
+ Reference value :  1.11024e-01
+ Reference value :  1.28374e-01
+ Reference value :  1.45684e-01
+ Reference value :  1.60258e-01
+ Reference value :  1.64434e-01
+ Reference value :  1.68879e-01
+ Reference value :  1.72408e-01
+ Reference value :  1.76243e-01
+ Reference value :  1.80556e-01
+ Reference value :  1.84151e-01
+ Reference value :  1.87757e-01
+ Reference value :  1.92885e-01
+ Reference value :  1.97801e-01
+ Reference value :  2.02162e-01
+ Reference value :  2.06463e-01
+ Reference value :  2.11926e-01
+ Reference value :  2.16803e-01
+ Reference value :  2.21655e-01
+ Reference value :  2.26389e-01
+ Reference value :  2.32520e-01
+ Reference value :  2.38091e-01
+ Reference value :  2.42715e-01
+ Reference value :  2.46625e-01
+stdout No. of Data Rows : 26554
+/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/expression-control/tools/power_sequence.py:63: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  opamp_supply_below_5V_duration_s=float(np.trapz(((v['vp']-v['vn'])<5).astype(float),t)),

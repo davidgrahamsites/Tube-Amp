@@ -19,3 +19,5 @@ VAL-045: tools/settled_bias.py owns powered steady-DC initialization and late-wi
 The protected control-only interface proposal is pedal-port-design.md. It separates selection, smoothing, polarity mapping and existing mute priority, and explicitly retains the passive-pedal tip/ring fault ambiguity and domestic sourcing hold.
 
 references/ owns retained manufacturer jack drawings and the visually checked geometry observation. Exact-part drawing holes remain candidate dimensions until finished-hole/lead tolerances and sourcing are qualified.
+
+VAL-046: power_sequence.py owns diagnostic rail ramps/losses; results retain two failed runs and model limits. integrate_final_mute.py is an explicitly mutating, baseline-guarded native adapter for the spare K3 contact only. audit_final_mute.py verifies the declared two-pin delta and geometry preservation. final_mute_loading.py owns the passive dry-loading calculation. final-mute-review.md is the current interpretation; automatic rail-fault inhibit remains unimplemented.

@@ -1,0 +1,215 @@
+{
+  "baseline_commit": "df83862dc41f3e43d8d19ec3ee582cc0113abc11",
+  "checks": [
+    {
+      "name": "exact declared XML pin delta",
+      "pass_": true
+    },
+    {
+      "name": "native component identities unchanged",
+      "pass_": true
+    },
+    {
+      "name": "ERC unchanged",
+      "pass_": true
+    },
+    {
+      "name": "DRC zero reported violations",
+      "pass_": true
+    },
+    {
+      "name": "DRC zero opens",
+      "pass_": true
+    },
+    {
+      "name": "circuit JSON only two pins",
+      "pass_": true
+    },
+    {
+      "name": "all footprints holes and placement preserved",
+      "pass_": true
+    },
+    {
+      "name": "all existing PCB objects preserved except declared pad nets",
+      "pass_": true
+    },
+    {
+      "name": "only five tracks and one via added",
+      "pass_": true
+    },
+    {
+      "name": "all new tracks axis aligned or 45 degrees",
+      "pass_": true
+    },
+    {
+      "name": "native hashes match integration receipt",
+      "pass_": true
+    },
+    {
+      "name": "sequence input engineering/whole-amp/expression-control/tools/power_sequence.py",
+      "pass_": true
+    },
+    {
+      "name": "sequence input engineering/whole-amp/expression-control/tools/bias_screen.py",
+      "pass_": true
+    },
+    {
+      "name": "sequence input engineering/whole-amp/expression-control/tools/ota_screen.py",
+      "pass_": true
+    },
+    {
+      "name": "sequence input engineering/whole-amp/expression-control/models/LM13700.MOD",
+      "pass_": true
+    },
+    {
+      "name": "sequence input engineering/solid-state-reverb/simulation/models/OPAx134.LIB",
+      "pass_": true
+    },
+    {
+      "name": "sequence input engineering/whole-amp/expression-control/models/MMBT3906.spice.txt",
+      "pass_": true
+    },
+    {
+      "name": "sequence input engineering/whole-amp/expression-control/results/trim-screen.json",
+      "pass_": true
+    },
+    {
+      "name": "sequence input engineering/whole-amp/tools/spice_runtime.py",
+      "pass_": true
+    },
+    {
+      "name": "together deck hash",
+      "pass_": true
+    },
+    {
+      "name": "together log hash",
+      "pass_": true
+    },
+    {
+      "name": "reference-late deck hash",
+      "pass_": true
+    },
+    {
+      "name": "reference-late log hash",
+      "pass_": true
+    },
+    {
+      "name": "reference-first deck hash",
+      "pass_": true
+    },
+    {
+      "name": "reference-first log hash",
+      "pass_": true
+    },
+    {
+      "name": "negative-late deck hash",
+      "pass_": true
+    },
+    {
+      "name": "negative-late log hash",
+      "pass_": true
+    },
+    {
+      "name": "positive-late deck hash",
+      "pass_": true
+    },
+    {
+      "name": "positive-late log hash",
+      "pass_": true
+    },
+    {
+      "name": "reference-loss deck hash",
+      "pass_": true
+    },
+    {
+      "name": "reference-loss log hash",
+      "pass_": true
+    },
+    {
+      "name": "positive-loss deck hash",
+      "pass_": true
+    },
+    {
+      "name": "positive-loss log hash",
+      "pass_": true
+    },
+    {
+      "name": "negative-loss deck hash",
+      "pass_": true
+    },
+    {
+      "name": "negative-loss log hash",
+      "pass_": true
+    },
+    {
+      "name": "sequence failures retained",
+      "pass_": true
+    },
+    {
+      "name": "startup not falsely qualified",
+      "pass_": true
+    },
+    {
+      "name": "30 loading cases",
+      "pass_": true
+    },
+    {
+      "name": "dry gain change below 0.001dB in fixture",
+      "pass_": true
+    }
+  ],
+  "passed": 39,
+  "total": 39,
+  "pin_delta": {
+    "K3.11": [
+      "unconnected-(K3-Pad11)",
+      "GND"
+    ],
+    "K3.13": [
+      "unconnected-(K3-Pad13)",
+      "Net-(C607-Pad2)"
+    ]
+  },
+  "sequence_failures": [
+    "reference-first",
+    "negative-late"
+  ],
+  "native_exports_sha256": {
+    "renegade-mute-before.xml": "d6dec2e18ac72636f19e3a09f5f3e792e13148bbc5dd8db765847db553a662f9",
+    "renegade-mute-after.xml": "338888dd7f30b1da5064c7797f79120c68c4e1050f713919f5d1f29241a88995",
+    "renegade-mute-before-erc.json": "7b7871f0a2f80da7067a035f50ea986944e65397e38d40a735169a07c89291ad",
+    "renegade-mute-after-erc.json": "61178fd9659f98bbd7e20b5cab7411bd8b61273a9f26ae9add99430dcadab74a",
+    "renegade-mute-after-drc.json": "a7e250b6fec21ceeb825052810b90a045788107b8f11359700b5972d644dc089"
+  },
+  "erc": [
+    [
+      "/06_heaters/",
+      "multiple_net_names",
+      "warning",
+      "Both GND and PE are attached to the same items; GND will be used in the netlist"
+    ]
+  ],
+  "ignored_drc_checks": [
+    {
+      "description": "Footprint has no courtyard defined",
+      "key": "missing_courtyard"
+    },
+    {
+      "description": "Track endpoint not centered on via",
+      "key": "track_not_centered_on_via"
+    },
+    {
+      "description": "Tuning profile track geometries",
+      "key": "tuning_profile_track_geometries"
+    },
+    {
+      "description": "Footprint doesn't match symbol's footprint filters",
+      "key": "footprint_filters_mismatch"
+    },
+    {
+      "description": "Footprint component type doesn't match footprint pads",
+      "key": "footprint_type_mismatch"
+    }
+  ],
+  "scope": "Evidence/native integrity only. No rail-fault monitor, full expression PCB, procurement or build-ready claim."
+}
