@@ -1,0 +1,2 @@
+# Package comparison factory
+Owner: component selection. Inputs: parent candidate contracts, manufacturer PDF and read-only native Power board. Process: `check_packages.py`, using installed KiCad Python; asserts pad identities and rectangular geometry, screens a tolerance witness, and compares candidate body envelopes. Output: `../results/package-checks.json`. Human check: examine the separate nominal, tolerance and body results; a successful script is not assembly approval.

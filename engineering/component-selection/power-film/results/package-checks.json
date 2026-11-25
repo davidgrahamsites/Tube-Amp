@@ -1,0 +1,355 @@
+{
+  "scope": "Four P057 packages only; rigid insertion rejection and centered body screen, not footprint approval",
+  "source_sha256": {
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Power.kicad_pcb": "3ff2b701ece8ab2c7d7aca8da45cfdc4fc36fce1f9fda4b063c876e52c176788",
+    "engineering/component-selection/power-film/panasonic-contract.json": "3ad199dbf07e064e15fc1d6bd563dacceac29db81b1557b6a58259475d9a11d3",
+    "engineering/component-selection/fc6136-fit-contract.json": "9deb91c6a0c0414d55d575e80079be6a21a20c2ce978d9af3ec1b971b7e6dfe7",
+    "engineering/component-selection/power-film/evidence/Panasonic-EZPV-R9.pdf": "888c2a498183591da99c2f1752521cf6dc51d0388ee8d01ea6ccb6fc53d2cff1",
+    "engineering/component-selection/power-film/tools/check_packages.py": "5bc157f96e523a97672c269c97681e2ec7b78d7abdb7f643f31582e5fb3433a8"
+  },
+  "controls": {
+    "nominal_max_leads_not_rejected": true,
+    "large_holes_not_rejected": true,
+    "wide_pitch_rejected": true,
+    "touching_not_overlap": true,
+    "overlap_detected": true,
+    "native_unchanged": true
+  },
+  "rows": [
+    {
+      "reference": "C12",
+      "pitch_mm": [
+        52.5,
+        10.2
+      ],
+      "hole_diameter_nominal_mm": 1.8,
+      "pads": [
+        {
+          "number": "1",
+          "at_mm": [
+            82.825,
+            63.975
+          ],
+          "net": "B_EARLY"
+        },
+        {
+          "number": "1",
+          "at_mm": [
+            82.825,
+            74.175
+          ],
+          "net": "B_EARLY"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            135.325,
+            63.975
+          ],
+          "net": "GND"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            135.325,
+            74.175
+          ],
+          "net": "GND"
+        }
+      ],
+      "panasonic_nominal_pitch_matches": true,
+      "panasonic_max_lead_diameter_mm": 1.4,
+      "panasonic_rigid_max_pitch_witness_mm": [
+        53.5,
+        11.2
+      ],
+      "panasonic_rigid_witness_rejected_even_with_nominal_holes": true,
+      "panasonic_max_body_box_mm": [
+        80.075,
+        56.075,
+        138.075,
+        82.075
+      ],
+      "crc_max_body_box_mm": [
+        79.825,
+        51.075,
+        138.325,
+        87.075
+      ]
+    },
+    {
+      "reference": "C13",
+      "pitch_mm": [
+        52.5,
+        10.2
+      ],
+      "hole_diameter_nominal_mm": 1.8,
+      "pads": [
+        {
+          "number": "1",
+          "at_mm": [
+            68.275,
+            74.175
+          ],
+          "net": "B_PRE"
+        },
+        {
+          "number": "1",
+          "at_mm": [
+            68.275,
+            63.975
+          ],
+          "net": "B_PRE"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            15.775,
+            74.175
+          ],
+          "net": "GND"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            15.775,
+            63.975
+          ],
+          "net": "GND"
+        }
+      ],
+      "panasonic_nominal_pitch_matches": true,
+      "panasonic_max_lead_diameter_mm": 1.4,
+      "panasonic_rigid_max_pitch_witness_mm": [
+        53.5,
+        11.2
+      ],
+      "panasonic_rigid_witness_rejected_even_with_nominal_holes": true,
+      "panasonic_max_body_box_mm": [
+        13.025000000000006,
+        56.075,
+        71.025,
+        82.075
+      ],
+      "crc_max_body_box_mm": [
+        12.775000000000006,
+        51.075,
+        71.275,
+        87.075
+      ]
+    },
+    {
+      "reference": "C25",
+      "pitch_mm": [
+        52.5,
+        10.2
+      ],
+      "hole_diameter_nominal_mm": 1.8,
+      "pads": [
+        {
+          "number": "1",
+          "at_mm": [
+            82.825,
+            28.925
+          ],
+          "net": "B_PRE"
+        },
+        {
+          "number": "1",
+          "at_mm": [
+            82.825,
+            39.125
+          ],
+          "net": "B_PRE"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            135.325,
+            28.925
+          ],
+          "net": "GND"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            135.325,
+            39.125
+          ],
+          "net": "GND"
+        }
+      ],
+      "panasonic_nominal_pitch_matches": true,
+      "panasonic_max_lead_diameter_mm": 1.4,
+      "panasonic_rigid_max_pitch_witness_mm": [
+        53.5,
+        11.2
+      ],
+      "panasonic_rigid_witness_rejected_even_with_nominal_holes": true,
+      "panasonic_max_body_box_mm": [
+        80.075,
+        21.025,
+        138.075,
+        47.025
+      ],
+      "crc_max_body_box_mm": [
+        79.825,
+        16.025,
+        138.325,
+        52.025
+      ]
+    },
+    {
+      "reference": "C26",
+      "pitch_mm": [
+        52.5,
+        10.2
+      ],
+      "hole_diameter_nominal_mm": 1.8,
+      "pads": [
+        {
+          "number": "1",
+          "at_mm": [
+            15.775,
+            28.925
+          ],
+          "net": "B_SCREEN"
+        },
+        {
+          "number": "1",
+          "at_mm": [
+            15.775,
+            39.125
+          ],
+          "net": "B_SCREEN"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            68.275,
+            28.925
+          ],
+          "net": "GND"
+        },
+        {
+          "number": "2",
+          "at_mm": [
+            68.275,
+            39.125
+          ],
+          "net": "GND"
+        }
+      ],
+      "panasonic_nominal_pitch_matches": true,
+      "panasonic_max_lead_diameter_mm": 1.4,
+      "panasonic_rigid_max_pitch_witness_mm": [
+        53.5,
+        11.2
+      ],
+      "panasonic_rigid_witness_rejected_even_with_nominal_holes": true,
+      "panasonic_max_body_box_mm": [
+        13.025000000000006,
+        21.025,
+        71.025,
+        47.025
+      ],
+      "crc_max_body_box_mm": [
+        12.775000000000006,
+        16.025,
+        71.275,
+        52.025
+      ]
+    }
+  ],
+  "body_pairs": [
+    {
+      "references": [
+        "C12",
+        "C13"
+      ],
+      "panasonic": {
+        "overlap": false,
+        "edge_distance_mm": 9.05
+      },
+      "crc": {
+        "overlap": false,
+        "edge_distance_mm": 8.55
+      }
+    },
+    {
+      "references": [
+        "C12",
+        "C25"
+      ],
+      "panasonic": {
+        "overlap": false,
+        "edge_distance_mm": 9.05
+      },
+      "crc": {
+        "overlap": true,
+        "edge_distance_mm": 0.0
+      }
+    },
+    {
+      "references": [
+        "C12",
+        "C26"
+      ],
+      "panasonic": {
+        "overlap": false,
+        "edge_distance_mm": 12.798633
+      },
+      "crc": {
+        "overlap": false,
+        "edge_distance_mm": 8.55
+      }
+    },
+    {
+      "references": [
+        "C13",
+        "C25"
+      ],
+      "panasonic": {
+        "overlap": false,
+        "edge_distance_mm": 12.798633
+      },
+      "crc": {
+        "overlap": false,
+        "edge_distance_mm": 8.55
+      }
+    },
+    {
+      "references": [
+        "C13",
+        "C26"
+      ],
+      "panasonic": {
+        "overlap": false,
+        "edge_distance_mm": 9.05
+      },
+      "crc": {
+        "overlap": true,
+        "edge_distance_mm": 0.0
+      }
+    },
+    {
+      "references": [
+        "C25",
+        "C26"
+      ],
+      "panasonic": {
+        "overlap": false,
+        "edge_distance_mm": 9.05
+      },
+      "crc": {
+        "overlap": false,
+        "edge_distance_mm": 8.55
+      }
+    }
+  ],
+  "panasonic_centered_rectangular_grid_hole_diameter_without_pcb_tolerance_or_allowance_mm": 2.814214,
+  "that_diameter_is_a_geometric_example_not_a_drill_recommendation": true,
+  "native_modified": false,
+  "candidate_adopted": false,
+  "fabrication_ready": false
+}

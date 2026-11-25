@@ -1,0 +1,2 @@
+# Power-film evidence
+Owner: component selection. Inputs: manufacturer EZPV specification revision R9 and public RS China product/delivery pages retrieved November 24, 2026. Process: retain unmodified PDF and text extracted from public page content, with URL and raw-response hashes in the parent contract. Outputs: source PDF and supplier text receipts. Human check: confirm revision, exact suffix, quantity and delivery before purchase; listings are dated observations.

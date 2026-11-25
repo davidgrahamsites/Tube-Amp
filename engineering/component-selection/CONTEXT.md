@@ -7,4 +7,6 @@ Human check: confirm exact ordered suffix, package, current domestic availabilit
 
 P057 candidate fit: fc6136-fit-contract.json is the reviewed extraction from CRC approval 26124D02. It is not an adopted footprint. The native-board adapter and rejection evidence live in ../whole-amp/pcb-measured-r/tools/check_fc6136_fit.py and review/fc6136-fit-review.md. Coverage must not conflate CRC candidate dimensions with the native Panasonic package.
 
+P057 sourcing alternative and full-pitch insertion check: [power-film/CONTEXT.md](power-film/CONTEXT.md) owns the read-only comparison with Panasonic EZPV60506MTC. Its dated RS China observation does not select or release either candidate.
+
 Socket requirement: socketing/CONTEXT.md owns the exhaustive IC/tube manifest and qualified-contact gates. Native replacement geometry remains a PCB-module responsibility.
