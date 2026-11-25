@@ -1,0 +1,1335 @@
+{
+  "scope": "Steady DC of the existing 150k trim candidate using transient initialization. Not cold-start, pedal/protection, tolerance, noise, or native qualification.",
+  "cases": [
+    {
+      "name": "12-0",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "rail": 12,
+        "target": 0
+      },
+      "deck": "settled-12-0.cir",
+      "deck_sha256": "5edbd8f8834f7aa7b684d92173e0e2b875ec9c129d5eaeb4273af3e4b7527542",
+      "log": "settled-12-0.log",
+      "log_sha256": "71937a25eee51a9fc3dc9f4a069a164023160f06cb2e9c4255da364c4f7252be",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": -2.6374322670475278e-05,
+        "bo": -0.6216008850616708,
+        "be": 0.00047417682960765615,
+        "bbas": -0.6172140291031948,
+        "abc": -10.571917328735434,
+        "ref": 5.0,
+        "target": 0.0,
+        "plus": 0.5140728671129926,
+        "minus": 0.5147112762668936,
+        "db": 1.2295694193106843,
+        "acin": 0.514711223646403
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 6.968597090245863e-09,
+        "bo": 2.013278432855259e-12,
+        "be": 1.938150920137438e-12,
+        "bbas": 1.7206236435640676e-12,
+        "abc": 2.0623502905436908e-12,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.6568970074313256e-11,
+        "minus": 4.0010772472953704e-11,
+        "db": 3.8396397172846264e-11,
+        "acin": 7.28126203775048e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.390669581392115e-14,
+        "cbi": 5.233279753361625e-15,
+        "cf": 2.7233744366058328e-17
+      },
+      "late_emitter_kcl_max_abs_A": 3.004054089976702e-12,
+      "collector_current_A": -0.0004893449745916722,
+      "diode_bias_current_A": 0.001019726197836726,
+      "post_initialization_reverse_BE_max_V": -0.6176882055545735,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "12-2.5",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "rail": 12,
+        "target": 2.5
+      },
+      "deck": "settled-12-2.5.cir",
+      "deck_sha256": "1d349c84902c1d3705870d7329261638d343591f7da42e394573ac106d942ec3",
+      "log": "settled-12-2.5.log",
+      "log_sha256": "a87b2c23e6f32b3b6573623cad2de2cd29c06fe005aa82ea5f5808b4015f4613",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0026223377403468418,
+        "bo": 1.8995259247806,
+        "be": 2.5004984489169755,
+        "bbas": 1.9020508585203701,
+        "abc": -10.608614772102168,
+        "ref": 5.0,
+        "target": 2.5,
+        "plus": 0.5151298403060518,
+        "minus": 0.5157706502305804,
+        "db": 1.23062734723064,
+        "acin": 0.5157705975037671
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 3.481740036472697e-09,
+        "bo": 5.445333073339498e-11,
+        "be": 3.2436719976658424e-11,
+        "bbas": 9.94961890654622e-11,
+        "abc": 4.660858365923559e-10,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.5987657298619524e-11,
+        "minus": 3.950217930537292e-11,
+        "db": 3.782196777990521e-11,
+        "acin": 7.2930262939863155e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.404068541474847e-14,
+        "cbi": 7.401463167201548e-13,
+        "cf": 4.0392010782406253e-16
+      },
+      "late_emitter_kcl_max_abs_A": 2.2588216727634218e-11,
+      "collector_current_A": -0.00024141546483270128,
+      "diode_bias_current_A": 0.0010197170978993174,
+      "post_initialization_reverse_BE_max_V": -0.598445713405277,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "12-4.9",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "rail": 12,
+        "target": 4.9
+      },
+      "deck": "settled-12-4.9.cir",
+      "deck_sha256": "392a631557a8a5438cfe03057a3cd5430cc0c128ece49f52e29988c7ce564b9a",
+      "log": "settled-12-4.9.log",
+      "log_sha256": "bd824e25c84ae8dc9c18d46444abc725ffb8f67db3ec0a31b94ebf93feeda60e",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0005720784733220056,
+        "bo": 4.404394701778045,
+        "be": 4.900521702426846,
+        "bbas": 4.404605015871896,
+        "abc": -10.825840504722175,
+        "ref": 5.0,
+        "target": 4.9,
+        "plus": 0.5161917967860975,
+        "minus": 0.5168369105594192,
+        "db": 1.231691196778465,
+        "acin": 0.5168368577221479
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 5.2907681057437483e-11,
+        "bo": 3.9531578011064994e-10,
+        "be": 2.4851232183209504e-12,
+        "bbas": 3.9240966032139113e-10,
+        "abc": 1.1028511437416455e-09,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.605926668370785e-11,
+        "minus": 3.949873761399658e-11,
+        "db": 3.788347413546944e-11,
+        "acin": 7.304583160561151e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.419349185249904e-14,
+        "cbi": 5.5164090984088566e-14,
+        "cf": 8.546805710855474e-19
+      },
+      "late_emitter_kcl_max_abs_A": 4.067993376303122e-11,
+      "collector_current_A": -4.776186942080079e-06,
+      "diode_bias_current_A": 0.0010197079470228479,
+      "post_initialization_reverse_BE_max_V": -0.49591668615841566,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "12-5",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "rail": 12,
+        "target": 5
+      },
+      "deck": "settled-12-5.cir",
+      "deck_sha256": "9533172347a0a7867e905b92f802c3489f06405a24f5c31d5ce145bb7f7d33e2",
+      "log": "settled-12-5.log",
+      "log_sha256": "1bf9b8f797b8ac78b9b244f75c50318e1dac3d7b0b67bbbf23e3381aeaed0570",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.00047451554702301603,
+        "bo": 5.00575081702131,
+        "be": 5.000522391260993,
+        "bbas": 5.005750783750252,
+        "abc": -11.999958703307167,
+        "ref": 5.0,
+        "target": 5.0,
+        "plus": 0.5162130836157937,
+        "minus": 0.5168583115058664,
+        "db": 1.2317125352992888,
+        "acin": 0.5168582586661712
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 5.1114653959113965e-12,
+        "bo": 8.897019121434369e-09,
+        "be": 4.9116266609416925e-12,
+        "bbas": 8.89452600461027e-09,
+        "abc": 1.8410943880553532e-09,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.627254052673834e-11,
+        "minus": 3.972067119661915e-11,
+        "db": 3.8089753573444796e-11,
+        "acin": 7.309777450004162e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.425138147224618e-14,
+        "cbi": 2.473664925394676e-13,
+        "cf": 9.385281020893342e-19
+      },
+      "late_emitter_kcl_max_abs_A": 4.1446853780406595e-11,
+      "collector_current_A": -1.7029271434875797e-11,
+      "diode_bias_current_A": 0.0010197077634758551,
+      "post_initialization_reverse_BE_max_V": 0.005228401388476911,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "15-0",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "rail": 15,
+        "target": 0
+      },
+      "deck": "settled-15-0.cir",
+      "deck_sha256": "81618e3004cd14d7ba0b05d2d6367d2640773768675415102c00aa9f0da48c54",
+      "log": "settled-15-0.log",
+      "log_sha256": "4e9ab928b8f8694841299d312e2d2f05e5610306de12033730700a2ae88427a6",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": -1.0791376322491165e-08,
+        "bo": -0.6208538316513849,
+        "be": 0.0005003454547352462,
+        "bbas": -0.616550102153841,
+        "abc": -13.571908029694956,
+        "ref": 5.0,
+        "target": 0.0,
+        "plus": 0.5140724977234924,
+        "minus": 0.5147109062656952,
+        "db": 1.2295690496997114,
+        "acin": 0.5147108536458904
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 6.969630821458728e-09,
+        "bo": 1.4810375148499588e-13,
+        "be": 1.3140682118828462e-13,
+        "bbas": 1.3944401189291966e-13,
+        "abc": 1.744382416291046e-12,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.5999647707285476e-11,
+        "minus": 3.946409865562828e-11,
+        "db": 3.779598856112898e-11,
+        "acin": 7.276279578860567e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.3859774423808e-14,
+        "cbi": 9.307329391142081e-17,
+        "cf": 1.5342411700197523e-17
+      },
+      "late_emitter_kcl_max_abs_A": 3.0033090953112102e-12,
+      "collector_current_A": -0.0004894326930316707,
+      "diode_bias_current_A": 0.001019726201015766,
+      "post_initialization_reverse_BE_max_V": -0.6170504472567401,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "15-2.5",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "rail": 15,
+        "target": 2.5
+      },
+      "deck": "settled-15-2.5.cir",
+      "deck_sha256": "8ad586514ca64dfa47aca8f5e488188b66a80656a079ec5e13e52c450591c371",
+      "log": "settled-15-2.5.log",
+      "log_sha256": "03bb973715aa96c94377a75709ccec511c10276bff54c06023d2624c76e41eeb",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0026490595563000187,
+        "bo": 1.9002169272525309,
+        "be": 2.5005246175915934,
+        "bbas": 1.9026979664158363,
+        "abc": -13.608604444509773,
+        "ref": 5.0,
+        "target": 2.5,
+        "plus": 0.5151296370627744,
+        "minus": 0.5157704463721646,
+        "db": 1.2306271437280367,
+        "acin": 0.5157703936453893
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 3.4824549997175547e-09,
+        "bo": 3.129252412747974e-11,
+        "be": 1.0746958878371515e-13,
+        "bbas": 2.918398855911164e-11,
+        "abc": 5.899991606383992e-11,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.555489236362064e-11,
+        "minus": 3.901801104433389e-11,
+        "db": 3.733346964907014e-11,
+        "acin": 7.294927550915986e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.406816824575508e-14,
+        "cbi": 4.868561585941353e-16,
+        "cf": 4.530615248578733e-18
+      },
+      "late_emitter_kcl_max_abs_A": 2.2226305937296424e-11,
+      "collector_current_A": -0.00024146339201056794,
+      "diode_bias_current_A": 0.0010197170996515208,
+      "post_initialization_reverse_BE_max_V": -0.5978266511463348,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "15-4.9",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "rail": 15,
+        "target": 4.9
+      },
+      "deck": "settled-15-4.9.cir",
+      "deck_sha256": "f27ffab65545f5e5790028fe3d80ba0214c213e58363ee949e572f4989b03e06",
+      "log": "settled-15-4.9.log",
+      "log_sha256": "9c2431016e345f2e0349944f92ee1dabb98b9de5d4ead221d587a08d0c59e2ba",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0005984105701744951,
+        "bo": 4.404999834828819,
+        "be": 4.900547871138362,
+        "bbas": 4.4052075692966675,
+        "abc": -13.82575901700439,
+        "ref": 5.0,
+        "target": 4.9,
+        "plus": 0.5161917686909063,
+        "minus": 0.5168368823135435,
+        "db": 1.2316911686150247,
+        "acin": 0.5168368294772184
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 5.4507233795964005e-11,
+        "bo": 1.476606392714075e-09,
+        "be": 8.633094239485217e-13,
+        "bbas": 1.4692957961415232e-09,
+        "abc": 4.024492739063135e-09,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.659417213697225e-11,
+        "minus": 4.006850407023421e-11,
+        "db": 3.842526297148652e-11,
+        "acin": 7.3094361674463926e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.423906053099542e-14,
+        "cbi": 4.0975268191297866e-14,
+        "cf": 5.3246769945141e-19
+      },
+      "late_emitter_kcl_max_abs_A": 4.06803232731957e-11,
+      "collector_current_A": -4.781939551692291e-06,
+      "diode_bias_current_A": 0.001019707947264913,
+      "post_initialization_reverse_BE_max_V": -0.4953403003711232,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "15-5",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "rail": 15,
+        "target": 5
+      },
+      "deck": "settled-15-5.cir",
+      "deck_sha256": "2a298d3df43fd1cb80efc3919bc698f70dca016515070771885ddb552e60175e",
+      "log": "settled-15-5.log",
+      "log_sha256": "534d40700bf48ddaef6439f7183bb5f128d0b829deb333ed7d4218149a9db496",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0005006848887965382,
+        "bo": 5.006038678586573,
+        "be": 5.000548560148896,
+        "bbas": 5.006038642252442,
+        "abc": -14.999949696748377,
+        "ref": 5.0,
+        "target": 5.0,
+        "plus": 0.5162130864292529,
+        "minus": 0.5168583143324998,
+        "db": 1.231712538118604,
+        "acin": 0.5168582614933439
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 1.1544031789517684e-12,
+        "bo": 7.006653035546151e-10,
+        "be": 5.53335155473178e-13,
+        "bbas": 7.001688118180027e-10,
+        "abc": 2.440643243062368e-10,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.612521393137058e-11,
+        "minus": 3.957456584657848e-11,
+        "db": 3.793498848381205e-11,
+        "acin": 7.306049543132076e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.420714432954288e-14,
+        "cbi": 4.9503165472160024e-14,
+        "cf": 1.6269043196689327e-18
+      },
+      "late_emitter_kcl_max_abs_A": 4.1503952538113273e-11,
+      "collector_current_A": -2.003042608587078e-11,
+      "diode_bias_current_A": 0.001019707763450798,
+      "post_initialization_reverse_BE_max_V": 0.005490082103545291,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "16.5-0",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "rail": 16.5,
+        "target": 0
+      },
+      "deck": "settled-16.5-0.cir",
+      "deck_sha256": "bbb68bbb580275f2822c94e7c7b93ff64017e5a408a21a8a8a92936561ef6eba",
+      "log": "settled-16.5-0.log",
+      "log_sha256": "92f5f26260d035d674b0a0a67c12b81ca12f14891045d54918377e13d551405f",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 1.3193200439520581e-05,
+        "bo": -0.6204875134101392,
+        "be": 0.000513429770963971,
+        "bbas": -0.6162239529097495,
+        "abc": -15.071903536203981,
+        "ref": 5.0,
+        "target": 0.0,
+        "plus": 0.5140723192522924,
+        "minus": 0.5147107274989766,
+        "db": 1.2295688711215176,
+        "acin": 0.5147106748796295
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 6.97111335020559e-09,
+        "bo": 7.016609515630989e-14,
+        "be": 3.7539524440355354e-14,
+        "bbas": 3.574918139293004e-14,
+        "abc": 1.929123527588672e-12,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.5495606454105655e-11,
+        "minus": 3.8937963964258415e-11,
+        "db": 3.7268410579827105e-11,
+        "acin": 7.279266633908321e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.388755032821436e-14,
+        "cbi": 1.4518148138023034e-17,
+        "cf": 9.724580070341595e-18
+      },
+      "late_emitter_kcl_max_abs_A": 3.0033948902330344e-12,
+      "collector_current_A": -0.0004894750859354826,
+      "diode_bias_current_A": 0.001019726202550929,
+      "post_initialization_reverse_BE_max_V": -0.6167373823292945,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "16.5-2.5",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "rail": 16.5,
+        "target": 2.5
+      },
+      "deck": "settled-16.5-2.5.cir",
+      "deck_sha256": "1f6d5f5bf0581ef399decf8dd45037407238c184c9675f3185cd914ec1654e9b",
+      "log": "settled-16.5-2.5.log",
+      "log_sha256": "44a5647a8c4ed50fb68075a9a6db08e740ed00e6ec5073ec100d9338d7306402",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.002662423670136607,
+        "bo": 1.9005562090478498,
+        "be": 2.500537701925046,
+        "bbas": 1.9030160032093333,
+        "abc": -15.108599446292516,
+        "ref": 5.0,
+        "target": 2.5,
+        "plus": 0.5151295387286124,
+        "minus": 0.5157703477403845,
+        "db": 1.230627045268316,
+        "acin": 0.5157702950148251
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 3.480319880379279e-09,
+        "bo": 2.724309666746194e-11,
+        "be": 3.2596148002994596e-13,
+        "bbas": 2.540101462500388e-11,
+        "abc": 5.168665495602909e-11,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.6183611662465864e-11,
+        "minus": 3.96435106964077e-11,
+        "db": 3.799360825951226e-11,
+        "acin": 7.289811088107001e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.401190238816782e-14,
+        "cbi": 2.0619377461606295e-15,
+        "cf": 1.499802482198877e-17
+      },
+      "late_emitter_kcl_max_abs_A": 2.2226474646562117e-11,
+      "collector_current_A": -0.00024148659051521237,
+      "diode_bias_current_A": 0.0010197171004960822,
+      "post_initialization_reverse_BE_max_V": -0.5975214808987221,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "16.5-4.9",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "rail": 16.5,
+        "target": 4.9
+      },
+      "deck": "settled-16.5-4.9.cir",
+      "deck_sha256": "6e505eadf5ac8195f7541394d3a40487e423d4016a9bcc6c721bbece717fae34",
+      "log": "settled-16.5-4.9.log",
+      "log_sha256": "bbbe18c34d7967e6acb11ec761681f1b8d5e6c95266e149fddaae43b85e5c5f7",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0006115744607353024,
+        "bo": 4.405297553469347,
+        "be": 4.900560955497695,
+        "bbas": 4.4055040321299455,
+        "abc": -15.325719487296737,
+        "ref": 5.0,
+        "target": 4.9,
+        "plus": 0.5161917550892415,
+        "minus": 0.5168368686389,
+        "db": 1.2316911549803051,
+        "acin": 0.5168368158024133
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 5.426651673596378e-11,
+        "bo": 1.4727579156215143e-09,
+        "be": 8.544276397515205e-13,
+        "bbas": 1.4656640345833694e-09,
+        "abc": 3.9392933359749804e-09,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.589961661276675e-11,
+        "minus": 3.9369174587022826e-11,
+        "db": 3.7697400756542265e-11,
+        "acin": 7.309453708970182e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.423896142814059e-14,
+        "cbi": 4.093450720225356e-14,
+        "cf": 5.621299954763055e-19
+      },
+      "late_emitter_kcl_max_abs_A": 4.068005441199132e-11,
+      "collector_current_A": -4.784733264578605e-06,
+      "diode_bias_current_A": 0.0010197079473828123,
+      "post_initialization_reverse_BE_max_V": -0.49505692190008155,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "16.5-5",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "rail": 16.5,
+        "target": 5
+      },
+      "deck": "settled-16.5-5.cir",
+      "deck_sha256": "69706a4e536e94d55034a6f11fcb932f077cd0bad1471de537f052e2db33794a",
+      "log": "settled-16.5-5.log",
+      "log_sha256": "a8bd06a19448899aa88934aaa6b85345fe6a09550703cf876650674171069ee1",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0005137695534012172,
+        "bo": 5.006182602394466,
+        "be": 5.000561644596895,
+        "bbas": 5.006182564531047,
+        "abc": -16.49994519744487,
+        "ref": 5.0,
+        "target": 5.0,
+        "plus": 0.5162130878371275,
+        "minus": 0.5168583157469778,
+        "db": 1.2317125395293438,
+        "acin": 0.5168582629095382
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 2.1761626788768806e-12,
+        "bo": 1.5928689478528213e-09,
+        "be": 2.686739719592879e-12,
+        "bbas": 1.5926664431731297e-09,
+        "abc": 5.361727062336286e-09,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.593580988336953e-11,
+        "minus": 3.939459869428674e-11,
+        "db": 3.7736258562404146e-11,
+        "acin": 7.306138916085558e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.420895443895116e-14,
+        "cbi": 1.0920756260582353e-13,
+        "cf": 7.638740720200122e-19
+      },
+      "late_emitter_kcl_max_abs_A": 4.144853220979275e-11,
+      "collector_current_A": -2.1531089840580632e-11,
+      "diode_bias_current_A": 0.0010197077634347136,
+      "post_initialization_reverse_BE_max_V": 0.005620921528712408,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "half-step-0",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "target": 0,
+        "step": 5e-05
+      },
+      "deck": "settled-half-step-0.cir",
+      "deck_sha256": "81618e3004cd14d7ba0b05d2d6367d2640773768675415102c00aa9f0da48c54",
+      "log": "settled-half-step-0.log",
+      "log_sha256": "6f3eea3b5bca364f0b0f34a6abe9041d99f40563c8539a2fe408ec872e86df15",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": -1.079848944915152e-08,
+        "bo": -0.6208538316512985,
+        "be": 0.000500345454822731,
+        "bbas": -0.6165501021537578,
+        "abc": -13.57190802969437,
+        "ref": 5.0,
+        "target": 0.0,
+        "plus": 0.5140724977231889,
+        "minus": 0.514710906265392,
+        "db": 1.2295690496993934,
+        "acin": 0.5147108536454243
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 6.981565779750458e-09,
+        "bo": 2.2426505097428162e-13,
+        "be": 1.9786657121795281e-13,
+        "bbas": 2.0305979120394113e-13,
+        "abc": 1.836752971939859e-12,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.606548393264575e-11,
+        "minus": 3.9495851034132556e-11,
+        "db": 3.786615465628529e-11,
+        "acin": 7.278963432000296e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.389515160188302e-14,
+        "cbi": 7.880377364028361e-18,
+        "cf": 1.7214562746453266e-17
+      },
+      "late_emitter_kcl_max_abs_A": 3.0032727745382357e-12,
+      "collector_current_A": -0.0004894326930317607,
+      "diode_bias_current_A": 0.0010197262010154683,
+      "post_initialization_reverse_BE_max_V": -0.6170504472567401,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 5e-05 2 0 5e-05"
+      ]
+    },
+    {
+      "name": "half-step-5",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "target": 5,
+        "step": 5e-05
+      },
+      "deck": "settled-half-step-5.cir",
+      "deck_sha256": "2a298d3df43fd1cb80efc3919bc698f70dca016515070771885ddb552e60175e",
+      "log": "settled-half-step-5.log",
+      "log_sha256": "3462014469fe4bc3fb4aee7302015a6a3bc2572023e560dbd0a1f3091943f06a",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0005006848901616707,
+        "bo": 5.006038614118445,
+        "be": 5.000548560127209,
+        "bbas": 5.006038577776014,
+        "abc": -14.999949697721544,
+        "ref": 5.0,
+        "target": 5.0,
+        "plus": 0.5162130864304372,
+        "minus": 0.5168583143336817,
+        "db": 1.2317125381198482,
+        "acin": 0.5168582614933569
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 1.612534313976538e-11,
+        "bo": 6.683119835315665e-09,
+        "be": 2.12665440812998e-11,
+        "bbas": 6.674412134088925e-09,
+        "abc": 2.615667682448475e-10,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.7308711675621e-11,
+        "minus": 4.0793257660709514e-11,
+        "db": 3.9178438271392224e-11,
+        "acin": 7.309102323382888e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.422727067940259e-14,
+        "cbi": 9.47372482628456e-13,
+        "cf": 2.5896237271617836e-17
+      },
+      "late_emitter_kcl_max_abs_A": 4.1766309537365196e-11,
+      "collector_current_A": -2.0032035142846113e-11,
+      "diode_bias_current_A": 0.0010197077634536338,
+      "post_initialization_reverse_BE_max_V": 0.005490017648805079,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 5e-05 2 0 5e-05"
+      ]
+    },
+    {
+      "name": "longer-0",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "target": 0,
+        "stop": 3
+      },
+      "deck": "settled-longer-0.cir",
+      "deck_sha256": "81618e3004cd14d7ba0b05d2d6367d2640773768675415102c00aa9f0da48c54",
+      "log": "settled-longer-0.log",
+      "log_sha256": "668ad5aec22e91a189ba9012f3c74e8726a4481e7ec3702750f13786a306323c",
+      "status": "settled",
+      "end_s": 3.0,
+      "final": {
+        "out": -9.688068085134184e-09,
+        "bo": -0.6208538316514364,
+        "be": 0.0005003454547121594,
+        "bbas": -0.6165501021538646,
+        "abc": -13.571908029694525,
+        "ref": 5.0,
+        "target": 0.0,
+        "plus": 0.5140724977286056,
+        "minus": 0.5147109062713591,
+        "db": 1.2295690497050806,
+        "acin": 0.514710854799293
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 1.00395721135222e-11,
+        "bo": 1.0591527654923993e-13,
+        "be": 9.534517272924425e-14,
+        "bbas": 1.0103029524088925e-13,
+        "abc": 1.7479351299698465e-12,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 2.4591439995447217e-12,
+        "minus": 2.4545920851437586e-12,
+        "db": 2.582378755278114e-12,
+        "acin": 3.5915714846623814e-13
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 1.7663178049093925e-17,
+        "cbi": 6.20747004559961e-17,
+        "cf": 6.345659346390665e-18
+      },
+      "late_emitter_kcl_max_abs_A": 3.003288820730499e-12,
+      "collector_current_A": -0.0004894326930316766,
+      "diode_bias_current_A": 0.0010197262010147542,
+      "post_initialization_reverse_BE_max_V": -0.6170504472567401,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 3 0 0.0001"
+      ]
+    },
+    {
+      "name": "longer-5",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "target": 5,
+        "stop": 3
+      },
+      "deck": "settled-longer-5.cir",
+      "deck_sha256": "2a298d3df43fd1cb80efc3919bc698f70dca016515070771885ddb552e60175e",
+      "log": "settled-longer-5.log",
+      "log_sha256": "bddcfe4184bab3e6cdd8b5b5daea1689f52d3d9480dce29968bded33795a4cdf",
+      "status": "settled",
+      "end_s": 3.0,
+      "final": {
+        "out": 0.0005006848853260464,
+        "bo": 5.006038676072038,
+        "be": 5.000548560152401,
+        "bbas": 5.006038639739873,
+        "abc": -14.999949696081286,
+        "ref": 5.0,
+        "target": 5.0,
+        "plus": 0.5162130864344845,
+        "minus": 0.5168583143382866,
+        "db": 1.2317125381240974,
+        "acin": 0.5168582626515663
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 2.3168203466816806e-12,
+        "bo": 1.8140466906402253e-09,
+        "be": 3.930189507173054e-12,
+        "bbas": 1.8125767553556216e-09,
+        "abc": 9.110276977253307e-10,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.182232255483086e-12,
+        "minus": 3.175903984242723e-12,
+        "db": 3.340661081097096e-12,
+        "acin": 3.611555499105634e-13
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 1.8422119569833778e-17,
+        "cbi": 1.2845839178453977e-13,
+        "cf": 8.229274711302858e-19
+      },
+      "late_emitter_kcl_max_abs_A": 4.1447137905545266e-11,
+      "collector_current_A": -2.003001244441436e-11,
+      "diode_bias_current_A": 0.0010197077634505123,
+      "post_initialization_reverse_BE_max_V": 0.005490081403983993,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 3 0 0.0001"
+      ]
+    },
+    {
+      "name": "warm-half-0",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "target": 0,
+        "warm_step": 5e-07
+      },
+      "deck": "settled-warm-half-0.cir",
+      "deck_sha256": "81618e3004cd14d7ba0b05d2d6367d2640773768675415102c00aa9f0da48c54",
+      "log": "settled-warm-half-0.log",
+      "log_sha256": "39fc436d3c4e3ced76bb2e0a8af1d86a0502a873d783e74ca6e4b90088c47e54",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": -1.08005826774109e-08,
+        "bo": -0.620853831651455,
+        "be": 0.0005003454546861655,
+        "bbas": -0.6165501021538936,
+        "abc": -13.571908029694693,
+        "ref": 5.0,
+        "target": 0.0,
+        "plus": 0.5140724977233393,
+        "minus": 0.514710906265542,
+        "db": 1.2295690496995508,
+        "acin": 0.5147108536459001
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 6.970976168363471e-09,
+        "bo": 7.482903185973555e-14,
+        "be": 8.044140440560676e-14,
+        "bbas": 8.482103908136196e-14,
+        "abc": 1.7035262089848402e-12,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.590949759768591e-11,
+        "minus": 3.9353298397770686e-11,
+        "db": 3.770250778245554e-11,
+        "acin": 7.2768491232722e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.387107299629142e-14,
+        "cbi": 8.343955859545654e-17,
+        "cf": 1.4340471595001874e-17
+      },
+      "late_emitter_kcl_max_abs_A": 3.003306059545121e-12,
+      "collector_current_A": -0.0004894326930317411,
+      "diode_bias_current_A": 0.0010197262010148414,
+      "post_initialization_reverse_BE_max_V": -0.6170504472567053,
+      "commands": [
+        "optran 0 0 0 5e-07 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "warm-half-5",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "target": 5,
+        "warm_step": 5e-07
+      },
+      "deck": "settled-warm-half-5.cir",
+      "deck_sha256": "2a298d3df43fd1cb80efc3919bc698f70dca016515070771885ddb552e60175e",
+      "log": "settled-warm-half-5.log",
+      "log_sha256": "d8e46587a6621078938a4b7e7969aac00b8c0026c9f27637039a24bdeedc83a8",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0005006848822487925,
+        "bo": 5.0060386613500505,
+        "be": 5.000548560150876,
+        "bbas": 5.006038625017665,
+        "abc": -14.999949693817369,
+        "ref": 5.0,
+        "target": 5.0,
+        "plus": 0.5162130864298176,
+        "minus": 0.5168583143330633,
+        "db": 1.2317125381191973,
+        "acin": 0.5168582614933551
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 5.394057379579098e-12,
+        "bo": 4.51978454663049e-09,
+        "be": 2.5073276788134535e-12,
+        "bbas": 4.518394547403659e-09,
+        "abc": 3.272322857128529e-09,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.6952885196228635e-11,
+        "minus": 4.039180101500506e-11,
+        "db": 3.880495924590832e-11,
+        "acin": 7.309748806250127e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.424143052918184e-14,
+        "cbi": 1.2570054236727556e-13,
+        "cf": 1.1705261217046618e-18
+      },
+      "late_emitter_kcl_max_abs_A": 4.1327034445326733e-11,
+      "collector_current_A": -2.0029968270933118e-11,
+      "diode_bias_current_A": 0.0010197077634518505,
+      "post_initialization_reverse_BE_max_V": 0.005490069387476204,
+      "commands": [
+        "optran 0 0 0 5e-07 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "warm-double-0",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "target": 0,
+        "warm_step": 2e-06
+      },
+      "deck": "settled-warm-double-0.cir",
+      "deck_sha256": "81618e3004cd14d7ba0b05d2d6367d2640773768675415102c00aa9f0da48c54",
+      "log": "settled-warm-double-0.log",
+      "log_sha256": "59da1625d6d419c2fede7e3c76e50a93d427c746a87645a7710ec92feecd45bd",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": -1.0802790438050093e-08,
+        "bo": -0.6208538316511842,
+        "be": 0.0005003454549482948,
+        "bbas": -0.6165501021536526,
+        "abc": -13.571908029694601,
+        "ref": 5.0,
+        "target": 0.0,
+        "plus": 0.5140724977232545,
+        "minus": 0.514710906265458,
+        "db": 1.2295690496994618,
+        "acin": 0.5147108536466316
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 6.9723043179968285e-09,
+        "bo": 7.004397062360113e-13,
+        "be": 6.692864578522473e-13,
+        "bbas": 6.374900607397649e-13,
+        "abc": 1.8260948309034575e-12,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.512390378546115e-11,
+        "minus": 3.8586245310057166e-11,
+        "db": 3.6876501852134425e-11,
+        "acin": 7.2792715188896295e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.38924139913975e-14,
+        "cbi": 2.9009921844061355e-16,
+        "cf": 5.290393021755819e-18
+      },
+      "late_emitter_kcl_max_abs_A": 3.0043528567429965e-12,
+      "collector_current_A": -0.0004894326930329817,
+      "diode_bias_current_A": 0.001019726201014491,
+      "post_initialization_reverse_BE_max_V": -0.6170487774086599,
+      "commands": [
+        "optran 0 0 0 2e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "warm-double-5",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "target": 5,
+        "warm_step": 2e-06
+      },
+      "deck": "settled-warm-double-5.cir",
+      "deck_sha256": "2a298d3df43fd1cb80efc3919bc698f70dca016515070771885ddb552e60175e",
+      "log": "settled-warm-double-5.log",
+      "log_sha256": "06a82e4421059ff57d024d8176116135683cc6b9749f0c74406899f73d55e6cc",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0005006848822488089,
+        "bo": 5.006038668988307,
+        "be": 5.000548560153276,
+        "bbas": 5.006038632657094,
+        "abc": -14.999949693897074,
+        "ref": 5.0,
+        "target": 5.0,
+        "plus": 0.5162130864300899,
+        "minus": 0.5168583143333352,
+        "db": 1.231712538119483,
+        "acin": 0.5168582614935695
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 5.393998507401132e-12,
+        "bo": 8.897889536285675e-09,
+        "be": 4.909850304102292e-12,
+        "bbas": 8.895488790017225e-09,
+        "abc": 3.095344425219082e-09,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.648914503884271e-11,
+        "minus": 3.99779098714248e-11,
+        "db": 3.831712724888803e-11,
+        "acin": 7.309743699224214e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.423854553496349e-14,
+        "cbi": 2.4739052317644386e-13,
+        "cf": 1.2237489659493724e-18
+      },
+      "late_emitter_kcl_max_abs_A": 4.144721127930724e-11,
+      "collector_current_A": -2.0029753466802222e-11,
+      "diode_bias_current_A": 0.0010197077634520977,
+      "post_initialization_reverse_BE_max_V": 0.005490081403989322,
+      "commands": [
+        "optran 0 0 0 2e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "weak-shunt-0",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "target": 0,
+        "rshunt": 10000000000000.0
+      },
+      "deck": "settled-weak-shunt-0.cir",
+      "deck_sha256": "d57d7790f787dbfac7c3df9226b753b79db16a1a5dca2c21bb5cbef160daf17c",
+      "log": "settled-weak-shunt-0.log",
+      "log_sha256": "483fe775cdbb6cbebe53770a0777e4f42d50392d3caf0c1642a7e7d2ce5e785e",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 1.3969641451836606e-07,
+        "bo": -0.6208538218467685,
+        "be": 0.0005003540923081255,
+        "bbas": -0.6165500934651198,
+        "abc": -13.571908033055433,
+        "ref": 5.0,
+        "target": 0.0,
+        "plus": 0.5140724922440931,
+        "minus": 0.514710900856845,
+        "db": 1.2295690439121245,
+        "acin": 0.514710894563915
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 6.975596111183701e-09,
+        "bo": 4.8405723873656825e-14,
+        "be": 5.0559708329733777e-14,
+        "bbas": 5.007105841059456e-14,
+        "abc": 1.744382416291046e-12,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.490008282369672e-11,
+        "minus": 3.8344438735293807e-11,
+        "db": 3.6641800704728666e-11,
+        "acin": 7.279262748127735e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.389329829379443e-14,
+        "cbi": 2.2513609507257546e-17,
+        "cf": 7.958791661544253e-18
+      },
+      "late_emitter_kcl_max_abs_A": 3.0024581459091935e-12,
+      "collector_current_A": -0.0004894326921871013,
+      "diode_bias_current_A": 0.0010197261852771715,
+      "post_initialization_reverse_BE_max_V": -0.6170504472055887,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "weak-shunt-5",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "target": 5,
+        "rshunt": 10000000000000.0
+      },
+      "deck": "settled-weak-shunt-5.cir",
+      "deck_sha256": "c302c4251e038539fc364927315b299071354ad02add1cacbe4225ed740e6bfc",
+      "log": "settled-weak-shunt-5.log",
+      "log_sha256": "2d6640d806c7891c450e1f81a24098b101b6fda7dbbd7ddafc67f9428cf5bc21",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0005006925105327155,
+        "bo": 5.006037167855993,
+        "be": 5.0005485867996375,
+        "bbas": 5.006037140535089,
+        "abc": -14.999976767356852,
+        "ref": 5.0,
+        "target": 5.0,
+        "plus": 0.5162130812289492,
+        "minus": 0.516858309207264,
+        "db": 1.2317125326123768,
+        "acin": 0.5168583028876544
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 4.267405547854486e-12,
+        "bo": 5.908444400404278e-09,
+        "be": 3.3528735343679728e-12,
+        "bbas": 5.906913180808715e-09,
+        "abc": 1.934783000479001e-09,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.6596281560719035e-11,
+        "minus": 4.002742581832308e-11,
+        "db": 3.8429925908189944e-11,
+        "acin": 7.309762795060237e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.424303396255099e-14,
+        "cbi": 1.6419540545848708e-13,
+        "cf": 1.3119276440002497e-18
+      },
+      "late_emitter_kcl_max_abs_A": 2.7974819211253215e-11,
+      "collector_current_A": -2.0030190337877748e-11,
+      "diode_bias_current_A": 0.0010197077477116113,
+      "post_initialization_reverse_BE_max_V": 0.005488559645446145,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "temp-0",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "target": 5,
+        "temperature": 0
+      },
+      "deck": "settled-temp-0.cir",
+      "deck_sha256": "6a1f33e5762c88c8d9cb0f7dc1efbfc272f9a367cced9d928de7eb52b51416fe",
+      "log": "settled-temp-0.log",
+      "log_sha256": "a2ba6a81e2de7080d251eb6885e51582e76931c1175f2b962910e71b4794833a",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0004466872367385271,
+        "bo": 5.005444785576068,
+        "be": 5.000494560488087,
+        "bbas": 5.005444750400217,
+        "abc": -14.999949640725887,
+        "ref": 5.0,
+        "target": 5.0,
+        "plus": 0.5087667141828515,
+        "minus": 0.5093667846008871,
+        "db": 1.266067691256665,
+        "acin": 0.5093667325291745
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 4.81168170628557e-12,
+        "bo": 8.917653282480842e-09,
+        "be": 4.9178439098795934e-12,
+        "bbas": 8.915240989892936e-09,
+        "abc": 1.4497523181944416e-09,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.5191072278450974e-11,
+        "minus": 3.836364559361982e-11,
+        "db": 3.6818770254853916e-11,
+        "acin": 7.201650498167567e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.299778033360634e-14,
+        "cbi": 2.4794002334193046e-13,
+        "cf": 8.109661169245558e-19
+      },
+      "late_emitter_kcl_max_abs_A": 4.1447595781243064e-11,
+      "collector_current_A": -2.0005137195149757e-11,
+      "diode_bias_current_A": 0.001004726933703714,
+      "post_initialization_reverse_BE_max_V": 0.004950198832067265,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    },
+    {
+      "name": "temp-70",
+      "case": {
+        "trim_fraction": 0.5697962228592939,
+        "trim_resistance": 150000,
+        "target": 5,
+        "temperature": 70
+      },
+      "deck": "settled-temp-70.cir",
+      "deck_sha256": "94a55a237153bebda9f3a5fccb6e9b352317d09bc7a8a255a142ce7e381ae07d",
+      "log": "settled-temp-70.log",
+      "log_sha256": "3bb9165ded1fa624ab4c81faae41b839c6b1c7c69f3b840e23902e73b6061789",
+      "status": "settled",
+      "end_s": 2.0,
+      "final": {
+        "out": 0.0005866803338554811,
+        "bo": 5.006983464997448,
+        "be": 5.000634559620647,
+        "bbas": 5.0069834087541905,
+        "abc": -14.999941751777753,
+        "ref": 5.0,
+        "target": 5.0,
+        "plus": 0.5277696124642682,
+        "minus": 0.5284831787159244,
+        "db": 1.1755298233415215,
+        "acin": 0.5284831246899689
+      },
+      "late_window_s": 0.2,
+      "late_peak_to_peak_V": {
+        "out": 6.321482074779505e-12,
+        "bo": 8.916705596107022e-09,
+        "be": 4.9178439098795934e-12,
+        "bbas": 8.914453175634662e-09,
+        "abc": 1.9803447770527782e-09,
+        "ref": 0.0,
+        "target": 0.0,
+        "plus": 3.630840073043373e-11,
+        "minus": 4.024747202180379e-11,
+        "db": 3.8342662378454406e-11,
+        "acin": 7.477605201700044e-09
+      },
+      "late_capacitor_max_abs_A": {
+        "cin": 8.618146039201299e-14,
+        "cbi": 2.479133902131541e-13,
+        "cf": 1.3707649281805688e-18
+      },
+      "late_emitter_kcl_max_abs_A": 4.1448541185879634e-11,
+      "collector_current_A": -2.795645382344042e-11,
+      "diode_bias_current_A": 0.0010429557659923307,
+      "post_initialization_reverse_BE_max_V": 0.006348858052689366,
+      "commands": [
+        "optran 0 0 0 1e-06 0.002 0",
+        "tran 0.0001 2 0 0.0001"
+      ]
+    }
+  ],
+  "provenance": {
+    "engineering/whole-amp/expression-control/tools/settled_bias.py": "74a8efc6b7b6a1ba984f85d0935fb81f16b61491479d6d08d0ea8b1a110d88dd",
+    "engineering/whole-amp/expression-control/tools/bias_screen.py": "a4ad483d1a163c01cf83b8658de186c4278897bc7afaf7bf4efca25a5c768388",
+    "engineering/whole-amp/expression-control/tools/ota_screen.py": "4f1bc096811638c562a6ca202fd5edc556a772cb7fc77c741f92bfd1e64af418",
+    "engineering/whole-amp/expression-control/models/LM13700.MOD": "666df501773da5e65f7fd3b3c806b2c1ae7770784685dd8191a9df33b382f390",
+    "engineering/solid-state-reverb/simulation/models/OPAx134.LIB": "8ff414c678a7f8330b87504d7e0553de20ca87bdc713cecf81ab3448b4d7608f",
+    "engineering/whole-amp/expression-control/models/MMBT3906.spice.txt": "712886c6ce94f511ad02ed384c2d313f4f2b76faf8f68e7ba0bbd3d946b3dca4",
+    "engineering/whole-amp/expression-control/results/trim-screen.json": "73727f9eb21153d0dd6b718523b271fa7d58d3189bf15a784076ff3f1128512e",
+    "engineering/whole-amp/tools/spice_runtime.py": "3df496fbbce173c6f8a602b9a17a731389f011634af809106184418572b9cf9b"
+  }
+}

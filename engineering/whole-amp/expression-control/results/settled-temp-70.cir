@@ -1,0 +1,36 @@
+Isolated expression OTA candidate, not released hardware
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/expression-control/models/LM13700.MOD"
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+.options rshunt=1000000000000.0
+.temp 70
+VP vp 0 15
+VN vn 0 -15
+VIN in 0 DC 0
+CIN in acin 1u
+RIN acin minus 100k
+RTRIMTOP ref trim 43020.377714070615
+RTRIMBOT trim 0 56979.622285929385
+RTRIM trim minus 150000
+RPLUS plus 0 1k
+RMINUS minus 0 1k
+VREF ref 0 5
+VCTRL target 0 5
+QDR dref dref ref DI_MMBT3906
+QDM db dref ref DI_MMBT3906
+RDR dref 0 4.32k
+XBI target be vp vn bo OPAx134
+RBB bo bbas 1k
+QBI abc bbas be DI_MMBT3906
+RBE ref be 10k
+CBI bo be 1n
+RRECOV bo be 100k
+RABC abc vn 1Meg
+XOTA abc db plus minus io vn 0 unused vp LM13700/NS
+RUNUSED unused vn 100k
+XOP 0 io vp vn out OPAx134
+RF io out 215k
+CF io out 10p
+RLOAD out 0 110k
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/expression-control/models/MMBT3906.spice.txt"
+.nodeset v(out)=0 v(io)=0 v(plus)=.5 v(minus)=.5 v(be)=5 v(bo)=4.4
+.end

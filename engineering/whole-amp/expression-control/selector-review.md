@@ -22,3 +22,5 @@ Debounce addresses repeated contact transitions. A separate smoothing/ramp strat
 - [Analog Devices, Selecting the Right CMOS Analog Switch](https://www.analog.com/en/resources/design-notes/selecting-the-right-cmos-analog-switch.html) explains switching charge injection and click/pop issues. Supports separating transition artifacts from contact debounce; does not qualify a selected control circuit.
 
 Human check: confirm the desired control behavior; after implementation, compare panel and pedal sweeps and operate the toggle with deliberately different settings while listening/measuring for transients. Exact China-stocked parts, Shanghai delivery, dimensions and native integration remain pending.
+
+Implementation follow-up: [protected pedal-port proposal](pedal-port-design.md) defines states, board ownership, preliminary current/range budget, unavoidable tip/ring fault ambiguity and exact-jack candidates. This remains outside native CAD; domestic Shanghai sourcing and device-level protection are unqualified.

@@ -13,3 +13,9 @@ ota-review.md interprets results/ota-screen.json and ota-audit.json; selector-re
 
 ## Human check
 Open the local output with its source/reference and confirm revision, unresolved limits and actual part or circuit identity before using it for the build. For native CAD, inspect the render and pin/geometry checks; for runs, inspect assumptions and logs.
+
+VAL-045: tools/settled_bias.py owns powered steady-DC initialization and late-window measurements; tools/audit_settled_bias.py independently validates stationary behavior, KCL, refinement and counterexamples. settled-bias-review.md interprets results/settled-bias.json and settled-bias-audit.json. No cold-start qualification follows from this method.
+
+The protected control-only interface proposal is pedal-port-design.md. It separates selection, smoothing, polarity mapping and existing mute priority, and explicitly retains the passive-pedal tip/ring fault ambiguity and domestic sourcing hold.
+
+references/ owns retained manufacturer jack drawings and the visually checked geometry observation. Exact-part drawing holes remain candidate dimensions until finished-hole/lead tolerances and sourcing are qualified.

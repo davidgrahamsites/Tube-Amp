@@ -75,3 +75,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-042 | validation | schematic | documented | 2026-11-25 | [Expression wet gain-cell screen](records/VAL-042-expression-gain-cell.md) |
 | VAL-043 | validation | schematic | documented | 2026-11-25 | [Expression supply diagnostics and practical bias](records/VAL-043-expression-supply-bias.md) |
 | VAL-044 | validation | schematic | documented | 2026-11-25 | [Expression trim margin and controller isolation](records/VAL-044-expression-trim-isolation.md) |
+| VAL-045 | validation | schematic | documented | 2026-11-25 | [Expression controller stationary DC](records/VAL-045-expression-stationary-dc.md) |
