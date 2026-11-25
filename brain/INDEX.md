@@ -61,3 +61,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-030 | validation | cross-domain | documented | 2026-11-24 | [Socket holes, brownout evidence and partial tool measurement](records/VAL-030-sockets-brownout-tool-measurement.md) |
 | VAL-031 | validation | pcb | documented | 2026-11-24 | [U12 rounded fork and complete copper inventory](records/VAL-031-u12-corner-and-copper-coverage.md) |
 | VAL-032 | validation | pcb | documented | 2026-11-24 | [Reverb branch repair and reset-divider stability](records/VAL-032-reverb-branches-divider-stability.md) |
+| VAL-033 | validation | schematic | documented | 2026-11-24 | [Supply cold-load correction and current-path evidence](records/VAL-033-supply-cold-loads.md) |

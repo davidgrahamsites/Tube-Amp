@@ -1,0 +1,24 @@
+{
+  "status": "Evidence checks pass; supply and copper remain unqualified",
+  "cases": 72,
+  "refinements": 4,
+  "negative_controls_rejected": [
+    "room_temperature_resistance_reintroduced",
+    "preload_omitted",
+    "missing_case",
+    "incomplete_run",
+    "corrupted_deck",
+    "rectifier_pulse_replaced_with_load_average",
+    "invalid_shared_sink",
+    "double_counted_valve_package"
+  ],
+  "screen_sha256": "0f38d8c65b5fe1cef055fbafbdf42525bb6b617eb602f15f2e5fde14f131058d",
+  "comparison_sha256": "d3287e4fbcce544574cd4fee8f56a7c9b728018da3df1f9f1c310e7922663d63",
+  "factory_sha256": {
+    "calculate_loads.py": "336bd43e66231b477f150c617da2ee6349b8727ab1742b6111905dfbc055ab1e",
+    "screen_cold_loads.py": "06b9740c8461a63283d5e76a6b81f89f9baa2a793a4814a9c5329aca209e3ccd",
+    "check_loads.py": "95f18d57af6537775d5f3358dd5a3231d8c55ad40c5f6796b63500cb63855349",
+    "screen_envelope.py": "768a86087aaa8b75f6aaadfdc52f3b6933337e6817308cdf22c050e13f9a5ef4",
+    "check_preload.py": "120f0c2fa59cee746bb8179bd8161c842374cb39003c6f1b8aaa114824755621"
+  }
+}

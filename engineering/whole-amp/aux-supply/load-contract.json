@@ -1,0 +1,27 @@
+{
+  "revision": "supply-loads-1",
+  "owner": "Auxiliary supply qualification",
+  "purpose": "Bind the raw auxiliary model to the existing cold-coil screen and inventory nominal heater loads; not a complete current or copper qualification.",
+  "control_contract": "../control-switching/contract.json",
+  "source_circuit": "../reverb-600/circuit.json",
+  "heater_nominal_V": 6.3,
+  "heater_packages": {
+    "ECC83S": {"references": ["V1", "V2", "V3", "V4"], "current_per_package_A": 0.3, "unit": 3, "pins": {"4": "HEAT_A", "5": "HEAT_A", "9": "HEAT_B"}},
+    "EL34": {"references": ["V5", "V6"], "current_per_package_A": 1.5, "unit": 2, "pins": {"2": "HEAT_A", "7": "HEAT_B"}}
+  },
+  "pilot_allowance_A": 0.15,
+  "relay_references": {"K1": "COIL_CH", "K2": "COIL_CH", "K3": "COIL_REV"},
+  "sources": [
+    {"url": "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf", "scope": "Nominal 6.3V heater current 300mA per ECC83S package"},
+    {"url": "https://www.jj-electronic.com/images/stories/product/power_tubes/pdf/el34_e34l.pdf", "scope": "Nominal 6.3V heater current 1.5A per EL34 package"},
+    {"url": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v2.pdf", "scope": "H1 DC12 coil 960ohm +/-10% at23C. Temperature correction is the existing control-contract engineering screen."}
+  ],
+  "unqualified": [
+    "Heater cold-start surge, winding regulation, tolerances and selected tube supplier",
+    "Pilot exact component and current",
+    "Logic dynamic current and audio signal or fault current",
+    "Regulator short-circuit limit, protection clearing time and trace fault withstand",
+    "Copper thickness, board ambient, temperature rise, necks, vias and connector contact derating",
+    "Exact transformer, heatsink, socket implementation and China procurement/delivery"
+  ]
+}

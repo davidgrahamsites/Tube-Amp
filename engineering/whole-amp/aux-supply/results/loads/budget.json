@@ -1,0 +1,62 @@
+{
+  "relay": {
+    "cold_screen_resistance_ohm": 701.01504,
+    "one_coil_A": 0.017973936764609216,
+    "room_temperature_one_coil_A": 0.014583333333333334,
+    "increase_over_room_fraction": 0.2324985210017747,
+    "groups_A": {
+      "COIL_CH": 0.03594787352921843,
+      "COIL_REV": 0.017973936764609216
+    },
+    "all_coils_A": 0.05392181029382764,
+    "voltage_bound_V": 12.6,
+    "temperature_screen_C": -25
+  },
+  "heater": {
+    "packages": [
+      {
+        "reference": "V1",
+        "nominal_A": 0.3
+      },
+      {
+        "reference": "V2",
+        "nominal_A": 0.3
+      },
+      {
+        "reference": "V3",
+        "nominal_A": 0.3
+      },
+      {
+        "reference": "V4",
+        "nominal_A": 0.3
+      },
+      {
+        "reference": "V5",
+        "nominal_A": 1.5
+      },
+      {
+        "reference": "V6",
+        "nominal_A": 1.5
+      }
+    ],
+    "tube_nominal_total_A": 4.2,
+    "balance_pair_nominal_A": 0.0315,
+    "pilot_allowance_A": 0.15,
+    "nominal_plus_pilot_allowance_A": 4.381500000000001
+  },
+  "complete_current_budget": false,
+  "copper_qualified": false,
+  "limitations": [
+    "Heater cold-start surge, winding regulation, tolerances and selected tube supplier",
+    "Pilot exact component and current",
+    "Logic dynamic current and audio signal or fault current",
+    "Regulator short-circuit limit, protection clearing time and trace fault withstand",
+    "Copper thickness, board ambient, temperature rise, necks, vias and connector contact derating",
+    "Exact transformer, heatsink, socket implementation and China procurement/delivery"
+  ],
+  "input_sha256": {
+    "aux-supply/load-contract.json": "7253eac0406a9588e921f6e369f9587e3d696e6df10950d93b550560cc49a32b",
+    "control-switching/contract.json": "67b5316dc035eee7354e7febcabff62919fd0fdf29d50e16972db30cd381eea8",
+    "reverb-600/circuit.json": "716488a59e1699fbe48ecb58312fe400da6f06a3180f42444ebbd34e9b981c40"
+  }
+}
