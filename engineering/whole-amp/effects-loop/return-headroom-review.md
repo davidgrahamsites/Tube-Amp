@@ -42,3 +42,5 @@ Next engineering step: establish the required clean and overload RETURN envelope
 Reproduce: `python3 tools/return_driver.py --fetch`, then `python3 tools/return_driver.py` from this folder. Individual cases are process-bounded at 45 seconds. Diagnostic example: `python3 tools/return_diagnostics.py ramp`. `tools/audit.py` checks evidence consistency, not hardware acceptance.
 
 Human check: inspect the failed 20 kHz cases and compare delivered port voltage with the intended amp envelope. Do not infer build readiness from the aggregate audit.
+
+November25 continuation: [supply/bypass diagnosis](return-supply-review.md) reproduces the original failures and records a different, unadopted50Ω rail-isolation fixture that retains100nF bypass. Ten regression cases and two refinements complete. The original evidence above remains valid for its unchanged topology; integrated RETURN, wet-mix, thermal/socket and exact China-sourcing qualification remain open.

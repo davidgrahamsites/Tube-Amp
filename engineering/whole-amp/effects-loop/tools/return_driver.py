@@ -98,7 +98,10 @@ def case_key(case):
     return 'return-real-' + '-'.join(str(v) for v in case)
 
 
-def measure(case):
+def measure(case, step_divisor=1, extra_nodes=()):
+    """Measure the fixture; optional refinement/probes do not alter its circuit."""
+    assert step_divisor >= 1
+    assert all(re.fullmatch(r'[A-Za-z][A-Za-z0-9_]*', n) for n in extra_nodes)
     hz, peak, rail, boot = case
     key = case_key(case)
     text = deck(hz, peak, rail, boot)
@@ -110,18 +113,19 @@ def measure(case):
     op = {n:float(v[-1]) for n,v in op.items()}
     assert abs(op['BUF']) < 1 and abs(op['PORT']) < 1, ('Invalid zero-input output', op)
     assert abs(op['VUP']-rail/2) < 1 and abs(op['VDN']+rail/2) < 1, ('Invalid supply midpoint', op)
-    sp.cmd('save v(buf) v(port) v(vup) v(vdn) v(inp) vp#branch vn#branch')
-    end = max(.03, 30/hz); step = min(2e-6, 1/(hz*192))
+    sp.cmd('save v(buf) v(port) v(vup) v(vdn) v(inp) vp#branch vn#branch' + ''.join(' v('+n.lower()+')' for n in extra_nodes))
+    end = max(.03, 30/hz); step = min(2e-6, 1/(hz*192))/step_divisor
     sp.cmd(f'tran {step} {end} {end-20/hz} {step}')
     t = np.array(sp.vector('time'))
     assert len(t) and t[-1] >= end*(1-1e-8), sp.logs[-10:]
-    wave = {n:np.array(sp.vector('v('+n+')')) for n in ['BUF','PORT','VUP','VDN','INP']}
+    wave = {n:np.array(sp.vector('v('+n.lower()+')')) for n in ['BUF','PORT','VUP','VDN','INP',*extra_nodes]}
     metrics = {n:stats(t,y,hz,end) for n,y in wave.items()}
     settling = abs(stats(t,wave['PORT'],hz,end-10/hz)['fundamental_Vpk']/metrics['PORT']['fundamental_Vpk']-1)
     # Input resistor and 1k output resistor losses are deliberate in the fixture.
     expected = peak * 1e6/1001000 * 340/341
     return dict(hz=hz,requested_output_peak_V=peak,supply_magnitude_V=rail,bootstrap=boot,
-        end_s=float(t[-1]),elapsed_s=time.monotonic()-start,op=op,signals=metrics,
+        end_s=float(t[-1]),maximum_step_s=step,step_divisor=step_divisor,
+        elapsed_s=time.monotonic()-start,op=op,signals=metrics,
         settled_relative_fundamental=settling,
         gain_error_percent=100*(metrics['PORT']['fundamental_Vpk']/expected-1),
         maximum_main_supply_span_V=float(np.max(wave['VUP']-wave['VDN'])),

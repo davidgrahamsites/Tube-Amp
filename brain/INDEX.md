@@ -68,3 +68,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-037 | validation | cross-domain | documented | 2026-11-24 | [Panel cable capacitance affects placement](records/VAL-037-panel-cable-loading.md) |
 | VAL-038 | validation | pcb | documented | 2026-11-24 | [Four remaining branch candidates repaired](records/VAL-038-remaining-branch-repairs.md) |
 | VAL-039 | validation | components | documented | 2026-11-24 | [P057 sourcing fallback and full-pitch insertion check](records/VAL-039-power-film-sourcing-and-tolerance.md) |
+| VAL-040 | validation | schematic | documented | 2026-11-25 | [RETURN supply/bypass diagnosis](records/VAL-040-return-supply-diagnostics.md) |

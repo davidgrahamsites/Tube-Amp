@@ -58,3 +58,7 @@ Actual drill envelope remains deferred until November 25. Cabinet depth datum, a
 ## November24 branch and divider checkpoint
 
 [VAL-032](../../brain/records/VAL-032-reverb-branches-divider-stability.md) adopts seven additional rounded Reverb forks with zero native DRC/open connections and unchanged widths/drills. Four other-board branch candidates remain. A separate divider comparison improves shorter endurance margins but retains failed extended screens and incomplete exact Chinese stock evidence. Supervisor/carrier, current-path qualification and populated three-board fit remain open; complete drill access is still pending after the46mm chuck measurement.
+
+## November 25 RETURN supply diagnosis
+
+[VAL-040](../../brain/records/VAL-040-return-supply-diagnostics.md) adds eight causal cases and twelve follow-up cases. A 50 Ω rail-isolation candidate retains 100 nF bypass and completes both 20 kHz conditions with numerical refinement checks. It remains outside native CAD/BOM; no integrated wet-mix, actual supply, socket, thermal or Shanghai-purchasing qualification. Continue T04/T05 envelope and costed discrete recovery comparison; all six scopes remain open.

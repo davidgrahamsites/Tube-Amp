@@ -1,0 +1,92 @@
+{
+  "case": [
+    82.4,
+    135.1,
+    173.4,
+    true
+  ],
+  "step_divisor": 1,
+  "deck_sha256": "56ae78fed2c262eeb71410ad9a8abd589e072c8572ce71bea6204ce5dc81f9da",
+  "hz": 82.4,
+  "requested_output_peak_V": 135.1,
+  "supply_magnitude_V": 173.4,
+  "bootstrap": true,
+  "end_s": 0.36407766990291257,
+  "maximum_step_s": 2e-06,
+  "elapsed_s": 31.175280667000003,
+  "op": {
+    "BUF": 0.0197856308506652,
+    "PORT": 0.019727608472804015,
+    "VUP": 86.5500707414437,
+    "VDN": -86.52990614789081
+  },
+  "signals": {
+    "BUF": {
+      "min_V": -134.94247549531002,
+      "max_V": 134.98203553472453,
+      "mean_V": 0.019781665279313642,
+      "fundamental_Vpk": 134.96233844563614,
+      "THD_2_to_10_percent": 4.124445987642846e-05
+    },
+    "PORT": {
+      "min_V": -134.54674160918438,
+      "max_V": 134.58618563080077,
+      "mean_V": 0.019723658743899364,
+      "fundamental_Vpk": 134.5665542826283,
+      "THD_2_to_10_percent": 4.124505171317013e-05
+    },
+    "VUP": {
+      "min_V": 19.06896872546762,
+      "max_V": 153.93716045750475,
+      "mean_V": 86.52014808865366,
+      "fundamental_Vpk": 67.43414374323282,
+      "THD_2_to_10_percent": 0.030327546386029497
+    },
+    "VDN": {
+      "min_V": -153.91701543035452,
+      "max_V": -19.048795792986674,
+      "mean_V": -86.49998744990981,
+      "fundamental_Vpk": 67.4341614613026,
+      "THD_2_to_10_percent": 0.03032493544860739
+    },
+    "INP": {
+      "min_V": -1.3496510241335264,
+      "max_V": 1.3496509533840244,
+      "mean_V": -3.077431213749371e-08,
+      "fundamental_Vpk": 1.3496509681962747,
+      "THD_2_to_10_percent": 4.113257118972361e-09
+    },
+    "VUP_DRV": {
+      "min_V": 19.22896813097809,
+      "max_V": 154.191192529333,
+      "mean_V": 86.71008164581573,
+      "fundamental_Vpk": 67.48116177110481,
+      "THD_2_to_10_percent": 4.2449178507603826e-05
+    },
+    "VDN_DRV": {
+      "min_V": -154.1710199402516,
+      "max_V": -19.2087951982808,
+      "mean_V": -86.68990722521752,
+      "fundamental_Vpk": 67.48116194284519,
+      "THD_2_to_10_percent": 4.0058274183964285e-05
+    }
+  },
+  "settled_relative_fundamental": 1.1266987343105939e-10,
+  "gain_error_percent": -0.0019980724809021133,
+  "maximum_main_supply_span_V": 173.07965031626733,
+  "minimum_upper_output_margin_V": 18.955085528864004,
+  "minimum_lower_output_margin_V": 18.974500117345144,
+  "status": "completed",
+  "isolation_resistors": {
+    "vup": {
+      "maximum_absolute_drop_V": 0.25403207838706976,
+      "maximum_absolute_current_A": 0.005080641567741395,
+      "average_power_W": 0.0007477926313307466
+    },
+    "vdn": {
+      "maximum_absolute_drop_V": 0.2540045160492923,
+      "maximum_absolute_current_A": 0.005080090320985846,
+      "average_power_W": 0.0007476714313110062
+    }
+  }
+}

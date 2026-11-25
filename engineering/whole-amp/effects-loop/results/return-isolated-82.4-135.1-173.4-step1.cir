@@ -1,0 +1,236 @@
+RETURN headroom experiment, not selected hardware
+.include "/tmp/renegade-opa462-model/OPA462.LIB"
+.options method=gear maxord=2 reltol=.001 abstol=1n vntol=10u
+.nodeset v(BUF)=0 v(PORT)=0 v(VUP)=86.7 v(VDN)=-86.7
+.nodeset v(xup.N1356061)=86.7
+.nodeset v(xup.N1356115)=86.7
+.nodeset v(xup.N1356333)=86.7
+.nodeset v(xup.N1356345)=86.7
+.nodeset v(xup.N1356409)=86.7
+.nodeset v(xup.N1356429)=86.7
+.nodeset v(xup.N158495)=86.7
+.nodeset v(xup.N161737)=86.7
+.nodeset v(xup.N161937)=86.7
+.nodeset v(xup.N2419074)=86.7
+.nodeset v(xup.N24207)=86.7
+.nodeset v(xup.N2425287)=86.7
+.nodeset v(xup.N2425309)=130.05
+.nodeset v(xup.N2425325)=43.35
+.nodeset v(xup.N24458)=86.7
+.nodeset v(xup.N24659)=86.7
+.nodeset v(xup.N25397)=86.7
+.nodeset v(xup.N25415)=86.7
+.nodeset v(xup.N25921)=86.7
+.nodeset v(xup.N25929)=86.7
+.nodeset v(xup.N27785)=86.7
+.nodeset v(xup.N27793)=86.7
+.nodeset v(xup.N28438)=86.7
+.nodeset v(xup.N28678)=86.7
+.nodeset v(xup.N31303)=86.7
+.nodeset v(xup.N31389)=86.7
+.nodeset v(xup.N31737)=86.7
+.nodeset v(xup.N32236)=86.7
+.nodeset v(xup.N32347)=86.7
+.nodeset v(xup.N32510)=86.7
+.nodeset v(xup.N34005)=86.7
+.nodeset v(xup.N34013)=86.7
+.nodeset v(xup.N36262)=86.7
+.nodeset v(xup.N37029)=86.7
+.nodeset v(xup.N37037)=86.7
+.nodeset v(xup.N45999)=86.7
+.nodeset v(xup.N46041)=86.7
+.nodeset v(xup.N55560)=86.7
+.nodeset v(xup.N56849)=86.7
+.nodeset v(xup.N57321)=86.7
+.nodeset v(xup.N57325)=86.7
+.nodeset v(xup.N59739)=86.7
+.nodeset v(xup.N59743)=86.7
+.nodeset v(xup.N59747)=86.7
+.nodeset v(xup.N59865)=86.7
+.nodeset v(xup.N59881)=86.7
+.nodeset v(xup.N59905)=86.7
+.nodeset v(xup.N65567)=86.7
+.nodeset v(xup.N65575)=86.7
+.nodeset v(xup.N65579)=86.7
+.nodeset v(xup.N65697)=86.7
+.nodeset v(xup.N65713)=86.7
+.nodeset v(xup.N65737)=86.7
+.nodeset v(xup.N68774)=86.7
+.nodeset v(xup.N72064)=86.7
+.nodeset v(xup.N72073)=86.7
+.nodeset v(xup.N72391)=86.7
+.nodeset v(xup.N72398)=86.7
+.nodeset v(xup.N81574)=86.7
+.nodeset v(xup.N81664)=86.7
+.nodeset v(xup.N81756)=86.7
+.nodeset v(xup.MID)=86.7
+.nodeset v(xup.CLAMP)=86.7
+.nodeset v(xup.CL_CLAMP)=86.7
+.nodeset v(xup.CLAW_CLAMP)=86.7
+.nodeset v(xup.VCLP)=86.7
+.nodeset v(xup.VOUT_S)=86.7
+.nodeset v(xup.VSENSE)=86.7
+.nodeset v(xup.VCC_B)=173.4
+.nodeset v(xup.VEE_B)=0
+.nodeset v(xdn.N1356061)=-86.7
+.nodeset v(xdn.N1356115)=-86.7
+.nodeset v(xdn.N1356333)=-86.7
+.nodeset v(xdn.N1356345)=-86.7
+.nodeset v(xdn.N1356409)=-86.7
+.nodeset v(xdn.N1356429)=-86.7
+.nodeset v(xdn.N158495)=-86.7
+.nodeset v(xdn.N161737)=-86.7
+.nodeset v(xdn.N161937)=-86.7
+.nodeset v(xdn.N2419074)=-86.7
+.nodeset v(xdn.N24207)=-86.7
+.nodeset v(xdn.N2425287)=-86.7
+.nodeset v(xdn.N2425309)=-43.35
+.nodeset v(xdn.N2425325)=-130.05
+.nodeset v(xdn.N24458)=-86.7
+.nodeset v(xdn.N24659)=-86.7
+.nodeset v(xdn.N25397)=-86.7
+.nodeset v(xdn.N25415)=-86.7
+.nodeset v(xdn.N25921)=-86.7
+.nodeset v(xdn.N25929)=-86.7
+.nodeset v(xdn.N27785)=-86.7
+.nodeset v(xdn.N27793)=-86.7
+.nodeset v(xdn.N28438)=-86.7
+.nodeset v(xdn.N28678)=-86.7
+.nodeset v(xdn.N31303)=-86.7
+.nodeset v(xdn.N31389)=-86.7
+.nodeset v(xdn.N31737)=-86.7
+.nodeset v(xdn.N32236)=-86.7
+.nodeset v(xdn.N32347)=-86.7
+.nodeset v(xdn.N32510)=-86.7
+.nodeset v(xdn.N34005)=-86.7
+.nodeset v(xdn.N34013)=-86.7
+.nodeset v(xdn.N36262)=-86.7
+.nodeset v(xdn.N37029)=-86.7
+.nodeset v(xdn.N37037)=-86.7
+.nodeset v(xdn.N45999)=-86.7
+.nodeset v(xdn.N46041)=-86.7
+.nodeset v(xdn.N55560)=-86.7
+.nodeset v(xdn.N56849)=-86.7
+.nodeset v(xdn.N57321)=-86.7
+.nodeset v(xdn.N57325)=-86.7
+.nodeset v(xdn.N59739)=-86.7
+.nodeset v(xdn.N59743)=-86.7
+.nodeset v(xdn.N59747)=-86.7
+.nodeset v(xdn.N59865)=-86.7
+.nodeset v(xdn.N59881)=-86.7
+.nodeset v(xdn.N59905)=-86.7
+.nodeset v(xdn.N65567)=-86.7
+.nodeset v(xdn.N65575)=-86.7
+.nodeset v(xdn.N65579)=-86.7
+.nodeset v(xdn.N65697)=-86.7
+.nodeset v(xdn.N65713)=-86.7
+.nodeset v(xdn.N65737)=-86.7
+.nodeset v(xdn.N68774)=-86.7
+.nodeset v(xdn.N72064)=-86.7
+.nodeset v(xdn.N72073)=-86.7
+.nodeset v(xdn.N72391)=-86.7
+.nodeset v(xdn.N72398)=-86.7
+.nodeset v(xdn.N81574)=-86.7
+.nodeset v(xdn.N81664)=-86.7
+.nodeset v(xdn.N81756)=-86.7
+.nodeset v(xdn.MID)=-86.7
+.nodeset v(xdn.CLAMP)=-86.7
+.nodeset v(xdn.CL_CLAMP)=-86.7
+.nodeset v(xdn.CLAW_CLAMP)=-86.7
+.nodeset v(xdn.VCLP)=-86.7
+.nodeset v(xdn.VOUT_S)=-86.7
+.nodeset v(xdn.VSENSE)=-86.7
+.nodeset v(xdn.VCC_B)=0
+.nodeset v(xdn.VEE_B)=-173.4
+.nodeset v(xmain.N1356061)=0.0
+.nodeset v(xmain.N1356115)=0.0
+.nodeset v(xmain.N1356333)=0.0
+.nodeset v(xmain.N1356345)=0.0
+.nodeset v(xmain.N1356409)=0.0
+.nodeset v(xmain.N1356429)=0.0
+.nodeset v(xmain.N158495)=0.0
+.nodeset v(xmain.N161737)=0.0
+.nodeset v(xmain.N161937)=0.0
+.nodeset v(xmain.N2419074)=0.0
+.nodeset v(xmain.N24207)=0.0
+.nodeset v(xmain.N2425287)=0.0
+.nodeset v(xmain.N2425309)=43.35000000000001
+.nodeset v(xmain.N2425325)=-43.35000000000001
+.nodeset v(xmain.N24458)=0.0
+.nodeset v(xmain.N24659)=0.0
+.nodeset v(xmain.N25397)=0.0
+.nodeset v(xmain.N25415)=0.0
+.nodeset v(xmain.N25921)=0.0
+.nodeset v(xmain.N25929)=0.0
+.nodeset v(xmain.N27785)=0.0
+.nodeset v(xmain.N27793)=0.0
+.nodeset v(xmain.N28438)=0.0
+.nodeset v(xmain.N28678)=0.0
+.nodeset v(xmain.N31303)=0.0
+.nodeset v(xmain.N31389)=0.0
+.nodeset v(xmain.N31737)=0.0
+.nodeset v(xmain.N32236)=0.0
+.nodeset v(xmain.N32347)=0.0
+.nodeset v(xmain.N32510)=0.0
+.nodeset v(xmain.N34005)=0.0
+.nodeset v(xmain.N34013)=0.0
+.nodeset v(xmain.N36262)=0.0
+.nodeset v(xmain.N37029)=0.0
+.nodeset v(xmain.N37037)=0.0
+.nodeset v(xmain.N45999)=0.0
+.nodeset v(xmain.N46041)=0.0
+.nodeset v(xmain.N55560)=0.0
+.nodeset v(xmain.N56849)=0.0
+.nodeset v(xmain.N57321)=0.0
+.nodeset v(xmain.N57325)=0.0
+.nodeset v(xmain.N59739)=0.0
+.nodeset v(xmain.N59743)=0.0
+.nodeset v(xmain.N59747)=0.0
+.nodeset v(xmain.N59865)=0.0
+.nodeset v(xmain.N59881)=0.0
+.nodeset v(xmain.N59905)=0.0
+.nodeset v(xmain.N65567)=0.0
+.nodeset v(xmain.N65575)=0.0
+.nodeset v(xmain.N65579)=0.0
+.nodeset v(xmain.N65697)=0.0
+.nodeset v(xmain.N65713)=0.0
+.nodeset v(xmain.N65737)=0.0
+.nodeset v(xmain.N68774)=0.0
+.nodeset v(xmain.N72064)=0.0
+.nodeset v(xmain.N72073)=0.0
+.nodeset v(xmain.N72391)=0.0
+.nodeset v(xmain.N72398)=0.0
+.nodeset v(xmain.N81574)=0.0
+.nodeset v(xmain.N81664)=0.0
+.nodeset v(xmain.N81756)=0.0
+.nodeset v(xmain.MID)=0.0
+.nodeset v(xmain.CLAMP)=0.0
+.nodeset v(xmain.CL_CLAMP)=0.0
+.nodeset v(xmain.CLAW_CLAMP)=0.0
+.nodeset v(xmain.VCLP)=0.0
+.nodeset v(xmain.VOUT_S)=0.0
+.nodeset v(xmain.VSENSE)=0.0
+.nodeset v(xmain.VCC_B)=86.7
+.nodeset v(xmain.VEE_B)=-86.7
+VP VP 0 173.4
+VN VN 0 -173.4
+VS SRC 0 DC 0 AC 1 SIN(0 1.351 82.4)
+RI SRC INP 1k
+RIN INP 0 1meg
+RF BUF INV 990k
+RG INV 0 10k
+XMAIN INP INV VUP VDN BUF OPA462
+RUP VP UP 100k
+RUF UP BUF 100k
+RDN VN DN 100k
+RDF DN BUF 100k
+XUP UP VUP_DRV VP 0 VUP_DRV OPA462
+RUPISO VUP_DRV VUP 50
+XDN DN VDN_DRV 0 VN VDN_DRV OPA462
+RDNISO VDN_DRV VDN 50
+CB VUP VDN 100n
+
+RO BUF PORT 1k
+RL PORT 0 340k
+CL PORT 0 100p
+.end
