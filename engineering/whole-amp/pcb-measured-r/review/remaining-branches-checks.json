@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "baseline_commit": "9ce4c37faf98c04f0f353a7e727e583024c9a91e",
+  "boards": {
+    "Power": {
+      "changed_segments": 3,
+      "added_arcs": 2,
+      "preserved_other_native_atoms": true,
+      "widths_preserved": true,
+      "drills_and_slots_preserved": true,
+      "drc_violations": 12,
+      "unconnected_items": 39,
+      "no_new_drc_findings": true,
+      "negative_controls_rejected": [
+        "narrowed arc",
+        "wrong net",
+        "non-tangent arc",
+        "missing branch"
+      ],
+      "sha256": "3ff2b701ece8ab2c7d7aca8da45cfdc4fc36fce1f9fda4b063c876e52c176788"
+    },
+    "Control": {
+      "changed_segments": 9,
+      "added_arcs": 6,
+      "preserved_other_native_atoms": true,
+      "widths_preserved": true,
+      "drills_and_slots_preserved": true,
+      "drc_violations": 13,
+      "unconnected_items": 79,
+      "no_new_drc_findings": true,
+      "negative_controls_rejected": [
+        "narrowed arc",
+        "wrong net",
+        "non-tangent arc",
+        "missing branch"
+      ],
+      "sha256": "ca65723ca8be01a4fc8fce46dccd3082610d0d28229695e0bea6b3564ef1e642"
+    }
+  },
+  "contract_sha256": "8117b754716bacf86fffbe14c5d9a9fe429259f3dd672691ed6d3310d65f70de",
+  "verifier_sha256": "a09a9e4d3b8467aab059d93c634ad51a38bd1aa9ad14fc74dd69f7506c14cf23",
+  "current_capacity_qualified": false,
+  "all_corner_review_complete": false,
+  "fabrication_ready": false
+}

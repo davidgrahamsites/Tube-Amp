@@ -1370,7 +1370,7 @@
       "all_corner_review_complete": false
     },
     "Power": {
-      "sha256": "d6032f0975b39f1f5dfc6ff961f04dc38083b8d2f2453a403a1d837c9841f620",
+      "sha256": "3ff2b701ece8ab2c7d7aca8da45cfdc4fc36fce1f9fda4b063c876e52c176788",
       "nets": {
         "BIAS_AC": {
           "segments": 2,
@@ -1599,8 +1599,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "B_RECT": {
-          "segments": 4,
-          "length_mm": 42.844,
+          "segments": 6,
+          "length_mm": 43.014,
           "widths_mm": [
             0.6
           ],
@@ -1991,31 +1991,16 @@
           ],
           "right_angle_pair_present": false,
           "qualified": false
-        },
-        {
-          "net": "B_RECT",
-          "layer": "B.Cu",
-          "at_mm": [
-            36.6872,
-            140.0
-          ],
-          "segments": 3,
-          "in_pad": false,
-          "at_via": false,
-          "pairwise_turns_degrees": [
-            90.0,
-            0.0,
-            90.0
-          ],
-          "right_angle_pair_present": true,
-          "qualified": false
         }
       ],
-      "arc_items_not_bend_screened": [],
+      "arc_items_not_bend_screened": [
+        "17538ee8-2553-5436-a1cb-d45c90100fa5",
+        "c3e4fbba-c8db-506c-bf07-141aea3932e3"
+      ],
       "all_corner_review_complete": false
     },
     "Control": {
-      "sha256": "496e221113ba00da9311cbe71cb4cacf1b09a1ce07f2bd1519b02530b384fca5",
+      "sha256": "ca65723ca8be01a4fc8fce46dccd3082610d0d28229695e0bea6b3564ef1e642",
       "nets": {
         "+12V": {
           "segments": 8,
@@ -2565,8 +2550,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "CTRL_RAW": {
-          "segments": 20,
-          "length_mm": 228.892,
+          "segments": 22,
+          "length_mm": 229.079,
           "widths_mm": [
             0.4
           ],
@@ -2845,8 +2830,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "NEG_RAW": {
-          "segments": 17,
-          "length_mm": 164.062,
+          "segments": 19,
+          "length_mm": 164.379,
           "widths_mm": [
             0.3,
             0.4
@@ -2989,8 +2974,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "RESET_RAW_N": {
-          "segments": 9,
-          "length_mm": 61.759,
+          "segments": 11,
+          "length_mm": 62.393,
           "widths_mm": [
             0.3
           ],
@@ -3173,24 +3158,6 @@
         },
         {
           "net": "NEG_RAW",
-          "layer": "F.Cu",
-          "at_mm": [
-            165.014,
-            69.5767
-          ],
-          "segments": 3,
-          "in_pad": false,
-          "at_via": false,
-          "pairwise_turns_degrees": [
-            45.0,
-            90.0,
-            45.0
-          ],
-          "right_angle_pair_present": true,
-          "qualified": false
-        },
-        {
-          "net": "NEG_RAW",
           "layer": "B.Cu",
           "at_mm": [
             114.2038,
@@ -3251,24 +3218,6 @@
             45.0
           ],
           "right_angle_pair_present": false,
-          "qualified": false
-        },
-        {
-          "net": "CTRL_RAW",
-          "layer": "F.Cu",
-          "at_mm": [
-            175.6198,
-            68.125
-          ],
-          "segments": 3,
-          "in_pad": false,
-          "at_via": false,
-          "pairwise_turns_degrees": [
-            135.0,
-            45.0,
-            90.0
-          ],
-          "right_angle_pair_present": true,
           "qualified": false
         },
         {
@@ -3446,27 +3395,16 @@
           ],
           "right_angle_pair_present": true,
           "qualified": false
-        },
-        {
-          "net": "RESET_RAW_N",
-          "layer": "B.Cu",
-          "at_mm": [
-            56.915,
-            37.3
-          ],
-          "segments": 3,
-          "in_pad": false,
-          "at_via": false,
-          "pairwise_turns_degrees": [
-            90.0,
-            45.0,
-            45.0
-          ],
-          "right_angle_pair_present": true,
-          "qualified": false
         }
       ],
-      "arc_items_not_bend_screened": [],
+      "arc_items_not_bend_screened": [
+        "e6fa35ff-6b4e-5828-820d-9304ab7384da",
+        "0fb9ef13-be0f-5792-9d5e-86ddf49d880f",
+        "10c54b7c-6067-5b9a-878b-4a8e32e35698",
+        "1737c260-db78-56b3-a91b-6349db922298",
+        "31f4d5d1-512e-5626-84c3-14bb0450860a",
+        "2f75458f-b207-557f-8804-2fa58ea9f74e"
+      ],
       "all_corner_review_complete": false
     },
     "Reverb": {

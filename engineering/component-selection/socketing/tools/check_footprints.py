@@ -60,6 +60,12 @@ def main():
             assert pad_map(a)==pad_map(b)
             followup=W/'pcb-measured-r/u12-routing-contract.json'
             routed_followup=False
+            if name=='Control':
+                sys.path.insert(0,str(W/'pcb-measured-r/tools'))
+                from check_remaining_branches import verify_current as verify_remaining
+                b=verify_remaining(name,b);bb=v.fps(b)
+                sources.extend([W/'pcb-measured-r/remaining-branches-contract.json',
+                    W/'pcb-measured-r/tools/check_remaining_branches.py'])
             if name=='Reverb' and followup.exists():
                 # Validate the entire later board against its exact routing
                 # baseline before projecting it back for the socket-only delta.
@@ -134,7 +140,7 @@ def main():
                 return out
             assert open_nets(drcs[0])==open_nets(drcs[1])
             report[name]=dict(changed_round_plated_holes=sum(expected_added.values()),other_drills_slots_and_nets_unchanged=True,
-                copper_delta='four C352 endpoint adjustments only' if name=='Control' else ('separate U12 and branch routing contracts verified exactly' if routed_followup else 'unchanged'),unconnected_counts_by_net=dict(open_nets(drcs[1])),
+                copper_delta='four C352 endpoint adjustments plus separately verified three-branch repair' if name=='Control' else ('separate U12 and branch routing contracts verified exactly' if routed_followup else 'unchanged'),unconnected_counts_by_net=dict(open_nets(drcs[1])),
                 drc_violations=len(drcs[1]['violations']),unconnected=len(drcs[1]['unconnected_items']),new_violations=0)
         assert total==52
         sch=W/'reverb-600/cad/Renegade_220V_Reverb.kicad_sch';xml=M/'results/socket-netlist.xml';erc=M/'results/socket-erc.json'
