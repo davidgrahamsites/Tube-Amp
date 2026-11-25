@@ -8,3 +8,5 @@ Human check: verify actual local capacitor placement, socket/contact fit, regula
 Current R215 change and acceptance limits: preload-review.md and preload-contract.json. Results/preload contains native before/after reports, exact-family package excerpt, guarded integration receipt and updated raw-load simulations. This supersedes the historical unadopted-preload proposal only.
 
 Current load/model seam: load-review.md, load-contract.json and results/loads. This supersedes the room-temperature relay load in the prior raw screens, retaining R215. calculate_loads.py binds the existing control cold-coil assumptions to actual relay and heater references; screen_cold_loads.py adds current-path RMS/peak evidence; check_loads.py audits the result. It does not qualify complete loads, trace sizes or purchased parts.
+
+Unadopted transformer options: transformer-review.md and transformer-candidates.json own the115/230V candidate comparison in120/220V operating modes. Results/transformer-candidates retains the current comparison. The review links a ready-to-review supplier inquiry; no message or order has been sent.

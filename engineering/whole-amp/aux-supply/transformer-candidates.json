@@ -1,0 +1,34 @@
+{
+  "owner": "Auxiliary supply qualification",
+  "task": "Compare actual 115/230V candidate ratios in the requested 120/220V modes before selecting transformer, reservoir or U4. No native adoption.",
+  "modes": [
+    {"selector_V": 120, "primary_rating_V": 115, "frequency_hz": 60},
+    {"selector_V": 220, "primary_rating_V": 230, "frequency_hz": 50}
+  ],
+  "line_fractions": [0.9, 1.0, 1.1],
+  "line_basis": "Engineering +/-10% screen around each requested nominal mains voltage, not a claimed local statutory supply tolerance or transformer operating approval.",
+  "reservoir_nominal_uF": [1000, 4700],
+  "reservoir_min_fraction": 0.8,
+  "candidates": [
+    {"mpn": "VPT30-830", "VA": 25, "half_secondary_loaded_V": 15, "series_current_A": 0.83, "regulation_typ_fraction": 0.12, "body_diameter_max_mm": 74, "body_height_max_mm": 34, "mounting_added_height_mm": 3, "mass_kg": 0.4, "datasheet": "https://catalog.triadmagnetics.com/Asset/VPT30-830.pdf"},
+    {"mpn": "VPT30-1670", "VA": 50, "half_secondary_loaded_V": 15, "series_current_A": 1.67, "regulation_typ_fraction": 0.12, "body_diameter_max_mm": 83, "body_height_max_mm": 36, "mounting_added_height_mm": 3, "mass_kg": 0.6, "datasheet": "https://catalog.triadmagnetics.com/Asset/VPT30-1670.pdf"}
+  ],
+  "replacement_U4": {
+    "mpn": "LM340T-12/NOPB",
+    "regulated_input_V": [14.5, 27],
+    "output_V": [11.4, 12.6],
+    "iq_screen_A": 0.01,
+    "iq_basis": "8.5mA over temperature plus1mA line and0.5mA load changes; conservative arithmetic screen within specified conditions.",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/lm340.pdf",
+    "china_catalog": "https://item.szlcsc.com/150727.html",
+    "supplier_code": "C139404",
+    "native_adopted": false
+  },
+  "limits": [
+    "Transformer regulation is typical, not bounded. Resistive equivalent derived from nominal loaded voltage/current; not measured DCR or an electromagnetic model.",
+    "Actual core flux, primary tolerance, mains switching and fault protection are not qualified by secondary scaling.",
+    "1000/4700uF comparison uses the minus20% capacitance corner only, with the old assumed ESR. Exact capacitor, plus-tolerance/inrush, ripple, lifetime and size need separate checks.",
+    "Existing logic/audio reserve profiles are not proven actual maximum loads.",
+    "No socket/footprint, heatsink, supplier stock or Shanghai delivery approval."
+  ]
+}
