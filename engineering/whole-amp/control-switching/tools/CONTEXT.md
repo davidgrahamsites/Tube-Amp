@@ -26,3 +26,5 @@ brownout_timing.py owns finite-slope secondary collapse and the optional raw-war
 fast_clamp.py owns the separate K3 TVS/raw-warning comparison and reuses the loaded-brownout factory through its existing parameter interface. check_fast_clamp.py independently integrates coil decay and runs quasistatic SPICE cross-checks. Neither edits old trial evidence or native CAD.
 
 control_interface.py owns the shared passive input/loading budget and live native capacitor-input inventory. check_control_interface.py independently integrates RC witnesses and guards evidence/native identities. These tools reuse the existing delay math without mutating its historical report. Outputs stay in results/control-interface.
+
+integrate_debounce_inputs.py owns the bounded source/schematic/Control PCB repair from its fixed baseline. check_debounce_inputs.py checks whole net partitions, unchanged component metadata/geometry and conditional two-pole timing. simulate_debounce_inputs.py independently checks four timing cases at two steps through the shared ngspice adapter. They expose results/debounce-input only; whole-logic qualification stays false.

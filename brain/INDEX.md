@@ -86,3 +86,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-053 | validation | schematic | documented | 2026-11-25 | [Brownout warning window and rejected reservoir trial](records/VAL-053-brownout-warning-window.md) |
 | VAL-054 | validation | schematic | documented | 2026-11-25 | [Faster K3 clamp and lower raw-warning candidate](records/VAL-054-fast-k3-clamp.md) |
 | VAL-055 | validation | schematic | documented | 2026-11-25 | [Shared reference and logic-input backfeed](records/VAL-055-control-input-backfeed.md) |
+| VAL-056 | validation | schematic | documented | 2026-11-25 | [Native debounce capacitor input-current limits](records/VAL-056-debounce-input-repair.md) |

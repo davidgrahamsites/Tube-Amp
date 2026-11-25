@@ -29,3 +29,5 @@ Brownout timing seam: brownout-timing-contract.json tests finite-slope loss agai
 Fast-clamp seam: fast-clamp-contract.json proposes a local drain-to-ground TVS and adjusted raw warning without changing native CAD. fast-clamp-review.md owns interpretation; results/fast-clamp retains bounded coil/brownout evidence, including the thin timing reserve.
 
 Shared input seam: control-interface-contract.json and control-interface-review.md combine reference loading, RAIL_OK division and delay-input current limiting. results/control-interface retains the rejected equal-10k trial and native C301/C311 direct-input findings; complete logic power sequencing is still open.
+
+Debounce native seam: debounce-input-review.md owns VAL-056; tools/integrate_debounce_inputs.py makes the guarded two-resistor delta. results/debounce-input proves exact native partition/preservation and passive timing. Earlier native-hash receipts remain historical; full power sequencing and capacitor footprint reconciliation remain open.

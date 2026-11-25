@@ -2073,7 +2073,7 @@
       "value": "SN74HC14N",
       "symbol": "74xx_74HC14",
       "pins": {
-        "1": "DB_CH",
+        "1": "DB_CH_INPUT",
         "2": "CLK_CH"
       },
       "source": "",
@@ -2209,7 +2209,7 @@
       "value": "SN74HC14N",
       "symbol": "74xx_74HC14",
       "pins": {
-        "3": "DB_REV",
+        "3": "DB_REV_INPUT",
         "4": "CLK_REV"
       },
       "source": "",
@@ -4683,6 +4683,42 @@
       "datasheet": "https://www.onsemi.com/pdf/datasheet/1n4001-d.pdf",
       "footprint": "Renegade_Selected:Onsemi_1N4007RLG_P10.16",
       "selected_mpn": "1N4007RLG"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "R304",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DB_CH",
+        "2": "DB_CH_INPUT"
+      },
+      "source": "VAL-056 / LCSC C95204",
+      "rating": "0.1W at70C,0.1%,25ppm/C",
+      "status": "engineering integrated; full power sequence pending",
+      "datasheet": "https://yageogroup.com/content/datasheet/asset/file/pyu-rt_1-to-0-01_rohs_l",
+      "footprint": "Renegade_Selected:Yageo_RT0603_IPC_Nominal",
+      "selected_mpn": "RT0603BRD0710KL"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "09_controller",
+      "reference": "R314",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "DB_REV",
+        "2": "DB_REV_INPUT"
+      },
+      "source": "VAL-056 / LCSC C95204",
+      "rating": "0.1W at70C,0.1%,25ppm/C",
+      "status": "engineering integrated; full power sequence pending",
+      "datasheet": "https://yageogroup.com/content/datasheet/asset/file/pyu-rt_1-to-0-01_rohs_l",
+      "footprint": "Renegade_Selected:Yageo_RT0603_IPC_Nominal",
+      "selected_mpn": "RT0603BRD0710KL"
     }
   ],
   "layout": {
