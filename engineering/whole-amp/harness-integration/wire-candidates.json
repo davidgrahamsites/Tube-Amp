@@ -1,0 +1,32 @@
+{
+  "revision": "HI-002",
+  "observed_on": "2026-11-24",
+  "selected_wire": null,
+  "scope": "Panel-pot harness candidates only; not heater, mains or power-output wire sizing",
+  "manufacturer": "Shanghai Shenyuan Special Cable",
+  "source": "https://www.shenyuan.com.cn/p_display_480.html",
+  "style": "UL1330",
+  "insulation": "FEP",
+  "published_voltage_v": 600,
+  "published_temperature_max_c": 200,
+  "outside_diameter_tolerance_mm": 0.1,
+  "candidates": [
+    {"id":"SY-1330-24-7x0.20", "awg":24, "strand_count":7, "strand_diameter_mm":0.20, "nominal_od_mm":1.62, "published_pack_m":610, "expected_dimension_screen":true},
+    {"id":"SY-1330-22-19x0.16", "awg":22, "strand_count":19, "strand_diameter_mm":0.16, "nominal_od_mm":1.82, "published_pack_m":610, "expected_dimension_screen":false},
+    {"id":"SY-1330-20-19x0.20", "awg":20, "strand_count":19, "strand_diameter_mm":0.20, "nominal_od_mm":1.97, "published_pack_m":305, "expected_dimension_screen":false},
+    {"id":"SY-1330-26-7x0.16", "awg":26, "strand_count":7, "strand_diameter_mm":0.16, "nominal_od_mm":1.50, "published_pack_m":610, "expected_dimension_screen":false}
+  ],
+  "identity_limit": "IDs above are local specification identifiers, not manufacturer order numbers. Exact color/order code, traceability and quantity quote remain unconfirmed.",
+  "delivery_limit": "The manufacturer's allowance for short segments of at least 10 m is not a 10 m minimum order or a retail offer. Shanghai location does not establish delivery of this exact small order.",
+  "precrimp_alternative": {
+    "part": "797580012",
+    "manufacturer_url": "https://www.molex.com/en-us/products/part-detail/797580012",
+    "wire_style": "UL1061",
+    "style_reference": "https://iq.ul.com/awm/stylepage.aspx?style=1061",
+    "style_reference_limit": "Historical UL page: 300 Vac / 80 C, not a current certification record for the purchased lead",
+    "china_listing": "https://www.rsonline.cn/web/p/crimped-wire/1260323",
+    "china_listing_observation": "Unavailable; RS says it no longer stocks this product. Alternate product displayed is not this part.",
+    "adopted": false
+  },
+  "holds": ["Exact small-quantity Chinese order route and Shanghai delivery", "Genuine contact and wire traceability", "Qualified sample crimps with insulation retention and conductor pull test", "Voltage/fault/temperature review per circuit", "Harness capacitance, length, shielding and routing", "Native connector integration and populated mechanical fit"]
+}

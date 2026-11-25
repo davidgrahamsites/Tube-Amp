@@ -7,8 +7,9 @@
     "pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "2c1af294f09cb902c330ef5c52ceaadd44d48af136f5e22d5fe30e3e216f3683",
     "reverb-600/circuit.json": "716488a59e1699fbe48ecb58312fe400da6f06a3180f42444ebbd34e9b981c40",
     "connector-contract.json": "9c69051bd74201fd3c0af68c999151a6af5a03de05d38336da7516f6fb3f3fdb",
+    "wire-candidates.json": "c1244cf2426669b5703c49b4fb5384646ccc38702bde0a40514eca97e8006aa6",
     "candidate_installed_footprint": "b0a5b9ae879fad87f0d4e2e9aaad172e945fb05057c1dd249af52bd3786e2b22",
-    "factory": "27dab7067dc10bea06a6466806f7ea8d538d6df067ea934efd724d558c04c55c"
+    "factory": "6edc5c5e7a48a2efc38df0459f99f5a6e7daf958ce6c849652ee6a813021c1dd"
   },
   "panel_pots": 10,
   "terminal_assignments": 30,
@@ -274,6 +275,60 @@
     "too_thick_22awg_2.30_to_2.50": false,
     "wrong_contact_26awg": false
   },
+  "published_wire_candidate_screens": [
+    {
+      "id": "SY-1330-24-7x0.20",
+      "awg": 24,
+      "od_range_mm": [
+        1.52,
+        1.72
+      ],
+      "contact_tool_dimension_screen": true,
+      "lower_limit_margin_mm": 0.1,
+      "upper_limit_margin_mm": 0.13,
+      "qualified_crimp": false,
+      "purchase_ready": false
+    },
+    {
+      "id": "SY-1330-22-19x0.16",
+      "awg": 22,
+      "od_range_mm": [
+        1.72,
+        1.92
+      ],
+      "contact_tool_dimension_screen": false,
+      "lower_limit_margin_mm": 0.3,
+      "upper_limit_margin_mm": -0.07,
+      "qualified_crimp": false,
+      "purchase_ready": false
+    },
+    {
+      "id": "SY-1330-20-19x0.20",
+      "awg": 20,
+      "od_range_mm": [
+        1.87,
+        2.07
+      ],
+      "contact_tool_dimension_screen": false,
+      "lower_limit_margin_mm": 0.45,
+      "upper_limit_margin_mm": -0.22,
+      "qualified_crimp": false,
+      "purchase_ready": false
+    },
+    {
+      "id": "SY-1330-26-7x0.16",
+      "awg": 26,
+      "od_range_mm": [
+        1.4,
+        1.6
+      ],
+      "contact_tool_dimension_screen": false,
+      "lower_limit_margin_mm": -0.02,
+      "upper_limit_margin_mm": 0.25,
+      "qualified_crimp": false,
+      "purchase_ready": false
+    }
+  ],
   "selected_wire": null,
   "native_connector_adoption": false,
   "purchase_ready": false,

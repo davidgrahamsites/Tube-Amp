@@ -4,6 +4,8 @@ Owner: electrical/PCB integration. One job: translate the ten external panel-pot
 
 Inputs: `../reverb-600/circuit.json`, current `../pcb-measured-r/boards/`, and manufacturer limits in `connector-contract.json`. The earlier proposal in `../../panel-harness/` supplies candidate identities, not verified wiring geometry. Public interface: `results/pot-connectors.csv` and `results/checks.json`.
 
+`wire-candidates.json` owns dated supplier observations and published wire dimensions. The factory derives full-tolerance contact/tool compatibility from those inputs. A compatible diameter is not wire selection, crimp qualification or a stock/delivery confirmation.
+
 Process: run `tools/check_panel_interfaces.py` with KiCad's Python. Read all native boards without saving; derive every terminal net from the circuit, compare existing PCB endpoints and audit the installed candidate footprint against nominal drawing dimensions. Report missing board nodes and hold connector adoption until voltage, full drawing/physical numbering, wire, supplier and populated fit evidence is complete. Never delete all JM wire pads: they also serve tubes, supplies and other interfaces.
 
 Outputs: generated pinout/migration schedule and checks, plus `review.md` explaining constraints. The contract owns connector and crimp requirements; the circuit owns pot nets; mechanical owns final position, cable length and access.

@@ -100,6 +100,22 @@ def main():
     }.items()}
     assert list(wire_checks.values()) == [True, False, False, False]
 
+    wire_path = MODULE / 'wire-candidates.json'
+    wire_data = json.loads(wire_path.read_text())
+    tolerance = wire_data['outside_diameter_tolerance_mm']
+    wire_candidates = []
+    for wire in wire_data['candidates']:
+        low = round(wire['nominal_od_mm'] - tolerance, 6)
+        high = round(wire['nominal_od_mm'] + tolerance, 6)
+        compatible = wire_range_compatible(wire['awg'], low, high, limits)
+        assert compatible == wire['expected_dimension_screen'], wire['id']
+        wire_candidates.append({'id': wire['id'], 'awg': wire['awg'],
+            'od_range_mm': [low, high], 'contact_tool_dimension_screen': compatible,
+            'lower_limit_margin_mm': round(low - limits['insulation_diameter_min_mm'], 6),
+            'upper_limit_margin_mm': round(limits['insulation_diameter_max_mm'] - high, 6),
+            'qualified_crimp': False, 'purchase_ready': False})
+    assert wire_data['selected_wire'] is None
+
     candidate = contract['candidate']
     library = Path(candidate['native_library'])
     fp_path = library / (candidate['footprint'] + '.kicad_mod')
@@ -130,6 +146,7 @@ def main():
         'scope': 'Ten external panel pots; existing circuit retained; native CAD not modified',
         'inputs_sha256': {**hashes, 'reverb-600/circuit.json': digest(circuit_path),
                           'connector-contract.json': digest(contract_path),
+                          'wire-candidates.json': digest(wire_path),
                           'candidate_installed_footprint': digest(fp_path),
                           'factory': digest(Path(__file__))},
         'panel_pots': len(components), 'terminal_assignments': len(rows),
@@ -139,6 +156,7 @@ def main():
         'candidate_nominal_footprint': {'result':'PASS', 'pads': sorted(actual_pads, key=lambda x:x['number']),
             'limitation':'Nominal installed footprint comparison only. Full drawing visual/tolerance, mated geometry and fabricator finished-hole capabilities remain pending.'},
         'negative_controls': negatives, 'wire_dimension_controls': wire_checks,
+        'published_wire_candidate_screens': wire_candidates,
         'selected_wire': None, 'native_connector_adoption': False,
         'purchase_ready': False, 'manufacturing_ready': False, 'holds': contract['release_holds']
     }
