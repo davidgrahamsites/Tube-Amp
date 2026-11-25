@@ -1,0 +1,57 @@
+{
+  "owner": "control-switching integration",
+  "status": "candidate-not-native",
+  "job": "Bound a faster K3 drain clamp, then test a lower raw-warning threshold without overwriting rejected VAL-053 evidence.",
+  "baseline": "1d0051961bc2cf71662d2a52b76fcd7bda3a37a9",
+  "connections": [
+    "Remove both ordinary K3 flyback paths D341 and D342 in this candidate only. A surviving ordinary diode would defeat fast release.",
+    "Place ST SMBJ16A-TR cathode at COIL_REV/driver drain, anode at driver-source GND, with a short local loop. Coil remains between +12V and COIL_REV.",
+    "No native adoption. Reverb connector remains two wires; quantify harness overshoot and ground-current return before layout."
+  ],
+  "tvs": {
+    "mpn": "SMBJ16A-TR",
+    "manufacturer": "STMicroelectronics",
+    "vrwm_V": 16,
+    "vbr_min_25C_V": 17.8,
+    "ibr_A": 0.001,
+    "alpha_max_per_C": 0.00088,
+    "clamp_curves": [
+      {
+        "pulse": "10/1000us",
+        "vcl_V": 26,
+        "ipp_A": 23.1,
+        "rd_ohm": 0.276
+      },
+      {
+        "pulse": "8/20us",
+        "vcl_V": 34.4,
+        "ipp_A": 116,
+        "rd_ohm": 0.127
+      }
+    ],
+    "cold_C": -25,
+    "hot_C": 150
+  },
+  "temperatures_C": [
+    -25,
+    23,
+    70
+  ],
+  "fraction": 0.05,
+  "overshoot_allocation_V": 2,
+  "driver_vds_absolute_max_V": 30,
+  "tail_bound": "Above1mA use cold minimum VBR minus maximum held supply. Below1mA use zero reverse coil voltage for conservative exponential tail; minimum VBR is not extrapolated below its test current.",
+  "warning_change": {
+    "rail_ohm": 2940,
+    "ground_ohm": 1010,
+    "feedback_ohm": 1000000
+  },
+  "limits": [
+    "Fixed Omron reference inductances and copper TCR are sensitivities, not moving-armature or guaranteed inductance limits.",
+    "Five-percent coil-current decay plus existing5ms contact/logic allocation is conditional; actual contacts/audio muting are not proven.",
+    "TVS static formula and2V overshoot allocation do not qualify actual fast-edge or harness transient peak.",
+    "For the cold minimum use the datasheet maximum positive temperature coefficient; at hot conditions apply the specified clamp-voltage formula.",
+    "10000uF positive reservoir/endurance/ESR/leakage and transformer assumptions remain those of rejected VAL-053; this changes clamp and resistor only.",
+    "REF5 off/startup, resistor exactSKUs and removable comparator carrier remain pending."
+  ]
+}

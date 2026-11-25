@@ -1,0 +1,2 @@
+# Fast K3 clamp evidence
+Owner: control-switching integration. Inputs: ../../fast-clamp-contract.json and retained VAL-053 supply/coil evidence. Process: ../../tools/fast_clamp.py computes bounded coil decay and reruns loaded brownouts; check_fast_clamp.py independently audits timing/energy/native preservation. Outputs: screen.json, brownout.json, checks.json and source-observations.json. Human check: scope drain voltage and contact closure on the actual harness before qualifying mute timing; inspect both former diode paths. No native adoption or fabrication release.

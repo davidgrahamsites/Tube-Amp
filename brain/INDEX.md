@@ -84,3 +84,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-051 | validation | schematic | documented | 2026-11-25 | [Auxiliary supply reserve for advance relay mute](records/VAL-051-auxiliary-hold-up.md) |
 | VAL-052 | validation | schematic | documented | 2026-11-25 | [Secondary-loss detector and shared inhibit interface](records/VAL-052-secondary-loss-detector.md) |
 | VAL-053 | validation | schematic | documented | 2026-11-25 | [Brownout warning window and rejected reservoir trial](records/VAL-053-brownout-warning-window.md) |
+| VAL-054 | validation | schematic | documented | 2026-11-25 | [Faster K3 clamp and lower raw-warning candidate](records/VAL-054-fast-k3-clamp.md) |

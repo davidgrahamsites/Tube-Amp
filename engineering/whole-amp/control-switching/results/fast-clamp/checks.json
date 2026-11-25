@@ -1,0 +1,223 @@
+{
+  "evidence_checks_passed": true,
+  "qualified": false,
+  "native_adopted": false,
+  "contact_release_verified": false,
+  "conditional_brownout_cases_pass": true,
+  "native_preserved_count": 91,
+  "numerical_integration": [
+    {
+      "coil_C": -25,
+      "time_error_s": 6.90668079222391e-07,
+      "charge_error_C": 6.910137414191191e-10
+    },
+    {
+      "coil_C": -25,
+      "time_error_s": 4.6761103440675494e-07,
+      "charge_error_C": 4.679906218953665e-10
+    },
+    {
+      "coil_C": -25,
+      "time_error_s": 4.8050620356406e-07,
+      "charge_error_C": 4.810504027047803e-10
+    },
+    {
+      "coil_C": -25,
+      "time_error_s": 1.088646707312485e-07,
+      "charge_error_C": 1.094300658389339e-10
+    },
+    {
+      "coil_C": -25,
+      "time_error_s": 5.835457772716476e-07,
+      "charge_error_C": 5.838231205987712e-10
+    },
+    {
+      "coil_C": -25,
+      "time_error_s": 3.0840899288564483e-07,
+      "charge_error_C": 3.0872741730160295e-10
+    },
+    {
+      "coil_C": -25,
+      "time_error_s": 4.253098898074695e-07,
+      "charge_error_C": 4.257509346564407e-10
+    },
+    {
+      "coil_C": -25,
+      "time_error_s": 7.234285352274855e-08,
+      "charge_error_C": 7.280535803546413e-11
+    },
+    {
+      "coil_C": 23,
+      "time_error_s": 6.284729330277225e-07,
+      "charge_error_C": 6.287377817173871e-10
+    },
+    {
+      "coil_C": 23,
+      "time_error_s": 1.1117589097595082e-08,
+      "charge_error_C": 1.1449953076734251e-11
+    },
+    {
+      "coil_C": 23,
+      "time_error_s": 1.764014555972332e-07,
+      "charge_error_C": 1.7685712462800702e-10
+    },
+    {
+      "coil_C": 23,
+      "time_error_s": 2.4110637992201533e-08,
+      "charge_error_C": 2.456975993644049e-11
+    },
+    {
+      "coil_C": 23,
+      "time_error_s": 9.895535922795073e-09,
+      "charge_error_C": 1.0167171924112045e-11
+    },
+    {
+      "coil_C": 23,
+      "time_error_s": 2.824348581753969e-07,
+      "charge_error_C": 2.826882634023747e-10
+    },
+    {
+      "coil_C": 23,
+      "time_error_s": 5.253770534400376e-07,
+      "charge_error_C": 5.257093980819973e-10
+    },
+    {
+      "coil_C": 23,
+      "time_error_s": 1.347308245316925e-07,
+      "charge_error_C": 1.3510333490853962e-10
+    },
+    {
+      "coil_C": 70,
+      "time_error_s": 1.8317500593591218e-08,
+      "charge_error_C": 1.8597649065692874e-11
+    },
+    {
+      "coil_C": 70,
+      "time_error_s": 4.1666913770839475e-07,
+      "charge_error_C": 4.1691147958250203e-10
+    },
+    {
+      "coil_C": 70,
+      "time_error_s": 1.0278370895372424e-07,
+      "charge_error_C": 1.0316979797127886e-10
+    },
+    {
+      "coil_C": 70,
+      "time_error_s": 2.592842008423968e-07,
+      "charge_error_C": 2.5966077431052443e-10
+    },
+    {
+      "coil_C": 70,
+      "time_error_s": 1.0046109846523904e-07,
+      "charge_error_C": 1.0068705974193343e-10
+    },
+    {
+      "coil_C": 70,
+      "time_error_s": 2.197101760369885e-07,
+      "charge_error_C": 2.1992552536348085e-10
+    },
+    {
+      "coil_C": 70,
+      "time_error_s": 3.596282371395171e-07,
+      "charge_error_C": 3.599200806471837e-10
+    },
+    {
+      "coil_C": 70,
+      "time_error_s": 4.00959396761047e-09,
+      "charge_error_C": 4.326222316313171e-12
+    }
+  ],
+  "spice_cross_checks": [
+    {
+      "analytical": {
+        "coil_C": 70,
+        "resistance_ohm": 1251.05376,
+        "inductance_H": 2.9,
+        "supply_V": 11.4,
+        "initial_A": 0.009112318242822754,
+        "target_A": 0.0004556159121411377,
+        "cold_drain_min_V": 17.0168,
+        "hot_drain_formula_max_V": 21.832764563502693,
+        "above_test_current_s": 0.0021032776244432794,
+        "conservative_tail_s": 0.0018222277312644251,
+        "decay_to_5percent_s": 0.003925505355707705,
+        "conservative_integrated_charge_C": 1.167978036628336e-05,
+        "clamp_energy_formula_screen_J": 0.00025500189489048586,
+        "coil_initial_energy_J": 0.00012039979844979654
+      },
+      "coarse": {
+        "step_s": 2e-06,
+        "ordinary_diode_left_in_parallel": false,
+        "decay_to_5percent_s": 0.002345042808197511,
+        "model_peak_drain_V": 17.019209240702942,
+        "deck": "K3 candidate clamp sensitivity; ideal driver, quasistatic cold TVS\nV12 supply 0 11.4\nVgate gate 0 PWL(0 1 .01 1 .0100001 0 .04 0)\nSdriver drain 0 gate 0 SW\n.model SW SW(Ron=.01 Roff=1e10 Vt=.5 Vh=.01)\nRcoil supply coil 1251.05376\nLcoil coil remote 2.9\nRwire remote wire .2\nLwire wire drain 100u\nCdrain drain 0 100p\nBTVS drain 0 I=max(v(drain)-17.016524,0)/.276\n* Both old ordinary diode paths absent\n.options method=gear maxord=2 reltol=1e-6 abstol=1e-12 vntol=1e-8\n.save i(lcoil) v(drain)\n.tran 2e-06 .04 0 2e-06\n.end\n",
+        "log": "stdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 candidate clamp sensitivity; ideal driver, quasistatic cold tvs\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    11.4\nstdout gate                                         1\nstdout drain                              9.11079e-05\nstdout coil                                0.00191327\nstdout remote                              0.00191327\nstdout wire                               9.11079e-05\nstdout lwire#branch                        0.00911079\nstdout lcoil#branch                        0.00911079\nstdout vgate#branch                                 0\nstdout v12#branch                         -0.00911079\n Reference value :  0.00000e+00\r\n Reference value :  3.68704e-02\r\nstdout No. of Data Rows : 39764"
+      },
+      "fine": {
+        "step_s": 1e-06,
+        "ordinary_diode_left_in_parallel": false,
+        "decay_to_5percent_s": 0.0023450430906655443,
+        "model_peak_drain_V": 17.019209240700985,
+        "deck": "K3 candidate clamp sensitivity; ideal driver, quasistatic cold TVS\nV12 supply 0 11.4\nVgate gate 0 PWL(0 1 .01 1 .0100001 0 .04 0)\nSdriver drain 0 gate 0 SW\n.model SW SW(Ron=.01 Roff=1e10 Vt=.5 Vh=.01)\nRcoil supply coil 1251.05376\nLcoil coil remote 2.9\nRwire remote wire .2\nLwire wire drain 100u\nCdrain drain 0 100p\nBTVS drain 0 I=max(v(drain)-17.016524,0)/.276\n* Both old ordinary diode paths absent\n.options method=gear maxord=2 reltol=1e-6 abstol=1e-12 vntol=1e-8\n.save i(lcoil) v(drain)\n.tran 1e-06 .04 0 1e-06\n.end\n",
+        "log": "stdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 candidate clamp sensitivity; ideal driver, quasistatic cold tvs\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    11.4\nstdout gate                                         1\nstdout drain                              9.11079e-05\nstdout coil                                0.00191327\nstdout remote                              0.00191327\nstdout wire                               9.11079e-05\nstdout lwire#branch                        0.00911079\nstdout lcoil#branch                        0.00911079\nstdout vgate#branch                                 0\nstdout v12#branch                         -0.00911079\n Reference value :  3.10291e-02\r\nstdout No. of Data Rows : 48080"
+      },
+      "refinement_delta_s": 2.824680333385343e-10
+    },
+    {
+      "analytical": {
+        "coil_C": -25,
+        "resistance_ohm": 701.01504,
+        "inductance_H": 3.99,
+        "supply_V": 12.6,
+        "initial_A": 0.017973936764609216,
+        "target_A": 0.0008986968382304608,
+        "cold_drain_min_V": 17.0168,
+        "hot_drain_formula_max_V": 21.834013785865707,
+        "above_test_current_s": 0.006838482721660773,
+        "conservative_tail_s": 0.0006079327409400036,
+        "decay_to_5percent_s": 0.007446415462600777,
+        "conservative_integrated_charge_C": 5.9216699838222404e-05,
+        "clamp_energy_formula_screen_J": 0.0012929382406212196,
+        "coil_initial_energy_J": 0.0006445094936222507
+      },
+      "coarse": {
+        "step_s": 2e-06,
+        "ordinary_diode_left_in_parallel": false,
+        "decay_to_5percent_s": 0.0069151386824931205,
+        "model_peak_drain_V": 17.021856489837067,
+        "deck": "K3 candidate clamp sensitivity; ideal driver, quasistatic cold TVS\nV12 supply 0 12.6\nVgate gate 0 PWL(0 1 .01 1 .0100001 0 .04 0)\nSdriver drain 0 gate 0 SW\n.model SW SW(Ron=.01 Roff=1e10 Vt=.5 Vh=.01)\nRcoil supply coil 701.01504\nLcoil coil remote 3.99\nRwire remote wire .2\nLwire wire drain 100u\nCdrain drain 0 100p\nBTVS drain 0 I=max(v(drain)-17.016524,0)/.276\n* Both old ordinary diode paths absent\n.options method=gear maxord=2 reltol=1e-6 abstol=1e-12 vntol=1e-8\n.save i(lcoil) v(drain)\n.tran 2e-06 .04 0 2e-06\n.end\n",
+        "log": "stdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 candidate clamp sensitivity; ideal driver, quasistatic cold tvs\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    12.6\nstdout gate                                         1\nstdout drain                              0.000179686\nstdout coil                                 0.0037734\nstdout remote                               0.0037734\nstdout wire                               0.000179686\nstdout lwire#branch                         0.0179686\nstdout lcoil#branch                         0.0179686\nstdout vgate#branch                                 0\nstdout v12#branch                          -0.0179686\n Reference value :  3.34347e-02\r\nstdout No. of Data Rows : 32121"
+      },
+      "fine": {
+        "step_s": 1e-06,
+        "ordinary_diode_left_in_parallel": false,
+        "decay_to_5percent_s": 0.006915138854506503,
+        "model_peak_drain_V": 17.021856489837067,
+        "deck": "K3 candidate clamp sensitivity; ideal driver, quasistatic cold TVS\nV12 supply 0 12.6\nVgate gate 0 PWL(0 1 .01 1 .0100001 0 .04 0)\nSdriver drain 0 gate 0 SW\n.model SW SW(Ron=.01 Roff=1e10 Vt=.5 Vh=.01)\nRcoil supply coil 701.01504\nLcoil coil remote 3.99\nRwire remote wire .2\nLwire wire drain 100u\nCdrain drain 0 100p\nBTVS drain 0 I=max(v(drain)-17.016524,0)/.276\n* Both old ordinary diode paths absent\n.options method=gear maxord=2 reltol=1e-6 abstol=1e-12 vntol=1e-8\n.save i(lcoil) v(drain)\n.tran 1e-06 .04 0 1e-06\n.end\n",
+        "log": "stdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 candidate clamp sensitivity; ideal driver, quasistatic cold tvs\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    12.6\nstdout gate                                         1\nstdout drain                              0.000179686\nstdout coil                                 0.0037734\nstdout remote                               0.0037734\nstdout wire                               0.000179686\nstdout lwire#branch                         0.0179686\nstdout lcoil#branch                         0.0179686\nstdout vgate#branch                                 0\nstdout v12#branch                          -0.0179686\n Reference value :  3.17050e-02\r\nstdout No. of Data Rows : 44214"
+      },
+      "refinement_delta_s": 1.7201338270433908e-10
+    }
+  ],
+  "parallel_diode_negative_control": {
+    "step_s": 2e-06,
+    "ordinary_diode_left_in_parallel": true,
+    "decay_to_5percent_s": 0.013940130822936376,
+    "model_peak_drain_V": 13.103875825262971,
+    "deck": "K3 candidate clamp sensitivity; ideal driver, quasistatic cold TVS\nV12 supply 0 12.6\nVgate gate 0 PWL(0 1 .01 1 .0100001 0 .04 0)\nSdriver drain 0 gate 0 SW\n.model SW SW(Ron=.01 Roff=1e10 Vt=.5 Vh=.01)\nRcoil supply coil 701.01504\nLcoil coil remote 3.99\nRwire remote wire .2\nLwire wire drain 100u\nCdrain drain 0 100p\nBTVS drain 0 I=max(v(drain)-17.016524,0)/.276\nBOLD drain supply I=max(v(drain)-v(supply)-.5,0)/.2\n.options method=gear maxord=2 reltol=1e-6 abstol=1e-12 vntol=1e-8\n.save i(lcoil) v(drain)\n.tran 2e-06 .04 0 2e-06\n.end\n",
+    "log": "stdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 candidate clamp sensitivity; ideal driver, quasistatic cold tvs\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    12.6\nstdout gate                                         1\nstdout drain                              0.000179686\nstdout coil                                 0.0037734\nstdout remote                               0.0037734\nstdout wire                               0.000179686\nstdout lwire#branch                         0.0179686\nstdout lcoil#branch                         0.0179686\nstdout vgate#branch                                 0\nstdout v12#branch                          -0.0179686\n Reference value :  3.90066e-02\r\nstdout No. of Data Rows : 26262"
+  },
+  "negative_controls_rejected": [
+    "false qualification",
+    "missing case",
+    "altered input hash"
+  ],
+  "source_hash_verified": true,
+  "old_failure_preserved": true,
+  "inputs": {
+    "tools/check_fast_clamp.py": "07a5e870c45dc025e115c6dc80b57209cc7c7c13f4f9c7c56abdda4bc6db9ad7",
+    "results/fast-clamp/screen.json": "dc80c83b9ec873785e5fbe1927ea632bcf0abe07fc36584487590a0113d9a431",
+    "results/fast-clamp/brownout.json": "b7f7b0ea236e13b66d77bcd5e6d4ae69062725579626ec98bed2f84d00efba88",
+    "results/fast-clamp/source-observations.json": "54ddfb9ddc82970c54c732997e9598d397f18e3608ec92628c379f0d14102af8"
+  }
+}
