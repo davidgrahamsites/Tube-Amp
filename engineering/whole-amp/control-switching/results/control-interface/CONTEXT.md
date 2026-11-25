@@ -1,0 +1,2 @@
+# Shared control interface evidence
+Owner: control-switching integration. Inputs: ../../control-interface-contract.json, precision/AC/raw/delay candidates and native R215 preload. Process: ../../tools/control_interface.py calculates loaded logic, passive reference-off, injection and delay limits, with independent SPICE node checks. Outputs: screen.json and source-observations.json. Human check: scope reference,5V, both HC14 inputs and relay gate during independent supply failures; below2V logic behavior is not assumed. Native adoption and manufacturing remain pending.

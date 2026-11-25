@@ -1,0 +1,61 @@
+{
+  "evidence_checks_passed": true,
+  "qualified": false,
+  "native_adopted": false,
+  "whole_logic_power_sequence_qualified": false,
+  "independent_RC_integrations": [
+    {
+      "phase": "release_s",
+      "expected_s": 0.05188168937443228,
+      "numerical_s": 0.05188168941040078,
+      "error_s": 3.5968499012550836e-11
+    },
+    {
+      "phase": "discharge_s",
+      "expected_s": 0.0009456759563826862,
+      "numerical_s": 0.0009456759627838004,
+      "error_s": 6.401114122263352e-12
+    },
+    {
+      "phase": "release_s",
+      "expected_s": 0.9235408514864195,
+      "numerical_s": 0.9235408589340847,
+      "error_s": 7.4476651512611625e-09
+    },
+    {
+      "phase": "discharge_s",
+      "expected_s": 0.0009618176076852241,
+      "numerical_s": 0.0009618176121884226,
+      "error_s": 4.503198486847937e-12
+    },
+    {
+      "phase": "release_s",
+      "expected_s": 0.07936266320118367,
+      "numerical_s": 0.07936266325618188,
+      "error_s": 5.49982143160932e-11
+    },
+    {
+      "phase": "discharge_s",
+      "expected_s": 0.0014186325794486477,
+      "numerical_s": 0.001418632589051571,
+      "error_s": 9.602923274273922e-12
+    }
+  ],
+  "negative_controls_rejected": [
+    "false whole-sequence qualification",
+    "removed native capacitor finding",
+    "altered input hash"
+  ],
+  "selected_candidate_MPNs": [
+    "RT0603BRD0710KL",
+    "RT0603BRD0749K9L",
+    "RT0603BRD07100KL"
+  ],
+  "native_preserved_count": 91,
+  "inputs": {
+    "tools/check_control_interface.py": "0cd8020b7c7c5c773954fcbe6bbd85ccbd25672373f4d6959497e5b2ecb89373",
+    "results/control-interface/screen.json": "3b15a465ac7644b14c38b56999ac15992af63596a21442155759bbe7abf728b7",
+    "results/control-interface/source-observations.json": "92fc0a49c9a8857cc672c531e80432cad9ca554b6366e1d8c6210d0babb7affe",
+    "tools/rail_delay_budget.py": "a7df8be3eb94eb71636af3fd5d8a904b7349cca83cdf07c258a7018a566a63ee"
+  }
+}

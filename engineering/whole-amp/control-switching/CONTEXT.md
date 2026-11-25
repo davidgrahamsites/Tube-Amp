@@ -27,3 +27,5 @@ Secondary-loss seam: ac-loss-contract.json and ac-loss-interruption-contract.jso
 Brownout timing seam: brownout-timing-contract.json tests finite-slope loss against VAL-051/052. raw-warning-contract.json is a separate, rejected repair trial; neither changes the precision candidate or native boards. brownout-timing-review.md owns interpretation; results/brownout-timing retains32 baseline/32 trial cases, including late-warning and healthy-enable failures. Next is bounded suppression/release and exact supply qualification, not automatic reservoir enlargement.
 
 Fast-clamp seam: fast-clamp-contract.json proposes a local drain-to-ground TVS and adjusted raw warning without changing native CAD. fast-clamp-review.md owns interpretation; results/fast-clamp retains bounded coil/brownout evidence, including the thin timing reserve.
+
+Shared input seam: control-interface-contract.json and control-interface-review.md combine reference loading, RAIL_OK division and delay-input current limiting. results/control-interface retains the rejected equal-10k trial and native C301/C311 direct-input findings; complete logic power sequencing is still open.

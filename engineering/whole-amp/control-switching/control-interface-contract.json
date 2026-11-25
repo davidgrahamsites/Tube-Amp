@@ -1,0 +1,33 @@
+{
+  "owner": "control-switching integration",
+  "status": "candidate-not-native",
+  "job": "Check shared REF5/RAIL_OK loading and two HC14 input interfaces during valid supply and logic-power loss.",
+  "baseline": "df749d243e9f8d8a1a15ad50ffafe130f597329b",
+  "connections": [
+    "Existing candidate four LM393B outputs share one1.5k pullup toREF5; rail, AC-loss and raw-warning feedback stays on RAIL_OK.",
+    "Add10k RAIL_OK-to-RAIL_LOGIC and100k RAIL_LOGIC-to-GND. U1E pin11 reads RAIL_LOGIC instead of RAIL_OK.",
+    "Add49.9k DELAY-to-DELAY_LOGIC. U1F pin13 reads DELAY_LOGIC; keep2.2uF timing capacitor and220ohm discharge on DELAY.",
+    "Use6.8k REF5 bleeder from VAL-054 trial. No native components or pin connections changed."
+  ],
+  "series_ohm": 10000,
+  "shunt_ohm": 100000,
+  "interface_resistor_fraction": 0.02,
+  "hc_input_leak_A": 1e-06,
+  "hc_input_cap_allocation_F": 5e-11,
+  "logic_high_threshold_allocation_V": 4.2,
+  "logic_low_threshold_allocation_V": 0.9,
+  "raw_max_screen_V": 35,
+  "envelope_max_screen_V": 35,
+  "reference_bleeder_ohm": 6800,
+  "combined_injection_screen_V": 0.65,
+  "limits": [
+    "Resistor2% total is an engineering allocation; exact Yageo0.1%25ppm parts are sourcing candidates, not a blanket lifetime guarantee.",
+    "HC14 threshold envelope follows prior4.5V/6V table endpoints, not a guaranteed interpolated threshold.",
+    "Input-clamp current bound assumes zero diode drop for maximum injection; does not assert logic function below2V.",
+    "R215 alone bounds new-path phantom5V rise; native other input and output paths still require complete inventory.",
+    "Raw and AC comparators are combined electrically for loading, not represented as exact dynamic vendor models.",
+    "TVS/contact timing remains VAL-054 conditional and is not requalified here.",
+    "The0.65V phantom-rail screen is a conservative design allocation, not a guarantee that native HC74 outputs or MOS gates are safe below it. Complete injection inventory and a defined gate-off path remain required."
+  ],
+  "timer_series_ohm": 49900
+}
