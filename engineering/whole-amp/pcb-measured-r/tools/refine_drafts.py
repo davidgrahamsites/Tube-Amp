@@ -28,7 +28,7 @@ for name in ['Main', 'Power', 'Control', 'Reverb']:
             board.Remove(track)
         for item in board.GetDrawings():
             if isinstance(item, p.PCB_TEXT) and 'SPRING v0.4' in item.GetText():
-                item.SetText('RENEGADE 600R-1 / LV DRAFT')
+                item.SetText('RENEGADE 600R-1 / DRAFT')
     p.SaveBoard(str(path), board)
 (ROOT / 'review/refinement.json').write_text(json.dumps({
     'metadata_fields_hidden': ['Selected_MPN', 'Package_Status', 'Status'],

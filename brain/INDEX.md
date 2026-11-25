@@ -91,3 +91,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-058 | validation | components | documented | 2026-11-25 | [Existing ceramic bypass selection reconciled](records/VAL-058-bypass-selection-parity.md) |
 | VAL-059 | validation | pcb | documented | 2026-11-25 | [Ground planes are not yet implemented](records/VAL-059-ground-plane-audit.md) |
 | VAL-060 | validation | pcb | documented | 2026-11-25 | [Reverb pour candidate exposes signal-voltage classification fault](records/VAL-060-reverb-ground-plane-voltage-hold.md) |
+| VAL-061 | validation | cross-domain | documented | 2026-11-25 | [Reverb interface ratings and differential capacitor stress](records/VAL-061-reverb-interface-voltage.md) |
