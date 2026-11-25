@@ -65,3 +65,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-034 | validation | components | documented | 2026-11-24 | [Dual-mains auxiliary transformer options and inquiry](records/VAL-034-transformer-options-inquiry.md) |
 | VAL-035 | validation | components | documented | 2026-11-24 | [Panel connector and crimp interface audit](records/VAL-035-panel-connector-interface-audit.md) |
 | VAL-036 | validation | components | documented | 2026-11-24 | [Panel harness wire/contact tolerance screen](records/VAL-036-wire-contact-tolerance.md) |
+| VAL-037 | validation | cross-domain | documented | 2026-11-24 | [Panel cable capacitance affects placement](records/VAL-037-panel-cable-loading.md) |
