@@ -19,7 +19,7 @@ def spans(text, kind):
             elif ch == '"': quoted = False
         elif ch == '"': quoted = True
         elif ch == '(':
-            if depth == 1 and text.startswith('('+kind+' ', i): start = i
+            if depth == 1 and text.startswith('('+kind, i) and text[i+len(kind)+1].isspace(): start = i
             depth += 1
         elif ch == ')':
             depth -= 1

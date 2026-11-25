@@ -3295,10 +3295,13 @@
         "2": "WET_AC"
       },
       "source": "DEC-007 v0.4",
-      "rating": "63V film/C0G",
+      "rating": "450VDC polypropylene; exact MPP105J2W10KN22605; system fault/thermal qualification pending",
       "status": "600/2250 received-tank draft; electrical and physical qualification pending",
-      "datasheet": "",
-      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm"
+      "datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20261027/114CD9545CFEB4C7867408678DF99EB1.pdf",
+      "footprint": "Renegade_Selected:KNSCHA_MPP105J2W10KN22605",
+      "selected_mpn": "MPP105J2W10KN22605",
+      "selection_evidence": "engineering/component-selection/reverb-coupling/review.md",
+      "selection_status": "adopted voltage-rated coupling capacitor; system qualification pending"
     },
     {
       "project": "Renegade_220V_Reverb",

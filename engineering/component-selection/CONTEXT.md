@@ -10,3 +10,5 @@ P057 candidate fit: fc6136-fit-contract.json is the reviewed extraction from CRC
 P057 sourcing alternative and full-pitch insertion check: [power-film/CONTEXT.md](power-film/CONTEXT.md) owns the read-only comparison with Panasonic EZPV60506MTC. Its dated RS China observation does not select or release either candidate.
 
 Socket requirement: socketing/CONTEXT.md owns the exhaustive IC/tube manifest and qualified-contact gates. Native replacement geometry remains a PCB-module responsibility.
+
+C607 voltage-rated coupling replacement: [reverb-coupling/CONTEXT.md](reverb-coupling/CONTEXT.md) owns exact part sourcing, package integration and preserved connectivity/drill evidence after VAL-061's conditional fault finding.

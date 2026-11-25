@@ -1,0 +1,38 @@
+[
+  {
+    "command": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "drill",
+      "--format",
+      "excellon",
+      "--excellon-units",
+      "mm",
+      "--output",
+      "engineering/component-selection/reverb-coupling/results/drill-before/",
+      "/tmp/renegade-c607-baseline.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Created file 'engineering/component-selection/reverb-coupling/results/drill-before/renegade-c607-baseline.drl'\nDone.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "export",
+      "drill",
+      "--format",
+      "excellon",
+      "--excellon-units",
+      "mm",
+      "--output",
+      "engineering/component-selection/reverb-coupling/results/drill-after/",
+      "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Created file 'engineering/component-selection/reverb-coupling/results/drill-after/Renegade_Reverb.drl'\nDone.\n",
+    "stderr": ""
+  }
+]

@@ -7539,218 +7539,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Renegade_Selected:KNSCHA_MEB105J63V82CB0235"
-		(layer "F.Cu")
-		(uuid "cd16184e-4691-4cb4-ad7a-19490f7ad273")
-		(at 133 49)
-		(descr "MEB105J63V82CB0235; nominal 7.2 x 5 x H10.5mm, body tolerance +/-0.5mm; pitch5mm +/-0.5; datasheet-specific max-body courtyard.")
-		(tags "C Rect series Radial pin pitch 5.00mm length 7.2mm width 5.0mm Capacitor R82")
-		(property "Reference" "C607"
-			(at 2.5 -3.75 0)
-			(layer "F.SilkS")
-			(uuid "f113cd9e-c6fa-428f-baad-8a711e64b359")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "1u"
-			(at 2.5 3.75 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "560cb552-5591-4e97-b8b2-83874d43346e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "fb506f9d-e197-4d95-b6e1-3e629985e3b0")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "796f292b-4173-4af2-95f1-95278c5ed365")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "capacitor/THT/other"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "fded0d2e-7eda-41c7-bb5e-1d0f62f210e2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Selected_MPN" "MEB105J63V82CB0235"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "0203ea8a-7d3f-4aef-8f0c-9f20e4992e07")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Status" "DRAFT - reroute and fit review required"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "5081bc4e-9b18-4118-be5d-34e15f8a70f8")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(path "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/bee4b957-26bb-55a6-8ec1-89567dbef894")
-		(attr through_hole)
-		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start -1.22 -2.62)
-			(end 6.22 -2.62)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "33ed20a8-df53-48ff-a0a7-05c8c52e5e4d")
-		)
-		(fp_line
-			(start -1.22 2.62)
-			(end -1.22 -2.62)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "d593178e-a979-437e-b10b-b9049e8bb527")
-		)
-		(fp_line
-			(start 6.22 -2.62)
-			(end 6.22 2.62)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "1d66fa74-7441-4461-9362-45daca6bf0b6")
-		)
-		(fp_line
-			(start 6.22 2.62)
-			(end -1.22 2.62)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "fb13483a-3674-42de-85cb-575b0f666456")
-		)
-		(fp_line
-			(start -1.6 -3)
-			(end 6.6 -3)
-			(stroke
-				(width 0.05)
-				(type default)
-			)
-			(layer "F.CrtYd")
-			(uuid "2a513d41-42fe-49a9-836a-c1138c326300")
-		)
-		(fp_line
-			(start -1.6 3)
-			(end -1.6 -3)
-			(stroke
-				(width 0.05)
-				(type default)
-			)
-			(layer "F.CrtYd")
-			(uuid "2948ea38-4d98-4d41-9875-48adaa573543")
-		)
-		(fp_line
-			(start 6.6 -3)
-			(end 6.6 3)
-			(stroke
-				(width 0.05)
-				(type default)
-			)
-			(layer "F.CrtYd")
-			(uuid "d1a4cc66-357e-46e8-b325-757749ada6b7")
-		)
-		(fp_line
-			(start 6.6 3)
-			(end -1.6 3)
-			(stroke
-				(width 0.05)
-				(type default)
-			)
-			(layer "F.CrtYd")
-			(uuid "49886f8f-5c8e-472e-b589-547aed680b80")
-		)
-		(fp_rect
-			(start -1.1 -2.5)
-			(end 6.1 2.5)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "b64a6b9a-3f8e-4f03-83bc-a5dbdb526f9e")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 2.5 0 0)
-			(layer "F.Fab")
-			(uuid "9f39603d-f4f7-498a-92ba-3ee8c7142a58")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(pad "1" thru_hole circle
-			(at 0 0)
-			(size 1.8 1.8)
-			(drill 0.9)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "OUT_AC")
-			(uuid "2db1be47-59f6-4c4c-896e-9bd6ca1b7192")
-		)
-		(pad "2" thru_hole circle
-			(at 5 0)
-			(size 1.8 1.8)
-			(drill 0.9)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "WET_AC")
-			(uuid "0ccc9b82-9394-44af-8c80-65721b6d6fea")
-		)
-		(embedded_fonts no)
-	)
+	(footprint "Renegade_Selected:KNSCHA_MPP105J2W10KN22605" (layer "F.Cu") (uuid "cd16184e-4691-4cb4-ad7a-19490f7ad273") (at 131.5 53) (descr "MPP105J2W10KN22605; 1uF 450VDC; maximum body13 x8.1 xH16.4mm; pitch10+/-0.5mm; round leads0.6+/-0.05mm; hand-form pitch before insertion.") (tags "KNSCHA CBB22 1uF 450V P10") (property "Reference" "C607" (at 5 -5.3 0) (layer "F.SilkS") (uuid "f113cd9e-c6fa-428f-baad-8a711e64b359") (effects (font (size 1 1) (thickness 0.15)))) (property "Value" "1u" (at 5 5.3 0) (layer "F.Fab") (hide yes) (uuid "560cb552-5591-4e97-b8b2-83874d43346e") (effects (font (size 1 1) (thickness 0.15)))) (property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20261027/114CD9545CFEB4C7867408678DF99EB1.pdf" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "fb506f9d-e197-4d95-b6e1-3e629985e3b0") (effects (font (size 1.27 1.27)))) (property "Description" "" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "796f292b-4173-4af2-95f1-95278c5ed365") (effects (font (size 1.27 1.27)))) (property "KiLib_Generator" "capacitor/THT/other" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "fded0d2e-7eda-41c7-bb5e-1d0f62f210e2") (effects (font (size 1 1) (thickness 0.15)))) (property "Selected_MPN" "MPP105J2W10KN22605" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "0203ea8a-7d3f-4aef-8f0c-9f20e4992e07") (effects (font (size 1.27 1.27) (thickness 0.15)))) (property "Status" "DRAFT - reroute and fit review required" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "5081bc4e-9b18-4118-be5d-34e15f8a70f8") (effects (font (size 1.27 1.27) (thickness 0.15)))) (path "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/bee4b957-26bb-55a6-8ec1-89567dbef894") (attr through_hole) (duplicate_pad_numbers_are_jumpers no) (pad "1" thru_hole circle (at 0 0) (size 1.9 1.9) (drill 1.0) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (net "OUT_AC") (uuid "2db1be47-59f6-4c4c-896e-9bd6ca1b7192")) (pad "2" thru_hole circle (at 10 0) (size 1.9 1.9) (drill 1.0) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (net "WET_AC") (uuid "0ccc9b82-9394-44af-8c80-65721b6d6fea")) (embedded_fonts no) (property "Rating" "450VDC polypropylene; exact MPP105J2W10KN22605; system fault/thermal qualification pending" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "ebb05434-0383-531a-9a20-b079844d4648") (effects (font (size 1.27 1.27) (thickness 0.15)))) (property "Package_Status" "Exact manufacturer max-body envelope; finished-hole tolerance and hand-forming to verify" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "08558bd1-5f7b-5d90-85fe-71196fe7cbf2") (effects (font (size 1.27 1.27) (thickness 0.15)))) (fp_rect (start -1 -3.55) (end 11 3.55) (stroke (width 0.1) (type default)) (fill no) (layer "F.Fab") (uuid "8054657f-5e1d-5d47-bc5d-4efedb6db4dd")) (fp_rect (start -1.12 -3.67) (end 11.12 3.67) (stroke (width 0.12) (type default)) (fill no) (layer "F.SilkS") (uuid "95f184a1-76a1-500a-a4c8-b3e261bb643e")) (fp_rect (start -1.75 -4.3) (end 11.75 4.3) (stroke (width 0.05) (type default)) (fill no) (layer "F.CrtYd") (uuid "ba8b4554-329d-5556-aec7-65564ea1c1c5")))
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "cf8648b0-9044-447b-ba1c-757e179ad6cb")
@@ -11857,14 +11646,8 @@
 		(net "WET_AC")
 		(uuid "4962f28b-f95b-4c52-88f6-076808c6b43a")
 	)
-	(segment
-		(start 138 49)
-		(end 138 39.2)
-		(width 0.3)
-		(layer "F.Cu")
-		(net "WET_AC")
-		(uuid "b0cad1a6-84a6-4925-86c9-7c2af3cee6ae")
-	)
+	(segment (start 141.5 53) (end 138 49.5) (width 0.3) (layer "F.Cu") (net "WET_AC") (uuid "f3647a0a-63ee-5abd-b27d-8cee1ad2e588"))
+(segment (start 138 49.5) (end 138 39.2) (width 0.3) (layer "F.Cu") (net "WET_AC") (uuid "348f5790-1d65-5850-980d-05a8fec50b8d"))
 	(segment
 		(start 137.8 39)
 		(end 133 39)
@@ -12673,7 +12456,8 @@
 		(uuid "7ee34de0-0d78-4a8d-840c-cf1223e7ec71")
 	)
 	(segment (start 133 59.2) (end 133.8 60) (width 0.3) (layer "F.Cu") (net "OUT_AC") (uuid "04b37b7a-ddaf-4177-83bb-d6f941b41739"))
-	(segment (start 133.0 49.0) (end 133 59.2) (width 0.3) (layer "F.Cu") (net "OUT_AC") (uuid "5c1d7b9e-183c-46e8-a615-53b1f9c04dd9"))
+	(segment (start 131.5 53) (end 131.5 57.7) (width 0.3) (layer "F.Cu") (net "OUT_AC") (uuid "79735d0e-52da-5b4d-a5c1-0d9af8a2127f"))
+(segment (start 131.5 57.7) (end 133 59.2) (width 0.3) (layer "F.Cu") (net "OUT_AC") (uuid "492fa98f-6cf8-56e4-8d65-83e76382ab87"))
 	(segment
 		(start 141.16 60)
 		(end 141 60)
