@@ -1,0 +1,82 @@
+{
+  "scope": "Fixed bias and ideal servo are diagnostic substitutions, not selected parts. Transient fallback OP is not automatically a settled DC result.",
+  "cases": [
+    {
+      "mode": "complete-circuit",
+      "deck": "isolation-complete-circuit.cir",
+      "deck_sha256": "660c17b5ad1ee8d42a2b790eba8dc26652850b47ce6b289bf407ce2f311c91ba",
+      "log": "isolation-complete-circuit.log",
+      "log_sha256": "b067893ccf617c4022e6726df522f7f59a86cca85c91e67155ff9e0d14b310ee",
+      "status": "failed-op"
+    },
+    {
+      "mode": "servo-alone",
+      "deck": "isolation-servo-alone.cir",
+      "deck_sha256": "c951db21968adb0087d9e55727bfbf09ad5850f2e481f2ea40fba1c626980384",
+      "log": "isolation-servo-alone.log",
+      "log_sha256": "3200d9264aab6b7373b026ada29e73bee456268093bcd855f356c2c5cde9280e",
+      "op": {
+        "bo": 7.393604352178328,
+        "be": 4.99448536586577,
+        "abc": -14.0
+      },
+      "op_used_transient_fallback": true,
+      "status": "diagnostic-complete",
+      "end_s": 0.001,
+      "final": {
+        "bo": 5.006040328208686,
+        "be": 5.00054852985835,
+        "abc": -13.999999999985999
+      },
+      "op_to_final_max_delta_V": 2.3875640239696425,
+      "reverse_BE_V": 0.005491753013732392
+    },
+    {
+      "mode": "ideal-servo",
+      "deck": "isolation-ideal-servo.cir",
+      "deck_sha256": "5a6c09846701f80c0a2eb76f6e7fa71ec78f6bf76c93d9c068527811c1fa87f2",
+      "log": "isolation-ideal-servo.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "bo": 4.999451075392927,
+        "be": 4.9999500054892465,
+        "abc": -14.999949700091653,
+        "out": 0.0005006849233242859
+      },
+      "op_used_transient_fallback": false,
+      "status": "diagnostic-complete"
+    },
+    {
+      "mode": "fixed-base",
+      "deck": "isolation-fixed-base.cir",
+      "deck_sha256": "5b0ceadd25da362d1a101ec71a1bf5de64ecb3b5766824bba17a854e52379a61",
+      "log": "isolation-fixed-base.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "bo": 5.006036,
+        "be": 5.000548648039874,
+        "abc": -14.999949697964569,
+        "out": 0.0005006849233257039
+      },
+      "op_used_transient_fallback": false,
+      "status": "diagnostic-complete"
+    },
+    {
+      "mode": "fixed-collector",
+      "deck": "isolation-fixed-collector.cir",
+      "deck_sha256": "70be1a686d83095017859e300aa442db5693d479d6cc37c068aa0df70b274c56",
+      "log": "isolation-fixed-collector.log",
+      "log_sha256": "3e6963447892473716d8e935b19a4e25587c443d695124a27c937352e8a7344f",
+      "status": "failed-op"
+    }
+  ],
+  "provenance": {
+    "engineering/whole-amp/expression-control/tools/bias_isolation.py": "cadc28afc2f9bda4870d86b5d42326fd4f6843c9a25c9154753afa25f2ac3b09",
+    "engineering/whole-amp/expression-control/tools/bias_screen.py": "a4ad483d1a163c01cf83b8658de186c4278897bc7afaf7bf4efca25a5c768388",
+    "engineering/whole-amp/expression-control/tools/ota_screen.py": "4f1bc096811638c562a6ca202fd5edc556a772cb7fc77c741f92bfd1e64af418",
+    "engineering/whole-amp/expression-control/results/bias-screen.json": "859c0084c27c096f112960f494ab8c11c0d29167e4c2653092f4c3f739b40870",
+    "engineering/whole-amp/expression-control/models/LM13700.MOD": "666df501773da5e65f7fd3b3c806b2c1ae7770784685dd8191a9df33b382f390",
+    "engineering/solid-state-reverb/simulation/models/OPAx134.LIB": "8ff414c678a7f8330b87504d7e0553de20ca87bdc713cecf81ab3448b4d7608f",
+    "engineering/whole-amp/expression-control/models/MMBT3906.spice.txt": "712886c6ce94f511ad02ed384c2d313f4f2b76faf8f68e7ba0bbd3d946b3dca4"
+  }
+}

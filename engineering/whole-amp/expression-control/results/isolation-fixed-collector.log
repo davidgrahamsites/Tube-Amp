@@ -1,0 +1,401 @@
+stderr Warning: can't find the initialization file spinit.
+stdout ******
+stdout ** ngspice-45.2 shared library
+stdout ******
+stdout Note: Compatibility modes selected: ps
+stdout Circuit: isolated expression ota candidate, not released hardware
+stdout Reducing trtol to 1 for xspice 'A' devices
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stderr Note: Starting dynamic gmin stepping
+stderr Warning: Dynamic gmin stepping failed
+stderr Note: Starting true gmin stepping
+stderr Warning: True gmin stepping failed
+stderr Note: Starting source stepping
+stderr Warning: source stepping failed
+stderr Note: Transient op started
+stderr Warning: singular matrix:  check nodes xbi.n4201210 and xbi.cl_clamp
+stderr Warning: singular matrix:  check nodes xop.n4201210 and xop.cl_clamp
+stderr Warning: singular matrix:  check nodes xop.n4201210 and xop.cl_clamp
+stderr Warning: singular matrix:  check nodes xop.n4201210 and xop.cl_clamp
+stderr Warning: singular matrix:  check nodes xop.n4201210 and xop.cl_clamp
+stderr Warning: singular matrix:  check nodes xop.n4201210 and xop.n4201536
+stderr Error: Transient op failed, timestep too small
+stderr Error: The operating point could not be simulated successfully.
+stderr Any of the following steps may fail.!
+stdout DC solution failed -
+stdout Last Node Voltages
+stdout ------------------
+stdout Node                                   Last Voltage        Previous Iter
+stdout ----                                   ------------        -------------
+stdout vp                                               15                  nan
+stdout vn                                              -15                  nan
+stdout in                                                0                  nan
+stdout acin                                   -1.64131e-07                  nan
+stdout minus                                      -1.35287                  nan
+stdout ref                                               5               -5e-11 *
+stdout trim                                        4.92238                    0 *
+stdout plus                                        -1.3574                  nan
+stdout target                                            5                    0 *
+stdout dref                                        4.36243                  nan
+stdout db                                         -0.68448                  nan
+stdout xbi.n4201330                                0.92507                  nan
+stdout xbi.n4200188                               0.712133                  nan
+stdout xbi.n4201210                                 -15381                  nan
+stdout xbi.n4201214                               -15336.7                  nan
+stdout xbi.n4201026                                     15                  nan
+stdout xbi.n4201004                             4.5876e-07                  nan
+stdout xbi.n4201042                                    -15                  nan
+stdout xbi.n4200376                             4.5876e-07                  nan
+stdout xbi.mid                                  4.5876e-07                  nan
+stdout xbi.n4200400                                4.07664                  nan
+stdout xbi.n4200446                                4.40857                  nan
+stdout xbi.n4200466                             4.5876e-07                  nan
+stdout xbi.n4201370                               -1.14098                  nan
+stdout xbi.n4201374                              -0.555552                  nan
+stdout xbi.n4200542                             4.5876e-07                  nan
+stdout xbi.n4200560                                4151.34                  nan
+stdout xbi.n4200604                               -475.134                  nan
+stdout xbi.n4200668                                  10.06                  nan
+stdout xbi.n4200664                                  -14.5                  nan
+stdout xbi.n4200728                            3.26329e-07                  nan
+stdout xbi.n4200734                                 110.46                  nan
+stdout xbi.sw_ol_opax134                          0.366272                  nan
+stdout xbi.vimon                                   48.3887                  nan
+stdout xbi.vout_s                                 -18.5766                  nan
+stdout xbi.n4200292                                   12.5                  nan
+stdout xbi.clamp                                   -475.13                  nan
+stdout xbi.vclp                                   -476.844                  nan
+stdout xbi.n4201574                               -180.911                  nan
+stdout xbi.n4201424                                -376124                  nan
+stdout xbi.n4201430                                8181.47                  nan
+stdout xbi.n4201448                                10.2151                  nan
+stdout xbi.n4201452                                8.57699                  nan
+stdout xbi.n4201456                                12.0078                  nan
+stdout xbi.n4200216                                12.0063                  nan
+stdout xbi.n4201532                                -629.06                  nan
+stdout xbi.n4201536                               -606.747                  nan
+stdout xbi.n4201138                               -32.0187                  nan
+stdout xbi.n42414241                               -625639                  nan
+stdout xbi.n4201680                              -0.722218                  nan
+stdout xbi.n4200214                              -0.721306                  nan
+stdout xbi.esdp                                          5                  nan
+stdout xbi.esdn                                   -13.6273                  nan
+stdout xbi.n4200794                               -18.4655                    0 *
+stdout bo                                         -18.4655                  nan
+stdout xbi.n4201202                               -363.946                    0 *
+stdout xbi.cl_clamp                               -363.946                    0 *
+stdout xbi.claw_clamp                              4044.62                    0 *
+stdout xbi.n4201412                               -61724.9                    0 *
+stdout xbi.vcc_b                                        15                    0 *
+stdout xbi.vee_b                                       -15                    0 *
+stdout xbi.n4200198                                 5.7125                    0 *
+stdout xbi.n4200190                                5.00037                    0 *
+stdout xbi.vcc_clp                                   10.06                    0 *
+stdout xbi.vee_clp                                   -14.5                    0 *
+stdout xbi.n4200928                               -487.144                    0 *
+stdout xbi.n4200924                               -487.144                    0 *
+stdout xbi.n4200952                               -466.844                    0 *
+stdout xbi.n4200960                               -466.844                    0 *
+stdout xbi.n4200864                               -18.4655                    0 *
+stdout xbi.n4200222                                18.4401                    0 *
+stdout xbi.n4200218                                 5.7125                    0 *
+stdout xbi.vsense                                 -475.134                    0 *
+stdout xbi.n4201644                                -354594                    0 *
+stdout xbi.n4200208                                      5               -5e-12 *
+stdout xbi.n4200254                               -13.6273                    0 *
+stdout xbi.n4200258                                   12.5                    0 *
+stdout xbi.n4200270                                  -12.5                    0 *
+stdout xbi.n4200278                                   12.5                    0 *
+stdout xbi.n4200302                                2612.73                    0 *
+stdout xbi.n4201254                                 199990                    0 *
+stdout xbi.n4200364                             4.5876e-07                    0
+stdout xbi.n4200398                                4.07664                    0 *
+stdout xbi.n4200442                                  43.98                    0 *
+stdout xbi.n4200444                                4.40857                    0 *
+stdout xbi.n4200472                             4.5876e-07                    0
+stdout xbi.n4200484                                 -48.09                    0 *
+stdout xbi.n4200536                                     60                    0 *
+stdout xbi.n4200540                             4.5876e-07                    0
+stdout xbi.n4200566                                4151.34                    0 *
+stdout xbi.n4200578                                    -60                    0 *
+stdout xbi.n4200632                                  10.06                    0 *
+stdout xbi.n4200636                                  -14.5                    0 *
+stdout xbi.v11                                 4.46235e-07                    0
+stdout xbi.v12                                 4.50924e-07                    0
+stdout xbi.n4200740                               0.993726                    0 *
+stdout be                                         -13.5279                  nan
+stdout xbi.n4200782                                10009.7                    0 *
+stdout xbi.n4200916                               -466.844          9.56641e-21 *
+stdout xbi.n4200896                               -487.144         -1.38706e-20 *
+stdout xbi.x_u1.7                                 0.833786                  nan
+stdout xbi.x_u1.8                                 0.833786                  nan
+stdout xbi.x_u1.3                             -4.44684e-18                    0
+stdout xbi.x_u1.6                             -1.78032e-18                    0
+stdout xbi.x_u1.4                             -1.78032e-18                    0
+stdout xbi.x_u1.5                                        0                    0
+stdout xbi.x_u10.gvo+_int1                               0                    0
+stdout xbi.x_u10.gvo-_int1                         4.07664                    0 *
+stdout xbi.x_u11.gvo+_int1                         4.40874                    0 *
+stdout xbi.x_u11.gvo-_int1                               0                    0
+stdout xbi.x_u12.gvo+_int1                               0                    0
+stdout xbi.x_u12.gvo-_int1                         4151.34                    0 *
+stdout xbi.x_u16.gsw+_int1                               1                    0 *
+stdout xbi.x_u18.g1_int1                           0.00494                    0 *
+stdout xbi.x_u18.g1_int2                           48.3887                    0 *
+stdout xbi.x_u19.g1_int1                            0.0005                    0 *
+stdout xbi.x_u19.g1_int2                          -48.3887                    0 *
+stdout xbi.x_u22.g1_int1                           4.40857                    0 *
+stdout xbi.x_u23.g1_int1                            -152.6                    0 *
+stdout xbi.x_u26.g1_int1                         0.0483887                    0 *
+stdout xbi.x_u27.g1_int1                                 0                    0
+stdout xbi.x_u30.g1_int1                        0.00261273                    0 *
+stdout xbi.x_u31.g1_int1                               0.8                    0 *
+stdout xbi.x_u32.g1_int1                            200000                    0 *
+stdout xbi.x_u35.g1_int1                          -4.07664                    0 *
+stdout xbi.x_u36.3                                       0                    0
+stdout xbi.x_u36.5                                       0                    0
+stdout xbi.x_u37.3                                       0                    0
+stdout xbi.x_u37.5                                       0                    0
+stdout xbi.x_u4.e1_int1                         0.00036915                    0 *
+stdout xbi.x_u6.g1_int1                               12.5                    0 *
+stdout bbas                                        -14.546                  nan
+stdout fixedabc                                        -14                    0 *
+stdout abc                                        -14.9999                  nan
+stdout io                                          14.4307                  nan
+stdout xota.21                                     14.6732                  nan
+stdout xota.22                                      14.349                  nan
+stdout xota.26                                    -14.7348                  nan
+stdout xota.27                                         -15                  nan
+stdout xota.29                                        13.6                  nan
+stdout xota.28                                       -13.8                  nan
+stdout xota.31                                    -1.62606                  nan
+stdout xota.25                                    -1.91751                  nan
+stdout xota.33                                           0                    0
+stdout xota.24                                      14.349                  nan
+stdout xota.32                                    -1.35287                  nan
+stdout xota.23                                      14.349                  nan
+stdout xota.30                                    -0.57959                  nan
+stdout unused                                     -1.19619                  nan
+stdout xop.n4201330                            3.74051e-07                  nan
+stdout xop.n4200188                           -8.60995e-06                  nan
+stdout xop.n4201210                               -15179.1                  nan
+stdout xop.n4201214                               -15177.8                  nan
+stdout xop.n4201026                                     15                  nan
+stdout xop.n4201004                            4.59669e-07                  nan
+stdout xop.n4201042                                    -15                  nan
+stdout xop.n4200376                            4.59669e-07                  nan
+stdout xop.mid                                 4.59669e-07                  nan
+stdout xop.n4200400                            4.59669e-07                  nan
+stdout xop.n4200446                               0.320191                  nan
+stdout xop.n4200466                            4.59669e-07                  nan
+stdout xop.n4201370                               -1.14098                  nan
+stdout xop.n4201374                              -0.555554                  nan
+stdout xop.n4200542                            4.59669e-07                  nan
+stdout xop.n4200560                                4140.39                  nan
+stdout xop.n4200604                               -474.039                  nan
+stdout xop.n4200668                                  10.06                  nan
+stdout xop.n4200664                                  -14.5                  nan
+stdout xop.n4200728                            3.56641e-07                  nan
+stdout xop.n4200734                                98.4711                  nan
+stdout xop.sw_ol_opax134                          0.877971                  nan
+stdout xop.vimon                                   44.3005                  nan
+stdout xop.vout_s                                 -11.8018                  nan
+stdout xop.n4200292                                   12.5                  nan
+stdout xop.clamp                                  -474.035                  nan
+stdout xop.vclp                                   -463.726                  nan
+stdout xop.n4201574                               -180.863                  nan
+stdout xop.n4201424                                -369928                  nan
+stdout xop.n4201430                                 8075.3                  nan
+stdout xop.n4201448                                10.2152                  nan
+stdout xop.n4201452                                8.57705                  nan
+stdout xop.n4201456                                12.0079                  nan
+stdout xop.n4200216                                12.0063                  nan
+stdout xop.n4201532                                -627.61                  nan
+stdout xop.n4201536                               -605.328                  nan
+stdout xop.n4201138                               -32.0422                  nan
+stdout xop.n42414241                               -614840                  nan
+stdout xop.n4201680                              -0.722221                  nan
+stdout xop.n4200214                              -0.721309                  nan
+stdout xop.esdp                                 -1.192e-08                  nan
+stdout xop.esdn                                    14.4307                  nan
+stdout xop.n4200794                               -11.3562                    0 *
+stdout out                                        -11.3562                  nan
+stdout xop.n4201202                               -352.233                    0 *
+stdout xop.cl_clamp                               -352.233                    0 *
+stdout xop.claw_clamp                             -32.0422                    0 *
+stdout xop.n4201412                               -61085.5                    0 *
+stdout xop.vcc_b                                        15                    0 *
+stdout xop.vee_b                                       -15                    0 *
+stdout xop.n4200198                            0.000360056                    0 *
+stdout xop.n4200190                            0.000369138                    0 *
+stdout xop.vcc_clp                                   10.06                    0 *
+stdout xop.vee_clp                                   -14.5                    0 *
+stdout xop.n4200928                               -474.027                    0 *
+stdout xop.n4200924                               -474.026                    0 *
+stdout xop.n4200952                               -453.726                    0 *
+stdout xop.n4200960                               -453.726                    0 *
+stdout xop.n4200864                               -11.3562                    0 *
+stdout xop.n4200222                                 12.728                    0 *
+stdout xop.n4200218                            0.000360056                    0 *
+stdout xop.vsense                                 -474.039                    0 *
+stdout xop.n4201644                                -348678                    0 *
+stdout xop.n4200208                             -1.192e-08               -5e-12
+stdout xop.n4200254                                14.4307                    0 *
+stdout xop.n4200258                                   12.5                    0 *
+stdout xop.n4200270                                  -12.5                    0 *
+stdout xop.n4200278                                   12.5                    0 *
+stdout xop.n4200302                               -193.067                    0 *
+stdout xop.n4201254                                 199990                    0 *
+stdout xop.n4200364                            4.59669e-07                    0
+stdout xop.n4200398                            4.59669e-07                    0
+stdout xop.n4200442                                  43.98                    0 *
+stdout xop.n4200444                               0.320191                    0 *
+stdout xop.n4200472                            4.59669e-07                    0
+stdout xop.n4200484                                 -48.09                    0 *
+stdout xop.n4200536                                     60                    0 *
+stdout xop.n4200540                            4.59669e-07                    0
+stdout xop.n4200566                                4140.39                    0 *
+stdout xop.n4200578                                    -60                    0 *
+stdout xop.n4200632                                  10.06                    0 *
+stdout xop.n4200636                                  -14.5                    0 *
+stdout xop.v11                                  0.00163763                    0 *
+stdout xop.v12                                 4.39774e-07                    0
+stdout xop.n4200740                               0.998792                    0 *
+stdout xop.n4200782                                10005.7                    0 *
+stdout xop.n4200916                               -453.726          2.34472e-20 *
+stdout xop.n4200896                               -474.027            0.0459732 *
+stdout xop.x_u1.7                                 0.833786                  nan
+stdout xop.x_u1.8                                 0.833786                  nan
+stdout xop.x_u1.3                             -4.44684e-18                    0
+stdout xop.x_u1.6                             -1.78032e-18                    0
+stdout xop.x_u1.4                             -1.78032e-18                    0
+stdout xop.x_u1.5                                        0                    0
+stdout xop.x_u10.gvo+_int1                               0                    0
+stdout xop.x_u10.gvo-_int1                               0                    0
+stdout xop.x_u11.gvo+_int1                        0.320501                    0 *
+stdout xop.x_u11.gvo-_int1                               0                    0
+stdout xop.x_u12.gvo+_int1                               0                    0
+stdout xop.x_u12.gvo-_int1                         4140.39                    0 *
+stdout xop.x_u16.gsw+_int1                               1                    0 *
+stdout xop.x_u18.g1_int1                           0.00494                    0 *
+stdout xop.x_u18.g1_int2                           44.3005                    0 *
+stdout xop.x_u19.g1_int1                            0.0005                    0 *
+stdout xop.x_u19.g1_int2                          -44.3005                    0 *
+stdout xop.x_u22.g1_int1                          0.320191                    0 *
+stdout xop.x_u23.g1_int1                            -152.6                    0 *
+stdout xop.x_u26.g1_int1                         0.0443005                    0 *
+stdout xop.x_u27.g1_int1                                 0                    0
+stdout xop.x_u30.g1_int1                      -0.000193067                    0 *
+stdout xop.x_u31.g1_int1                              -0.8                    0 *
+stdout xop.x_u32.g1_int1                            200000                    0 *
+stdout xop.x_u35.g1_int1                                 0                    0
+stdout xop.x_u36.3                                       0                    0
+stdout xop.x_u36.5                                       0                    0
+stdout xop.x_u37.3                                       0                    0
+stdout xop.x_u37.5                                       0                    0
+stdout xop.x_u4.e1_int1                         0.00036915                    0 *
+stdout xop.x_u6.g1_int1                               12.5                    0 *
+stdout b.xop.x_u6.bg1#branch                     -1.25e-11                    0 *
+stdout b.xop.x_u4.be1#branch                   -3.6915e-16           0.00036915 *
+stdout b.xop.x_u35.bg1#branch                            0                    0
+stdout b.xop.x_u32.bg1#branch                       -2e-07               200000 *
+stdout b.xop.x_u31.bg1#branch                        8e-13                 -0.8 *
+stdout b.xop.x_u30.bg1#branch                  1.93067e-16          3.83811e-20
+stdout b.xop.x_u27.bg1#branch                            0                    0
+stdout b.xop.x_u26.bg1#branch                 -4.43005e-14         -2.14102e-18
+stdout b.xop.x_u23.bg1#branch                    1.526e-10               -152.6 *
+stdout b.xop.x_u22.bg1#branch                 -3.20191e-13          1.46256e-18
+stdout b.xop.x_u19.bg1#branch                  4.43005e-11                    0 *
+stdout b.xop.x_u18.bg1#branch                 -4.43005e-11         -1.27434e-15 *
+stdout b.xop.x_u16.bgsw+#branch                     -1e-12                    1 *
+stdout b.xop.x_u12.bgvo-#branch               -4.14039e-09         -3.83693e-13 *
+stdout b.xop.x_u12.bgvo+#branch                          0                    0
+stdout b.xop.x_u11.bgvo-#branch                          0                    0
+stdout b.xop.x_u11.bgvo+#branch               -3.20501e-13                    0
+stdout b.xop.x_u10.bgvo-#branch                          0                    0
+stdout b.xop.x_u10.bgvo+#branch                          0                    0
+stdout b.xbi.x_u6.bg1#branch                     -1.25e-11                    0 *
+stdout b.xbi.x_u4.be1#branch                   -3.6915e-16           0.00036915 *
+stdout b.xbi.x_u35.bg1#branch                  4.07664e-12                    0 *
+stdout b.xbi.x_u32.bg1#branch                       -2e-07               200000 *
+stdout b.xbi.x_u31.bg1#branch                       -8e-13                  0.8 *
+stdout b.xbi.x_u30.bg1#branch                 -2.61273e-15          1.47483e-19
+stdout b.xbi.x_u27.bg1#branch                            0                    0
+stdout b.xbi.x_u26.bg1#branch                 -4.83887e-14         -1.42881e-18
+stdout b.xbi.x_u23.bg1#branch                    1.526e-10               -152.6 *
+stdout b.xbi.x_u22.bg1#branch                 -4.40857e-12          2.99179e-16 *
+stdout b.xbi.x_u19.bg1#branch                  4.83887e-11                    0 *
+stdout b.xbi.x_u18.bg1#branch                 -4.83887e-11         -3.25259e-15 *
+stdout b.xbi.x_u16.bgsw+#branch                     -1e-12                    1 *
+stdout b.xbi.x_u12.bgvo-#branch               -4.15134e-09          3.41061e-13 *
+stdout b.xbi.x_u12.bgvo+#branch                          0                    0
+stdout b.xbi.x_u11.bgvo-#branch                          0                    0
+stdout b.xbi.x_u11.bgvo+#branch               -4.40874e-12                    0 *
+stdout b.xbi.x_u10.bgvo-#branch               -4.07664e-12                    0 *
+stdout b.xbi.x_u10.bgvo+#branch                          0                    0
+stdout v.xota.v1#branch                        6.37208e-11                    0 *
+stdout v.xota.v3#branch                        2.94691e-11                    0 *
+stdout v.xota.v2#branch                        6.10306e-11                    0 *
+stdout h.xop.x_h3.h_h3#branch                 -1.63727e-05                    0 *
+stdout v.xop.x_h3.vh_h3#branch                 -0.00163717                    0 *
+stdout h.xop.x_h2.h_h2#branch                     0.984711                    0 *
+stdout v.xop.x_h2.vh_h2#branch                -1.98958e-08                    0 *
+stdout h.xop.x_h1.h_h1#branch                     -99.6137                    0 *
+stdout v.xop.x_h1.vh_h1#branch                     10.0057                    0 *
+stdout h.xbi.x_h3.h_h3#branch                 -1.19906e-09                    0 *
+stdout v.xbi.x_h3.vh_h3#branch                 1.25252e-08                    0 *
+stdout h.xbi.x_h2.h_h2#branch                       1.1046                    0 *
+stdout v.xbi.x_h2.vh_h2#branch                -7.83575e-09                    0 *
+stdout h.xbi.x_h1.h_h1#branch                     -99.6127                    0 *
+stdout v.xbi.x_h1.vh_h1#branch                     10.0097                    0 *
+stdout e.xop.x_u4.e1#branch                   -1.27291e-11                    0 *
+stdout e.xop.x_u37.e1#branch                             0                    0
+stdout e.xop.x_u36.e1#branch                             0                    0
+stdout e.xop.x_u1.e3#branch                     4.5163e-05                    0 *
+stdout e.xop.x_u1.e2#branch                     8.8442e-28                    0
+stdout e.xop.x_u1.e1#branch                    1.42312e-26                    0
+stdout e.xop.e_e4#branch                          -1.11493                    0 *
+stdout e.xop.e_e3#branch                       -0.00445572                    0 *
+stdout e.xop.e_e1#branch                           15121.3                    0 *
+stdout e.xbi.x_u4.e1#branch                   -3.47765e-11                    0 *
+stdout e.xbi.x_u37.e1#branch                             0                    0
+stdout e.xbi.x_u36.e1#branch                             0                    0
+stdout e.xbi.x_u1.e3#branch                   -0.000139282                    0 *
+stdout e.xbi.x_u1.e2#branch                     8.8442e-28                    0
+stdout e.xbi.x_u1.e1#branch                    1.42312e-26                    0
+stdout e.xbi.e_e4#branch                          -1.12898                    0 *
+stdout e.xbi.e_e3#branch                       -0.00111116                    0 *
+stdout e.xbi.e_e1#branch                           15361.9                    0 *
+stdout v.xop.v_v_orp#branch                    0.000726022                   10 *
+stdout v.xop.v_v_orn#branch                    4.74026e-10                -10.3 *
+stdout v.xop.v_v_iscp#branch                    -8.796e-11                43.98 *
+stdout v.xop.v_v_iscn#branch                     9.618e-11               -48.09 *
+stdout v.xop.v_v_grp#branch                       -1.2e-10                   60 *
+stdout v.xop.v_v_grn#branch                        1.2e-10                  -60 *
+stdout v.xop.v_vcm_min#branch                      2.5e-11                  2.5 *
+stdout v.xop.v_vcm_max#branch                     -2.5e-11                 -2.5 *
+stdout v.xota.v7#branch                         0.00793686                    0 *
+stdout v.xota.v6#branch                       -1.60717e-11                    0 *
+stdout v.xota.v5#branch                        5.39142e-11                  1.2 *
+stdout v.xota.v4#branch                         -0.0443134                  1.4 *
+stdout vcol#branch                                0.201794                  -14 *
+stdout v.xbi.v_v_orp#branch                    3.29729e-06                   10 *
+stdout v.xbi.v_v_orn#branch                    4.87144e-10                -10.3 *
+stdout v.xbi.v_v_iscp#branch                    -8.796e-11                43.98 *
+stdout v.xbi.v_v_iscn#branch                     9.618e-11               -48.09 *
+stdout v.xbi.v_v_grp#branch                       -1.2e-10                   60 *
+stdout v.xbi.v_v_grn#branch                        1.2e-10                  -60 *
+stdout v.xbi.v_vcm_min#branch                      2.5e-11                  2.5 *
+stdout v.xbi.v_vcm_max#branch                     -2.5e-11                 -2.5 *
+stdout vctrl#branch                            6.33431e-05                    5 *
+stdout vref#branch                             -0.00362326                    5 *
+stdout vin#branch                             -1.34599e-05                    0 *
+stdout vn#branch                                   9.90225                  -15 *
+stdout vp#branch                                -0.0568139                   15 *
+stdout a.xop.x_u19.ag1#branch_1_0                   -5e-16               0.0005 *
+stdout a.xop.x_u18.ag1#branch_1_0                -4.94e-15              0.00494 *
+stdout a.xbi.x_u19.ag1#branch_1_0                   -5e-16               0.0005 *
+stdout a.xbi.x_u18.ag1#branch_1_0                -4.94e-15              0.00494 *
+stderr doAnalyses: OP:  Timestep too small; trouble with node "vref#branch"
+stderr op simulation(s) aborted

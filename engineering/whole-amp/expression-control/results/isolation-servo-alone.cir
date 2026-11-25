@@ -1,0 +1,17 @@
+Bias servo only, collector held at -14 V by diagnostic fixture
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/expression-control/models/MMBT3906.spice.txt"
+.options rshunt=1e12
+VP vp 0 15
+VN vn 0 -15
+VREF ref 0 5
+VCTRL target 0 5
+VCOL abc 0 -14
+XBI target be vp vn bo OPAx134
+RBB bo bbas 1k
+QBI abc bbas be DI_MMBT3906
+RBE ref be 10k
+CBI bo be 1n
+RRECOV bo be 100k
+.nodeset v(be)=5 v(bo)=5.006
+.end

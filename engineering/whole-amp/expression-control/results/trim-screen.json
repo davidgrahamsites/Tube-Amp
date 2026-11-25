@@ -1,0 +1,1019 @@
+{
+  "scope": "Nominal trim correction only. No pedal, native adoption, real trim tolerance, noise, startup or purchasing qualification.",
+  "calibrated_fractions": {
+    "220000": 0.7426155907690117,
+    "150000": 0.5697962228592939
+  },
+  "cases": [
+    {
+      "name": "220000-low",
+      "case": {
+        "dc_only": true,
+        "trim_resistance": 220000,
+        "trim_fraction": 0.4
+      },
+      "deck": "trim-220000-low.cir",
+      "deck_sha256": "9ecf222d2e9053be58ff17c9241d61cb689b35fa53523c5a0c60c543459f9ec2",
+      "log": "trim-220000-low.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": -0.702143400908993,
+        "plus": 0.5106264760303917,
+        "minus": 0.5109150551601238,
+        "db": 1.225950469948733,
+        "abc": -13.57190802969449,
+        "be": 0.0005003454545910221,
+        "bbas": -0.6165501021539934,
+        "bo": -0.6208538316515351,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004894326930318247,
+        "qdr": -0.0009927685128137951,
+        "qdm": -0.0010197573267501329
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "220000-high",
+      "case": {
+        "dc_only": true,
+        "trim_resistance": 220000,
+        "trim_fraction": 0.8
+      },
+      "deck": "trim-220000-high.cir",
+      "deck_sha256": "fb0937018eb04d17733e725e8209ac56d53c7a8405d5be6614f40b084ace5e8e",
+      "log": "trim-220000-high.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": 0.13412810442945053,
+        "plus": 0.5147306920114963,
+        "minus": 0.5154359264030868,
+        "db": 1.2302600722332862,
+        "abc": -13.57190802969447,
+        "be": 0.0005003454545912012,
+        "bbas": -0.6165501021539932,
+        "bo": -0.6208538316515348,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004894326930318246,
+        "qdr": -0.000992768501613528,
+        "qdm": -0.0010197202570749557
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "220000-cal-0",
+      "case": {
+        "dc_only": true,
+        "trim_resistance": 220000,
+        "trim_fraction": 0.7358447090098242
+      },
+      "deck": "trim-220000-cal-0.cir",
+      "deck_sha256": "da013ca93bc7b11f4da156af570f36b5ba8ac5e19fefb6177192b68eedef6649",
+      "log": "trim-220000-cal-0.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": -0.015365127358092012,
+        "plus": 0.5139970961178894,
+        "minus": 0.514627849394132,
+        "db": 1.2294898846851376,
+        "abc": -13.571908029694683,
+        "be": 0.0005003454545911602,
+        "bbas": -0.6165501021539936,
+        "bo": -0.6208538316515589,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004894326930318289,
+        "qdr": -0.0009927685036155427,
+        "qdm": -0.0010197268819649992
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "220000-cal-1",
+      "case": {
+        "dc_only": true,
+        "trim_resistance": 220000,
+        "trim_fraction": 0.7424386812249707
+      },
+      "deck": "trim-220000-cal-1.cir",
+      "deck_sha256": "62b86beb4000c4332b26ff1409f37fbad1d6ff5ad994f00e490e6b3b98687322",
+      "log": "trim-220000-cal-1.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": -0.0004026179225819886,
+        "plus": 0.5140705220041686,
+        "minus": 0.5147087299579471,
+        "db": 1.2295669753762146,
+        "abc": -13.571908029694304,
+        "be": 0.0005003454545910235,
+        "bbas": -0.6165501021539936,
+        "bo": -0.6208538316515353,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004894326930318274,
+        "qdr": -0.0009927685034154521,
+        "qdm": -0.0010197262188576402
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "220000-cal-2",
+      "case": {
+        "dc_only": true,
+        "trim_resistance": 220000,
+        "trim_fraction": 0.7426161147902606
+      },
+      "deck": "trim-220000-cal-2.cir",
+      "deck_sha256": "847358043dc7050010f8bd397033060fe709f83a475f27af4e95ef8da51cd639",
+      "log": "trim-220000-cal-2.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": 1.1925888326078691e-06,
+        "plus": 0.5140725036278077,
+        "minus": 0.5147109127695718,
+        "db": 1.2295690558986982,
+        "abc": -13.571908029694832,
+        "be": 0.0005003454545910923,
+        "bbas": -0.6165501021539936,
+        "bo": -0.6208538316515589,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004894326930318294,
+        "qdr": -0.0009927685034085536,
+        "qdm": -0.001019726200960242
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "220000-cal-3",
+      "case": {
+        "dc_only": true,
+        "trim_resistance": 220000,
+        "trim_fraction": 0.7426155907690117
+      },
+      "deck": "trim-220000-cal-3.cir",
+      "deck_sha256": "7caf70847b59dfed7728961418ed824a18b3f63c8a18099e256f3425a4cd4787",
+      "log": "trim-220000-cal-3.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": -9.24065534908478e-11,
+        "plus": 0.5140724977749008,
+        "minus": 0.5147109063224429,
+        "db": 1.2295690497536853,
+        "abc": -13.571908029694832,
+        "be": 0.0005003454545910923,
+        "bbas": -0.6165501021539936,
+        "bo": -0.6208538316515589,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004894326930318294,
+        "qdr": -0.0009927685034085848,
+        "qdm": -0.0010197262010130795
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "150000-low",
+      "case": {
+        "dc_only": true,
+        "trim_resistance": 150000,
+        "trim_fraction": 0.4
+      },
+      "deck": "trim-150000-low.cir",
+      "deck_sha256": "f3476daf656f32e9d0667b5f2b8971feedf34d97a373a8e27a1d009a6354579f",
+      "log": "trim-150000-low.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": -0.4658497095211872,
+        "plus": 0.5117862579333233,
+        "minus": 0.5121925676719352,
+        "db": 1.2271684560626401,
+        "abc": -13.57190802969448,
+        "be": 0.0005003454545911064,
+        "bbas": -0.6165501021539935,
+        "bo": -0.6208538316515352,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.000489432693031828,
+        "qdr": -0.000992768509649311,
+        "qdm": -0.0010197468500770465
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "150000-high",
+      "case": {
+        "dc_only": true,
+        "trim_resistance": 150000,
+        "trim_fraction": 0.8
+      },
+      "deck": "trim-150000-high.cir",
+      "deck_sha256": "9c29d5e349ba52358b61cca681b53d925c95132d611954a5f6d2dba218d6d754",
+      "log": "trim-150000-high.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": 0.7334684063848225,
+        "plus": 0.5176714280013001,
+        "minus": 0.5186752736708317,
+        "db": 1.233346974164464,
+        "abc": -13.571908029694914,
+        "be": 0.0005003454545910342,
+        "bbas": -0.6165501021539934,
+        "bo": -0.6208538316515351,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004894326930318263,
+        "qdr": -0.000992768493590505,
+        "qdm": -0.0010196937045634006
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "150000-cal-0",
+      "case": {
+        "dc_only": true,
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5553715243163043
+      },
+      "deck": "trim-150000-cal-0.cir",
+      "deck_sha256": "90639679f5f2e59f9520af1052e67ee7282c7e72dae1e15bb3f236e6cbad8378",
+      "log": "trim-150000-cal-0.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": -0.04107317915727269,
+        "plus": 0.513870937546926,
+        "minus": 0.5144888824605341,
+        "db": 1.2293574281228343,
+        "abc": -13.57190802969458,
+        "be": 0.0005003454545909962,
+        "bbas": -0.6165501021539936,
+        "bo": -0.6208538316515353,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004894326930318285,
+        "qdr": -0.0009927685039588588,
+        "qdm": -0.0010197280213097236
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "150000-cal-1",
+      "case": {
+        "dc_only": true,
+        "trim_resistance": 150000,
+        "trim_fraction": 0.56834393199109
+      },
+      "deck": "trim-150000-cal-1.cir",
+      "deck_sha256": "927416732d6872e05319b94506692f74ed2a45c680559e39f75fffd2ed86bf0f",
+      "log": "trim-150000-cal-1.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": -0.0041530046567679274,
+        "plus": 0.5140521176734886,
+        "minus": 0.5146884570955362,
+        "db": 1.2295476525043776,
+        "abc": -13.571908029694733,
+        "be": 0.0005003454545910219,
+        "bbas": -0.6165501021539936,
+        "bo": -0.6208538316515589,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004894326930318273,
+        "qdr": -0.0009927685034653148,
+        "qdm": -0.0010197263850660013
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "150000-cal-2",
+      "case": {
+        "dc_only": true,
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5698031469111642
+      },
+      "deck": "trim-150000-cal-2.cir",
+      "deck_sha256": "c81a0f1e98c1f7e1d33eb7974d6d0bafe7c05fa75fd1ecdf36c9a165ea27941d",
+      "log": "trim-150000-cal-2.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": 1.9800179351716408e-05,
+        "plus": 0.5140725949411253,
+        "minus": 0.5147110133536332,
+        "db": 1.2295691517692708,
+        "abc": -13.571908029694724,
+        "be": 0.0005003454545910403,
+        "bbas": -0.6165501021539938,
+        "bo": -0.6208538316515573,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.000489432693031829,
+        "qdr": -0.0009927685034084532,
+        "qdm": -0.0010197262001357492
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "150000-cal-3",
+      "case": {
+        "dc_only": true,
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939
+      },
+      "deck": "trim-150000-cal-3.cir",
+      "deck_sha256": "64cd653c76c3224b927a66dfd2a3ee77378fe785f349ba25cbd69762022f5f9e",
+      "log": "trim-150000-cal-3.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": -9.699684235289551e-09,
+        "plus": 0.5140724977275206,
+        "minus": 0.5147109062702762,
+        "db": 1.2295690497039407,
+        "abc": -13.571908029694724,
+        "be": 0.0005003454545910403,
+        "bbas": -0.6165501021539938,
+        "bo": -0.6208538316515573,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.000489432693031829,
+        "qdr": -0.0009927685034086542,
+        "qdm": -0.0010197262010135618
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "dc-12-0",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rail": 12,
+        "target": 0
+      },
+      "deck": "trim-dc-12-0.cir",
+      "deck_sha256": "d4b47b245c7e29062c9fe0c37029837e558ea895627352d98c98b7f9bd1f5389",
+      "log": "trim-dc-12-0.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": -2.6373213913513232e-05,
+        "plus": 0.5140728671164,
+        "minus": 0.5147112762708548,
+        "db": 1.22956941931426,
+        "abc": -10.571917328736035,
+        "be": 0.0004741768304140304,
+        "bbas": -0.6172140291025036,
+        "bo": -0.6216008850608544,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004893449745878233,
+        "qdr": -0.0009927685034074795,
+        "qdm": -0.0010197261978340988
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "dc-12-2.5",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rail": 12,
+        "target": 2.5
+      },
+      "deck": "trim-dc-12-2.5.cir",
+      "deck_sha256": "2d84e45121d9aed21a7d00921cfd8f159152b637738b35b772d924dad52f0bb6",
+      "log": "trim-dc-12-2.5.log",
+      "log_sha256": "5d6fd089a4a3425ad39d546c0692fdf1f94d6ff5f091a228ec1e5b752e6ab72d",
+      "status": "failed-op"
+    },
+    {
+      "name": "dc-12-4.9",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rail": 12,
+        "target": 4.9
+      },
+      "deck": "trim-dc-12-4.9.cir",
+      "deck_sha256": "c0e0fadc1bf61aabde15e2c04b16364ea929629a7cd9eb1f20e2439e31f150ef",
+      "log": "trim-dc-12-4.9.log",
+      "log_sha256": "c9ebfc4763c98c3b20de5875adf29d53d9defad6ec0d045293b405dc5f9828bd",
+      "status": "failed-op"
+    },
+    {
+      "name": "dc-12-5",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rail": 12,
+        "target": 5
+      },
+      "deck": "trim-dc-12-5.cir",
+      "deck_sha256": "facc78d305b296627eef1d94a61bd359705317941ce127de99d006634cbf8326",
+      "log": "trim-dc-12-5.log",
+      "log_sha256": "21a371b87131dcfd8059d7c98a19d82a63c9d3dac6ec11068d5f7e2010ba4370",
+      "status": "failed-op"
+    },
+    {
+      "name": "dc-15-0",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rail": 15,
+        "target": 0
+      },
+      "deck": "trim-dc-15-0.cir",
+      "deck_sha256": "64cd653c76c3224b927a66dfd2a3ee77378fe785f349ba25cbd69762022f5f9e",
+      "log": "trim-dc-15-0.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": -9.699684235289551e-09,
+        "plus": 0.5140724977275206,
+        "minus": 0.5147109062702762,
+        "db": 1.2295690497039407,
+        "abc": -13.571908029694724,
+        "be": 0.0005003454545910403,
+        "bbas": -0.6165501021539938,
+        "bo": -0.6208538316515573,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.000489432693031829,
+        "qdr": -0.0009927685034086542,
+        "qdm": -0.0010197262010135618
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "dc-15-2.5",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rail": 15,
+        "target": 2.5
+      },
+      "deck": "trim-dc-15-2.5.cir",
+      "deck_sha256": "40b8f999afa6392704b500d659dbe09e0d9d3744430607df14df354353ffb6e1",
+      "log": "trim-dc-15-2.5.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": 0.002649060108232188,
+        "plus": 0.5151296370668345,
+        "minus": 0.515770446376778,
+        "db": 1.2306271437323104,
+        "abc": -13.60860444449876,
+        "be": 2.5005246173590563,
+        "bbas": 1.9026979661778651,
+        "bo": 1.9002169270142697,
+        "ref": 5.0,
+        "target": 2.5
+      },
+      "collector_currents_A": {
+        "qbi": -0.0002414633920593766,
+        "qdr": -0.0009927685006580827,
+        "qdm": -0.001019717099648869
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "dc-15-4.9",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rail": 15,
+        "target": 4.9
+      },
+      "deck": "trim-dc-15-4.9.cir",
+      "deck_sha256": "a8a09ecc6bbde7e4f78c053276f772a129abd31fdb6185af52a68bd8bc253082",
+      "log": "trim-dc-15-4.9.log",
+      "log_sha256": "be5b6c0548959617b0e86036ad61496cc2dc11d585f03fc9157ec9c974543e66",
+      "status": "failed-op"
+    },
+    {
+      "name": "dc-15-5",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rail": 15,
+        "target": 5
+      },
+      "deck": "trim-dc-15-5.cir",
+      "deck_sha256": "4d4c2bbdb9357e7b54fb43a995b38a5db8b72ea09fcf8d69397abd6ee158c685",
+      "log": "trim-dc-15-5.log",
+      "log_sha256": "b6398af51c06baa2f3c990436de88431788a874561ca8aad2fb3ace6feb8aff2",
+      "status": "failed-op"
+    },
+    {
+      "name": "dc-16.5-0",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rail": 16.5,
+        "target": 0
+      },
+      "deck": "trim-dc-16.5-0.cir",
+      "deck_sha256": "b264b41a545e7ac5c3e5b97be3e7d7d3ac987f6d9e467efc0f944a8e8668ed68",
+      "log": "trim-dc-16.5-0.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": 1.319430248440513e-05,
+        "plus": 0.5140723192569726,
+        "minus": 0.5147107275042085,
+        "db": 1.2295688711264303,
+        "abc": -15.071903536204427,
+        "be": 0.0005134297708982616,
+        "bbas": -0.6162239529098171,
+        "bo": -0.6204875134102181,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004894750859355241,
+        "qdr": -0.0009927685034091564,
+        "qdm": -0.0010197262025496818
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "dc-16.5-2.5",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rail": 16.5,
+        "target": 2.5
+      },
+      "deck": "trim-dc-16.5-2.5.cir",
+      "deck_sha256": "369207fb087070fd4da95201bc953a547bf6782e51809a9c16097b71bd683adf",
+      "log": "trim-dc-16.5-2.5.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": 0.0026624242183492432,
+        "plus": 0.5151295387333834,
+        "minus": 0.5157703477457062,
+        "db": 1.2306270452733492,
+        "abc": -15.108599446268252,
+        "be": 2.500537701692727,
+        "bbas": 1.9030160029651233,
+        "bo": 1.9005562088029213,
+        "ref": 5.0,
+        "target": 2.5
+      },
+      "collector_currents_A": {
+        "qbi": -0.00024148659062276208,
+        "qdr": -0.0009927685006582833,
+        "qdm": -0.0010197171004957253
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "dc-16.5-4.9",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rail": 16.5,
+        "target": 4.9
+      },
+      "deck": "trim-dc-16.5-4.9.cir",
+      "deck_sha256": "db527bee85e75977d324d43d264bc75b32a466c89ef9e85a758c792a46ac338a",
+      "log": "trim-dc-16.5-4.9.log",
+      "log_sha256": "cacfb7d6582e3699200d8c442ab6d8ed34fad7df6fa06b02a39b07f905d61ea3",
+      "status": "failed-op"
+    },
+    {
+      "name": "dc-16.5-5",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rail": 16.5,
+        "target": 5
+      },
+      "deck": "trim-dc-16.5-5.cir",
+      "deck_sha256": "fb730c8e1afe2e75064e740df9032ea6bf219bf52304fc29a903d4a1640e399c",
+      "log": "trim-dc-16.5-5.log",
+      "log_sha256": "8d3f92efd59c7a6bffc2466c5940ddbd56fb07f433d233ba5f3347a8280b7d7a",
+      "status": "failed-op"
+    },
+    {
+      "name": "audio-100",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "hz": 100,
+        "amplitude": 8
+      },
+      "deck": "trim-audio-100.cir",
+      "deck_sha256": "fce04a4c4a04ad27ca5d8a12c8e77f168ed93f704ffb61cb10f7651071c6580e",
+      "log": "trim-audio-100.log",
+      "log_sha256": "ab61fac9a6640a16f250570668894a715360b0348755e8cc850999658f3e2196",
+      "op": {
+        "out": -9.699684235289551e-09,
+        "plus": 0.5140724977275206,
+        "minus": 0.5147109062702762,
+        "db": 1.2295690497039407,
+        "abc": -13.571908029694724,
+        "be": 0.0005003454545910403,
+        "bbas": -0.6165501021539938,
+        "bo": -0.6208538316515573,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.000489432693031829,
+        "qdr": -0.0009927685034086542,
+        "qdm": -0.0010197262010135618
+      },
+      "op_within_supply": true,
+      "end_s": 0.16,
+      "gain": 0.9573344432958834,
+      "fundamental_peak_V": 7.658675546367067,
+      "thd_percent": 0.059964121540776405,
+      "dc_V": -0.03321950139489588,
+      "peak_V": 7.701709393501199,
+      "final": {
+        "be": 0.0005003454587135365,
+        "bo": -0.6208538316473877,
+        "bbas": -0.6165501021502663,
+        "abc": -13.571908029693802,
+        "target": 0.0
+      },
+      "max_reverse_base_emitter_V": -0.6170504476011298,
+      "status": "complete"
+    },
+    {
+      "name": "audio-1000",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "hz": 1000,
+        "amplitude": 8
+      },
+      "deck": "trim-audio-1000.cir",
+      "deck_sha256": "2da3b4a05e10b65f11c978f6c0b809e8c18c47c193951fdbc8079486f779ca43",
+      "log": "trim-audio-1000.log",
+      "log_sha256": "4ca1ba7f6f5fefb925d4515cc0ac47b8543dd107caffd0fbb391aed928e80bc1",
+      "op": {
+        "out": -9.699684235289551e-09,
+        "plus": 0.5140724977275206,
+        "minus": 0.5147109062702762,
+        "db": 1.2295690497039407,
+        "abc": -13.571908029694724,
+        "be": 0.0005003454545910403,
+        "bbas": -0.6165501021539938,
+        "bo": -0.6208538316515573,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.000489432693031829,
+        "qdr": -0.0009927685034086542,
+        "qdm": -0.0010197262010135618
+      },
+      "op_within_supply": true,
+      "end_s": 0.016,
+      "gain": 0.9575235346238617,
+      "fundamental_peak_V": 7.660188276990894,
+      "thd_percent": 0.05892160991610989,
+      "dc_V": -0.006252582110352456,
+      "peak_V": 7.662579968903623,
+      "final": {
+        "be": 0.0005003454550167041,
+        "bo": -0.6208538316511069,
+        "bbas": -0.616550102153567,
+        "abc": -13.571908029695011,
+        "target": 0.0
+      },
+      "max_reverse_base_emitter_V": -0.6170504476037618,
+      "status": "complete"
+    },
+    {
+      "name": "audio-10000",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "hz": 10000,
+        "amplitude": 8
+      },
+      "deck": "trim-audio-10000.cir",
+      "deck_sha256": "faf282ecea4b5f7e9e1d63ec4a1b2a9fe7aa966da02da11c1504287338f8bfc7",
+      "log": "trim-audio-10000.log",
+      "log_sha256": "f30e0795f35f6cad5ab3b72172b4476c938ad530ad8d1aef83ac839493cbfc82",
+      "op": {
+        "out": -9.699684235289551e-09,
+        "plus": 0.5140724977275206,
+        "minus": 0.5147109062702762,
+        "db": 1.2295690497039407,
+        "abc": -13.571908029694724,
+        "be": 0.0005003454545910403,
+        "bbas": -0.6165501021539938,
+        "bo": -0.6208538316515573,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.000489432693031829,
+        "qdr": -0.0009927685034086542,
+        "qdm": -0.0010197262010135618
+      },
+      "op_within_supply": true,
+      "end_s": 0.0016,
+      "gain": 0.9491919166553344,
+      "fundamental_peak_V": 7.593535333242675,
+      "thd_percent": 0.05744887605515821,
+      "dc_V": 0.0033167935862227216,
+      "peak_V": 7.601450609058328,
+      "final": {
+        "be": 0.0005003454540157388,
+        "bo": -0.6208538316521367,
+        "bbas": -0.6165501021545655,
+        "abc": -13.571908029694194,
+        "target": 0.0
+      },
+      "max_reverse_base_emitter_V": -0.617050447605767,
+      "status": "complete"
+    },
+    {
+      "name": "audio-12",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "hz": 1000,
+        "amplitude": 8,
+        "rail": 12
+      },
+      "deck": "trim-audio-12.cir",
+      "deck_sha256": "95628c0134f86d2586debec024ff1295164bbe44098c374103ba304dc50e0c84",
+      "log": "trim-audio-12.log",
+      "log_sha256": "b2b575336cdabc31e0278f5dbb0a5fdbaca174c239dac17aca9d607672155f94",
+      "op": {
+        "out": -2.6373213913513232e-05,
+        "plus": 0.5140728671164,
+        "minus": 0.5147112762708548,
+        "db": 1.22956941931426,
+        "abc": -10.571917328736035,
+        "be": 0.0004741768304140304,
+        "bbas": -0.6172140291025036,
+        "bo": -0.6216008850608544,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004893449745878233,
+        "qdr": -0.0009927685034074795,
+        "qdm": -0.0010197261978340988
+      },
+      "op_within_supply": true,
+      "end_s": 0.016,
+      "gain": 0.9573515328536801,
+      "fundamental_peak_V": 7.658812262829441,
+      "thd_percent": 0.058920864989125216,
+      "dc_V": -0.006277846620512728,
+      "peak_V": 7.661161497458093,
+      "final": {
+        "be": 0.0004741768267869276,
+        "bo": -0.6216008850644996,
+        "bbas": -0.6172140291061492,
+        "abc": -10.571917328735966,
+        "target": 0.0
+      },
+      "max_reverse_base_emitter_V": -0.6176882059288016,
+      "status": "complete"
+    },
+    {
+      "name": "audio-refined",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "hz": 1000,
+        "amplitude": 8,
+        "refine": 2
+      },
+      "deck": "trim-audio-refined.cir",
+      "deck_sha256": "2da3b4a05e10b65f11c978f6c0b809e8c18c47c193951fdbc8079486f779ca43",
+      "log": "trim-audio-refined.log",
+      "log_sha256": "2a2d435535ad3efb8f2aac431a4205c1fcbd257adc5c35aa31e50518ac5ae60a",
+      "op": {
+        "out": -9.699684235289551e-09,
+        "plus": 0.5140724977275206,
+        "minus": 0.5147109062702762,
+        "db": 1.2295690497039407,
+        "abc": -13.571908029694724,
+        "be": 0.0005003454545910403,
+        "bbas": -0.6165501021539938,
+        "bo": -0.6208538316515573,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.000489432693031829,
+        "qdr": -0.0009927685034086542,
+        "qdm": -0.0010197262010135618
+      },
+      "op_within_supply": true,
+      "end_s": 0.016,
+      "gain": 0.9575557693979764,
+      "fundamental_peak_V": 7.660446155183811,
+      "thd_percent": 0.05892752883053995,
+      "dc_V": -0.006252980409387154,
+      "peak_V": 7.662611844350324,
+      "final": {
+        "be": 0.0005003454569066107,
+        "bo": -0.6208538316492074,
+        "bbas": -0.6165501021516621,
+        "abc": -13.571908029694189,
+        "target": 0.0
+      },
+      "max_reverse_base_emitter_V": -0.6170504476035118,
+      "status": "complete"
+    },
+    {
+      "name": "temp-0",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "temperature": 0
+      },
+      "deck": "trim-temp-0.cir",
+      "deck_sha256": "791952cdbbb6bf1bd0236393846e990f94469556c97b808d2dbad79bfca8e599",
+      "log": "trim-temp-0.log",
+      "log_sha256": "40d2e7eb9858f8d03c2763437a321033e5d61cdaab5d5c38245f0f95637dbab1",
+      "op": {
+        "out": 0.02794127401143883,
+        "plus": 0.5066311258504901,
+        "minus": 0.5072248326189169,
+        "db": 1.2639293859147644,
+        "abc": -13.48748148999983,
+        "be": 0.0004463752210025546,
+        "bbas": -0.6685849834948245,
+        "bo": -0.6735466242471507,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.00048825379073335235,
+        "qdr": -0.0009789028758490062,
+        "qdm": -0.0010047450525136926
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "temp-70",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "temperature": 70
+      },
+      "deck": "trim-temp-70.cir",
+      "deck_sha256": "b1d7dd86ef96555381c592377553c60dcccc3c0cae06268a2488f5aa3bbd245b",
+      "log": "trim-temp-70.log",
+      "log_sha256": "aa2a6e2ea35796018fe45ea4b141b2a5fdb7496e5a758db14a852a1d23ed988d",
+      "op": {
+        "out": -0.04185115088718911,
+        "plus": 0.5256220658975123,
+        "minus": 0.5263281289673813,
+        "db": 1.1733791062586953,
+        "abc": -13.708898619943339,
+        "be": 0.0005862974889467128,
+        "bbas": -0.5323765191215137,
+        "bo": -0.5358905979383113,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004910625210726869,
+        "qdr": -0.0010142216845548397,
+        "qdm": -0.0010429746727995456
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "shunt-1e+11",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rshunt": 100000000000.0
+      },
+      "deck": "trim-shunt-1e+11.cir",
+      "deck_sha256": "189591b4bce9e65e4655cd067ca373381598c78f55b165046ae693e4b0c6ce70",
+      "log": "trim-shunt-1e+11.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": -1.5145600073036204e-06,
+        "plus": 0.5140725525057219,
+        "minus": 0.5147109603430207,
+        "db": 1.2295691075632194,
+        "abc": -13.57190799609391,
+        "be": 0.0005002591409984727,
+        "bbas": -0.6165501889787696,
+        "bo": -0.6208539296353864,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004894327014723039,
+        "qdr": -0.0009927686572761313,
+        "qdm": -0.0010197263583555391
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    },
+    {
+      "name": "shunt-1e+13",
+      "case": {
+        "trim_resistance": 150000,
+        "trim_fraction": 0.5697962228592939,
+        "dc_only": true,
+        "rshunt": 10000000000000.0
+      },
+      "deck": "trim-shunt-1e+13.cir",
+      "deck_sha256": "bc681cc1721881092cb608ae342e87b285938b9f9f7ead5a9c31997c038ffe12",
+      "log": "trim-shunt-1e+13.log",
+      "log_sha256": "b495abfa7f462cbca2a3f4947860e0ca1b6c21f4b0389fb8cbcd6ebed376c1c7",
+      "op": {
+        "out": 1.407921061841739e-07,
+        "plus": 0.5140724922497056,
+        "minus": 0.5147109008630066,
+        "db": 1.2295690439180165,
+        "abc": -13.571908033055628,
+        "be": 0.0005003540922708701,
+        "bbas": -0.6165500934651593,
+        "bo": -0.6208538218467842,
+        "ref": 5.0,
+        "target": 0.0
+      },
+      "collector_currents_A": {
+        "qbi": -0.0004894326921871473,
+        "qdr": -0.0009927684880204238,
+        "qdm": -0.0010197261852779096
+      },
+      "op_within_supply": true,
+      "status": "complete"
+    }
+  ],
+  "provenance": {
+    "engineering/whole-amp/expression-control/tools/trim_screen.py": "e4014de035024b7b3149f79adda6006ea1a3fa372d9163e222582ec2ee40c8db",
+    "engineering/whole-amp/expression-control/tools/bias_screen.py": "a4ad483d1a163c01cf83b8658de186c4278897bc7afaf7bf4efca25a5c768388",
+    "engineering/whole-amp/expression-control/tools/ota_screen.py": "4f1bc096811638c562a6ca202fd5edc556a772cb7fc77c741f92bfd1e64af418",
+    "engineering/whole-amp/expression-control/models/LM13700.MOD": "666df501773da5e65f7fd3b3c806b2c1ae7770784685dd8191a9df33b382f390",
+    "engineering/solid-state-reverb/simulation/models/OPAx134.LIB": "8ff414c678a7f8330b87504d7e0553de20ca87bdc713cecf81ab3448b4d7608f",
+    "engineering/whole-amp/expression-control/models/MMBT3906.spice.txt": "712886c6ce94f511ad02ed384c2d313f4f2b76faf8f68e7ba0bbd3d946b3dca4"
+  }
+}

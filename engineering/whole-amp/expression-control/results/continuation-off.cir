@@ -1,0 +1,302 @@
+Isolated expression OTA candidate, not released hardware
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/expression-control/models/LM13700.MOD"
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+.options rshunt=1000000000000.0
+.temp 27
+VP vp 0 15
+VN vn 0 -15
+VIN in 0 DC 0 AC 1 SIN(0 1 1000)
+CIN in acin 1u
+RIN acin minus 100k
+RTRIMTOP ref trim 1128.1800787466766
+RTRIMBOT trim 0 98871.81992125332
+RTRIM trim minus 330000
+RPLUS plus 0 1k
+RMINUS minus 0 1k
+VREF ref 0 5
+VCTRL target 0 5
+QDR dref dref ref DI_MMBT3906
+QDM db dref ref DI_MMBT3906
+RDR dref 0 4.32k
+XBI target be vp vn bo OPAx134
+RBB bo bbas 1k
+QBI abc bbas be DI_MMBT3906
+RBE ref be 10k
+CBI bo be 1n
+RRECOV bo be 100k
+RABC abc vn 1Meg
+XOTA abc db plus minus io vn 0 unused vp LM13700/NS
+RUNUSED unused vn 100k
+XOP 0 io vp vn out OPAx134
+RF io out 215k
+CF io out 10p
+RLOAD out 0 110k
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/expression-control/models/MMBT3906.spice.txt"
+.nodeset v(xop.x_u6.g1_int1)=0.00049999526939752
+.nodeset v(xop.x_u4.e1_int1)=0.00036915
+.nodeset v(xop.x_u37.5)=0
+.nodeset v(xop.x_u37.3)=0
+.nodeset v(xop.x_u36.5)=0
+.nodeset v(xop.x_u36.3)=0
+.nodeset v(xop.x_u35.g1_int1)=0
+.nodeset v(xop.x_u32.g1_int1)=0.00559889682869111
+.nodeset v(xop.x_u31.g1_int1)=1.24725357121481e-10
+.nodeset v(xop.x_u30.g1_int1)=6.24501710215874e-15
+.nodeset v(xop.x_u27.g1_int1)=0
+.nodeset v(xop.x_u26.g1_int1)=4.55588478921619e-09
+.nodeset v(xop.x_u23.g1_int1)=0
+.nodeset v(xop.x_u22.g1_int1)=0
+.nodeset v(xop.x_u19.g1_int2)=-4.55588478921619e-06
+.nodeset v(xop.x_u19.g1_int1)=0.000509799860349749
+.nodeset v(xop.x_u18.g1_int2)=4.55588478921619e-06
+.nodeset v(xop.x_u18.g1_int1)=0.0012032500381177
+.nodeset v(xop.x_u16.gsw+_int1)=0
+.nodeset v(xop.x_u12.gvo-_int1)=0
+.nodeset v(xop.x_u12.gvo+_int1)=0
+.nodeset v(xop.x_u11.gvo-_int1)=0
+.nodeset v(xop.x_u11.gvo+_int1)=0
+.nodeset v(xop.x_u10.gvo-_int1)=0
+.nodeset v(xop.x_u10.gvo+_int1)=0
+.nodeset v(xop.x_u1.5)=0
+.nodeset v(xop.x_u1.4)=1.66053864046299e-18
+.nodeset v(xop.x_u1.6)=1.66053864046299e-18
+.nodeset v(xop.x_u1.3)=-8.31514101821047e-19
+.nodeset v(xop.x_u1.8)=0.833786412646612
+.nodeset v(xop.x_u1.7)=0.833786412646612
+.nodeset v(xop.n4200896)=-10.2991362826157
+.nodeset v(xop.n4200916)=10.0008636970031
+.nodeset v(xop.n4200782)=4.55588550142554e-06
+.nodeset v(xop.n4200740)=7.08804827017159e-13
+.nodeset v(xop.v12)=-1.00292927426255e-08
+.nodeset v(xop.v11)=-1.03301885701106e-08
+.nodeset v(xop.n4200636)=-14.4901851080125
+.nodeset v(xop.n4200632)=13.7967349317565
+.nodeset v(xop.n4200578)=-59.9999999999993
+.nodeset v(xop.n4200566)=7.08804827017062e-13
+.nodeset v(xop.n4200540)=7.08804827017062e-13
+.nodeset v(xop.n4200536)=60.0000000000007
+.nodeset v(xop.n4200484)=-48.0899999999993
+.nodeset v(xop.n4200472)=7.08804827017062e-13
+.nodeset v(xop.n4200444)=7.08804827017062e-13
+.nodeset v(xop.n4200442)=43.9800000000007
+.nodeset v(xop.n4200398)=7.08804827017062e-13
+.nodeset v(xop.n4200364)=7.08804827017062e-13
+.nodeset v(xop.n4201254)=0.0055986419314988
+.nodeset v(xop.n4200302)=6.24571967612086e-09
+.nodeset v(xop.n4200278)=0.000499995270105256
+.nodeset v(xop.n4200270)=-12.4999849999255
+.nodeset v(xop.n4200258)=12.499984999927
+.nodeset v(xop.n4200254)=0.000499995207655084
+.nodeset v(xop.n4200208)=-5.00135884105372e-14
+.nodeset v(xop.n4201644)=0.00559942131672487
+.nodeset v(xop.vsense)=0.000863416381940201
+.nodeset v(xop.n4200218)=0.000369149998715323
+.nodeset v(xop.n4200222)=0.000499995270106324
+.nodeset v(xop.n4200864)=0.000500684021156403
+.nodeset v(xop.n4200960)=10.0008637070431
+.nodeset v(xop.n4200952)=10.0008636970031
+.nodeset v(xop.n4200924)=-10.2991362929569
+.nodeset v(xop.n4200928)=-10.2991362826157
+.nodeset v(xop.vee_clp)=-14.4901850790321
+.nodeset v(xop.vcc_clp)=13.7967349041631
+.nodeset v(xop.n4200190)=0.000369149999949986
+.nodeset v(xop.n4200198)=0.000369149998715323
+.nodeset v(xop.vee_b)=-14.9999849999255
+.nodeset v(xop.vcc_b)=14.999984999927
+.nodeset v(xop.n4201412)=0.00559942151502082
+.nodeset v(xop.claw_clamp)=0.000863707011503923
+.nodeset v(xop.cl_clamp)=0.000863707010640216
+.nodeset v(xop.n4201202)=0.000863707010640216
+.nodeset v(out)=0.000500684021156403
+.nodeset v(xop.n4200794)=0.000500684021156403
+.nodeset v(xop.esdn)=0.000499995207655085
+.nodeset v(xop.esdp)=-5.00160804632795e-14
+.nodeset v(xop.n4200214)=-4.56414419207838e-05
+.nodeset v(xop.n4201680)=-5.93384388719308e-05
+.nodeset v(xop.n42414241)=0.0055994211891998
+.nodeset v(xop.n4201138)=0.00086370701236763
+.nodeset v(xop.n4201536)=0.000863708309197084
+.nodeset v(xop.n4201532)=0.00114313534677491
+.nodeset v(xop.n4200216)=8.52038299702133e-05
+.nodeset v(xop.n4201456)=0.000119293882309699
+.nodeset v(xop.n4201452)=8.52099163816007e-05
+.nodeset v(xop.n4201448)=10.2251896724892
+.nodeset v(xop.n4201430)=2.1275495837819e-07
+.nodeset v(xop.n4201424)=0.00559886145184842
+.nodeset v(xop.n4201574)=0.000863707660783152
+.nodeset v(xop.vclp)=0.000863707043105677
+.nodeset v(xop.clamp)=0.000863416383793697
+.nodeset v(xop.n4200292)=0.000499995270105255
+.nodeset v(xop.vout_s)=0.000500684021054339
+.nodeset v(xop.vimon)=4.55588549802102e-06
+.nodeset v(xop.sw_ol_opax134)=7.08804826946278e-13
+.nodeset v(xop.n4200734)=-1.0029292741894e-08
+.nodeset v(xop.n4200728)=-1.03301885692387e-08
+.nodeset v(xop.n4200664)=-14.4901851080125
+.nodeset v(xop.n4200668)=13.7967349317565
+.nodeset v(xop.n4200604)=0.0008634163819402
+.nodeset v(xop.n4200560)=7.08804827017061e-13
+.nodeset v(xop.n4200542)=7.08804827017061e-13
+.nodeset v(xop.n4201374)=-4.56449529202451e-05
+.nodeset v(xop.n4201370)=-1.14112384745675
+.nodeset v(xop.n4200466)=7.08804827017061e-13
+.nodeset v(xop.n4200446)=7.08804827017061e-13
+.nodeset v(xop.n4200400)=7.08804827017061e-13
+.nodeset v(xop.mid)=7.08804827018577e-13
+.nodeset v(xop.n4200376)=7.08804827017061e-13
+.nodeset v(xop.n4201042)=-14.9999849849255
+.nodeset v(xop.n4201004)=7.08804827018577e-13
+.nodeset v(xop.n4201026)=14.999984984927
+.nodeset v(xop.n4201214)=0.00139188682721107
+.nodeset v(xop.n4201210)=0.0323276477202844
+.nodeset v(xop.n4200188)=7.08797014155935e-13
+.nodeset v(xop.n4201330)=5.68392607703094e-13
+.nodeset v(unused)=-1.19619013504121
+.nodeset v(xota.30)=-0.579590340303489
+.nodeset v(xota.23)=14.3484419487519
+.nodeset v(xota.32)=0.516852207711459
+.nodeset v(xota.24)=14.3484419487519
+.nodeset v(xota.33)=0
+.nodeset v(xota.25)=-0.0519015449336609
+.nodeset v(xota.31)=0.24190147898373
+.nodeset v(xota.28)=-13.8
+.nodeset v(xota.29)=13.6
+.nodeset v(xota.27)=-15
+.nodeset v(xota.26)=-14.7347694663108
+.nodeset v(xota.22)=14.3484419487519
+.nodeset v(xota.21)=14.6729361023109
+.nodeset v(io)=0.000499995207685117
+.nodeset v(abc)=-14.9999496949658
+.nodeset v(bbas)=5.00603600364601
+.nodeset v(xbi.x_u6.g1_int1)=5.00055137531515
+.nodeset v(xbi.x_u4.e1_int1)=0.00036915
+.nodeset v(xbi.x_u37.5)=0
+.nodeset v(xbi.x_u37.3)=0
+.nodeset v(xbi.x_u36.5)=0
+.nodeset v(xbi.x_u36.3)=0
+.nodeset v(xbi.x_u35.g1_int1)=0
+.nodeset v(xbi.x_u32.g1_int1)=55.0701984273351
+.nodeset v(xbi.x_u31.g1_int1)=6.0967010544088e-06
+.nodeset v(xbi.x_u30.g1_int1)=3.0526272532473e-10
+.nodeset v(xbi.x_u27.g1_int1)=0
+.nodeset v(xbi.x_u26.g1_int1)=6.49405607254361e-08
+.nodeset v(xbi.x_u23.g1_int1)=0
+.nodeset v(xbi.x_u22.g1_int1)=0
+.nodeset v(xbi.x_u19.g1_int2)=-6.49405607254361e-05
+.nodeset v(xbi.x_u19.g1_int1)=0.000509798009489311
+.nodeset v(xbi.x_u18.g1_int2)=6.49405607254361e-05
+.nodeset v(xbi.x_u18.g1_int1)=0.00120325054335903
+.nodeset v(xbi.x_u16.gsw+_int1)=0
+.nodeset v(xbi.x_u12.gvo-_int1)=0
+.nodeset v(xbi.x_u12.gvo+_int1)=0
+.nodeset v(xbi.x_u11.gvo-_int1)=0
+.nodeset v(xbi.x_u11.gvo+_int1)=0
+.nodeset v(xbi.x_u10.gvo-_int1)=0
+.nodeset v(xbi.x_u10.gvo+_int1)=0
+.nodeset v(xbi.x_u1.5)=0
+.nodeset v(xbi.x_u1.4)=1.66053864046299e-18
+.nodeset v(xbi.x_u1.6)=1.66053864046299e-18
+.nodeset v(xbi.x_u1.3)=-8.31514101821047e-19
+.nodeset v(xbi.x_u1.8)=0.833786412646612
+.nodeset v(xbi.x_u1.7)=0.833786412646612
+.nodeset v(xbi.n4200896)=-4.86257485392804
+.nodeset v(xbi.n4200916)=15.4374251256908
+.nodeset v(xbi.n4200782)=6.4940224044861e-05
+.nodeset v(be)=5.00054832267828
+.nodeset v(xbi.n4200740)=7.07880537462799e-13
+.nodeset v(xbi.v12)=-1.00365588602398e-08
+.nodeset v(xbi.v11)=-1.03229232353047e-08
+.nodeset v(xbi.n4200636)=-14.490186958873
+.nodeset v(xbi.n4200632)=13.7967344265152
+.nodeset v(xbi.n4200578)=-59.9999999999993
+.nodeset v(xbi.n4200566)=7.07880537462702e-13
+.nodeset v(xbi.n4200540)=7.07880537462702e-13
+.nodeset v(xbi.n4200536)=60.0000000000007
+.nodeset v(xbi.n4200484)=-48.0899999999993
+.nodeset v(xbi.n4200472)=7.07880537462702e-13
+.nodeset v(xbi.n4200444)=7.07880537462702e-13
+.nodeset v(xbi.n4200442)=43.9800000000007
+.nodeset v(xbi.n4200398)=7.07880537462702e-13
+.nodeset v(xbi.n4200364)=7.07880537462702e-13
+.nodeset v(xbi.n4201254)=55.0676953443155
+.nodeset v(xbi.n4200302)=0.000305262420816473
+.nodeset v(xbi.n4200278)=5.00055137530517
+.nodeset v(xbi.n4200270)=-12.4999849999255
+.nodeset v(xbi.n4200258)=12.499984999927
+.nodeset v(xbi.n4200254)=5.00054832267792
+.nodeset v(xbi.n4200208)=4.9999999999994
+.nodeset v(xbi.n4201644)=55.0753573478278
+.nodeset v(xbi.vsense)=5.43559740326716
+.nodeset v(xbi.n4200218)=5.00042053504452
+.nodeset v(xbi.n4200222)=5.00055137531586
+.nodeset v(xbi.n4200864)=5.00603603997592
+.nodeset v(xbi.n4200960)=15.4374251357435
+.nodeset v(xbi.n4200952)=15.4374251256908
+.nodeset v(xbi.n4200924)=-4.86257486425653
+.nodeset v(xbi.n4200928)=-4.86257485392804
+.nodeset v(xbi.vee_clp)=-14.4901869298926
+.nodeset v(xbi.vcc_clp)=13.7967343989217
+.nodeset v(xbi.n4200190)=5.0003691499994
+.nodeset v(xbi.n4200198)=5.00042053504453
+.nodeset v(xbi.vee_b)=-14.9999849999255
+.nodeset v(xbi.vcc_b)=14.999984999927
+.nodeset v(xbi.n4201412)=55.0753585370766
+.nodeset v(xbi.claw_clamp)=5.43742514451419
+.nodeset v(xbi.cl_clamp)=5.43742513907676
+.nodeset v(xbi.n4201202)=5.43742513907676
+.nodeset v(bo)=5.00603603997592
+.nodeset v(xbi.n4200794)=5.00603603997592
+.nodeset v(xbi.esdn)=5.00054832267792
+.nodeset v(xbi.esdp)=4.9999999999994
+.nodeset v(xbi.n4200214)=-4.56414419217117e-05
+.nodeset v(xbi.n4201680)=-5.93384388728664e-05
+.nodeset v(xbi.n42414241)=55.0753567979533
+.nodeset v(xbi.n4201138)=5.43742514995161
+.nodeset v(xbi.n4201536)=5.43743629847252
+.nodeset v(xbi.n4201532)=7.19655505003002
+.nodeset v(xbi.n4200216)=8.52038299695532e-05
+.nodeset v(xbi.n4201456)=0.000119293882308826
+.nodeset v(xbi.n4201452)=8.52099163807126e-05
+.nodeset v(xbi.n4201448)=10.2251896724892
+.nodeset v(xbi.n4201430)=0.00209262987026076
+.nodeset v(xbi.n4201424)=55.0698505719785
+.nodeset v(xbi.n4201574)=5.43743072420966
+.nodeset v(xbi.vclp)=5.43742513574347
+.nodeset v(xbi.clamp)=5.43559741512458
+.nodeset v(xbi.n4200292)=5.00055137530517
+.nodeset v(xbi.vout_s)=5.00603603947769
+.nodeset v(xbi.vimon)=6.49405614333166e-05
+.nodeset v(xbi.sw_ol_opax134)=7.07880537392011e-13
+.nodeset v(xbi.n4200734)=-1.00365588685709e-08
+.nodeset v(xbi.n4200728)=-1.03229232259673e-08
+.nodeset v(xbi.n4200664)=-14.490186958873
+.nodeset v(xbi.n4200668)=13.7967344265152
+.nodeset v(xbi.n4200604)=5.43559740326715
+.nodeset v(xbi.n4200560)=7.07880537462701e-13
+.nodeset v(xbi.n4200542)=7.07880537462701e-13
+.nodeset v(xbi.n4201374)=-4.56449529211781e-05
+.nodeset v(xbi.n4201370)=-1.14112384745675
+.nodeset v(xbi.n4200466)=7.07880537462701e-13
+.nodeset v(xbi.n4200446)=7.07880537462701e-13
+.nodeset v(xbi.n4200400)=7.07880537462701e-13
+.nodeset v(xbi.mid)=7.07880537464215e-13
+.nodeset v(xbi.n4200376)=7.07880537462701e-13
+.nodeset v(xbi.n4201042)=-14.9999849849255
+.nodeset v(xbi.n4201004)=7.07880537464215e-13
+.nodeset v(xbi.n4201026)=14.999984984927
+.nodeset v(xbi.n4201214)=13.6904617408446
+.nodeset v(xbi.n4201210)=38.4120961620174
+.nodeset v(xbi.n4200188)=5.13999979222524e-05
+.nodeset v(xbi.n4201330)=0.925199990748055
+.nodeset v(db)=1.23170670176444
+.nodeset v(dref)=4.36091132336493
+.nodeset v(target)=5
+.nodeset v(plus)=0.516207521783693
+.nodeset v(trim)=4.92867832075512
+.nodeset v(ref)=5
+.nodeset v(minus)=0.516852207711459
+.nodeset v(acin)=0.515175636123334
+.nodeset v(in)=-3.91886975727153e-15
+.nodeset v(vn)=-15
+.nodeset v(vp)=15
+.end

@@ -5,3 +5,5 @@ Process: ota_screen.py owns the standalone manufacturer-model audio gain-cell ex
 Human check: inspect rejected cases, model limitations and ideal bias/trim assumptions before choosing an actual component or copying a circuit into KiCad.
 
 Additional factories: supply_probe.py diagnoses the old low-supply timeout without changing physical components. bias_screen.py replaces ideal currents with a PNP/servo/current-mirror candidate using the primary Diodes card; audit_supply_bias.py owns integrity and bounded numeric checks, reporting unresolved cases separately from evidence success. Public seam is the JSON case/deck/report format; the original ota_screen.py stays unchanged for VAL-042 provenance.
+
+VAL-044 factories: trim_screen.py consumes bias_screen.deck/measure through bounded child processes and writes trim-* evidence. bias_continuation.py derives solver hints only; bias_isolation.py owns five causal fixture/substitution checks. audit_trim_isolation.py checks retained hashes and numeric evidence, preserving failed cases and distinguishing diagnostic substitutes from real hardware.
