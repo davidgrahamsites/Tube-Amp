@@ -1,0 +1,8 @@
+# Adopted film-capacitor identity synchronization
+Owner: Renegade integration. One job: reconcile already adopted KNSCHA film parts across source and native schematic without changing the physical boards.
+Inputs: fixed native baseline and15 exact adopted references in contract.json; committed component coverage; original manufacturer PDFs and November20/21 selection reports in ../evidence; four current pcb-measured-r boards.
+Process: tools/synchronize.py updates hidden identity/footprint metadata only. tools/check.py compares all pin partitions, native component metadata, source data and unchanged physical boards; native exports and page raster equality check that readability is preserved. References whose selection conflicts with the actual board stay explicit rather than being silently substituted.
+Outputs/public seam: review.md, contract.json and results receipts. Native source/schematic metadata is the authorized product; the boards remain unchanged.
+Done-condition: all15 declared refs match the selected footprint/MPN in source and schematic, complete connectivity/visual preservation and native ERC checks pass, remaining sourcing/qualification conflicts documented. This is not a manufacturing release or completion of all part selection.
+Effort: one bounded metadata repair and native export/check pass. No new simulation is necessary because values and connectivity do not change; prior timing results remain historical evidence.
+Human check: match the purchased marking, lead shape, pitch, maximum body and insulation needs to the drawing and board before assembly; verify actual installed heat and lead forming. Do not force pitch-tolerance extremes into holes.
