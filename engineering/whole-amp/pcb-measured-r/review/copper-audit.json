@@ -3470,7 +3470,7 @@
       "all_corner_review_complete": false
     },
     "Reverb": {
-      "sha256": "113abfad708ac6812c9f04afb946ae3825a1d50f0dccc2922a87955e5b05c3b8",
+      "sha256": "2c1af294f09cb902c330ef5c52ceaadd44d48af136f5e22d5fe30e3e216f3683",
       "nets": {
         "+12V": {
           "segments": 11,
@@ -3499,8 +3499,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "+15V": {
-          "segments": 31,
-          "length_mm": 228.561,
+          "segments": 35,
+          "length_mm": 228.788,
           "widths_mm": [
             0.3
           ],
@@ -3691,8 +3691,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "DRIVER": {
-          "segments": 11,
-          "length_mm": 39.402,
+          "segments": 13,
+          "length_mm": 39.515,
           "widths_mm": [
             0.3
           ],
@@ -3787,8 +3787,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "GND": {
-          "segments": 113,
-          "length_mm": 504.514,
+          "segments": 119,
+          "length_mm": 504.854,
           "widths_mm": [
             0.3
           ],
@@ -4109,8 +4109,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "REC_IN": {
-          "segments": 7,
-          "length_mm": 34.043,
+          "segments": 9,
+          "length_mm": 34.156,
           "widths_mm": [
             0.3
           ],
@@ -4482,24 +4482,6 @@
           "net": "DRIVER",
           "layer": "B.Cu",
           "at_mm": [
-            61.0,
-            35.5
-          ],
-          "segments": 3,
-          "in_pad": false,
-          "at_via": false,
-          "pairwise_turns_degrees": [
-            90.0,
-            90.0,
-            0.0
-          ],
-          "right_angle_pair_present": true,
-          "qualified": false
-        },
-        {
-          "net": "DRIVER",
-          "layer": "B.Cu",
-          "at_mm": [
             56.5,
             28.5
           ],
@@ -4653,24 +4635,6 @@
           "in_pad": true,
           "at_via": false,
           "pairwise_turns_degrees": [
-            90.0
-          ],
-          "right_angle_pair_present": true,
-          "qualified": false
-        },
-        {
-          "net": "REC_IN",
-          "layer": "B.Cu",
-          "at_mm": [
-            22.0,
-            66.0
-          ],
-          "segments": 3,
-          "in_pad": false,
-          "at_via": false,
-          "pairwise_turns_degrees": [
-            90.0,
-            0.0,
             90.0
           ],
           "right_angle_pair_present": true,
@@ -4926,24 +4890,6 @@
           "net": "+15V",
           "layer": "F.Cu",
           "at_mm": [
-            52.0,
-            42.5
-          ],
-          "segments": 3,
-          "in_pad": false,
-          "at_via": false,
-          "pairwise_turns_degrees": [
-            90.0,
-            90.0,
-            0.0
-          ],
-          "right_angle_pair_present": true,
-          "qualified": false
-        },
-        {
-          "net": "+15V",
-          "layer": "F.Cu",
-          "at_mm": [
             56.5,
             26.0
           ],
@@ -4988,24 +4934,6 @@
             0.0
           ],
           "right_angle_pair_present": false,
-          "qualified": false
-        },
-        {
-          "net": "+15V",
-          "layer": "B.Cu",
-          "at_mm": [
-            124.5,
-            59.0
-          ],
-          "segments": 3,
-          "in_pad": false,
-          "at_via": false,
-          "pairwise_turns_degrees": [
-            90.0,
-            0.0,
-            90.0
-          ],
-          "right_angle_pair_present": true,
           "qualified": false
         },
         {
@@ -5092,24 +5020,6 @@
           "net": "GND",
           "layer": "F.Cu",
           "at_mm": [
-            38.0,
-            22.0
-          ],
-          "segments": 3,
-          "in_pad": false,
-          "at_via": false,
-          "pairwise_turns_degrees": [
-            90.0,
-            0.0,
-            90.0
-          ],
-          "right_angle_pair_present": true,
-          "qualified": false
-        },
-        {
-          "net": "GND",
-          "layer": "F.Cu",
-          "at_mm": [
             78.0,
             77.0
           ],
@@ -5147,24 +5057,6 @@
           "layer": "F.Cu",
           "at_mm": [
             143.0,
-            51.5
-          ],
-          "segments": 3,
-          "in_pad": false,
-          "at_via": false,
-          "pairwise_turns_degrees": [
-            90.0,
-            0.0,
-            90.0
-          ],
-          "right_angle_pair_present": true,
-          "qualified": false
-        },
-        {
-          "net": "GND",
-          "layer": "F.Cu",
-          "at_mm": [
-            143.0,
             39.0
           ],
           "segments": 3,
@@ -5192,24 +5084,6 @@
             90.0,
             90.0,
             180.0
-          ],
-          "right_angle_pair_present": true,
-          "qualified": false
-        },
-        {
-          "net": "GND",
-          "layer": "F.Cu",
-          "at_mm": [
-            73.0,
-            24.0
-          ],
-          "segments": 3,
-          "in_pad": false,
-          "at_via": false,
-          "pairwise_turns_degrees": [
-            0.0,
-            90.0,
-            90.0
           ],
           "right_angle_pair_present": true,
           "qualified": false
@@ -5935,7 +5809,21 @@
       ],
       "arc_items_not_bend_screened": [
         "17256e1e-0ca4-4ba3-a2fe-4bebf5ae9868",
-        "2c9f2173-6d45-4bb2-b90f-8577f698cfcf"
+        "2c9f2173-6d45-4bb2-b90f-8577f698cfcf",
+        "2c08dad8-af86-5e6d-a4bf-248334436684",
+        "8e665584-226b-51cf-b5f1-bf74c5c23c8b",
+        "20c239a9-f2c6-542d-abaa-bcabc322f19a",
+        "4e5a80b0-276f-5966-af2d-b34ccf6bc8c8",
+        "022dd0d4-f7dd-5997-a0d6-0ef9b8f42474",
+        "f2edf29d-dc2a-5dd9-9ad0-e421bcf2ed22",
+        "2ea5316e-50d0-5084-9022-63ba9bf6986f",
+        "10f7f0a3-de23-5f3a-aad9-a0998a1efe86",
+        "7ca59c52-2b6d-5028-8159-45461cf10149",
+        "ae4c3d24-9a5d-542d-822b-4e47c8b697ac",
+        "ed0ff806-1704-5d21-a387-c22ca471f1ac",
+        "bb009f4c-cab1-5bc2-911b-4ab9a30e83bb",
+        "2ba6822e-01c7-55a6-af3c-f867b03f528d",
+        "253f1783-da1c-5456-baa4-e70e8383d2fb"
       ],
       "all_corner_review_complete": false
     }

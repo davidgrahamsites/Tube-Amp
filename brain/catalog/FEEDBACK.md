@@ -1206,6 +1206,7 @@ Source: Current build conversation; FB-119 attached cropped Reverb PCB plot
 
 - [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
 - [engineering/whole-amp/pcb-measured-r/review/u12-routing-review.md](<../../engineering/whole-amp/pcb-measured-r/review/u12-routing-review.md>)
+- [engineering/whole-amp/pcb-measured-r/review/branch-routing-review.md](<../../engineering/whole-amp/pcb-measured-r/review/branch-routing-review.md>)
 
 ## FB-120 — drill-chuck-measurement
 Authority: user. Disposition: incorporated. Recorded: 2026-11-24. Original date: 2026-11-24.

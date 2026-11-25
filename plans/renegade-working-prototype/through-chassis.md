@@ -54,3 +54,7 @@ Actual drill envelope remains deferred until November 25. Cabinet depth datum, a
 ## November24 U12 routing follow-up
 
 [VAL-031](../../brain/records/VAL-031-u12-corner-and-copper-coverage.md) repairs the reported U12 square T and enlarges eight chamfers, with fresh exact native/drill/DRC/socket checks. Eleven further outside-pad/via branch candidates remain. Copper inventory now covers all134 board/net entries, including wholly unrouted nets. Current capacity and populated three-board fit remain unqualified.
+
+## November24 branch and divider checkpoint
+
+[VAL-032](../../brain/records/VAL-032-reverb-branches-divider-stability.md) adopts seven additional rounded Reverb forks with zero native DRC/open connections and unchanged widths/drills. Four other-board branch candidates remain. A separate divider comparison improves shorter endurance margins but retains failed extended screens and incomplete exact Chinese stock evidence. Supervisor/carrier, current-path qualification and populated three-board fit remain open; complete drill access is still pending after the46mm chuck measurement.

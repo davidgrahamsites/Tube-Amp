@@ -56,19 +56,28 @@ def verify(before, after, contract):
     assert expected == after, 'Unexpected board atom or missing/extra route change'
     return rows
 
+def verify_current(before, after, contract):
+    """Validate the later branch repair before the historical U12-only delta."""
+    from check_branch_routing import baseline, verify as verify_branches
+    branch_path = M / 'branch-routing-contract.json'
+    branch = json.loads(branch_path.read_text())
+    branch_before = v.parse(baseline(branch).decode())
+    verify_branches(branch_before, after, branch)
+    return verify(before, branch_before, contract)
+
 def main():
     contract_path = M / 'u12-routing-contract.json'; c = json.loads(contract_path.read_text())
     active = ROOT / c['board']; candidate = Path(sys.argv[1]) if len(sys.argv)>1 else active
     baseline = subprocess.check_output(['/usr/bin/git', 'show', c['baseline_commit']+':'+c['board']], cwd=ROOT)
     assert hashlib.sha256(baseline).hexdigest() == c['before_sha256']
     a, b = v.parse(baseline.decode()), v.parse(candidate.read_text())
-    rows = verify(a, b, c)
+    rows = verify_current(a, b, c)
     bad = copy.deepcopy(b); v.field(v.children(bad, 'arc')[-1], 'width')[1] = '0.2'
-    try: verify(a, bad, c)
+    try: verify_current(a, bad, c)
     except AssertionError: pass
     else: raise AssertionError('Narrowed arc negative control escaped')
     bad = copy.deepcopy(b); bad.remove(v.children(bad, 'arc')[-1])
-    try: verify(a, bad, c)
+    try: verify_current(a, bad, c)
     except (AssertionError, KeyError): pass
     else: raise AssertionError('Missing branch negative control escaped')
     with tempfile.TemporaryDirectory(prefix='renegade-u12-check-') as td:
@@ -80,10 +89,12 @@ def main():
     drc = json.loads(out.read_text()); assert not drc['violations'] and not drc['unconnected_items']
     result = dict(passed=True,baseline_commit=c['baseline_commit'],source_feedback='FB-119',
         changed_segments=len(c['segment_changes']),added_arcs=rows,all_other_board_atoms_preserved=True,
+        preservation_scope='U12 delta plus separately verified exact seven-branch follow-up',
         exported_drills_unchanged=True,drc_violations=0,unconnected_items=0,
         negative_controls_rejected=['narrowed arc','missing branch'],
         all_board_corner_qualification=False,current_capacity_qualification=False,fabrication_ready=False,
-        source_sha256={str(contract_path.relative_to(ROOT)):hashlib.sha256(contract_path.read_bytes()).hexdigest(),
+        source_sha256={str(M.relative_to(ROOT)/'branch-routing-contract.json'):hashlib.sha256((M/'branch-routing-contract.json').read_bytes()).hexdigest(),
+                       str(contract_path.relative_to(ROOT)):hashlib.sha256(contract_path.read_bytes()).hexdigest(),
                        c['board']:hashlib.sha256(candidate.read_bytes()).hexdigest()})
     (M/'review/u12-routing-checks.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))

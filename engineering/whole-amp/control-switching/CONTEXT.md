@@ -9,3 +9,5 @@ Human check: measure reset startup/brownout, HC74 outputs, driver drain transien
 Current reset-edge seam: edge-contract.json and edge-routes.json define the bounded repair; edge-review.md and results/edge-native-checks.json supersede earlier native hashes only for this declared change. analyze_reset_edges.py diagnoses the unchanged vendor-model limitation.
 
 Brownout screen: brownout-contract.json owns the matrix; brownout-review.md records limits. check_brownout_limits.py, simulate_brownout_matrix.py and refine_brownout_matrix.py keep qualification false when completed nominal models cannot prove hardware corners.
+
+Divider comparison: divider-contract.json is a separate candidate interface; tools/check_divider_options.py writes results/divider-options.json. divider-review.md retains manufacturer/supplier observations and explicit failed extended screens. It does not overwrite the historical simulation contract or select a native part.

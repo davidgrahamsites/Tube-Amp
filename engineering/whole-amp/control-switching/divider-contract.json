@@ -1,0 +1,71 @@
+{
+  "owner": "Renegade control interface",
+  "status": "Candidate comparison only; no supervisor/divider native adoption",
+  "baseline_contract": "contract.json",
+  "baseline_sha256": "67b5316dc035eee7354e7febcabff62919fd0fdf29d50e16972db30cd381eea8",
+  "manufacturer_source": "engineering/component-selection/evidence/TNPW_e3_2026-04-10.pdf",
+  "manufacturer_sha256": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5",
+  "manufacturer_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+  "source_revision": "10-Apr-2026",
+  "top_mpn": "TNPW080530K1BEEA",
+  "bottom_mpn": "TNPW080510K0BEEA",
+  "top_ohm": 30100,
+  "bottom_ohm": 10000,
+  "initial_tolerance": 0.001,
+  "tcr_per_K": 2.5e-05,
+  "reference_temperature_C": 20,
+  "resistor_temperature_screen_C": [
+    -40,
+    90
+  ],
+  "temperature_basis": "Engineering screen extends existing 85C ambient by 5C; actual film temperature and carrier thermal path unmeasured",
+  "general_mode_P70_W": 0.14,
+  "general_mode_film_limit_C": 125,
+  "soldering_drift": {
+    "fraction": 0.0002,
+    "ohm": 0.01,
+    "basis": "p14, 260+-5C solder bath, 10+-1s; not permission for unlimited rework"
+  },
+  "endurance_profiles": [
+    {
+      "id": "general_1000h",
+      "fraction": 0.0005,
+      "ohm": 0.01,
+      "hours": 1000
+    },
+    {
+      "id": "general_8000h",
+      "fraction": 0.001,
+      "ohm": 0.02,
+      "hours": 8000
+    },
+    {
+      "id": "general_225000h",
+      "fraction": 0.003,
+      "ohm": 0.05,
+      "hours": 225000
+    }
+  ],
+  "endurance_basis": "p2 and p12 general operating mode; 70C load test/film-temperature conditions, no extrapolation to all humidity or field lifetime",
+  "combined_environment_screen": {
+    "base_profile": "general_8000h",
+    "added_fraction": 0.002,
+    "added_ohm": 0.02,
+    "basis": "Engineering additive sensitivity of p13 damp-heat and temperature-cycle limits; not a manufacturer combined-stress guarantee"
+  },
+  "noise_allocation_V": 0.02,
+  "logic_window_V": [
+    4.5,
+    4.75
+  ],
+  "unresolved": [
+    "Exact pair in stock on a Chinese purchase route; bottom BEEA backordered in inspected China page",
+    "Actual rail ripple and collapse",
+    "Removable WSON carrier qualification",
+    "Reset/clock recovery and maximum reset assertion delay",
+    "Film temperature, assembly/rework and service-life environment"
+  ],
+  "native_adopted": false,
+  "purchase_ready": false,
+  "fabrication_ready": false
+}

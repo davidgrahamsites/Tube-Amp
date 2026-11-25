@@ -26,3 +26,5 @@ integrate_socket_footprints.py consumes the socket module footprint-contract.jso
 repair_u12_candidate.py writes a new candidate from u12-routing-contract.json; check_u12_routing.py independently checks exact delta, arc tangency, drill preservation and native DRC. audit_copper.py includes wholly unrouted pad nets and explicit branch angles; zero simple bends is never all-corner qualification.
 
 check_copper_coverage.py parses native syntax independently of the pcbnew inventory to verify all pad-connected nets and their reference/pad membership, including wholly unrouted nets. Its receipt is review/copper-coverage-checks.json; current-capacity qualification remains separate.
+
+repair_branch_candidate.py consumes ../branch-routing-contract.json and the exact 738fd04 baseline, producing a fresh temporary candidate only. check_branch_routing.py owns the independent exact-delta, tangent-circle, negative-control, drill and DRC checks. check_u12_routing.verify_current chains this bounded follow-up before the original U12 delta; it does not exempt arbitrary later copper.

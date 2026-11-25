@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "meaning": "Arithmetic/source checks passed; candidate has explicit failed margins",
+  "prior_Yageo_endurance": {
+    "falling_min_V": 4.510511030319846,
+    "rising_max_V": 4.743074972798768,
+    "falling_margin_above_4p5V": 0.010511030319846348,
+    "rising_margin_below_supply_min_V": 0.006925027201232226,
+    "dc_window_pass": true,
+    "corners": 16,
+    "meets_proposed_noise_allocation": false
+  },
+  "profiles": {
+    "fresh_after_soldering": {
+      "corners": 16,
+      "resistor_fractional_error": 0.00295,
+      "resistor_absolute_error_ohm": 0.01,
+      "falling_min_V": 4.542220196646052,
+      "rising_max_V": 4.709803337246861,
+      "noise_margins_V": [
+        0.04222019664605181,
+        0.04019666275313938
+      ],
+      "meets_proposed_noise_allocation": true
+    },
+    "general_1000h": {
+      "corners": 16,
+      "resistor_fractional_error": 0.00345,
+      "resistor_absolute_error_ohm": 0.02,
+      "falling_min_V": 4.538812124131694,
+      "rising_max_V": 4.713349591580939,
+      "noise_margins_V": [
+        0.038812124131694326,
+        0.03665040841906109
+      ],
+      "meets_proposed_noise_allocation": true
+    },
+    "general_8000h": {
+      "corners": 16,
+      "resistor_fractional_error": 0.00395,
+      "resistor_absolute_error_ohm": 0.03,
+      "falling_min_V": 4.535407454563164,
+      "rising_max_V": 4.716899411848987,
+      "noise_margins_V": [
+        0.03540745456316419,
+        0.033100588151013355
+      ],
+      "meets_proposed_noise_allocation": true
+    },
+    "general_225000h": {
+      "corners": 16,
+      "resistor_fractional_error": 0.00595,
+      "resistor_absolute_error_ohm": 0.060000000000000005,
+      "falling_min_V": 4.521827201085055,
+      "rising_max_V": 4.73112970265932,
+      "noise_margins_V": [
+        0.021827201085055314,
+        0.018870297340679798
+      ],
+      "meets_proposed_noise_allocation": false
+    },
+    "combined_environment_sensitivity": {
+      "corners": 16,
+      "resistor_fractional_error": 0.00595,
+      "resistor_absolute_error_ohm": 0.05,
+      "falling_min_V": 4.521831698118552,
+      "rising_max_V": 4.731124945233014,
+      "noise_margins_V": [
+        0.021831698118552012,
+        0.018875054766986032
+      ],
+      "meets_proposed_noise_allocation": false
+    }
+  },
+  "conservative_each_resistor_power_bound_W": 0.0009217055348411786,
+  "nominal_5V_divider_current_A": 0.00012468827930174563,
+  "negative_control_rejected": "1% initial resistor pair",
+  "native_adopted": false,
+  "purchase_ready": false,
+  "supervisor_qualified": false,
+  "fabrication_ready": false,
+  "source_sha256": {
+    "engineering/whole-amp/control-switching/divider-contract.json": "638f88774e7bb26c17a855cafa0275cd1f4c57d3823917927705e3ef82fd853a",
+    "engineering/whole-amp/control-switching/contract.json": "67b5316dc035eee7354e7febcabff62919fd0fdf29d50e16972db30cd381eea8",
+    "engineering/component-selection/evidence/TNPW_e3_2026-04-10.pdf": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5",
+    "engineering/whole-amp/control-switching/tools/check_divider_options.py": "8e1489d83d49294d3ca029757075ad75b3eb7a4a64fbf45e08eb35bcc63fcb71"
+  }
+}
