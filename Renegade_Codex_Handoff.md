@@ -306,3 +306,7 @@ R304/R31410k now separate C301/C311 from U1 inputs in source, readable native sc
 ## November25 — VAL-058 bypass selection record repaired
 
 [VAL-058](brain/records/VAL-058-bypass-selection-parity.md) resolves stale P076 film coverage to the already adopted Yageo CC0805KRX7R9BB104 ceramic and replaces the missing evidence pointer with a dated manufacturer-backed record. Source/schematic/Control board identities agree; all23 native files are unchanged. Chinese LCSC identity verified, live stock/Shanghai checkout unverified. Next is complete power sequencing, including phantom-power handling and C351 ground-return preservation when U1F is reused; remaining native routing and populated three-board fit follow. All six scopes remain incomplete.
+
+## November25 — ground-plane clarification
+
+[VAL-059](brain/records/VAL-059-ground-plane-audit.md): all four native boards currently contain zero copper-zone definitions. Broad continuous low-voltage reference planes, deliberate noisy-current returns and HV keepouts remain to implement after T03 GND/PE/interboard return mapping. No grounding completion or fabrication release is claimed.

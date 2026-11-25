@@ -1287,3 +1287,14 @@ Source: Current build conversation
 - [brain/records/DEC-017-small-quantity-marketplaces.md](<../../brain/records/DEC-017-small-quantity-marketplaces.md>)
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 
+## FB-127 — ground-plane-clarification
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> the board should have one side with a large ground pour, right?
+
+Clarifies expected ground-plane strategy. Engineering response favors broad continuous low-voltage reference planes with deliberate noisy-current paths and HV keepouts; current native boards have no zones. Not approval of finished copper geometry.
+
+Source: Current build conversation
+
+- [brain/records/VAL-059-ground-plane-audit.md](<../../brain/records/VAL-059-ground-plane-audit.md>)
+
