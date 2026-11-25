@@ -1,0 +1,109 @@
+{
+  "status": "candidate-not-native",
+  "owner": "auxiliary-supply integration",
+  "job": "Check whether increased raw supply headroom can support pre-emptive relay muting without a new audio shunt.",
+  "baseline": "4d9c265cf332a89eb38b5b48a764804ab6264c96",
+  "transformer": {
+    "mpn": "VPT36-690",
+    "VA": 25,
+    "half_secondary_loaded_V": 18,
+    "series_current_A": 0.69,
+    "regulation_typ_fraction": 0.12,
+    "datasheet": "https://catalog.triadmagnetics.com/Asset/VPT36-690.pdf",
+    "procurement": "LCSC global C17563193 observed zero stock; not a selected part or Shanghai purchase route."
+  },
+  "regulators": {
+    "U4": {
+      "mpn": "ST LM317T-DG",
+      "R1_ohm": 110,
+      "R2_ohm": 931,
+      "output_polarity": 1
+    },
+    "U6": {
+      "mpn": "ST LM317T-DG",
+      "R1_ohm": 110,
+      "R2_ohm": 1210,
+      "output_polarity": 1
+    },
+    "U7": {
+      "mpn": "ST LM337SP",
+      "R1_ohm": 110,
+      "R2_ohm": 1210,
+      "output_polarity": -1
+    }
+  },
+  "regulator_reference_magnitude_V": [
+    1.2,
+    1.3
+  ],
+  "adjust_current_magnitude_A": [
+    0,
+    0.0001
+  ],
+  "set_resistor_total_fraction": 0.004,
+  "minimum_regulator_load_A": 0.01,
+  "required_input_output_headroom_V": 3,
+  "raw_voltage_design_ceiling_V": 35,
+  "absolute_differential_V": 40,
+  "reservoir_nominal_uF": [
+    1000,
+    4700,
+    6800
+  ],
+  "reservoir_min_fraction": 0.8,
+  "reservoir_esr_ohm": 0.15,
+  "proposed_reservoir_voltage_rating_V": 50,
+  "modes": [
+    {
+      "selector_V": 120,
+      "primary_rating_V": 115,
+      "frequency_hz": 60
+    },
+    {
+      "selector_V": 220,
+      "primary_rating_V": 230,
+      "frequency_hz": 50
+    }
+  ],
+  "line_fractions": [
+    0.9,
+    1,
+    1.1
+  ],
+  "additional_positive_raw_current_A": 0.02,
+  "additional_negative_raw_current_A": 0,
+  "additional_load_basis": "20mA additional positive raw allowance for rail-reference/control additions, on top of existing audio/logic/coil profiles and regulator divider loads; not a completed current budget.",
+  "shutdown_phases_deg": [
+    0,
+    30,
+    60,
+    90,
+    120,
+    150
+  ],
+  "secondary_cutoff_transition_s": 1e-06,
+  "shutdown_post_window_s": 0.12,
+  "hypothetical_detection_plus_contact_s": [
+    0.01,
+    0.02,
+    0.03
+  ],
+  "screening_winding_voltage_factors": [
+    0.95,
+    1,
+    1.05
+  ],
+  "limitations": [
+    "18V transformer regulation12% is typical; equivalent resistance is not measured DCR and voltage factors are sensitivity assumptions, not guaranteed winding tolerance.",
+    "Regulator outputs calculated from datasheet reference range and declared resistor/adjust-current allocation, with3V input-output reserve. Regulator dynamics, thermal regulation, protection discharge and stability are not modeled.",
+    "No optocoupler, AC-loss detector or actual contact time is implemented;10/20/30ms are hypothetical total suppression intervals.",
+    "1000uF native versus4700/6800 candidate reservoirs compared at minus20% capacitance only.50V exact capacitor ESR/ripple/inrush/body/lead and China purchase evidence still required.",
+    "The constant-current load after rail dropout is not physical. Only time to first loss of documented headroom is used.",
+    "0..125C regulator range does not qualify operation below0C. Existing cold-coil budget is retained as an independent conservative load.",
+    "No native schematic/PCB change, socket exception, three-board fit, Shanghai purchase or manufacturing approval."
+  ],
+  "shutdown_winding_voltage_factors": [
+    0.95,
+    1.0
+  ]
+}

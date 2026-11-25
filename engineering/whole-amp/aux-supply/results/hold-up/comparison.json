@@ -1,0 +1,2172 @@
+{
+  "qualified": false,
+  "native_adopted": false,
+  "purchase_ready": false,
+  "contract": {
+    "status": "candidate-not-native",
+    "owner": "auxiliary-supply integration",
+    "job": "Check whether increased raw supply headroom can support pre-emptive relay muting without a new audio shunt.",
+    "baseline": "4d9c265cf332a89eb38b5b48a764804ab6264c96",
+    "transformer": {
+      "mpn": "VPT36-1390",
+      "VA": 50,
+      "half_secondary_loaded_V": 18,
+      "series_current_A": 1.39,
+      "regulation_typ_fraction": 0.12,
+      "datasheet": "https://catalog.triadmagnetics.com/asset/vpt36-1390.pdf",
+      "procurement": "Reference comparison only; no exact Chinese in-stock source verified."
+    },
+    "regulators": {
+      "U4": {
+        "mpn": "ST LM317T-DG",
+        "R1_ohm": 110,
+        "R2_ohm": 931,
+        "output_polarity": 1
+      },
+      "U6": {
+        "mpn": "ST LM317T-DG",
+        "R1_ohm": 110,
+        "R2_ohm": 1210,
+        "output_polarity": 1
+      },
+      "U7": {
+        "mpn": "ST LM337SP",
+        "R1_ohm": 110,
+        "R2_ohm": 1210,
+        "output_polarity": -1
+      }
+    },
+    "regulator_reference_magnitude_V": [
+      1.2,
+      1.3
+    ],
+    "adjust_current_magnitude_A": [
+      0,
+      0.0001
+    ],
+    "set_resistor_total_fraction": 0.004,
+    "minimum_regulator_load_A": 0.01,
+    "required_input_output_headroom_V": 3,
+    "raw_voltage_design_ceiling_V": 35,
+    "absolute_differential_V": 40,
+    "reservoir_nominal_uF": [
+      1000,
+      4700,
+      6800
+    ],
+    "reservoir_min_fraction": 0.8,
+    "reservoir_esr_ohm": 0.15,
+    "proposed_reservoir_voltage_rating_V": 50,
+    "modes": [
+      {
+        "selector_V": 120,
+        "primary_rating_V": 115,
+        "frequency_hz": 60
+      },
+      {
+        "selector_V": 220,
+        "primary_rating_V": 230,
+        "frequency_hz": 50
+      }
+    ],
+    "line_fractions": [
+      0.9,
+      1,
+      1.1
+    ],
+    "additional_positive_raw_current_A": 0.02,
+    "additional_negative_raw_current_A": 0,
+    "additional_load_basis": "20mA additional positive raw allowance for rail-reference/control additions, on top of existing audio/logic/coil profiles and regulator divider loads; not a completed current budget.",
+    "shutdown_phases_deg": [
+      0,
+      30,
+      60,
+      90,
+      120,
+      150
+    ],
+    "secondary_cutoff_transition_s": 1e-06,
+    "shutdown_post_window_s": 0.12,
+    "hypothetical_detection_plus_contact_s": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "screening_winding_voltage_factors": [
+      0.95,
+      1,
+      1.05
+    ],
+    "limitations": [
+      "18V transformer regulation12% is typical; equivalent resistance is not measured DCR and voltage factors are sensitivity assumptions, not guaranteed winding tolerance.",
+      "Regulator outputs calculated from datasheet reference range and declared resistor/adjust-current allocation, with3V input-output reserve. Regulator dynamics, thermal regulation, protection discharge and stability are not modeled.",
+      "No optocoupler, AC-loss detector or actual contact time is implemented;10/20/30ms are hypothetical total suppression intervals.",
+      "1000uF native versus4700/6800 candidate reservoirs compared at minus20% capacitance only.50V exact capacitor ESR/ripple/inrush/body/lead and China purchase evidence still required.",
+      "The constant-current load after rail dropout is not physical. Only time to first loss of documented headroom is used.",
+      "0..125C regulator range does not qualify operation below0C. Existing cold-coil budget is retained as an independent conservative load.",
+      "No native schematic/PCB change, socket exception, three-board fit, Shanghai purchase or manufacturing approval."
+    ],
+    "shutdown_winding_voltage_factors": [
+      0.95,
+      1.0
+    ],
+    "comparison_scope": "Low mains, stress load, all shutdown phases and .95/1 winding factors; high mains/idle and stress at1.05. 6800uF only."
+  },
+  "bounds": {
+    "U4": {
+      "output_abs_V": [
+        11.275436436073885,
+        12.48457499218693
+      ],
+      "divider_current_A": [
+        0.010865628395508873,
+        0.011865644395764877
+      ]
+    },
+    "U6": {
+      "output_abs_V": [
+        14.294820717131474,
+        15.836343437751005
+      ],
+      "divider_current_A": [
+        0.010865628395508873,
+        0.011865644395764877
+      ]
+    },
+    "U7": {
+      "output_abs_V": [
+        14.294820717131474,
+        15.836343437751005
+      ],
+      "divider_current_A": [
+        0.010865628395508873,
+        0.011865644395764877
+      ]
+    }
+  },
+  "cases": [
+    {
+      "case": {
+        "id": "50VA-hold057",
+        "line_factor": 1.1478260869565218,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 21.168000000000006,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "idle",
+          "audio_each_rail_A": 0.03,
+          "logic_5V_A": 0.002,
+          "relays_on": 0
+        },
+        "winding_voltage_factor": 1.05,
+        "selector_V": 120,
+        "line_fraction": 1.1
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.09283399606733347,
+        "negative": 0.041965644395764876
+      },
+      "rails": {
+        "positive": {
+          "min_V": 32.12228955185193,
+          "max_V": 32.31336681944118,
+          "mean_V": 32.19603269254476,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 32.723573340362826,
+          "max_V": 32.83862313840179,
+          "mean_V": 32.767839960003506,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.18838590892946075,
+        "i(vb)": 0.18840365243760276
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.0653237911966695,
+        "U6": 0.7526653780851149,
+        "U7": 0.7766616385342027,
+        "U5": 0.1913294069800614
+      },
+      "kcl_max_error_A": 1.3038717244784337e-07,
+      "screen_flags": []
+    },
+    {
+      "case": {
+        "id": "50VA-hold061",
+        "line_factor": 1.0521739130434784,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 21.168000000000006,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "idle",
+          "audio_each_rail_A": 0.03,
+          "logic_5V_A": 0.002,
+          "relays_on": 0
+        },
+        "winding_voltage_factor": 1.05,
+        "selector_V": 220,
+        "line_fraction": 1.1
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.09283399606733347,
+        "negative": 0.041965644395764876
+      },
+      "rails": {
+        "positive": {
+          "min_V": 29.288771286819735,
+          "max_V": 29.493318137323953,
+          "mean_V": 29.37280771938866,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 29.88215337452091,
+          "max_V": 30.00033736130246,
+          "mean_V": 29.929706568449976,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.185481782290121,
+        "i(vb)": 0.18550078128076583
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 0.9217109904142102,
+        "U6": 0.6341869228124031,
+        "U7": 0.6575575418765209,
+        "U5": 0.1913294069800614
+      },
+      "kcl_max_error_A": 6.900067190396264e-07,
+      "screen_flags": []
+    },
+    {
+      "case": {
+        "id": "50VA-hold086",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 22.183761816308017,
+          "max_V": 22.55447280944281,
+          "mean_V": 22.347292364219275,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 23.156688889698682,
+          "max_V": 23.36172121278452,
+          "mean_V": 23.240037713174964,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.3930418148800815,
+        "i(vb)": 0.39304420223425346
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.3606425263181123,
+        "U6": 0.9030296590165249,
+        "U7": 1.0029864672936706,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.443084338914602e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 3.00000003206069e-05,
+        "positive_V": 22.309035190758372,
+        "negative_V": 23.222276994613125
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.0805026634435041,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold087",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 20.160000000000004,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.0,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 23.481234628511498,
+          "max_V": 23.85600086573159,
+          "mean_V": 23.64568064817555,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 24.469999268446035,
+          "max_V": 24.677440479395816,
+          "mean_V": 24.553824657911566,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.39651369951150645,
+        "i(vb)": 0.39651649538876504
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.5200718339990762,
+        "U6": 1.0484045399056008,
+        "U7": 1.1500854691598474,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.5280235828862843e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 3.00000003206069e-05,
+        "positive_V": 23.607477547973925,
+        "negative_V": 24.53612064750711
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.11059145669785331,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold088",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6013888888888889,
+        "phase_deg": 30
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 22.183761816308017,
+          "max_V": 22.55447280944281,
+          "mean_V": 22.347292364219275,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 23.156688889698682,
+          "max_V": 23.36172121278452,
+          "mean_V": 23.240037713174964,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.3930418148800815,
+        "i(vb)": 0.39304420223425346
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.3606425263181123,
+        "U6": 0.9030296590165249,
+        "U7": 1.0029864672936706,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.443084338914602e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 2.111111143310307e-05,
+        "positive_V": 22.24948310483803,
+        "negative_V": 23.19387388119966
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.07911377455461521,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold089",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 20.160000000000004,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.0,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6013888888888889,
+        "phase_deg": 30
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 23.481234628511498,
+          "max_V": 23.85600086573159,
+          "mean_V": 23.64568064817555,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 24.469999268446035,
+          "max_V": 24.677440479395816,
+          "mean_V": 24.553824657911566,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.39651369951150645,
+        "i(vb)": 0.39651649538876504
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.5200718339990762,
+        "U6": 1.0484045399056008,
+        "U7": 1.1500854691598474,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.5280235828862843e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 2.111111143310307e-05,
+        "positive_V": 23.547925458759245,
+        "negative_V": 24.507717530760164
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.10920256780896442,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold090",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6027777777777777,
+        "phase_deg": 60
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 22.183761816308017,
+          "max_V": 22.55447280944281,
+          "mean_V": 22.347292364219275,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 23.156688889698682,
+          "max_V": 23.36172121278452,
+          "mean_V": 23.240037713174964,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.3930418148800815,
+        "i(vb)": 0.39304420223425346
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.3606425263181123,
+        "U6": 0.9030296590165249,
+        "U7": 1.0029864672936706,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.443084338914602e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 3.222222254561924e-05,
+        "positive_V": 22.189067945364126,
+        "negative_V": 23.16505912853509
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.07772488566573399,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold091",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 20.160000000000004,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.0,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6027777777777777,
+        "phase_deg": 60
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 23.481234628511498,
+          "max_V": 23.85600086573159,
+          "mean_V": 23.64568064817555,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 24.469999268446035,
+          "max_V": 24.677440479395816,
+          "mean_V": 24.553824657911566,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.39651369951150645,
+        "i(vb)": 0.39651649538876504
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.5200718339990762,
+        "U6": 1.0484045399056008,
+        "U7": 1.1500854691598474,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.5280235828862843e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 3.222222254561924e-05,
+        "positive_V": 23.487510295942453,
+        "negative_V": 24.478902774713674
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.10781367892010563,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold092",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6041666666666666,
+        "phase_deg": 90
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 22.183761816308017,
+          "max_V": 22.55447280944281,
+          "mean_V": 22.347292364219275,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 23.156688889698682,
+          "max_V": 23.36172121278452,
+          "mean_V": 23.240037713174964,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.3930418148800815,
+        "i(vb)": 0.39304420223425346
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.3606425263181123,
+        "U6": 0.9030296590165249,
+        "U7": 1.0029864672936706,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.443084338914602e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 2.175112003199864e-05,
+        "positive_V": 22.320253309137534,
+        "negative_V": 23.226820926899588
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.08075437192828283,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold093",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 20.160000000000004,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.0,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6041666666666666,
+        "phase_deg": 90
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 23.481234628511498,
+          "max_V": 23.85600086573159,
+          "mean_V": 23.64568064817555,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 24.469999268446035,
+          "max_V": 24.677440479395816,
+          "mean_V": 24.553824657911566,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.39651369951150645,
+        "i(vb)": 0.39651649538876504
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.5200718339990762,
+        "U6": 1.0484045399056008,
+        "U7": 1.1500854691598474,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.5280235828862843e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 2.2646750007959682e-05,
+        "positive_V": 23.618653269606757,
+        "negative_V": 24.540667172805932
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.11084307833882623,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold094",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6055555555555555,
+        "phase_deg": 120
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 22.183761816308017,
+          "max_V": 22.55447280944281,
+          "mean_V": 22.347292364219275,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 23.156688889698682,
+          "max_V": 23.36172121278452,
+          "mean_V": 23.240037713174964,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.3930418148800815,
+        "i(vb)": 0.39304420223425346
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.3606425263181123,
+        "U6": 0.9030296590165249,
+        "U7": 1.0029864672936706,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.443084338914602e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 3.444444477063158e-05,
+        "positive_V": 22.428714794819175,
+        "negative_V": 23.27935963357356
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.08328044236348087,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold095",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 20.160000000000004,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.0,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6055555555555555,
+        "phase_deg": 120
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 23.481234628511498,
+          "max_V": 23.85600086573159,
+          "mean_V": 23.64568064817555,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 24.469999268446035,
+          "max_V": 24.677440479395816,
+          "mean_V": 24.553824657911566,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.39651369951150645,
+        "i(vb)": 0.39651649538876504
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.5200718339990762,
+        "U6": 1.0484045399056008,
+        "U7": 1.1500854691598474,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.5280235828862843e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 3.444444477063158e-05,
+        "positive_V": 23.72715717991146,
+        "negative_V": 24.593203830002597
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.11336923611041338,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold096",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6069444444444444,
+        "phase_deg": 150
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 22.183761816308017,
+          "max_V": 22.55447280944281,
+          "mean_V": 22.347292364219275,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 23.156688889698682,
+          "max_V": 23.36172121278452,
+          "mean_V": 23.240037713174964,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.3930418148800815,
+        "i(vb)": 0.39304420223425346
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.3606425263181123,
+        "U6": 0.9030296590165249,
+        "U7": 1.0029864672936706,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.443084338914602e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 2.5555555883127745e-05,
+        "positive_V": 22.369162708595304,
+        "negative_V": 23.250956520015283
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.08189155347460564,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold097",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 20.160000000000004,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.0,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6069444444444444,
+        "phase_deg": 150
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 23.481234628511498,
+          "max_V": 23.85600086573159,
+          "mean_V": 23.64568064817555,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 24.469999268446035,
+          "max_V": 24.677440479395816,
+          "mean_V": 24.553824657911566,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.39651369951150645,
+        "i(vb)": 0.39651649538876504
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.5200718339990762,
+        "U6": 1.0484045399056008,
+        "U7": 1.1500854691598474,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.5280235828862843e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 2.5555555883127745e-05,
+        "positive_V": 23.667605090393067,
+        "negative_V": 24.564800713110767
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.1119803472215245,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold122",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 20.105850263084,
+          "max_V": 20.51333006763356,
+          "mean_V": 20.29332149763534,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 21.065538582381837,
+          "max_V": 21.287955635701568,
+          "mean_V": 21.161238691326414,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.38719755481130697,
+        "i(vb)": 0.387199717935991
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.1084351109380657,
+        "U6": 0.6730554873693271,
+        "U7": 0.770232395243112,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 9.76325964741065e-07,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 3.00000003206069e-05,
+        "positive_V": 20.2541598074532,
+        "negative_V": 21.14314733152953
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.03288505096732919,
+        "negative": 0.11210892044430076
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold123",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 20.160000000000004,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.0,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 21.292627259662424,
+          "max_V": 21.704336287643862,
+          "mean_V": 21.481276430300074,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 22.26792786388703,
+          "max_V": 22.492724595318762,
+          "mean_V": 22.364164753098127,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.39062129266321205,
+        "i(vb)": 0.3906238445292522
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.2543042895275596,
+        "U6": 0.8060656269182614,
+        "U7": 0.9049187869098415,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.0163951388308945e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 3.00000003206069e-05,
+        "positive_V": 21.442192919168637,
+        "negative_V": 22.3461274196256
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.06041533422771028,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold124",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6016666666666667,
+        "phase_deg": 30
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 20.105850263084,
+          "max_V": 20.51333006763356,
+          "mean_V": 20.29332149763534,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 21.065538582381837,
+          "max_V": 21.287955635701568,
+          "mean_V": 21.161238691326414,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.38719755481130697,
+        "i(vb)": 0.387199717935991
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.1084351109380657,
+        "U6": 0.6730554873693271,
+        "U7": 0.770232395243112,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 9.76325964741065e-07,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 2.3333333655561894e-05,
+        "positive_V": 20.18252469589704,
+        "negative_V": 21.108981273922883
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.031218384300662483,
+        "negative": 0.11044225377763406
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold125",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 20.160000000000004,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.0,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6016666666666667,
+        "phase_deg": 30
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 21.292627259662424,
+          "max_V": 21.704336287643862,
+          "mean_V": 21.481276430300074,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 22.26792786388703,
+          "max_V": 22.492724595318762,
+          "mean_V": 22.364164753098127,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.39062129266321205,
+        "i(vb)": 0.3906238445292522
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.2543042895275596,
+        "U6": 0.8060656269182614,
+        "U7": 0.9049187869098415,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.0163951388308945e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 2.3333333655561894e-05,
+        "positive_V": 21.370557803986546,
+        "negative_V": 22.311961358347403
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.05874866756104358,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold126",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6033333333333333,
+        "phase_deg": 60
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 20.105850263084,
+          "max_V": 20.51333006763356,
+          "mean_V": 20.29332149763534,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 21.065538582381837,
+          "max_V": 21.287955635701568,
+          "mean_V": 21.161238691326414,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.38719755481130697,
+        "i(vb)": 0.387199717935991
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.1084351109380657,
+        "U6": 0.6730554873693271,
+        "U7": 0.770232395243112,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 9.76325964741065e-07,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 3.666666699064791e-05,
+        "positive_V": 20.110026511132595,
+        "negative_V": 21.07440357717417
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.029551717638678143,
+        "negative": 0.10877558711096746
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": false
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold127",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 20.160000000000004,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.0,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6033333333333333,
+        "phase_deg": 60
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 21.292627259662424,
+          "max_V": 21.704336287643862,
+          "mean_V": 21.481276430300074,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 22.26792786388703,
+          "max_V": 22.492724595318762,
+          "mean_V": 22.364164753098127,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.39062129266321205,
+        "i(vb)": 0.3906238445292522
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.2543042895275596,
+        "U6": 0.8060656269182614,
+        "U7": 0.9049187869098415,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.0163951388308945e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 3.666666699064791e-05,
+        "positive_V": 21.29805961536395,
+        "negative_V": 22.277383657882826
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.05708200089469706,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold128",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.605,
+        "phase_deg": 90
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 20.105850263084,
+          "max_V": 20.51333006763356,
+          "mean_V": 20.29332149763534,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 21.065538582381837,
+          "max_V": 21.287955635701568,
+          "mean_V": 21.161238691326414,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.38719755481130697,
+        "i(vb)": 0.387199717935991
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.1084351109380657,
+        "U6": 0.6730554873693271,
+        "U7": 0.770232395243112,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 9.763295724662946e-07,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 2.7362223637639183e-05,
+        "positive_V": 20.268365044106833,
+        "negative_V": 21.148506407214292
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.03321159105174942,
+        "negative": 0.11236665996145556
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold129",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 20.160000000000004,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.0,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.605,
+        "phase_deg": 90
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 21.292627259662424,
+          "max_V": 21.704336287643862,
+          "mean_V": 21.481276430300074,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 22.26792786388703,
+          "max_V": 22.492724595318762,
+          "mean_V": 22.364164753098127,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.39062129266321205,
+        "i(vb)": 0.3906238445292522
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.2543042895275596,
+        "U6": 0.8060656269182614,
+        "U7": 0.9049187869098415,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.0163997393175528e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 2.819916592788907e-05,
+        "positive_V": 21.456206333686463,
+        "negative_V": 22.351407607870044
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.06073826614481759,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold130",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6066666666666667,
+        "phase_deg": 120
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 20.105850263084,
+          "max_V": 20.51333006763356,
+          "mean_V": 20.29332149763534,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 21.065538582381837,
+          "max_V": 21.287955635701568,
+          "mean_V": 21.161238691326414,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.38719755481130697,
+        "i(vb)": 0.387199717935991
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.1084351109380657,
+        "U6": 0.6730554873693271,
+        "U7": 0.770232395243112,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 9.763295724662946e-07,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 2.3333333660557898e-05,
+        "positive_V": 20.398293135494345,
+        "negative_V": 21.211892624135736
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.03621838501053243,
+        "negative": 0.11544232849496738
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold131",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 20.160000000000004,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.0,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6066666666666667,
+        "phase_deg": 120
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 21.292627259662424,
+          "max_V": 21.704336287643862,
+          "mean_V": 21.481276430300074,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 22.26792786388703,
+          "max_V": 22.492724595318762,
+          "mean_V": 22.364164753098127,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.39062129266321205,
+        "i(vb)": 0.3906238445292522
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.2543042895275596,
+        "U6": 0.8060656269182614,
+        "U7": 0.9049187869098415,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.0163997393175528e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 2.3333333660557898e-05,
+        "positive_V": 21.58632626838495,
+        "negative_V": 22.414873152402407
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.0637486685925508,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold132",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6083333333333333,
+        "phase_deg": 150
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 20.105850263084,
+          "max_V": 20.51333006763356,
+          "mean_V": 20.29332149763534,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 21.065538582381837,
+          "max_V": 21.287955635701568,
+          "mean_V": 21.161238691326414,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.38719755481130697,
+        "i(vb)": 0.387199717935991
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.1084351109380657,
+        "U6": 0.6730554873693271,
+        "U7": 0.770232395243112,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 9.763295724662946e-07,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 3.6666666995643915e-05,
+        "positive_V": 20.325794949862086,
+        "negative_V": 21.177314927069194
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.03455171834388859,
+        "negative": 0.11377566182830079
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold133",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 20.160000000000004,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.0,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6083333333333333,
+        "phase_deg": 150
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 21.292627259662424,
+          "max_V": 21.704336287643862,
+          "mean_V": 21.481276430300074,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 22.26792786388703,
+          "max_V": 22.492724595318762,
+          "mean_V": 22.364164753098127,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.39062129266321205,
+        "i(vb)": 0.3906238445292522
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.2543042895275596,
+        "U6": 0.8060656269182614,
+        "U7": 0.9049187869098415,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.0163997393175528e-06,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 3.6666666995643915e-05,
+        "positive_V": 21.51382807908246,
+        "negative_V": 22.380295451620018
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.0620820019258842,
+        "negative": null
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": true
+      }
+    },
+    {
+      "case": {
+        "id": "50VA-hold057-high-stress",
+        "line_factor": 1.1478260869565218,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 21.168000000000006,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.05,
+        "selector_V": 120,
+        "line_fraction": 1.1
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 30.8569857032926,
+          "max_V": 31.252059492484307,
+          "mean_V": 31.025746364665533,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 31.925985233281892,
+          "max_V": 32.14612399646523,
+          "mean_V": 32.012481571940675,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.41382310924563337,
+        "i(vb)": 0.4138288052930526
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 2.426271298642149,
+        "U6": 1.8747183535354937,
+        "U7": 1.985198796866044,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.9518801317452983e-06,
+      "screen_flags": []
+    },
+    {
+      "case": {
+        "id": "50VA-hold061-high-stress",
+        "line_factor": 1.0521739130434784,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 21.168000000000006,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 1.05,
+        "selector_V": 220,
+        "line_fraction": 1.1
+      },
+      "step_s": 2e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 28.041084136417293,
+          "max_V": 28.47340623909001,
+          "mean_V": 28.234942021794293,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 29.095215230367405,
+          "max_V": 29.332270002466096,
+          "mean_V": 29.19425802686865,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.4076863565495666,
+        "i(vb)": 0.40769173082364507
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 2.0835879813672586,
+        "U6": 1.5622441469034163,
+        "U7": 1.6696545815907373,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 1.3290569084167814e-06,
+      "screen_flags": []
+    }
+  ],
+  "refinement": {
+    "fine": {
+      "case": {
+        "id": "50VA-hold126",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6033333333333333,
+        "phase_deg": 60
+      },
+      "step_s": 1e-05,
+      "raw_load_A": {
+        "positive": 0.23475580636116114,
+        "negative": 0.11196564439576488
+      },
+      "rails": {
+        "positive": {
+          "min_V": 20.105795517534673,
+          "max_V": 20.513341463718685,
+          "mean_V": 20.293319350213224,
+          "required_raw_floor_V": 18.836343437751005
+        },
+        "negative": {
+          "min_V": 21.065542252831438,
+          "max_V": 21.287965571855004,
+          "mean_V": 21.161237651147378,
+          "required_raw_floor_V": 18.836343437751005
+        }
+      },
+      "winding_rms_A": {
+        "i(va)": 0.38718785846637493,
+        "i(vb)": 0.3871900215375477
+      },
+      "conditional_regulator_heat_W": {
+        "U4": 1.1084348472557561,
+        "U6": 0.6730552469318261,
+        "U7": 0.770232278778796,
+        "U5": 0.33055175683942617
+      },
+      "kcl_max_error_A": 3.588312503521873e-07,
+      "screen_flags": [],
+      "post_cutoff_sample": {
+        "elapsed_s": 1.1666666547949234e-05,
+        "positive_V": 20.111104999344807,
+        "negative_V": 21.074917930080478
+      },
+      "hold_to_documented_headroom_loss_s": {
+        "positive": 0.02955170943869545,
+        "negative": 0.10877557757817957
+      },
+      "hypothetical_total_mute_fits": {
+        "0.01": true,
+        "0.02": true,
+        "0.03": false
+      }
+    },
+    "hold_deltas_s": {
+      "positive": 8.199982692858043e-09,
+      "negative": 9.532787892396755e-09
+    }
+  },
+  "decks": {
+    "50VA-hold057": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 0 SIN(0 34.3614051727 60)\nVB s2 0 SIN(0 34.3614051727 60 0 0 180)\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.0928339960673)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.0419656443958)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.6 0 2e-05\n.end\n",
+    "50VA-hold061": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 0 SIN(0 31.4979547416 50)\nVB s2 0 SIN(0 31.4979547416 50 0 0 180)\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.0928339960673)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.0419656443958)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.6 0 2e-05\n.end\n",
+    "50VA-hold086": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.4363648681*sin(2*pi*60*time)*max(0,min(1,(0.600001-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.4363648681*sin(2*pi*60*time)*max(0,min(1,(0.600001-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.72 0 2e-05\n.end\n",
+    "50VA-hold087": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=26.7751209138*sin(2*pi*60*time)*max(0,min(1,(0.600001-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-26.7751209138*sin(2*pi*60*time)*max(0,min(1,(0.600001-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.72 0 2e-05\n.end\n",
+    "50VA-hold088": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.4363648681*sin(2*pi*60*time)*max(0,min(1,(0.601389888889-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.4363648681*sin(2*pi*60*time)*max(0,min(1,(0.601389888889-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7213888888888889 0 2e-05\n.end\n",
+    "50VA-hold089": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=26.7751209138*sin(2*pi*60*time)*max(0,min(1,(0.601389888889-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-26.7751209138*sin(2*pi*60*time)*max(0,min(1,(0.601389888889-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7213888888888889 0 2e-05\n.end\n",
+    "50VA-hold090": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.4363648681*sin(2*pi*60*time)*max(0,min(1,(0.602778777778-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.4363648681*sin(2*pi*60*time)*max(0,min(1,(0.602778777778-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7227777777777777 0 2e-05\n.end\n",
+    "50VA-hold091": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=26.7751209138*sin(2*pi*60*time)*max(0,min(1,(0.602778777778-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-26.7751209138*sin(2*pi*60*time)*max(0,min(1,(0.602778777778-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7227777777777777 0 2e-05\n.end\n",
+    "50VA-hold092": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.4363648681*sin(2*pi*60*time)*max(0,min(1,(0.604167666667-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.4363648681*sin(2*pi*60*time)*max(0,min(1,(0.604167666667-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7241666666666666 0 2e-05\n.end\n",
+    "50VA-hold093": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=26.7751209138*sin(2*pi*60*time)*max(0,min(1,(0.604167666667-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-26.7751209138*sin(2*pi*60*time)*max(0,min(1,(0.604167666667-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7241666666666666 0 2e-05\n.end\n",
+    "50VA-hold094": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.4363648681*sin(2*pi*60*time)*max(0,min(1,(0.605556555556-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.4363648681*sin(2*pi*60*time)*max(0,min(1,(0.605556555556-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7255555555555555 0 2e-05\n.end\n",
+    "50VA-hold095": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=26.7751209138*sin(2*pi*60*time)*max(0,min(1,(0.605556555556-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-26.7751209138*sin(2*pi*60*time)*max(0,min(1,(0.605556555556-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7255555555555555 0 2e-05\n.end\n",
+    "50VA-hold096": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.4363648681*sin(2*pi*60*time)*max(0,min(1,(0.606945444444-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.4363648681*sin(2*pi*60*time)*max(0,min(1,(0.606945444444-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7269444444444444 0 2e-05\n.end\n",
+    "50VA-hold097": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=26.7751209138*sin(2*pi*60*time)*max(0,min(1,(0.606945444444-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-26.7751209138*sin(2*pi*60*time)*max(0,min(1,(0.606945444444-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7269444444444444 0 2e-05\n.end\n",
+    "50VA-hold122": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.600001-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.600001-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.72 0 2e-05\n.end\n",
+    "50VA-hold123": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=24.5438608376*sin(2*pi*50*time)*max(0,min(1,(0.600001-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-24.5438608376*sin(2*pi*50*time)*max(0,min(1,(0.600001-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.72 0 2e-05\n.end\n",
+    "50VA-hold124": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.601667666667-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.601667666667-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7216666666666667 0 2e-05\n.end\n",
+    "50VA-hold125": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=24.5438608376*sin(2*pi*50*time)*max(0,min(1,(0.601667666667-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-24.5438608376*sin(2*pi*50*time)*max(0,min(1,(0.601667666667-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7216666666666667 0 2e-05\n.end\n",
+    "50VA-hold126": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.603334333333-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.603334333333-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7233333333333333 0 2e-05\n.end\n",
+    "50VA-hold127": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=24.5438608376*sin(2*pi*50*time)*max(0,min(1,(0.603334333333-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-24.5438608376*sin(2*pi*50*time)*max(0,min(1,(0.603334333333-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7233333333333333 0 2e-05\n.end\n",
+    "50VA-hold128": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.605001-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.605001-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.725 0 2e-05\n.end\n",
+    "50VA-hold129": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=24.5438608376*sin(2*pi*50*time)*max(0,min(1,(0.605001-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-24.5438608376*sin(2*pi*50*time)*max(0,min(1,(0.605001-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.725 0 2e-05\n.end\n",
+    "50VA-hold130": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.606667666667-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.606667666667-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7266666666666667 0 2e-05\n.end\n",
+    "50VA-hold131": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=24.5438608376*sin(2*pi*50*time)*max(0,min(1,(0.606667666667-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-24.5438608376*sin(2*pi*50*time)*max(0,min(1,(0.606667666667-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7266666666666667 0 2e-05\n.end\n",
+    "50VA-hold132": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.608334333333-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.608334333333-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7283333333333333 0 2e-05\n.end\n",
+    "50VA-hold133": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=24.5438608376*sin(2*pi*50*time)*max(0,min(1,(0.608334333333-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-24.5438608376*sin(2*pi*50*time)*max(0,min(1,(0.608334333333-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.7283333333333333 0 2e-05\n.end\n",
+    "50VA-hold057-high-stress": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 0 SIN(0 34.3614051727 60)\nVB s2 0 SIN(0 34.3614051727 60 0 0 180)\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.6 0 2e-05\n.end\n",
+    "50VA-hold061-high-stress": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 0 SIN(0 31.4979547416 50)\nVB s2 0 SIN(0 31.4979547416 50 0 0 180)\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 0.6 0 2e-05\n.end\n",
+    "fine": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.603334333333-time)/1e-06))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.3166677957*sin(2*pi*50*time)*max(0,min(1,(0.603334333333-time)/1e-06))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 1e-05 0.7233333333333333 0 1e-05\n.end\n"
+  },
+  "simulator": {
+    "version_output": [
+      "stdout ******",
+      "stdout ** ngspice-45.2 : Circuit level simulation program",
+      "stdout ** Compiled with KLU Direct Linear Solver",
+      "stdout ** The U. C. Berkeley CAD Group",
+      "stdout ** Copyright 1985-1994, Regents of the University of California.",
+      "stdout ** Copyright 2001-2025, The ngspice team.",
+      "stdout ** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html",
+      "stdout ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html",
+      "stdout ******"
+    ],
+    "library_sha256": "501e9b4981fe810571fe349000112590db4379377887ace04b2aa38d529d1e9a",
+    "runtime_sha256": "3df496fbbce173c6f8a602b9a17a731389f011634af809106184418572b9cf9b"
+  },
+  "input_sha256": {
+    "aux-supply/tools/hold_up_comparison.py": "49d752a51d2bf0d004bf6a74966a4ed2ead359f1c37df198594570dbbe0b70c7",
+    "aux-supply/tools/hold_up_screen.py": "9dbba4e1a6990989b890449c8e2485c2f87c3c0c945b5af8f2a7ef71997a011b",
+    "aux-supply/results/hold-up/screen.json": "858a313e7d412fbfafa248b013c81c2787c83f36b9ca2bb12748f271fdb4f3ad"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "observed_on": "2026-11-25",
+  "method": "Exact domestic LCSC productRecord fields read from public HTML; no checkout or order.",
+  "qualified": false,
+  "purchased": false,
+  "shanghai_checkout_verified": false,
+  "parts": [
+    {
+      "productModel": "LM317T-DG",
+      "productCode": "C18718",
+      "productId": "19421",
+      "stockNumber": 13210,
+      "minBuyNumber": 1,
+      "theRatio": 1,
+      "encapsulationModel": "TO-220",
+      "url": "https://item.szlcsc.com/19421.html",
+      "source_sha256": "30a91ff2bbc7cb24a556398010116bf436bdcc6d31eef6edccbfd696156aeff2",
+      "unit_price_RMB": null
+    },
+    {
+      "productModel": "LM337SP",
+      "productCode": "C118272",
+      "productId": "119537",
+      "stockNumber": 156,
+      "minBuyNumber": 1,
+      "theRatio": 1,
+      "encapsulationModel": "TO-220",
+      "url": "https://item.szlcsc.com/119537.html",
+      "source_sha256": "5e6630100d379c92030795446e4fbe6a5007eaa8068ce4fd33d6810832c0c07b",
+      "unit_price_RMB": null
+    },
+    {
+      "productModel": "VPT36-690",
+      "productCode": "C17563193",
+      "productId": "18692421",
+      "stockNumber": 0,
+      "minBuyNumber": 1,
+      "theRatio": 1,
+      "encapsulationModel": "-",
+      "url": "https://item.szlcsc.com/18692421.html",
+      "source_sha256": "466270f7c5d188cb034a877ae174a2a530cc363e927244d0ab22038e5fadd553",
+      "unit_price_RMB": null
+    }
+  ],
+  "limits": [
+    "Stock is a dated listing observation, not allocated inventory.",
+    "encaptionPrice is not interpreted as a unit price; exact delivered prototype price remains unverified.",
+    "LM317/LM337 socket/contact, pin mapping, capacitors, protection and heatsink have not been adopted.",
+    "25VA reference transformer is out of stock; 50VA comparator has no verified Chinese in-stock source.",
+    "General domestic courier policy does not prove exact Shanghai checkout availability."
+  ],
+  "shipping_policy": "https://www.szlcsc.com/help/202.html",
+  "primary_sources": [
+    {
+      "url": "https://www.st.com/resource/en/datasheet/lm317.pdf",
+      "revision": "DS0433 Rev22 December2021",
+      "basis": "LM317 table4:1.2..1.3V reference,100uA adjust,10mA minimum load;3V headroom used conservatively."
+    },
+    {
+      "url": "https://www.st.com/resource/en/datasheet/lm337.pdf",
+      "revision": "DocID2167 Rev5 May2014",
+      "basis": "LM337 table4:1.2..1.3V reference magnitude,100uA adjust,10mA minimum load and3..40V differential test range."
+    },
+    {
+      "url": "https://catalog.triadmagnetics.com/Asset/VPT36-690.pdf",
+      "basis": "25VA,dual18V/0.69A series,115/230V,12% typical regulation."
+    },
+    {
+      "url": "https://catalog.triadmagnetics.com/asset/vpt36-1390.pdf",
+      "basis": "50VA,dual18V/1.39A series,115/230V,12% typical regulation;83mm diameter/36mm body maximum, mount hardware extra."
+    }
+  ]
+}
