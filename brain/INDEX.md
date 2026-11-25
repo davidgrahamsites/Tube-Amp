@@ -69,3 +69,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-038 | validation | pcb | documented | 2026-11-24 | [Four remaining branch candidates repaired](records/VAL-038-remaining-branch-repairs.md) |
 | VAL-039 | validation | components | documented | 2026-11-24 | [P057 sourcing fallback and full-pitch insertion check](records/VAL-039-power-film-sourcing-and-tolerance.md) |
 | VAL-040 | validation | schematic | documented | 2026-11-25 | [RETURN supply/bypass diagnosis](records/VAL-040-return-supply-diagnostics.md) |
+| VAL-041 | validation | schematic | documented | 2026-11-25 | [Effects-loop port behavior and pending choice](records/VAL-041-return-port-behavior.md) |

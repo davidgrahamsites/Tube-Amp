@@ -459,7 +459,7 @@
       "occurred_on": null,
       "authority": "engineer",
       "kind": "engineering-change",
-      "quote": "Updated the full amplifier schematic for your 600 \u03a9 / 2,250 \u03a9 tank.",
+      "quote": "Updated the full amplifier schematic for your 600 Ω / 2,250 Ω tank.",
       "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
       "interpretation": "Assistant implemented600R-1 attenuated send/passive dry, with fixed insertion loss and scoped checks. This is not user approval of a fabrication release.",
       "disposition": "incorporated",
@@ -1036,7 +1036,7 @@
       "kind": "speaker-aperture-measurement-usability",
       "quote": "it's hard to get the largest measurement of a circle without calipers",
       "source": "Current conversation, S1 measurement",
-      "interpretation": "Use a simple ruler/tape sweep to find the longest chord horizontally and vertically, with1\u20132mm preliminary uncertainty. Explain centre-offset error; reserve final fit for actual speaker template/trial. No caliper purchase required.",
+      "interpretation": "Use a simple ruler/tape sweep to find the longest chord horizontally and vertically, with1–2mm preliminary uncertainty. Explain centre-offset error; reserve final fit for actual speaker template/trial. No caliper purchase required.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md"
@@ -1052,7 +1052,7 @@
       "kind": "received-tank-envelope-measurement",
       "quote": "T1 length: 149.5mm, T2 width: 60 mm, T3 height: 36.5mm,",
       "source": "Current conversation; reply to illustrated T1/T2/T3 measuring instructions",
-      "interpretation": "Record received tank outer envelope149.5\u00d760\u00d736.5mm per requested datums: length including flanges, width including socket projections, height including feet. Setup and measurement uncertainty not independently verified. No replacement catalogue envelope or mounting-hole coordinates inferred.",
+      "interpretation": "Record received tank outer envelope149.5×60×36.5mm per requested datums: length including flanges, width including socket projections, height including feet. Setup and measurement uncertainty not independently verified. No replacement catalogue envelope or mounting-hole coordinates inferred.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/whole-amp/mechanical/fit-register.json",
@@ -1083,7 +1083,7 @@
       "occurred_on": "2026-11-21",
       "authority": "user",
       "kind": "speaker-aperture-unit-confirmed",
-      "quote": "Yes \u2014 27 cm (270 mm)",
+      "quote": "Yes — 27 cm (270 mm)",
       "source": "User answer to S1 unit clarification",
       "interpretation": "Accept approximate received speaker-aperture diameter270mm. Matches supplier drawing nominal270mm; this does not resolve mounting-bolt pattern, exact tolerance, speaker depth or full assembly fit.",
       "disposition": "incorporated",
@@ -1194,7 +1194,7 @@
       "kind": "installed-control-opening-measurements",
       "quote": "P1: 2 or 3 mm short of 31cm; P2-clear: it looks like 53mm",
       "source": "Current conversation: replies to P1/P2-clear with upper rear panel ON",
-      "interpretation": "310 minus 2 to 3 gives307\u2013308mm clear narrow width. Clear depth approximately53mm; no accuracy tolerance supplied. Measurements taken under installed-cover instructions; setup not independently verified.",
+      "interpretation": "310 minus 2 to 3 gives307–308mm clear narrow width. Clear depth approximately53mm; no accuracy tolerance supplied. Measurements taken under installed-cover instructions; setup not independently verified.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/whole-amp/mechanical/fit-register.json",
@@ -1252,7 +1252,7 @@
         "brain/records/VAL-018-all-board-requirements-audit.md"
       ],
       "supersedes": [],
-      "next_action": "Audit complete; all four boards held for fabrication. Follow F01\u2013F08 repair order: exact parts and assembly, placement/protection, per-net rules, routing and verification. No native CAD repair claimed at this checkpoint."
+      "next_action": "Audit complete; all four boards held for fabrication. Follow F01–F08 repair order: exact parts and assembly, placement/protection, per-net rules, routing and verification. No native CAD repair claimed at this checkpoint."
     },
     {
       "id": "FB-077",
@@ -1260,7 +1260,7 @@
       "occurred_on": "2026-11-21",
       "authority": "user",
       "kind": "pcb-remediation-and-release",
-      "quote": "fix the PCB defects and keep going until it\u2019s build-ready. Keep the functional blocks intact, make sure it fits and the screws are accessible, then rerun the checks, log everything in ICM and push to GitHub.",
+      "quote": "fix the PCB defects and keep going until it’s build-ready. Keep the functional blocks intact, make sure it fits and the screws are accessible, then rerun the checks, log everything in ICM and push to GitHub.",
       "source": "Current conversation",
       "interpretation": "Authorize coordinated native electrical/PCB/mechanical repairs and repository push. Preserve existing cabinet and block boundaries; no fabrication release without evidence. Physical fit and energized checks require measured evidence, not inferred passes.",
       "disposition": "in_progress",
@@ -1319,7 +1319,7 @@
         "engineering/whole-amp/pcb-measured-r/review/external-guidance-comparison-2026-11-21.md"
       ],
       "supersedes": [],
-      "next_action": "Comparison completed against pinned repository and primary sources; apply the recorded tube-amp-specific dispositions through F01\u2013F08 remediation."
+      "next_action": "Comparison completed against pinned repository and primary sources; apply the recorded tube-amp-specific dispositions through F01–F08 remediation."
     },
     {
       "id": "FB-084",
@@ -1329,7 +1329,7 @@
       "kind": "dual-mains-feasibility",
       "quote": "is it possible to make it work with 220 or 120 volts?",
       "source": "Current conversation",
-      "interpretation": "Evaluate dual-mains 120 and 220\u2013240 V 50/60 Hz feasibility. Proposed transformer primary/taps plus recessed selector and voltage-specific fusing, all auxiliary supplies included. Not yet an implemented or qualified electrical change. Manufacturer explanation: https://www.hammfg.com/electronics/transformers/faq",
+      "interpretation": "Evaluate dual-mains 120 and 220–240 V 50/60 Hz feasibility. Proposed transformer primary/taps plus recessed selector and voltage-specific fusing, all auxiliary supplies included. Not yet an implemented or qualified electrical change. Manufacturer explanation: https://www.hammfg.com/electronics/transformers/faq",
       "disposition": "superseded",
       "canonical_paths": [
         "brain/records/DEC-012-defer-multi-voltage-variant.md"
@@ -1379,7 +1379,7 @@
       "occurred_on": "2026-11-23",
       "authority": "user",
       "kind": "optocoupler-relay-combination",
-      "quote": "Many designs use an optocoupler to isolate a control signal and drive a relay ... let\u2019s look into it!",
+      "quote": "Many designs use an optocoupler to isolate a control signal and drive a relay ... let’s look into it!",
       "source": "Current build conversation",
       "interpretation": "Evaluate combined optical control plus mechanical relay, including actual isolation boundary and benefits in this circuit.",
       "disposition": "incorporated",
@@ -1469,7 +1469,7 @@
       "kind": "switchable-mains-cost-question",
       "quote": "how much more expensive would making it 220/120 switchable make it?",
       "source": "Current build conversation",
-      "interpretation": "Request incremental cost research; not itself adoption. Engineering allowance \u00a5150\u2013400 remains unquoted and excludes paid engineering/testing.",
+      "interpretation": "Request incremental cost research; not itself adoption. Engineering allowance ¥150–400 remains unquoted and excludes paid engineering/testing.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/component-selection/evidence/prototype-cost-allowance-2026-11-24.md"
@@ -1736,6 +1736,22 @@
       ],
       "supersedes": [],
       "next_action": "Use measured diameter for the chuck cross-section; qualify full screw approach and withdrawal after remaining tool dimensions and actual fastener positions are known."
+    },
+    {
+      "id": "FB-121",
+      "recorded_on": "2026-11-25",
+      "occurred_on": "2026-11-25",
+      "authority": "user",
+      "kind": "effects-loop-three-path-diagrams",
+      "quote": "can you please show me a functional diagram of the signal path in all three cases?",
+      "source": "Current conversation; reply to effects-loop behavior question",
+      "interpretation": "Show the three proposed buffered/bypass/mix behaviors before the user chooses. This is not acceptance of any topology, loading change, added parts or relocated loop.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/signal-path-options.md"
+      ],
+      "supersedes": [],
+      "next_action": "Provide all three functional signal paths and common dry/spring/output section; keep behavior selection pending."
     }
   ]
 }

@@ -1219,3 +1219,14 @@ Source: Current build conversation; user-supplied photograph of orange drill
 
 - [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
 
+## FB-121 — effects-loop-three-path-diagrams
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> can you please show me a functional diagram of the signal path in all three cases?
+
+Show the three proposed buffered/bypass/mix behaviors before the user chooses. This is not acceptance of any topology, loading change, added parts or relocated loop.
+
+Source: Current conversation; reply to effects-loop behavior question
+
+- [engineering/whole-amp/effects-loop/signal-path-options.md](<../../engineering/whole-amp/effects-loop/signal-path-options.md>)
+
