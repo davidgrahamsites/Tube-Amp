@@ -4,7 +4,7 @@ Owner: control-switching integration. Input revision c6559ed; output is a candid
 
 ## Circuit and blocks
 
-Keep the user latch, existing relay driver and reverb signal path. Both LM393P open-collector outputs join RAIL_OK, with a1.5k pull-up to+5V. Reuse the existing unused SN74HC14N U1E gate (input11/output10) to generate FAULT. FAULT drives an added NPN pull-down on REV_GATE through10k, with100k base/emitter. REV_Q retains its own4.7k gate drive and100k gate pull-down; user OFF can still inhibit independently. Exact NPN and timing components are not selected. U1F remains spare. A delay must not be added directly to the hysteresis node.
+Keep the user latch, existing relay driver and reverb signal path. Both LM393P open-collector outputs join RAIL_OK, with a1.5k pull-up to+5V. Reuse the existing unused SN74HC14N U1E gate (input11/output10) to generate FAULT. FAULT drives an added NPN pull-down on REV_GATE through10k, with100k base/emitter. The candidate changes R341 from native1k to4.7k and retains its100k gate pull-down; user OFF can still inhibit independently. Exact NPN and timing components are not selected. U1F remains spare. A delay must not be added directly to the hysteresis node.
 
 The original comparator feedback depended on relay gate voltage. This revision obtains feedback from RAIL_OK and reduces divider impedances tenfold to reduce input-bias sensitivity. The editable interface is [rail-monitor-buffered-contract.json](rail-monitor-buffered-contract.json).
 

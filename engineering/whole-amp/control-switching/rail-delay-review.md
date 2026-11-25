@@ -21,6 +21,8 @@ flowchart LR
 
 The two inhibit inputs each have their own10k resistor. The base-current calculation includes the other input being LOW, which loads the HIGH input. FAULT also drives QDIS through1k; its collector discharges DELAY through220Ω. A100k base-emitter resistor is fitted to each transistor. The timing capacitor is separate from the comparator hysteresis node. Exact connection and pin details are owned by [rail-delay-contract.json](rail-delay-contract.json).
 
+Native boundary correction: R341 is still1k in the source, schematic and PCB. The candidate requires an unadopted4.7k replacement. A read-only three-file guard now verifies that boundary; retaining1k fails the proposed base-drive allocation. See [coil/driver follow-up](relay-latency-review.md). The native circuit was not changed by the earlier timing calculation.
+
 ## Calculation and short-fault result
 
 The factory enumerates192 valid combinations of supply, resistor/capacitor endpoints, leakage, saturation and Schmitt thresholds. Impossible rising/falling threshold pairs are excluded; enclosing extrema remain. An independent branch-current RK4 integration checks384 charge/discharge crossings against the closed-form result within1ppm. This verifies the calculation for its stated model; it does not validate transistor, comparator or relay behavior.

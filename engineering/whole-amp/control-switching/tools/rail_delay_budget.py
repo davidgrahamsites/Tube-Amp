@@ -7,10 +7,33 @@ import hashlib
 import itertools
 import json
 import math
+import sys
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[1]
 CONTRACT = BASE / 'rail-delay-contract.json'
+sys.path.insert(0, str(BASE.parent/'tools'))
+from native_sexpr import parse, children
+
+
+def native_binding(c):
+    """Read-only source/schematic/board guard for the unadopted gate resistor."""
+    binding = c['native_binding']
+    paths = {k: BASE/binding[k] for k in ['circuit', 'schematic', 'board']}
+    source = [x for x in json.loads(paths['circuit'].read_text())['components'] if x['reference']==binding['reference']]
+    assert len(source)==1 and source[0]['pins']==binding['expected_pin_nets']
+    values = {'circuit':source[0]['value']}
+    for kind, element in [('schematic', 'symbol'), ('board', 'footprint')]:
+        matches=[]
+        for node in children(parse(paths[kind].read_text()), element):
+            props={p[1].strip('"'):p[2].strip('"') for p in children(node,'property')}
+            if props.get('Reference')==binding['reference']:
+                matches.append(props['Value'])
+        assert len(matches)==1, (kind, matches)
+        values[kind]=matches[0]
+    assert all(x==binding['expected_current_value'] for x in values.values()), values
+    return dict(reference=binding['reference'],native_values=values,candidate_value=binding['candidate_value'],native_change_pending=True,
+                file_hashes={binding[k]:hashlib.sha256(p.read_bytes()).hexdigest() for k,p in paths.items()})
 
 
 def equilibrium(v5, charge, discharge, leakage, saturation, fault):
@@ -60,6 +83,7 @@ def integrate_crossing(case, fault, duration, steps=4096):
 
 def main():
     c = json.loads(CONTRACT.read_text())
+    native = native_binding(c)
     tol = c['resistor_fraction']
     endpoints = lambda v: [v*(1-tol), v*(1+tol)]
     cap_values = [c['capacitor_F']*(1+d*c['capacitor_total_fraction_allocation']) for d in [-1,1]]
@@ -120,6 +144,11 @@ def main():
     ]
     report = dict(scope='Conditional RC/base-drive analysis, not full-circuit or quiet-audio qualification.',qualified=False,corners=len(cases),checks=checks,passed=sum(x['passed'] for x in checks),total=len(checks),release_range_s=[min(releases),max(releases)],timer_discharge_range_s=[min(discharges),max(discharges)],short_faults=pulse_results,every_short_fault_gets50ms_hold=all(x['hold_below50ms']==0 for x in pulse_results.values()),worst_release_case=max(cases,key=lambda x:x['release_s'] or -1),fastest_release_case=min(cases,key=lambda x:x['release_s'] if x['release_s'] is not None else math.inf),worst_discharge_case=max(cases,key=lambda x:x['discharge_s'] or -1),drive=dict(qdis_base_min_A=base_dis_min,qinhibit_base_min_A=base_inhibit_min,qdis_collector_max_A=collector_dis_max,qinhibit_collector_max_A=collector_inhibit_max,hc14_load_at_min_voh_A=hc14_load_at_min_voh),command_truth=truth,limitations=c['limitations'],inputs={str(p.relative_to(BASE)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [CONTRACT,Path(__file__)]})
     report['independent_integration'] = dict(method='RK4 from branch KCL,4096 steps per crossing window; linear event interpolation', comparisons=len(numeric),maximum_relative_error=numeric_max, worst=max(numeric,key=lambda x:x['relative_error'] or 0))
+    report['native_binding'] = native
+    native_gate_resistance = float(c['native_binding']['expected_current_value'].removesuffix('k'))*1000
+    report['native_resistor_negative_control'] = dict(gate_series_ohm=native_gate_resistance,
+        forced_beta=max(c['supply_V'])/(native_gate_resistance*(1-tol))/base_inhibit_min,
+        within_allocation=max(c['supply_V'])/(native_gate_resistance*(1-tol))/base_inhibit_min<=c['screens']['forced_beta_max'])
     report['qualification_gates'] = [
         dict(name='every tested short fault restarts at least50ms inhibit', passed=report['every_short_fault_gets50ms_hold'], note='A diagnostic screen, not yet a justified audio requirement; direct driver inhibit remains separate.'),
         dict(name='hot component limits and intermediate-supply threshold envelope verified', passed=None),

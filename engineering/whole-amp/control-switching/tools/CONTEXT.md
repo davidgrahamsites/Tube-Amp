@@ -1,6 +1,8 @@
 # Reset and relay factories
 
 rail_delay_budget.py reads ../rail-delay-contract.json, calculates conditional RC/base-drive bounds and independently integrates branch currents. It writes ../results/rail-delay-budget.json with brief-fault failures separate from arithmetic checks; no native mutation or automatic part selection.
+
+relay_latency.py reads ../relay-latency-contract.json and existing coil data. It calculates current decay and runs bounded SPICE subprocesses; logs/decks and a failed restore diagnostic remain in ../results/relay-latency.json. It has no contact-motion or whole-circuit acceptance model. rail_delay_budget.py also reads native source/schematic/board values to guard the declared R341 candidate boundary.
 Owner: Renegade integration. Inputs: ../contract.json, ../models and the shared ../../tools/spice_runtime.py adapter.
 Process: calculate_bounds.py reads manufacturer limits; simulate_reset.py runs the unmodified TI nominal model; simulate_drivers.py uses an explicitly named engineering surrogate. Independent outputs are retained in ../results; no simulation writes native CAD.
 Outputs: editable JSON evidence and exact decks with hashes. Human check: compare assumed supply, capacitance, harness and temperature bounds with actual assembled hardware; a nominal model is not a worst-case guarantee.

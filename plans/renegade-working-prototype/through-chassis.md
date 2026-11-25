@@ -84,3 +84,7 @@ The earlier rail-monitor calculation used25°C bias/output-low limits; corrected
 ### 2026-11-25 — rail-inhibit delay candidate
 
 [VAL-047](../../brain/records/VAL-047-rail-inhibit-delay.md) adds192 conditional timing corners and384 independent branch-current comparisons. Ten calculation screens pass, while the separate brief-fault hold screen fails:0.1–1ms pulses may not restart50ms inhibit. The direct fault path does not establish mechanical contact timing or quiet audio. KNSCHA82CL0117 domestic listing reports356/minimum1;33k TNPW candidate reports zero stock. Hot limits, full-circuit timing, exact Chinese purchasing and Shanghai delivery remain open. No native change; all six scopes remain active. Next: establish audio fault-width/contact response before adding further timing complexity, then exact parts and populated chassis checks.
+
+### 2026-11-25 — K3 coil latency and native resistor boundary
+
+[VAL-048](../../brain/records/VAL-048-relay-latency-boundary.md) corrects candidate R3414.7k versus native1k in all three representations. The native value fails the proposed inhibit-base allocation; no CAD change adopted.48 conditional coil cases and refined turn-off simulations prevent crediting K3 as instantaneous muting. Restore diagnostics retain numerical failures. Next: quantify the audio disturbance before contact motion, then qualify the complete supply/reset/mute interface; all six scopes and China/Shanghai sourcing/populated fit remain open.

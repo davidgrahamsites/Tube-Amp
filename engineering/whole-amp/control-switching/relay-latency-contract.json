@@ -1,0 +1,41 @@
+{
+  "status": "diagnostic-not-contact-qualification",
+  "owner": "control-switching integration",
+  "job": "Determine whether instantaneous driver inhibition can be credited as instantaneous K3 contact muting.",
+  "native_baseline": "1fe6f4894e5ef023ee61ca8140cc7a8b9f96be27",
+  "coil_contract": "contract.json",
+  "relay_datasheet": "../expression-control/references/Omron-G5V-2.pdf",
+  "relay_datasheet_url": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v2.pdf",
+  "temperatures_C": [
+    -25,
+    23,
+    70
+  ],
+  "diode_drop_screen_V": [
+    0.5,
+    1.1
+  ],
+  "fault_pulse_s": [
+    0.0001,
+    0.0005,
+    0.001,
+    0.002,
+    0.005,
+    0.02
+  ],
+  "residual_current_fraction_screen": 0.05,
+  "spice_step_s": 2e-06,
+  "limitations": [
+    "Coil inductances are Omron reference values, not guaranteed endpoints; fixed L omits moving armature and hysteresis.",
+    "Temperature dependence uses copper TCR as an engineering approximation.",
+    "Five percent of initial current is a diagnostic metric, not the manufacturer's release-voltage test or a contact-state model.",
+    "Immediate100ns gate-command transition with100ohm source and typical580pF Cgs deliberately omits comparator/logic latency. This is a numerical engineering screen, not an exact NPN/HC14 model.",
+    "Generic27C diode and Level1 MOS/capacitance models are engineering surrogates; actual clamps, cable and hot semiconductor behavior are unqualified.",
+    "Healthy +12V is held constant while an analog-rail fault requests inhibition. Simultaneous supply collapse needs separate analysis.",
+    "No claim of contact release, audio silence, manufacturing readiness or native adoption.",
+    "Primary SPICE screen keeps the command OFF. A separate ideal-gate restore diagnostic retains a solver failure; re-enable/contact response remains unqualified."
+  ],
+  "gate_source_screen_ohm": 100,
+  "gate_transition_s": 1e-07,
+  "spice_off_observation_s": 0.02
+}

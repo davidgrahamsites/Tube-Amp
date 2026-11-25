@@ -17,3 +17,5 @@ Analog-rail inhibit candidate: rail-monitor-contract.json defines the proposed t
 Buffered rail candidate: rail-monitor-buffered-contract.json owns the reduced-impedance network and spare-U1E interface. rail-monitor-buffered-review.md separates conditional static success from unresolved sourcing/timing/native adoption. Original rail-monitor-contract.json now uses corrected full-temperature comparator limits.
 
 Delay candidate: rail-delay-contract.json extends that candidate with spare-U1F and a direct fault path. rail-delay-review.md owns the interpretation, including a failed brief-fault hold screen. The interface is still candidate-only; hot-component and full driver/contact response are not qualified.
+
+Coil-latency seam: relay-latency-contract.json and relay-latency-review.md distinguish coil-current decay from contact response. The delay factory guards native R341=1k in source/schematic/board;4.7k is still an unadopted requirement of the candidate.

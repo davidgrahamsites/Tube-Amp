@@ -205,8 +205,8 @@
     "No CAD change, socket exception, purchase or fabrication release."
   ],
   "inputs": {
-    "rail-delay-contract.json": "e5e4df8fe44d77b1bc8945b99126a4ec5c47cf2041f344ab9ff6a0394922a718",
-    "tools/rail_delay_budget.py": "7a9959023b7833041f06919790bb66a6fcdfba115b443b830485d5d721dbb8e8"
+    "rail-delay-contract.json": "be6ec3b99e3809b510fb83b77e6cacfa3f9448fdf549cb0d906b7ac731fbccfa",
+    "tools/rail_delay_budget.py": "a7df8be3eb94eb71636af3fd5d8a904b7349cca83cdf07c258a7018a566a63ee"
   },
   "independent_integration": {
     "method": "RK4 from branch KCL,4096 steps per crossing window; linear event interpolation",
@@ -219,6 +219,26 @@
       "numerical_s": 0.8643861285753731,
       "relative_error": 2.0125910391032345e-08
     }
+  },
+  "native_binding": {
+    "reference": "R341",
+    "native_values": {
+      "circuit": "1k",
+      "schematic": "1k",
+      "board": "1k"
+    },
+    "candidate_value": "4.7k",
+    "native_change_pending": true,
+    "file_hashes": {
+      "../reverb-600/circuit.json": "41771da777078e68a30d2fd17daf078548e916d2c724030e8752947f1fd7ea18",
+      "../reverb-600/cad/09b_latches_drivers.kicad_sch": "49197628a255bbd034f3fdc9fc63dabbcef156f802245f46caeacbc3bf2e049d",
+      "../pcb-measured-r/boards/Renegade_Control.kicad_pcb": "ca65723ca8be01a4fc8fce46dccd3082610d0d28229695e0bea6b3564ef1e642"
+    }
+  },
+  "native_resistor_negative_control": {
+    "gate_series_ohm": 1000.0,
+    "forced_beta": 41.412839737582026,
+    "within_allocation": false
   },
   "qualification_gates": [
     {

@@ -1,6 +1,8 @@
 # Reset / relay evidence
 
 rail-delay-budget.json is the current conditional timing result; rail-delay-sources.json retains exact manufacturer and supplier observations. Passing arithmetic does not clear its explicit brief-fault failure or untested qualification gates.
+
+relay-latency.json owns the coil-current screen, exact SPICE decks/logs, refinements and retained ideal-gate re-enable failure. No current fraction is converted into a claim about mechanical contact state.
 Owner: Renegade integration. Inputs: ../contract.json and factories in ../tools, manufacturer model in ../models.
 Process: replace current result files on rerun, retain exact decks/hashes and meaningful pass/fail metrics. No fabricated bench results.
 Outputs: bounds.json, reset-screen.json, driver-screen.json, simulator logs and later native-check evidence if adopted. Human check: read ../review.md, inspect failed cases and qualification limits before using any candidate in production.

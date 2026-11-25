@@ -1,0 +1,684 @@
+{
+  "scope": "Determine whether instantaneous driver inhibition can be credited as instantaneous K3 contact muting.",
+  "qualified": false,
+  "analytical_cases": 48,
+  "checks": [
+    {
+      "name": "primary and refined off-decay simulations complete",
+      "passed": true
+    },
+    {
+      "name": "sampled current fractions agree within0.001",
+      "passed": true
+    },
+    {
+      "name": "analytical current remains in physical bounds and decays with off-time",
+      "passed": true
+    }
+  ],
+  "conditional_decay_to_5percent_range_s": [
+    0.004666006160958914,
+    0.013947025222107357
+  ],
+  "pulse_current_ranges": {
+    "0.0001": [
+      0.953703396871479,
+      0.981893035446138
+    ],
+    "0.0005": [
+      0.7872564976385623,
+      0.912564216609529
+    ],
+    "0.001": [
+      0.6157899308679986,
+      0.8324816549240602
+    ],
+    "0.002": [
+      0.36620690976284176,
+      0.6919546219707131
+    ],
+    "0.005": [
+      0.030343048637399218,
+      0.3922224932166467
+    ],
+    "0.02": [
+      0.0,
+      0.0
+    ]
+  },
+  "analytical_witnesses": [
+    {
+      "temperature_C": 70,
+      "resistance_ohm": 1251.05376,
+      "inductance_H": 2.9,
+      "supply_V": 11.4,
+      "clamp_V": 1.1,
+      "decay_to_5percent_s": 0.004666006160958914,
+      "remaining_fraction": {
+        "0.0001": 0.953703396871479,
+        "0.0005": 0.7872564976385623,
+        "0.001": 0.6157899308679986,
+        "0.002": 0.36620690976284176,
+        "0.005": 0.030343048637399218,
+        "0.02": 0.0
+      }
+    },
+    {
+      "temperature_C": -25,
+      "resistance_ohm": 701.01504,
+      "inductance_H": 3.99,
+      "supply_V": 12.6,
+      "clamp_V": 0.5,
+      "decay_to_5percent_s": 0.013947025222107357,
+      "remaining_fraction": {
+        "0.0001": 0.981893035446138,
+        "0.0005": 0.912564216609529,
+        "0.001": 0.8324816549240602,
+        "0.002": 0.6919546219707131,
+        "0.005": 0.3922224932166467,
+        "0.02": 0.0
+      }
+    }
+  ],
+  "spice_cases": [
+    {
+      "status": "complete-diagnostic",
+      "case": {
+        "temperature_C": 70,
+        "resistance_ohm": 1251.05376,
+        "inductance_H": 2.9,
+        "supply_V": 11.4,
+        "clamp_V": 1.1,
+        "decay_to_5percent_s": 0.004666006160958914,
+        "remaining_fraction": {
+          "0.0001": 0.953703396871479,
+          "0.0005": 0.7872564976385623,
+          "0.001": 0.6157899308679986,
+          "0.002": 0.36620690976284176,
+          "0.005": 0.030343048637399218,
+          "0.02": 0.0
+        }
+      },
+      "pulse_s": 0.02,
+      "restore": false,
+      "current_fraction_at_off_time": {
+        "0.0001": 0.9552294135047865,
+        "0.0005": 0.7939829932863408,
+        "0.001": 0.6280445576517184,
+        "0.002": 0.38704716593318916,
+        "0.005": 0.0664114014777019,
+        "0.02": 4.342468518154147e-07
+      },
+      "initial_current_A": 0.009110328238870364,
+      "minimum_current_fraction": -0.00016536833485891107,
+      "current_below_5percent_during_observation_s": 0.0053492008507199755,
+      "max_drain_V": 12.123418895701882,
+      "active_remote_clamp_range_V": [
+        0.006404385328837137,
+        0.7153251818760307
+      ],
+      "completed_s": 0.05,
+      "step_s": 2e-06,
+      "gate_source_screen_ohm": 100,
+      "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 11.4\nVcommand command 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.05 0)\nRgate command gate 100\nCgs gate 0 580p\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 1251.05376\nLcoil coil remote 2.9\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 2e-06 0.05 0 2e-06\n.end\n",
+      "deck_sha256": "58943d5bd34d61c75642c46be432bf44504a178ccad177359fcedbde67a8d0a6",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    11.4\nstdout command                                   3.84\nstdout gate                                      3.84\nstdout drain                              0.000667536\nstdout coil                                 0.0024896\nstdout remote                               0.0024896\nstdout wire                               0.000667536\nstdout lwire#branch                        0.00911033\nstdout lcoil#branch                        0.00911033\nstdout vcommand#branch                    2.74225e-18\nstdout v12#branch                         -0.00911033\n Reference value :  4.65005e-02\r\nstdout No. of Data Rows : 26929"
+    },
+    {
+      "status": "complete-diagnostic",
+      "case": {
+        "temperature_C": -25,
+        "resistance_ohm": 701.01504,
+        "inductance_H": 3.99,
+        "supply_V": 12.6,
+        "clamp_V": 0.5,
+        "decay_to_5percent_s": 0.013947025222107357,
+        "remaining_fraction": {
+          "0.0001": 0.981893035446138,
+          "0.0005": 0.912564216609529,
+          "0.001": 0.8324816549240602,
+          "0.002": 0.6919546219707131,
+          "0.005": 0.3922224932166467,
+          "0.02": 0.0
+        }
+      },
+      "pulse_s": 0.02,
+      "restore": false,
+      "current_fraction_at_off_time": {
+        "0.0001": 0.9815887202628858,
+        "0.0005": 0.9109579763101826,
+        "0.001": 0.82939912107035,
+        "0.002": 0.6863707812458015,
+        "0.005": 0.3819423021272516,
+        "0.02": -6.935522571088405e-06
+      },
+      "initial_current_A": 0.017966932603644296,
+      "minimum_current_fraction": -6.86695545044349e-05,
+      "current_below_5percent_during_observation_s": 0.013270518537537157,
+      "max_drain_V": 13.361732258237307,
+      "active_remote_clamp_range_V": [
+        0.0037324224186559007,
+        0.7475796118633102
+      ],
+      "completed_s": 0.05,
+      "step_s": 2e-06,
+      "gate_source_screen_ohm": 100,
+      "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 12.6\nVcommand command 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.05 0)\nRgate command gate 100\nCgs gate 0 580p\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 701.01504\nLcoil coil remote 3.99\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 2e-06 0.05 0 2e-06\n.end\n",
+      "deck_sha256": "281af9e339c2a55efe3dfff4c3b1eb700aa2023e00b156ec60d9b1403be3fd0d",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    12.6\nstdout command                                   3.84\nstdout gate                                      3.84\nstdout drain                               0.00131664\nstdout coil                                0.00491002\nstdout remote                              0.00491002\nstdout wire                                0.00131664\nstdout lwire#branch                         0.0179669\nstdout lcoil#branch                         0.0179669\nstdout vcommand#branch                    2.74225e-18\nstdout v12#branch                          -0.0179669\n Reference value :  4.88962e-02\r\nstdout No. of Data Rows : 26646"
+    }
+  ],
+  "refinements": [
+    {
+      "coarse_step_s": 2e-06,
+      "fine": {
+        "status": "complete-diagnostic",
+        "case": {
+          "temperature_C": 70,
+          "resistance_ohm": 1251.05376,
+          "inductance_H": 2.9,
+          "supply_V": 11.4,
+          "clamp_V": 1.1,
+          "decay_to_5percent_s": 0.004666006160958914,
+          "remaining_fraction": {
+            "0.0001": 0.953703396871479,
+            "0.0005": 0.7872564976385623,
+            "0.001": 0.6157899308679986,
+            "0.002": 0.36620690976284176,
+            "0.005": 0.030343048637399218,
+            "0.02": 0.0
+          }
+        },
+        "pulse_s": 0.02,
+        "restore": false,
+        "current_fraction_at_off_time": {
+          "0.0001": 0.9552294566435974,
+          "0.0005": 0.7939830640294351,
+          "0.001": 0.6280446492981284,
+          "0.002": 0.38704727021238733,
+          "0.005": 0.06641146468319917,
+          "0.02": -3.101847531757604e-07
+        },
+        "initial_current_A": 0.009110328238870364,
+        "minimum_current_fraction": -0.0001657827069681655,
+        "current_below_5percent_during_observation_s": 0.0053493302615083265,
+        "max_drain_V": 12.123414450333476,
+        "active_remote_clamp_range_V": [
+          0.01679637144963131,
+          0.7152608180831859
+        ],
+        "completed_s": 0.05,
+        "step_s": 5e-07,
+        "gate_source_screen_ohm": 100,
+        "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 11.4\nVcommand command 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.05 0)\nRgate command gate 100\nCgs gate 0 580p\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 1251.05376\nLcoil coil remote 2.9\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 5e-07 0.05 0 5e-07\n.end\n",
+        "deck_sha256": "10297ee77b677e451d3bee7a6544418155e3dce3b2805d6265bcceff9820ca1d",
+        "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    11.4\nstdout command                                   3.84\nstdout gate                                      3.84\nstdout drain                              0.000667536\nstdout coil                                 0.0024896\nstdout remote                               0.0024896\nstdout wire                               0.000667536\nstdout lwire#branch                        0.00911033\nstdout lcoil#branch                        0.00911033\nstdout vcommand#branch                    2.74225e-18\nstdout v12#branch                         -0.00911033\n Reference value :  1.34528e-02\r\n Reference value :  3.03438e-02\r\n Reference value :  4.70908e-02\r\nstdout No. of Data Rows : 100254"
+      },
+      "matched_complete": true,
+      "maximum_sample_fraction_delta": 7.444316049911752e-07,
+      "peak_drain_delta_V": 4.445368405825434e-06
+    },
+    {
+      "coarse_step_s": 2e-06,
+      "fine": {
+        "status": "complete-diagnostic",
+        "case": {
+          "temperature_C": -25,
+          "resistance_ohm": 701.01504,
+          "inductance_H": 3.99,
+          "supply_V": 12.6,
+          "clamp_V": 0.5,
+          "decay_to_5percent_s": 0.013947025222107357,
+          "remaining_fraction": {
+            "0.0001": 0.981893035446138,
+            "0.0005": 0.912564216609529,
+            "0.001": 0.8324816549240602,
+            "0.002": 0.6919546219707131,
+            "0.005": 0.3922224932166467,
+            "0.02": 0.0
+          }
+        },
+        "pulse_s": 0.02,
+        "restore": false,
+        "current_fraction_at_off_time": {
+          "0.0001": 0.9815887544305518,
+          "0.0005": 0.9109580107887661,
+          "0.001": 0.8293991556572688,
+          "0.002": 0.6863708152984332,
+          "0.005": 0.3819423310940422,
+          "0.02": -1.7034645670954955e-06
+        },
+        "initial_current_A": 0.017966932603644296,
+        "minimum_current_fraction": -6.879055955502171e-05,
+        "current_below_5percent_during_observation_s": 0.013269396550185218,
+        "max_drain_V": 13.3617389715073,
+        "active_remote_clamp_range_V": [
+          0.08121202888575318,
+          0.747568624069535
+        ],
+        "completed_s": 0.05,
+        "step_s": 5e-07,
+        "gate_source_screen_ohm": 100,
+        "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 12.6\nVcommand command 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.05 0)\nRgate command gate 100\nCgs gate 0 580p\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 701.01504\nLcoil coil remote 3.99\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 5e-07 0.05 0 5e-07\n.end\n",
+        "deck_sha256": "f2af58d63329deb2cd6f89c3cd7c74332ea8096aacc2251f138a72320833087f",
+        "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    12.6\nstdout command                                   3.84\nstdout gate                                      3.84\nstdout drain                               0.00131664\nstdout coil                                0.00491002\nstdout remote                              0.00491002\nstdout wire                                0.00131664\nstdout lwire#branch                         0.0179669\nstdout lcoil#branch                         0.0179669\nstdout vcommand#branch                    2.74225e-18\nstdout v12#branch                          -0.0179669\n Reference value :  1.37559e-02\r\n Reference value :  3.07749e-02\r\n Reference value :  4.77089e-02\r\nstdout No. of Data Rows : 100259"
+      },
+      "matched_complete": true,
+      "maximum_sample_fraction_delta": 5.23205800399291e-06,
+      "peak_drain_delta_V": 6.713269993241511e-06
+    }
+  ],
+  "ideal_gate_source_diagnostic": {
+    "status": "failed-incomplete-duration",
+    "case": {
+      "temperature_C": 70,
+      "resistance_ohm": 1251.05376,
+      "inductance_H": 2.9,
+      "supply_V": 11.4,
+      "clamp_V": 1.1,
+      "decay_to_5percent_s": 0.004666006160958914,
+      "remaining_fraction": {
+        "0.0001": 0.953703396871479,
+        "0.0005": 0.7872564976385623,
+        "0.001": 0.6157899308679986,
+        "0.002": 0.36620690976284176,
+        "0.005": 0.030343048637399218,
+        "0.02": 0.0
+      }
+    },
+    "pulse_s": 0.005,
+    "step_s": 2e-06,
+    "completed_s": 0.015000100020916339,
+    "required_s": 0.035,
+    "gate_source_screen_ohm": 0,
+    "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 11.4\nVcommand gate 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.015 0 0.015000099999999999 3.84 0.035 3.84)\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 1251.05376\nLcoil coil remote 2.9\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 2e-06 0.035 0 2e-06\n.end\n",
+    "deck_sha256": "4eaecb373c62e0e27342b580c2a472c0543375da8ad38cf899141a9cad155a56",
+    "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    11.4\nstdout gate                                      3.84\nstdout drain                              0.000667536\nstdout coil                                 0.0024896\nstdout remote                               0.0024896\nstdout wire                               0.000667536\nstdout lwire#branch                        0.00911033\nstdout lcoil#branch                        0.00911033\nstdout vcommand#branch                              0\nstdout v12#branch                         -0.00911033\nstdout No. of Data Rows : 7900\nstderr doAnalyses: TRAN:  Timestep too small; time = 0.0150001, timestep = 2.5e-18: trouble with node \"drain\"\nstderr run simulation(s) aborted"
+  },
+  "restore_diagnostics": [
+    {
+      "status": "complete-diagnostic",
+      "case": {
+        "temperature_C": 70,
+        "resistance_ohm": 1251.05376,
+        "inductance_H": 2.9,
+        "supply_V": 11.4,
+        "clamp_V": 1.1,
+        "decay_to_5percent_s": 0.004666006160958914,
+        "remaining_fraction": {
+          "0.0001": 0.953703396871479,
+          "0.0005": 0.7872564976385623,
+          "0.001": 0.6157899308679986,
+          "0.002": 0.36620690976284176,
+          "0.005": 0.030343048637399218,
+          "0.02": 0.0
+        }
+      },
+      "pulse_s": 0.0001,
+      "restore": true,
+      "current_fraction_at_off_time": {
+        "0.0001": 0.9552293222744569,
+        "0.0005": 0.9622703478165069,
+        "0.001": 0.9695919413791485,
+        "0.002": 0.9802484820282431,
+        "0.005": 0.9945870273654999,
+        "0.02": 0.9999916321747482
+      },
+      "initial_current_A": 0.009110328238870364,
+      "minimum_current_fraction": 0.9555802637221048,
+      "current_below_5percent_during_observation_s": null,
+      "max_drain_V": 12.123418895701882,
+      "active_remote_clamp_range_V": [
+        0.006404385328837137,
+        0.7153251818760307
+      ],
+      "completed_s": 0.030100000000000002,
+      "step_s": 2e-06,
+      "gate_source_screen_ohm": 100,
+      "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 11.4\nVcommand command 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.0101 0 0.010100099999999999 3.84 0.030100000000000002 3.84)\nRgate command gate 100\nCgs gate 0 580p\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 1251.05376\nLcoil coil remote 2.9\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 2e-06 0.030100000000000002 0 2e-06\n.end\n",
+      "deck_sha256": "b879feb7e967b5c975eedecfc3665ef79034907a310266c4661ba5c73eec43e1",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    11.4\nstdout command                                   3.84\nstdout gate                                      3.84\nstdout drain                              0.000667536\nstdout coil                                 0.0024896\nstdout remote                               0.0024896\nstdout wire                               0.000667536\nstdout lwire#branch                        0.00911033\nstdout lcoil#branch                        0.00911033\nstdout vcommand#branch                    2.74225e-18\nstdout v12#branch                         -0.00911033\n Reference value :  1.01428e-02\r\nstdout No. of Data Rows : 31197"
+    },
+    {
+      "status": "complete-diagnostic",
+      "case": {
+        "temperature_C": 70,
+        "resistance_ohm": 1251.05376,
+        "inductance_H": 2.9,
+        "supply_V": 11.4,
+        "clamp_V": 1.1,
+        "decay_to_5percent_s": 0.004666006160958914,
+        "remaining_fraction": {
+          "0.0001": 0.953703396871479,
+          "0.0005": 0.7872564976385623,
+          "0.001": 0.6157899308679986,
+          "0.002": 0.36620690976284176,
+          "0.005": 0.030343048637399218,
+          "0.02": 0.0
+        }
+      },
+      "pulse_s": 0.001,
+      "restore": true,
+      "current_fraction_at_off_time": {
+        "0.0001": 0.9552294135047865,
+        "0.0005": 0.7939829932863408,
+        "0.001": 0.6280444957689691,
+        "0.002": 0.7583577974281077,
+        "0.005": 0.9337771085133489,
+        "0.02": 0.9998976271235838
+      },
+      "initial_current_A": 0.009110328238870364,
+      "minimum_current_fraction": 0.6282820172769967,
+      "current_below_5percent_during_observation_s": null,
+      "max_drain_V": 12.123418895701882,
+      "active_remote_clamp_range_V": [
+        0.006404385328837137,
+        0.7153251818760307
+      ],
+      "completed_s": 0.031,
+      "step_s": 2e-06,
+      "gate_source_screen_ohm": 100,
+      "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 11.4\nVcommand command 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.011 0 0.011000099999999999 3.84 0.031 3.84)\nRgate command gate 100\nCgs gate 0 580p\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 1251.05376\nLcoil coil remote 2.9\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 2e-06 0.031 0 2e-06\n.end\n",
+      "deck_sha256": "25b2aad5dfe80f36f78c51c4b63903f63ab35320140ad808f7e4526227edd1ab",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    11.4\nstdout command                                   3.84\nstdout gate                                      3.84\nstdout drain                              0.000667536\nstdout coil                                 0.0024896\nstdout remote                               0.0024896\nstdout wire                               0.000667536\nstdout lwire#branch                        0.00911033\nstdout lcoil#branch                        0.00911033\nstdout vcommand#branch                    2.74225e-18\nstdout v12#branch                         -0.00911033\n Reference value :  1.10387e-02\r\nstdout No. of Data Rows : 32857"
+    },
+    {
+      "status": "complete-diagnostic",
+      "case": {
+        "temperature_C": 70,
+        "resistance_ohm": 1251.05376,
+        "inductance_H": 2.9,
+        "supply_V": 11.4,
+        "clamp_V": 1.1,
+        "decay_to_5percent_s": 0.004666006160958914,
+        "remaining_fraction": {
+          "0.0001": 0.953703396871479,
+          "0.0005": 0.7872564976385623,
+          "0.001": 0.6157899308679986,
+          "0.002": 0.36620690976284176,
+          "0.005": 0.030343048637399218,
+          "0.02": 0.0
+        }
+      },
+      "pulse_s": 0.005,
+      "restore": true,
+      "current_fraction_at_off_time": {
+        "0.0001": 0.9552294135047865,
+        "0.0005": 0.7939829932863408,
+        "0.001": 0.6280445576517184,
+        "0.002": 0.38704716593318916,
+        "0.005": 0.06641139030040338,
+        "0.02": 0.9985567065342508
+      },
+      "initial_current_A": 0.009110328238870364,
+      "minimum_current_fraction": 0.06641139030040347,
+      "current_below_5percent_during_observation_s": null,
+      "max_drain_V": 12.123418895701882,
+      "active_remote_clamp_range_V": [
+        0.006404385328837137,
+        0.7153251818760307
+      ],
+      "completed_s": 0.035,
+      "step_s": 2e-06,
+      "gate_source_screen_ohm": 100,
+      "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 11.4\nVcommand command 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.015 0 0.015000099999999999 3.84 0.035 3.84)\nRgate command gate 100\nCgs gate 0 580p\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 1251.05376\nLcoil coil remote 2.9\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 2e-06 0.035 0 2e-06\n.end\n",
+      "deck_sha256": "6d21ad06605a9ce9c0d3a7753ac1258e0a95181626e4e18c6ace317d8eb9917a",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    11.4\nstdout command                                   3.84\nstdout gate                                      3.84\nstdout drain                              0.000667536\nstdout coil                                 0.0024896\nstdout remote                               0.0024896\nstdout wire                               0.000667536\nstdout lwire#branch                        0.00911033\nstdout lcoil#branch                        0.00911033\nstdout vcommand#branch                    2.74225e-18\nstdout v12#branch                         -0.00911033\n Reference value :  1.50282e-02\r\n Reference value :  1.50788e-02\r\nstdout No. of Data Rows : 52242"
+    },
+    {
+      "status": "complete-diagnostic",
+      "case": {
+        "temperature_C": 70,
+        "resistance_ohm": 1251.05376,
+        "inductance_H": 2.9,
+        "supply_V": 11.4,
+        "clamp_V": 1.1,
+        "decay_to_5percent_s": 0.004666006160958914,
+        "remaining_fraction": {
+          "0.0001": 0.953703396871479,
+          "0.0005": 0.7872564976385623,
+          "0.001": 0.6157899308679986,
+          "0.002": 0.36620690976284176,
+          "0.005": 0.030343048637399218,
+          "0.02": 0.0
+        }
+      },
+      "pulse_s": 0.02,
+      "restore": true,
+      "current_fraction_at_off_time": {
+        "0.0001": 0.9552294135047865,
+        "0.0005": 0.7939829932863408,
+        "0.001": 0.6280445576517184,
+        "0.002": 0.38704716593318916,
+        "0.005": 0.0664114014777019,
+        "0.02": 4.3470437086620873e-07
+      },
+      "initial_current_A": 0.009110328238870364,
+      "minimum_current_fraction": -0.00016536833485891107,
+      "current_below_5percent_during_observation_s": 0.0053492008507199755,
+      "max_drain_V": 12.123418895701882,
+      "active_remote_clamp_range_V": [
+        0.006404385328837137,
+        0.7153251818760307
+      ],
+      "completed_s": 0.05,
+      "step_s": 2e-06,
+      "gate_source_screen_ohm": 100,
+      "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 11.4\nVcommand command 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.03 0 0.0300001 3.84 0.05 3.84)\nRgate command gate 100\nCgs gate 0 580p\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 1251.05376\nLcoil coil remote 2.9\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 2e-06 0.05 0 2e-06\n.end\n",
+      "deck_sha256": "94673f3dbde48114272444005399b44a31e4230141b656090882f06cf0f02653",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    11.4\nstdout command                                   3.84\nstdout gate                                      3.84\nstdout drain                              0.000667536\nstdout coil                                 0.0024896\nstdout remote                               0.0024896\nstdout wire                               0.000667536\nstdout lwire#branch                        0.00911033\nstdout lcoil#branch                        0.00911033\nstdout vcommand#branch                    2.74225e-18\nstdout v12#branch                         -0.00911033\n Reference value :  3.00131e-02\r\n Reference value :  3.00595e-02\r\n Reference value :  4.68167e-02\r\nstdout No. of Data Rows : 70700"
+    },
+    {
+      "status": "complete-diagnostic",
+      "case": {
+        "temperature_C": -25,
+        "resistance_ohm": 701.01504,
+        "inductance_H": 3.99,
+        "supply_V": 12.6,
+        "clamp_V": 0.5,
+        "decay_to_5percent_s": 0.013947025222107357,
+        "remaining_fraction": {
+          "0.0001": 0.981893035446138,
+          "0.0005": 0.912564216609529,
+          "0.001": 0.8324816549240602,
+          "0.002": 0.6919546219707131,
+          "0.005": 0.3922224932166467,
+          "0.02": 0.0
+        }
+      },
+      "pulse_s": 0.0001,
+      "restore": true,
+      "current_fraction_at_off_time": {
+        "0.0001": 0.9815887078746606,
+        "0.0005": 0.9828072571765207,
+        "0.001": 0.9842536464059526,
+        "0.002": 0.9867916166529695,
+        "0.005": 0.9922042363976642,
+        "0.02": 0.9994416537011558
+      },
+      "initial_current_A": 0.017966932603644296,
+      "minimum_current_fraction": 0.9818596731379096,
+      "current_below_5percent_during_observation_s": null,
+      "max_drain_V": 13.361732258237307,
+      "active_remote_clamp_range_V": [
+        0.0037324224186559007,
+        0.7475796118633102
+      ],
+      "completed_s": 0.030100000000000002,
+      "step_s": 2e-06,
+      "gate_source_screen_ohm": 100,
+      "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 12.6\nVcommand command 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.0101 0 0.010100099999999999 3.84 0.030100000000000002 3.84)\nRgate command gate 100\nCgs gate 0 580p\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 701.01504\nLcoil coil remote 3.99\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 2e-06 0.030100000000000002 0 2e-06\n.end\n",
+      "deck_sha256": "2529869751daeb46c5360a454200dab99deec52e11169770b6aa38fa532fef99",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    12.6\nstdout command                                   3.84\nstdout gate                                      3.84\nstdout drain                               0.00131664\nstdout coil                                0.00491002\nstdout remote                              0.00491002\nstdout wire                                0.00131664\nstdout lwire#branch                         0.0179669\nstdout lcoil#branch                         0.0179669\nstdout vcommand#branch                    2.74225e-18\nstdout v12#branch                          -0.0179669\n Reference value :  1.01467e-02\r\nstdout No. of Data Rows : 29831"
+    },
+    {
+      "status": "complete-diagnostic",
+      "case": {
+        "temperature_C": -25,
+        "resistance_ohm": 701.01504,
+        "inductance_H": 3.99,
+        "supply_V": 12.6,
+        "clamp_V": 0.5,
+        "decay_to_5percent_s": 0.013947025222107357,
+        "remaining_fraction": {
+          "0.0001": 0.981893035446138,
+          "0.0005": 0.912564216609529,
+          "0.001": 0.8324816549240602,
+          "0.002": 0.6919546219707131,
+          "0.005": 0.3922224932166467,
+          "0.02": 0.0
+        }
+      },
+      "pulse_s": 0.001,
+      "restore": true,
+      "current_fraction_at_off_time": {
+        "0.0001": 0.9815887202628858,
+        "0.0005": 0.9109579763101826,
+        "0.001": 0.8293991104938929,
+        "0.002": 0.8568698651714591,
+        "0.005": 0.9155226898191654,
+        "0.02": 0.9939495864684272
+      },
+      "initial_current_A": 0.017966932603644296,
+      "minimum_current_fraction": 0.8296302880708182,
+      "current_below_5percent_during_observation_s": null,
+      "max_drain_V": 13.361732258237307,
+      "active_remote_clamp_range_V": [
+        0.0037324224186559007,
+        0.7475796118633102
+      ],
+      "completed_s": 0.031,
+      "step_s": 2e-06,
+      "gate_source_screen_ohm": 100,
+      "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 12.6\nVcommand command 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.011 0 0.011000099999999999 3.84 0.031 3.84)\nRgate command gate 100\nCgs gate 0 580p\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 701.01504\nLcoil coil remote 3.99\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 2e-06 0.031 0 2e-06\n.end\n",
+      "deck_sha256": "69c80401564b353599760db36523c359e19b5c3bece7b28d0640ce59dcd02a43",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    12.6\nstdout command                                   3.84\nstdout gate                                      3.84\nstdout drain                               0.00131664\nstdout coil                                0.00491002\nstdout remote                              0.00491002\nstdout wire                                0.00131664\nstdout lwire#branch                         0.0179669\nstdout lcoil#branch                         0.0179669\nstdout vcommand#branch                    2.74225e-18\nstdout v12#branch                          -0.0179669\n Reference value :  1.10452e-02\r\nstdout No. of Data Rows : 30514"
+    },
+    {
+      "status": "complete-diagnostic",
+      "case": {
+        "temperature_C": -25,
+        "resistance_ohm": 701.01504,
+        "inductance_H": 3.99,
+        "supply_V": 12.6,
+        "clamp_V": 0.5,
+        "decay_to_5percent_s": 0.013947025222107357,
+        "remaining_fraction": {
+          "0.0001": 0.981893035446138,
+          "0.0005": 0.912564216609529,
+          "0.001": 0.8324816549240602,
+          "0.002": 0.6919546219707131,
+          "0.005": 0.3922224932166467,
+          "0.02": 0.0
+        }
+      },
+      "pulse_s": 0.005,
+      "restore": true,
+      "current_fraction_at_off_time": {
+        "0.0001": 0.9815887202628858,
+        "0.0005": 0.9109579763101826,
+        "0.001": 0.82939912107035,
+        "0.002": 0.6863707812458015,
+        "0.005": 0.3819422968879559,
+        "0.02": 0.9557318278370425
+      },
+      "initial_current_A": 0.017966932603644296,
+      "minimum_current_fraction": 0.381942296887956,
+      "current_below_5percent_during_observation_s": null,
+      "max_drain_V": 13.361732258237307,
+      "active_remote_clamp_range_V": [
+        0.0037324224186559007,
+        0.7475796118633102
+      ],
+      "completed_s": 0.035,
+      "step_s": 2e-06,
+      "gate_source_screen_ohm": 100,
+      "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 12.6\nVcommand command 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.015 0 0.015000099999999999 3.84 0.035 3.84)\nRgate command gate 100\nCgs gate 0 580p\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 701.01504\nLcoil coil remote 3.99\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 2e-06 0.035 0 2e-06\n.end\n",
+      "deck_sha256": "980d59798076fb3b8dcafe75e3ceccd662a9ac09f28b790126894c0c985d03a6",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    12.6\nstdout command                                   3.84\nstdout gate                                      3.84\nstdout drain                               0.00131664\nstdout coil                                0.00491002\nstdout remote                              0.00491002\nstdout wire                                0.00131664\nstdout lwire#branch                         0.0179669\nstdout lcoil#branch                         0.0179669\nstdout vcommand#branch                    2.74225e-18\nstdout v12#branch                          -0.0179669\n Reference value :  1.50353e-02\r\nstdout No. of Data Rows : 34592"
+    },
+    {
+      "status": "complete-diagnostic",
+      "case": {
+        "temperature_C": -25,
+        "resistance_ohm": 701.01504,
+        "inductance_H": 3.99,
+        "supply_V": 12.6,
+        "clamp_V": 0.5,
+        "decay_to_5percent_s": 0.013947025222107357,
+        "remaining_fraction": {
+          "0.0001": 0.981893035446138,
+          "0.0005": 0.912564216609529,
+          "0.001": 0.8324816549240602,
+          "0.002": 0.6919546219707131,
+          "0.005": 0.3922224932166467,
+          "0.02": 0.0
+        }
+      },
+      "pulse_s": 0.02,
+      "restore": true,
+      "current_fraction_at_off_time": {
+        "0.0001": 0.9815887202628858,
+        "0.0005": 0.9109579763101826,
+        "0.001": 0.82939912107035,
+        "0.002": 0.6863707812458015,
+        "0.005": 0.3819423021272516,
+        "0.02": -6.938558881892965e-06
+      },
+      "initial_current_A": 0.017966932603644296,
+      "minimum_current_fraction": -6.86695545044349e-05,
+      "current_below_5percent_during_observation_s": 0.013270518537537157,
+      "max_drain_V": 13.361732258237307,
+      "active_remote_clamp_range_V": [
+        0.0037324224186559007,
+        0.7475796118633102
+      ],
+      "completed_s": 0.05,
+      "step_s": 2e-06,
+      "gate_source_screen_ohm": 100,
+      "deck": "K3 coil diagnostic: immediate gate command, MOS/diode surrogates, no moving contacts\nV12 supply 0 12.6\nVcommand command 0 PWL(0 3.84 0.01 3.84 0.0100001 0 0.03 0 0.0300001 3.84 0.05 3.84)\nRgate command gate 100\nCgs gate 0 580p\nMdriver drain gate 0 0 FET\n.model FET NMOS(Level=1 Vto=1.45 Kp=6.6137566 Lambda=0 Rd=.005 Rs=.005)\nCds drain 0 25p\nCgd gate drain 50p\nDbody 0 drain DGEN\nRcoil supply coil 701.01504\nLcoil coil remote 3.99\nRwire remote wire .2\nLwire wire drain 100u\nDremote remote supply DGEN\nDlocal drain supply DGEN\n.model DGEN D(Is=1n N=1.8 Rs=.2 Cjo=15p Tt=2u)\n.options method=gear maxord=2 reltol=1e-5 abstol=1e-11 vntol=1e-8\n.save i(lcoil) v(drain) v(remote)\n.tran 2e-06 0.05 0 2e-06\n.end\n",
+      "deck_sha256": "895e994771f644be3b186fd6affd4c22f75611acfa92780ed0e6b44092f2a96b",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: k3 coil diagnostic: immediate gate command, mos/diode surrogates, no moving contacts\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout supply                                    12.6\nstdout command                                   3.84\nstdout gate                                      3.84\nstdout drain                               0.00131664\nstdout coil                                0.00491002\nstdout remote                              0.00491002\nstdout wire                                0.00131664\nstdout lwire#branch                         0.0179669\nstdout lcoil#branch                         0.0179669\nstdout vcommand#branch                    2.74225e-18\nstdout v12#branch                          -0.0179669\n Reference value :  3.00170e-02\r\n Reference value :  3.00627e-02\r\n Reference value :  4.25513e-02\r\nstdout No. of Data Rows : 73601"
+    }
+  ],
+  "restore_refinement": {
+    "status": "timeout",
+    "case": {
+      "temperature_C": -25,
+      "resistance_ohm": 701.01504,
+      "inductance_H": 3.99,
+      "supply_V": 12.6,
+      "clamp_V": 0.5,
+      "decay_to_5percent_s": 0.013947025222107357,
+      "remaining_fraction": {
+        "0.0001": 0.981893035446138,
+        "0.0005": 0.912564216609529,
+        "0.001": 0.8324816549240602,
+        "0.002": 0.6919546219707131,
+        "0.005": 0.3922224932166467,
+        "0.02": 0.0
+      }
+    },
+    "pulse_s": 0.0001,
+    "step_s": 5e-07,
+    "timeout_s": 30
+  },
+  "contact_release_verified": false,
+  "limitations": [
+    "Coil inductances are Omron reference values, not guaranteed endpoints; fixed L omits moving armature and hysteresis.",
+    "Temperature dependence uses copper TCR as an engineering approximation.",
+    "Five percent of initial current is a diagnostic metric, not the manufacturer's release-voltage test or a contact-state model.",
+    "Immediate100ns gate-command transition with100ohm source and typical580pF Cgs deliberately omits comparator/logic latency. This is a numerical engineering screen, not an exact NPN/HC14 model.",
+    "Generic27C diode and Level1 MOS/capacitance models are engineering surrogates; actual clamps, cable and hot semiconductor behavior are unqualified.",
+    "Healthy +12V is held constant while an analog-rail fault requests inhibition. Simultaneous supply collapse needs separate analysis.",
+    "No claim of contact release, audio silence, manufacturing readiness or native adoption.",
+    "Primary SPICE screen keeps the command OFF. A separate ideal-gate restore diagnostic retains a solver failure; re-enable/contact response remains unqualified."
+  ],
+  "provenance": {
+    "control-switching/relay-latency-contract.json": "4ef945ed8dc4af930fe5b6be7d48f549d3066f6b75e4d0d81f9bb558164af5ae",
+    "control-switching/contract.json": "67b5316dc035eee7354e7febcabff62919fd0fdf29d50e16972db30cd381eea8",
+    "control-switching/../expression-control/references/Omron-G5V-2.pdf": "d63697fdcdce1e2bc8b964f82c56516f96305003cdba83c853fc5db3e938d325",
+    "control-switching/tools/relay_latency.py": "1d41c1bd02b768d3e75369f3b46b0cc280998e6fcef65fdae7caf481476d7b9c",
+    "tools/spice_runtime.py": "3df496fbbce173c6f8a602b9a17a731389f011634af809106184418572b9cf9b"
+  }
+}

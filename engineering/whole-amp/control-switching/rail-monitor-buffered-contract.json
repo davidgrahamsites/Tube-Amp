@@ -12,7 +12,7 @@
     ],
     "output": "REV_GATE",
     "comparator": "TI LM393P PDIP-8, socket required; powered by +12V/GND",
-    "connections": "Comparator collectors join RAIL_OK with1.5k pull-up to+5V. Feedback comes fromRAIL_OK. Existing spare U1E (pin11 input/pin10 output) invertsRAIL_OK toFAULT. FAULT via10k drives an NPN with100k base/emitter; collectorREV_GATE/emitterGND. REV_Q still drivesREV_GATE through4.7k;100k gate pull-down retained. Exact transistor and timing pending."
+    "connections": "Comparator collectors join RAIL_OK with1.5k pull-up to+5V. Feedback comes fromRAIL_OK. Existing spare U1E (pin11 input/pin10 output) invertsRAIL_OK toFAULT. FAULT via10k drives an NPN with100k base/emitter; collectorREV_GATE/emitterGND. Propose R341 change from native1k to4.7k between REV_Q and REV_GATE; existing100k gate pull-down retained. Exact transistor and timing pending."
   },
   "positive_resistors_ohm": {
     "rail": 3830.0,
