@@ -88,3 +88,7 @@ The earlier rail-monitor calculation used25°C bias/output-low limits; corrected
 ### 2026-11-25 — K3 coil latency and native resistor boundary
 
 [VAL-048](../../brain/records/VAL-048-relay-latency-boundary.md) corrects candidate R3414.7k versus native1k in all three representations. The native value fails the proposed inhibit-base allocation; no CAD change adopted.48 conditional coil cases and refined turn-off simulations prevent crediting K3 as instantaneous muting. Restore diagnostics retain numerical failures. Next: quantify the audio disturbance before contact motion, then qualify the complete supply/reset/mute interface; all six scopes and China/Shanghai sourcing/populated fit remain open.
+
+### 2026-11-25 — passive wet-fault boundary
+
+[VAL-049](../../brain/records/VAL-049-wet-fault-transfer.md) independently checks the passive fault calculation with six completed SPICE runs. The47kΩ/fast-shunt candidate preserves sampled dry/treble behavior but leaves the initial spike; it remains unadopted. Chinese J113/MMBFJ113 listings found, sales units and Shanghai checkout pending. Next: rail-warning lead time versus valid audio headroom, then actual gate/control qualification. No native change; all six scopes remain active.

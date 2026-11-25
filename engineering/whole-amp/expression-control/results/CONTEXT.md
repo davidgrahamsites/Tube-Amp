@@ -10,3 +10,7 @@ VAL-044 outputs: trim-screen.json and trim-*.cir/log; bias-isolation.json and is
 VAL-045: settled-bias.json, settled-*.cir/log and settled-bias-audit.json record powered DC only. Time refinements and weak-shunt sensitivity are separate results. native-preservation-045.json compares four board bytes against the recorded Git baseline. These results do not qualify power-on, actual protection or pedal behavior.
 
 VAL-046: sequence-* and power-sequence.json preserve eight diagnostic rail cases including two solver failures. final-wet-mute-loading.json is the passive dry-loading fixture. final-mute-integration.json and final-mute-audit.json record the bounded native two-pin repair. final-mute-drc.json, final-mute-erc.json, final-mute-schematic.pdf and final-mute-detail.png are current native evidence; final-mute-source-observation.json records the domestic relay listing and source hashes. None qualifies rail-fault timing or the complete expression feature.
+
+VAL-049: wet-fault-transfer.json retains30 AC/120 transient cases, and wet-fault-crosscheck.json retains six bounded independent SPICE runs/decks/logs and numerical comparisons. wet-shunt-source-observation.json records exact domestic J113/MMBFJ113 fields and manufacturer hash/conditions. These do not qualify real switch timing, hot operation, purchasing or silence.
+
+jack-domestic-source-observation.json updates the exact NMJ6HCD2 domestic listing and shipping-policy evidence used by ../pedal-port-design.md; it is not order or physical-fit approval.

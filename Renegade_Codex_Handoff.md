@@ -266,3 +266,7 @@ The follow-on LM393P rail-inhibit budget enumerates10,240 endpoint cases;4/7 scr
 ### 2026-11-25 — corrected rail limits and buffered candidate
 
 The earlier rail-monitor calculation used25°C bias/output-low limits; corrected full-temperature limits reduce it from4/7 to3/7. A reduced-impedance candidate reusing spareU1E passes11/11 conditional static checks with2,004 independent nodal comparisons. No schematic/PCB change. Exact resistor stock, clamp temperature behavior, startup/release timing and NPN selection remain open. See engineering/whole-amp/control-switching/rail-monitor-buffered-review.md. All six scopes remain active; manufacturing held. Next: source or requalify the precision resistor set, then qualify the complete fault-inhibit interface before native integration.
+
+### 2026-11-25 — passive wet-fault checkpoint
+
+[VAL-049](brain/records/VAL-049-wet-fault-transfer.md) retains30 AC/120 transient cases and six independent SPICE runs; eight scoped screens and the module ICM check pass. A47kΩ/fast-shunt proposal has small dry/treble effects but leaves the initial imposed fault spike, so it is not adopted. Exact Chinese J113/MMBFJ113 listings are recorded; physical sales quantity and Shanghai checkout remain pending. Native CAD, blocks and mounting geometry are unchanged. Next: establish rail-warning lead time against valid audio headroom before choosing a fast-mute circuit. All six scopes remain open; no fabrication release.

@@ -1,0 +1,30 @@
+{
+  "status": "candidate-feasibility-not-native",
+  "owner": "expression-control integration",
+  "job": "Quantify native passive wet-fault transfer and a current-limited shunt candidate before selecting a gate-control circuit.",
+  "baseline": "1c2e5c83cc1a8d915b68b65589866ae7b028e1bc",
+  "native_circuit": "../reverb-600/circuit.json",
+  "return_source_ohm": [0,10000,100000],
+  "additional_mix_load_ohm": [null,1000000],
+  "fault_change_V": [16.5,33],
+  "fault_duration_s": [0.001,0.01],
+  "end_s": 0.1,
+  "frequencies_Hz": [20,100,1000,10000,20000],
+  "candidate_series_ohm": 47000,
+  "candidate_off_cap_F": 5e-12,
+  "shunt_on_screen_ohm": 100,
+  "shunt_linear_test_voltage_V": 0.1,
+  "dry_gain_change_limit_dB": 0.1,
+  "assumed_fast_close_s": [0.00005,0.0002],
+  "assumed_contact_close_s": [0.005,0.015],
+  "limitations": [
+    "Source changes are imposed fault screens, not predictions from an op-amp model outside its operating range.",
+    "33V means a change between opposite16.5V limits, represented incrementally in the linear network; it is not a33V supply.",
+    "JFET100ohm and5pF are25C/limited-bias datasheet test values, not full-temperature or large-signal guarantees.",
+    "Shunt closure times are assumed scenarios, not qualified comparator/optocoupler/JFET or relay timing.",
+    "Transient fixture excludes gate-charge feedthrough, contact bounce, tube-grid dynamics, output transformer and loudspeaker.",
+    "The native MIX_OUT load includes R24. Additional resistive loading is a sensitivity test, not the real bootstrapped PI input.",
+    "Off capacitance is included in AC only; fault transient calculation is the one-capacitor low-frequency model.",
+    "No perceptual silence, full fault protection, exact purchasing, native CAD or fabrication approval follows."
+  ]
+}

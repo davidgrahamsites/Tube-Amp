@@ -1,0 +1,5587 @@
+{
+  "scope": "Quantify native passive wet-fault transfer and a current-limited shunt candidate before selecting a gate-control circuit.",
+  "qualified": false,
+  "native_parts": {
+    "R616": 100.0,
+    "C607": 1e-06,
+    "R617": 1000000.0,
+    "R618": 1000000.0,
+    "R612": 100000.0,
+    "R24": 10000000.0
+  },
+  "summary": {
+    "candidate_added_20k_vs_1k_gain_change_dB": [
+      -0.0032003698782934187,
+      -0.0031779922734275212
+    ],
+    "native_peak_mix_V": 5.408842966537292,
+    "candidate_peak_mix_V": 4.980079681274901,
+    "candidate_wet_gain_change_dB": [
+      -0.7510091167111689,
+      -0.7172573436688225
+    ],
+    "max_candidate_dry_vs_native_dB": 0.061247163870249324,
+    "max_dry_mute_change_dB": 0.06138103694938387,
+    "residual_squared_voltage_ratio_range": [
+      0.004292968829972871,
+      0.04246365423308075
+    ]
+  },
+  "checks": [
+    {
+      "name": "candidate dry gain perturbation within0.1dB screen",
+      "passed": true
+    },
+    {
+      "name": "candidate mute dry gain change within0.1dB screen",
+      "passed": true
+    },
+    {
+      "name": "47k limits33V incremental step within100mV at100ohm",
+      "passed": true
+    },
+    {
+      "name": "native100ohm and22k negative controls rejected",
+      "passed": true
+    }
+  ],
+  "linear_shunt_feasibility": [
+    {
+      "series_ohm": 100.0,
+      "shunt_V": 16.5,
+      "within_25C_test_voltage": false
+    },
+    {
+      "series_ohm": 22000,
+      "shunt_V": 0.1493212669683258,
+      "within_25C_test_voltage": false
+    },
+    {
+      "series_ohm": 47000,
+      "shunt_V": 0.07006369426751592,
+      "within_25C_test_voltage": true
+    }
+  ],
+  "ac_cases": [
+    {
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "hz": 20,
+      "wet_gain_ratio_dB": -0.7448829636904191,
+      "candidate_dry_vs_native_dB": 0.03358231288805713,
+      "candidate_dry_mute_change_dB": -0.03367926837031838,
+      "wet_muted_vs_enabled_dB": -52.836764354803385
+    },
+    {
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "hz": 100,
+      "wet_gain_ratio_dB": -0.7450347717759616,
+      "candidate_dry_vs_native_dB": 0.03360381029742623,
+      "candidate_dry_mute_change_dB": -0.03360784884208774,
+      "wet_muted_vs_enabled_dB": -52.720295782105005
+    },
+    {
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "hz": 1000,
+      "wet_gain_ratio_dB": -0.7450489250781869,
+      "candidate_dry_vs_native_dB": 0.03360463643940107,
+      "candidate_dry_mute_change_dB": -0.033604841238161716,
+      "wet_muted_vs_enabled_dB": -52.71541488336628
+    },
+    {
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "hz": 10000,
+      "wet_gain_ratio_dB": -0.7458382197604658,
+      "candidate_dry_vs_native_dB": 0.033598548433634426,
+      "candidate_dry_mute_change_dB": -0.03359871489456652,
+      "wet_muted_vs_enabled_dB": -52.71457689322813
+    },
+    {
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "hz": 20000,
+      "wet_gain_ratio_dB": -0.7482289571421024,
+      "candidate_dry_vs_native_dB": 0.033580086586440315,
+      "candidate_dry_mute_change_dB": -0.033580252756932855,
+      "wet_muted_vs_enabled_dB": -52.71218578693941
+    },
+    {
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "hz": 20,
+      "wet_gain_ratio_dB": -0.7476633895709905,
+      "candidate_dry_vs_native_dB": 0.030801887007481658,
+      "candidate_dry_mute_change_dB": -0.030890998549109698,
+      "wet_muted_vs_enabled_dB": -52.83397608498218
+    },
+    {
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "hz": 100,
+      "wet_gain_ratio_dB": -0.7478169057174882,
+      "candidate_dry_vs_native_dB": 0.030821676355898518,
+      "candidate_dry_mute_change_dB": -0.03082538789744286,
+      "wet_muted_vs_enabled_dB": -52.71751332116037
+    },
+    {
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "hz": 1000,
+      "wet_gain_ratio_dB": -0.7478311244377414,
+      "candidate_dry_vs_native_dB": 0.03082243707984891,
+      "candidate_dry_mute_change_dB": -0.030822625020588988,
+      "wet_muted_vs_enabled_dB": -52.71263266714872
+    },
+    {
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "hz": 10000,
+      "wet_gain_ratio_dB": -0.7486199132565413,
+      "candidate_dry_vs_native_dB": 0.030816854937560423,
+      "candidate_dry_mute_change_dB": -0.030817007641954188,
+      "wet_muted_vs_enabled_dB": -52.71179518597552
+    },
+    {
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "hz": 20000,
+      "wet_gain_ratio_dB": -0.7510091167111689,
+      "candidate_dry_vs_native_dB": 0.03079992701736858,
+      "candidate_dry_mute_change_dB": -0.030800079454819038,
+      "wet_muted_vs_enabled_dB": -52.7094056136373
+    },
+    {
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "hz": 20,
+      "wet_gain_ratio_dB": -0.741880770991511,
+      "candidate_dry_vs_native_dB": 0.03658450558695949,
+      "candidate_dry_mute_change_dB": -0.03668989361107554,
+      "wet_muted_vs_enabled_dB": -52.83977498004415
+    },
+    {
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "hz": 100,
+      "wet_gain_ratio_dB": -0.7420307490982592,
+      "candidate_dry_vs_native_dB": 0.036607832975123426,
+      "candidate_dry_mute_change_dB": -0.036612223117667084,
+      "wet_muted_vs_enabled_dB": -52.72330015638059
+    },
+    {
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "hz": 1000,
+      "wet_gain_ratio_dB": -0.7420448323593454,
+      "candidate_dry_vs_native_dB": 0.03660872915824435,
+      "candidate_dry_mute_change_dB": -0.036608952139789167,
+      "wet_muted_vs_enabled_dB": -52.71841899426791
+    },
+    {
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "hz": 10000,
+      "wet_gain_ratio_dB": -0.7428346736208338,
+      "candidate_dry_vs_native_dB": 0.03660209457326628,
+      "candidate_dry_mute_change_dB": -0.0366022758828046,
+      "wet_muted_vs_enabled_dB": -52.71758045421636
+    },
+    {
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "hz": 20000,
+      "wet_gain_ratio_dB": -0.7452270683713419,
+      "candidate_dry_vs_native_dB": 0.03658197535719728,
+      "candidate_dry_mute_change_dB": -0.036582156351036066,
+      "wet_muted_vs_enabled_dB": -52.71518769053351
+    },
+    {
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "hz": 20,
+      "wet_gain_ratio_dB": -0.7451563033102058,
+      "candidate_dry_vs_native_dB": 0.03330897326826883,
+      "candidate_dry_mute_change_dB": -0.03340515908645697,
+      "wet_muted_vs_enabled_dB": -52.83649024551953
+    },
+    {
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "hz": 100,
+      "wet_gain_ratio_dB": -0.74530827874674,
+      "candidate_dry_vs_native_dB": 0.033330303326645175,
+      "candidate_dry_mute_change_dB": -0.033334309782827025,
+      "wet_muted_vs_enabled_dB": -52.72002224304575
+    },
+    {
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "hz": 1000,
+      "wet_gain_ratio_dB": -0.7453224384566143,
+      "candidate_dry_vs_native_dB": 0.033331123060972356,
+      "candidate_dry_mute_change_dB": -0.03333132620323059,
+      "wet_muted_vs_enabled_dB": -52.71514136833136
+    },
+    {
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "hz": 10000,
+      "wet_gain_ratio_dB": -0.7461116833936634,
+      "candidate_dry_vs_native_dB": 0.03332508480043534,
+      "candidate_dry_mute_change_dB": -0.03332524990918805,
+      "wet_muted_vs_enabled_dB": -52.71430342824275
+    },
+    {
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "hz": 20000,
+      "wet_gain_ratio_dB": -0.7485022699339251,
+      "candidate_dry_vs_native_dB": 0.03330677379461564,
+      "candidate_dry_mute_change_dB": -0.03330693861523389,
+      "wet_muted_vs_enabled_dB": -52.71191247279771
+    },
+    {
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "hz": 20,
+      "wet_gain_ratio_dB": -0.7172573436688225,
+      "candidate_dry_vs_native_dB": 0.06120793290965084,
+      "candidate_dry_mute_change_dB": -0.06138103694938387,
+      "wet_muted_vs_enabled_dB": -52.864466123382456
+    },
+    {
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "hz": 100,
+      "wet_gain_ratio_dB": -0.7173928658714617,
+      "candidate_dry_vs_native_dB": 0.0612457162019269,
+      "candidate_dry_mute_change_dB": -0.06125293201628974,
+      "wet_muted_vs_enabled_dB": -52.747940865279205
+    },
+    {
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "hz": 1000,
+      "wet_gain_ratio_dB": -0.7174063976473405,
+      "candidate_dry_vs_native_dB": 0.061247163870249324,
+      "candidate_dry_mute_change_dB": -0.0612475352088867,
+      "wet_muted_vs_enabled_dB": -52.743057577337005
+    },
+    {
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "hz": 10000,
+      "wet_gain_ratio_dB": -0.7182007363023151,
+      "candidate_dry_vs_native_dB": 0.06123603189178271,
+      "candidate_dry_mute_change_dB": -0.06123633478503073,
+      "wet_muted_vs_enabled_dB": -52.7422145131186
+    },
+    {
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "hz": 20000,
+      "wet_gain_ratio_dB": -0.7206067675256339,
+      "candidate_dry_vs_native_dB": 0.06120227620290692,
+      "candidate_dry_mute_change_dB": -0.06120257857762632,
+      "wet_muted_vs_enabled_dB": -52.73980811276011
+    },
+    {
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "hz": 20,
+      "wet_gain_ratio_dB": -0.725904846241397,
+      "candidate_dry_vs_native_dB": 0.05256043033707576,
+      "candidate_dry_mute_change_dB": -0.052710046267551776,
+      "wet_muted_vs_enabled_dB": -52.85579513270062
+    },
+    {
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "hz": 100,
+      "wet_gain_ratio_dB": -0.7260453338352288,
+      "candidate_dry_vs_native_dB": 0.052593248238157746,
+      "candidate_dry_mute_change_dB": -0.05259948347320377,
+      "wet_muted_vs_enabled_dB": -52.73928741673613
+    },
+    {
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "hz": 1000,
+      "wet_gain_ratio_dB": -0.726059054660813,
+      "candidate_dry_vs_native_dB": 0.05259450685677772,
+      "candidate_dry_mute_change_dB": -0.05259482625094292,
+      "wet_muted_vs_enabled_dB": -52.734404868379066
+    },
+    {
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "hz": 10000,
+      "wet_gain_ratio_dB": -0.726851810936874,
+      "candidate_dry_vs_native_dB": 0.052584957257230586,
+      "candidate_dry_mute_change_dB": -0.052585217492431696,
+      "wet_muted_vs_enabled_dB": -52.73356339582599
+    },
+    {
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "hz": 20000,
+      "wet_gain_ratio_dB": -0.7292530444122434,
+      "candidate_dry_vs_native_dB": 0.05255599931630144,
+      "candidate_dry_mute_change_dB": -0.052556259103327355,
+      "wet_muted_vs_enabled_dB": -52.73116179328581
+    }
+  ],
+  "transient_cases": [
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.4862026351723812,
+      "mix_squared_integral_V2s": 0.002205248517882939,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.496849250413433,
+          "mix_start_V": 1.4862026351723812,
+          "series_current_start_A": 3.150749586565449e-05,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.1,
+          "wet_start_V": -0.031471421752637715,
+          "mix_start_V": -0.002835263220958352,
+          "series_current_start_A": -6.010758028431707e-08,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.4862026351723812,
+      "mix_squared_integral_V2s": 0.002204617747420725,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.496849250413433,
+          "mix_start_V": 1.4862026351723812,
+          "series_current_start_A": 3.150749586565449e-05,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.005,
+          "wet_start_V": -0.031471421752637715,
+          "mix_start_V": -0.002835263220958352,
+          "series_current_start_A": -6.010758028431707e-08,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.1,
+          "wet_start_V": -3.1206705415647776e-05,
+          "mix_start_V": -2.81141490231061e-06,
+          "series_current_start_A": -0.0003120671137584737,
+          "tau_s": 0.0001000999999809009,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.4862026351723812,
+      "mix_squared_integral_V2s": 0.0022046954232095473,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.496849250413433,
+          "mix_start_V": 1.4862026351723812,
+          "series_current_start_A": 3.150749586565449e-05,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.031471421752637715,
+          "mix_start_V": -0.002835263220958352,
+          "series_current_start_A": -6.010758028431707e-08,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -3.0616452775076776e-05,
+          "mix_start_V": -2.758238988745655e-06,
+          "series_current_start_A": -0.0003061645862254343,
+          "tau_s": 0.0001000999999809009,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.364042194371879,
+      "mix_squared_integral_V2s": 9.303171490524595e-05,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 15.140868357527859,
+          "mix_start_V": 1.364042194371879,
+          "series_current_start_A": 2.891769452068384e-05,
+          "tau_s": 0.5705849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.001,
+          "wet_start_V": 0.035022102744695326,
+          "mix_start_V": 0.0031551443914139927,
+          "series_current_start_A": 0.0003502879165080512,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0007023837462258332,
+          "mix_start_V": -6.327781497530027e-05,
+          "series_current_start_A": -7.025178951935807e-06,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.224629206774391e-07,
+          "mix_start_V": -4.706873159256207e-08,
+          "series_current_start_A": -5.229854833838276e-06,
+          "tau_s": 0.04700009990008083,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.364042194371879,
+      "mix_squared_integral_V2s": 0.0003719996738466061,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 15.140868357527859,
+          "mix_start_V": 1.364042194371879,
+          "series_current_start_A": 2.891769452068384e-05,
+          "tau_s": 0.5705849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.001,
+          "wet_start_V": 0.035012897059611546,
+          "mix_start_V": 0.003154315050415454,
+          "series_current_start_A": 0.0003501958420751842,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0006019518623856001,
+          "mix_start_V": -5.422989751221621e-05,
+          "series_current_start_A": -6.0206682976832594e-06,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -4.477574115561696e-07,
+          "mix_start_V": -4.0338505545600853e-08,
+          "series_current_start_A": -4.482052544853576e-06,
+          "tau_s": 0.04700009990008083,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.4862026351723812,
+      "mix_squared_integral_V2s": 0.02173170464932745,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 16.496849250413433,
+          "mix_start_V": 1.4862026351723812,
+          "series_current_start_A": 3.150749586565449e-05,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.31202617198660615,
+          "mix_start_V": -0.028110465944739288,
+          "series_current_start_A": -5.95941878028473e-07,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.4862026351723812,
+      "mix_squared_integral_V2s": 0.01093921456035854,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.005,
+          "wet_start_V": 16.496849250413433,
+          "mix_start_V": 1.4862026351723812,
+          "series_current_start_A": 3.150749586565449e-05,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.01,
+          "wet_start_V": 0.016326882194741963,
+          "mix_start_V": 0.001470890287814591,
+          "series_current_start_A": 0.16326885313029374,
+          "tau_s": 0.0001000999999809009,
+          "shunts_ohm": [
+            0.1
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.01648351333845899,
+          "mix_start_V": -0.001485001201662972,
+          "series_current_start_A": -0.16483516486661542,
+          "tau_s": 0.0001000999999809009,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.4862026351723812,
+      "mix_squared_integral_V2s": 0.02167543473095877,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 16.496849250413433,
+          "mix_start_V": 1.4862026351723812,
+          "series_current_start_A": 3.150749586565449e-05,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.31202617198660615,
+          "mix_start_V": -0.028110465944739288,
+          "series_current_start_A": -5.95941878028473e-07,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -0.00030881136599911283,
+          "mix_start_V": -2.7820843783703852e-05,
+          "series_current_start_A": -0.003088114249793017,
+          "tau_s": 0.0001000999999809009,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.364042194371879,
+      "mix_squared_integral_V2s": 9.310481838053667e-05,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 15.140868357527859,
+          "mix_start_V": 1.364042194371879,
+          "series_current_start_A": 2.891769452068384e-05,
+          "tau_s": 0.5705849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.01,
+          "wet_start_V": 0.035022102744695326,
+          "mix_start_V": 0.0031551443914139927,
+          "series_current_start_A": 0.0003502879165080512,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.006672348060166397,
+          "mix_start_V": -0.0006011124378528284,
+          "series_current_start_A": -6.673622418534643e-05,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -6.0082217650108916e-06,
+          "mix_start_V": -5.412812400910712e-07,
+          "series_current_start_A": -6.014231134292132e-05,
+          "tau_s": 0.04700009990008083,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.364042194371879,
+      "mix_squared_integral_V2s": 0.00037207316746494285,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 15.140868357527859,
+          "mix_start_V": 1.364042194371879,
+          "series_current_start_A": 2.891769452068384e-05,
+          "tau_s": 0.5705849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.01,
+          "wet_start_V": 0.035012897059611546,
+          "mix_start_V": 0.003154315050415454,
+          "series_current_start_A": 0.0003501958420751842,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.006589384884310964,
+          "mix_start_V": -0.0005936382778658525,
+          "series_current_start_A": -6.590643397460038e-05,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.9335162558896245e-06,
+          "mix_start_V": -5.345510140441102e-07,
+          "series_current_start_A": -5.9394509053936646e-05,
+          "tau_s": 0.04700009990008083,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.9724052703447623,
+      "mix_squared_integral_V2s": 0.008820994071531757,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.993698500826866,
+          "mix_start_V": 2.9724052703447623,
+          "series_current_start_A": 6.301499173130898e-05,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.1,
+          "wet_start_V": -0.06294284350527543,
+          "mix_start_V": -0.005670526441916704,
+          "series_current_start_A": -1.2021516056863415e-07,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.9724052703447623,
+      "mix_squared_integral_V2s": 0.0088184709896829,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.993698500826866,
+          "mix_start_V": 2.9724052703447623,
+          "series_current_start_A": 6.301499173130898e-05,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.005,
+          "wet_start_V": -0.06294284350527543,
+          "mix_start_V": -0.005670526441916704,
+          "series_current_start_A": -1.2021516056863415e-07,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.1,
+          "wet_start_V": -6.241341083129555e-05,
+          "mix_start_V": -5.62282980462122e-06,
+          "series_current_start_A": -0.0006241342275169474,
+          "tau_s": 0.0001000999999809009,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.9724052703447623,
+      "mix_squared_integral_V2s": 0.008818781692838189,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.993698500826866,
+          "mix_start_V": 2.9724052703447623,
+          "series_current_start_A": 6.301499173130898e-05,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.06294284350527543,
+          "mix_start_V": -0.005670526441916704,
+          "series_current_start_A": -1.2021516056863415e-07,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -6.123290555015355e-05,
+          "mix_start_V": -5.51647797749131e-06,
+          "series_current_start_A": -0.0006123291724508686,
+          "tau_s": 0.0001000999999809009,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.728084388743758,
+      "mix_squared_integral_V2s": 0.0003721268596209838,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 30.281736715055718,
+          "mix_start_V": 2.728084388743758,
+          "series_current_start_A": 5.783538904136768e-05,
+          "tau_s": 0.5705849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.001,
+          "wet_start_V": 0.07004420548939065,
+          "mix_start_V": 0.006310288782827985,
+          "series_current_start_A": 0.0007005758330161024,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0014047674924516664,
+          "mix_start_V": -0.00012655562995060054,
+          "series_current_start_A": -1.4050357903871613e-05,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.0449258413548782e-06,
+          "mix_start_V": -9.413746318512414e-08,
+          "series_current_start_A": -1.0459709667676552e-05,
+          "tau_s": 0.04700009990008083,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.728084388743758,
+      "mix_squared_integral_V2s": 0.0014879986953864244,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 30.281736715055718,
+          "mix_start_V": 2.728084388743758,
+          "series_current_start_A": 5.783538904136768e-05,
+          "tau_s": 0.5705849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.001,
+          "wet_start_V": 0.07002579411922309,
+          "mix_start_V": 0.006308630100830908,
+          "series_current_start_A": 0.0007003916841503684,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0012039037247712002,
+          "mix_start_V": -0.00010845979502443242,
+          "series_current_start_A": -1.2041336595366519e-05,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -8.955148231123391e-07,
+          "mix_start_V": -8.067701109120171e-08,
+          "series_current_start_A": -8.964105089707152e-06,
+          "tau_s": 0.04700009990008083,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.9724052703447623,
+      "mix_squared_integral_V2s": 0.0869268185973098,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 32.993698500826866,
+          "mix_start_V": 2.9724052703447623,
+          "series_current_start_A": 6.301499173130898e-05,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.6240523439732123,
+          "mix_start_V": -0.056220931889478576,
+          "series_current_start_A": -1.191883756056946e-06,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.9724052703447623,
+      "mix_squared_integral_V2s": 0.04375685824143416,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.005,
+          "wet_start_V": 32.993698500826866,
+          "mix_start_V": 2.9724052703447623,
+          "series_current_start_A": 6.301499173130898e-05,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.01,
+          "wet_start_V": 0.032653764389483926,
+          "mix_start_V": 0.002941780575629182,
+          "series_current_start_A": 0.3265377062605875,
+          "tau_s": 0.0001000999999809009,
+          "shunts_ohm": [
+            0.1
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.03296702667691798,
+          "mix_start_V": -0.002970002403325944,
+          "series_current_start_A": -0.32967032973323085,
+          "tau_s": 0.0001000999999809009,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.9724052703447623,
+      "mix_squared_integral_V2s": 0.08670173892383508,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 32.993698500826866,
+          "mix_start_V": 2.9724052703447623,
+          "series_current_start_A": 6.301499173130898e-05,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.6240523439732123,
+          "mix_start_V": -0.056220931889478576,
+          "series_current_start_A": -1.191883756056946e-06,
+          "tau_s": 0.5236849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -0.0006176227319982257,
+          "mix_start_V": -5.5641687567407704e-05,
+          "series_current_start_A": -0.006176228499586034,
+          "tau_s": 0.0001000999999809009,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.728084388743758,
+      "mix_squared_integral_V2s": 0.0003724192735221467,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 30.281736715055718,
+          "mix_start_V": 2.728084388743758,
+          "series_current_start_A": 5.783538904136768e-05,
+          "tau_s": 0.5705849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.01,
+          "wet_start_V": 0.07004420548939065,
+          "mix_start_V": 0.006310288782827985,
+          "series_current_start_A": 0.0007005758330161024,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.013344696120332794,
+          "mix_start_V": -0.0012022248757056569,
+          "series_current_start_A": -0.00013347244837069285,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.2016443530021783e-05,
+          "mix_start_V": -1.0825624801821424e-06,
+          "series_current_start_A": -0.00012028462268584264,
+          "tau_s": 0.04700009990008083,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 0,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.728084388743758,
+      "mix_squared_integral_V2s": 0.0014882926698597714,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 30.281736715055718,
+          "mix_start_V": 2.728084388743758,
+          "series_current_start_A": 5.783538904136768e-05,
+          "tau_s": 0.5705849056603773,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.01,
+          "wet_start_V": 0.07002579411922309,
+          "mix_start_V": 0.006308630100830908,
+          "series_current_start_A": 0.0007003916841503684,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.013178769768621928,
+          "mix_start_V": -0.001187276555731705,
+          "series_current_start_A": -0.00013181286794920077,
+          "tau_s": 0.047099980904547964,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.1867032511779249e-05,
+          "mix_start_V": -1.0691020280882204e-06,
+          "series_current_start_A": -0.00011878901810787329,
+          "tau_s": 0.04700009990008083,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.3633749562067434,
+      "mix_squared_integral_V2s": 0.0018557941763179,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.4968369701016,
+          "mix_start_V": 1.3633749562067434,
+          "series_current_start_A": 3.1630298983996456e-05,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.1,
+          "wet_start_V": -0.031593943216864456,
+          "mix_start_V": -0.002611069687344169,
+          "series_current_start_A": -6.057681674638474e-08,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.3633749562067434,
+      "mix_squared_integral_V2s": 0.0018552596031659462,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.4968369701016,
+          "mix_start_V": 1.3633749562067434,
+          "series_current_start_A": 3.1630298983996456e-05,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.005,
+          "wet_start_V": -0.031593943216864456,
+          "mix_start_V": -0.002611069687344169,
+          "series_current_start_A": -6.057681674638474e-08,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.1,
+          "wet_start_V": -3.1327286968224425e-05,
+          "mix_start_V": -2.589031980844993e-06,
+          "series_current_start_A": -0.00031327292974778616,
+          "tau_s": 0.00010009999998082645,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.3633749562067434,
+      "mix_squared_integral_V2s": 0.0018553254716782623,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.4968369701016,
+          "mix_start_V": 1.3633749562067434,
+          "series_current_start_A": 3.1630298983996456e-05,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.031593943216864456,
+          "mix_start_V": -0.002611069687344169,
+          "series_current_start_A": -6.057681674638474e-08,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -3.073246622961903e-05,
+          "mix_start_V": -2.5398732421172744e-06,
+          "series_current_start_A": -0.00030732472122124943,
+          "tau_s": 0.00010009999998082645,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.2509097525473067,
+      "mix_squared_integral_V2s": 7.823971609421e-05,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 15.136008005822415,
+          "mix_start_V": 1.2509097525473067,
+          "series_current_start_A": 2.902110625909752e-05,
+          "tau_s": 0.5685517241379311,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.001,
+          "wet_start_V": 0.03502206575463336,
+          "mix_start_V": 0.0028943855995564754,
+          "series_current_start_A": 0.0003502878072922433,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0007023939812575662,
+          "mix_start_V": -5.804908936012942e-05,
+          "series_current_start_A": -7.025286551448818e-06,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.224709213991581e-07,
+          "mix_start_V": -4.3179414991665946e-08,
+          "series_current_start_A": -5.229934924968e-06,
+          "tau_s": 0.04700009990008076,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.2509097525473067,
+      "mix_squared_integral_V2s": 0.00031285159117891816,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 15.136008005822415,
+          "mix_start_V": 1.2509097525473067,
+          "series_current_start_A": 2.902110625909752e-05,
+          "tau_s": 0.5685517241379311,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.001,
+          "wet_start_V": 0.03501282716346322,
+          "mix_start_V": 0.0028936220796250585,
+          "series_current_start_A": 0.00035019540366687947,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0006019945647734535,
+          "mix_start_V": -4.975161692342589e-05,
+          "series_current_start_A": -6.021099885247159e-06,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -4.477895074945637e-07,
+          "mix_start_V": -3.7007397313600296e-08,
+          "series_current_start_A": -4.4823738285922005e-06,
+          "tau_s": 0.04700009990008076,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.3633749562067434,
+      "mix_squared_integral_V2s": 0.01828710151886108,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 16.4968369701016,
+          "mix_start_V": 1.3633749562067434,
+          "series_current_start_A": 3.1630298983996456e-05,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.3132304677759594,
+          "mix_start_V": -0.025886815518674323,
+          "series_current_start_A": -6.005741200332445e-07,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.3633749562067434,
+      "mix_squared_integral_V2s": 0.009205441047322715,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.005,
+          "wet_start_V": 16.4968369701016,
+          "mix_start_V": 1.3633749562067434,
+          "series_current_start_A": 3.1630298983996456e-05,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.01,
+          "wet_start_V": 0.016326274620555768,
+          "mix_start_V": 0.0013492788942608069,
+          "series_current_start_A": 0.16326277750882803,
+          "tau_s": 0.00010009999998082645,
+          "shunts_ohm": [
+            0.1
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.016483513326198518,
+          "mix_start_V": -0.0013622738286114473,
+          "series_current_start_A": -0.16483516486673802,
+          "tau_s": 0.00010009999998082645,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.3633749562067434,
+      "mix_squared_integral_V2s": 0.018239413942107957,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 16.4968369701016,
+          "mix_start_V": 1.3633749562067434,
+          "series_current_start_A": 3.1630298983996456e-05,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.3132304677759594,
+          "mix_start_V": -0.025886815518674323,
+          "series_current_start_A": -6.005741200332445e-07,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -0.0003099919484992015,
+          "mix_start_V": -2.5619169297454663e-05,
+          "series_current_start_A": -0.0030999200793567425,
+          "tau_s": 0.00010009999998082645,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.2509097525473067,
+      "mix_squared_integral_V2s": 7.830123553044207e-05,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 15.136008005822415,
+          "mix_start_V": 1.2509097525473067,
+          "series_current_start_A": 2.902110625909752e-05,
+          "tau_s": 0.5685517241379311,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.01,
+          "wet_start_V": 0.03502206575463336,
+          "mix_start_V": 0.0028943855995564754,
+          "series_current_start_A": 0.0003502878072922433,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.006672351998140747,
+          "mix_start_V": -0.0005514340494331194,
+          "series_current_start_A": -6.673631325135432e-05,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -6.008229768598704e-06,
+          "mix_start_V": -4.965479147602233e-07,
+          "series_current_start_A": -6.0142391503584646e-05,
+          "tau_s": 0.04700009990008076,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.2509097525473067,
+      "mix_squared_integral_V2s": 0.0003129134388300891,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 15.136008005822415,
+          "mix_start_V": 1.2509097525473067,
+          "series_current_start_A": 2.902110625909752e-05,
+          "tau_s": 0.5685517241379311,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.01,
+          "wet_start_V": 0.03501282716346322,
+          "mix_start_V": 0.0028936220796250585,
+          "series_current_start_A": 0.00035019540366687947,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.006589415642428346,
+          "mix_start_V": -0.0005445798051593672,
+          "series_current_start_A": -6.590679067576315e-05,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.933548354694102e-06,
+          "mix_start_V": -4.90375897082157e-07,
+          "series_current_start_A": -5.939483040720877e-05,
+          "tau_s": 0.04700009990008076,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.726749912413487,
+      "mix_squared_integral_V2s": 0.0074231767052716,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.9936739402032,
+          "mix_start_V": 2.726749912413487,
+          "series_current_start_A": 6.326059796799291e-05,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.1,
+          "wet_start_V": -0.06318788643372891,
+          "mix_start_V": -0.005222139374688338,
+          "series_current_start_A": -1.2115363349276948e-07,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.726749912413487,
+      "mix_squared_integral_V2s": 0.007421038412663785,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.9936739402032,
+          "mix_start_V": 2.726749912413487,
+          "series_current_start_A": 6.326059796799291e-05,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.005,
+          "wet_start_V": -0.06318788643372891,
+          "mix_start_V": -0.005222139374688338,
+          "series_current_start_A": -1.2115363349276948e-07,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.1,
+          "wet_start_V": -6.265457393644885e-05,
+          "mix_start_V": -5.178063961689986e-06,
+          "series_current_start_A": -0.0006265458594955723,
+          "tau_s": 0.00010009999998082645,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.726749912413487,
+      "mix_squared_integral_V2s": 0.007421301886713049,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.9936739402032,
+          "mix_start_V": 2.726749912413487,
+          "series_current_start_A": 6.326059796799291e-05,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.06318788643372891,
+          "mix_start_V": -0.005222139374688338,
+          "series_current_start_A": -1.2115363349276948e-07,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -6.146493245923806e-05,
+          "mix_start_V": -5.079746484234549e-06,
+          "series_current_start_A": -0.0006146494424424989,
+          "tau_s": 0.00010009999998082645,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.5018195050946135,
+      "mix_squared_integral_V2s": 0.00031295886437684,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 30.27201601164483,
+          "mix_start_V": 2.5018195050946135,
+          "series_current_start_A": 5.804221251819504e-05,
+          "tau_s": 0.5685517241379311,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.001,
+          "wet_start_V": 0.07004413150926672,
+          "mix_start_V": 0.005788771199112951,
+          "series_current_start_A": 0.0007005756145844866,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0014047879625151325,
+          "mix_start_V": -0.00011609817872025885,
+          "series_current_start_A": -1.4050573102897635e-05,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.0449418427983162e-06,
+          "mix_start_V": -8.635882998333189e-08,
+          "series_current_start_A": -1.0459869849936e-05,
+          "tau_s": 0.04700009990008076,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.5018195050946135,
+      "mix_squared_integral_V2s": 0.0012514063647156726,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 30.27201601164483,
+          "mix_start_V": 2.5018195050946135,
+          "series_current_start_A": 5.804221251819504e-05,
+          "tau_s": 0.5685517241379311,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.001,
+          "wet_start_V": 0.07002565432692644,
+          "mix_start_V": 0.005787244159250117,
+          "series_current_start_A": 0.0007003908073337589,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.001203989129546907,
+          "mix_start_V": -9.950323384685178e-05,
+          "series_current_start_A": -1.2042199770494319e-05,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -8.955790149891274e-07,
+          "mix_start_V": -7.401479462720059e-08,
+          "series_current_start_A": -8.964747657184401e-06,
+          "tau_s": 0.04700009990008076,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.726749912413487,
+      "mix_squared_integral_V2s": 0.07314840607544432,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 32.9936739402032,
+          "mix_start_V": 2.726749912413487,
+          "series_current_start_A": 6.326059796799291e-05,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.6264609355519188,
+          "mix_start_V": -0.051773631037348646,
+          "series_current_start_A": -1.201148240066489e-06,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.726749912413487,
+      "mix_squared_integral_V2s": 0.03682176418929086,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.005,
+          "wet_start_V": 32.9936739402032,
+          "mix_start_V": 2.726749912413487,
+          "series_current_start_A": 6.326059796799291e-05,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.01,
+          "wet_start_V": 0.032652549241111536,
+          "mix_start_V": 0.0026985577885216138,
+          "series_current_start_A": 0.32652555501765607,
+          "tau_s": 0.00010009999998082645,
+          "shunts_ohm": [
+            0.1
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.032967026652397036,
+          "mix_start_V": -0.0027245476572228945,
+          "series_current_start_A": -0.32967032973347604,
+          "tau_s": 0.00010009999998082645,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.726749912413487,
+      "mix_squared_integral_V2s": 0.07295765576843183,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 32.9936739402032,
+          "mix_start_V": 2.726749912413487,
+          "series_current_start_A": 6.326059796799291e-05,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.6264609355519188,
+          "mix_start_V": -0.051773631037348646,
+          "series_current_start_A": -1.201148240066489e-06,
+          "tau_s": 0.521651724137931,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -0.000619983896998403,
+          "mix_start_V": -5.1238338594909326e-05,
+          "series_current_start_A": -0.006199840158713485,
+          "tau_s": 0.00010009999998082645,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.5018195050946135,
+      "mix_squared_integral_V2s": 0.00031320494212176827,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 30.27201601164483,
+          "mix_start_V": 2.5018195050946135,
+          "series_current_start_A": 5.804221251819504e-05,
+          "tau_s": 0.5685517241379311,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.01,
+          "wet_start_V": 0.07004413150926672,
+          "mix_start_V": 0.005788771199112951,
+          "series_current_start_A": 0.0007005756145844866,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.013344703996281494,
+          "mix_start_V": -0.0011028680988662389,
+          "series_current_start_A": -0.00013347262650270864,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.2016459537197408e-05,
+          "mix_start_V": -9.930958295204466e-07,
+          "series_current_start_A": -0.00012028478300716929,
+          "tau_s": 0.04700009990008076,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 0,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.5018195050946135,
+      "mix_squared_integral_V2s": 0.0012516537553203563,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 30.27201601164483,
+          "mix_start_V": 2.5018195050946135,
+          "series_current_start_A": 5.804221251819504e-05,
+          "tau_s": 0.5685517241379311,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.01,
+          "wet_start_V": 0.07002565432692644,
+          "mix_start_V": 0.005787244159250117,
+          "series_current_start_A": 0.0007003908073337589,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.013178831284856692,
+          "mix_start_V": -0.0010891596103187345,
+          "series_current_start_A": -0.0001318135813515263,
+          "tau_s": 0.047099980830121825,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.1867096709388204e-05,
+          "mix_start_V": -9.80751794164314e-07,
+          "series_current_start_A": -0.00011878966081441754,
+          "tau_s": 0.04700009990008076,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.6187822262527765,
+      "mix_squared_integral_V2s": 0.0026162595516223556,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.49686250572148,
+          "mix_start_V": 1.6187822262527765,
+          "series_current_start_A": 3.137494278519018e-05,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.1,
+          "wet_start_V": -0.03133917145993708,
+          "mix_start_V": -0.0030752086178350386,
+          "series_current_start_A": -5.960313430203912e-08,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.6187822262527765,
+      "mix_squared_integral_V2s": 0.002615516920497778,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.49686250572148,
+          "mix_start_V": 1.6187822262527765,
+          "series_current_start_A": 3.137494278519018e-05,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.005,
+          "wet_start_V": -0.03133917145993708,
+          "mix_start_V": -0.0030752086178350386,
+          "series_current_start_A": -5.960313430203912e-08,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.1,
+          "wet_start_V": -3.107654117865912e-05,
+          "mix_start_V": -3.0494375822056225e-06,
+          "series_current_start_A": -0.000310765470890236,
+          "tau_s": 0.00010009999998098126,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.6187822262527765,
+      "mix_squared_integral_V2s": 0.002615608313017,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.49686250572148,
+          "mix_start_V": 1.6187822262527765,
+          "series_current_start_A": 3.137494278519018e-05,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.03133917145993708,
+          "mix_start_V": -0.0030752086178350386,
+          "series_current_start_A": -5.960313430203912e-08,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -3.049119992032949e-05,
+          "mix_start_V": -2.9919999921821975e-06,
+          "series_current_start_A": -0.0003049120571936948,
+          "tau_s": 0.00010009999998098126,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.4862381715094282,
+      "mix_squared_integral_V2s": 0.00011044660141753743,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 15.14611809329154,
+          "mix_start_V": 1.4862381715094282,
+          "series_current_start_A": 2.880599801507365e-05,
+          "tau_s": 0.5727973733583489,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.001,
+          "wet_start_V": 0.03502214267950222,
+          "mix_start_V": 0.003436606328943125,
+          "series_current_start_A": 0.0003502880344740522,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0007023726908246313,
+          "mix_start_V": -6.89214950853786e-05,
+          "series_current_start_A": -7.025062732132876e-06,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.224542789801496e-07,
+          "mix_start_V": -5.126669998913153e-08,
+          "series_current_start_A": -5.229768326233155e-06,
+          "tau_s": 0.047000099900080916,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.4862381715094282,
+      "mix_squared_integral_V2s": 0.0004416358841032647,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 15.14611809329154,
+          "mix_start_V": 1.4862381715094282,
+          "series_current_start_A": 2.880599801507365e-05,
+          "tau_s": 0.5727973733583489,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.001,
+          "wet_start_V": 0.03501297253687322,
+          "mix_start_V": 0.0034357064933595483,
+          "series_current_start_A": 0.0003501963156073126,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.000601905738468752,
+          "mix_start_V": -5.9063007343053256e-05,
+          "series_current_start_A": -6.020202133157115e-06,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -4.477227442264308e-07,
+          "mix_start_V": -4.39335431444312e-08,
+          "series_current_start_A": -4.481705521218517e-06,
+          "tau_s": 0.047000099900080916,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.6187822262527765,
+      "mix_squared_integral_V2s": 0.02578338758808737,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 16.49686250572148,
+          "mix_start_V": 1.6187822262527765,
+          "series_current_start_A": 3.137494278519018e-05,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.3107261584252847,
+          "mix_start_V": -0.03049052402032231,
+          "series_current_start_A": -5.909617928302471e-07,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.6187822262527765,
+      "mix_squared_integral_V2s": 0.01297849488814227,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.005,
+          "wet_start_V": 16.49686250572148,
+          "mix_start_V": 1.6187822262527765,
+          "series_current_start_A": 3.137494278519018e-05,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.01,
+          "wet_start_V": 0.016327538032697528,
+          "mix_start_V": 0.0016021669791228615,
+          "series_current_start_A": 0.16327541137988436,
+          "tau_s": 0.00010009999998098126,
+          "shunts_ohm": [
+            0.1
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.01648351335169287,
+          "mix_start_V": -0.0016174723181857408,
+          "series_current_start_A": -0.16483516486648309,
+          "tau_s": 0.00010009999998098126,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.6187822262527765,
+      "mix_squared_integral_V2s": 0.025717137656096012,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 16.49686250572148,
+          "mix_start_V": 1.6187822262527765,
+          "series_current_start_A": 3.137494278519018e-05,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.3107261584252847,
+          "mix_start_V": -0.03049052402032231,
+          "series_current_start_A": -5.909617928302471e-07,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -0.0003075368523974341,
+          "mix_start_V": -3.0177568031862394e-05,
+          "series_current_start_A": -0.0030753691088704783,
+          "tau_s": 0.00010009999998098126,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.4862381715094282,
+      "mix_squared_integral_V2s": 0.00011053332936950569,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 15.14611809329154,
+          "mix_start_V": 1.4862381715094282,
+          "series_current_start_A": 2.880599801507365e-05,
+          "tau_s": 0.5727973733583489,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.01,
+          "wet_start_V": 0.03502214267950222,
+          "mix_start_V": 0.003436606328943125,
+          "series_current_start_A": 0.0003502880344740522,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.0066723438031273214,
+          "mix_start_V": -0.0006547348959357762,
+          "series_current_start_A": -6.673612798398354e-05,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -6.008213120219959e-06,
+          "mix_start_V": -5.895659618413875e-07,
+          "series_current_start_A": -6.014222476026206e-05,
+          "tau_s": 0.047000099900080916,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.4862381715094282,
+      "mix_squared_integral_V2s": 0.00044172307507117105,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 15.14611809329154,
+          "mix_start_V": 1.4862381715094282,
+          "series_current_start_A": 2.880599801507365e-05,
+          "tau_s": 0.5727973733583489,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.01,
+          "wet_start_V": 0.03501297253687322,
+          "mix_start_V": 0.0034357064933595483,
+          "series_current_start_A": 0.0003501963156073126,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.006589351658402289,
+          "mix_start_V": -0.000646591152920831,
+          "series_current_start_A": -6.590604869618677e-05,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.933481585466245e-06,
+          "mix_start_V": -5.822328049966876e-07,
+          "series_current_start_A": -5.9394161955247466e-05,
+          "tau_s": 0.047000099900080916,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 3.237564452505553,
+      "mix_squared_integral_V2s": 0.010465038206489422,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.99372501144296,
+          "mix_start_V": 3.237564452505553,
+          "series_current_start_A": 6.274988557038036e-05,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.1,
+          "wet_start_V": -0.06267834291987416,
+          "mix_start_V": -0.006150417235670077,
+          "series_current_start_A": -1.1920626860407824e-07,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 3.237564452505553,
+      "mix_squared_integral_V2s": 0.010462067681991111,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.99372501144296,
+          "mix_start_V": 3.237564452505553,
+          "series_current_start_A": 6.274988557038036e-05,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.005,
+          "wet_start_V": -0.06267834291987416,
+          "mix_start_V": -0.006150417235670077,
+          "series_current_start_A": -1.1920626860407824e-07,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.1,
+          "wet_start_V": -6.215308235731824e-05,
+          "mix_start_V": -6.098875164411245e-06,
+          "series_current_start_A": -0.000621530941780472,
+          "tau_s": 0.00010009999998098126,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 3.237564452505553,
+      "mix_squared_integral_V2s": 0.010462433252068,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.99372501144296,
+          "mix_start_V": 3.237564452505553,
+          "series_current_start_A": 6.274988557038036e-05,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.06267834291987416,
+          "mix_start_V": -0.006150417235670077,
+          "series_current_start_A": -1.1920626860407824e-07,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -6.098239984065898e-05,
+          "mix_start_V": -5.983999984364395e-06,
+          "series_current_start_A": -0.0006098241143873896,
+          "tau_s": 0.00010009999998098126,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.9724763430188563,
+      "mix_squared_integral_V2s": 0.0004417864056701497,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 30.29223618658308,
+          "mix_start_V": 2.9724763430188563,
+          "series_current_start_A": 5.76119960301473e-05,
+          "tau_s": 0.5727973733583489,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.001,
+          "wet_start_V": 0.07004428535900444,
+          "mix_start_V": 0.00687321265788625,
+          "series_current_start_A": 0.0007005760689481045,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0014047453816492625,
+          "mix_start_V": -0.0001378429901707572,
+          "series_current_start_A": -1.4050125464265753e-05,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.0449085579602992e-06,
+          "mix_start_V": -1.0253339997826306e-07,
+          "series_current_start_A": -1.045953665246631e-05,
+          "tau_s": 0.047000099900080916,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.9724763430188563,
+      "mix_squared_integral_V2s": 0.0017665435364130587,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 30.29223618658308,
+          "mix_start_V": 2.9724763430188563,
+          "series_current_start_A": 5.76119960301473e-05,
+          "tau_s": 0.5727973733583489,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.001,
+          "wet_start_V": 0.07002594507374645,
+          "mix_start_V": 0.0068714129867190965,
+          "series_current_start_A": 0.0007003926312146252,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.001203811476937504,
+          "mix_start_V": -0.00011812601468610651,
+          "series_current_start_A": -1.204040426631423e-05,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -8.954454884528616e-07,
+          "mix_start_V": -8.78670862888624e-08,
+          "series_current_start_A": -8.963411042437035e-06,
+          "tau_s": 0.047000099900080916,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 3.237564452505553,
+      "mix_squared_integral_V2s": 0.10313355035234947,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 32.99372501144296,
+          "mix_start_V": 3.237564452505553,
+          "series_current_start_A": 6.274988557038036e-05,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.6214523168505695,
+          "mix_start_V": -0.06098104804064462,
+          "series_current_start_A": -1.1819235856604942e-06,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 3.237564452505553,
+      "mix_squared_integral_V2s": 0.05191397955256908,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.005,
+          "wet_start_V": 32.99372501144296,
+          "mix_start_V": 3.237564452505553,
+          "series_current_start_A": 6.274988557038036e-05,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.01,
+          "wet_start_V": 0.032655076065395056,
+          "mix_start_V": 0.003204333958245723,
+          "series_current_start_A": 0.3265508227597687,
+          "tau_s": 0.00010009999998098126,
+          "shunts_ohm": [
+            0.1
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.03296702670338574,
+          "mix_start_V": -0.0032349446363714816,
+          "series_current_start_A": -0.32967032973296617,
+          "tau_s": 0.00010009999998098126,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 3.237564452505553,
+      "mix_squared_integral_V2s": 0.10286855062438405,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 32.99372501144296,
+          "mix_start_V": 3.237564452505553,
+          "series_current_start_A": 6.274988557038036e-05,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.6214523168505695,
+          "mix_start_V": -0.06098104804064462,
+          "series_current_start_A": -1.1819235856604942e-06,
+          "tau_s": 0.525897373358349,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -0.0006150737047948682,
+          "mix_start_V": -6.035513606372479e-05,
+          "series_current_start_A": -0.0061507382177409566,
+          "tau_s": 0.00010009999998098126,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.9724763430188563,
+      "mix_squared_integral_V2s": 0.00044213331747802276,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 30.29223618658308,
+          "mix_start_V": 2.9724763430188563,
+          "series_current_start_A": 5.76119960301473e-05,
+          "tau_s": 0.5727973733583489,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.01,
+          "wet_start_V": 0.07004428535900444,
+          "mix_start_V": 0.00687321265788625,
+          "series_current_start_A": 0.0007005760689481045,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.013344687606254643,
+          "mix_start_V": -0.0013094697918715524,
+          "series_current_start_A": -0.00013347225596796708,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.2016426240439918e-05,
+          "mix_start_V": -1.179131923682775e-06,
+          "series_current_start_A": -0.00012028444952052412,
+          "tau_s": 0.047000099900080916,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 10000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.9724763430188563,
+      "mix_squared_integral_V2s": 0.0017668923002846842,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 30.29223618658308,
+          "mix_start_V": 2.9724763430188563,
+          "series_current_start_A": 5.76119960301473e-05,
+          "tau_s": 0.5727973733583489,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.01,
+          "wet_start_V": 0.07002594507374645,
+          "mix_start_V": 0.0068714129867190965,
+          "series_current_start_A": 0.0007003926312146252,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.013178703316804577,
+          "mix_start_V": -0.001293182305841662,
+          "series_current_start_A": -0.00013181209739237355,
+          "tau_s": 0.047099980984883154,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.186696317093249e-05,
+          "mix_start_V": -1.1644656099933752e-06,
+          "series_current_start_A": -0.00011878832391049493,
+          "tau_s": 0.047000099900080916,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.4741293946112004,
+      "mix_squared_integral_V2s": 0.0021695640252988634,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.496848043330797,
+          "mix_start_V": 1.4741293946112004,
+          "series_current_start_A": 3.151956669205039e-05,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.1,
+          "wet_start_V": -0.03148346494259299,
+          "mix_start_V": -0.002813307184147221,
+          "series_current_start_A": -6.015362270103876e-08,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.4741293946112004,
+      "mix_squared_integral_V2s": 0.0021689430304656647,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.496848043330797,
+          "mix_start_V": 1.4741293946112004,
+          "series_current_start_A": 3.151956669205039e-05,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.005,
+          "wet_start_V": -0.03148346494259299,
+          "mix_start_V": -0.002813307184147221,
+          "series_current_start_A": -6.015362270103876e-08,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.1,
+          "wet_start_V": -3.121855823464606e-05,
+          "mix_start_V": -2.7896355855492015e-06,
+          "series_current_start_A": -0.0003121856419939415,
+          "tau_s": 0.00010009999998089359,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.4741293946112004,
+      "mix_squared_integral_V2s": 0.002169019506879685,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.496848043330797,
+          "mix_start_V": 1.4741293946112004,
+          "series_current_start_A": 3.151956669205039e-05,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.03148346494259299,
+          "mix_start_V": -0.002813307184147221,
+          "series_current_start_A": -6.015362270103876e-08,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -3.062785734285626e-05,
+          "mix_start_V": -2.7368515903445886e-06,
+          "series_current_start_A": -0.0003062786319474257,
+          "tau_s": 0.00010009999998089359,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.352918726482322,
+      "mix_squared_integral_V2s": 9.152059245031205e-05,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 15.140390475452167,
+          "mix_start_V": 1.352918726482322,
+          "series_current_start_A": 2.892786222442201e-05,
+          "tau_s": 0.5703843537414965,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.001,
+          "wet_start_V": 0.03502209910847666,
+          "mix_start_V": 0.003129513324071838,
+          "series_current_start_A": 0.0003502879057696595,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.000702384752575679,
+          "mix_start_V": -6.276386903600706e-05,
+          "series_current_start_A": -7.025189531392906e-06,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.224637073287399e-07,
+          "mix_start_V": -4.668644013498082e-08,
+          "series_current_start_A": -5.2298627086016606e-06,
+          "tau_s": 0.047000099900080826,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 1.352918726482322,
+      "mix_squared_integral_V2s": 0.0003659572142749947,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 15.140390475452167,
+          "mix_start_V": 1.352918726482322,
+          "series_current_start_A": 2.892786222442201e-05,
+          "tau_s": 0.5703843537414965,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.001,
+          "wet_start_V": 0.03501289018797856,
+          "mix_start_V": 0.0031286904310947536,
+          "series_current_start_A": 0.0003501957989697305,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0006019560610103162,
+          "mix_start_V": -5.378973737703882e-05,
+          "series_current_start_A": -6.020710732487806e-06,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -4.477605673118151e-07,
+          "mix_start_V": -4.0011098622501756e-08,
+          "series_current_start_A": -4.482084134301305e-06,
+          "tau_s": 0.047000099900080826,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.4741293946112004,
+      "mix_squared_integral_V2s": 0.02137994789915847,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 16.496848043330797,
+          "mix_start_V": 1.4741293946112004,
+          "series_current_start_A": 3.151956669205039e-05,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.3121445512529055,
+          "mix_start_V": -0.027892689388968002,
+          "series_current_start_A": -5.963964131168431e-07,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.4741293946112004,
+      "mix_squared_integral_V2s": 0.010762166720426675,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.005,
+          "wet_start_V": 16.496848043330797,
+          "mix_start_V": 1.4741293946112004,
+          "series_current_start_A": 3.151956669205039e-05,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.01,
+          "wet_start_V": 0.016326822472760374,
+          "mix_start_V": 0.0014589362079639651,
+          "series_current_start_A": 0.16326825592231248,
+          "tau_s": 0.00010009999998089359,
+          "shunts_ohm": [
+            0.1
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.016483513337253862,
+          "mix_start_V": -0.0014729378286741875,
+          "series_current_start_A": -0.16483516486662747,
+          "tau_s": 0.00010009999998089359,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.4741293946112004,
+      "mix_squared_integral_V2s": 0.02132455013288994,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 16.496848043330797,
+          "mix_start_V": 1.4741293946112004,
+          "series_current_start_A": 3.151956669205039e-05,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.3121445512529055,
+          "mix_start_V": -0.027892689388968002,
+          "series_current_start_A": -5.963964131168431e-07,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -0.0003089274181807076,
+          "mix_start_V": -2.7605212022646494e-05,
+          "series_current_start_A": -0.0030892747720567006,
+          "tau_s": 0.00010009999998089359,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.352918726482322,
+      "mix_squared_integral_V2s": 9.159251302644086e-05,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 15.140390475452167,
+          "mix_start_V": 1.352918726482322,
+          "series_current_start_A": 2.892786222442201e-05,
+          "tau_s": 0.5703843537414965,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.01,
+          "wet_start_V": 0.03502209910847666,
+          "mix_start_V": 0.003129513324071838,
+          "series_current_start_A": 0.0003502879057696595,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.006672348447499168,
+          "mix_start_V": -0.0005962293494922084,
+          "series_current_start_A": -6.673623294253719e-05,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -6.00822255194392e-06,
+          "mix_start_V": -5.368842247878401e-07,
+          "series_current_start_A": -6.0142319224519514e-05,
+          "tau_s": 0.047000099900080826,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 1.352918726482322,
+      "mix_squared_integral_V2s": 0.0003660295186690511,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 15.140390475452167,
+          "mix_start_V": 1.352918726482322,
+          "series_current_start_A": 2.892786222442201e-05,
+          "tau_s": 0.5703843537414965,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.01,
+          "wet_start_V": 0.03501289018797856,
+          "mix_start_V": 0.0031286904310947536,
+          "series_current_start_A": 0.0003501957989697305,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.006589387908669929,
+          "mix_start_V": -0.0005888161413108792,
+          "series_current_start_A": -6.590646904637534e-05,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.933519411926994e-06,
+          "mix_start_V": -5.302088832753609e-07,
+          "series_current_start_A": -5.939454065021915e-05,
+          "tau_s": 0.047000099900080826,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.948258789222401,
+      "mix_squared_integral_V2s": 0.008678256101195454,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.99369608666159,
+          "mix_start_V": 2.948258789222401,
+          "series_current_start_A": 6.303913338410078e-05,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.1,
+          "wet_start_V": -0.06296692988518598,
+          "mix_start_V": -0.005626614368294442,
+          "series_current_start_A": -1.2030724540207752e-07,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.948258789222401,
+      "mix_squared_integral_V2s": 0.008675772121862659,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.99369608666159,
+          "mix_start_V": 2.948258789222401,
+          "series_current_start_A": 6.303913338410078e-05,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.005,
+          "wet_start_V": -0.06296692988518598,
+          "mix_start_V": -0.005626614368294442,
+          "series_current_start_A": -1.2030724540207752e-07,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.1,
+          "wet_start_V": -6.243711646929212e-05,
+          "mix_start_V": -5.579271171098403e-06,
+          "series_current_start_A": -0.000624371283987883,
+          "tau_s": 0.00010009999998089359,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.948258789222401,
+      "mix_squared_integral_V2s": 0.00867607802751874,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.99369608666159,
+          "mix_start_V": 2.948258789222401,
+          "series_current_start_A": 6.303913338410078e-05,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.06296692988518598,
+          "mix_start_V": -0.005626614368294442,
+          "series_current_start_A": -1.2030724540207752e-07,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -6.125571468571252e-05,
+          "mix_start_V": -5.473703180689177e-06,
+          "series_current_start_A": -0.0006125572638948514,
+          "tau_s": 0.00010009999998089359,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.705837452964644,
+      "mix_squared_integral_V2s": 0.0003660823698012482,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 30.280780950904333,
+          "mix_start_V": 2.705837452964644,
+          "series_current_start_A": 5.785572444884402e-05,
+          "tau_s": 0.5703843537414965,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.001,
+          "wet_start_V": 0.07004419821695332,
+          "mix_start_V": 0.006259026648143676,
+          "series_current_start_A": 0.000700575811539319,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.001404769505151358,
+          "mix_start_V": -0.00012552773807201413,
+          "series_current_start_A": -1.4050379062785812e-05,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.0449274146574797e-06,
+          "mix_start_V": -9.337288026996164e-08,
+          "series_current_start_A": -1.0459725417203321e-05,
+          "tau_s": 0.047000099900080826,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.705837452964644,
+      "mix_squared_integral_V2s": 0.0014638288570999788,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 30.280780950904333,
+          "mix_start_V": 2.705837452964644,
+          "series_current_start_A": 5.785572444884402e-05,
+          "tau_s": 0.5703843537414965,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.001,
+          "wet_start_V": 0.07002578037595712,
+          "mix_start_V": 0.006257380862189507,
+          "series_current_start_A": 0.000700391597939461,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0012039121220206324,
+          "mix_start_V": -0.00010757947475407764,
+          "series_current_start_A": -1.2041421464975611e-05,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -8.955211346236302e-07,
+          "mix_start_V": -8.002219724500351e-08,
+          "series_current_start_A": -8.96416826860261e-06,
+          "tau_s": 0.047000099900080826,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.948258789222401,
+      "mix_squared_integral_V2s": 0.08551979159663388,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 32.99369608666159,
+          "mix_start_V": 2.948258789222401,
+          "series_current_start_A": 6.303913338410078e-05,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.624289102505811,
+          "mix_start_V": -0.055785378777936004,
+          "series_current_start_A": -1.1927928262336863e-06,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.948258789222401,
+      "mix_squared_integral_V2s": 0.0430486668817067,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.005,
+          "wet_start_V": 32.99369608666159,
+          "mix_start_V": 2.948258789222401,
+          "series_current_start_A": 6.303913338410078e-05,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.01,
+          "wet_start_V": 0.03265364494552075,
+          "mix_start_V": 0.0029178724159279303,
+          "series_current_start_A": 0.32653651184462495,
+          "tau_s": 0.00010009999998089359,
+          "shunts_ohm": [
+            0.1
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.032967026674507724,
+          "mix_start_V": -0.002945875657348375,
+          "series_current_start_A": -0.32967032973325494,
+          "tau_s": 0.00010009999998089359,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.948258789222401,
+      "mix_squared_integral_V2s": 0.08529820053155976,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 32.99369608666159,
+          "mix_start_V": 2.948258789222401,
+          "series_current_start_A": 6.303913338410078e-05,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.624289102505811,
+          "mix_start_V": -0.055785378777936004,
+          "series_current_start_A": -1.1927928262336863e-06,
+          "tau_s": 0.5234843537414966,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -0.0006178548363614152,
+          "mix_start_V": -5.521042404529299e-05,
+          "series_current_start_A": -0.006178549544113401,
+          "tau_s": 0.00010009999998089359,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.705837452964644,
+      "mix_squared_integral_V2s": 0.0003663700521057634,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 30.280780950904333,
+          "mix_start_V": 2.705837452964644,
+          "series_current_start_A": 5.785572444884402e-05,
+          "tau_s": 0.5703843537414965,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.01,
+          "wet_start_V": 0.07004419821695332,
+          "mix_start_V": 0.006259026648143676,
+          "series_current_start_A": 0.000700575811539319,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.013344696894998336,
+          "mix_start_V": -0.0011924586989844168,
+          "series_current_start_A": -0.00013347246588507437,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.201644510388784e-05,
+          "mix_start_V": -1.0737684495756802e-06,
+          "series_current_start_A": -0.00012028463844903903,
+          "tau_s": 0.047000099900080826,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 10000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.705837452964644,
+      "mix_squared_integral_V2s": 0.0014641180746762044,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 30.280780950904333,
+          "mix_start_V": 2.705837452964644,
+          "series_current_start_A": 5.785572444884402e-05,
+          "tau_s": 0.5703843537414965,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.01,
+          "wet_start_V": 0.07002578037595712,
+          "mix_start_V": 0.006257380862189507,
+          "series_current_start_A": 0.000700391597939461,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.013178775817339857,
+          "mix_start_V": -0.0011776322826217583,
+          "series_current_start_A": -0.00013181293809275067,
+          "tau_s": 0.04709998089723231,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.1867038823853988e-05,
+          "mix_start_V": -1.0604177665507219e-06,
+          "series_current_start_A": -0.0001187890813004383,
+          "tau_s": 0.047000099900080826,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.704421483268646,
+      "mix_squared_integral_V2s": 0.007302527689312099,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.49697104793874,
+          "mix_start_V": 2.704421483268646,
+          "series_current_start_A": 3.028952061260883e-05,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.1,
+          "wet_start_V": -0.03025618071527665,
+          "mix_start_V": -0.004960029625455189,
+          "series_current_start_A": -5.555233180509811e-08,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.704421483268646,
+      "mix_squared_integral_V2s": 0.00730058333730619,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.49697104793874,
+          "mix_start_V": 2.704421483268646,
+          "series_current_start_A": 3.028952061260883e-05,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.005,
+          "wet_start_V": -0.03025618071527665,
+          "mix_start_V": -0.004960029625455189,
+          "series_current_start_A": -5.555233180509811e-08,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.1,
+          "wet_start_V": -3.0010324625317603e-05,
+          "mix_start_V": -4.9197253484127224e-06,
+          "series_current_start_A": -0.00030010330135409995,
+          "tau_s": 0.00010009999998163934,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.704421483268646,
+      "mix_squared_integral_V2s": 0.007300821373222454,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.49697104793874,
+          "mix_start_V": 2.704421483268646,
+          "series_current_start_A": 3.028952061260883e-05,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.03025618071527665,
+          "mix_start_V": -0.004960029625455189,
+          "series_current_start_A": -5.555233180509811e-08,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -2.9464442324826243e-05,
+          "mix_start_V": -4.8302364466928274e-06,
+          "series_current_start_A": -0.0002946444773469106,
+          "tau_s": 0.00010009999998163934,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.4900398406374507,
+      "mix_squared_integral_V2s": 0.0003100195544100041,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 15.189243027888446,
+          "mix_start_V": 2.4900398406374507,
+          "series_current_start_A": 2.788844621513944e-05,
+          "tau_s": 0.5916428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.001,
+          "wet_start_V": 0.03502246999934165,
+          "mix_start_V": 0.005741388524482239,
+          "series_current_start_A": 0.0003502890035448907,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0007022818586466064,
+          "mix_start_V": -0.00011512817354862401,
+          "series_current_start_A": -7.024108022009809e-06,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.223832900377594e-07,
+          "mix_start_V": -8.563660492422286e-08,
+          "series_current_start_A": -5.229057692407946e-06,
+          "tau_s": 0.047000099900081575,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.4900398406374507,
+      "mix_squared_integral_V2s": 0.0012396666015080731,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 15.189243027888446,
+          "mix_start_V": 2.4900398406374507,
+          "series_current_start_A": 2.788844621513944e-05,
+          "tau_s": 0.5916428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.001,
+          "wet_start_V": 0.03501359183146427,
+          "mix_start_V": 0.0057399330871252905,
+          "series_current_start_A": 0.00035020020556521844,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0006015268271622295,
+          "mix_start_V": -9.861095527249664e-05,
+          "series_current_start_A": -6.016372714321346e-06,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -4.4743796119771576e-07,
+          "mix_start_V": -7.335048544224849e-08,
+          "series_current_start_A": -4.478854813114571e-06,
+          "tau_s": 0.047000099900081575,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.704421483268646,
+      "mix_squared_integral_V2s": 0.07199807288805334,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 16.49697104793874,
+          "mix_start_V": 2.704421483268646,
+          "series_current_start_A": 3.028952061260883e-05,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.30007687751538165,
+          "mix_start_V": -0.0491929307402265,
+          "series_current_start_A": -5.509608242905368e-07,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.704421483268646,
+      "mix_squared_integral_V2s": 0.036235864885606726,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.005,
+          "wet_start_V": 16.49697104793874,
+          "mix_start_V": 2.704421483268646,
+          "series_current_start_A": 3.028952061260883e-05,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.01,
+          "wet_start_V": 0.016332909408767766,
+          "mix_start_V": 0.00267752613258488,
+          "series_current_start_A": 0.16332912407597036,
+          "tau_s": 0.00010009999998163934,
+          "shunts_ohm": [
+            0.1
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.01648351346005878,
+          "mix_start_V": -0.002702215321321112,
+          "series_current_start_A": -0.16483516486539943,
+          "tau_s": 0.00010009999998163934,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.704421483268646,
+      "mix_squared_integral_V2s": 0.07182459393962214,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 16.49697104793874,
+          "mix_start_V": 2.704421483268646,
+          "series_current_start_A": 3.028952061260883e-05,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.30007687751538165,
+          "mix_start_V": -0.0491929307402265,
+          "series_current_start_A": -5.509608242905368e-07,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -0.000297092626390771,
+          "mix_start_V": -4.8703709244388694e-05,
+          "series_current_start_A": -0.002970926809389254,
+          "tau_s": 0.00010009999998163934,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.4900398406374507,
+      "mix_squared_integral_V2s": 0.00031026162006902005,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 15.189243027888446,
+          "mix_start_V": 2.4900398406374507,
+          "series_current_start_A": 2.788844621513944e-05,
+          "tau_s": 0.5916428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.01,
+          "wet_start_V": 0.03502246999934165,
+          "mix_start_V": 0.005741388524482239,
+          "series_current_start_A": 0.0003502890035448907,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.006672308692805659,
+          "mix_start_V": -0.0010938210971812557,
+          "series_current_start_A": -6.673533772434504e-05,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -6.008142105944742e-06,
+          "mix_start_V": -9.849413288434005e-07,
+          "series_current_start_A": -6.014151351184975e-05,
+          "tau_s": 0.047000099900081575,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.4900398406374507,
+      "mix_squared_integral_V2s": 0.0012399099631775093,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 15.189243027888446,
+          "mix_start_V": 2.4900398406374507,
+          "series_current_start_A": 2.788844621513944e-05,
+          "tau_s": 0.5916428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.01,
+          "wet_start_V": 0.03501359183146427,
+          "mix_start_V": 0.0057399330871252905,
+          "series_current_start_A": 0.00035020020556521844,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.006589078576026326,
+          "mix_start_V": -0.0010801768157420208,
+          "series_current_start_A": -6.590288374059957e-05,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.933196777104697e-06,
+          "mix_start_V": -9.726552093614258e-07,
+          "series_current_start_A": -5.9391310632556354e-05,
+          "tau_s": 0.047000099900081575,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 5.408842966537292,
+      "mix_squared_integral_V2s": 0.029210110757248397,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.99394209587748,
+          "mix_start_V": 5.408842966537292,
+          "series_current_start_A": 6.057904122521766e-05,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.1,
+          "wet_start_V": -0.0605123614305533,
+          "mix_start_V": -0.009920059250910378,
+          "series_current_start_A": -1.1110466361019622e-07,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 5.408842966537292,
+      "mix_squared_integral_V2s": 0.02920233334922476,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.99394209587748,
+          "mix_start_V": 5.408842966537292,
+          "series_current_start_A": 6.057904122521766e-05,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.005,
+          "wet_start_V": -0.0605123614305533,
+          "mix_start_V": -0.009920059250910378,
+          "series_current_start_A": -1.1110466361019622e-07,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.1,
+          "wet_start_V": -6.0020649250635206e-05,
+          "mix_start_V": -9.839450696825445e-06,
+          "series_current_start_A": -0.0006002066027081999,
+          "tau_s": 0.00010009999998163934,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 5.408842966537292,
+      "mix_squared_integral_V2s": 0.029203285492889815,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.99394209587748,
+          "mix_start_V": 5.408842966537292,
+          "series_current_start_A": 6.057904122521766e-05,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0605123614305533,
+          "mix_start_V": -0.009920059250910378,
+          "series_current_start_A": -1.1110466361019622e-07,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.8928884649652485e-05,
+          "mix_start_V": -9.660472893385655e-06,
+          "series_current_start_A": -0.0005892889546938212,
+          "tau_s": 0.00010009999998163934,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 4.980079681274901,
+      "mix_squared_integral_V2s": 0.0012400782176400164,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 30.378486055776893,
+          "mix_start_V": 4.980079681274901,
+          "series_current_start_A": 5.577689243027888e-05,
+          "tau_s": 0.5916428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.001,
+          "wet_start_V": 0.0700449399986833,
+          "mix_start_V": 0.011482777048964478,
+          "series_current_start_A": 0.0007005780070897814,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0014045637172932128,
+          "mix_start_V": -0.00023025634709724802,
+          "series_current_start_A": -1.4048216044019619e-05,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.0447665800755187e-06,
+          "mix_start_V": -1.712732098484457e-07,
+          "series_current_start_A": -1.0458115384815892e-05,
+          "tau_s": 0.047000099900081575,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 4.980079681274901,
+      "mix_squared_integral_V2s": 0.0049586664060322925,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 30.378486055776893,
+          "mix_start_V": 4.980079681274901,
+          "series_current_start_A": 5.577689243027888e-05,
+          "tau_s": 0.5916428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.001,
+          "wet_start_V": 0.07002718366292854,
+          "mix_start_V": 0.011479866174250581,
+          "series_current_start_A": 0.0007004004111304369,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.001203053654324459,
+          "mix_start_V": -0.00019722191054499327,
+          "series_current_start_A": -1.2032745428642692e-05,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -8.948759223954315e-07,
+          "mix_start_V": -1.4670097088449698e-07,
+          "series_current_start_A": -8.957709626229143e-06,
+          "tau_s": 0.047000099900081575,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 5.408842966537292,
+      "mix_squared_integral_V2s": 0.28799229155221334,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 32.99394209587748,
+          "mix_start_V": 5.408842966537292,
+          "series_current_start_A": 6.057904122521766e-05,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.6001537550307633,
+          "mix_start_V": -0.098385861480453,
+          "series_current_start_A": -1.1019216485810737e-06,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 5.408842966537292,
+      "mix_squared_integral_V2s": 0.1449434595424269,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.005,
+          "wet_start_V": 32.99394209587748,
+          "mix_start_V": 5.408842966537292,
+          "series_current_start_A": 6.057904122521766e-05,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.01,
+          "wet_start_V": 0.03266581881753553,
+          "mix_start_V": 0.00535505226516976,
+          "series_current_start_A": 0.3266582481519407,
+          "tau_s": 0.00010009999998163934,
+          "shunts_ohm": [
+            0.1
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.03296702692011756,
+          "mix_start_V": -0.005404430642642224,
+          "series_current_start_A": -0.32967032973079885,
+          "tau_s": 0.00010009999998163934,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 5.408842966537292,
+      "mix_squared_integral_V2s": 0.28729837575848854,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 32.99394209587748,
+          "mix_start_V": 5.408842966537292,
+          "series_current_start_A": 6.057904122521766e-05,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.6001537550307633,
+          "mix_start_V": -0.098385861480453,
+          "series_current_start_A": -1.1019216485810737e-06,
+          "tau_s": 0.5447428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -0.000594185252781542,
+          "mix_start_V": -9.740741848877739e-05,
+          "series_current_start_A": -0.005941853618778508,
+          "tau_s": 0.00010009999998163934,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 4.980079681274901,
+      "mix_squared_integral_V2s": 0.0012410464802760802,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 30.378486055776893,
+          "mix_start_V": 4.980079681274901,
+          "series_current_start_A": 5.577689243027888e-05,
+          "tau_s": 0.5916428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.01,
+          "wet_start_V": 0.0700449399986833,
+          "mix_start_V": 0.011482777048964478,
+          "series_current_start_A": 0.0007005780070897814,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.013344617385611319,
+          "mix_start_V": -0.0021876421943625114,
+          "series_current_start_A": -0.00013347067544869007,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.2016284211889485e-05,
+          "mix_start_V": -1.969882657686801e-06,
+          "series_current_start_A": -0.0001202830270236995,
+          "tau_s": 0.047000099900081575,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 100000,
+      "extra_load_ohm": null,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 4.980079681274901,
+      "mix_squared_integral_V2s": 0.004959639852710037,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 30.378486055776893,
+          "mix_start_V": 4.980079681274901,
+          "series_current_start_A": 5.577689243027888e-05,
+          "tau_s": 0.5916428571428571,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.01,
+          "wet_start_V": 0.07002718366292854,
+          "mix_start_V": 0.011479866174250581,
+          "series_current_start_A": 0.0007004004111304369,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.013178157152052653,
+          "mix_start_V": -0.0021603536314840415,
+          "series_current_start_A": -0.00013180576748119915,
+          "tau_s": 0.047099981642714776,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.1866393554209395e-05,
+          "mix_start_V": -1.9453104187228517e-06,
+          "series_current_start_A": -0.00011878262126511271,
+          "tau_s": 0.047000099900081575,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.3235116851514936,
+      "mix_squared_integral_V2s": 0.005390225921503769,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.496932964575603,
+          "mix_start_V": 2.3235116851514936,
+          "series_current_start_A": 3.067035424399971e-05,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.1,
+          "wet_start_V": -0.03063617098826661,
+          "mix_start_V": -0.004314953660319241,
+          "series_current_start_A": -5.6957388316213986e-08,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.3235116851514936,
+      "mix_squared_integral_V2s": 0.00538875773321642,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.496932964575603,
+          "mix_start_V": 2.3235116851514936,
+          "series_current_start_A": 3.067035424399971e-05,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.005,
+          "wet_start_V": -0.03063617098826661,
+          "mix_start_V": -0.004314953660319241,
+          "series_current_start_A": -5.6957388316213986e-08,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.1,
+          "wet_start_V": -3.03844919210932e-05,
+          "mix_start_V": -4.279505904379324e-06,
+          "series_current_start_A": -0.00030384497570040995,
+          "tau_s": 0.00010009999998140846,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.3235116851514936,
+      "mix_squared_integral_V2s": 0.0053889378053082046,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 16.496932964575603,
+          "mix_start_V": 2.3235116851514936,
+          "series_current_start_A": 3.067035424399971e-05,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.03063617098826661,
+          "mix_start_V": -0.004314953660319241,
+          "series_current_start_A": -5.6957388316213986e-08,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -2.9824918953944764e-05,
+          "mix_start_V": -4.200692810414756e-06,
+          "series_current_start_A": -0.0002982492449885927,
+          "tau_s": 0.00010009999998140846,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.137194963991503,
+      "mix_squared_integral_V2s": 0.00022838335154505636,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 15.174084244339673,
+          "mix_start_V": 2.137194963991503,
+          "series_current_start_A": 2.821097352468784e-05,
+          "tau_s": 0.5848787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.001,
+          "wet_start_V": 0.03502235509206157,
+          "mix_start_V": 0.004932726069304447,
+          "series_current_start_A": 0.00035028866290473054,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.0007023137900816565,
+          "mix_start_V": -9.891743522276854e-05,
+          "series_current_start_A": -7.024443610961506e-06,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.224082432801433e-07,
+          "mix_start_V": -7.35786258141047e-08,
+          "series_current_start_A": -5.229307486472094e-06,
+          "tau_s": 0.047000099900081346,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.001,
+      "peak_mix_V": 2.137194963991503,
+      "mix_squared_integral_V2s": 0.0009132273591012568,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 15.174084244339673,
+          "mix_start_V": 2.137194963991503,
+          "series_current_start_A": 2.821097352468784e-05,
+          "tau_s": 0.5848787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.001,
+          "wet_start_V": 0.0350133742916225,
+          "mix_start_V": 0.004931461167834154,
+          "series_current_start_A": 0.0003501988382036404,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.000601660021335241,
+          "mix_start_V": -8.474084807538606e-05,
+          "series_current_start_A": -6.017718792547006e-06,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -4.475380652302049e-07,
+          "mix_start_V": -6.303353031411336e-08,
+          "series_current_start_A": -4.4798568649969505e-06,
+          "tau_s": 0.047000099900081346,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.3235116851514936,
+      "mix_squared_integral_V2s": 0.05313592887755936,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 16.496932964575603,
+          "mix_start_V": 2.3235116851514936,
+          "series_current_start_A": 3.067035424399971e-05,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.3038141217503117,
+          "mix_start_V": -0.04279072137328334,
+          "series_current_start_A": -5.648375221273401e-07,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.3235116851514936,
+      "mix_squared_integral_V2s": 0.02674420139286573,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.005,
+          "wet_start_V": 16.496932964575603,
+          "mix_start_V": 2.3235116851514936,
+          "series_current_start_A": 3.067035424399971e-05,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.01,
+          "wet_start_V": 0.016331024594643223,
+          "mix_start_V": 0.0023001443091046794,
+          "series_current_start_A": 0.1633102763083371,
+          "tau_s": 0.00010009999998140846,
+          "shunts_ohm": [
+            0.1
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.016483513422037438,
+          "mix_start_V": -0.0023216216087376673,
+          "series_current_start_A": -0.16483516486577962,
+          "tau_s": 0.00010009999998140846,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.3235116851514936,
+      "mix_squared_integral_V2s": 0.053004940471912794,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 16.496932964575603,
+          "mix_start_V": 2.3235116851514936,
+          "series_current_start_A": 3.067035424399971e-05,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.3038141217503117,
+          "mix_start_V": -0.04279072137328334,
+          "series_current_start_A": -5.648375221273401e-07,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -0.0003007586867909609,
+          "mix_start_V": -4.23603784212621e-05,
+          "series_current_start_A": -0.0030075874270666042,
+          "tau_s": 0.00010009999998140846,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.137194963991503,
+      "mix_squared_integral_V2s": 0.00022856203048990373,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 15.174084244339673,
+          "mix_start_V": 2.137194963991503,
+          "series_current_start_A": 2.821097352468784e-05,
+          "tau_s": 0.5848787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.01,
+          "wet_start_V": 0.03502235509206157,
+          "mix_start_V": 0.004932726069304447,
+          "series_current_start_A": 0.00035028866290473054,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.006672321062787958,
+          "mix_start_V": -0.000939763529970135,
+          "series_current_start_A": -6.673561550647519e-05,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -6.008167068075512e-06,
+          "mix_start_V": -8.462207138134524e-07,
+          "series_current_start_A": -6.0141763521549295e-05,
+          "tau_s": 0.047000099900081346,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 16.5,
+      "duration_s": 0.01,
+      "peak_mix_V": 2.137194963991503,
+      "mix_squared_integral_V2s": 0.0009134069937288882,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 15.174084244339673,
+          "mix_start_V": 2.137194963991503,
+          "series_current_start_A": 2.821097352468784e-05,
+          "tau_s": 0.5848787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.01,
+          "wet_start_V": 0.0350133742916225,
+          "mix_start_V": 0.004931461167834154,
+          "series_current_start_A": 0.0003501988382036404,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.006589174595601372,
+          "mix_start_V": -0.0009280527599438552,
+          "series_current_start_A": -6.590399625244497e-05,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.933296890025575e-06,
+          "mix_start_V": -8.356756183134613e-07,
+          "series_current_start_A": -5.939231290007417e-05,
+          "tau_s": 0.047000099900081346,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 4.647023370302987,
+      "mix_squared_integral_V2s": 0.021560903686015077,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.993865929151205,
+          "mix_start_V": 4.647023370302987,
+          "series_current_start_A": 6.134070848799942e-05,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.1,
+          "wet_start_V": -0.06127234197653322,
+          "mix_start_V": -0.008629907320638482,
+          "series_current_start_A": -1.1391477663242797e-07,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 4.647023370302987,
+      "mix_squared_integral_V2s": 0.02155503093286568,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.993865929151205,
+          "mix_start_V": 4.647023370302987,
+          "series_current_start_A": 6.134070848799942e-05,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.005,
+          "wet_start_V": -0.06127234197653322,
+          "mix_start_V": -0.008629907320638482,
+          "series_current_start_A": -1.1391477663242797e-07,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.1,
+          "wet_start_V": -6.07689838421864e-05,
+          "mix_start_V": -8.559011808758648e-06,
+          "series_current_start_A": -0.0006076899514008199,
+          "tau_s": 0.00010009999998140846,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 4.647023370302987,
+      "mix_squared_integral_V2s": 0.021555751221232818,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.001,
+          "wet_start_V": 32.993865929151205,
+          "mix_start_V": 4.647023370302987,
+          "series_current_start_A": 6.134070848799942e-05,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.06127234197653322,
+          "mix_start_V": -0.008629907320638482,
+          "series_current_start_A": -1.1391477663242797e-07,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -5.964983790788953e-05,
+          "mix_start_V": -8.401385620829512e-06,
+          "series_current_start_A": -0.0005964984899771854,
+          "tau_s": 0.00010009999998140846,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 4.274389927983006,
+      "mix_squared_integral_V2s": 0.0009135334061802254,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 30.348168488679345,
+          "mix_start_V": 4.274389927983006,
+          "series_current_start_A": 5.642194704937568e-05,
+          "tau_s": 0.5848787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.001,
+          "wet_start_V": 0.07004471018412314,
+          "mix_start_V": 0.009865452138608894,
+          "series_current_start_A": 0.0007005773258094611,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.001404627580163313,
+          "mix_start_V": -0.00019783487044553708,
+          "series_current_start_A": -1.4048887221923011e-05,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.0448164865602867e-06,
+          "mix_start_V": -1.471572516282094e-07,
+          "series_current_start_A": -1.0458614972944188e-05,
+          "tau_s": 0.047000099900081346,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.001,
+      "peak_mix_V": 4.274389927983006,
+      "mix_squared_integral_V2s": 0.0036529094364050273,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 30.348168488679345,
+          "mix_start_V": 4.274389927983006,
+          "series_current_start_A": 5.642194704937568e-05,
+          "tau_s": 0.5848787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.001,
+          "wet_start_V": 0.070026748583245,
+          "mix_start_V": 0.009862922335668309,
+          "series_current_start_A": 0.0007003976764072808,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.001,
+          "end_s": 0.015,
+          "wet_start_V": -0.001203320042670482,
+          "mix_start_V": -0.00016948169615077212,
+          "series_current_start_A": -1.2035437585094012e-05,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -8.950761304604098e-07,
+          "mix_start_V": -1.2606706062822673e-07,
+          "series_current_start_A": -8.959713729993901e-06,
+          "tau_s": 0.047000099900081346,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-no-mute",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 4.647023370302987,
+      "mix_squared_integral_V2s": 0.21254371551023743,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 32.993865929151205,
+          "mix_start_V": 4.647023370302987,
+          "series_current_start_A": 6.134070848799942e-05,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.6076282435006234,
+          "mix_start_V": -0.08558144274656668,
+          "series_current_start_A": -1.1296750442546802e-06,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        }
+      ]
+    },
+    {
+      "variant": "native-contact5ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 4.647023370302987,
+      "mix_squared_integral_V2s": 0.10697680557146293,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.005,
+          "wet_start_V": 32.993865929151205,
+          "mix_start_V": 4.647023370302987,
+          "series_current_start_A": 6.134070848799942e-05,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.005,
+          "end_s": 0.01,
+          "wet_start_V": 0.032662049189286446,
+          "mix_start_V": 0.004600288618209359,
+          "series_current_start_A": 0.3266205526166742,
+          "tau_s": 0.00010009999998140846,
+          "shunts_ohm": [
+            0.1
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.1,
+          "wet_start_V": -0.032967026844074876,
+          "mix_start_V": -0.004643243217475335,
+          "series_current_start_A": -0.32967032973155924,
+          "tau_s": 0.00010009999998140846,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "native-contact15ms",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 4.647023370302987,
+      "mix_squared_integral_V2s": 0.21201976188765118,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.01,
+          "wet_start_V": 32.993865929151205,
+          "mix_start_V": 4.647023370302987,
+          "series_current_start_A": 6.134070848799942e-05,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.6076282435006234,
+          "mix_start_V": -0.08558144274656668,
+          "series_current_start_A": -1.1296750442546802e-06,
+          "tau_s": 0.5379787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -0.0006015173735819218,
+          "mix_start_V": -8.47207568425242e-05,
+          "series_current_start_A": -0.0060151748541332085,
+          "tau_s": 0.00010009999998140846,
+          "shunts_ohm": [
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast50us",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 4.274389927983006,
+      "mix_squared_integral_V2s": 0.0009142481219596149,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 5e-05,
+          "wet_start_V": 30.348168488679345,
+          "mix_start_V": 4.274389927983006,
+          "series_current_start_A": 5.642194704937568e-05,
+          "tau_s": 0.5848787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 5e-05,
+          "end_s": 0.01,
+          "wet_start_V": 0.07004471018412314,
+          "mix_start_V": 0.009865452138608894,
+          "series_current_start_A": 0.0007005773258094611,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.013344642125575916,
+          "mix_start_V": -0.00187952705994027,
+          "series_current_start_A": -0.00013347123101295038,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.2016334136151024e-05,
+          "mix_start_V": -1.6924414276269049e-06,
+          "series_current_start_A": -0.00012028352704309859,
+          "tau_s": 0.047000099900081346,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "candidate-fast200us",
+      "source_ohm": 100000,
+      "extra_load_ohm": 1000000,
+      "change_V": 33,
+      "duration_s": 0.01,
+      "peak_mix_V": 4.274389927983006,
+      "mix_squared_integral_V2s": 0.003653627974915553,
+      "intervals": [
+        {
+          "start_s": 0,
+          "end_s": 0.0002,
+          "wet_start_V": 30.348168488679345,
+          "mix_start_V": 4.274389927983006,
+          "series_current_start_A": 5.642194704937568e-05,
+          "tau_s": 0.5848787878787878,
+          "shunts_ohm": []
+        },
+        {
+          "start_s": 0.0002,
+          "end_s": 0.01,
+          "wet_start_V": 0.070026748583245,
+          "mix_start_V": 0.009862922335668309,
+          "series_current_start_A": 0.0007003976764072808,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.01,
+          "end_s": 0.015,
+          "wet_start_V": -0.013178349191202744,
+          "mix_start_V": -0.0018561055198877104,
+          "series_current_start_A": -0.00013180799250488994,
+          "tau_s": 0.047099981411906515,
+          "shunts_ohm": [
+            100
+          ]
+        },
+        {
+          "start_s": 0.015,
+          "end_s": 0.1,
+          "wet_start_V": -1.186659378005115e-05,
+          "mix_start_V": -1.6713512366269227e-06,
+          "series_current_start_A": -0.00011878462580014833,
+          "tau_s": 0.047000099900081346,
+          "shunts_ohm": [
+            100,
+            0.1
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Source changes are imposed fault screens, not predictions from an op-amp model outside its operating range.",
+    "33V means a change between opposite16.5V limits, represented incrementally in the linear network; it is not a33V supply.",
+    "JFET100ohm and5pF are25C/limited-bias datasheet test values, not full-temperature or large-signal guarantees.",
+    "Shunt closure times are assumed scenarios, not qualified comparator/optocoupler/JFET or relay timing.",
+    "Transient fixture excludes gate-charge feedthrough, contact bounce, tube-grid dynamics, output transformer and loudspeaker.",
+    "The native MIX_OUT load includes R24. Additional resistive loading is a sensitivity test, not the real bootstrapped PI input.",
+    "Off capacitance is included in AC only; fault transient calculation is the one-capacitor low-frequency model.",
+    "No perceptual silence, full fault protection, exact purchasing, native CAD or fabrication approval follows."
+  ],
+  "provenance": {
+    "expression-control/wet-fault-contract.json": "19834c5bc036b94d2b107d28e5cb5a7584e8781f0c3ce781817e9ea24322a50d",
+    "expression-control/../reverb-600/circuit.json": "41771da777078e68a30d2fd17daf078548e916d2c724030e8752947f1fd7ea18",
+    "expression-control/tools/wet_fault_transfer.py": "82ec9df24bdbe13b645935e6414c4bf7f37f90273225e2c620ab4a29f4bb9cc0",
+    "effects-loop/tools/fixture.py": "10ea514a6a49c35f4c2e3d4766da725b5a0befccb38d2c89d4f7d96d42585cd5"
+  }
+}

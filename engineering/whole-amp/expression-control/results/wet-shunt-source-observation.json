@@ -1,0 +1,83 @@
+{
+  "observed_on": "2026-11-25",
+  "manufacturer": {
+    "url": "https://www.onsemi.com/pdf/datasheet/mmbfj113-d.pdf",
+    "local_path": "references/onsemi-MMBFJ113-D.pdf",
+    "sha256": "02a41146b2e0170c6f3525798022d5d5c020f3bf45143831065e3c3c1eedd8b5",
+    "revision": "March 2023 Rev. 5",
+    "conditions": "Page 2 electrical characteristics at TJ=25C unless otherwise noted",
+    "limits": {
+      "on_resistance_max_ohm": 100,
+      "on_resistance_test": "VDS <=0.1 V, VGS=0 V",
+      "off_cap_max_pF": 5,
+      "off_cap_test": "VDS=0 V, VGS=-10 V, f=1 MHz",
+      "cutoff_voltage_range_V": [
+        -0.5,
+        -3
+      ]
+    },
+    "notes": [
+      "The older j111-d.pdf does not specify J113 and was not used.",
+      "Page 6 lists J113 bulk TO-92 and MMBFJ113 SOT-23 as different exact orderable parts.",
+      "Package drawing and actual lead/footprint fit have not been qualified."
+    ]
+  },
+  "listings": [
+    {
+      "url": "https://item.szlcsc.com/262861.html",
+      "lcsc_code": "C274643",
+      "html_sha256": "0448863a74c80d5b8828489dcdbcfa0bb608a314e84bb33ee4a471f1f38e1c4b",
+      "fields": {
+        "productModel": "J113",
+        "productId": "262861",
+        "encapsulationModel": "TO-92-3L",
+        "productGradePlateName": "onsemi(安森美)",
+        "stockNumber": 963,
+        "validStockNumber": 192,
+        "minBuyNumber": 1,
+        "theRatio": 5,
+        "convesionRatio": 5,
+        "productUnit": "个",
+        "productMinEncapsulationNumber": 1000,
+        "productArrange": "袋装",
+        "hasStockNow": "yes"
+      },
+      "stock_fields": {
+        "gdWarehouseStockNumber": 960,
+        "smtStockNumber": 983,
+        "jsWarehouseStockNumber": 0,
+        "totalStockNumber": 960
+      },
+      "qualification": "candidate only; minimum buy 1 sales unit with ratio 5 fields; physical minimum and Shanghai checkout unverified"
+    },
+    {
+      "url": "https://item.szlcsc.com/957156.html",
+      "lcsc_code": "C891686",
+      "html_sha256": "32e250014b3b615eccf4d98a293489c597f70fa33520642c276acccc26c47ef3",
+      "fields": {
+        "productModel": "MMBFJ113",
+        "productId": "957156",
+        "encapsulationModel": "SOT-23",
+        "productGradePlateName": "onsemi(安森美)",
+        "stockNumber": 10779,
+        "validStockNumber": 2155,
+        "minBuyNumber": 1,
+        "theRatio": 5,
+        "convesionRatio": 5,
+        "productUnit": "个",
+        "productMinEncapsulationNumber": 3000,
+        "productArrange": "编带",
+        "hasStockNow": "yes"
+      },
+      "stock_fields": {
+        "gdWarehouseStockNumber": 10775,
+        "smtStockNumber": 10779,
+        "jsWarehouseStockNumber": 0,
+        "totalStockNumber": 10775
+      },
+      "qualification": "candidate only; minimum buy 1 sales unit with ratio 5 fields; physical minimum and Shanghai checkout unverified"
+    }
+  ],
+  "purchasing_approved": false,
+  "shanghai_checkout_verified": false
+}

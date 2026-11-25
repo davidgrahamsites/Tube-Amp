@@ -1,0 +1,151 @@
+{
+  "qualified": false,
+  "scope": "Independent passive RC/ideal-switch cross-check at MIX_OUT only",
+  "limitations": [
+    "100 ns input/switch transitions approximate analytical instantaneous events.",
+    "No gate charge, real JFET, detector delay, tube PI, speaker or perceptual silence qualification."
+  ],
+  "comparisons": [
+    {
+      "name": "native-no-mute",
+      "step_s": 2e-06,
+      "peak_relative_error": 9.133740530575807e-08,
+      "integral_relative_error": 3.0889510459486402e-06
+    },
+    {
+      "name": "native-no-mute",
+      "step_s": 5e-07,
+      "peak_relative_error": 9.049555005358201e-08,
+      "integral_relative_error": 3.0407863664816404e-06
+    },
+    {
+      "name": "native-contact15ms",
+      "step_s": 2e-06,
+      "peak_relative_error": 9.133740530575807e-08,
+      "integral_relative_error": 3.0946239459872515e-06
+    },
+    {
+      "name": "native-contact15ms",
+      "step_s": 5e-07,
+      "peak_relative_error": 9.049555005358201e-08,
+      "integral_relative_error": 3.0463469765651396e-06
+    },
+    {
+      "name": "candidate-fast50us",
+      "step_s": 2e-06,
+      "peak_relative_error": 4.6246248519565825e-07,
+      "integral_relative_error": 0.0003099531467555261
+    },
+    {
+      "name": "candidate-fast50us",
+      "step_s": 5e-07,
+      "peak_relative_error": 6.665271745642798e-08,
+      "integral_relative_error": 0.00029442302079329963
+    }
+  ],
+  "refinements": [
+    {
+      "name": "native-no-mute",
+      "integral_relative_delta": 4.816482590541682e-08
+    },
+    {
+      "name": "native-contact15ms",
+      "integral_relative_delta": 4.827711652666267e-08
+    },
+    {
+      "name": "candidate-fast50us",
+      "integral_relative_delta": 1.55346997354755e-05
+    }
+  ],
+  "checks": [
+    {
+      "name": "all six bounded runs completed",
+      "passed": true
+    },
+    {
+      "name": "peak agrees within 0.1 percent",
+      "passed": true
+    },
+    {
+      "name": "squared voltage integral agrees within 0.5 percent",
+      "passed": true
+    },
+    {
+      "name": "integral timestep refinement within 0.1 percent",
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "name": "native-no-mute",
+      "step_s": 2e-06,
+      "deck": "Passive wet fault cross-check: incremental 33 V change, ideal switches\nVfault source 0 PWL(0 0 .001 0 .0010001 33 .011 33 .0110001 0 .101 0)\nR616 source outac 100\nC607 outac wet 1u\nR617 wet 0 1meg\nR618 wet mix 1meg\nRreturn mix 0 200k\nR24 mix 0 10meg\n.options method=gear maxord=2 reltol=1e-7 abstol=1e-12 vntol=1e-9\n.save v(mix) v(wet)\n.tran 2e-06 .101 0 2e-06\n.end\n",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: passive wet fault cross-check: incremental 33 v change, ideal switches\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout source                                       0\nstdout outac                                        0\nstdout wet                                          0\nstdout mix                                          0\nstdout vfault#branch                                0\nstdout No. of Data Rows : 50553",
+      "status": "complete",
+      "peak_mix_V": 5.40884247250761,
+      "mix_squared_integral_V2s": 0.2879914019581231,
+      "points": 50553,
+      "completed_s": 0.101
+    },
+    {
+      "name": "native-no-mute",
+      "step_s": 5e-07,
+      "deck": "Passive wet fault cross-check: incremental 33 V change, ideal switches\nVfault source 0 PWL(0 0 .001 0 .0010001 33 .011 33 .0110001 0 .101 0)\nR616 source outac 100\nC607 outac wet 1u\nR617 wet 0 1meg\nR618 wet mix 1meg\nRreturn mix 0 200k\nR24 mix 0 10meg\n.options method=gear maxord=2 reltol=1e-7 abstol=1e-12 vntol=1e-9\n.save v(mix) v(wet)\n.tran 5e-07 .101 0 5e-07\n.end\n",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: passive wet fault cross-check: incremental 33 v change, ideal switches\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout source                                       0\nstdout outac                                        0\nstdout wet                                          0\nstdout mix                                          0\nstdout vfault#branch                                0\n Reference value :  2.75711e-02\r\n Reference value :  6.16381e-02\r\n Reference value :  9.55476e-02\r\nstdout No. of Data Rows : 202050",
+      "status": "complete",
+      "peak_mix_V": 5.408842477061072,
+      "mix_squared_integral_V2s": 0.28799141582917953,
+      "points": 202050,
+      "completed_s": 0.101
+    },
+    {
+      "name": "native-contact15ms",
+      "step_s": 2e-06,
+      "deck": "Passive wet fault cross-check: incremental 33 V change, ideal switches\nVfault source 0 PWL(0 0 .001 0 .0010001 33 .011 33 .0110001 0 .101 0)\nR616 source outac 100\nC607 outac wet 1u\nR617 wet 0 1meg\nR618 wet mix 1meg\nRreturn mix 0 200k\nR24 mix 0 10meg\n.options method=gear maxord=2 reltol=1e-7 abstol=1e-12 vntol=1e-9\n.save v(mix) v(wet)\n.tran 2e-06 .101 0 2e-06\nVcontact contact 0 PWL(0 0 .016 0 .0160001 1 .101 1)\nScontact wet 0 contact 0 CONTACT\n.model CONTACT SW(Ron=.1 Roff=1e15 Vt=.5 Vh=0)\n.end\n",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: passive wet fault cross-check: incremental 33 v change, ideal switches\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout source                                       0\nstdout outac                                        0\nstdout wet                                          0\nstdout mix                                          0\nstdout contact                                      0\nstdout vcontact#branch                              0\nstdout vfault#branch                                0\nstdout No. of Data Rows : 50574",
+      "status": "complete",
+      "peak_mix_V": 5.40884247250761,
+      "mix_squared_integral_V2s": 0.28729748667805527,
+      "points": 50574,
+      "completed_s": 0.101
+    },
+    {
+      "name": "native-contact15ms",
+      "step_s": 5e-07,
+      "deck": "Passive wet fault cross-check: incremental 33 V change, ideal switches\nVfault source 0 PWL(0 0 .001 0 .0010001 33 .011 33 .0110001 0 .101 0)\nR616 source outac 100\nC607 outac wet 1u\nR617 wet 0 1meg\nR618 wet mix 1meg\nRreturn mix 0 200k\nR24 mix 0 10meg\n.options method=gear maxord=2 reltol=1e-7 abstol=1e-12 vntol=1e-9\n.save v(mix) v(wet)\n.tran 5e-07 .101 0 5e-07\nVcontact contact 0 PWL(0 0 .016 0 .0160001 1 .101 1)\nScontact wet 0 contact 0 CONTACT\n.model CONTACT SW(Ron=.1 Roff=1e15 Vt=.5 Vh=0)\n.end\n",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: passive wet fault cross-check: incremental 33 v change, ideal switches\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout source                                       0\nstdout outac                                        0\nstdout wet                                          0\nstdout mix                                          0\nstdout contact                                      0\nstdout vcontact#branch                              0\nstdout vfault#branch                                0\n Reference value :  2.61041e-02\r\n Reference value :  5.86741e-02\r\n Reference value :  9.12796e-02\r\nstdout No. of Data Rows : 202068",
+      "status": "complete",
+      "peak_mix_V": 5.408842477061072,
+      "mix_squared_integral_V2s": 0.28729750054795017,
+      "points": 202068,
+      "completed_s": 0.101
+    },
+    {
+      "name": "candidate-fast50us",
+      "step_s": 2e-06,
+      "deck": "Passive wet fault cross-check: incremental 33 V change, ideal switches\nVfault source 0 PWL(0 0 .001 0 .0010001 33 .011 33 .0110001 0 .101 0)\nR616 source outac 47000\nC607 outac wet 1u\nR617 wet 0 1meg\nR618 wet mix 1meg\nRreturn mix 0 200k\nR24 mix 0 10meg\n.options method=gear maxord=2 reltol=1e-7 abstol=1e-12 vntol=1e-9\n.save v(mix) v(wet)\n.tran 2e-06 .101 0 2e-06\nVcontact contact 0 PWL(0 0 .016 0 .0160001 1 .101 1)\nScontact wet 0 contact 0 CONTACT\n.model CONTACT SW(Ron=.1 Roff=1e15 Vt=.5 Vh=0)\nVfast fast 0 PWL(0 0 .00105 0 .0010501 1 .101 1)\nSfast wet 0 fast 0 FAST\n.model FAST SW(Ron=100 Roff=1e15 Vt=.5 Vh=0)\n.end\n",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: passive wet fault cross-check: incremental 33 v change, ideal switches\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout source                                       0\nstdout outac                                        0\nstdout wet                                          0\nstdout mix                                          0\nstdout contact                                      0\nstdout fast                                         0\nstdout vfast#branch                                 0\nstdout vcontact#branch                              0\nstdout vfault#branch                                0\nstdout No. of Data Rows : 50598",
+      "status": "complete",
+      "peak_mix_V": 4.980081984374927,
+      "mix_squared_integral_V2s": 0.0012406618140142487,
+      "points": 50598,
+      "completed_s": 0.101
+    },
+    {
+      "name": "candidate-fast50us",
+      "step_s": 5e-07,
+      "deck": "Passive wet fault cross-check: incremental 33 V change, ideal switches\nVfault source 0 PWL(0 0 .001 0 .0010001 33 .011 33 .0110001 0 .101 0)\nR616 source outac 47000\nC607 outac wet 1u\nR617 wet 0 1meg\nR618 wet mix 1meg\nRreturn mix 0 200k\nR24 mix 0 10meg\n.options method=gear maxord=2 reltol=1e-7 abstol=1e-12 vntol=1e-9\n.save v(mix) v(wet)\n.tran 5e-07 .101 0 5e-07\nVcontact contact 0 PWL(0 0 .016 0 .0160001 1 .101 1)\nScontact wet 0 contact 0 CONTACT\n.model CONTACT SW(Ron=.1 Roff=1e15 Vt=.5 Vh=0)\nVfast fast 0 PWL(0 0 .00105 0 .0010501 1 .101 1)\nSfast wet 0 fast 0 FAST\n.model FAST SW(Ron=100 Roff=1e15 Vt=.5 Vh=0)\n.end\n",
+      "log": "stderr Warning: can't find the initialization file spinit.\nstdout ******\nstdout ** ngspice-45.2 shared library\nstdout ******\nstdout Note: Compatibility modes selected: ps\nstdout Circuit: passive wet fault cross-check: incremental 33 v change, ideal switches\nstdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000\nstdout Using SPARSE 1.3 as Direct Linear Solver\nstdout Initial Transient Solution\nstdout --------------------------\nstdout Node                                   Voltage\nstdout ----                                   -------\nstdout source                                       0\nstdout outac                                        0\nstdout wet                                          0\nstdout mix                                          0\nstdout contact                                      0\nstdout fast                                         0\nstdout vfast#branch                                 0\nstdout vcontact#branch                              0\nstdout vfault#branch                                0\n Reference value :  2.52366e-02\r\n Reference value :  5.65711e-02\r\n Reference value :  8.73101e-02\r\nstdout No. of Data Rows : 202091",
+      "status": "complete",
+      "peak_mix_V": 4.980079349339057,
+      "mix_squared_integral_V2s": 0.0012406810876224124,
+      "points": 202091,
+      "completed_s": 0.101
+    }
+  ],
+  "provenance": {
+    "expression-control/results/wet-fault-transfer.json": "1e0464e579bc1f4c4fe581e45e8336edeca4b01a39bafae3c6b8bbcdf5f08d17",
+    "expression-control/tools/check_wet_fault.py": "3e0b6094fd3ba7e71c288e847a027d51aeacc6e2b9a8ebd45ed824fed39a929c",
+    "tools/spice_runtime.py": "3df496fbbce173c6f8a602b9a17a731389f011634af809106184418572b9cf9b"
+  }
+}
