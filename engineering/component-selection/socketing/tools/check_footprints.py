@@ -58,6 +58,19 @@ def main():
             p=W/'pcb-measured-r/boards'/('Renegade_'+name+'.kicad_pcb');sources.append(p)
             a=v.parse(old(p,base));b=v.parse(p.read_text());aa=v.fps(a);bb=v.fps(b)
             assert pad_map(a)==pad_map(b)
+            followup=W/'pcb-measured-r/u12-routing-contract.json'
+            routed_followup=False
+            if name=='Reverb' and followup.exists():
+                # Validate the entire later board against its exact routing
+                # baseline before projecting it back for the socket-only delta.
+                # This is not a blanket exemption for subsequent copper edits.
+                sys.path.insert(0,str(W/'pcb-measured-r/tools'))
+                from check_u12_routing import verify as verify_routing
+                route=json.loads(followup.read_text())
+                route_before=v.parse(old(p,route['baseline_commit']))
+                verify_routing(route_before,b,route)
+                b=route_before;bb=v.fps(b);routed_followup=True
+                sources.extend([followup,W/'pcb-measured-r/tools/check_u12_routing.py'])
             expected_removed=collections.Counter();expected_added=collections.Counter()
             # Strip only declared package metadata/graphics and drill size;
             # every other native atom, including all routing, must be identical.
@@ -120,7 +133,7 @@ def main():
                 return out
             assert open_nets(drcs[0])==open_nets(drcs[1])
             report[name]=dict(changed_round_plated_holes=sum(expected_added.values()),other_drills_slots_and_nets_unchanged=True,
-                copper_delta='four C352 endpoint adjustments only' if name=='Control' else 'unchanged',unconnected_counts_by_net=dict(open_nets(drcs[1])),
+                copper_delta='four C352 endpoint adjustments only' if name=='Control' else ('separate U12 routing contract verified exactly' if routed_followup else 'unchanged'),unconnected_counts_by_net=dict(open_nets(drcs[1])),
                 drc_violations=len(drcs[1]['violations']),unconnected=len(drcs[1]['unconnected_items']),new_violations=0)
         assert total==52
         sch=W/'reverb-600/cad/Renegade_220V_Reverb.kicad_sch';xml=M/'results/socket-netlist.xml';erc=M/'results/socket-erc.json'

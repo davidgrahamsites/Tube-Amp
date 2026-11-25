@@ -22,3 +22,7 @@ export_mechanical_inventory.py is a read-only KiCad adapter. It exports exact re
 check_fc6136_fit.py reads the component-selection FC6136 fit contract and native Power board, rejects impossible straight-lead row pitches and screens centered maximum-body overlap. Output: ../review/fc6136-fit.json. It never edits CAD or chooses finished-hole tolerances. Diagnostic success is separate from candidate fit; unsupported rotations/grid shapes fail explicitly.
 
 integrate_socket_footprints.py consumes the socket module footprint-contract.json and candidate libraries for a guarded native draft correction. It preserves pad identities and all copper except the four declared C352 endpoint changes. Independent checks belong to component-selection/socketing/tools/check_footprints.py. Do not replay over already-adopted boards.
+
+repair_u12_candidate.py writes a new candidate from u12-routing-contract.json; check_u12_routing.py independently checks exact delta, arc tangency, drill preservation and native DRC. audit_copper.py includes wholly unrouted pad nets and explicit branch angles; zero simple bends is never all-corner qualification.
+
+check_copper_coverage.py parses native syntax independently of the pcbnew inventory to verify all pad-connected nets and their reference/pad membership, including wholly unrouted nets. Its receipt is review/copper-coverage-checks.json; current-capacity qualification remains separate.

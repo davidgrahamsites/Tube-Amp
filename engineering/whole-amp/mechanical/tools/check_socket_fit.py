@@ -60,7 +60,7 @@ def main():
         rows=rows,rectangular_tail_max_diagonal_mm=tail,
         minimum_finished_hole_mm=c['pcb_hole_nominal_mm']-c['provisional_finished_hole_tolerance_mm'],
         remaining_diametric_clearance_mm=c['pcb_hole_nominal_mm']-c['provisional_finished_hole_tolerance_mm']-tail,
-        unknowns=['final board consolidation and orientation','ceiling and harness obstructions','vertical extraction path and retention','actual drill tool envelope deferred November25','finished-hole tolerance is a proposed fabrication allocation'],
+        unknowns=['final board consolidation and orientation','ceiling and harness obstructions','vertical extraction path and retention','full drill body/bit envelope and approach; see fit-register.json/drill_tool_measurements','finished-hole tolerance is a proposed fabrication allocation'],
         rear_panel_must_remain_independent=True,chassis_fit_verified=False,fabrication_ready=False,
         source_sha256={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sources})
     (M/'review/socket-fit-checks.json').write_text(json.dumps(report,indent=2)+'\n')

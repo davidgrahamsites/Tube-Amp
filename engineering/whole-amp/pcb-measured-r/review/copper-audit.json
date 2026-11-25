@@ -1,5 +1,5 @@
 {
-  "scope": "Current copper only; no unconnected-net, zone-neck, RMS-current, thermal or EMC qualification",
+  "scope": "All pad-connected and routed nets; no connectivity, zone-neck, RMS-current, thermal or EMC qualification",
   "boards": {
     "Main": {
       "sha256": "b97844b51aed2b7e99e142902bc5c12d6b35d96a2dd5afd7667dd2e879dc4bc6",
@@ -24,6 +24,176 @@
               "drill_mm": 0.3
             }
           ],
+          "pad_connections": [
+            {
+              "reference": "D331",
+              "pad": "1"
+            },
+            {
+              "reference": "D332",
+              "pad": "1"
+            },
+            {
+              "reference": "JM001",
+              "pad": "1"
+            },
+            {
+              "reference": "K1",
+              "pad": "1"
+            },
+            {
+              "reference": "K2",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "BIAS_OUT": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JM002",
+              "pad": "1"
+            },
+            {
+              "reference": "R33",
+              "pad": "2"
+            },
+            {
+              "reference": "R34",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "B_EARLY": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JM003",
+              "pad": "1"
+            },
+            {
+              "reference": "R12",
+              "pad": "1"
+            },
+            {
+              "reference": "R15",
+              "pad": "1"
+            },
+            {
+              "reference": "R4",
+              "pad": "1"
+            },
+            {
+              "reference": "R7",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "B_PRE": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JM004",
+              "pad": "1"
+            },
+            {
+              "reference": "R21",
+              "pad": "1"
+            },
+            {
+              "reference": "R29",
+              "pad": "1"
+            },
+            {
+              "reference": "R30",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CLEAN_OUT": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C6",
+              "pad": "2"
+            },
+            {
+              "reference": "K2",
+              "pad": "6"
+            },
+            {
+              "reference": "R43",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CL_BASS_BOTTOM": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C4",
+              "pad": "2"
+            },
+            {
+              "reference": "JM005",
+              "pad": "1"
+            },
+            {
+              "reference": "R6",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CL_BASS_TOP": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C3",
+              "pad": "2"
+            },
+            {
+              "reference": "JM006",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "CL_G2": {
@@ -45,6 +215,160 @@
               "drill_mm": 0.3
             }
           ],
+          "pad_connections": [
+            {
+              "reference": "JM007",
+              "pad": "1"
+            },
+            {
+              "reference": "K1",
+              "pad": "9"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CL_IN": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JM008",
+              "pad": "1"
+            },
+            {
+              "reference": "K1",
+              "pad": "6"
+            },
+            {
+              "reference": "R2",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CL_K1": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C1",
+              "pad": "1"
+            },
+            {
+              "reference": "JM009",
+              "pad": "1"
+            },
+            {
+              "reference": "R3",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CL_K2": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C5",
+              "pad": "1"
+            },
+            {
+              "reference": "JM010",
+              "pad": "1"
+            },
+            {
+              "reference": "R8",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CL_P1": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C2",
+              "pad": "1"
+            },
+            {
+              "reference": "JM011",
+              "pad": "1"
+            },
+            {
+              "reference": "R4",
+              "pad": "2"
+            },
+            {
+              "reference": "R5",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CL_P2": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C6",
+              "pad": "1"
+            },
+            {
+              "reference": "JM012",
+              "pad": "1"
+            },
+            {
+              "reference": "R7",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CL_TONE": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C3",
+              "pad": "1"
+            },
+            {
+              "reference": "C4",
+              "pad": "1"
+            },
+            {
+              "reference": "R5",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "CL_TREBLE_TOP": {
@@ -54,6 +378,18 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C2",
+              "pad": "2"
+            },
+            {
+              "reference": "JM013",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "COIL_CH": {
@@ -63,6 +399,30 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D331",
+              "pad": "2"
+            },
+            {
+              "reference": "D332",
+              "pad": "2"
+            },
+            {
+              "reference": "JM014",
+              "pad": "1"
+            },
+            {
+              "reference": "K1",
+              "pad": "16"
+            },
+            {
+              "reference": "K2",
+              "pad": "16"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "DIRTY_OUT": {
@@ -72,6 +432,378 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JM015",
+              "pad": "1"
+            },
+            {
+              "reference": "K2",
+              "pad": "8"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_BASS_BOTTOM": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C17",
+              "pad": "2"
+            },
+            {
+              "reference": "JM016",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_BASS_TOP": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C16",
+              "pad": "2"
+            },
+            {
+              "reference": "JM017",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_C3": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C11",
+              "pad": "2"
+            },
+            {
+              "reference": "R18",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_CF": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C15",
+              "pad": "1"
+            },
+            {
+              "reference": "JM018",
+              "pad": "1"
+            },
+            {
+              "reference": "R22",
+              "pad": "1"
+            },
+            {
+              "reference": "R23",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_G2": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C9",
+              "pad": "2"
+            },
+            {
+              "reference": "JM019",
+              "pad": "1"
+            },
+            {
+              "reference": "K1",
+              "pad": "11"
+            },
+            {
+              "reference": "R13",
+              "pad": "2"
+            },
+            {
+              "reference": "R14",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_G3": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JM020",
+              "pad": "1"
+            },
+            {
+              "reference": "R18",
+              "pad": "2"
+            },
+            {
+              "reference": "R19",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_GAIN_TOP": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C8",
+              "pad": "2"
+            },
+            {
+              "reference": "JM021",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_GAIN_W": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C9",
+              "pad": "1"
+            },
+            {
+              "reference": "JM022",
+              "pad": "1"
+            },
+            {
+              "reference": "R13",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_IN": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JM023",
+              "pad": "1"
+            },
+            {
+              "reference": "K1",
+              "pad": "8"
+            },
+            {
+              "reference": "R10",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_K1": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C7",
+              "pad": "1"
+            },
+            {
+              "reference": "JM024",
+              "pad": "1"
+            },
+            {
+              "reference": "R11",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_K2": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C10",
+              "pad": "1"
+            },
+            {
+              "reference": "JM025",
+              "pad": "1"
+            },
+            {
+              "reference": "R16",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_K3": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C14",
+              "pad": "1"
+            },
+            {
+              "reference": "JM026",
+              "pad": "1"
+            },
+            {
+              "reference": "R20",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_P1": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C8",
+              "pad": "1"
+            },
+            {
+              "reference": "JM027",
+              "pad": "1"
+            },
+            {
+              "reference": "R12",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_P2": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C11",
+              "pad": "1"
+            },
+            {
+              "reference": "JM028",
+              "pad": "1"
+            },
+            {
+              "reference": "R15",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_P3": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JM029",
+              "pad": "1"
+            },
+            {
+              "reference": "R21",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DR_TONE": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C16",
+              "pad": "1"
+            },
+            {
+              "reference": "C17",
+              "pad": "1"
+            },
+            {
+              "reference": "R23",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "DR_TREBLE_TOP": {
@@ -81,6 +813,18 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C15",
+              "pad": "2"
+            },
+            {
+              "reference": "JM030",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "FX_SEND": {
@@ -102,6 +846,320 @@
               "drill_mm": 0.3
             }
           ],
+          "pad_connections": [
+            {
+              "reference": "JM031",
+              "pad": "1"
+            },
+            {
+              "reference": "K2",
+              "pad": "4"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "GND": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C1",
+              "pad": "2"
+            },
+            {
+              "reference": "C10",
+              "pad": "2"
+            },
+            {
+              "reference": "C14",
+              "pad": "2"
+            },
+            {
+              "reference": "C5",
+              "pad": "2"
+            },
+            {
+              "reference": "C7",
+              "pad": "2"
+            },
+            {
+              "reference": "JM032",
+              "pad": "1"
+            },
+            {
+              "reference": "K1",
+              "pad": "13"
+            },
+            {
+              "reference": "K2",
+              "pad": "13"
+            },
+            {
+              "reference": "R10",
+              "pad": "2"
+            },
+            {
+              "reference": "R11",
+              "pad": "2"
+            },
+            {
+              "reference": "R14",
+              "pad": "2"
+            },
+            {
+              "reference": "R16",
+              "pad": "2"
+            },
+            {
+              "reference": "R19",
+              "pad": "2"
+            },
+            {
+              "reference": "R2",
+              "pad": "2"
+            },
+            {
+              "reference": "R20",
+              "pad": "2"
+            },
+            {
+              "reference": "R22",
+              "pad": "2"
+            },
+            {
+              "reference": "R24",
+              "pad": "2"
+            },
+            {
+              "reference": "R3",
+              "pad": "2"
+            },
+            {
+              "reference": "R32",
+              "pad": "2"
+            },
+            {
+              "reference": "R43",
+              "pad": "2"
+            },
+            {
+              "reference": "R6",
+              "pad": "2"
+            },
+            {
+              "reference": "R8",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "GRID_A_FEED": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C23",
+              "pad": "2"
+            },
+            {
+              "reference": "JM033",
+              "pad": "1"
+            },
+            {
+              "reference": "R33",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "GRID_B_FEED": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C24",
+              "pad": "2"
+            },
+            {
+              "reference": "JM034",
+              "pad": "1"
+            },
+            {
+              "reference": "R34",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "INPUT": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JM035",
+              "pad": "1"
+            },
+            {
+              "reference": "R1",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "INPUT_STOP": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "K1",
+              "pad": "4"
+            },
+            {
+              "reference": "R1",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "MIX_OUT": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C19",
+              "pad": "1"
+            },
+            {
+              "reference": "JM036",
+              "pad": "1"
+            },
+            {
+              "reference": "R24",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "NFB_NODE": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C20",
+              "pad": "2"
+            },
+            {
+              "reference": "C21",
+              "pad": "1"
+            },
+            {
+              "reference": "R28",
+              "pad": "2"
+            },
+            {
+              "reference": "R31",
+              "pad": "2"
+            },
+            {
+              "reference": "R32",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "OT_4": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JM037",
+              "pad": "1"
+            },
+            {
+              "reference": "R31",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "PI_G1": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C19",
+              "pad": "2"
+            },
+            {
+              "reference": "JM038",
+              "pad": "1"
+            },
+            {
+              "reference": "R25",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "PI_G2": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C20",
+              "pad": "1"
+            },
+            {
+              "reference": "JM039",
+              "pad": "1"
+            },
+            {
+              "reference": "R27",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "PI_K": {
@@ -112,6 +1170,148 @@
             0.6
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JM040",
+              "pad": "1"
+            },
+            {
+              "reference": "R26",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "PI_P1": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C22",
+              "pad": "1"
+            },
+            {
+              "reference": "C23",
+              "pad": "1"
+            },
+            {
+              "reference": "JM041",
+              "pad": "1"
+            },
+            {
+              "reference": "R29",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "PI_P2": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C22",
+              "pad": "2"
+            },
+            {
+              "reference": "C24",
+              "pad": "1"
+            },
+            {
+              "reference": "JM042",
+              "pad": "1"
+            },
+            {
+              "reference": "R30",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "PI_TAIL_TOP": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R25",
+              "pad": "2"
+            },
+            {
+              "reference": "R26",
+              "pad": "2"
+            },
+            {
+              "reference": "R27",
+              "pad": "2"
+            },
+            {
+              "reference": "R28",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "PRES_TOP": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C21",
+              "pad": "2"
+            },
+            {
+              "reference": "JM043",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "unconnected-(K2-Pad11)": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "K2",
+              "pad": "11"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "unconnected-(K2-Pad9)": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "K2",
+              "pad": "9"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         }
       },
@@ -126,7 +1326,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "+12V",
@@ -137,7 +1342,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "DR_TREBLE_TOP",
@@ -148,10 +1358,16 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         }
       ],
-      "arc_items_not_bend_screened": []
+      "arc_items_not_bend_screened": [],
+      "all_corner_review_complete": false
     },
     "Power": {
       "sha256": "d6032f0975b39f1f5dfc6ff961f04dc38083b8d2f2453a403a1d837c9841f620",
@@ -163,6 +1379,129 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JP001",
+              "pad": "1"
+            },
+            {
+              "reference": "R40",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "BIAS_DIODE_AC": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D7",
+              "pad": "1"
+            },
+            {
+              "reference": "R40",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "BIAS_FILTER": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C27",
+              "pad": "2"
+            },
+            {
+              "reference": "R38",
+              "pad": "1"
+            },
+            {
+              "reference": "R39",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "BIAS_MIN": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R503",
+              "pad": "1"
+            },
+            {
+              "reference": "RV10",
+              "pad": "2"
+            },
+            {
+              "reference": "RV10",
+              "pad": "3"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "BIAS_OUT": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JP002",
+              "pad": "1"
+            },
+            {
+              "reference": "R38",
+              "pad": "2"
+            },
+            {
+              "reference": "RV10",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "BIAS_RAW": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C28",
+              "pad": "2"
+            },
+            {
+              "reference": "D7",
+              "pad": "2"
+            },
+            {
+              "reference": "R39",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "B_EARLY": {
@@ -173,6 +1512,26 @@
             0.6
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C12",
+              "pad": "1"
+            },
+            {
+              "reference": "C12",
+              "pad": "1"
+            },
+            {
+              "reference": "JP003",
+              "pad": "1"
+            },
+            {
+              "reference": "R17",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "B_PRE": {
@@ -182,6 +1541,61 @@
             0.6
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C13",
+              "pad": "1"
+            },
+            {
+              "reference": "C13",
+              "pad": "1"
+            },
+            {
+              "reference": "C25",
+              "pad": "1"
+            },
+            {
+              "reference": "C25",
+              "pad": "1"
+            },
+            {
+              "reference": "JP004",
+              "pad": "1"
+            },
+            {
+              "reference": "R17",
+              "pad": "1"
+            },
+            {
+              "reference": "R35",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "B_RAW": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C29",
+              "pad": "1"
+            },
+            {
+              "reference": "JP005",
+              "pad": "1"
+            },
+            {
+              "reference": "R501",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "B_RECT": {
@@ -191,6 +1605,197 @@
             0.6
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D4",
+              "pad": "1"
+            },
+            {
+              "reference": "D6",
+              "pad": "1"
+            },
+            {
+              "reference": "JP006",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "B_SCREEN": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C26",
+              "pad": "1"
+            },
+            {
+              "reference": "C26",
+              "pad": "1"
+            },
+            {
+              "reference": "JP007",
+              "pad": "1"
+            },
+            {
+              "reference": "R35",
+              "pad": "1"
+            },
+            {
+              "reference": "R506",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "GND": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C12",
+              "pad": "2"
+            },
+            {
+              "reference": "C12",
+              "pad": "2"
+            },
+            {
+              "reference": "C13",
+              "pad": "2"
+            },
+            {
+              "reference": "C13",
+              "pad": "2"
+            },
+            {
+              "reference": "C25",
+              "pad": "2"
+            },
+            {
+              "reference": "C25",
+              "pad": "2"
+            },
+            {
+              "reference": "C26",
+              "pad": "2"
+            },
+            {
+              "reference": "C26",
+              "pad": "2"
+            },
+            {
+              "reference": "C27",
+              "pad": "1"
+            },
+            {
+              "reference": "C28",
+              "pad": "1"
+            },
+            {
+              "reference": "C30",
+              "pad": "2"
+            },
+            {
+              "reference": "C505",
+              "pad": "2"
+            },
+            {
+              "reference": "JP008",
+              "pad": "1"
+            },
+            {
+              "reference": "R502",
+              "pad": "2"
+            },
+            {
+              "reference": "R503",
+              "pad": "2"
+            },
+            {
+              "reference": "R507",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "HEAT_A": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JP009",
+              "pad": "1"
+            },
+            {
+              "reference": "R508",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "HEAT_B": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JP010",
+              "pad": "1"
+            },
+            {
+              "reference": "R509",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "HREF": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C505",
+              "pad": "1"
+            },
+            {
+              "reference": "R506",
+              "pad": "2"
+            },
+            {
+              "reference": "R507",
+              "pad": "1"
+            },
+            {
+              "reference": "R508",
+              "pad": "2"
+            },
+            {
+              "reference": "R509",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "HV_A": {
@@ -200,6 +1805,18 @@
             0.6
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D3",
+              "pad": "2"
+            },
+            {
+              "reference": "JP011",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "HV_B": {
@@ -209,6 +1826,45 @@
             0.6
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D5",
+              "pad": "2"
+            },
+            {
+              "reference": "JP012",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "HV_CAP_MID": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C29",
+              "pad": "2"
+            },
+            {
+              "reference": "C30",
+              "pad": "1"
+            },
+            {
+              "reference": "R501",
+              "pad": "2"
+            },
+            {
+              "reference": "R502",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "HV_MID_A": {
@@ -218,6 +1874,18 @@
             0.6
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D3",
+              "pad": "1"
+            },
+            {
+              "reference": "D4",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "HV_MID_B": {
@@ -227,6 +1895,18 @@
             0.6
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D5",
+              "pad": "1"
+            },
+            {
+              "reference": "D6",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         }
       },
@@ -241,7 +1921,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "B_PRE",
@@ -252,7 +1937,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "B_PRE",
@@ -263,7 +1953,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "B_PRE",
@@ -274,7 +1969,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "B_EARLY",
@@ -285,7 +1985,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            169.657
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "B_RECT",
@@ -296,10 +2001,18 @@
           ],
           "segments": 3,
           "in_pad": false,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            0.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         }
       ],
-      "arc_items_not_bend_screened": []
+      "arc_items_not_bend_screened": [],
+      "all_corner_review_complete": false
     },
     "Control": {
       "sha256": "496e221113ba00da9311cbe71cb4cacf1b09a1ce07f2bd1519b02530b384fca5",
@@ -311,6 +2024,81 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C203",
+              "pad": "1"
+            },
+            {
+              "reference": "C204",
+              "pad": "1"
+            },
+            {
+              "reference": "C205",
+              "pad": "1"
+            },
+            {
+              "reference": "D205",
+              "pad": "2"
+            },
+            {
+              "reference": "D206",
+              "pad": "1"
+            },
+            {
+              "reference": "D333",
+              "pad": "1"
+            },
+            {
+              "reference": "D342",
+              "pad": "1"
+            },
+            {
+              "reference": "JC001",
+              "pad": "1"
+            },
+            {
+              "reference": "U4",
+              "pad": "3"
+            },
+            {
+              "reference": "U5",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "+15V": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C210",
+              "pad": "1"
+            },
+            {
+              "reference": "C211",
+              "pad": "1"
+            },
+            {
+              "reference": "D207",
+              "pad": "2"
+            },
+            {
+              "reference": "JC002",
+              "pad": "1"
+            },
+            {
+              "reference": "U6",
+              "pad": "3"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "+5V": {
@@ -321,6 +2109,191 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C206",
+              "pad": "1"
+            },
+            {
+              "reference": "C207",
+              "pad": "1"
+            },
+            {
+              "reference": "C351",
+              "pad": "1"
+            },
+            {
+              "reference": "C352",
+              "pad": "1"
+            },
+            {
+              "reference": "C353",
+              "pad": "1"
+            },
+            {
+              "reference": "D206",
+              "pad": "2"
+            },
+            {
+              "reference": "D301",
+              "pad": "1"
+            },
+            {
+              "reference": "D311",
+              "pad": "1"
+            },
+            {
+              "reference": "R215",
+              "pad": "1"
+            },
+            {
+              "reference": "R302",
+              "pad": "1"
+            },
+            {
+              "reference": "R312",
+              "pad": "1"
+            },
+            {
+              "reference": "R321",
+              "pad": "1"
+            },
+            {
+              "reference": "R322",
+              "pad": "1"
+            },
+            {
+              "reference": "U1",
+              "pad": "14"
+            },
+            {
+              "reference": "U2",
+              "pad": "10"
+            },
+            {
+              "reference": "U2",
+              "pad": "14"
+            },
+            {
+              "reference": "U2",
+              "pad": "4"
+            },
+            {
+              "reference": "U3",
+              "pad": "5"
+            },
+            {
+              "reference": "U3",
+              "pad": "6"
+            },
+            {
+              "reference": "U5",
+              "pad": "3"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "-15V": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C213",
+              "pad": "2"
+            },
+            {
+              "reference": "C214",
+              "pad": "2"
+            },
+            {
+              "reference": "D208",
+              "pad": "1"
+            },
+            {
+              "reference": "JC003",
+              "pad": "1"
+            },
+            {
+              "reference": "U7",
+              "pad": "3"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "BTN_CH": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D301",
+              "pad": "2"
+            },
+            {
+              "reference": "D302",
+              "pad": "1"
+            },
+            {
+              "reference": "JC004",
+              "pad": "1"
+            },
+            {
+              "reference": "R301",
+              "pad": "2"
+            },
+            {
+              "reference": "R302",
+              "pad": "2"
+            },
+            {
+              "reference": "R303",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "BTN_REV": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D311",
+              "pad": "2"
+            },
+            {
+              "reference": "D312",
+              "pad": "1"
+            },
+            {
+              "reference": "JC005",
+              "pad": "1"
+            },
+            {
+              "reference": "R311",
+              "pad": "2"
+            },
+            {
+              "reference": "R312",
+              "pad": "2"
+            },
+            {
+              "reference": "R313",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "CH_GATE": {
@@ -330,6 +2303,41 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "Q1",
+              "pad": "1"
+            },
+            {
+              "reference": "R331",
+              "pad": "2"
+            },
+            {
+              "reference": "R332",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "CH_Q": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R331",
+              "pad": "1"
+            },
+            {
+              "reference": "U2",
+              "pad": "5"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "CH_QN": {
@@ -339,6 +2347,18 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "U2",
+              "pad": "2"
+            },
+            {
+              "reference": "U2",
+              "pad": "6"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "CLK_CH": {
@@ -360,6 +2380,18 @@
               "drill_mm": 0.3
             }
           ],
+          "pad_connections": [
+            {
+              "reference": "U1",
+              "pad": "2"
+            },
+            {
+              "reference": "U2",
+              "pad": "3"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "CLK_REV": {
@@ -381,6 +2413,18 @@
               "drill_mm": 0.3
             }
           ],
+          "pad_connections": [
+            {
+              "reference": "U1",
+              "pad": "4"
+            },
+            {
+              "reference": "U2",
+              "pad": "11"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "COIL_CH": {
@@ -402,6 +2446,22 @@
               "drill_mm": 0.4
             }
           ],
+          "pad_connections": [
+            {
+              "reference": "D333",
+              "pad": "2"
+            },
+            {
+              "reference": "JC006",
+              "pad": "1"
+            },
+            {
+              "reference": "Q1",
+              "pad": "3"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "COIL_REV": {
@@ -423,6 +2483,22 @@
               "drill_mm": 0.4
             }
           ],
+          "pad_connections": [
+            {
+              "reference": "D342",
+              "pad": "2"
+            },
+            {
+              "reference": "JC007",
+              "pad": "1"
+            },
+            {
+              "reference": "Q2",
+              "pad": "3"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "CTRL_AC1": {
@@ -444,6 +2520,22 @@
               "drill_mm": 0.3
             }
           ],
+          "pad_connections": [
+            {
+              "reference": "D201",
+              "pad": "2"
+            },
+            {
+              "reference": "D203",
+              "pad": "1"
+            },
+            {
+              "reference": "JC008",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "CTRL_AC2": {
@@ -454,6 +2546,22 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D202",
+              "pad": "2"
+            },
+            {
+              "reference": "D204",
+              "pad": "1"
+            },
+            {
+              "reference": "JC009",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "CTRL_RAW": {
@@ -463,6 +2571,92 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C201",
+              "pad": "1"
+            },
+            {
+              "reference": "C202",
+              "pad": "1"
+            },
+            {
+              "reference": "C209",
+              "pad": "1"
+            },
+            {
+              "reference": "D201",
+              "pad": "1"
+            },
+            {
+              "reference": "D202",
+              "pad": "1"
+            },
+            {
+              "reference": "D205",
+              "pad": "1"
+            },
+            {
+              "reference": "D207",
+              "pad": "1"
+            },
+            {
+              "reference": "U4",
+              "pad": "1"
+            },
+            {
+              "reference": "U6",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DB_CH": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C301",
+              "pad": "1"
+            },
+            {
+              "reference": "R303",
+              "pad": "2"
+            },
+            {
+              "reference": "U1",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DB_REV": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C311",
+              "pad": "1"
+            },
+            {
+              "reference": "R313",
+              "pad": "2"
+            },
+            {
+              "reference": "U1",
+              "pad": "3"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "GND": {
@@ -473,6 +2667,181 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C201",
+              "pad": "2"
+            },
+            {
+              "reference": "C202",
+              "pad": "2"
+            },
+            {
+              "reference": "C203",
+              "pad": "2"
+            },
+            {
+              "reference": "C204",
+              "pad": "2"
+            },
+            {
+              "reference": "C205",
+              "pad": "2"
+            },
+            {
+              "reference": "C206",
+              "pad": "2"
+            },
+            {
+              "reference": "C207",
+              "pad": "2"
+            },
+            {
+              "reference": "C208",
+              "pad": "1"
+            },
+            {
+              "reference": "C209",
+              "pad": "2"
+            },
+            {
+              "reference": "C210",
+              "pad": "2"
+            },
+            {
+              "reference": "C211",
+              "pad": "2"
+            },
+            {
+              "reference": "C212",
+              "pad": "1"
+            },
+            {
+              "reference": "C213",
+              "pad": "1"
+            },
+            {
+              "reference": "C214",
+              "pad": "1"
+            },
+            {
+              "reference": "C301",
+              "pad": "2"
+            },
+            {
+              "reference": "C311",
+              "pad": "2"
+            },
+            {
+              "reference": "C321",
+              "pad": "2"
+            },
+            {
+              "reference": "C351",
+              "pad": "2"
+            },
+            {
+              "reference": "C352",
+              "pad": "2"
+            },
+            {
+              "reference": "C353",
+              "pad": "2"
+            },
+            {
+              "reference": "D302",
+              "pad": "2"
+            },
+            {
+              "reference": "D312",
+              "pad": "2"
+            },
+            {
+              "reference": "JC010",
+              "pad": "1"
+            },
+            {
+              "reference": "Q1",
+              "pad": "2"
+            },
+            {
+              "reference": "Q2",
+              "pad": "2"
+            },
+            {
+              "reference": "R215",
+              "pad": "2"
+            },
+            {
+              "reference": "R332",
+              "pad": "2"
+            },
+            {
+              "reference": "R342",
+              "pad": "2"
+            },
+            {
+              "reference": "U1",
+              "pad": "11"
+            },
+            {
+              "reference": "U1",
+              "pad": "13"
+            },
+            {
+              "reference": "U1",
+              "pad": "7"
+            },
+            {
+              "reference": "U2",
+              "pad": "7"
+            },
+            {
+              "reference": "U3",
+              "pad": "2"
+            },
+            {
+              "reference": "U4",
+              "pad": "2"
+            },
+            {
+              "reference": "U5",
+              "pad": "2"
+            },
+            {
+              "reference": "U6",
+              "pad": "2"
+            },
+            {
+              "reference": "U7",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "MR_N": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JC011",
+              "pad": "1"
+            },
+            {
+              "reference": "R322",
+              "pad": "2"
+            },
+            {
+              "reference": "U3",
+              "pad": "3"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "NEG_RAW": {
@@ -483,6 +2852,72 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C208",
+              "pad": "2"
+            },
+            {
+              "reference": "C212",
+              "pad": "2"
+            },
+            {
+              "reference": "D203",
+              "pad": "2"
+            },
+            {
+              "reference": "D204",
+              "pad": "2"
+            },
+            {
+              "reference": "D208",
+              "pad": "2"
+            },
+            {
+              "reference": "U7",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "PEDAL_CH": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JC012",
+              "pad": "1"
+            },
+            {
+              "reference": "R301",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "PEDAL_REV": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JC013",
+              "pad": "1"
+            },
+            {
+              "reference": "R311",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "RESET_CT": {
@@ -493,6 +2928,18 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C321",
+              "pad": "1"
+            },
+            {
+              "reference": "U3",
+              "pad": "4"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "RESET_INV": {
@@ -502,6 +2949,18 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "U1",
+              "pad": "6"
+            },
+            {
+              "reference": "U1",
+              "pad": "9"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "RESET_N": {
@@ -511,6 +2970,22 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "U1",
+              "pad": "8"
+            },
+            {
+              "reference": "U2",
+              "pad": "1"
+            },
+            {
+              "reference": "U2",
+              "pad": "13"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "RESET_RAW_N": {
@@ -532,6 +3007,22 @@
               "drill_mm": 0.4
             }
           ],
+          "pad_connections": [
+            {
+              "reference": "R321",
+              "pad": "2"
+            },
+            {
+              "reference": "U1",
+              "pad": "5"
+            },
+            {
+              "reference": "U3",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "REV_GATE": {
@@ -541,6 +3032,41 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "Q2",
+              "pad": "1"
+            },
+            {
+              "reference": "R341",
+              "pad": "2"
+            },
+            {
+              "reference": "R342",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "REV_Q": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R341",
+              "pad": "1"
+            },
+            {
+              "reference": "U2",
+              "pad": "9"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "REV_QN": {
@@ -550,6 +3076,48 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "U2",
+              "pad": "12"
+            },
+            {
+              "reference": "U2",
+              "pad": "8"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "unconnected-(U1-Pad10)": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "U1",
+              "pad": "10"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "unconnected-(U1-Pad12)": {
+          "segments": 0,
+          "length_mm": 0.0,
+          "widths_mm": [],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "U1",
+              "pad": "12"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         }
       },
@@ -564,7 +3132,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -575,7 +3148,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "+5V",
@@ -586,7 +3164,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "NEG_RAW",
@@ -597,7 +3180,14 @@
           ],
           "segments": 3,
           "in_pad": false,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0,
+            90.0,
+            45.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "NEG_RAW",
@@ -608,7 +3198,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "CTRL_RAW",
@@ -619,7 +3214,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "CTRL_RAW",
@@ -630,7 +3230,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "CTRL_RAW",
@@ -641,7 +3246,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "CTRL_RAW",
@@ -652,7 +3262,14 @@
           ],
           "segments": 3,
           "in_pad": false,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            135.0,
+            45.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "CTRL_RAW",
@@ -663,7 +3280,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "CTRL_RAW",
@@ -674,7 +3296,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "CTRL_AC2",
@@ -685,7 +3312,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "CTRL_AC2",
@@ -696,7 +3328,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            135.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "RESET_CT",
@@ -707,7 +3344,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "RESET_CT",
@@ -718,7 +3360,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            23.079
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "COIL_CH",
@@ -729,7 +3376,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "CH_GATE",
@@ -740,7 +3392,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "COIL_REV",
@@ -751,7 +3408,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "COIL_REV",
@@ -762,7 +3424,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "REV_GATE",
@@ -773,7 +3440,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "RESET_RAW_N",
@@ -784,13 +3456,21 @@
           ],
           "segments": 3,
           "in_pad": false,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            45.0,
+            45.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         }
       ],
-      "arc_items_not_bend_screened": []
+      "arc_items_not_bend_screened": [],
+      "all_corner_review_complete": false
     },
     "Reverb": {
-      "sha256": "d3323b93e3fad765f77c028c3f298e7eb8bbaa8b76ec1edf6db35a31a645476f",
+      "sha256": "113abfad708ac6812c9f04afb946ae3825a1d50f0dccc2922a87955e5b05c3b8",
       "nets": {
         "+12V": {
           "segments": 11,
@@ -800,6 +3480,22 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D341",
+              "pad": "1"
+            },
+            {
+              "reference": "JR6",
+              "pad": "4"
+            },
+            {
+              "reference": "K3",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "+15V": {
@@ -843,6 +3539,46 @@
               "drill_mm": 0.4
             }
           ],
+          "pad_connections": [
+            {
+              "reference": "C610",
+              "pad": "1"
+            },
+            {
+              "reference": "C612",
+              "pad": "1"
+            },
+            {
+              "reference": "C614",
+              "pad": "1"
+            },
+            {
+              "reference": "C616",
+              "pad": "1"
+            },
+            {
+              "reference": "D601",
+              "pad": "1"
+            },
+            {
+              "reference": "JR6",
+              "pad": "1"
+            },
+            {
+              "reference": "U10",
+              "pad": "8"
+            },
+            {
+              "reference": "U11",
+              "pad": "8"
+            },
+            {
+              "reference": "U12",
+              "pad": "8"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "-15V": {
@@ -886,6 +3622,46 @@
               "drill_mm": 0.4
             }
           ],
+          "pad_connections": [
+            {
+              "reference": "C611",
+              "pad": "2"
+            },
+            {
+              "reference": "C613",
+              "pad": "2"
+            },
+            {
+              "reference": "C615",
+              "pad": "2"
+            },
+            {
+              "reference": "C617",
+              "pad": "2"
+            },
+            {
+              "reference": "D602",
+              "pad": "2"
+            },
+            {
+              "reference": "JR6",
+              "pad": "3"
+            },
+            {
+              "reference": "U10",
+              "pad": "4"
+            },
+            {
+              "reference": "U11",
+              "pad": "4"
+            },
+            {
+              "reference": "U12",
+              "pad": "4"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "COIL_REV": {
@@ -896,6 +3672,22 @@
             0.4
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D341",
+              "pad": "2"
+            },
+            {
+              "reference": "JR6",
+              "pad": "5"
+            },
+            {
+              "reference": "K3",
+              "pad": "16"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "DRIVER": {
@@ -905,6 +3697,22 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R604",
+              "pad": "1"
+            },
+            {
+              "reference": "R605",
+              "pad": "1"
+            },
+            {
+              "reference": "U10",
+              "pad": "7"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "DRIVE_CAP": {
@@ -914,6 +3722,18 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C603",
+              "pad": "1"
+            },
+            {
+              "reference": "R605",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "DRV_FB": {
@@ -923,6 +3743,22 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R603",
+              "pad": "1"
+            },
+            {
+              "reference": "R604",
+              "pad": "2"
+            },
+            {
+              "reference": "U10",
+              "pad": "6"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "FX_RETURN": {
@@ -932,11 +3768,27 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C601",
+              "pad": "1"
+            },
+            {
+              "reference": "JR1",
+              "pad": "1"
+            },
+            {
+              "reference": "R612",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "GND": {
           "segments": 113,
-          "length_mm": 505.217,
+          "length_mm": 504.514,
           "widths_mm": [
             0.3
           ],
@@ -1008,6 +3860,106 @@
               "drill_mm": 0.4
             }
           ],
+          "pad_connections": [
+            {
+              "reference": "C610",
+              "pad": "2"
+            },
+            {
+              "reference": "C611",
+              "pad": "1"
+            },
+            {
+              "reference": "C612",
+              "pad": "2"
+            },
+            {
+              "reference": "C613",
+              "pad": "1"
+            },
+            {
+              "reference": "C614",
+              "pad": "2"
+            },
+            {
+              "reference": "C615",
+              "pad": "1"
+            },
+            {
+              "reference": "C616",
+              "pad": "2"
+            },
+            {
+              "reference": "C617",
+              "pad": "1"
+            },
+            {
+              "reference": "JR1",
+              "pad": "2"
+            },
+            {
+              "reference": "JR2",
+              "pad": "2"
+            },
+            {
+              "reference": "JR3",
+              "pad": "2"
+            },
+            {
+              "reference": "JR4",
+              "pad": "3"
+            },
+            {
+              "reference": "JR5",
+              "pad": "2"
+            },
+            {
+              "reference": "JR6",
+              "pad": "2"
+            },
+            {
+              "reference": "K3",
+              "pad": "6"
+            },
+            {
+              "reference": "R602",
+              "pad": "2"
+            },
+            {
+              "reference": "R603",
+              "pad": "2"
+            },
+            {
+              "reference": "R606",
+              "pad": "2"
+            },
+            {
+              "reference": "R607",
+              "pad": "2"
+            },
+            {
+              "reference": "R609",
+              "pad": "2"
+            },
+            {
+              "reference": "R617",
+              "pad": "2"
+            },
+            {
+              "reference": "RV601",
+              "pad": "3"
+            },
+            {
+              "reference": "U12",
+              "pad": "3"
+            },
+            {
+              "reference": "U12",
+              "pad": "5"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "IN_AC": {
@@ -1017,6 +3969,18 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C601",
+              "pad": "2"
+            },
+            {
+              "reference": "R601",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "MIX_OUT": {
@@ -1026,24 +3990,68 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JR5",
+              "pad": "1"
+            },
+            {
+              "reference": "R612",
+              "pad": "2"
+            },
+            {
+              "reference": "R618",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "OUT_AC": {
           "segments": 5,
-          "length_mm": 19.203,
+          "length_mm": 18.851,
           "widths_mm": [
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C607",
+              "pad": "1"
+            },
+            {
+              "reference": "R616",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "OUT_BUF": {
-          "segments": 11,
-          "length_mm": 39.402,
+          "segments": 13,
+          "length_mm": 38.489,
           "widths_mm": [
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R615",
+              "pad": "1"
+            },
+            {
+              "reference": "R616",
+              "pad": "1"
+            },
+            {
+              "reference": "U12",
+              "pad": "7"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "OUT_FB": {
@@ -1053,6 +4061,22 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R614",
+              "pad": "2"
+            },
+            {
+              "reference": "R615",
+              "pad": "2"
+            },
+            {
+              "reference": "U12",
+              "pad": "6"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "REC_FB": {
@@ -1062,6 +4086,26 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C605",
+              "pad": "2"
+            },
+            {
+              "reference": "R607",
+              "pad": "1"
+            },
+            {
+              "reference": "R608",
+              "pad": "2"
+            },
+            {
+              "reference": "U11",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "REC_IN": {
@@ -1071,6 +4115,22 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C604",
+              "pad": "2"
+            },
+            {
+              "reference": "R606",
+              "pad": "1"
+            },
+            {
+              "reference": "U11",
+              "pad": "3"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "REC_OUT": {
@@ -1080,6 +4140,26 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C605",
+              "pad": "1"
+            },
+            {
+              "reference": "C606",
+              "pad": "1"
+            },
+            {
+              "reference": "R608",
+              "pad": "1"
+            },
+            {
+              "reference": "U11",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "SEND_BUF": {
@@ -1089,6 +4169,22 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C602",
+              "pad": "1"
+            },
+            {
+              "reference": "U10",
+              "pad": "1"
+            },
+            {
+              "reference": "U10",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "SEND_IN": {
@@ -1098,6 +4194,30 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D601",
+              "pad": "2"
+            },
+            {
+              "reference": "D602",
+              "pad": "1"
+            },
+            {
+              "reference": "R601",
+              "pad": "2"
+            },
+            {
+              "reference": "R602",
+              "pad": "1"
+            },
+            {
+              "reference": "U10",
+              "pad": "3"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "SEND_TOP": {
@@ -1107,6 +4227,18 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C602",
+              "pad": "2"
+            },
+            {
+              "reference": "RV601",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "SEND_W": {
@@ -1116,15 +4248,43 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "RV601",
+              "pad": "2"
+            },
+            {
+              "reference": "U10",
+              "pad": "5"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "SUM": {
           "segments": 12,
-          "length_mm": 31.986,
+          "length_mm": 31.283,
           "widths_mm": [
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R611",
+              "pad": "2"
+            },
+            {
+              "reference": "R613",
+              "pad": "2"
+            },
+            {
+              "reference": "U12",
+              "pad": "2"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "SUM_INV": {
@@ -1134,6 +4294,22 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R613",
+              "pad": "1"
+            },
+            {
+              "reference": "R614",
+              "pad": "1"
+            },
+            {
+              "reference": "U12",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "TANK_IN": {
@@ -1143,6 +4319,18 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C603",
+              "pad": "2"
+            },
+            {
+              "reference": "JR2",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "TANK_OUT": {
@@ -1152,6 +4340,18 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C604",
+              "pad": "1"
+            },
+            {
+              "reference": "JR3",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "WET_AC": {
@@ -1161,6 +4361,22 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C607",
+              "pad": "2"
+            },
+            {
+              "reference": "R617",
+              "pad": "1"
+            },
+            {
+              "reference": "R618",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "WET_BUF": {
@@ -1170,6 +4386,22 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R610",
+              "pad": "1"
+            },
+            {
+              "reference": "U11",
+              "pad": "6"
+            },
+            {
+              "reference": "U11",
+              "pad": "7"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "WET_MUTE": {
@@ -1179,6 +4411,22 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "K3",
+              "pad": "4"
+            },
+            {
+              "reference": "R610",
+              "pad": "2"
+            },
+            {
+              "reference": "R611",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "WET_TOP": {
@@ -1188,6 +4436,18 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "C606",
+              "pad": "2"
+            },
+            {
+              "reference": "JR4",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "WET_W": {
@@ -1197,6 +4457,22 @@
             0.3
           ],
           "vias": [],
+          "pad_connections": [
+            {
+              "reference": "JR4",
+              "pad": "2"
+            },
+            {
+              "reference": "R609",
+              "pad": "1"
+            },
+            {
+              "reference": "U11",
+              "pad": "5"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         }
       },
@@ -1211,7 +4487,14 @@
           ],
           "segments": 3,
           "in_pad": false,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            90.0,
+            0.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "DRIVER",
@@ -1222,7 +4505,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            18.435
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "DRV_FB",
@@ -1233,7 +4521,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "DRV_FB",
@@ -1244,7 +4537,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            146.31
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "FX_RETURN",
@@ -1255,7 +4553,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "REC_OUT",
@@ -1266,7 +4569,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "REC_FB",
@@ -1277,7 +4585,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0,
+            90.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "REC_FB",
@@ -1288,7 +4603,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "REC_FB",
@@ -1299,7 +4619,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "REC_FB",
@@ -1310,7 +4635,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "REC_IN",
@@ -1321,7 +4651,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "REC_IN",
@@ -1332,7 +4667,14 @@
           ],
           "segments": 3,
           "in_pad": false,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            0.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "-15V",
@@ -1343,7 +4685,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "-15V",
@@ -1354,7 +4701,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            180.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "-15V",
@@ -1365,7 +4719,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "-15V",
@@ -1376,7 +4735,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "-15V",
@@ -1387,7 +4751,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "-15V",
@@ -1398,7 +4767,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            90.0,
+            180.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "-15V",
@@ -1409,7 +4785,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "-15V",
@@ -1420,7 +4801,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "-15V",
@@ -1431,7 +4817,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "-15V",
@@ -1442,7 +4833,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "WET_W",
@@ -1453,7 +4849,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "WET_W",
@@ -1464,7 +4865,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            135.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "WET_W",
@@ -1475,7 +4881,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "WET_BUF",
@@ -1486,7 +4897,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            108.435
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "WET_BUF",
@@ -1497,7 +4913,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            146.31,
+            56.31,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "+15V",
@@ -1508,7 +4931,14 @@
           ],
           "segments": 3,
           "in_pad": false,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            90.0,
+            0.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "+15V",
@@ -1519,7 +4949,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0,
+            0.0,
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "+15V",
@@ -1530,7 +4967,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "+15V",
@@ -1541,7 +4983,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "+15V",
@@ -1552,7 +4999,14 @@
           ],
           "segments": 3,
           "in_pad": false,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            0.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "+15V",
@@ -1563,7 +5017,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "+15V",
@@ -1574,7 +5033,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1585,7 +5049,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1596,7 +5065,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1607,7 +5081,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1618,7 +5097,14 @@
           ],
           "segments": 3,
           "in_pad": false,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            0.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1629,7 +5115,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            0.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1640,7 +5133,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0,
+            90.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1651,7 +5151,14 @@
           ],
           "segments": 3,
           "in_pad": false,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            0.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1662,7 +5169,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            90.0,
+            0.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1673,7 +5187,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            90.0,
+            180.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1684,7 +5205,14 @@
           ],
           "segments": 3,
           "in_pad": false,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0,
+            90.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1695,7 +5223,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1706,7 +5239,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1717,7 +5255,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1728,7 +5271,12 @@
           ],
           "segments": 2,
           "in_pad": false,
-          "at_via": true
+          "at_via": true,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1739,7 +5287,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1750,7 +5303,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1761,7 +5319,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0,
+            90.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1772,7 +5337,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            135.0,
+            0.0,
+            45.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1783,7 +5355,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1794,7 +5371,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0,
+            90.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1805,7 +5389,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1816,7 +5405,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1827,7 +5421,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0,
+            90.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1838,7 +5439,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "GND",
@@ -1849,7 +5455,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "WET_AC",
@@ -1860,7 +5471,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "DRIVE_CAP",
@@ -1871,7 +5487,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "MIX_OUT",
@@ -1882,7 +5503,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "MIX_OUT",
@@ -1893,7 +5519,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "MIX_OUT",
@@ -1904,7 +5535,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "SUM_INV",
@@ -1915,7 +5551,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "SUM",
@@ -1926,7 +5567,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "SUM",
@@ -1937,7 +5583,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "SUM",
@@ -1948,7 +5599,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0,
+            90.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "OUT_FB",
@@ -1959,7 +5617,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            90.0,
+            0.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "OUT_FB",
@@ -1970,7 +5635,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            56.31
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "OUT_FB",
@@ -1981,18 +5651,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
-        },
-        {
-          "net": "OUT_BUF",
-          "layer": "F.Cu",
-          "at_mm": [
-            128.0,
-            68.5
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
           ],
-          "segments": 3,
-          "in_pad": false,
-          "at_via": false
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "OUT_BUF",
@@ -2003,7 +5667,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            161.565
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "+12V",
@@ -2014,7 +5683,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "WET_MUTE",
@@ -2025,7 +5699,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "WET_MUTE",
@@ -2036,7 +5715,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            180.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "WET_MUTE",
@@ -2047,7 +5731,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "COIL_REV",
@@ -2058,7 +5747,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "COIL_REV",
@@ -2069,7 +5763,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "COIL_REV",
@@ -2080,7 +5779,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "SEND_IN",
@@ -2091,7 +5795,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "SEND_IN",
@@ -2102,7 +5811,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "SEND_IN",
@@ -2113,7 +5827,14 @@
           ],
           "segments": 3,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0,
+            0.0,
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "SEND_IN",
@@ -2124,7 +5845,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "SEND_BUF",
@@ -2135,7 +5861,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "SEND_BUF",
@@ -2146,7 +5877,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "OUT_AC",
@@ -2157,7 +5893,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            0.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         },
         {
           "net": "SEND_W",
@@ -2168,7 +5909,12 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
         },
         {
           "net": "SEND_W",
@@ -2179,10 +5925,19 @@
           ],
           "segments": 2,
           "in_pad": true,
-          "at_via": false
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            135.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
         }
       ],
-      "arc_items_not_bend_screened": []
+      "arc_items_not_bend_screened": [
+        "17256e1e-0ca4-4ba3-a2fe-4bebf5ae9868",
+        "2c9f2173-6d45-4bb2-b90f-8577f698cfcf"
+      ],
+      "all_corner_review_complete": false
     }
   },
   "fabrication_ready": false

@@ -50,3 +50,7 @@ Actual drill envelope remains deferred until November 25. Cabinet depth datum, a
 ## November24 socket and partial-tool checkpoint
 
 [VAL-030](../../brain/records/VAL-030-sockets-brownout-tool-measurement.md): five DIP socket drafts corrected with52 larger holes and C352 clearance repair; no new native findings. Brownout runs complete but threshold/clock/collapse qualification remains open. User supplied46mm chuck diameter; earlier deferral is superseded only for that dimension. Body/bit reach and actual access still pending. Existing board support trial fails; no populated chassis release.
+
+## November24 U12 routing follow-up
+
+[VAL-031](../../brain/records/VAL-031-u12-corner-and-copper-coverage.md) repairs the reported U12 square T and enlarges eight chamfers, with fresh exact native/drill/DRC/socket checks. Eleven further outside-pad/via branch candidates remain. Copper inventory now covers all134 board/net entries, including wholly unrouted nets. Current capacity and populated three-board fit remain unqualified.
