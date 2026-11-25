@@ -1,0 +1,73 @@
+{
+  "status": "candidate-not-native",
+  "job": "Inhibit K3 while either low-voltage analog supply is below threshold; preserve the existing user reverb latch and reset priority.",
+  "interface": {
+    "inputs": [
+      "+15V",
+      "-15V",
+      "+12V",
+      "+5V",
+      "REV_Q",
+      "GND"
+    ],
+    "output": "REV_GATE",
+    "comparator": "TI LM393P PDIP-8, socket required; powered by +12V/GND",
+    "connections": "Both open collectors join REV_GATE. Comparator A compares PSENSE(+) with PREF(-). Comparator B compares NREF(+) with NSENSE(-). R341 proposal is 4.7k; existing R342 stays100k. No independent pull-up bypasses REV_Q."
+  },
+  "positive_resistors_ohm": {
+    "rail": 38300,
+    "ground": 4990,
+    "feedback": 330000,
+    "ref_top": 30000,
+    "ref_bottom": 10000
+  },
+  "negative_resistors_ohm": {
+    "ref_to_clamp": 10000,
+    "rail_to_clamp": 51000,
+    "clamp_to_sense": 30100,
+    "sense_to_ground": 10000,
+    "ref_top": 91000,
+    "ref_bottom": 10000,
+    "feedback": 2000000
+  },
+  "negative_clamp": "Schottky anode GND, cathode CLAMP; split divider attenuates negative clamp voltage before NSENSE. Exact diode not selected.",
+  "resistor_fraction": 0.01,
+  "reference_V": [
+    4.75,
+    5.25
+  ],
+  "offset_V": [
+    -0.009,
+    0.009
+  ],
+  "input_current_A": [
+    -2.5e-07,
+    2.5e-07
+  ],
+  "gate_off_V": [
+    0,
+    0.4
+  ],
+  "gate_on_assumed_V": [
+    3.5,
+    5.25
+  ],
+  "gate_series_ohm": 4700,
+  "gate_pulldown_ohm": 100000,
+  "allocated_negative_clamp_max_V": 1.0,
+  "largest_analog_rail_abs_V": 16.5,
+  "screen": {
+    "latest_enable_abs_V": 12,
+    "earliest_disable_abs_V": 9,
+    "minimum_hysteresis_V": 0.35
+  },
+  "limitations": [
+    "Gate high bound and sink current require full circuit proof",
+    "Clamp allocation is not an exact-diode guarantee",
+    "Total resistor tolerance must include temperature and life effects before release",
+    "No startup/release timing or pop qualification",
+    "Existing +5V supervisor limits remain an independent open item",
+    "No manufacturing or exact resistor sourcing approval"
+  ],
+  "gate_high_basis": "Provisional lower bound using the existing HC74 3.84V VOH guarantee, 4.7k series resistance and combined feedback/pulldown loading; validate full DC network and output leakage."
+}

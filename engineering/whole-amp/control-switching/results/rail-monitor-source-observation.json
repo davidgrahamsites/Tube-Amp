@@ -1,0 +1,36 @@
+{
+  "observed_on": "2026-11-25",
+  "url": "https://item.szlcsc.com/5630.html",
+  "html_sha256": "6bcff09dfa81774fdc86b9bb14dfaf6edc8a122ed241ef074a823907e4f0d504",
+  "fields": {
+    "productModel": "LM393P",
+    "productCode": "C5209",
+    "stockNumber": 331,
+    "validStockNumber": 66,
+    "minBuyNumber": 1,
+    "encapsulationModel": "PDIP-8"
+  },
+  "stock_note": "stockNumber331 differs from validStockNumber66. These raw dated fields are not a reservation or guaranteed available quantity.",
+  "shanghai_checkout_verified": false,
+  "shipping_policy": "https://www.szlcsc.com/help/1102.html",
+  "primary_documents": [
+    {
+      "file": "evidence/TI-LM393-AH.pdf",
+      "sha256": "a1f63934820e27c1f345a4d2c01c46fa2d58591df0f406a1bfca0fe97d8731bb",
+      "url": "https://www.ti.com/lit/ds/symlink/lm393.pdf"
+    },
+    {
+      "file": "evidence/TI-comparator-guidelines-SNOAA35F.pdf",
+      "sha256": "2dc2fd98706a9208e69a051664f9e80dffe835d327dca77fd1d7bbc15c8c68c0",
+      "url": "https://www.ti.com/lit/an/snoaa35f/snoaa35f.pdf"
+    }
+  ],
+  "rejected_model": {
+    "url": "https://www.ti.com/lit/zip/SLCJ016",
+    "archive_sha256": "2b32be0bebb6a3c9bcc93e2a6d9ba1e359c2dcfc34dc43e396798e22bda980d8",
+    "member": "lm393.lib",
+    "member_sha256": "bb640f9b040d51a5ebaec7cb9a8a37bfcf2ae53a6c7e4a28405226b67ca43ff3",
+    "top_level_subcircuit": "LM2903B",
+    "reason": "Header and sole top-level model identify LM2903B, with 3.5nA bias/0.37mV offset. Not used as evidence for classic LM393P 250nA/9mV bounds. No vendor model edited or silently substituted."
+  }
+}

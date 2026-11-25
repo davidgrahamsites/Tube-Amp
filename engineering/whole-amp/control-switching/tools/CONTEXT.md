@@ -8,3 +8,5 @@ Reset edge stage: integrate_reset_edges.py then finalize_reset_edges.py are guar
 Brownout factories consume ../brownout-contract.json and unmodified TI model. check_brownout_limits.py compares guaranteed limits and proposed noise allocation. simulate_brownout_matrix.py writes the dip matrix, including failed coarse refinement; refine_brownout_matrix.py writes the next refinement without relaxing tolerance.
 
 check_divider_options.py reads ../divider-contract.json, verifies retained manufacturer/baseline hashes, and compares independent resistor, threshold, leakage, temperature and solder/endurance limits. It preserves the historical contract and native CAD. A passing arithmetic receipt includes explicit failed engineering profiles; inspect ../divider-review.md.
+
+rail_monitor_budget.py owns static endpoint analysis of rail-monitor-contract.json. It writes rail-monitor-budget.json with failed constraints and qualification=false. It is not a transient comparator model or CAD writer.

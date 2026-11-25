@@ -8,3 +8,5 @@ edge-* artifacts are the current reset-edge checkpoint. edge-integration.json de
 brownout-limits.json and brownout-matrix.json retain engineering failures explicitly. brownout-refinement.json records the subsequent finer-step comparison; it supersedes numerical resolution only, not hardware qualification. Logs accompany each run.
 
 divider-options.json is a candidate stability comparison, not supervisor or purchase qualification. Failed long-duration and combined-environment profiles are retained; see ../divider-review.md.
+
+rail-monitor-budget.json retains the initial static candidate, including failed thresholds. rail-monitor-source-observation.json records TI sources, raw Chinese stock fields and a rejected LM2903B model download; no stock reservation, Shanghai checkout or exact-resistor approval is implied.

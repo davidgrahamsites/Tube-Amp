@@ -72,3 +72,7 @@ November25 stationary-controller checkpoint: [VAL-045](../../brain/records/VAL-0
 ### 2026-11-25 — VAL-046 final wet mute
 
 K3 spare NC contact now grounds WET_AC when deenergized. Native circuit/schematic/reverb-board delta is exactly K3.11 and K3.13; no new BOM part or moved footprint/mounting hole. Fresh reverb DRC0/opens0, ERC existing1 unchanged; 39/39 scoped evidence checks pass. Eight expression rail-sequence diagnostics retain two solver failures and large fault excursions: automatic analog-rail inhibit and quiet startup remain open. Exact China C128021 listing reports stock/minimum buy1; Shanghai checkout is not verified. See engineering/whole-amp/expression-control/final-mute-review.md and brain/records/VAL-046-final-wet-mute.md. All six scopes remain active; not build-ready. Next: protected rail monitor/control interface, then expression native integration and populated fit.
+
+### 2026-11-25 — analog-rail monitor candidate
+
+The follow-on LM393P rail-inhibit budget enumerates10,240 endpoint cases;4/7 screens pass, with three threshold failures retained. It is not adopted. TI SLCJ016 contains an LM2903B model despite its LM393 download label, so no classic-part transient qualification was inferred. C5209 domestic listing has minimum buy1, with differing raw stock fields retained. See engineering/whole-amp/control-switching/rail-monitor-review.md. Next: improve the reference/ratio budget using exact China-sourceable parts, prove gate loading and fault timing, then integrate only after native gates.
