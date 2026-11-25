@@ -1,0 +1,25 @@
+{
+  "owner": "control-switching integration",
+  "status": "candidate-diagnostic-not-native",
+  "job": "Test existing secondary-loss advance warning during finite-slope mains collapse and derive the raw-voltage warning window.",
+  "baseline": "5700c976c2b235dbdad6189ba074071370147e23",
+  "ramp_durations_s": [0.01, 0.05, 0.2, 1.0],
+  "phases_deg": [0, 90],
+  "winding_factor": 0.95,
+  "profiles": ["fast_decay_low_envelope", "slow_decay_high_envelope"],
+  "ramp_end_factor": 0,
+  "post_ramp_window_s": 0.5,
+  "step_s": 0.00002,
+  "regulator_drop_surrogate_V": 3,
+  "raw_warning_trial_V": [19.5, 19.7, 19.9],
+  "limits": [
+    "Same50VA/6800uF loaded-secondary surrogate as VAL-051; transformer and source impedance are not guaranteed or selected.",
+    "Both secondary amplitudes ramp together. Individual rail shorts and regulator failures are not represented.",
+    "First raw floor crossing means loss of documented3V regulator input-output reserve, not necessarily audio corruption.",
+    "A separate output=max(0,min(setpoint,raw-3V)) diagnostic supplies only a memoryless dropout sensitivity; it is not a regulator model and excludes local capacitor dynamics.",
+    "REF5 and comparator supply validity are assumed over the comparison interval; full reference and logic power sequencing is not modeled.",
+    "Raw warning trials are ideal threshold timings, not selected circuits or guaranteed trip thresholds.",
+    "Conditional relay current decay plus5ms contact/logic allocation is reused; actual contact timing remains unqualified.",
+    "Engineering failures must be retained; this diagnostic does not qualify purchasing, native CAD, quiet audio or populated fit."
+  ]
+}

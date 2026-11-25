@@ -1,0 +1,53 @@
+{
+  "evidence_checks_passed": true,
+  "engineering_accepted": false,
+  "qualified": false,
+  "native_adopted": false,
+  "purchase_ready": false,
+  "nodal_comparisons": 2000,
+  "maximum_nodal_error_V": 7.105427357601002e-15,
+  "failed_healthy_enable_cases": [
+    "50VA-hold122-slow_decay_high_envelope-ramp0.01-post_endurance_cap_screen",
+    "50VA-hold122-slow_decay_high_envelope-ramp0.05-post_endurance_cap_screen",
+    "50VA-hold122-slow_decay_high_envelope-ramp0.2-post_endurance_cap_screen",
+    "50VA-hold122-slow_decay_high_envelope-ramp1.0-post_endurance_cap_screen",
+    "50VA-hold128-slow_decay_high_envelope-ramp0.01-post_endurance_cap_screen",
+    "50VA-hold128-slow_decay_high_envelope-ramp0.05-post_endurance_cap_screen",
+    "50VA-hold128-slow_decay_high_envelope-ramp0.2-post_endurance_cap_screen",
+    "50VA-hold128-slow_decay_high_envelope-ramp1.0-post_endurance_cap_screen"
+  ],
+  "negative_controls_rejected": [
+    "false qualification",
+    "removed case",
+    "altered source hash"
+  ],
+  "discharge_checks": [
+    {
+      "id": "50VA-hold092-slow_decay_high_envelope-ramp0.2",
+      "independent_closed_form_discharge_error_V": 3.681377513942152e-08,
+      "interval_s": [
+        0.8061666666666667,
+        0.8161666666666667
+      ],
+      "basis": "Positive raw capacitor after secondary reaches zero; exact linear resistor/loading discharge equation. Same retained source model, not regulator/contact validation."
+    },
+    {
+      "id": "50VA-hold122-slow_decay_high_envelope-ramp0.01-post_endurance_cap_screen",
+      "independent_closed_form_discharge_error_V": 3.338739773539601e-08,
+      "interval_s": [
+        0.612,
+        0.622
+      ],
+      "basis": "Positive raw capacitor after secondary reaches zero; exact linear resistor/loading discharge equation. Same retained source model, not regulator/contact validation."
+    }
+  ],
+  "native_preserved_count": 22,
+  "inputs": {
+    "tools/check_brownout_timing.py": "b01e6070d5b15ef3f6673120e238cf79852071b8db2e88bcacddacb696c7f8b4",
+    "results/brownout-timing/screen.json": "18c0e6aea702fa42e9ee4b417d724413539dfc2c1462b69403f138692a8070ca",
+    "results/brownout-timing/raw-warning.json": "ab2f3ecabcbbde12233d47e487179efd9d0e61721863195d192649ef6511a30d",
+    "results/brownout-timing/source-observations.json": "e5439d6ad409bd726dea7b3770521b4d3a4c875219a100a4d4cd09e03d050003",
+    "ac-loss-contract.json": "ba732ebac1e827249752953ea1d73912d2caa33849e0453acb8139452dba2e86",
+    "tools/buffered_rail_budget.py": "04f7c718b654733c887ec8e1ce40da66d0cb9f1af44d73f5cdb9d8005ec617df"
+  }
+}

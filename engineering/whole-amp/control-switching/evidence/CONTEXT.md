@@ -10,3 +10,5 @@ Vishay-TNPW-e3-2026.pdf and Diodes-BAV199-2026.pdf support the buffered rail can
 TI-REF50-O.pdf and precision-source-observation.json retain the precision-reference manufacturer source and dated exact domestic comparator/reference listing fields. The record links reused comparator/HC14 source hashes and the domestic shipping policy. Listings are not checkout confirmations.
 
 onsemi-1N914-2024.pdf includes exact1N4148TR ordering and diode limits. KNSCHA-82CL0125-2023.pdf is the manufacturer approval for the220nF/63V candidate. Original URLs/hashes and dated Chinese listing observations are in ../results/ac-loss/source-observations.json. Hot leakage and film operating-temperature allocations remain unqualified; no purchasing release.
+
+KNSCHA-152EC0344-SHA.pdf supports the rejected raw-warning reservoir trial, including25% post-endurance capacitance change and conflicting general/specific leakage entries. Triad-VPT36-1390-2021.pdf confirms the existing50VA reference's typical specification, not an available Chinese purchase item. URLs/hashes and qualification limits are in ../results/brownout-timing/source-observations.json.

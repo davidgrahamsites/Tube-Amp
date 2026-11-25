@@ -1,0 +1,2056 @@
+{
+  "qualified": false,
+  "native_adopted": false,
+  "purchase_ready": false,
+  "contract": {
+    "owner": "control-switching integration",
+    "status": "candidate-diagnostic-not-native",
+    "job": "Test existing secondary-loss advance warning during finite-slope mains collapse and derive the raw-voltage warning window.",
+    "baseline": "5700c976c2b235dbdad6189ba074071370147e23",
+    "ramp_durations_s": [
+      0.01,
+      0.05,
+      0.2,
+      1.0
+    ],
+    "phases_deg": [
+      0,
+      90
+    ],
+    "winding_factor": 0.95,
+    "profiles": [
+      "fast_decay_low_envelope",
+      "slow_decay_high_envelope"
+    ],
+    "ramp_end_factor": 0,
+    "post_ramp_window_s": 0.5,
+    "step_s": 2e-05,
+    "regulator_drop_surrogate_V": 3,
+    "raw_warning_trial_V": [
+      19.5,
+      19.7,
+      19.9
+    ],
+    "limits": [
+      "Same50VA/6800uF loaded-secondary surrogate as VAL-051; transformer and source impedance are not guaranteed or selected.",
+      "Both secondary amplitudes ramp together. Individual rail shorts and regulator failures are not represented.",
+      "First raw floor crossing means loss of documented3V regulator input-output reserve, not necessarily audio corruption.",
+      "A separate output=max(0,min(setpoint,raw-3V)) diagnostic supplies only a memoryless dropout sensitivity; it is not a regulator model and excludes local capacitor dynamics.",
+      "REF5 and comparator supply validity are assumed over the comparison interval; full reference and logic power sequencing is not modeled.",
+      "Raw warning trials are ideal threshold timings, not selected circuits or guaranteed trip thresholds.",
+      "Conditional relay current decay plus5ms contact/logic allocation is reused; actual contact timing remains unqualified.",
+      "Engineering failures must be retained; this diagnostic does not qualify purchasing, native CAD, quiet audio or populated fit."
+    ]
+  },
+  "summary": {
+    "cases": 32,
+    "ac_raw_reserve_failures": 20,
+    "surrogate_combined_failures": 14,
+    "ideal_raw_trial_failures": {
+      "19.5": 24,
+      "19.7": 0,
+      "19.9": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "50VA-hold086-fast_decay_low_envelope-ramp0.01",
+      "case": {
+        "id": "50VA-hold086",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 0.01,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.08044145724989527,
+        "negative": 0.2131222119462478
+      },
+      "ac_detection_relative_s": [
+        0.008539907722978857,
+        0.008115878640970853
+      ],
+      "ac_reserve_before_raw_floor_s": 0.05294454952691641,
+      "surrogate_audio_floor_relative_s": 0.13458153526209382,
+      "surrogate_rail_detection_relative_s": 0.12835525297384476,
+      "surrogate_combined_mute_reserve_s": 0.10708462753911496,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.0035780898720532105,
+        "19.7": 0.0010565090213543495,
+        "19.9": 0.005691107875270832
+      },
+      "healthy_positive_raw_min_V": 22.181092365650517
+    },
+    {
+      "id": "50VA-hold086-fast_decay_low_envelope-ramp0.05",
+      "case": {
+        "id": "50VA-hold086",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 0.05,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.08117165858435538,
+        "negative": 0.21312221464597525
+      },
+      "ac_detection_relative_s": [
+        0.03360051331307279,
+        0.025413783359316877
+      ],
+      "ac_reserve_before_raw_floor_s": 0.02861414527128259,
+      "surrogate_audio_floor_relative_s": 0.13531173659656726,
+      "surrogate_rail_detection_relative_s": 0.1290854543083173,
+      "surrogate_combined_mute_reserve_s": 0.08275422328349447,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.003578089872051545,
+        "19.7": 0.0010565090213544605,
+        "19.9": 0.005691107875268501
+      },
+      "healthy_positive_raw_min_V": 22.181092365650517
+    },
+    {
+      "id": "50VA-hold086-fast_decay_low_envelope-ramp0.2",
+      "case": {
+        "id": "50VA-hold086",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 0.2,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.08913514496897534,
+        "negative": 0.21782584175982145
+      },
+      "ac_detection_relative_s": [
+        0.11720019807385251,
+        0.09213749697487061
+      ],
+      "ac_reserve_before_raw_floor_s": -0.04702205310487717,
+      "surrogate_audio_floor_relative_s": 0.14327522298116158,
+      "surrogate_rail_detection_relative_s": 0.1370489406929094,
+      "surrogate_combined_mute_reserve_s": 0.007118024907309065,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.0035780898720493247,
+        "19.7": 0.0010565090213549046,
+        "19.9": 0.0056911078752665024
+      },
+      "healthy_positive_raw_min_V": 22.181092365650517
+    },
+    {
+      "id": "50VA-hold086-fast_decay_low_envelope-ramp1.0",
+      "case": {
+        "id": "50VA-hold086",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 1.0,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.17750299789063528,
+        "negative": 0.25157462781504913
+      },
+      "ac_detection_relative_s": [
+        0.5755414413873604,
+        0.43388881669905677
+      ],
+      "ac_reserve_before_raw_floor_s": -0.4169954434967251,
+      "surrogate_audio_floor_relative_s": 0.2743263171574559,
+      "surrogate_rail_detection_relative_s": 0.26102773279395153,
+      "surrogate_combined_mute_reserve_s": -0.005658415636495603,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": 0.007325206219161887,
+        "19.7": 0.015642794602221958,
+        "19.9": 0.023993083053984735
+      },
+      "healthy_positive_raw_min_V": 22.181092365650517
+    },
+    {
+      "id": "50VA-hold086-slow_decay_high_envelope-ramp0.01",
+      "case": {
+        "id": "50VA-hold086",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 0.01,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.08043682376298344,
+        "negative": 0.21312598698550755
+      },
+      "ac_detection_relative_s": [
+        0.011725234792976935,
+        0.010487969291663957
+      ],
+      "ac_reserve_before_raw_floor_s": 0.04975458897000651,
+      "surrogate_audio_floor_relative_s": 0.13457690177518078,
+      "surrogate_rail_detection_relative_s": 0.12835061948692827,
+      "surrogate_combined_mute_reserve_s": 0.10389466698220384,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.0035780898720478814,
+        "19.7": 0.0010565090213576801,
+        "19.9": 0.0056911078752717205
+      },
+      "healthy_positive_raw_min_V": 22.18098583271281
+    },
+    {
+      "id": "50VA-hold086-slow_decay_high_envelope-ramp0.05",
+      "case": {
+        "id": "50VA-hold086",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 0.05,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.08116697104653015,
+        "negative": 0.2131259896852553
+      },
+      "ac_detection_relative_s": [
+        0.04755239626131891,
+        0.041888338146316983
+      ],
+      "ac_reserve_before_raw_floor_s": 0.01465757478521124,
+      "surrogate_audio_floor_relative_s": 0.13530704905873125,
+      "surrogate_rail_detection_relative_s": 0.12908076677048086,
+      "surrogate_combined_mute_reserve_s": 0.06879765279741235,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.0035780898720437736,
+        "19.7": 0.0010565090213597896,
+        "19.9": 0.005691107875269722
+      },
+      "healthy_positive_raw_min_V": 22.18098583271281
+    },
+    {
+      "id": "50VA-hold086-slow_decay_high_envelope-ramp0.2",
+      "case": {
+        "id": "50VA-hold086",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 0.2,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.08913041923416865,
+        "negative": 0.2178296168090471
+      },
+      "ac_detection_relative_s": [
+        0.16763199434740872,
+        0.15076904851927297
+      ],
+      "ac_reserve_before_raw_floor_s": -0.09745857511324008,
+      "surrogate_audio_floor_relative_s": 0.143270497246355,
+      "surrogate_rail_detection_relative_s": 0.13704421495810581,
+      "surrogate_combined_mute_reserve_s": -0.012730717711750824,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.0035780898720529884,
+        "19.7": 0.001056509021351907,
+        "19.9": 0.0056911078752668355
+      },
+      "healthy_positive_raw_min_V": 22.18098583271281
+    },
+    {
+      "id": "50VA-hold086-slow_decay_high_envelope-ramp1.0",
+      "case": {
+        "id": "50VA-hold086",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 1.0,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.17749857692943183,
+        "negative": 0.25157840285411837
+      },
+      "ac_detection_relative_s": [
+        0.8258233596103025,
+        0.7423782316494939
+      ],
+      "ac_reserve_before_raw_floor_s": -0.6672817826808707,
+      "surrogate_audio_floor_relative_s": 0.2743223250024096,
+      "surrogate_rail_detection_relative_s": 0.26102366474217387,
+      "surrogate_combined_mute_reserve_s": -0.005658339739764259,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": 0.0073252953395744926,
+        "19.7": 0.015642910564399263,
+        "19.9": 0.023993224146615092
+      },
+      "healthy_positive_raw_min_V": 22.18098583271281
+    },
+    {
+      "id": "50VA-hold092-fast_decay_low_envelope-ramp0.01",
+      "case": {
+        "id": "50VA-hold092",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6041666666666666,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 0.01,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.0825434274120107,
+        "negative": 0.21491990252356985
+      },
+      "ac_detection_relative_s": [
+        0.009834462884050987,
+        0.009320301822578037
+      ],
+      "ac_reserve_before_raw_floor_s": 0.05375196452795972,
+      "surrogate_audio_floor_relative_s": 0.13668350542420682,
+      "surrogate_rail_detection_relative_s": 0.13045722313595953,
+      "surrogate_combined_mute_reserve_s": 0.10789204254015583,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.003578089872045439,
+        "19.7": 0.0010565090213581242,
+        "19.9": 0.005691107875270721
+      },
+      "healthy_positive_raw_min_V": 22.181092365650517
+    },
+    {
+      "id": "50VA-hold092-fast_decay_low_envelope-ramp0.05",
+      "case": {
+        "id": "50VA-hold092",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6041666666666666,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 0.05,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.08399667547969358,
+        "negative": 0.21651574700577536
+      },
+      "ac_detection_relative_s": [
+        0.03736987274147974,
+        0.029284990284830337
+      ],
+      "ac_reserve_before_raw_floor_s": 0.027669802738213848,
+      "surrogate_audio_floor_relative_s": 0.1381367534918756,
+      "surrogate_rail_detection_relative_s": 0.13191047120362964,
+      "surrogate_combined_mute_reserve_s": 0.08180988075039586,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.0035780898720484365,
+        "19.7": 0.0010565090213556817,
+        "19.9": 0.005691107875268501
+      },
+      "healthy_positive_raw_min_V": 22.181092365650517
+    },
+    {
+      "id": "50VA-hold092-fast_decay_low_envelope-ramp0.2",
+      "case": {
+        "id": "50VA-hold092",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6041666666666666,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 0.2,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.08945751583835104,
+        "negative": 0.21869797231328392
+      },
+      "ac_detection_relative_s": [
+        0.12127226698763416,
+        0.088072109073147
+      ],
+      "ac_reserve_before_raw_floor_s": -0.05077175114928312,
+      "surrogate_audio_floor_relative_s": 0.14359759385053927,
+      "surrogate_rail_detection_relative_s": 0.1373713115622892,
+      "surrogate_combined_mute_reserve_s": 0.0033683268629051168,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.003578089872051878,
+        "19.7": 0.0010565090213541274,
+        "19.9": 0.005691107875273275
+      },
+      "healthy_positive_raw_min_V": 22.181092365650517
+    },
+    {
+      "id": "50VA-hold092-fast_decay_low_envelope-ramp1.0",
+      "case": {
+        "id": "50VA-hold092",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6041666666666666,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 1.0,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.17930574212880035,
+        "negative": 0.2516075169002594
+      },
+      "ac_detection_relative_s": [
+        0.5714073975552244,
+        0.43802769104127515
+      ],
+      "ac_reserve_before_raw_floor_s": -0.41105865542642406,
+      "surrogate_audio_floor_relative_s": 0.27255896779675903,
+      "surrogate_rail_detection_relative_s": 0.26279663002248,
+      "surrogate_combined_mute_reserve_s": -0.009194662225720959,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": 0.007294193110033102,
+        "19.7": 0.015596995316030763,
+        "19.9": 0.023929513451156573
+      },
+      "healthy_positive_raw_min_V": 22.181092365650517
+    },
+    {
+      "id": "50VA-hold092-slow_decay_high_envelope-ramp0.01",
+      "case": {
+        "id": "50VA-hold092",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6041666666666666,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 0.01,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.08253841510453086,
+        "negative": 0.2149231575761651
+      },
+      "ac_detection_relative_s": [
+        0.012234701500535627,
+        0.010997450610096382
+      ],
+      "ac_reserve_before_raw_floor_s": 0.05134671360399523,
+      "surrogate_audio_floor_relative_s": 0.13667849311672853,
+      "surrogate_rail_detection_relative_s": 0.13045221082847513,
+      "surrogate_combined_mute_reserve_s": 0.1054867916161929,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.0035780898720482145,
+        "19.7": 0.001056509021356792,
+        "19.9": 0.005691107875274496
+      },
+      "healthy_positive_raw_min_V": 22.18098583271281
+    },
+    {
+      "id": "50VA-hold092-slow_decay_high_envelope-ramp0.05",
+      "case": {
+        "id": "50VA-hold092",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6041666666666666,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 0.05,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.08399195837474449,
+        "negative": 0.2165194213377466
+      },
+      "ac_detection_relative_s": [
+        0.045920821896818564,
+        0.04468356165550247
+      ],
+      "ac_reserve_before_raw_floor_s": 0.01911413647792593,
+      "surrogate_audio_floor_relative_s": 0.13813203638693528,
+      "surrogate_rail_detection_relative_s": 0.13190575409868677,
+      "surrogate_combined_mute_reserve_s": 0.07325421449011671,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.003578089872045994,
+        "19.7": 0.0010565090213581242,
+        "19.9": 0.005691107875273497
+      },
+      "healthy_positive_raw_min_V": 22.18098583271281
+    },
+    {
+      "id": "50VA-hold092-slow_decay_high_envelope-ramp0.2",
+      "case": {
+        "id": "50VA-hold092",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6041666666666666,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 0.2,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.08945278562570502,
+        "negative": 0.21870172473988858
+      },
+      "ac_detection_relative_s": [
+        0.17136569073040353,
+        0.15469571243539126
+      ],
+      "ac_reserve_before_raw_floor_s": -0.10086990510469851,
+      "surrogate_audio_floor_relative_s": 0.14359286363789558,
+      "surrogate_rail_detection_relative_s": 0.13736658134964774,
+      "surrogate_combined_mute_reserve_s": -0.012730717711752156,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.003578089872051101,
+        "19.7": 0.0010565090213529062,
+        "19.9": 0.005691107875265836
+      },
+      "healthy_positive_raw_min_V": 22.18098583271281
+    },
+    {
+      "id": "50VA-hold092-slow_decay_high_envelope-ramp1.0",
+      "case": {
+        "id": "50VA-hold092",
+        "line_factor": 0.9391304347826087,
+        "frequency_hz": 60,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 120,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6041666666666666,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 1.0,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.1793013368906169,
+        "negative": 0.2516112909414725
+      },
+      "ac_detection_relative_s": [
+        0.8298962586177486,
+        0.7382749079362162
+      ],
+      "ac_reserve_before_raw_floor_s": -0.6695519217271317,
+      "surrogate_audio_floor_relative_s": 0.27255495654872286,
+      "surrogate_rail_detection_relative_s": 0.26279258081414203,
+      "surrogate_combined_mute_reserve_s": -0.009194624265419168,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": 0.007294284236045615,
+        "19.7": 0.01559711411786691,
+        "19.9": 0.02392965831099603
+      },
+      "healthy_positive_raw_min_V": 22.18098583271281
+    },
+    {
+      "id": "50VA-hold122-fast_decay_low_envelope-ramp0.01",
+      "case": {
+        "id": "50VA-hold122",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 0.01,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.03283048533531707,
+        "negative": 0.1121051453926627
+      },
+      "ac_detection_relative_s": [
+        0.009127827178780246,
+        0.008608308067609594
+      ],
+      "ac_reserve_before_raw_floor_s": 0.0047456581565368285,
+      "surrogate_audio_floor_relative_s": 0.0869705633475093,
+      "surrogate_rail_detection_relative_s": 0.08074428105925502,
+      "surrogate_combined_mute_reserve_s": 0.05888573616872905,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.003578089872045883,
+        "19.7": 0.001056509021362343,
+        "19.9": 0.005691107875277383
+      },
+      "healthy_positive_raw_min_V": 20.10352725159531
+    },
+    {
+      "id": "50VA-hold122-fast_decay_low_envelope-ramp0.05",
+      "case": {
+        "id": "50VA-hold122",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 0.05,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.03321320389407145,
+        "negative": 0.11210514542087069
+      },
+      "ac_detection_relative_s": [
+        0.030145350754138822,
+        0.020284211026073917
+      ],
+      "ac_reserve_before_raw_floor_s": -0.015889146860067368,
+      "surrogate_audio_floor_relative_s": 0.08735328190625724,
+      "surrogate_rail_detection_relative_s": 0.08112699961800363,
+      "surrogate_combined_mute_reserve_s": 0.03825093115211842,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.0035780898720534325,
+        "19.7": 0.001056509021351907,
+        "19.9": 0.005691107875264615
+      },
+      "healthy_positive_raw_min_V": 20.10352725159531
+    },
+    {
+      "id": "50VA-hold122-fast_decay_low_envelope-ramp0.2",
+      "case": {
+        "id": "50VA-hold122",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 0.2,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.042192120210528095,
+        "negative": 0.11713815482274348
+      },
+      "ac_detection_relative_s": [
+        0.10041535669841717,
+        0.06048850149024132
+      ],
+      "ac_reserve_before_raw_floor_s": -0.07718023648788908,
+      "surrogate_audio_floor_relative_s": 0.09633219822275307,
+      "surrogate_rail_detection_relative_s": 0.09010591593450301,
+      "surrogate_combined_mute_reserve_s": -0.012730717711749936,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.00357808975932394,
+        "19.7": 0.0011969954020902875,
+        "19.9": 0.005831594256001774
+      },
+      "healthy_positive_raw_min_V": 20.10352725159531
+    },
+    {
+      "id": "50VA-hold122-fast_decay_low_envelope-ramp1.0",
+      "case": {
+        "id": "50VA-hold122",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 1.0,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.0936215829463477,
+        "negative": 0.1564788028927706
+      },
+      "ac_detection_relative_s": [
+        0.4505841363160418,
+        0.27059156989043065
+      ],
+      "ac_reserve_before_raw_floor_s": -0.37591955336969407,
+      "surrogate_audio_floor_relative_s": 0.20186573287000853,
+      "surrogate_rail_detection_relative_s": 0.19087132395357354,
+      "surrogate_combined_mute_reserve_s": -0.007962591083565004,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": 0.01300733093243001,
+        "19.7": 0.023643491841139456,
+        "19.9": 0.0414550728284524
+      },
+      "healthy_positive_raw_min_V": 20.10352725159531
+    },
+    {
+      "id": "50VA-hold122-slow_decay_high_envelope-ramp0.01",
+      "case": {
+        "id": "50VA-hold122",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 0.01,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.032827211546810675,
+        "negative": 0.11210892040393639
+      },
+      "ac_detection_relative_s": [
+        0.011912429728895058,
+        0.010675176768429884
+      ],
+      "ac_reserve_before_raw_floor_s": 0.0019577818179156194,
+      "surrogate_audio_floor_relative_s": 0.086967289559013,
+      "surrogate_rail_detection_relative_s": 0.08074100727076305,
+      "surrogate_combined_mute_reserve_s": 0.056097859830117947,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.003578089872056319,
+        "19.7": 0.0010565090213496865,
+        "19.9": 0.0056911078752616175
+      },
+      "healthy_positive_raw_min_V": 20.103307683219246
+    },
+    {
+      "id": "50VA-hold122-slow_decay_high_envelope-ramp0.05",
+      "case": {
+        "id": "50VA-hold122",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 0.05,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.03320988766182564,
+        "negative": 0.11210892043214704
+      },
+      "ac_detection_relative_s": [
+        0.047189199708667195,
+        0.04005623684918436
+      ],
+      "ac_reserve_before_raw_floor_s": -0.032936312046841554,
+      "surrogate_audio_floor_relative_s": 0.08734996567402054,
+      "surrogate_rail_detection_relative_s": 0.0811236833857697,
+      "surrogate_combined_mute_reserve_s": 0.021203765965353342,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.0035780898720472153,
+        "19.7": 0.0010565090213576801,
+        "19.9": 0.005691107875273497
+      },
+      "healthy_positive_raw_min_V": 20.103307683219246
+    },
+    {
+      "id": "50VA-hold122-slow_decay_high_envelope-ramp0.2",
+      "case": {
+        "id": "50VA-hold122",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 0.2,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.04218877724124015,
+        "negative": 0.11714192984482441
+      },
+      "ac_detection_relative_s": [
+        0.16078603453134066,
+        0.14065644668077015
+      ],
+      "ac_reserve_before_raw_floor_s": -0.1375542572901005,
+      "surrogate_audio_floor_relative_s": 0.09632885525346269,
+      "surrogate_rail_detection_relative_s": 0.09010257296521196,
+      "surrogate_combined_mute_reserve_s": -0.01273071771174927,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.003578089759348143,
+        "19.7": 0.0011969770634965328,
+        "19.9": 0.005831575917408353
+      },
+      "healthy_positive_raw_min_V": 20.103307683219246
+    },
+    {
+      "id": "50VA-hold122-slow_decay_high_envelope-ramp1.0",
+      "case": {
+        "id": "50VA-hold122",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.6,
+        "phase_deg": 0
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 1.0,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.09361829745351069,
+        "negative": 0.15648257793182396
+      },
+      "ac_detection_relative_s": [
+        0.7809612675535121,
+        0.6708447147609738
+      ],
+      "ac_reserve_before_raw_floor_s": -0.7062999701000015,
+      "surrogate_audio_floor_relative_s": 0.20186269275457058,
+      "surrogate_rail_detection_relative_s": 0.19086825683576847,
+      "surrogate_combined_mute_reserve_s": -0.007962564081197884,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": 0.013007339351649109,
+        "19.7": 0.023643501319168484,
+        "19.9": 0.04145507617918898
+      },
+      "healthy_positive_raw_min_V": 20.103307683219246
+    },
+    {
+      "id": "50VA-hold128-fast_decay_low_envelope-ramp0.01",
+      "case": {
+        "id": "50VA-hold128",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.605,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 0.01,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.03519017499802679,
+        "negative": 0.1141024765669365
+      },
+      "ac_detection_relative_s": [
+        0.009323110566366699,
+        0.005408469282806916
+      ],
+      "ac_reserve_before_raw_floor_s": 0.006910064431660094,
+      "surrogate_audio_floor_relative_s": 0.08933025301022435,
+      "surrogate_rail_detection_relative_s": 0.08310397072197206,
+      "surrogate_combined_mute_reserve_s": 0.06105014244385765,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.003578089872049991,
+        "19.7": 0.0010565090213554597,
+        "19.9": 0.005691107875266169
+      },
+      "healthy_positive_raw_min_V": 20.10352725159531
+    },
+    {
+      "id": "50VA-hold128-fast_decay_low_envelope-ramp0.05",
+      "case": {
+        "id": "50VA-hold128",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.605,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 0.05,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.037007686109743365,
+        "negative": 0.11606597665569152
+      },
+      "ac_detection_relative_s": [
+        0.02550729796544171,
+        0.015569487201159471
+      ],
+      "ac_reserve_before_raw_floor_s": -0.007456611855698344,
+      "surrogate_audio_floor_relative_s": 0.0911477641219337,
+      "surrogate_rail_detection_relative_s": 0.08492148183368264,
+      "surrogate_combined_mute_reserve_s": 0.04668346615649199,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.00357808987205532,
+        "19.7": 0.0010565090213505747,
+        "19.9": 0.0056911078752617285
+      },
+      "healthy_positive_raw_min_V": 20.10352725159531
+    },
+    {
+      "id": "50VA-hold128-fast_decay_low_envelope-ramp0.2",
+      "case": {
+        "id": "50VA-hold128",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.605,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 0.2,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.04266643855572916,
+        "negative": 0.11816367667031713
+      },
+      "ac_detection_relative_s": [
+        0.09550281785042125,
+        0.05559705122291292
+      ],
+      "ac_reserve_before_raw_floor_s": -0.0717933792946921,
+      "surrogate_audio_floor_relative_s": 0.09680651656792993,
+      "surrogate_rail_detection_relative_s": 0.09058023427967976,
+      "surrogate_combined_mute_reserve_s": -0.012730717711749825,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.00357790067273955,
+        "19.7": 0.0010566982206644572,
+        "19.9": 0.0065774568378069755
+      },
+      "healthy_positive_raw_min_V": 20.10352725159531
+    },
+    {
+      "id": "50VA-hold128-fast_decay_low_envelope-ramp1.0",
+      "case": {
+        "id": "50VA-hold128",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.605,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "fast_decay_low_envelope",
+        "scale": 0.98,
+        "feed": 1.02,
+        "cap": 0.8,
+        "vf": 1.2,
+        "leak": 5e-05,
+        "fb": 0,
+        "ref": 4.985,
+        "ib": 6.25e-08
+      },
+      "ramp_s": 1.0,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.09625548944148732,
+        "negative": 0.15635622451651654
+      },
+      "ac_detection_relative_s": [
+        0.45555339154306274,
+        0.2755549179482606
+      ],
+      "ac_reserve_before_raw_floor_s": -0.3782549021015754,
+      "surrogate_audio_floor_relative_s": 0.2042470487880118,
+      "surrogate_rail_detection_relative_s": 0.18848440171464365,
+      "surrogate_combined_mute_reserve_s": -0.0031943529266318348,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": 0.012722409856996467,
+        "19.7": 0.02936422049404919,
+        "19.9": 0.04055994253281592
+      },
+      "healthy_positive_raw_min_V": 20.10352725159531
+    },
+    {
+      "id": "50VA-hold128-slow_decay_high_envelope-ramp0.01",
+      "case": {
+        "id": "50VA-hold128",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.605,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 0.01,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.03518674222811646,
+        "negative": 0.1141062207723278
+      },
+      "ac_detection_relative_s": [
+        0.011345422440473207,
+        0.010108162577862512
+      ],
+      "ac_reserve_before_raw_floor_s": 0.004884319787643258,
+      "surrogate_audio_floor_relative_s": 0.08932682024031491,
+      "surrogate_rail_detection_relative_s": 0.08310053795206507,
+      "surrogate_combined_mute_reserve_s": 0.0590243977998417,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.0035780898720472153,
+        "19.7": 0.001056509021357125,
+        "19.9": 0.005691107875270055
+      },
+      "healthy_positive_raw_min_V": 20.103307683219246
+    },
+    {
+      "id": "50VA-hold128-slow_decay_high_envelope-ramp0.05",
+      "case": {
+        "id": "50VA-hold128",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.605,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 0.05,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.03700436970041354,
+        "negative": 0.11606974577720841
+      },
+      "ac_detection_relative_s": [
+        0.0448739429562417,
+        0.04363669000490866
+      ],
+      "ac_reserve_before_raw_floor_s": -0.026826573255828153,
+      "surrogate_audio_floor_relative_s": 0.09114444771260366,
+      "surrogate_rail_detection_relative_s": 0.08491816542435393,
+      "surrogate_combined_mute_reserve_s": 0.027313504756361965,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.0035780898720494357,
+        "19.7": 0.0010565090213584573,
+        "19.9": 0.005691107875274385
+      },
+      "healthy_positive_raw_min_V": 20.103307683219246
+    },
+    {
+      "id": "50VA-hold128-slow_decay_high_envelope-ramp0.2",
+      "case": {
+        "id": "50VA-hold128",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.605,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 0.2,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.04266309268587931,
+        "negative": 0.11816745038208054
+      },
+      "ac_detection_relative_s": [
+        0.16541680201038422,
+        0.14542035907224338
+      ],
+      "ac_reserve_before_raw_floor_s": -0.1417107093245049,
+      "surrogate_audio_floor_relative_s": 0.09680317069808264,
+      "surrogate_rail_detection_relative_s": 0.09057688840983347,
+      "surrogate_combined_mute_reserve_s": -0.012730717711750824,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": -0.003577900727114499,
+        "19.7": 0.0010566981662899523,
+        "19.9": 0.00657742355156277
+      },
+      "healthy_positive_raw_min_V": 20.103307683219246
+    },
+    {
+      "id": "50VA-hold128-slow_decay_high_envelope-ramp1.0",
+      "case": {
+        "id": "50VA-hold128",
+        "line_factor": 0.8608695652173913,
+        "frequency_hz": 50,
+        "winding": {
+          "name": "VPT36-1390 typical-resistive surrogate",
+          "open_circuit_half_rms_V": 19.152,
+          "series_ohm_per_half": 1.5539568345323742
+        },
+        "reservoir_uF": 5440.0,
+        "nominal_cap_uF": 6800,
+        "load": {
+          "name": "expansion_stress",
+          "audio_each_rail_A": 0.1,
+          "logic_5V_A": 0.02,
+          "relays_on": 3
+        },
+        "winding_voltage_factor": 0.95,
+        "selector_V": 220,
+        "line_fraction": 0.9,
+        "cutoff_s": 0.605,
+        "phase_deg": 90
+      },
+      "profile": {
+        "name": "slow_decay_high_envelope",
+        "scale": 1.02,
+        "feed": 0.98,
+        "cap": 1.2,
+        "vf": 0.4,
+        "leak": 0,
+        "fb": 5.25,
+        "ref": 5.015,
+        "ib": -6.25e-08
+      },
+      "ramp_s": 1.0,
+      "step_s": 2e-05,
+      "raw_floor_relative_s": {
+        "positive": 0.09625222191155891,
+        "negative": 0.1563599995115852
+      },
+      "ac_detection_relative_s": [
+        0.7858069210468388,
+        0.6757702811055923
+      ],
+      "ac_reserve_before_raw_floor_s": -0.7085116991352799,
+      "surrogate_audio_floor_relative_s": 0.20424402232902072,
+      "surrogate_rail_detection_relative_s": 0.18848132123837225,
+      "surrogate_combined_mute_reserve_s": -0.0031942989093515194,
+      "ideal_positive_raw_warning_reserve_s": {
+        "19.5": 0.012722435304021177,
+        "19.7": 0.029364248279429853,
+        "19.9": 0.0405599672798983
+      },
+      "healthy_positive_raw_min_V": 20.103307683219246
+    }
+  ],
+  "refinements": [
+    {
+      "coarse_id": "50VA-hold128-slow_decay_high_envelope-ramp1.0",
+      "timing_deltas_s": {
+        "ac_reserve_before_raw_floor_s": 5.2254780169569415e-08,
+        "surrogate_combined_mute_reserve_s": 1.1196921168021845e-10
+      },
+      "fine": {
+        "id": "50VA-hold128-slow_decay_high_envelope-ramp1.0",
+        "case": {
+          "id": "50VA-hold128",
+          "line_factor": 0.8608695652173913,
+          "frequency_hz": 50,
+          "winding": {
+            "name": "VPT36-1390 typical-resistive surrogate",
+            "open_circuit_half_rms_V": 19.152,
+            "series_ohm_per_half": 1.5539568345323742
+          },
+          "reservoir_uF": 5440.0,
+          "nominal_cap_uF": 6800,
+          "load": {
+            "name": "expansion_stress",
+            "audio_each_rail_A": 0.1,
+            "logic_5V_A": 0.02,
+            "relays_on": 3
+          },
+          "winding_voltage_factor": 0.95,
+          "selector_V": 220,
+          "line_fraction": 0.9,
+          "cutoff_s": 0.605,
+          "phase_deg": 90
+        },
+        "profile": {
+          "name": "slow_decay_high_envelope",
+          "scale": 1.02,
+          "feed": 0.98,
+          "cap": 1.2,
+          "vf": 0.4,
+          "leak": 0,
+          "fb": 5.25,
+          "ref": 5.015,
+          "ib": -6.25e-08
+        },
+        "ramp_s": 1.0,
+        "step_s": 1e-05,
+        "raw_floor_relative_s": {
+          "positive": 0.09625221625544367,
+          "negative": 0.1563599959784362
+        },
+        "ac_detection_relative_s": [
+          0.7858069676455037,
+          0.675770045019576
+        ],
+        "ac_reserve_before_raw_floor_s": -0.7085117513900601,
+        "surrogate_audio_floor_relative_s": 0.2042440177168935,
+        "surrogate_rail_detection_relative_s": 0.1884813165142758,
+        "surrogate_combined_mute_reserve_s": -0.0031942987973823077,
+        "ideal_positive_raw_warning_reserve_s": {
+          "19.5": 0.012722435913575362,
+          "19.7": 0.029364249368947663,
+          "19.9": 0.04055996860602562
+        },
+        "healthy_positive_raw_min_V": 20.10329330759197
+      }
+    },
+    {
+      "coarse_id": "50VA-hold092-slow_decay_high_envelope-ramp0.2",
+      "timing_deltas_s": {
+        "ac_reserve_before_raw_floor_s": 2.0049725546478214e-08,
+        "surrogate_combined_mute_reserve_s": 7.238654120556021e-14
+      },
+      "fine": {
+        "id": "50VA-hold092-slow_decay_high_envelope-ramp0.2",
+        "case": {
+          "id": "50VA-hold092",
+          "line_factor": 0.9391304347826087,
+          "frequency_hz": 60,
+          "winding": {
+            "name": "VPT36-1390 typical-resistive surrogate",
+            "open_circuit_half_rms_V": 19.152,
+            "series_ohm_per_half": 1.5539568345323742
+          },
+          "reservoir_uF": 5440.0,
+          "nominal_cap_uF": 6800,
+          "load": {
+            "name": "expansion_stress",
+            "audio_each_rail_A": 0.1,
+            "logic_5V_A": 0.02,
+            "relays_on": 3
+          },
+          "winding_voltage_factor": 0.95,
+          "selector_V": 120,
+          "line_fraction": 0.9,
+          "cutoff_s": 0.6041666666666666,
+          "phase_deg": 90
+        },
+        "profile": {
+          "name": "slow_decay_high_envelope",
+          "scale": 1.02,
+          "feed": 0.98,
+          "cap": 1.2,
+          "vf": 0.4,
+          "leak": 0,
+          "fb": 5.25,
+          "ref": 5.015,
+          "ib": -6.25e-08
+        },
+        "ramp_s": 0.2,
+        "step_s": 1e-05,
+        "raw_floor_relative_s": {
+          "positive": 0.08945278338909524,
+          "negative": 0.21870172802301513
+        },
+        "ac_detection_relative_s": [
+          0.1713656684440682,
+          0.1546956944198693
+        ],
+        "ac_reserve_before_raw_floor_s": -0.10086988505497296,
+        "surrogate_audio_floor_relative_s": 0.14359286140062755,
+        "surrogate_rail_detection_relative_s": 0.1373665791124521,
+        "surrogate_combined_mute_reserve_s": -0.012730717711824543,
+        "ideal_positive_raw_warning_reserve_s": {
+          "19.5": -0.0035780898722425035,
+          "19.7": 0.0010565090211024399,
+          "19.9": 0.005691107874956417
+        },
+        "healthy_positive_raw_min_V": 22.180897690278663
+      }
+    }
+  ],
+  "decks": {
+    "50VA-hold086-fast_decay_low_envelope-ramp0.01": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.61-time)/0.01))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.61-time)/0.01))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.1099999999999999 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold086-fast_decay_low_envelope-ramp0.05": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.65-time)/0.05))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.65-time)/0.05))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.15 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold086-fast_decay_low_envelope-ramp0.2": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.8-time)/0.2))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.8-time)/0.2))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.3 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold086-fast_decay_low_envelope-ramp1.0": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(1.6-time)/1.0))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(1.6-time)/1.0))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 2.1 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold086-slow_decay_high_envelope-ramp0.01": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.61-time)/0.01))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.61-time)/0.01))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.1099999999999999 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold086-slow_decay_high_envelope-ramp0.05": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.65-time)/0.05))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.65-time)/0.05))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.15 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold086-slow_decay_high_envelope-ramp0.2": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.8-time)/0.2))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.8-time)/0.2))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.3 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold086-slow_decay_high_envelope-ramp1.0": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(1.6-time)/1.0))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(1.6-time)/1.0))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 2.1 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold092-fast_decay_low_envelope-ramp0.01": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.6141666666666666-time)/0.01))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.6141666666666666-time)/0.01))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.1141666666666667 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold092-fast_decay_low_envelope-ramp0.05": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.6541666666666667-time)/0.05))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.6541666666666667-time)/0.05))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.1541666666666668 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold092-fast_decay_low_envelope-ramp0.2": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.8041666666666667-time)/0.2))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.8041666666666667-time)/0.2))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.3041666666666667 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold092-fast_decay_low_envelope-ramp1.0": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(1.6041666666666665-time)/1.0))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(1.6041666666666665-time)/1.0))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 2.1041666666666665 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold092-slow_decay_high_envelope-ramp0.01": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.6141666666666666-time)/0.01))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.6141666666666666-time)/0.01))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.1141666666666667 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold092-slow_decay_high_envelope-ramp0.05": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.6541666666666667-time)/0.05))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.6541666666666667-time)/0.05))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.1541666666666668 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold092-slow_decay_high_envelope-ramp0.2": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.8041666666666667-time)/0.2))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.8041666666666667-time)/0.2))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.3041666666666667 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold092-slow_decay_high_envelope-ramp1.0": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(1.6041666666666665-time)/1.0))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(1.6041666666666665-time)/1.0))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 2.1041666666666665 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold122-fast_decay_low_envelope-ramp0.01": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.61-time)/0.01))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.61-time)/0.01))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.1099999999999999 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold122-fast_decay_low_envelope-ramp0.05": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.65-time)/0.05))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.65-time)/0.05))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.15 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold122-fast_decay_low_envelope-ramp0.2": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.8-time)/0.2))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.8-time)/0.2))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.3 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold122-fast_decay_low_envelope-ramp1.0": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(1.6-time)/1.0))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(1.6-time)/1.0))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 2.1 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold122-slow_decay_high_envelope-ramp0.01": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.61-time)/0.01))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.61-time)/0.01))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.1099999999999999 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold122-slow_decay_high_envelope-ramp0.05": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.65-time)/0.05))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.65-time)/0.05))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.15 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold122-slow_decay_high_envelope-ramp0.2": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.8-time)/0.2))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.8-time)/0.2))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.3 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold122-slow_decay_high_envelope-ramp1.0": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(1.6-time)/1.0))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(1.6-time)/1.0))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 2.1 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold128-fast_decay_low_envelope-ramp0.01": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.615-time)/0.01))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.615-time)/0.01))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.115 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold128-fast_decay_low_envelope-ramp0.05": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.655-time)/0.05))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.655-time)/0.05))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.155 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold128-fast_decay_low_envelope-ramp0.2": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.8049999999999999-time)/0.2))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.8049999999999999-time)/0.2))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.305 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold128-fast_decay_low_envelope-ramp1.0": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(1.605-time)/1.0))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(1.605-time)/1.0))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 2.105 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-1.2)/4794.0-5e-05*min(1,max(0,v(env,ac2)))\nCENV env 0 1.7600000000000001e-07\nRBENV env 0 9800.0\nRSTOP env sense 215600.0\nRSBOT sense 0 21560.0\nRFBDET detfb sense 8036000.0\nVFBDET detfb 0 0\nVREFDET detref 0 4.985\nRBIASDET detref sense 980000.0\nIIBDET sense 0 6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold128-slow_decay_high_envelope-ramp0.01": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.615-time)/0.01))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.615-time)/0.01))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.115 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold128-slow_decay_high_envelope-ramp0.05": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.655-time)/0.05))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.655-time)/0.05))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.155 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold128-slow_decay_high_envelope-ramp0.2": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.8049999999999999-time)/0.2))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(0.8049999999999999-time)/0.2))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 1.305 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold128-slow_decay_high_envelope-ramp1.0": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(1.605-time)/1.0))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(1.605-time)/1.0))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 2e-05 2.105 0 2e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold128-slow_decay_high_envelope-ramp1.0-fine": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(1.605-time)/1.0))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(1.605-time)/1.0))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 1e-05 2.105 0 1e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n",
+    "50VA-hold092-slow_decay_high_envelope-ramp0.2-fine": "Auxiliary rectifier envelope; assumed raw loads, NOT regulator model\nVA s1 bxs1 0\nBXs1 bxs1 0 V=25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.8041666666666667-time)/0.2))\nVB s2 bxs2 0\nBXs2 bxs2 0 V=-25.43636486808268*sin(2*pi*60*time)*max(0,min(1,(0.8041666666666667-time)/0.2))\nRA s1 ac1 1.5539568345323742\nRB s2 ac2 1.5539568345323742\nD201 ac1 rawp rect\nD202 ac2 rawp rect\nD203 rawn ac1 rect\nD204 rawn ac2 rect\nRP rawp cp 0.15\nRN rawn cn 0.15\nC201 cp 0 5440.0u\nC208 0 cn 5440.0u\nIP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)\nIN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)\nRBP rawp 0 100meg\nRBN 0 rawn 100meg\n.model rect D(Is=10n N=1.8 Rs=0.05)\n.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap\n.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]\n.tran 1e-05 1.3041666666666667 0 1e-05\n* Explicit bounded secondary envelope; not a manufacturer diode model\nBSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))\nBSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))\nCENV env 0 2.64e-07\nRBENV env 0 10200.0\nRSTOP env sense 224400.0\nRSBOT sense 0 22440.0\nRFBDET detfb sense 8364000.0\nVFBDET detfb 0 5.25\nVREFDET detref 0 5.015\nRBIASDET detref sense 1020000.0\nIIBDET sense 0 -6.25e-08\nRCAPLEAK env 0 1000000000\n.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]\n\n.end\n"
+  },
+  "input_sha256": {
+    "control-switching/brownout-timing-contract.json": "287132c922156c8ebad1d5d2c74bda5b9ce47ce44b055965cc4af715ce108432",
+    "control-switching/ac-loss-contract.json": "ba732ebac1e827249752953ea1d73912d2caa33849e0453acb8139452dba2e86",
+    "control-switching/results/ac-loss/screen.json": "d9f28bc1c039cda55aa29912a488a42d98a94cc18686bf976168a8ea9934866c",
+    "control-switching/results/rail-monitor-precision-budget.json": "f81bb14f730d9a611b006ef9720a2e69a13cfe7eb4c526d36686b67cd5c78716",
+    "aux-supply/results/hold-up/comparison.json": "198cb08787ad9844d7b67c7672dccfe3f778ad279700d33f349306bb3ed46cf5",
+    "control-switching/tools/brownout_timing.py": "2b2b0590ee1785b87cfda1a04810ad389636dc42038fab5d8e2ee15252c395f1",
+    "control-switching/tools/ac_loss_detector.py": "e5eeed025b921d5b52bca47768310127800231fce48b03bae36399aff373f37c"
+  }
+}

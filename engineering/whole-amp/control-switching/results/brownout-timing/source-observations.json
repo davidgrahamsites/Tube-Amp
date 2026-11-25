@@ -1,0 +1,70 @@
+{
+  "observed_on": "2026-11-25",
+  "listing_url": "https://item.szlcsc.com/6369689.html",
+  "listing_sha256": "a4f94db4b658ebda117b4f98327065765c10dd6ff14adc218da661f13a19bb3b",
+  "fields": {
+    "productModel": "152EC0344",
+    "productCode": "C5456836",
+    "stockNumber": 168,
+    "minBuyNumber": 1,
+    "theRatio": 1
+  },
+  "structured_offer_CNY": 8.31,
+  "price_basis": "HTML schema.org offer; checkout/shipping not verified",
+  "manufacturer_pdf": {
+    "path": "evidence/KNSCHA-152EC0344-SHA.pdf",
+    "url": "https://atta.szlcsc.com/upload/public/pdf/source/20230425/A6875959CF104131E7342BE07C946E43.pdf",
+    "sha256": "3c3cfda1a5ff72b1fa11d02e0cfe059efde20008c733736fcec715acdee860d5"
+  },
+  "specifications": {
+    "capacitance_uF": 10000,
+    "initial_tolerance_fraction": 0.2,
+    "voltage_V": 50,
+    "body_diameter_mm": 35,
+    "body_length_mm": 40,
+    "ripple_A_at120Hz": 4.04,
+    "load_test_hours": 3000,
+    "load_test_temperature_C": 105,
+    "post_load_cap_change_fraction": 0.25,
+    "specific_product_leakage_max_uA": 2121,
+    "specific_product_DF_max": 0.3
+  },
+  "conflicts": [
+    "Specific product table gives2121uA leakage while general series0.01CV formula gives5000uA. Use the larger bound until reconciled.",
+    "General series pages are not an exact approved lead/slot drawing for the delivered item.",
+    "ESR at cold and end-of-test conditions is not established by the room-temperature tan-delta entry alone."
+  ],
+  "not_adopted": true,
+  "purchase_ready": false,
+  "shanghai_checkout_verified": false,
+  "limits": [
+    "Only stock route for candidate, not supply adoption or capacity qualification.",
+    "Rectifier/inrush/transformer/ripple/heat, cap leakage and socketed regulator mechanics remain open.",
+    "Raw-warning comparison includes5mA positive reservoir leakage from the larger conflicting datasheet expression. This remains a sensitivity, not a continuous-hot guarantee."
+  ],
+  "shipping_basis": {
+    "url": "https://www.szlcsc.com/help/202.html",
+    "observed_on": "2026-11-25",
+    "policy": "Domestic couriers SF, EMS and ZTO; shipping amount depends on checkout and weight.",
+    "assessment": "Stock on the Chinese domestic site plus the domestic-courier policy supports a Shanghai sourcing route. Specific address service and final freight are not quoted; an order is not required to document the route."
+  },
+  "transformer_reference": {
+    "path": "evidence/Triad-VPT36-1390-2021.pdf",
+    "url": "https://catalog.triadmagnetics.com/asset/vpt36-1390.pdf",
+    "sha256": "150c7e7b654519d65264b914a7ecdf8c153cd1c5941136a54bee0c01de925ef5",
+    "publication": "2021-10-12",
+    "confirmed": [
+      "50VA",
+      "36VCT1.39A series /18V2.78A parallel",
+      "115/230V50/60Hz",
+      "12%typ regulation",
+      "83mm maximum diameter",
+      "36mm maximum body height plus3mm mounting hardware"
+    ],
+    "status": "Reference surrogate only; exact China stock route remains unverified."
+  },
+  "release_alternative_primary_source": {
+    "url": "https://www.ia.omron.com/product/cautions/36/safety_precautions.html",
+    "basis": "Manufacturer describes slower release with diode suppression and diode+zener alternative. Not a G5V-2 contact-time guarantee or approved clamp design."
+  }
+}

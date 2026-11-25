@@ -1,0 +1,41 @@
+{
+  "owner": "control-switching integration",
+  "status": "candidate-comparison-not-native",
+  "job": "Compare the unused secondary-detector comparator as a positive raw-supply warning against the identified brownout timing gap.",
+  "connections": [
+    "Use the unused LM393BIDR half in the proposed AC-loss package: plus=RAW_SENSE, minus=REF5, collector=shared RAIL_OK.",
+    "RAW_SENSE from raw positive through3k, to GND through1.01k and to RAIL_OK through1M. Local bypass remains shared with the other half.",
+    "Positive reservoir trial10000uF/50V; negative trial remains6800uF. Neither replaces native1000uF yet.",
+    "Reference bleeder trial6.8k replaces7.5k only in this separate candidate; complete combined loading/backfeed audit pending."
+  ],
+  "positive_resistors_ohm": {
+    "rail": 3000,
+    "ground": 1010,
+    "feedback": 1000000
+  },
+  "resistor_fraction": 0.004,
+  "reference_bleeder_trial_ohm": 6800,
+  "positive_cap_nominal_F": 0.01,
+  "profiles": [
+    {
+      "name": "initial_low_cap",
+      "cap_fraction": 0.8,
+      "esr_ohm": 0.15
+    },
+    {
+      "name": "post_endurance_cap_screen",
+      "cap_fraction": 0.6,
+      "esr_ohm": 0.3
+    }
+  ],
+  "limits": [
+    "Raw-warning feedback is held at existing detector profile bounds in the loaded circuit; threshold corners are separately enclosed, not an exact coupled comparator transient model.",
+    "Full2ms asserted pulse required before crediting the existing50ms conditional restart delay; shorter pulses remain in the report.",
+    "20% initial tolerance multiplied by25% loss after the manufacturer3000h105C test gives60% nominal as a sensitivity. It is not a service-life prediction or continuous-hot guarantee. ESR0.15/0.3ohm remain allocations; the datasheet does not specify a complete cold/endurance ESR bound at these values.",
+    "Extra divider load is explicitly added on top of the retained auxiliary load allowance.",
+    "Reference backfeed, current, supply common-mode and full sequencing must be checked before adoption; these simulations alone do not qualify them.",
+    "Sourceable capacitor candidate152EC0344 C5456836 is35x40mm; footprint/inrush/ripple/heat/populated fit and Shanghai checkout are pending.",
+    "Specific product table leakage2121uA conflicts with general series0.01CV=5000uA. Add5mA to the positive raw load as a sensitivity until manufacturer conditions are reconciled; no guaranteed full-temperature leakage claim."
+  ],
+  "cap_leakage_screen_A": 0.005
+}
