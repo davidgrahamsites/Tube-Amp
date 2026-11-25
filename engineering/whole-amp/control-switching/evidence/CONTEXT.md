@@ -8,3 +8,5 @@ TI-LM393-AH.pdf and TI-comparator-guidelines-SNOAA35F.pdf are primary inputs for
 Vishay-TNPW-e3-2026.pdf and Diodes-BAV199-2026.pdf support the buffered rail candidate. URLs/hashes and incomplete Chinese sourcing are in ../results/rail-monitor-buffered-sources.json. Exact temperature/life test conditions must accompany each limit.
 
 TI-REF50-O.pdf and precision-source-observation.json retain the precision-reference manufacturer source and dated exact domestic comparator/reference listing fields. The record links reused comparator/HC14 source hashes and the domestic shipping policy. Listings are not checkout confirmations.
+
+onsemi-1N914-2024.pdf includes exact1N4148TR ordering and diode limits. KNSCHA-82CL0125-2023.pdf is the manufacturer approval for the220nF/63V candidate. Original URLs/hashes and dated Chinese listing observations are in ../results/ac-loss/source-observations.json. Hot leakage and film operating-temperature allocations remain unqualified; no purchasing release.

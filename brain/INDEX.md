@@ -82,3 +82,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-049 | validation | schematic | documented | 2026-11-25 | [Passive wet-fault transfer and delayed-shunt limitation](records/VAL-049-wet-fault-transfer.md) |
 | VAL-050 | validation | schematic | documented | 2026-11-25 | [Audio-headroom correction and precision monitor](records/VAL-050-rail-headroom-precision.md) |
 | VAL-051 | validation | schematic | documented | 2026-11-25 | [Auxiliary supply reserve for advance relay mute](records/VAL-051-auxiliary-hold-up.md) |
+| VAL-052 | validation | schematic | documented | 2026-11-25 | [Secondary-loss detector and shared inhibit interface](records/VAL-052-secondary-loss-detector.md) |

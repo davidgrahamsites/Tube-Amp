@@ -12,7 +12,7 @@
     ],
     "output": "REV_GATE",
     "comparator": "TI LM393BIDR SOIC-8 on removable carrier/socket; powered by +12V/GND",
-    "connections": "Positive comparator minus directly REF5; plus PSENSE from +15 through1.78k, GND through1k, RAIL_OK through61.9k. Negative network retains attenuated clamp topology, fed by REF5. Comparator collectors join RAIL_OK with1.5k to REF5, plus8.2k REF5-to-GND bleeder. Subsequent inhibit/delay interface retains candidate status; R341 is still native1k.",
+    "connections": "Positive comparator minus directly REF5; plus PSENSE from +15 through1.78k, GND through1k, RAIL_OK through61.9k. Negative network retains attenuated clamp topology, fed by REF5. Comparator collectors join RAIL_OK with1.5k to REF5, plus7.5k REF5-to-GND bleeder. Subsequent inhibit/delay interface retains candidate status; R341 is still native1k.",
     "reference": "TI REF5050AIDR SOIC-8 on removable carrier/socket; +12V input, separate REF5 output; 1uF output capacitor per datasheet test condition; exact stability network pending."
   },
   "positive_resistors_ohm": {
@@ -71,7 +71,7 @@
     "Reference +/-0.3% includes declared static terms but ageing, solder and hysteresis are not guaranteed; total needs validation.",
     "Resistor total +/-0.4% remains conditional on exact sourced family and profile; series68ohm component included.",
     "0.1V hysteresis is a new noise allocation, not proof of sufficient ripple immunity.",
-    "REF5 pullup and8.2k bleeder replace logic pullup to reduce false healthy on reference loss. Passive zero-source off-state is screened; semiconductor backfeed, reference collapse, and +5V logic sequencing remain unqualified.",
+    "REF5 pullup and7.5k bleeder replace logic pullup to reduce false healthy on reference loss. Passive zero-source off-state is screened; semiconductor backfeed, reference collapse, and +5V logic sequencing remain unqualified.",
     "Comparator delay and output transition near threshold are not guaranteed by VOL or typical1us.",
     "Negative clamp1.1V and hot behavior remain conditional.",
     "Socket/carrier footprint, sourceable resistor set, populated fit and Shanghai checkout pending.",
@@ -129,12 +129,13 @@
     "total_fraction_allocation": 0.003,
     "note": "Full-span box drift rather than local linear TCR. Static sum0.2884%; residual0.0116% is allocation only, not guaranteed lifetime/hysteresis/solder coverage. Load regulation specified at Vin=Vout+0.75; applicability to12V input needs validation."
   },
-  "reference_bleeder_ohm": 8200,
+  "reference_bleeder_ohm": 7500,
   "reference_bleeder_fraction": 0.01,
   "rejected_bleeder_trial": {
     "ohm": 10000,
     "passive_reference_off_upper_V": 0.9805789471888509,
     "screen_max_V": 0.9,
-    "reason": "Fails declared passive off-state screen; replaced with8.2k while retaining10mA reference load budget."
-  }
+    "reason": "Failed passive off-state screen.8.2k first corrected it in VAL-050;7.5k now improves combined AC-detector off-state margin in VAL-052."
+  },
+  "limits_note_ac_detector": "VAL-052 combined AC detector adds bias backfeed/load. Bleeder changed8.2k to7.5k in this unadopted candidate to improve reference-off logic margin while keeping total reference load below10mA."
 }

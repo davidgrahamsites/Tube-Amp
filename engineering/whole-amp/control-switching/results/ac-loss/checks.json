@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "qualified": false,
+  "native_adopted": false,
+  "purchase_ready": false,
+  "nodal": {
+    "comparisons": 2000,
+    "maximum_voltage_difference_V": 8.881784197001252e-16
+  },
+  "shared_interface": {
+    "reference_load_upper_A": 0.009851101688961734,
+    "rail_ok_high_min_V": 4.839472627042919,
+    "sink_upper_A": 0.0034711620490232432,
+    "passive_ref_off_nodes_V": {
+      "RAIL_OK": 0.8186765193571768,
+      "REF5": 0.6856809214442807,
+      "SENSE": 3.2415800293261317
+    },
+    "off_kcl_error_A": 4.1425205076655626e-20,
+    "basis": "Adds AC detector to previous settled reference budget;35V ENV sensitivity for passive off-state. Semiconductor power-sequence behavior still unqualified."
+  },
+  "independent_replay": [
+    {
+      "case_id": "50VA-hold122-fast_decay_low_envelope",
+      "max_independent_RK4_error_V": 0.0002388438372129542,
+      "samples": 36881,
+      "maximum_substep_s": 5e-06,
+      "basis": "Independent branch-current RK4 replay driven by the recorded loaded secondary voltages and same initial ENV voltage; not an independent transformer model."
+    },
+    {
+      "case_id": "50VA-hold126-slow_decay_high_envelope",
+      "max_independent_RK4_error_V": 0.00017844467666705555,
+      "samples": 36647,
+      "maximum_substep_s": 5e-06,
+      "basis": "Independent branch-current RK4 replay driven by the recorded loaded secondary voltages and same initial ENV voltage; not an independent transformer model."
+    }
+  ],
+  "minimum_interruption_mute_reserve_s": 0.006809880695347495,
+  "short_restart_cases": [
+    "50VA-hold086-slow_decay_high_envelope-0.005",
+    "50VA-hold092-fast_decay_low_envelope-0.005",
+    "50VA-hold092-fast_decay_low_envelope-0.02",
+    "50VA-hold122-fast_decay_low_envelope-0.001",
+    "50VA-hold122-slow_decay_high_envelope-0.005"
+  ],
+  "negative_controls": [
+    {
+      "mutation": "false qualification",
+      "rejected": true
+    },
+    {
+      "mutation": "missing case",
+      "rejected": true
+    },
+    {
+      "mutation": "removed bias",
+      "rejected": true
+    },
+    {
+      "mutation": "invented reserve",
+      "rejected": true
+    }
+  ],
+  "native_preserved_count": 22,
+  "inputs": {
+    "tools/check_ac_loss.py": "36262867ad52895479e2f8da84d72dd26116bea8ce322274d8f3cefdbb205ae0",
+    "tools/ac_loss_detector.py": "e5eeed025b921d5b52bca47768310127800231fce48b03bae36399aff373f37c",
+    "tools/buffered_rail_budget.py": "04f7c718b654733c887ec8e1ce40da66d0cb9f1af44d73f5cdb9d8005ec617df",
+    "results/ac-loss/screen.json": "d9f28bc1c039cda55aa29912a488a42d98a94cc18686bf976168a8ea9934866c",
+    "results/ac-loss/interruptions.json": "e00f550b2340652075d6278a2d3a34f66dbbe039c5f945a426f67e55630fa464",
+    "results/rail-monitor-precision-budget.json": "f81bb14f730d9a611b006ef9720a2e69a13cfe7eb4c526d36686b67cd5c78716",
+    "rail-monitor-precision-contract.json": "77c1946886e956a0b34e84db5deb42127be768d232c4305f756a2bb305d57da5"
+  }
+}

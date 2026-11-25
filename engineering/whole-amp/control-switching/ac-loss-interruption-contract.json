@@ -1,0 +1,12 @@
+{
+  "owner": "control-switching integration",
+  "status": "candidate-not-native",
+  "job": "Check detector blind intervals and restart requests against actual raw rail reserve during short secondary interruptions.",
+  "durations_s": [0.0001, 0.001, 0.005, 0.01, 0.02, 0.05],
+  "phases_deg": [0,90],
+  "winding_factor": 0.95,
+  "profile_names": ["fast_decay_low_envelope", "slow_decay_high_envelope"],
+  "post_restore_window_s": 0.12,
+  "full_restart_discharge_screen_s": 0.002,
+  "restart_basis": "Prior rail-delay candidate needs at least2ms fault to establish50ms hold in its conditional192-corner calculation. This is not full hardware restart qualification."
+}

@@ -1,0 +1,81 @@
+{
+  "status": "candidate-not-native",
+  "baseline": "75b5363110b9d30a18f05de77ef7d70067620f5e",
+  "owner": "control-switching integration",
+  "job": "Detect loss of auxiliary secondary excitation before regulated audio headroom expires, without sensing mains directly.",
+  "supply_evidence": "../aux-supply/results/hold-up/comparison.json",
+  "interfaces": {
+    "inputs": [
+      "AC1",
+      "AC2",
+      "GND",
+      "+12V",
+      "REF5"
+    ],
+    "output": "RAIL_OK open-collector wired inhibit",
+    "connections": [
+      "AC1 and AC2 each feed a separate 4.7k resistor and 1N4148TR anode; both cathodes join AC_ENV.",
+      "AC_ENV to GND: 220nF film capacitor and 10k bleed resistor.",
+      "Comparator plus: AC_ENV through220k, GND through22k, shared RAIL_OK through8.2M, REF5 through1M to maintain positive common-mode voltage after excitation loss.",
+      "Comparator minus: REF5 through24k and GND through1k.",
+      "Additional LM393BIDR powered +12V/GND; active output collector joins existing candidate RAIL_OK. Existing 1.5k REF5 pullup is shared, not duplicated.",
+      "Unused comparator: plus GND, minus REF5, output not connected. Local 100nF supply bypass required.",
+      "LM393BIDR must be on a removable carrier/socket. No native reference numbers, footprint or pin mapping assigned by this simulation."
+    ]
+  },
+  "resistors_ohm": {
+    "feed": 4700,
+    "bleed": 10000,
+    "sense_top": 220000,
+    "sense_bottom": 22000,
+    "feedback": 8200000,
+    "reference_top": 24000,
+    "reference_bottom": 1000,
+    "sense_bias": 1000000
+  },
+  "resistor_total_fraction_allocation": 0.02,
+  "capacitor_F": 2.2e-07,
+  "capacitor_total_fraction_allocation": 0.2,
+  "reference_V": [
+    4.985,
+    5.015
+  ],
+  "offset_V": [
+    -0.004,
+    0.004
+  ],
+  "input_current_A": [
+    -6.25e-08,
+    6.25e-08
+  ],
+  "output_low_V": [
+    0,
+    0.55
+  ],
+  "output_high_V": [
+    4.45,
+    5.25
+  ],
+  "diode_forward_drop_screen_V": [
+    0.4,
+    1.2
+  ],
+  "detection_propagation_allocation_s": 1e-05,
+  "relay_five_percent_current_screen_s": 0.013947,
+  "additional_contact_and_logic_allocation_s": 0.005,
+  "limits": [
+    "Resistor2% and film20% total allocations are not exact sourced lifetime guarantees.",
+    "Diode0.4..1.2V and100uA summed hot leakage are sensitivity allocations. 1N4148 datasheet50uA hot leakage is at20V, not the full reverse range used here.",
+    "Front end uses explicit piecewise-linear rectifiers, bounded reverse leakage fading to zero at zero reverse voltage, and1Gohm film leakage. These are sensitivity models, not a manufacturer diode or comparator macromodel.",
+    "LM393B static offset/input-current bounds match the precision-monitor contract.10us delay is an allocation; typical1us datasheet delay is not a maximum guarantee.",
+    "13.947ms is prior conditional time to5% coil current, not contact release. Additional5ms is a provisional contact/logic allocation, not an Omron guarantee.",
+    "REF5 and RAIL_OK feedback are held at declared bounds for the envelope calculation; feedback0..5.25V covers both output states. Complete reference/logic power sequencing, actual shared-node behavior and mute recovery remain to validate.",
+    "Worst bounds are combined independently; passing the envelope is conditional evidence, not physical qualification.",
+    "No native change, component adoption, complete Shanghai purchase route or manufacturing release."
+  ],
+  "reverse_leakage_each_screen_A": [
+    0,
+    5e-05
+  ],
+  "capacitor_leakage_resistance_ohm": 1000000000
+}

@@ -136,7 +136,7 @@
   "nodal_comparisons": 2000,
   "nodal_max_error_V": 1.7763568394002505e-14,
   "reference_static_error_fraction": 0.002884,
-  "reference_load_upper_A": 0.00958344508486284,
+  "reference_load_upper_A": 0.009641102964471938,
   "rail_ok_high_min_V": 4.841933088093192,
   "comparator_sink_upper_A": 0.0034695379823233923,
   "resistor_error_fractions": {
@@ -155,7 +155,7 @@
     "positive": 0.26868696276577175,
     "negative": 0.2694660897526848
   },
-  "passive_reference_off_rail_ok_upper_V": 0.8473943200777354,
+  "passive_reference_off_rail_ok_upper_V": 0.7938273252181334,
   "conditional_isolated_hold_s_by_rail_and_load_A": {
     "positive": {
       "0.03": 0.00041127017767347466,
@@ -173,14 +173,14 @@
     "Reference +/-0.3% includes declared static terms but ageing, solder and hysteresis are not guaranteed; total needs validation.",
     "Resistor total +/-0.4% remains conditional on exact sourced family and profile; series68ohm component included.",
     "0.1V hysteresis is a new noise allocation, not proof of sufficient ripple immunity.",
-    "REF5 pullup and8.2k bleeder replace logic pullup to reduce false healthy on reference loss. Passive zero-source off-state is screened; semiconductor backfeed, reference collapse, and +5V logic sequencing remain unqualified.",
+    "REF5 pullup and7.5k bleeder replace logic pullup to reduce false healthy on reference loss. Passive zero-source off-state is screened; semiconductor backfeed, reference collapse, and +5V logic sequencing remain unqualified.",
     "Comparator delay and output transition near threshold are not guaranteed by VOL or typical1us.",
     "Negative clamp1.1V and hot behavior remain conditional.",
     "Socket/carrier footprint, sourceable resistor set, populated fit and Shanghai checkout pending.",
     "Actual mute path delay and rail decay remain unqualified; no arbitrary-hard-fault silence guarantee."
   ],
   "inputs": {
-    "rail-monitor-precision-contract.json": "c52993576e1904b3b9ed100881c0d2c8bae78a908f4d0f10dd0b8dca5e83989c",
+    "rail-monitor-precision-contract.json": "77c1946886e956a0b34e84db5deb42127be768d232c4305f756a2bb305d57da5",
     "tools/precision_rail_budget.py": "73119b74fdf6b163f3c4e86ef51b24d2ffa2dbf65a254f97b32e2dffa732d8d9",
     "tools/rail_monitor_budget.py": "5a2a6f4c56aeab2095c076c5d37821885e0350b198cfa556b3e8c4b14e47a726",
     "tools/buffered_rail_budget.py": "04f7c718b654733c887ec8e1ce40da66d0cb9f1af44d73f5cdb9d8005ec617df",

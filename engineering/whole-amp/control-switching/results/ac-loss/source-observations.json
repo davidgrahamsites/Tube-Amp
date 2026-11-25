@@ -1,0 +1,101 @@
+{
+  "observed_on": "2026-11-25",
+  "primary_documents": [
+    {
+      "file": "evidence/onsemi-1N914-2024.pdf",
+      "url": "https://www.onsemi.com/pdf/datasheet/1n914-d.pdf",
+      "sha256": "45c9e4cc95f3c3f9ebb00ebc5859c89bcc8d44d48dac8f3771a7950fb6a418ac"
+    },
+    {
+      "file": "evidence/KNSCHA-82CL0125-2023.pdf",
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20230922/E737A14264DF5B64C9E9A917DE9992D7.pdf",
+      "sha256": "fe4b8ca778310b24858482eed33e5ca2299cfdfef982c3636f6dfdf0da186b3f"
+    }
+  ],
+  "listings": [
+    {
+      "url": "https://item.szlcsc.com/85580.html",
+      "fields": {
+        "productModel": "1N4148TR",
+        "productCode": "C84410",
+        "productId": "85580",
+        "stockNumber": 77419,
+        "minBuyNumber": 1,
+        "theRatio": 50,
+        "encapsulationModel": "DO-35"
+      },
+      "html_sha256": "3357a0494d3d878641721c37fd2e413f8762e4f125f8a1f54b6b0e9ac2385c31"
+    },
+    {
+      "url": "https://item.szlcsc.com/6172082.html",
+      "fields": {
+        "productModel": "82CL0125",
+        "productCode": "C5359306",
+        "productId": "6172082",
+        "stockNumber": 685,
+        "minBuyNumber": 1,
+        "theRatio": 5,
+        "encapsulationModel": "\u63d2\u4ef6,P=5mm"
+      },
+      "html_sha256": "390be08a45e51191d05bb3e4da5e2e3db3a9eec79d856c6af122395b92f30ca2"
+    },
+    {
+      "url": "https://item.szlcsc.com/3069736.html",
+      "fields": {
+        "productModel": "LM393BIDR",
+        "productCode": "C2865059",
+        "productId": "3069736",
+        "stockNumber": 98236,
+        "minBuyNumber": 1,
+        "theRatio": 5,
+        "encapsulationModel": "SOIC-8"
+      },
+      "html_sha256": "f1aeac8337e8e5ebe871f883e5b9502fac5415ac634e9ff8736003cbffcf37b7"
+    }
+  ],
+  "purchased": false,
+  "shanghai_checkout_verified": false,
+  "note": "Domestic stock/minimum/ratio fields are dated observations, not reserved stock or address-specific delivery confirmation. Budget physical packs of50 diodes and5 capacitors/comparators unless checkout confirms otherwise.",
+  "capacitor": {
+    "mpn": "82CL0125",
+    "nominal_F": 2.2e-07,
+    "voltage_V": 63,
+    "initial_tolerance_fraction": 0.05,
+    "body_WHT_mm": [
+      7.2,
+      6.5,
+      2.5
+    ],
+    "body_tolerance_mm": 0.5,
+    "lead_diameter_mm": 0.5,
+    "lead_tolerance_mm": 0.05,
+    "pitch_mm": 5,
+    "pitch_tolerance_mm": 0.5,
+    "IR_min_ohm": 3000000000,
+    "IR_conditions": "20C,10V,1min; not a continuous hot guarantee",
+    "model_leakage_resistance_ohm": 1000000000.0,
+    "model_total_cap_tolerance_fraction": 0.2,
+    "limits": "20% total capacitance and1Gohm leakage remain engineering allocations; post-cooling heat/humidity/solder tests are not continuous operating limits."
+  },
+  "diode": {
+    "mpn": "onsemi1N4148TR",
+    "vrrm_V": 100,
+    "vf_max_V": 1,
+    "vf_test_A": 0.01,
+    "reverse_leak_75V_25C_A": 5e-06,
+    "reverse_leak_20V_150C_A": 5e-05,
+    "limits": "0.4..1.2V and50uA per diode across the circuit reverse range are model sensitivities, not full-temperature manufacturer guarantees."
+  },
+  "comparator": {
+    "mpn": "LM393BIDR",
+    "socket_required": true,
+    "source": "evidence/TI-LM393-AH.pdf",
+    "limits": "Same full-temperature static bounds as precision monitor; propagation10us remains allocation. Extra comparator package and carrier are not natively integrated."
+  },
+  "remaining": [
+    "Exact resistor SKUs including7.5k REF5 bleeder",
+    "Comparator removable carrier/socket",
+    "Thermal diode/cap limits",
+    "Complete Shanghai checkout and delivered cost"
+  ]
+}

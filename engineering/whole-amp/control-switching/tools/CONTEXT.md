@@ -18,3 +18,5 @@ rail_monitor_budget.py owns static endpoint analysis of rail-monitor-contract.js
 buffered_rail_budget.py consumes the buffered contract, calls the shared endpoint calculator and checks the equations with an independent nodal solver. Outputs are static evidence only; no native mutation or vendor-model substitution.
 
 audio_headroom_budget.py guards native signal/capacitor inventory and rejects the previous rail-warning boundary. precision_rail_budget.py consumes that hashed evidence plus the precision contract, enumerates settled corners and independently checks KCL. Its passive reference-off check is explicitly conditional; it never writes native CAD.
+
+ac_loss_detector.py consumes the AC-loss contract and retained auxiliary comparison decks, owns threshold equations and bounded envelope simulation. ac_loss_interruptions.py reuses that front end for finite outages and records first raw-headroom-loss timing. check_ac_loss.py independently solves KCL, replays RC branch currents, rejects corrupted evidence and guards native hashes. All write only ../results/ac-loss; no CAD or component-selection side effects.
