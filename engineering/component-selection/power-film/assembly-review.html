@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Capacitor elevation and supported-bank options</title><!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../../docs/engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../../docs/engineering-reader/assets/katex/katex.min.css"><script defer src="../../../docs/engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../../docs/engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../../docs/engineering-reader/assets/math.js"></script><!-- /reader-head --></head><body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../../docs/engineering-reader/index.html">Engineering status</a><a href="../../../docs/engineering-reader/glossary.html">Vocabulary key</a><a href="../../../docs/engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav --><main><p class="eyebrow">Renegade · Reviewed engineering record · 26 November 2026</p><h1>Capacitor elevation and supported-bank options</h1>
+<p>November 26, 2026; FB-144. Owner: component selection and mechanical integration. This is a packaging comparison, not a new capacitor selection or a fourth-board adoption. It follows the <a href="review.md">exact-package review</a>. Four capacitors C12/C13/C25/C26 remain in the power-supply functional block.</p>
+<h2>What the current candidates permit</h2>
+<p>The <a href="https://industrial.panasonic.com/content/data/CP/PDF/ezpv_je.pdf">Panasonic EZPV R9 specification</a>, drawing/page 2 and use precautions/pages 23–24, gives the candidate geometry and warns against excessive lead-root force. The exact EZPV60506MTC candidate has exposed lead length 4 ± 2 mm. Against the current 1.6 mm nominal PCB, the minimum 2 mm lead leaves only 0.4 mm below the board with the body seated; a 3 mm body lift would leave the shortest lead 2.6 mm short of the underside. This calculation even omits solder protrusion and board thickness tolerance. A useful raised platform cannot be obtained simply by leaving these leads long. CRC FC6136's 4 ± 1 mm leads also do not provide a tall mounting platform. Neither part is selected by this comparison.</p>
+<p>The parts and their solder joints must not be assumed to support a suspended mass above other components under cabinet vibration. Engineering interpretation: use a designed body support and PCB/chassis load path, and keep the terminals free of sustained bending loads. Arbitrary adhesive is not a qualified support method: Panasonic specifically requires checking the effects of fixing resin on the part. Its soldering conditions are component heat limits, not proof that any enlarged hole or solder joint is manufacturable.</p>
+<h2>Options</h2>
+<table>
+<thead>
+<tr>
+<th>Arrangement</th>
+<th>Benefit</th>
+<th>Required checks / downside</th>
+<th>Current disposition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dedicated capacitor area on revised power PCB</td>
+<td>Fewest extra interconnects; supports the intended three-board architecture; accessible assembly</td>
+<td>Repack from actual body/pin limits, reserve heat/lead/support space and service access</td>
+<td>Preferred starting layout</td>
+</tr>
+<tr>
+<td>Capacitors elevated on leads alone</td>
+<td>Apparent footprint saving</td>
+<td>Short leads, lead-root/joint loads, exposed HV, obstructed components and screws</td>
+<td>Do not use as the packaging solution</td>
+</tr>
+<tr>
+<td>Capacitor PCB supported by chassis-mounted brackets/standoffs</td>
+<td>Moves capacitor bank to another plane while retaining power-block ownership</td>
+<td>Adds PCB, mounting, insulated/rated connections, underside HV clearance, removal sequence, mass and heat checks</td>
+<td>Valid candidate if the populated model shows a real benefit</td>
+</tr>
+<tr>
+<td>Suitable chassis-mounted capacitors with an insulated harness</td>
+<td>Could free PCB area and transfer mass directly to structure</td>
+<td>Requires exact suitable capacitor/mounting type, protected terminals, connectorized wiring and revised current/return paths</td>
+<td>Alternative, no exact part selected</td>
+</tr>
+</tbody>
+</table>
+<p>A supported upper tier should not sit over hot power resistors/regulators, sensitive preamp circuitry, or mounting screws that must remain reachable. Put its fasteners where the bank can be removed without unsoldering wiring or removing the wooden rear cover together with electronics. It attaches to the removable metal assembly, never the removable wooden back. Support comes from the bracket/standoffs, not electrical headers.</p>
+<p>If a bank moves, each supply node and its return remain explicit. Do not combine C12/C13/C25/C26 just because they are mechanically adjacent. Keep associated charging/decoupling loops short and route their supply/return pairs deliberately. Exact connector voltage/current, creepage/clearance and mating access must cover the actual high-voltage domain; a generic small board-to-board header is not qualified. Required discharge/protection behavior must include the removable bank. No bare field wires soldered directly to the main PCB are proposed.</p>
+<p>Height savings cannot be inferred from reduced plan area. Upper-board height equals the lower component envelope plus the required separation, upper PCB thickness, capacitor height and any body seating/support allowance. The maximum Panasonic body is 41 mm high; the CRC body is 51 mm. A second tier therefore consumes substantial cabinet height before clearances, supports and extraction space. The <a href="results/assembly-options.json">calculation receipt</a> quantifies conditional packaging dimensions without inventing a usable cabinet volume or HV clearance.</p>
+<p>Next: compare the supported bank against a repacked single power PCB in the common populated assembly, using actual speaker/magnetics and socket envelopes. A bank daughterboard would add a physical PCB even though it retains the same functional block; the user's earlier three-board preference remains the baseline. No assembly or fabrication fit is approved by this proposal.</p>
+<p>Conditional body-only comparison: Panasonic 126 × 62 × 41 mm; CRC 127 × 82 × 51 mm, both in a 2×2 arrangement with a 10 mm inter-body gap. That gap is a Panasonic neighbor recommendation and only a comparison assumption for CRC; neither value is an electrical-clearance specification. The nominal upper PCB plus body adds 42.6 mm or 52.6 mm before lower parts, separation and mounting. See the <a href="../../../plans/capacitor-bank-fit/CONTEXT.md">five-pass fit plan</a> for the expanded comparison.</p>
+<!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>Capacitor</dt><dd>A component that stores charge and electrical energy.</dd>
+<dt>Chassis</dt><dd>The metal structure that supports and encloses the electronics.</dd>
+<dt>Clearance</dt><dd>The shortest distance through air between conductive parts.</dd>
+<dt>Creepage</dt><dd>The shortest path along an insulating surface between conductive parts.</dd>
+<dt>Envelope</dt><dd>The space occupied by a part or assembly, including stated allowances.</dd>
+<dt>Functional block</dt><dd>A group of parts with one defined job and specified connections to other groups.</dd>
+<dt>Harness</dt><dd>A grouped set of wires, contacts and connectors.</dd>
+<dt>HV</dt><dd>High voltage; use the actual voltage and insulation requirement in each design check.</dd>
+<dt>Lead</dt><dd>A component terminal that connects to the board.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Magnetics</dt><dd>Transformers and inductors.</dd>
+<dt>Node</dt><dd>An electrical connection shared by specified components.</dd>
+<dt>Nominal</dt><dd>The stated reference value before tolerance and operating variation.</dd>
+<dt>PCB</dt><dd>Printed circuit board.</dd>
+<dt>Populated</dt><dd>With the components installed.</dd>
+<dt>Preamp</dt><dd>Preamplifier; the stages that prepare the input signal for the power amplifier.</dd>
+<dt>Socket</dt><dd>A replaceable connection that holds a tube or integrated circuit.</dd>
+<dt>Tolerance</dt><dd>The permitted variation from a specified value.</dd></dl></section><!-- /reader-key --></main></body></html>

@@ -1,0 +1,38 @@
+{
+  "scope": "Nominal and hypothetical examples only; not accepted design limits",
+  "sources": [
+    "engineering/whole-amp/reverb-600/circuit.json",
+    "engineering/whole-amp/aux-supply/load-review.md",
+    "plans/bottom-power-enclosure/harness-research.md",
+    "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+    "https://www.jj-electronic.com/images/stories/product/power_tubes/pdf/el34_e34l.pdf"
+  ],
+  "nominal": {
+    "preamp_count": 4,
+    "preamp_heater_A": 0.3,
+    "output_count": 2,
+    "output_heater_A": 1.5,
+    "heater_V": 6.3,
+    "midpoint_resistors_series_ohm": 200,
+    "pilot_allowance_A": 0.15,
+    "reservoir_each_uF": 220,
+    "reservoir_each_bleeder_ohm": 220000
+  },
+  "hypothetical": {
+    "full_heater_loop_ohm": 0.01,
+    "drop_budget_examples_V": [
+      0.1,
+      0.2
+    ],
+    "illustrative_cap_voltage_V": 400,
+    "film_cap_uF": 50
+  },
+  "limits": [
+    "Shared heater topology fails existing HD-002 screens; winding count/reference not approved",
+    "Nominal tube inventory excludes actual cold surge, tolerances and winding regulation",
+    "Pilot current is an allowance, not a selected part",
+    "Loop resistance includes both wires, all contacts/terminations; no actual harness selected",
+    "RC assumes isolated equal nominal capacitor/bleeder branches, not full network decay",
+    "400V is illustrative only; no safe waiting time or residual voltage criterion derived"
+  ]
+}

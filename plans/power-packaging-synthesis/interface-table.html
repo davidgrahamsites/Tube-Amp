@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Proposed physical allocation interface</title><!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../docs/engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../docs/engineering-reader/assets/katex/katex.min.css"><script defer src="../../docs/engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../docs/engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../docs/engineering-reader/assets/math.js"></script><!-- /reader-head --></head><body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../docs/engineering-reader/index.html">Engineering status</a><a href="../../docs/engineering-reader/glossary.html">Vocabulary key</a><a href="../../docs/engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav --><main><p class="eyebrow">Renegade · Reviewed engineering record · 26 November 2026</p><h1>Proposed physical allocation interface</h1>
+<p>Owner: /root electrical/mechanical integration. Status: research contract, not released schematic/pinout. Actual endpoint evidence: ../capacitor-bank-fit/interface-research.md and ../bottom-power-enclosure/harness-research.md. Existing electrical nets and values remain canonical in circuit.json. A functional power block may span physical boards; its ownership remains explicit.</p>
+<table>
+<thead>
+<tr>
+<th>Interface / function</th>
+<th>Hybrid lower side</th>
+<th>Upper side</th>
+<th>Open dependency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rectifier/raw reservoir</td>
+<td>T1 HV/D3–D6/F2/C29/C30/R501/R502/CT return local</td>
+<td>No rectifier pulse route through quiet audio</td>
+<td>Exact transformer/currents and layout</td>
+</tr>
+<tr>
+<td>B_MAIN</td>
+<td>From B_RAW via S2</td>
+<td>T2 center tap</td>
+<td>S2 location or long HV loop not resolved</td>
+</tr>
+<tr>
+<td>Screen and downstream feed</td>
+<td>L1/C26/B_SCREEN and controlled return</td>
+<td>R41/R42 and R35 inputs</td>
+<td>Real current/voltage/return routing</td>
+</tr>
+<tr>
+<td>B_PRE</td>
+<td>Hybrid generates locally above</td>
+<td>R35 with C13/C25, both50uF on B_PRE/GND</td>
+<td>Physical region and return topology; no merging</td>
+</tr>
+<tr>
+<td>B_EARLY</td>
+<td>Hybrid generates locally above</td>
+<td>R17 with C12,50uF on B_EARLY/GND</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>All-filter-lower variant</td>
+<td>R35/R17 and all four filters below</td>
+<td>Remote B_PRE/B_EARLY load feeds/returns</td>
+<td>Extra harness and applicability tests</td>
+</tr>
+<tr>
+<td>Output transformer</td>
+<td>Not moved below in first comparison</td>
+<td>T2 with output tubes and secondary/feedback interface</td>
+<td>Exact magnetics and loaded stability</td>
+</tr>
+<tr>
+<td>Heaters/reference</td>
+<td>Winding/reference allocation pending</td>
+<td>Actual tube sockets/pilot loads</td>
+<td>HD-002; no frozen pair count or connector</td>
+</tr>
+<tr>
+<td>Bias</td>
+<td>Ownership pending</td>
+<td>BIAS_OUT/grid network; adjuster location pending</td>
+<td>Loss of bias/return while B+ remains</td>
+</tr>
+<tr>
+<td>Auxiliary/control rails</td>
+<td>Rectification/reservoir location proposed below</td>
+<td>Regulator/rail ownership pending</td>
+<td>Preserve local input/output caps and load-end reset timing</td>
+</tr>
+<tr>
+<td>Mains selection/power</td>
+<td>Inlet/fuse/selector/PE and both T1/T3 primaries grouped below candidate</td>
+<td>Existing S1 control if retained would require routed mains</td>
+<td>Concrete control alternatives before adoption; no remote relay assumed</td>
+</tr>
+<tr>
+<td>PE/GB1</td>
+<td>Independent lower protective bond</td>
+<td>Upper exposed metal independently bonded; existing GB1 intent preserved</td>
+<td>Exact bonding hardware, sole normal signal/chassis bond, continuity</td>
+</tr>
+<tr>
+<td>Service charge</td>
+<td>Raw/film/bias/aux stores depend on allocation</td>
+<td>Upper stores may remain charged independently</td>
+<td>Both halves, partial opens, no hot/unverified-charge disconnect</td>
+</tr>
+</tbody>
+</table>
+<p>No connector family/cavity count, conductor gauge, circuit modification or billable fabrication is selected. Every physical seam requires sourced voltage/current/insulation, routing and service qualification. No connection to removable rear wood is permitted.</p>
+<!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>B_MAIN</dt><dd>The supply node that feeds the output-transformer centre tap.</dd>
+<dt>B_RAW</dt><dd>The rectified supply node before the standby switch.</dd>
+<dt>B_SCREEN</dt><dd>The filtered supply node for the output-tube screen grids.</dd>
+<dt>B_PRE</dt><dd>The filtered supply node for the specified preamplifier stages.</dd>
+<dt>B_EARLY</dt><dd>The filtered supply node for the earlier preamplifier stages.</dd>
+<dt>Bias</dt><dd>A steady voltage or current that sets a device operating point.</dd>
+<dt>Capacitor</dt><dd>A component that stores charge and electrical energy.</dd>
+<dt>Chassis</dt><dd>The metal structure that supports and encloses the electronics.</dd>
+<dt>CT</dt><dd>Centre tap; an electrical connection part-way along a transformer winding.</dd>
+<dt>Feedback</dt><dd>A signal returned from an output to an earlier stage to control gain or response.</dd>
+<dt>GB1</dt><dd>The design identifier for the declared signal-ground to chassis connection.</dd>
+<dt>Harness</dt><dd>A grouped set of wires, contacts and connectors.</dd>
+<dt>HV</dt><dd>High voltage; use the actual voltage and insulation requirement in each design check.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Magnetics</dt><dd>Transformers and inductors.</dd>
+<dt>Mains</dt><dd>The building AC power supply.</dd>
+<dt>PE</dt><dd>Protective earth; the protective connection to exposed conductive parts.</dd>
+<dt>Qualification</dt><dd>Checks that show a design meets stated limits under stated conditions.</dd>
+<dt>Rectifier</dt><dd>A circuit that changes alternating current into current of one polarity.</dd>
+<dt>Reservoir</dt><dd>A capacitor bank that stores energy after rectification.</dd>
+<dt>Schematic</dt><dd>A drawing of electrical connections and component functions.</dd>
+<dt>Transformer</dt><dd>A magnetic device that transfers energy between windings.</dd>
+<dt>Winding</dt><dd>A coil of insulated wire in a transformer or inductor.</dd></dl></section><!-- /reader-key --></main></body></html>

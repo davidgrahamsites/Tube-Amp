@@ -1,0 +1,1 @@
+Vendor assets. KaTeX 0.16.22, MIT license. Source: npm katex@0.16.22; https://katex.org/docs/browser.html. Inputs: pinned distribution. Outputs: local renderer, CSS and fonts. No engineering logic. Human check: render offline and preserve license.

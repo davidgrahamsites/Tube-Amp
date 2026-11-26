@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Capacitor packaging: preserved electrical interfaces</title><!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../docs/engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../docs/engineering-reader/assets/katex/katex.min.css"><script defer src="../../docs/engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../docs/engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../docs/engineering-reader/assets/math.js"></script><!-- /reader-head --></head><body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../docs/engineering-reader/index.html">Engineering status</a><a href="../../docs/engineering-reader/glossary.html">Vocabulary key</a><a href="../../docs/engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav --><main><p class="eyebrow">Renegade · Reviewed engineering record · 26 November 2026</p><h1>Capacitor packaging: preserved electrical interfaces</h1>
+<p>2026-11-26. Owner: electrical interface research; integration owns adoption. Input: <a href="v2.md">v2 plan</a>, current 600R-1 circuit and power-film contracts. Output: node map and decision gates only. No circuit, selected part, native placement or safety qualification is adopted here. Human check: trace the four references and actual return wires on the eventual assembly, including unplugged service states.</p>
+<h2>Actual node map</h2>
+<p>The authoritative <a href="../../engineering/whole-amp/reverb-600/circuit.json">circuit contract</a> and a fresh, temporary KiCad XML export of the current native project agree on these endpoints. All four remain distinct references and retain their individual 50 µF values and 600 V minimum source requirement.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th style="text-align:right">Quantity</th>
+<th>Pin 1</th>
+<th>Pin 2</th>
+<th>Existing functional relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C12</td>
+<td style="text-align:right">1</td>
+<td>B_EARLY</td>
+<td>GND</td>
+<td>After R17, 10 kΩ from B_PRE; supplies R4/R7/R12/R15 first-stage plate feeds</td>
+</tr>
+<tr>
+<td>C13</td>
+<td style="text-align:right">1</td>
+<td>B_PRE</td>
+<td>GND</td>
+<td>Same named node as C25; serves the B_PRE network</td>
+</tr>
+<tr>
+<td>C25</td>
+<td style="text-align:right">1</td>
+<td>B_PRE</td>
+<td>GND</td>
+<td>After R35, 10 kΩ from B_SCREEN; B_PRE feeds R21/V3 and phase-inverter R29/R30</td>
+</tr>
+<tr>
+<td>C26</td>
+<td style="text-align:right">1</td>
+<td>B_SCREEN</td>
+<td>GND</td>
+<td>After L1 from B_MAIN; feeds output-screen resistors R41/R42 and downstream supply filters</td>
+</tr>
+</tbody>
+</table>
+<p>C13 and C25 are electrically parallel in the present circuit: their shared nominal node capacitance is 100 µF. This observation does not authorize replacing them with one component, moving their return takeoffs arbitrarily, or combining B_SCREEN/B_PRE/B_EARLY. The source still uses polarized capacitor symbols; film adoption must eventually reconcile symbol/package metadata without changing endpoints.</p>
+<p>For each reference the same two <strong>unselected</strong> package alternatives apply: Panasonic EZPV60506MTC, 50 µF/600 V, maximum body 58 × 26 × 41 mm; CRC FC6136, 50 µF/900 V, maximum body 58.5 × 36 × 51 mm. See the <a href="../../engineering/component-selection/power-film/panasonic-contract.json">Panasonic contract</a>, <a href="../../engineering/component-selection/fc6136-fit-contract.json">CRC contract</a> and <a href="../../engineering/component-selection/power-film/review.md">package review</a>. Four physical leads do not imply four independent electrical terminals; exact terminal-pair assignment and insertion tolerance remain gates.</p>
+<h2>Current loops and removable-bank seam</h2>
+<p>The raw rectifier reservoir is <strong>C29/C30</strong>, two series 220 µF capacitors, not these four film candidates. Its charging loop runs from one T1 HV winding end through D3/D4 or D5/D6, F2, C29/C30 and the controlled GND return to T1 CT. Keep that high-pulse-current loop local during power-board repacking. Downstream topology is B_RAW → S2 → B_MAIN → L1 → B_SCREEN → R35 → B_PRE → R17 → B_EARLY; T2's output-transformer center tap branches from B_MAIN before L1.</p>
+<p>For A/B/C, draw both recharge and load-return loops for each filtered node. A short positive wire with a distant shared return is not a short loop. Record conductor lengths and loop geometry, common return impedance and where screen/load returns join the reservoir return. Keep pulse-current paths out of quiet preamp reference wiring. This is a circuit-specific engineering inference from the native topology and the general loop-inductance principle documented by <a href="https://www.ti.com/document-viewer/lit/html/SSZT632/GUID-FAB54C52-3C47-4214-9183-2948E90A51BC">TI's power-loop guidance</a>; its buck-converter example is not a numeric rule for this tube supply.</p>
+<p>The <a href="../../engineering/whole-amp/reverb-600/grounding-contract.json">grounding contract</a> prohibits intentionally carrying reservoir, heater or normal signal current through chassis. PE remains a permanent dedicated safety path; GB1 is the separate signal/chassis bond. Neither metal brackets nor mounting screws become capacitor returns. Preserve one logical GND with deliberate physical return paths; a new daughterboard does not authorize a general GND/PE interchange or a ground split.</p>
+<p>B/C require an explicit connector pin map containing B_SCREEN, B_PRE, B_EARLY and their controlled return connections. Do not assume one common return pin is adequate merely because all returns are named GND. Qualify the chosen conductor/contact arrangement for operating, charging and fault current, voltage, temperature, wire retention, mating access and exposed contacts in <strong>both</strong> halves. Identify accidental open-return and wrong-mate states. Support capacitor mass through the cassette structure, not headers or leads. This report specifies no pin count, connector family or wire gauge without those inputs.</p>
+<h2>Discharge and service states</h2>
+<p>The existing R501/R502 series path discharges the raw reservoir but is upstream of S2; opening standby removes that path from the downstream filters. However, downstream discharge is <strong>not absent</strong>: B_SCREEN → R506 (220 kΩ) → HREF → R507 (39 kΩ) → GND remains in the source, with C505 on HREF and the four filters coupled through R35/R17. Tube loads and S2 state change the decay. No single-capacitor RC timing claim represents this network.</p>
+<p>A disconnected capacitor-only bank can lose those discharge paths. Before choosing B/C, document the charged assembled, powered-off, standby-open, partially disconnected and completely removed states; identify which resistive paths remain on each side. Set the allowable residual voltage and service interval from the applicable requirements, then calculate worst-case decay using capacitance/resistance tolerances and verify it on hardware. Specify accessible test points and a controlled discharge procedure before touching or unmating. An additional bleeder would be a separately reviewed circuit change, not an assumed packaging detail. Do not add one in this study or claim the current arrangement meets a service time.</p>
+<p>Panasonic's handling precautions warn against sudden charge/discharge and specify resistance of at least 2 kΩ for that operation. Treat this as a candidate-application/handling gate, particularly for C26 after the choke; it is not permission to insert a new resistor into the amplifier. Clarify compatibility of actual startup/standby pulses before selection. <a href="https://industrial.panasonic.com/content/data/CP/PDF/ezpv_je.pdf">Panasonic R9, p.23</a>.</p>
+<h2>Voltage, thermal and insulation gates</h2>
+<p>For <strong>each</strong> node, establish maximum DC, ripple peak and spectrum, startup/no-load/standby transients and relevant fault stress under the intended 120 V/60 Hz and 220 V/50 Hz conditions, transformer regulation and component tolerances. The 600 V source requirement and 900 V alternative rating are not measured operating voltages. Assess capacitor RMS current and self-heating in the final placement. Panasonic's 19.1 A figure is at 70°C/10 kHz; its voltage derating above 85°C, case-temperature limit, ripple-voltage limit and neighboring heat sources still apply. Its 10 mm neighbor recommendation concerns heating, not an HV insulation distance. Lead-root forces and fixing-resin compatibility also require checks. <a href="https://industrial.panasonic.com/content/data/CP/PDF/ezpv_je.pdf">Panasonic R9, pp.3, 21–24</a>.</p>
+<p>Build an insulation matrix for each unlike-node pair and each node to PE-bonded metal, accessible parts, nearby low-voltage circuits and any floating hardware. Include terminal bends, solder protrusions, underside copper, connector contacts, fasteners/washers, brackets and support surfaces in every service orientation. Record working RMS/DC and peak/transient voltages, insulation function, environmental pollution, material group/CTI, altitude, tolerances and any claimed solid-insulation system. Manufacturer component withstand tests do not establish this assembly's distances; neither solder mask nor an unspecified plastic spacer is automatically a qualified barrier.</p>
+<p>Select the applicable product requirements and edition before extracting distances. The <a href="https://webstore.iec.ch/en/publication/107319">IEC 60664-1 consolidated publication</a> is an insulation-coordination reference; its official <a href="https://webstore.iec.ch/en/publication/59671">scope</a> covers clearance, creepage, solid insulation and testing. This research did not acquire or review its full normative tables and does not determine product certification applicability. <a href="https://dev.ti.com/gallery/view/Isolation/creapage_and_clearance_calculator/ver/1.0.0/">TI's reference calculator</a> shows why working voltage, pollution, insulation/material class, impulse conditions and altitude are separate inputs; it is not an approval or a replacement for the applicable requirements.</p>
+<p>Unresolved voltage/environment/insulation inputs block released spacing and final populated fit. Preliminary A/B/C views may retain explicit unknown separation parameters, but cannot score unqualified empty space as feasible. Record the resulting justified requirements in native rules and the mechanical envelope only after review, then check the populated assembly and required physical insulation/bond tests.</p>
+<h2>Verification receipt and handoff</h2>
+<p>Read-only check used the installed KiCad CLI's documented <code>sch export netlist --format kicadxml</code> command, writing into an automatically removed temporary directory. All eight capacitor endpoints above matched the source; native discharge-path endpoints also corroborated the stated paths. SHA256 comparison of files in the native <code>cad/</code> directory before/after export was unchanged. No simulation, ERC/DRC rerun, energized measurement or fit verification is claimed.</p>
+<p>Source identities at inspection:</p>
+<ul>
+<li><code>reverb-600/circuit.json</code>: <code>db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a</code></li>
+<li><code>reverb-600/cad/05_supplies.kicad_sch</code>: <code>6b2712d4db26559e9aa2af7dfb5bfb99851e0622be72759492e570365086d547</code></li>
+<li><code>reverb-600/grounding-contract.json</code>: <code>78c78abd2fc688f94eb134d98e1f1d9f9ea3823169abf17f83cab42701c706b6</code></li>
+</ul>
+<p>Next integration action: carry this reference map into the common A/B/C comparison; make disconnected discharge-path retention and insulation inputs explicit holds. A remains the lowest-interconnect baseline, not a proven fit. Only this research file was authored by this worker; shared registers and final plan integration belong to the parent owner.</p>
+<!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>B_MAIN</dt><dd>The supply node that feeds the output-transformer centre tap.</dd>
+<dt>B_RAW</dt><dd>The rectified supply node before the standby switch.</dd>
+<dt>B_SCREEN</dt><dd>The filtered supply node for the output-tube screen grids.</dd>
+<dt>B_PRE</dt><dd>The filtered supply node for the specified preamplifier stages.</dd>
+<dt>B_EARLY</dt><dd>The filtered supply node for the earlier preamplifier stages.</dd>
+<dt>Bleeder</dt><dd>A resistor used to remove capacitor charge; its presence alone does not prove safe residual voltage.</dd>
+<dt>Capacitance</dt><dd>The ratio of stored charge to voltage; measured in farads (F).</dd>
+<dt>Capacitor</dt><dd>A component that stores charge and electrical energy.</dd>
+<dt>Cassette</dt><dd>A removable assembly carrying the electronics and its supports.</dd>
+<dt>Chassis</dt><dd>The metal structure that supports and encloses the electronics.</dd>
+<dt>Clearance</dt><dd>The shortest distance through air between conductive parts.</dd>
+<dt>Creepage</dt><dd>The shortest path along an insulating surface between conductive parts.</dd>
+<dt>CT</dt><dd>Centre tap; an electrical connection part-way along a transformer winding.</dd>
+<dt>DC</dt><dd>Direct current; current that flows in one direction.</dd>
+<dt>Derating</dt><dd>Operating below a component rating to allow for heat or other specified conditions.</dd>
+<dt>DRC</dt><dd>Design Rule Check; a PCB geometry and connectivity check.</dd>
+<dt>Envelope</dt><dd>The space occupied by a part or assembly, including stated allowances.</dd>
+<dt>ERC</dt><dd>Electrical Rules Check; a schematic consistency check.</dd>
+<dt>GB1</dt><dd>The design identifier for the declared signal-ground to chassis connection.</dd>
+<dt>Ground</dt><dd>A named circuit reference; it is not automatically protective earth.</dd>
+<dt>Heater</dt><dd>The tube element that heats the cathode.</dd>
+<dt>HREF</dt><dd>The design name for the heater reference node.</dd>
+<dt>HV</dt><dd>High voltage; use the actual voltage and insulation requirement in each design check.</dd>
+<dt>Impedance</dt><dd>Opposition to alternating current, including resistance and frequency-dependent effects; measured in ohms (Ω).</dd>
+<dt>Lead</dt><dd>A component terminal that connects to the board.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Node</dt><dd>An electrical connection shared by specified components.</dd>
+<dt>Nominal</dt><dd>The stated reference value before tolerance and operating variation.</dd>
+<dt>PE</dt><dd>Protective earth; the protective connection to exposed conductive parts.</dd>
+<dt>Pin map</dt><dd>A table assigning each connector contact to a circuit node and function.</dd>
+<dt>Populated</dt><dd>With the components installed.</dd>
+<dt>Preamp</dt><dd>Preamplifier; the stages that prepare the input signal for the power amplifier.</dd>
+<dt>Qualification</dt><dd>Checks that show a design meets stated limits under stated conditions.</dd>
+<dt>Rectifier</dt><dd>A circuit that changes alternating current into current of one polarity.</dd>
+<dt>Reservoir</dt><dd>A capacitor bank that stores energy after rectification.</dd>
+<dt>Ripple</dt><dd>Periodic supply variation remaining after rectification and filtering.</dd>
+<dt>Series</dt><dd>Connected in sequence so the same branch current passes through each part.</dd>
+<dt>Parallel</dt><dd>Connected across the same two electrical nodes.</dd>
+<dt>Standby</dt><dd>A switch state; it does not by itself prove the amplifier is de-energized.</dd>
+<dt>Tolerance</dt><dd>The permitted variation from a specified value.</dd>
+<dt>Transformer</dt><dd>A magnetic device that transfers energy between windings.</dd>
+<dt>Winding</dt><dd>A coil of insulated wire in a transformer or inductor.</dd>
+<dt>Gate</dt><dd>A checkpoint that requires specified evidence before the next activity.</dd>
+<dt>Residual voltage</dt><dd>Voltage still present after power removal or disconnection.</dd></dl></section><!-- /reader-key --></main></body></html>

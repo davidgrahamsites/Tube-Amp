@@ -1,0 +1,2 @@
+# Bottom enclosure handoff
+Five phases complete. Hybrid B is the first comparison candidate, not an adopted layout: lower power generation/rectifier/raw reservoir/L1+C26; upper R35+C13/C25 and R17+C12, output transformer initially upper. Native geometry unchanged. Read final.md and three research reports. Next: Alien Method comparison then combined five-pass synthesis. Missing exact parts/common frames, heater solution, controls/harness and physical evidence still block actual fit.

@@ -1,0 +1,66 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Power packaging work order</title><!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../docs/engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../docs/engineering-reader/assets/katex/katex.min.css"><script defer src="../../docs/engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../docs/engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../docs/engineering-reader/assets/math.js"></script><!-- /reader-head --></head><body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../docs/engineering-reader/index.html">Engineering status</a><a href="../../docs/engineering-reader/glossary.html">Vocabulary key</a><a href="../../docs/engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav --><main><p class="eyebrow">Reviewed plan · 26 November 2026 · Not released for manufacture</p><h1>Power packaging: work order</h1>
+<p>Check the lower bulk-power arrangement first. Compare it with the upper reference layout using the same exact parts and cabinet measurements. Keep the target of about 25 W, switchable 120/220 V operation, functional blocks, replaceable sockets, low cost and removable rear wood.</p>
+<p class="notice">No candidate has passed complete fit or operating checks. The current CAD has four incomplete boards; the intended build has three.</p>
+<h2>Part allocation</h2>
+<ul><li><strong>Lower candidate:</strong> power transformers; mains inlet, selector, fuses and protective-earth connection; D3–D6/F2; C29/C30; R501/R502; transformer centre-tap return; L1 and C26.</li>
+<li><strong>Upper candidate:</strong> T2 output transformer near the output tubes; R35 with C13/C25 on B_PRE; R17 with C12 on B_EARLY; audio, tube, reverb and control circuits with local bypass capacitors.</li>
+<li><strong>Open assignments:</strong> heater windings and reference, bias circuit, auxiliary regulation, S1 power-switch paths and S2 standby-switch paths.</li></ul>
+<p>C13 and C25 remain separate 50 µF parts. A power-supply part may occupy a reserved upper-board area without changing its functional ownership. See the <a href="interface-table.html">connection table</a> for exact nodes and unresolved crossings.</p>
+<h2>Work sequence</h2>
+<ol><li><strong>Freeze the comparison inputs.</strong> Owner: integration. Allow up to two hours for intake. Save source hashes, exact part dimensions, tolerances and missing-data owners. Prepare the actual S1/S2 routing options; remote switching is a separate circuit change. <strong>Complete when:</strong> the allocation and connection tables cover heaters, bias, auxiliary power, controls, protective earth and normal returns.</li>
+<li><strong>Resolve electrical and part limits.</strong> Owner: electrical integration. Allow one or two work sessions, plus external data. Resolve heater-reference faults before specifying windings and harness contacts. Check bias loss while B+ remains, both mains modes, startup stress, capacitor mounting and derating. <strong>Complete when:</strong> each input has a sourced limit and a PASS, FAIL or NOT CHECKED result.</li>
+<li><strong>Check the complete geometry.</strong> Owner: mechanical integration. Allow two two-hour desk sessions, then report the result. Compare the upper reference, lower bulk-power and all-filters-lower arrangements with the same exact parts. Include the speaker, tank, plugs, three-board allocation, supports, lids, wires, tool paths and removal paths. Make an inert full-size mock-up before detailed fabrication. <strong>Complete when:</strong> a common populated model and service check identify every collision and unresolved boundary.</li>
+<li><strong>Specify the harness and protection.</strong> Owner: electrical and mechanical integration. Allow one or two sessions after cable routes are bounded. Check socket voltage, loop resistance, startup, reset timing, bias faults, contact ratings, insulation, wrong-mate prevention, cable support and bend space. Give both metal assemblies permanent protective-earth bonds; retain one declared GB1 and no normal chassis return. Account for stored charge on both disconnected halves. <strong>Complete when:</strong> the pin map, bond schedule, test points and service sequence are verified for the chosen arrangement.</li>
+<li><strong>Run the deciding comparisons.</strong> Owner: integration and a named competent operator. Set the test effort and limits before starting. P1 checks complete fit and service access. If a lower layout survives, P2 checks tank magnetic pickup when that uncertainty decides the choice. Otherwise, compare local and remote filters only if both lower layouts fit, the remote layout saves useful space, magnetic pickup is already resolved and the predicted difference is measurable. If lower packaging fails, substitute the upper-bank study. <strong>Complete when:</strong> each result states the setup, absolute limit, uncertainty and scope; differences below resolution are a tie.</li>
+<li><strong>Build and qualify the prototype.</strong> Owner: integration and the competent builder. Duration depends on exact parts and fabrication. Prepare prototype CAD after its prerequisite checks. Check the assembled parts, covers-on temperature, hum, treble, output, stability, structural retention, socket service and screw access. Record the load, frequency, distortion limit and tolerance used for the about-25 W target. <strong>Complete when:</strong> the populated assembly passes all architecture requirements or remains explicitly unapproved.</li>
+<li><strong>Save the result and handoff.</strong> Owner: integration and the Luna journal worker. Allow one short checkpoint. Save calculations, failures, decisions, costs, checks and next actions; update ICM and Git. <strong>Complete when:</strong> another builder can trace each accepted choice to its evidence.</li></ol>
+<h2>Rules that remain in force</h2>
+<ul><li>Preserve baseline references and nets during packaging-only work. Correct electrical faults through separately recorded circuit changes, then update the comparison baseline.</li>
+<li>Reconcile the intended three boards before freezing the enclosure. Record each reference, functional owner, board, socket, connector and mounting envelope. Do not assume a smaller outline because a capacitor moves.</li>
+<li>Keep both T1 and T3 within the dual-mains design. Keep B_MAIN to upper T2 separate from the B_SCREEN feed.</li>
+<li>Do not assume an ordinary metal box shields 50/60 Hz magnetic fields. Check tank pickup, mechanical buzz, heat, rear sound radiation and floor strength.</li>
+<li>Keep the tank horizontal and open-side-down. Its reported 149.5 × 60 × 36.5 mm size excludes plugs and mounts.</li>
+<li>The reported cabinet dimensions do not establish an empty rectangular volume. The 41 mm width and 20 mm depth overruns belong to different diagnostic layouts.</li>
+<li>The 46 mm chuck diameter does not prove screw access. Remaining drill measurements are pending, expected 27 November from the 26 November reply.</li>
+<li>Drill and deburr bare clamped metal before fitting electronics. Check installed driver access at the actual service stage.</li>
+<li>Review the raw, film, bias and auxiliary capacitor stores in every switch and disconnect state. A nominal RC time constant is not a safe service delay.</li>
+<li>No purchase, supplier message or fabrication upload is implied by this plan.</li></ul>
+<h2>Acceptance and stop conditions</h2>
+<p>Gate D covers desk work. Gate P permits only the specified prototype or test setup after its prerequisite checks. Gate A requires a representative populated prototype to pass architecture checks. Gate R requires the remaining production files, tolerances, assembly instructions and release tests. The <a href="acceptance.html">acceptance worksheet</a> assigns the evidence; no empty cell is a pass.</p>
+<p>The two-comparison limit applies to this research round. Untested magnetic, filter, thermal and structural questions stay open. End the round by rejecting a candidate, retaining it for one named test, or accepting it only after all required checks pass; do not add another review cycle automatically.</p>
+<p>At the next intake checkpoint, deliver exact part evidence or a specific missing-data request with an owner. Continue independent electrical work while measurements are pending. If a part, connector or route changes, repeat the affected fit checks. Identify the operator before planning energized tests that depend on them.</p>
+<p>Quote the same installed scope for each candidate: parts, metalwork, supports, connectors, wire, labor, tax, delivery and tests. Source quantity-one parts in China and check alternatives where minimum orders are too high. No numeric budget cap or qualified cost difference is available.</p>
+<h2>Evidence and calculations</h2>
+<p>The review retained K1 as the first lower candidate, K2 as the upper reference and K4 as the conditional all-filters-lower option. K3 and K5 need geometry evidence; K6 is the upper-bank fallback. Novelty gives no preference.</p>
+<ul><li><a href="research.html">Electrical and mechanical research</a>; <a href="source-manifest.json">frozen source hashes</a>.</li><li><a href="evidence.html">Independent review record</a>; <a href="../power-packaging-alien/final.html">comparison protocols and alternatives</a>.</li><li><a href="../../docs/design-journal/calculations/current-power-packaging.html">Step-by-step mathematics</a>; <a href="calculations/results/arithmetic.json">16 saved arithmetic cases</a>.</li></ul>
+<p>Record formulas, units, sources, substitutions, assumptions, failed cases, results and the choices they support. Separate arithmetic, simulation and measured evidence. Historical calculation backfill remains open.</p><!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>B_MAIN</dt><dd>The supply node that feeds the output-transformer centre tap.</dd>
+<dt>B_SCREEN</dt><dd>The filtered supply node for the output-tube screen grids.</dd>
+<dt>B_PRE</dt><dd>The filtered supply node for the specified preamplifier stages.</dd>
+<dt>B_EARLY</dt><dd>The filtered supply node for the earlier preamplifier stages.</dd>
+<dt>Bias</dt><dd>A steady voltage or current that sets a device operating point.</dd>
+<dt>Capacitor</dt><dd>A component that stores charge and electrical energy.</dd>
+<dt>Chassis</dt><dd>The metal structure that supports and encloses the electronics.</dd>
+<dt>Chuck</dt><dd>The drill part that grips the bit.</dd>
+<dt>Derating</dt><dd>Operating below a component rating to allow for heat or other specified conditions.</dd>
+<dt>Envelope</dt><dd>The space occupied by a part or assembly, including stated allowances.</dd>
+<dt>GB1</dt><dd>The design identifier for the declared signal-ground to chassis connection.</dd>
+<dt>Harness</dt><dd>A grouped set of wires, contacts and connectors.</dd>
+<dt>Heater</dt><dd>The tube element that heats the cathode.</dd>
+<dt>ICM</dt><dd>Interpretable Context Methodology; the project structure that records ownership, inputs, outputs and checks.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Loop resistance</dt><dd>The total resistance of the supply and return conductors, contacts and terminations.</dd>
+<dt>Mains</dt><dd>The building AC power supply.</dd>
+<dt>Nominal</dt><dd>The stated reference value before tolerance and operating variation.</dd>
+<dt>Pin map</dt><dd>A table assigning each connector contact to a circuit node and function.</dd>
+<dt>Populated</dt><dd>With the components installed.</dd>
+<dt>RC time constant</dt><dd>Resistance multiplied by capacitance for a simple resistor-capacitor model; not a safe service delay.</dd>
+<dt>Socket</dt><dd>A replaceable connection that holds a tube or integrated circuit.</dd>
+<dt>Standby</dt><dd>A switch state; it does not by itself prove the amplifier is de-energized.</dd>
+<dt>Tank</dt><dd>The mechanical spring-reverb assembly.</dd>
+<dt>Tolerance</dt><dd>The permitted variation from a specified value.</dd>
+<dt>Transformer</dt><dd>A magnetic device that transfers energy between windings.</dd>
+<dt>K1</dt><dd>The candidate with the bulk and screen supply below and stage filters above.</dd>
+<dt>K2</dt><dd>The upper power-assembly reference layout; it is not yet a proven fit.</dd>
+<dt>K4</dt><dd>The candidate with all power-supply filters below.</dd>
+<dt>Gate</dt><dd>A checkpoint that requires specified evidence before the next activity.</dd>
+<dt>Prototype</dt><dd>A test assembly used to check the design before release.</dd></dl></section><!-- /reader-key --></main></body></html>

@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Current Power-Packaging Calculations | Renegade Amplifier Journal</title>
+  <meta name="description" content="Source-linked calculations for capacitor packaging, cabinet envelope, heater wiring, and stored energy.">
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <section class="intro">
+      <p>Renegade amplifier design journal · 26 November 2026 · FB-143–148</p>
+      <h1>Current power-packaging calculations</h1>
+      <p>This page records six calculation groups used in the packaging review; none approves parts, fit or operation. The companion <a href="../chapters/capacitor-bank-and-driver-access.html">capacitor-packaging chapter</a> and <a href="../chapters/bottom-power-packaging.html">lower-power chapter</a> describe those choices.</p>
+      <p><strong>State:</strong> arithmetic checked against the saved receipt where applicable. The saved receipt marks the design unqualified.</p>
+    </section>
+
+    <section aria-labelledby="lead-fit">
+      <h2 id="lead-fit">1. Capacitor lead reach</h2>
+      <p><strong>Choice:</strong> decide whether these candidate capacitors can stand 3 mm above a board on their leads alone.</p>
+      <p><strong>Sources:</strong> <a href="../../../engineering/component-selection/power-film/results/assembly-options.json">assembly-options receipt</a>; <a href="../../../plans/capacitor-bank-fit/mounting-research.html">mounting research</a>; <a href="https://industrial.panasonic.com/content/data/CP/PDF/ezpv_je.pdf">Panasonic EZPV R9 specification</a>; <a href="../../../engineering/component-selection/fc6136-fit-contract.json">CRC FC6136 fit contract</a>.</p>
+      <p>The Panasonic lead length is 4 ± 2 mm. The CRC lead length is 4 ± 1 mm. The board is 1.6 mm thick by nominal design.</p>
+      <dl>
+        <dt><span class="math">\(L_{min}\)</span></dt><dd>Minimum exposed lead length, in millimetres.</dd>
+        <dt><span class="math">\(t_{PCB}\)</span></dt><dd>Nominal board thickness, in millimetres.</dd>
+        <dt><span class="math">\(h\)</span></dt><dd>Trial lift of the part body above its seated position, in millimetres.</dd>
+        <dt><span class="math">\(p\)</span></dt><dd>Lead length remaining below a seated board.</dd>
+        <dt><span class="math">\(s\)</span></dt><dd>Signed lead projection after the trial lift, in millimetres. A negative result means the lead does not reach the board underside.</dd>
+      </dl>
+      <div class="math">\[p=L_{min}-t_{PCB},\qquad s=L_{min}-t_{PCB}-h\]</div>
+      <ul>
+        <li><strong>Panasonic:</strong> <span class="math">\(L_{min}=4-2=2\,\mathrm{mm}\)</span>. Seated reach: <span class="math">\(p=2-1.6=0.4\,\mathrm{mm}\)</span>. At a 3 mm lift: <span class="math">\(s=2-1.6-3=-2.6\,\mathrm{mm}\)</span>. Short by 2.6 mm.</li>
+        <li><strong>CRC:</strong> <span class="math">\(L_{min}=4-1=3\,\mathrm{mm}\)</span>. Seated reach: <span class="math">\(p=3-1.6=1.4\,\mathrm{mm}\)</span>. At a 3 mm lift: <span class="math">\(s=3-1.6-3=-1.6\,\mathrm{mm}\)</span>. Short by 1.6 mm.</li>
+      </ul>
+      <p><strong>Check and limits:</strong> Results match the assembly-options receipt. The arithmetic omits board-thickness tolerance, solder height, lead-to-body tolerance, lead-forming limits, and support hardware. It rejects only the unsupported 3 mm lead-suspended arrangement. It does not reject a designed support.</p>
+      <p><strong>Choice:</strong> do not raise these bodies on their leads alone. Start with a dedicated capacitor area on the power board. Keep a supported bank conditional.</p>
+    </section>
+
+    <section aria-labelledby="array-size">
+      <h2 id="array-size">2. Maximum body size and array orientation</h2>
+      <p><strong>Choice:</strong> compare local capacitor layouts before comparing the complete cabinet assembly.</p>
+      <p><strong>Sources:</strong> <a href="../../../engineering/component-selection/power-film/results/assembly-options.json">assembly-options receipt</a> and <a href="../../../plans/capacitor-bank-fit/geometry-research.html">geometry research</a>. Panasonic body maximum: 58 × 26 × 41 mm. CRC body maximum: 58.5 × 36 × 51 mm. Board thickness: 1.6 mm. The 10 mm Panasonic gap is a heating recommendation. The CRC 10 mm gap is only a comparison assumption. Neither gap is an electrical clearance.</p>
+      <dl>
+        <dt><span class="math">\(L,W,H\)</span></dt><dd>Maximum body length, width, and height, in millimetres.</dd>
+        <dt><span class="math">\(g\)</span></dt><dd>Assumed body-to-body gap, in millimetres.</dd>
+        <dt><span class="math">\(t\)</span></dt><dd>Nominal board thickness, in millimetres.</dd>
+      </dl>
+      <p>For a 2 × 2 body array, the two in-plane dimensions are <span class="math">\(2L+g\)</span> and <span class="math">\(2W+g\)</span>. Board plus body height is <span class="math">\(H+t\)</span>. A vertical board moves that height into the cabinet depth dimension.</p>
+      <h3>Panasonic, with the 10 mm heating gap</h3>
+      <ul>
+        <li>Horizontal 2 × 2: <span class="math">\((2\times58+10)\times(2\times26+10)\times(41+1.6)=126\times62\times42.6\,\mathrm{mm}\)</span>.</li>
+        <li>Vertical 2 × 2: <span class="math">\(126\times(41+1.6)\times62=126\times42.6\times62\,\mathrm{mm}\)</span>. Local depth falls by <span class="math">\(62-42.6=19.4\,\mathrm{mm}\)</span>; height rises by 19.4 mm.</li>
+        <li>Horizontal short-axis row: <span class="math">\((4\times26+3\times10)\times58\times(41+1.6)=134\times58\times42.6\,\mathrm{mm}\)</span>.</li>
+        <li>Vertical short-axis row: <span class="math">\(134\times42.6\times58\,\mathrm{mm}\)</span>. Local depth falls by <span class="math">\(58-42.6=15.4\,\mathrm{mm}\)</span>.</li>
+      </ul>
+      <h3>CRC, with a comparison-only 10 mm gap</h3>
+      <ul>
+        <li>Horizontal 2 × 2: <span class="math">\((2\times58.5+10)\times(2\times36+10)\times(51+1.6)=127\times82\times52.6\,\mathrm{mm}\)</span>.</li>
+        <li>Vertical 2 × 2: <span class="math">\(127\times52.6\times82\,\mathrm{mm}\)</span>. Depth falls and height rises by 29.4 mm.</li>
+      </ul>
+      <p><strong>Check and limits:</strong> Values match the assembly-options receipt. These are body arrays plus nominal board thickness, not finished board outlines. They omit board margins, solder, supports, retention, contacts, insulation, connectors, wires, nearby parts, removal paths, cooling, and cabinet fit. Neither part is selected.</p>
+      <p><strong>Choice:</strong> compare a compact 2 × 2 and short row on the power board first. Consider a vertical or supported bank only if a complete assembly shows a real benefit.</p>
+    </section>
+
+    <section aria-labelledby="carrier-overruns">
+      <h2 id="carrier-overruns">3. Current board-carrier overruns</h2>
+      <p><strong>Choice:</strong> determine whether moving power parts can fix the current board-tier dimensions.</p>
+      <p><strong>Sources:</strong> <a href="../../../plans/capacitor-bank-fit/geometry-research.html">geometry research</a> and <a href="../../../engineering/whole-amp/pcb-measured-r/review/mechanical-inventory.json">native board inventory</a>. The comparison frame is 467 × 160 mm. It is not a verified usable cabinet rectangle. The calculation uses assumed 10 mm construction edge allowance on each side, 15 mm side flange on each side, and 8 mm between boards.</p>
+      <dl>
+        <dt><span class="math">\(W_A,D_A\)</span></dt><dd>Tier width and depth, in millimetres.</dd>
+        <dt><span class="math">\(B_w,B_d\)</span></dt><dd>Board width and depth.</dd>
+        <dt><span class="math">\(e,f,g_b\)</span></dt><dd>Construction edge allowance per side, side flange per side, and gap between boards.</dd>
+      </dl>
+      <div class="math">\[W_A=B_{w1}+B_{w2}+g_b+2e+2f,\qquad D_A=\max(B_{d1},B_{d2})+2e\]</div>
+      <table>
+        <caption>Diagnostic arithmetic against the provisional 467 × 160 mm frame</caption>
+        <thead><tr><th scope="col">Board tier</th><th scope="col">Width calculation</th><th scope="col">Depth calculation</th><th scope="col">Difference from frame</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Main + Reverb</th><td><span class="math">\(290+160+8+2\times10+2\times15=508\,\mathrm{mm}\)</span></td><td><span class="math">\(\max(140,100)+2\times10=160\,\mathrm{mm}\)</span></td><td>41 mm over width; depth equals frame.</td></tr>
+          <tr><th scope="row">Rotated Power + Control</th><td><span class="math">\(175+230+8+20+30=463\,\mathrm{mm}\)</span></td><td><span class="math">\(\max(160,110)+20=180\,\mathrm{mm}\)</span></td><td>4 mm width residual; 20 mm depth overrun.</td></tr>
+          <tr><th scope="row">Main + rotated Reverb</th><td><span class="math">\(290+100+8+20+30=448\,\mathrm{mm}\)</span></td><td><span class="math">\(\max(140,160)+20=180\,\mathrm{mm}\)</span></td><td>19 mm width residual; 20 mm depth overrun.</td></tr>
+        </tbody>
+      </table>
+      <p>The remaining width is arithmetic only; it does not prove clearance. The assumed allowances and board geometry are not approved. This is not a shared-datum fit or a physical mock-up.</p>
+      <p><strong>Choice:</strong> the combined plan keeps upper Power as a diagnostic reference and the hybrid lower layout as the first conditional comparison. Neither is adopted or proven to fit.</p>
+    </section>
+
+    <section aria-labelledby="heater-loop">
+      <h2 id="heater-loop">4. Heater-wire current, drop, and heating</h2>
+      <p><strong>Choice:</strong> estimate how a long heater loop may affect socket voltage and wire/contact heating before selecting a harness.</p>
+      <p><strong>Sources:</strong> <a href="../../../plans/bottom-power-enclosure/harness-research.html">harness research</a>, <a href="../../../engineering/whole-amp/reverb-600/circuit.json">current circuit</a>, <a href="../../../engineering/whole-amp/aux-supply/load-review.md">heater-load review</a>, and <a href="../../../plans/power-packaging-synthesis/calculations/inputs.json">calculation inputs</a>. Tube currents are nominal JJ ECC83S and EL34 values. Actual purchased tube types are not confirmed.</p>
+      <dl>
+        <dt><span class="math">\(N\)</span></dt><dd>Number of tubes in the group.</dd>
+        <dt><span class="math">\(I_h\)</span></dt><dd>Nominal heater current per tube, in amperes.</dd>
+        <dt><span class="math">\(V_h\)</span></dt><dd>Nominal heater voltage, in volts.</dd>
+        <dt><span class="math">\(R_m\)</span></dt><dd>Total resistance of the two midpoint resistors, in ohms.</dd>
+        <dt><span class="math">\(I_p\)</span></dt><dd>Pilot-lamp current allowance, in amperes. This part is not selected.</dd>
+        <dt><span class="math">\(R_{loop}\)</span></dt><dd>Hypothetical resistance of both wires, contacts, and terminations, in ohms.</dd>
+      </dl>
+      <div class="math">\[I_{pre}=4\times0.3=1.2\,\mathrm{A},\qquad I_{out}=2\times1.5=3.0\,\mathrm{A}\]</div>
+      <div class="math">\[I_m=6.3/200=0.0315\,\mathrm{A},\qquad I_{total}=1.2+3.0+0.0315+0.15=4.3815\,\mathrm{A}\]</div>
+      <p>At a hypothetical loop resistance of 10 mΩ:</p>
+      <div class="math">\[V_{drop}=I_{total}R_{loop}=4.3815\times0.010=0.043815\,\mathrm{V}\]</div>
+      <div class="math">\[P_{loop}=I_{total}^2R_{loop}=4.3815^2\times0.010=0.1919754\,\mathrm{W}\approx0.192\,\mathrm{W}\]</div>
+      <p>If separate heater groups were later approved, the same hypothetical 10 mΩ gives:</p>
+      <ul>
+        <li>Preamp group: 1.2 A, 0.012 V drop, and 0.0144 W loss.</li>
+        <li>Output-tube group: 3.0 A, 0.030 V drop, and 0.090 W loss.</li>
+      </ul>
+      <p>For illustration only, the total loop resistance corresponding to 0.10 V or 0.20 V drop is:</p>
+      <div class="math">\[R_{loop}=V_{budget}/I_{total};\quad0.10/4.3815=0.022823\,\Omega=22.82\,\mathrm{m\Omega};\quad0.20/4.3815=0.045646\,\Omega=45.65\,\mathrm{m\Omega}\]</div>
+      <p><strong>Check and limits:</strong> Heater inventory, drop, and heat values match the 16-case receipt. The 0.10 V and 0.20 V examples are not approved limits. No cable or contact is selected. The calculation omits cold-start surge, tolerance, and actual winding regulation. The shared heater reference fails 14 of 38 HD-002 model cases. Separate groups are not adopted and do not by themselves solve the reference fault.</p>
+      <p><strong>Choice:</strong> do not freeze heater winding count, connector, or wire size from this sensitivity. Resolve heater-to-cathode limits, insulation, and startup behavior first.</p>
+    </section>
+
+    <section aria-labelledby="reservoir-rc">
+      <h2 id="reservoir-rc">5. Nominal capacitance and RC examples</h2>
+      <p><strong>Choice:</strong> show the scale of nominal reservoir capacitance and simple time constants. Do not use them as discharge times for the full amplifier.</p>
+      <p><strong>Sources:</strong> <a href="../../../engineering/whole-amp/reverb-600/circuit.json">current circuit</a>, <a href="../../../plans/capacitor-bank-fit/interface-research.html">capacitor interface and discharge research</a>, and <a href="../../../plans/power-packaging-synthesis/calculations/results/arithmetic.json">arithmetic receipt</a>. C29 and C30 are each 220 µF and rated 350 V. R501 and R502 are each 220 kΩ. Each resistor spans one reservoir section.</p>
+      <p>Capacitance <span class="math">\(C\)</span> is in farads, resistance <span class="math">\(R\)</span> is in ohms, and time constant <span class="math">\(\tau\)</span> is in seconds. For two equal capacitors in series:</p>
+      <div class="math">\[C_{eq}=\frac{1}{\frac{1}{220\,\mathrm{\mu F}}+\frac{1}{220\,\mathrm{\mu F}}}=110\,\mathrm{\mu F}\]</div>
+      <p>For one isolated nominal bleeder branch:</p>
+      <div class="math">\[\tau=RC=220{,}000\times220\times10^{-6}=48.4\,\mathrm{s}\]</div>
+      <p>The ideal equal pair gives the same result using 440 kΩ and 110 µF:</p>
+      <div class="math">\[\tau=440{,}000\times110\times10^{-6}=48.4\,\mathrm{s}\]</div>
+      <p>Two simplified stage-filter examples use current circuit values:</p>
+      <ul>
+        <li>R17 and C12: <span class="math">\(10{,}000\times50\times10^{-6}=0.5\,\mathrm{s}\)</span>.</li>
+        <li>R35 and C13/C25: <span class="math">\(10{,}000\times100\times10^{-6}=1.0\,\mathrm{s}\)</span>, treating the two 50 µF parts on their shared node as an ideal 100 µF total. C13 and C25 remain separate physical references and returns.</li>
+      </ul>
+      <p><strong>Check and limits:</strong> 110 µF and 48.4 s match the receipt. Stage-filter RC arithmetic uses values from the current circuit. These examples omit source impedance, choke, tube loads, wiring, tolerances, and switch state. Standby disconnects the upstream raw-reservoir bleeders, while downstream discharge paths remain through R506, HREF, and R507 when those parts remain connected. A separated bank can lose a path. No time here is a safe service delay.</p>
+      <p><strong>Choice:</strong> account for each charged state, both module halves, and any unplugged condition. Set a residual-voltage criterion and verify the complete discharge path before approving service. Do not add a bleeder without a separate circuit review.</p>
+    </section>
+
+    <section aria-labelledby="energy">
+      <h2 id="energy">6. Illustrative stored energy</h2>
+      <p><strong>Choice:</strong> show why a separated capacitor bank needs a defined charge check and service procedure.</p>
+      <p><strong>Sources:</strong> <a href="../../../engineering/whole-amp/reverb-600/circuit.json">current circuit</a> and <a href="../../../plans/power-packaging-synthesis/calculations/results/arithmetic.json">arithmetic receipt</a>. The receipt uses 400 V as an illustrative voltage only.</p>
+      <p>Use capacitance <span class="math">\(C\)</span> in farads and voltage <span class="math">\(V\)</span> in volts; energy <span class="math">\(E\)</span> is in joules.</p><div class="math">\[E=\frac{1}{2}CV^2\]</div>
+      <ul>
+        <li>One 50 µF film capacitor at an assumed 400 V: <span class="math">\(E=\frac{1}{2}\times50\times10^{-6}\times400^2=4.0\,\mathrm{J}\)</span>.</li>
+        <li>An ideal 110 µF series reservoir at an assumed 400 V total: <span class="math">\(E=\frac{1}{2}\times110\times10^{-6}\times400^2=8.8\,\mathrm{J}\)</span>.</li>
+      </ul>
+      <p><strong>Check and limits:</strong> Both results match the receipt. The 400 V is not an operating voltage, part limit, or test instruction. Real energy depends on actual capacitance and voltage. Voltage sharing between series sections is not proven equal. This calculation gives no safe waiting time.</p>
+      <p><strong>Choice:</strong> define and measure residual voltage before touching or disconnecting either module.</p>
+    </section>
+
+    <section aria-labelledby="decisions">
+      <h2 id="decisions">Choices these calculations support</h2>
+      <ul>
+        <li>Use a dedicated capacitor area on the revised power board as the first layout study.</li>
+        <li>Keep a mechanically supported capacitor board as a conditional option. Do not suspend parts on short leads.</li>
+        <li>Treat current board-tier numbers as diagnostic arithmetic, not cabinet fit.</li>
+        <li>Do not select heater wiring from hypothetical drop examples. The heater reference remains unresolved.</li>
+        <li>Keep supply nodes, returns, bleeders, and stored-charge states explicit across both modules.</li>
+        <li>No part, lower enclosure, board placement, or physical fit is adopted by these calculations.</li>
+      </ul>
+      <p>The combined decision is in <a href="../../../plans/power-packaging-synthesis/final.html">the packaging synthesis</a>. FB-148 is recorded in the <a href="../../../brain/feedback/events.json">feedback ledger</a>. Earlier project math remains queued for backfill.</p>
+    </section>
+
+    <section aria-labelledby="sources">
+      <h2 id="sources">Sources</h2>
+      <ul>
+        <li><a href="../../../engineering/component-selection/power-film/results/assembly-options.json">Machine-readable capacitor assembly comparison</a></li>
+        <li><a href="../../../engineering/whole-amp/reverb-600/circuit.json">Current circuit values and nodes</a></li>
+        <li><a href="../../../engineering/whole-amp/aux-supply/load-review.md">Heater-load source review</a></li>
+        <li><a href="../../../plans/bottom-power-enclosure/harness-research.html">Heater and harness research</a></li>
+        <li><a href="../../../plans/capacitor-bank-fit/mounting-research.html">Capacitor mounting research</a></li>
+        <li><a href="../../../plans/capacitor-bank-fit/geometry-research.html">Board and carrier geometry research</a></li>
+        <li><a href="../../../plans/capacitor-bank-fit/interface-research.html">Capacitor nodes and discharge-path research</a></li>
+        <li><a href="../../../plans/power-packaging-synthesis/calculations/inputs.json">Frozen arithmetic inputs</a></li>
+        <li><a href="../../../plans/power-packaging-synthesis/calculations/results/arithmetic.json">16-case arithmetic receipt</a></li>
+        <li><a href="../../../plans/power-packaging-synthesis/calculations/tools/calculate.py">Receipt calculation tool</a></li>
+        <li><a href="https://industrial.panasonic.com/content/data/CP/PDF/ezpv_je.pdf">Panasonic EZPV R9 specification</a></li>
+        <li><a href="https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf">JJ ECC83S specification</a></li>
+        <li><a href="https://www.jj-electronic.com/images/stories/product/power_tubes/pdf/el34_e34l.pdf">JJ EL34/E34L specification</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="glossary">
+      <h2 id="glossary">Vocabulary</h2>
+      <dl>
+        <dt>Ampere (A)</dt><dd>The unit of electric current.</dd>
+        <dt>Allowance</dt><dd>Extra space or current included in a calculation. An assumed allowance is not a tested limit.</dd>
+        <dt>Assumption</dt><dd>A value used for an example when a measured or selected value is not available.</dd>
+        <dt>Array</dt><dd>A planned arrangement of several parts.</dd>
+        <dt>Capacitance</dt><dd>A measure of how much electric charge a capacitor stores per volt. Unit: farad (F).</dd>
+        <dt>Capacitor</dt><dd>A part that stores electric charge and energy.</dd>
+        <dt>Cathode</dt><dd>The electron-emitting electrode in a vacuum tube.</dd>
+        <dt>Chassis</dt><dd>The metal structure that supports equipment. It is not automatically a current return.</dd>
+        <dt>Bleeder resistor</dt><dd>A resistor connected across a capacitor to drain charge. Its simple time constant does not prove a safe discharge time.</dd>
+        <dt>Board carrier</dt><dd>A tier formed by one or more printed circuit boards and their assumed support and spacing.</dd>
+        <dt>Clearance</dt><dd>Physical spacing between parts. High-voltage clearance is set by electrical and manufacturing requirements, not by a heating gap.</dd>
+        <dt>Contact</dt><dd>An electrical connection in a connector, socket, or terminal.</dd>
+        <dt>CRC FC6136</dt><dd>A candidate capacitor model. The 10 mm array gap used here is an assumption, not a CRC spacing requirement.</dd>
+        <dt>Current</dt><dd>Rate of electrical charge flow. Unit: ampere (A).</dd>
+        <dt>Depth</dt><dd>Front-to-back dimension in the stated cabinet orientation.</dd>
+        <dt>Derating</dt><dd>Reducing an allowable part rating as temperature or another condition changes.</dd>
+        <dt>Dielectric</dt><dd>The insulating material between a capacitor's conductive parts.</dd>
+        <dt>Farad (F)</dt><dd>The unit of capacitance.</dd>
+        <dt>Filter</dt><dd>A circuit section that reduces unwanted variation in a signal or supply voltage.</dd>
+        <dt>Electrical node</dt><dd>A named connection shared by circuit pins. B_PRE, B_EARLY, B_SCREEN, and HREF are names in the source circuit. GND is its circuit-ground node.</dd>
+        <dt>ECC83S</dt><dd>A small-signal vacuum-tube type used in the nominal heater-current example.</dd>
+        <dt>EL34</dt><dd>An output vacuum-tube type used in the nominal heater-current example.</dd>
+        <dt>Energy</dt><dd>Stored electrical work. Unit: joule (J).</dd>
+        <dt>Film capacitor</dt><dd>A capacitor that uses plastic film as its dielectric.</dd>
+        <dt>Component reference</dt><dd>A label that identifies one part in the circuit. R17 and R35 identify resistors; C12, C13, C25, and C26 identify capacitors; C29 and C30 identify raw-reservoir capacitors; R501 and R502 identify their resistors; L1 identifies a choke; S2 identifies the standby switch.</dd>
+        <dt>Functional block</dt><dd>A circuit function with defined inputs and outputs. It may span more than one physical board.</dd>
+        <dt>Inductor or choke</dt><dd>A coil that resists changes in current. L1 is the circuit reference for the choke.</dd>
+        <dt>Heater reference</dt><dd>The circuit voltage used as the reference for tube-heater voltage relative to the cathodes; HREF is its node name.</dd>
+        <dt>High voltage</dt><dd>A voltage that can cause electric shock and requires an insulation and service review.</dd>
+        <dt>Insulation</dt><dd>Material or spacing that prevents unwanted current between conductors or from a conductor to accessible metal.</dd>
+        <dt>Millimetre (mm)</dt><dd>One thousandth of a metre.</dd>
+        <dt>Microfarad (µF)</dt><dd>One millionth of a farad, the unit of capacitance.</dd>
+        <dt>Milliohm (mΩ)</dt><dd>One thousandth of an ohm, the unit of electrical resistance.</dd>
+        <dt>Load</dt><dd>A circuit or part that draws current from a supply.</dd>
+        <dt>Loop resistance</dt><dd>Resistance of both conductors and all contacts and terminations in a supply-and-return path.</dd>
+        <dt>Nominal</dt><dd>The stated center or design value before tolerance and operating variation.</dd>
+        <dt>Ohm (Ω)</dt><dd>The unit of electrical resistance.</dd>
+        <dt>Panasonic EZPV60506MTC</dt><dd>A candidate film capacitor. It is not selected in this comparison.</dd>
+        <dt>Parallel capacitors</dt><dd>Capacitors connected across the same two nodes. Their ideal capacitances add.</dd>
+        <dt>PCB</dt><dd>Printed circuit board.</dd>
+        <dt>Power dissipation</dt><dd>Electrical energy converted to heat per unit time. Unit: watt (W).</dd>
+        <dt>Pilot allowance</dt><dd>Current reserved in the example for a pilot lamp. No lamp is selected here.</dd>
+        <dt>Resistance (R)</dt><dd>Opposition to current flow. Unit: ohm (Ω).</dd>
+        <dt>Second (s)</dt><dd>The unit of time.</dd>
+        <dt>Joule (J)</dt><dd>The unit of energy.</dd>
+        <dt>Protrusion</dt><dd>Lead length that extends beyond the board surface.</dd>
+        <dt>RC time constant</dt><dd>Resistance multiplied by capacitance in a simple one-pole circuit. Unit: second (s). It is not automatically a safe service delay.</dd>
+        <dt>Return</dt><dd>The circuit path that carries current back to its source. It is not automatically the chassis or protective earth.</dd>
+        <dt>Ripple</dt><dd>Periodic voltage variation on a power-supply rail.</dd>
+        <dt>Series resistance</dt><dd>Resistance in the path between a supply node and the next filtered node.</dd>
+        <dt>Series capacitors</dt><dd>Capacitors connected end to end. For two equal parts, ideal equivalent capacitance is half of one part.</dd>
+        <dt>Shortfall</dt><dd>How far a lead or assembly misses a required reach or dimension.</dd>
+        <dt>Side flange</dt><dd>A structural ledge beside a board. The width used here is a provisional geometry assumption.</dd>
+        <dt>Stored energy</dt><dd>Energy held by a charged capacitor; it depends on actual capacitance and voltage.</dd>
+        <dt>Source impedance</dt><dd>The effective opposition to current change presented by the circuit feeding a load.</dd>
+        <dt>Startup surge</dt><dd>Brief current increase while the equipment powers up and capacitors charge.</dd>
+        <dt>Tolerance</dt><dd>Allowed difference between a part's stated value and its actual value.</dd>
+        <dt>Transformer winding</dt><dd>A coil of wire in a transformer.</dd>
+        <dt>Terminal</dt><dd>A conductive point where a part or wire connects to a circuit.</dd>
+        <dt>Voltage</dt><dd>Electrical potential difference. Unit: volt (V).</dd>
+        <dt>Watt (W)</dt><dd>The unit of power.</dd>
+        <dt>Volt (V)</dt><dd>The unit of electrical potential difference.</dd>
+        <dt>Width</dt><dd>Left-to-right dimension in the stated cabinet orientation.</dd>
+        <dt>Winding</dt><dd>A coil of wire in a transformer.</dd>
+        <dt>JJ ECC83S and EL34 ratings</dt><dd>Manufacturer nominal heater-current inputs used for this example. They do not confirm the identity of purchased tubes.</dd>
+      </dl>
+    </section>
+  </main>
+</body>
+</html>

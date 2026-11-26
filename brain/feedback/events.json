@@ -459,7 +459,7 @@
       "occurred_on": null,
       "authority": "engineer",
       "kind": "engineering-change",
-      "quote": "Updated the full amplifier schematic for your 600 \u03a9 / 2,250 \u03a9 tank.",
+      "quote": "Updated the full amplifier schematic for your 600 Ω / 2,250 Ω tank.",
       "source": "Visible supplied conversation; message containing quoted text. Backfilled summary; original timestamp unknown unless recorded.",
       "interpretation": "Assistant implemented600R-1 attenuated send/passive dry, with fixed insertion loss and scoped checks. This is not user approval of a fabrication release.",
       "disposition": "incorporated",
@@ -1036,7 +1036,7 @@
       "kind": "speaker-aperture-measurement-usability",
       "quote": "it's hard to get the largest measurement of a circle without calipers",
       "source": "Current conversation, S1 measurement",
-      "interpretation": "Use a simple ruler/tape sweep to find the longest chord horizontally and vertically, with1\u20132mm preliminary uncertainty. Explain centre-offset error; reserve final fit for actual speaker template/trial. No caliper purchase required.",
+      "interpretation": "Use a simple ruler/tape sweep to find the longest chord horizontally and vertically, with1–2mm preliminary uncertainty. Explain centre-offset error; reserve final fit for actual speaker template/trial. No caliper purchase required.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md"
@@ -1052,7 +1052,7 @@
       "kind": "received-tank-envelope-measurement",
       "quote": "T1 length: 149.5mm, T2 width: 60 mm, T3 height: 36.5mm,",
       "source": "Current conversation; reply to illustrated T1/T2/T3 measuring instructions",
-      "interpretation": "Record received tank outer envelope149.5\u00d760\u00d736.5mm per requested datums: length including flanges, width including socket projections, height including feet. Setup and measurement uncertainty not independently verified. No replacement catalogue envelope or mounting-hole coordinates inferred.",
+      "interpretation": "Record received tank outer envelope149.5×60×36.5mm per requested datums: length including flanges, width including socket projections, height including feet. Setup and measurement uncertainty not independently verified. No replacement catalogue envelope or mounting-hole coordinates inferred.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/whole-amp/mechanical/fit-register.json",
@@ -1083,7 +1083,7 @@
       "occurred_on": "2026-11-21",
       "authority": "user",
       "kind": "speaker-aperture-unit-confirmed",
-      "quote": "Yes \u2014 27 cm (270 mm)",
+      "quote": "Yes — 27 cm (270 mm)",
       "source": "User answer to S1 unit clarification",
       "interpretation": "Accept approximate received speaker-aperture diameter270mm. Matches supplier drawing nominal270mm; this does not resolve mounting-bolt pattern, exact tolerance, speaker depth or full assembly fit.",
       "disposition": "incorporated",
@@ -1194,7 +1194,7 @@
       "kind": "installed-control-opening-measurements",
       "quote": "P1: 2 or 3 mm short of 31cm; P2-clear: it looks like 53mm",
       "source": "Current conversation: replies to P1/P2-clear with upper rear panel ON",
-      "interpretation": "310 minus 2 to 3 gives307\u2013308mm clear narrow width. Clear depth approximately53mm; no accuracy tolerance supplied. Measurements taken under installed-cover instructions; setup not independently verified.",
+      "interpretation": "310 minus 2 to 3 gives307–308mm clear narrow width. Clear depth approximately53mm; no accuracy tolerance supplied. Measurements taken under installed-cover instructions; setup not independently verified.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/whole-amp/mechanical/fit-register.json",
@@ -1252,7 +1252,7 @@
         "brain/records/VAL-018-all-board-requirements-audit.md"
       ],
       "supersedes": [],
-      "next_action": "Audit complete; all four boards held for fabrication. Follow F01\u2013F08 repair order: exact parts and assembly, placement/protection, per-net rules, routing and verification. No native CAD repair claimed at this checkpoint."
+      "next_action": "Audit complete; all four boards held for fabrication. Follow F01–F08 repair order: exact parts and assembly, placement/protection, per-net rules, routing and verification. No native CAD repair claimed at this checkpoint."
     },
     {
       "id": "FB-077",
@@ -1260,7 +1260,7 @@
       "occurred_on": "2026-11-21",
       "authority": "user",
       "kind": "pcb-remediation-and-release",
-      "quote": "fix the PCB defects and keep going until it\u2019s build-ready. Keep the functional blocks intact, make sure it fits and the screws are accessible, then rerun the checks, log everything in ICM and push to GitHub.",
+      "quote": "fix the PCB defects and keep going until it’s build-ready. Keep the functional blocks intact, make sure it fits and the screws are accessible, then rerun the checks, log everything in ICM and push to GitHub.",
       "source": "Current conversation",
       "interpretation": "Authorize coordinated native electrical/PCB/mechanical repairs and repository push. Preserve existing cabinet and block boundaries; no fabrication release without evidence. Physical fit and energized checks require measured evidence, not inferred passes.",
       "disposition": "in_progress",
@@ -1319,7 +1319,7 @@
         "engineering/whole-amp/pcb-measured-r/review/external-guidance-comparison-2026-11-21.md"
       ],
       "supersedes": [],
-      "next_action": "Comparison completed against pinned repository and primary sources; apply the recorded tube-amp-specific dispositions through F01\u2013F08 remediation."
+      "next_action": "Comparison completed against pinned repository and primary sources; apply the recorded tube-amp-specific dispositions through F01–F08 remediation."
     },
     {
       "id": "FB-084",
@@ -1329,7 +1329,7 @@
       "kind": "dual-mains-feasibility",
       "quote": "is it possible to make it work with 220 or 120 volts?",
       "source": "Current conversation",
-      "interpretation": "Evaluate dual-mains 120 and 220\u2013240 V 50/60 Hz feasibility. Proposed transformer primary/taps plus recessed selector and voltage-specific fusing, all auxiliary supplies included. Not yet an implemented or qualified electrical change. Manufacturer explanation: https://www.hammfg.com/electronics/transformers/faq",
+      "interpretation": "Evaluate dual-mains 120 and 220–240 V 50/60 Hz feasibility. Proposed transformer primary/taps plus recessed selector and voltage-specific fusing, all auxiliary supplies included. Not yet an implemented or qualified electrical change. Manufacturer explanation: https://www.hammfg.com/electronics/transformers/faq",
       "disposition": "superseded",
       "canonical_paths": [
         "brain/records/DEC-012-defer-multi-voltage-variant.md"
@@ -1379,7 +1379,7 @@
       "occurred_on": "2026-11-23",
       "authority": "user",
       "kind": "optocoupler-relay-combination",
-      "quote": "Many designs use an optocoupler to isolate a control signal and drive a relay ... let\u2019s look into it!",
+      "quote": "Many designs use an optocoupler to isolate a control signal and drive a relay ... let’s look into it!",
       "source": "Current build conversation",
       "interpretation": "Evaluate combined optical control plus mechanical relay, including actual isolation boundary and benefits in this circuit.",
       "disposition": "incorporated",
@@ -1469,7 +1469,7 @@
       "kind": "switchable-mains-cost-question",
       "quote": "how much more expensive would making it 220/120 switchable make it?",
       "source": "Current build conversation",
-      "interpretation": "Request incremental cost research; not itself adoption. Engineering allowance \u00a5150\u2013400 remains unquoted and excludes paid engineering/testing.",
+      "interpretation": "Request incremental cost research; not itself adoption. Engineering allowance ¥150–400 remains unquoted and excludes paid engineering/testing.",
       "disposition": "incorporated",
       "canonical_paths": [
         "engineering/component-selection/evidence/prototype-cost-allowance-2026-11-24.md"
@@ -2106,6 +2106,153 @@
       ],
       "supersedes": [],
       "next_action": "Update the Luna-owned journal at meaningful checkpoints; keep historical backfill and physical-build evidence explicit."
+    },
+    {
+      "id": "FB-143",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "user",
+      "kind": "drill-measurement-deferral-and-flexible-drive",
+      "quote": "I'll have to check those tomorrow. Is there such a thing as a flexible drill bit that can get in tight corners?",
+      "source": "Current amplifier conversation during populated chassis dependency review",
+      "interpretation": "Full drill measurements remain deferred until tomorrow; 46mm chuck measurement retained. Research flexible screwdriving extensions/right-angle adapters as possible aids, without treating the question as approval to relax ordinary service access.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/driver-access-options.md"
+      ],
+      "supersedes": [],
+      "next_action": "Keep full drill access pending; compare specific adapter dimensions/limits only if needed."
+    },
+    {
+      "id": "FB-144",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "user",
+      "kind": "supported-high-voltage-capacitor-bank-proposal",
+      "quote": "The high voltage capacitors... Couldn't they be soldered so the body is raised up over the other parts, or have a small breakout board on top with the capacitors on there? or is it better to plan something else?",
+      "source": "Current amplifier conversation during populated chassis dependency review",
+      "interpretation": "Evaluate elevated capacitor bodies versus a mechanically supported capacitor board and a revised power-board layout. This is a proposal request, not adoption of another physical board or permission to weaken insulation, cooling or serviceability. Preserve power-supply functional ownership.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/component-selection/power-film/assembly-review.md"
+      ],
+      "supersedes": [],
+      "next_action": "Compare lead length, mechanical support, assembled height, heat, HV wiring/returns and access; retain three-board preference until an actual alternative is selected."
+    },
+    {
+      "id": "FB-145",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "user",
+      "kind": "five-pass-capacitor-fit-review",
+      "quote": "use the fivetimesplusskill to improve this fit",
+      "source": "Current amplifier conversation, referring to dedicated power-assembly capacitor area versus supported capacitor board",
+      "interpretation": "Run Five Times Skill Plus to improve the packaging comparison; preserve functional power ownership and existing service constraints. No specific extra board or capacitor adopted.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "plans/capacitor-bank-fit/CONTEXT.md",
+        "plans/capacitor-bank-fit/final.md"
+      ],
+      "supersedes": [],
+      "next_action": "Five-pass research complete; execute the combined synthesis handoff, retaining all unqualified physical/electrical gates."
+    },
+    {
+      "id": "FB-146",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "user",
+      "kind": "bottom-power-enclosure-five-pass-alien-review",
+      "quote": "since the transformer is to be chassi mounted on the bottom of the cabinet ... why not put the capacitors and the transfomers, rectifiers, etc there and then have cabling going to the board that's attached to the tubes, etc? please do a five times plus pass on this idea, and use the alien methods skill. with a five times plus pass, then synthesize your findings",
+      "source": "Current amplifier conversation after capacitor fit review",
+      "interpretation": "Evaluate bottom cabinet metal power enclosure and remote tube/audio board with independent five-pass reviews, source-backed Alien Method alternatives and final synthesis. Bottom mounting is a user-proposed direction, not already verified geometry; distinguish power and output transformers. Preserve functional blocks and service constraints.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "plans/bottom-power-enclosure/CONTEXT.md",
+        "plans/power-packaging-alien/CONTEXT.md"
+      ],
+      "supersedes": [],
+      "next_action": "Five-pass research complete; execute the combined synthesis handoff, retaining all unqualified physical/electrical gates."
+    },
+    {
+      "id": "FB-147",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "user",
+      "kind": "combined-power-packaging-five-pass-review",
+      "quote": "then do a five times plus on everything we just found out",
+      "source": "Current amplifier conversation after capacitor fit review",
+      "interpretation": "Evaluate bottom cabinet metal power enclosure and remote tube/audio board with independent five-pass reviews, source-backed Alien Method alternatives and final synthesis. Bottom mounting is a user-proposed direction, not already verified geometry; distinguish power and output transformers. Preserve functional blocks and service constraints.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "plans/power-packaging-synthesis/CONTEXT.md"
+      ],
+      "supersedes": [],
+      "next_action": "Five-pass research complete; execute the combined synthesis handoff, retaining all unqualified physical/electrical gates."
+    },
+    {
+      "id": "FB-148",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "user",
+      "kind": "step-by-step-engineering-calculations-and-choice-log",
+      "quote": "save all the math and calculations and solutions along with the choices log so that the mathematical engineering aspects of it can also be broken down step by step and followed",
+      "source": "Current amplifier conversation during final power-packaging synthesis",
+      "interpretation": "Persist mathematical derivations, inputs/units/sources, assumptions, calculations, failed cases, validation and decision links, with reproducible canonical artifacts and readable Luna narrative. Distinguish theoretical, simulated and measured evidence; track historical backfill.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "docs/design-journal/CONTEXT.md",
+        "docs/design-journal/calculations/CONTEXT.md"
+      ],
+      "supersedes": [],
+      "next_action": "Document current packaging/harness arithmetic step by step and continuously link future mathematical evidence to choices."
+    },
+    {
+      "id": "FB-149",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "user",
+      "kind": "html-maintenance-english-mathematics",
+      "quote": "always use aircraft mechanic english in all documents, never say with two sentences what could be said with one, and make sure everything is katex formatted. Make and read HTML files instead of .md so they're human readable with katex",
+      "source": "Current amplifier conversation after power-packaging review",
+      "interpretation": "Use concise maintenance English and HTML for authored/read engineering reports. Render equations with KaTeX, preserve sources and calculations. Keep required machine-routing contracts and old review evidence; do not claim all historical reports migrated.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "docs/engineering-reader/document-standard.html"
+      ],
+      "supersedes": [],
+      "next_action": "Apply at the current documentation checkpoint and all subsequent engineering work."
+    },
+    {
+      "id": "FB-150",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "user",
+      "kind": "engineering-vocabulary-key",
+      "quote": "also have a vocabulary key for any jargon and engineering terms",
+      "source": "Current amplifier conversation after power-packaging review",
+      "interpretation": "Define technical terms and abbreviations on each current report and link a shared vocabulary key.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "docs/engineering-reader/glossary.html"
+      ],
+      "supersedes": [],
+      "next_action": "Apply at the current documentation checkpoint and all subsequent engineering work."
+    },
+    {
+      "id": "FB-151",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "user",
+      "kind": "build-feasibility-and-progress",
+      "quote": "We've been working on this for a long time. Is the build impossible?",
+      "source": "Current amplifier conversation after power-packaging review",
+      "interpretation": "Give a candid feasibility status. Distinguish unresolved engineering and fit faults from impossibility; prioritize exact parts, fault correction and one complete verified assembly over automatic review cycles.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "docs/engineering-reader/index.html"
+      ],
+      "supersedes": [],
+      "next_action": "Apply at the current documentation checkpoint and all subsequent engineering work."
     }
   ]
 }

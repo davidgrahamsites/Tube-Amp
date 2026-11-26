@@ -1,0 +1,9 @@
+# Flexible and right-angle screwdriver access
+
+November 26, 2026; FB-143. The user has deferred remaining drill measurements until tomorrow. Only the 46 mm rotating-chuck diameter is known. No adapter is selected and the normal drill-access requirement remains in force.
+
+Flexible screwdriver-bit extensions transmit rotation around an obstruction; right-angle adapters turn the drive axis. These are screwdriving accessories, not a general promise that an arbitrary flexible shaft can drill metal or tolerate impact operation. Exact accessory limits and interface compatibility control suitability. [DeWalt DWARAFS support](https://support.dewalt.com/hc/en-us/articles/32801031829389-DWARAFS-What-is-Max-torque-that-this-accessory-can-handle) confirms the right-angle flexible accessory and gives 120 in-lb maximum torque (about 13.6 N·m). This is the accessory ceiling, not an amplifier-fastener tightening recommendation. The [Bosch IXO angle adapter](https://www.bosch-diy.com/ae/en/p/ixo-collection-angle-screw-adapter-1600a001y8) is an example of tool-specific compatibility; it must not be assumed to fit the user's chuck directly.
+
+Chinese search terms: 电动螺丝刀软轴延长杆 / 6.35mm六角软轴延长杆 / 直角批头转换器. These are search terms, not verified Taobao/Pinduoduo stock or a purchase recommendation. No order, supplier contact or address lookup has occurred.
+
+Engineering preference: retain straight access to chassis-retaining screws and ordinary bench access after chassis withdrawal. Treat an extension as a possible service aid. Its tip/head diameter, bend radius, usable length, torque/speed/direction rating, bit retention and the hand needed to stabilize it all consume space. It cannot be credited in the access model from a product photo, and it does not resolve a blocked screw head or a trapped chassis. If a specific accessory becomes necessary, qualify that complete tool path before changing the service contract.

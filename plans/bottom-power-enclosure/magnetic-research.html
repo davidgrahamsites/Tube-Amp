@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Magnetic placement research — bottom power enclosure</title><!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../docs/engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../docs/engineering-reader/assets/katex/katex.min.css"><script defer src="../../docs/engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../docs/engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../docs/engineering-reader/assets/math.js"></script><!-- /reader-head --></head><body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../docs/engineering-reader/index.html">Engineering status</a><a href="../../docs/engineering-reader/glossary.html">Vocabulary key</a><a href="../../docs/engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav --><main><p class="eyebrow">Renegade · Reviewed engineering record · 26 November 2026</p><h1>Magnetic placement research — bottom power enclosure</h1>
+<p>Date: 2026-11-26. Owner: delegated magnetic research; integration owns the decision. Status: source-backed planning, no bench measurement or native change.</p>
+<h2>Task card and fixed inputs</h2>
+<p>Inputs: <code>v1.md</code>, root build/handoff contracts, <code>engineering/whole-amp/mechanical/fit-register.json</code>, current feedback review and received-tank characterization plan. Output: this report only. Dependencies: exact power/auxiliary/output transformers and choke, actual cable routes, qualified closed test fixture, and received-hardware fit. Done-condition: distinguish manufacturer evidence from engineering inference and provide a bounded comparison. This does not resolve magnetics selection, release fabrication, authorize purchase or instruct the user to energize exposed parts.</p>
+<p>Preserve the approximately 25 W six-tube electric topology, existing feedback/Presence function and solid-state spring drive/recovery. The received M8EB2C1B / R2610270015 tank remains <strong>horizontal, open side down</strong>, with seller-stated 600 Ω input / 2250 Ω output, insulated input shell and grounded output shell. These are the project basis; Accutronics or MOD codes do not override them. Its reported 149.5 × 60 × 36.5 mm envelope excludes unresolved plugs/mounts. Preserve the fixed cabinet and independent rear cover.</p>
+<h2>Placement conclusion</h2>
+<p>Advance bottom <strong>power</strong> hardware as a candidate, not a complete bottom-transformer cluster. Retain the output transformer with the upper output-tube/Presence assembly as the first comparison baseline. Separately compare choke placement. Reject any drawing that treats a metal box or a nominal distance as proof of quiet operation.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Initial candidate</th>
+<th>Reason and remaining test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main and auxiliary power transformers</td>
+<td>Lower power enclosure, if floor/tank/speaker fit permits</td>
+<td>Short local mains, winding, rectifier and reservoir connections are useful, but moving their fields toward the tank can worsen wet hum. Measure actual field coupling under representative winding loads.</td>
+</tr>
+<tr>
+<td>Rectifier and first reservoir</td>
+<td>Together with their transformer</td>
+<td>Engineering inference: confine charging-current loop area instead of sending rectifier pulses up the cabinet. This requires intentional paired supply/return routing, not the enclosure as a normal return.</td>
+</tr>
+<tr>
+<td>Choke</td>
+<td>Compare lower supply placement against upper placement near its downstream filter</td>
+<td>It is a magnetic component carrying DC plus ripple, not an inert spacer. Lower placement can keep its supply loop compact; upper placement may help filtering locality but brings another field/vibration source near audio. Evaluate the actual node allocation, ripple and loop geometry.</td>
+</tr>
+<tr>
+<td>Output transformer</td>
+<td>Upper, near output valves and its intended feedback/speaker interface</td>
+<td>It is in the audio power/feedback path. Moving it down adds long plate-primary connections and a changed feedback/speaker route; it also places another magnetic source beside the tank. No source establishes that this trade is beneficial here.</td>
+</tr>
+<tr>
+<td>Tank</td>
+<td>Approved horizontal/open-down plane; compare feasible in-plane headings/locations</td>
+<td>Prioritize its output end and recovery cable in the magnetic map. Changing heading does not authorize standing it vertically or turning its open face upward.</td>
+</tr>
+</tbody>
+</table>
+<p>The table is an engineering recommendation to compare; it is not a manufacturer-certified layout or a new physical allocation. Exact transformers remain unselected/unqualified.</p>
+<h2>Manufacturer evidence and limits</h2>
+<ol>
+<li>
+<p><strong>Tank pickup and mechanics.</strong> Historical Accutronics application notes explain that the output transducer remains susceptible despite its shield, and shield effectiveness depends on field direction. They also explain mounting-plane dependence of spring/magnet clearance, recommend resilient mounting and cable slack, and discourage resonant mounting surfaces. These support mapping the received tank's output end and retaining its specified plane; they do not establish a minimum safe spacing or this Mable tank's immunity. Source: <a href="https://bustedgear.com/images/resources/Accutronics.pdf">Accutronics manufacturer reference, preserved reproduction</a>, also retained locally at <code>engineering/whole-amp/mechanical/evidence/accutronics-reference.pdf</code>; application-note text is additionally reproduced in <a href="https://www.scribd.com/document/433825546/Accutronics-Reverb-Part-Reference-and-application-notes">the indexed reference</a>. The current Accutronics application-page fetch was unavailable in this research pass. The received unit's seller/photograph records remain authoritative for its identity and orientation.</p>
+</li>
+<li>
+<p><strong>Electric-field screening and magnetic screening differ.</strong> <a href="https://www.jensen-transformers.com/faq/">Jensen's manufacturer FAQ</a> distinguishes Faraday shielding against capacitive winding coupling from high-permeability shielding against nearby magnetic fields. Therefore a bonded conductive enclosure may contribute useful electric-field screening while still failing the tank's mains-frequency magnetic requirement. Bonding remains an electrical-safety/interface requirement; it is not an attenuation rating.</p>
+</li>
+<li>
+<p><strong>Ordinary enclosure claims must be limited.</strong> <a href="https://www.magnetic-shield.com/news-insights/how-to-shield-magnetic-field-design-guide/">Magnetic Shield Corporation's system guide</a> identifies permeability and geometry as central at 50/60 Hz. <a href="https://www.magnetic-shield.com/news-insights/faraday-cage-vs-magnetic-shielding">Its Faraday-cage comparison</a> explains why ordinary copper/aluminium RF shields provide little low-frequency magnetic attenuation and why seams/apertures matter. Mild steel can redirect some flux; its actual alloy, thickness, field strength, gaps and geometry determine the result. Neither “metal” nor “steel” establishes a useful dB reduction at the tank. Do not copy catalogue attenuation into this box. <a href="https://www.magnetic-shield.com/mumetal-technical-data/">MuMETAL technical data</a> additionally makes final annealing and saturation relevant; a guessed patch of premium foil is not a proven remedy.</p>
+</li>
+<li>
+<p><strong>Mechanical buzz is a separate path.</strong> <a href="https://www.lundahltransformers.com/rubber-vibration-isolators/">Lundahl's vibration-isolator guidance</a> explains transformer-core vibration and reducing its mechanical coupling to resonant chassis. Thus a floor power box may excite the tank mechanically even if magnetic pickup improves. Resilient transformer mounting must still meet retention, earth and thermal requirements; no particular isolator is selected.</p>
+</li>
+<li>
+<p><strong>Output transformer data are circuit-specific.</strong> <a href="https://www.hammfg.com/files/parts/pdf/1650F.pdf">Hammond 1650F data</a> provide separate winding resistance, open-circuit inductance, leakage-inductance test conditions, load connections and frequency-response information for a 7.6 kΩ/25 W reference. Its winding interconnection condition matters. This is an example of required evidence, not a selected China-source transformer or permission to change topology. A supplied lead length is not a permissible remote-transformer harness specification.</p>
+</li>
+</ol>
+<h2>Local versus long audio/feedback connections</h2>
+<p>Engineering inference: long primary wires add capacitance to each other/chassis and inductance/resistance, increase electric-field coupling opportunities, and change the physical relationship to sensitive grids. A long feedback route adds pickup exposure and parasitics; the intended feedback return must travel deliberately with it, separate from charging/heater currents. Twisting can reduce loop area but does not make insulation, capacitance or wrong-mate risks disappear. No universal maximum wire length follows from these sources.</p>
+<p>The project already has a stronger reason for caution than a generic wiring rule: <code>engineering/whole-amp/effects-loop/feedback-review.md</code> and VAL-023 contain leakage/capacitance sensitivity, failed response cases and a fine-timestep oscillation control. Exact hardware stability remains open. A lower output transformer cannot inherit those results unchanged. Preserve R31/R32/C20/C21/RV9 ownership, actual tap phase and loaded-secondary topology. Model bounded harness R/L/C from the chosen cable and routed length, then repeat relevant return-ratio and HF transient comparisons. <a href="https://www.ti.com/lit/an/sloa020a/sloa020a.pdf">TI SLOA020A</a> supports the feedback-analysis method, not direct transplantation of op-amp compensation into this valve amplifier. Report 5/10/20 kHz changes across Presence settings; do not buy apparent quietness with unreviewed treble loss.</p>
+<h2>Bounded matched hum comparison</h2>
+<p>This is a technician-run test specification after fixture review, not a user-facing exposed-mains experiment. The user's proposed Mac audio interface remains suitable only for reviewed low-voltage audio interfaces, never direct mains, B+, plates, bias or unknown floating amplifier nodes.</p>
+<p><strong>Gate and matrix.</strong> Before energizing, the responsible electrical builder signs off enclosed live parts, permanent PE bonds, fusing/mains selection, strain relief, load ratings, discharge verification and instrument interfaces. Fix actual selected parts and their loading. Define at most three mechanically feasible arrangements: upper-power reference A; lower power/rectifier/reservoir B; lower power with the alternate choke/filter allocation C. Hold output transformer upper in this first comparison. Record all dimensions and coil/core headings. Pre-screen only feasible tank headings within its horizontal/open-down plane. Native redesign is not required to create inert fit mock-ups.</p>
+<p><strong>First, establish measurement floor.</strong> Use a calibrated, low-noise low-voltage recovery chain of fixed gain/loading. Preserve tank grounding and a defined input termination representing the drive stage at zero signal. Record recovery-chain background with a documented dummy source impedance and then tank connected; an input short alone is not a noise-equivalent tank. Disable phantom power, AGC and processing. Keep USB/computer/cable placement fixed and record ambient mains-field background with power hardware off. The exact tank's AC/drive limits remain covered by its separate characterization plan; this hum test needs no high-level tank excitation.</p>
+<p><strong>Then, compare enclosed source assemblies.</strong> A competent builder uses the same approved closed power assembly, actual representative winding loads and protected audio interface for each geometry. All movement, heading changes, connectors and cover changes occur with power removed and discharge verified; no live hand rotation or exposed transformer “headphone test.” Include idle and representative loaded conditions rather than an unloaded transformer alone. Where the rig cannot reproduce operating load/current waveforms, label the result a preliminary field screen. Use a load bank/enclosed fixture only after its own thermal and electrical review.</p>
+<p>For each viable arrangement, retain three 30-second captures after a fixed documented settling period, followed by a repeat reference A capture to expose drift. Repeat at the required 120 V/60 Hz and 220 V/50 Hz supply modes using appropriate lab equipment; do not assume 50 Hz is equivalent or imitate it by changing transformer voltage alone. Extract calibrated RMS line amplitude at mains frequency, twice mains frequency and relevant harmonics, plus stated-band integrated noise. Preserve raw recordings, FFT settings, calibration, gain, load, actual line V/Hz and geometry photographs. Frequency peaks are clues, not automatic proof of a magnetic versus conducted origin.</p>
+<p><strong>Finally, validate the assembled path.</strong> Once the amplifier itself is ready for qualified operation, repeat with fixed controls/input termination and identical supply/load conditions, dry-only and specified wet settings. Use the same correctly rated electrical output load for electronic-noise comparison, then a separate bounded speaker test for mechanical/acoustic coupling with the installed bag/mounts/cable slack. Do not test an unloaded tube output. Capture existing/local and candidate harness response under the feedback review; a hum improvement cannot waive stability, treble, thermal or safety failures.</p>
+<p><strong>Decision.</strong> Establish an absolute hum/noise acceptance target and measurement uncertainty before declaring a winner; none is currently specified. A candidate must meet that target and not worsen baseline dry/wet noise beyond demonstrated repeatability at either mains mode or relevant load. If two results are indistinguishable, record a tie and favor the simpler fit/service/harness arrangement. If the tank floor is below measurement resolution, report an upper bound, not zero hum. Failure to meet the absolute target keeps both arrangements open even if one is relatively quieter. Shielding changes are a separate controlled variable, with exact material, closures and apertures recorded.</p>
+<h2>Human check and handoff</h2>
+<p>Integration should carry three gates into v2: (1) floor geometry includes both tank body and output-end/cable location; (2) output transformer movement requires independent harness/feedback justification; (3) ordinary metal enclosure has no credited low-frequency attenuation until measured. Keep electrical magnetic pickup, conducted noise and mechanical buzz as distinct hypotheses. No spacing in millimetres, shield thickness, selected transformer or measured hum level has been established here. This research is complete; physical comparison and fit remain pending.</p>
+<!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>AC</dt><dd>Alternating current; current that changes direction.</dd>
+<dt>Bias</dt><dd>A steady voltage or current that sets a device operating point.</dd>
+<dt>Capacitance</dt><dd>The ratio of stored charge to voltage; measured in farads (F).</dd>
+<dt>Chassis</dt><dd>The metal structure that supports and encloses the electronics.</dd>
+<dt>Clearance</dt><dd>The shortest distance through air between conductive parts.</dd>
+<dt>DC</dt><dd>Direct current; current that flows in one direction.</dd>
+<dt>Envelope</dt><dd>The space occupied by a part or assembly, including stated allowances.</dd>
+<dt>Feedback</dt><dd>A signal returned from an output to an earlier stage to control gain or response.</dd>
+<dt>Harness</dt><dd>A grouped set of wires, contacts and connectors.</dd>
+<dt>Heater</dt><dd>The tube element that heats the cathode.</dd>
+<dt>Impedance</dt><dd>Opposition to alternating current, including resistance and frequency-dependent effects; measured in ohms (Ω).</dd>
+<dt>Lead</dt><dd>A component terminal that connects to the board.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Magnetics</dt><dd>Transformers and inductors.</dd>
+<dt>Mains</dt><dd>The building AC power supply.</dd>
+<dt>Node</dt><dd>An electrical connection shared by specified components.</dd>
+<dt>Nominal</dt><dd>The stated reference value before tolerance and operating variation.</dd>
+<dt>PE</dt><dd>Protective earth; the protective connection to exposed conductive parts.</dd>
+<dt>Rectifier</dt><dd>A circuit that changes alternating current into current of one polarity.</dd>
+<dt>Reservoir</dt><dd>A capacitor bank that stores energy after rectification.</dd>
+<dt>Ripple</dt><dd>Periodic supply variation remaining after rectification and filtering.</dd>
+<dt>Strain relief</dt><dd>A support that keeps cable forces away from electrical terminations.</dd>
+<dt>Tank</dt><dd>The mechanical spring-reverb assembly.</dd>
+<dt>Transformer</dt><dd>A magnetic device that transfers energy between windings.</dd>
+<dt>Winding</dt><dd>A coil of insulated wire in a transformer or inductor.</dd>
+<dt>Gate</dt><dd>A checkpoint that requires specified evidence before the next activity.</dd></dl></section><!-- /reader-key --></main></body></html>

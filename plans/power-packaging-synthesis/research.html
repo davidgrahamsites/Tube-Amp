@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Synthesis v2 focused source cross-check</title><!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../docs/engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../docs/engineering-reader/assets/katex/katex.min.css"><script defer src="../../docs/engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../docs/engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../docs/engineering-reader/assets/math.js"></script><!-- /reader-head --></head><body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../docs/engineering-reader/index.html">Engineering status</a><a href="../../docs/engineering-reader/glossary.html">Vocabulary key</a><a href="../../docs/engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav --><main><p class="eyebrow">Renegade · Reviewed engineering record · 26 November 2026</p><h1>Synthesis v2 focused source cross-check</h1>
+<p>2026-11-26. Owner: delegated source reviewer; integration owns plan changes. Scope: read-only comparison of v2 with current circuit/grounding/heater/geometry contracts and the three completed studies. Circuit Design Skill Ladder L0 evidence routing applied. Output is this report only; no native/shared-record edits, new simulation, bench measurement, purchasing or architecture adoption.</p>
+<h2>Corrections to carry into v3</h2>
+<ol>
+<li>
+<p><strong>Make the remaining HV seam explicit.</strong> The source topology is <code>B_RAW → S2 → B_MAIN → L1 → B_SCREEN → R35 → B_PRE → R17 → B_EARLY</code>. T2.CT branches from <strong>B_MAIN</strong>, before L1; it must receive its own defined feed/return arrangement when T2 stays upper. Hybrid B_SCREEN also supplies the upper R35 network and output screen resistors. Include lower R501/R502 with C29/C30 and the transformer CT return in the raw-reservoir allocation; otherwise the shorthand component list leaves its discharge/charging-loop ownership incomplete. R35/R17 are each 10 kΩ. C12=B_EARLY/GND, C13 and C25 are separate 50 µF B_PRE/GND parts, and C26=B_SCREEN/GND: v2 has these correctly. <a href="../../engineering/whole-amp/reverb-600/circuit.json">Current circuit</a>, <a href="../bottom-power-enclosure/harness-research.html">prior interface table</a>.</p>
+</li>
+<li>
+<p><strong>Turn the deferred power seam into a named decision receipt before harness quotation.</strong> Record S1's two actual paths (<code>L_FUSED/L_SW</code> and <code>MAINS_N/N_SW</code>) and S2's <code>B_RAW/B_MAIN</code> path; an upper S2 can create a round trip to lower L1 even with upper T2. Both native mains transformers T1 <strong>and T3</strong> need the selectable-mains implementation. “Selected mains/auxiliary power magnetics” should read “exact magnetics to be selected/qualified”: current native references do not establish selected dual-voltage parts. Name ownership of R40/D7/C28/R39/C27/R38/RV10/R503, the bias adjustment and BIAS_OUT/open-return failure. For auxiliary allocation, distinguish raw <code>CTRL_RAW/NEG_RAW</code> crossings from regulated <code>+15V/-15V/+12V/+5V</code> crossings; preserve regulator-local capacitors/protection and load-end reset/mute behavior. Do not infer connector count from this candidate list. <a href="../../engineering/whole-amp/reverb-600/circuit.json">Circuit</a>, <a href="../bottom-power-enclosure/harness-research.html">harness research</a>, <a href="../../brain/records/DEC-015-switchable-mains.md">mains decision</a>.</p>
+</li>
+<li>
+<p><strong>Keep heater and charge ownership coupled.</strong> R506/R507/C505 currently connect B_SCREEN/HREF/GND. Their physical side affects both heater common-mode/reference behavior and downstream discharge after unplugging. Separate heater groups remain a candidate, and do not by themselves solve the 355 V preamp case; one continuous winding's center tap is not independent isolation. Preserve this as a transformer/harness blocker while allowing inert geometry work. Explicitly inspect the received tank's grounded output shell/mounts for a second GND/chassis bond in the new metal assembly. <a href="../../engineering/component-selection/heater-divider-rating/interface-review.md">HD-002</a>, <a href="../../engineering/whole-amp/reverb-600/grounding-contract.json">grounding contract</a>, <a href="../../engineering/whole-amp/mechanical/fit-register.json">fit register</a>.</p>
+</li>
+<li>
+<p><strong>Restore the strict P2 selection/evidence conditions.</strong> A passive K1/K4 filter comparison is useful only if both arrangements survive P1, K4 has meaningful whole-assembly gain, magnetic uncertainty is already addressed, and a source/load/cable sensitivity estimate predicts a resolvable decision-relevant effect. Freeze actual R/L/C, source impedance, incremental load representation, bandwidth and absolute limits. Use three repeated traces plus repeated reference, with common exact parts; disclose unavoidable mismatches and mark the comparison inconclusive if they could reverse the result. Low-voltage terminations omit operating-voltage, active-load and nonlinear effects; if those omissions matter, label the test exploratory. Replacing P2 with magnetic testing leaves filter performance open, and vice versa. A fallback consumes a replacement slot, not an extra protocol. <a href="../power-packaging-alien/final.html">Alien final protocols and decision tree</a>.</p>
+</li>
+</ol>
+<h2>Confirmed boundaries; no new evidence</h2>
+<ul>
+<li><strong>Geometry:</strong> v2 correctly retains 41 mm width/20 mm depth diagnostic deficits, separates local capacitor extents from finished carrier fit, and does not call 467/160/383 mm a verified cuboid. Panasonic and CRC maximum bodies and seated-lead arithmetic agree with the contracts. The Panasonic 2×2 example is a four-capacitor bank; the hybrid retains only three of those film capacitors upper, so it is not a computed hybrid saving. Recompute the complete allocation rather than subtracting that example. No new floor/speaker/magnetics/tool envelope was found. <a href="../capacitor-bank-fit/final.html">Capacitor final</a>, <a href="../../engineering/component-selection/power-film/panasonic-contract.json">Panasonic contract</a>, <a href="../../engineering/component-selection/fc6136-fit-contract.json">CRC contract</a>.</li>
+<li><strong>Prototype versus final:</strong> v2's D/P/A/R distinction is consistent with prior studies. Fixture-specific electrical, retention and test-access prerequisites may permit a reviewed prototype while hum/thermal/acoustic outcomes remain unmeasured; those unknowns cannot pass architecture acceptance or production release. Full-amplifier heater/bias holds do not automatically prohibit an isolated fixture that excludes those circuits. No additional approval or full-amp qualification is implied by this report. <a href="../bottom-power-enclosure/final.html">Bottom final</a>, <a href="../power-packaging-alien/final.html">Alien final</a>.</li>
+<li><strong>Part equality and cost:</strong> use separate matched Panasonic and CRC cases if both remain viable, with identical circuit parts across placements within each case. Different capacitor dimensions, exact magnetics or connector/support revisions invalidate affected comparisons. Prior dated stock observations are not current availability, delivered quotations or cost deltas. No current pricing, magnetic attenuation, acceptable hum limit, cable gauge or final clearance has been established here.</li>
+<li><strong>Sources:</strong> existing primary-source extracts and contracts suffice for these corrections. No new external load-bearing claim required browsing; no fresh supplier/manufacturer evidence was gathered. Absence of new evidence is a continuing hold, not confirmation of fit or safety.</li>
+</ul>
+<p>Human check: trace the complete candidate allocation and both disconnected module halves against the circuit; then check that each proposed comparison changes only declared factors and that remaining untested gates stay visible. Integration owns shared catalog/status/journal capture and the scoped final ICM check.</p>
+<!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>B_MAIN</dt><dd>The supply node that feeds the output-transformer centre tap.</dd>
+<dt>B_RAW</dt><dd>The rectified supply node before the standby switch.</dd>
+<dt>B_SCREEN</dt><dd>The filtered supply node for the output-tube screen grids.</dd>
+<dt>B_PRE</dt><dd>The filtered supply node for the specified preamplifier stages.</dd>
+<dt>B_EARLY</dt><dd>The filtered supply node for the earlier preamplifier stages.</dd>
+<dt>Bias</dt><dd>A steady voltage or current that sets a device operating point.</dd>
+<dt>Capacitor</dt><dd>A component that stores charge and electrical energy.</dd>
+<dt>Chassis</dt><dd>The metal structure that supports and encloses the electronics.</dd>
+<dt>Clearance</dt><dd>The shortest distance through air between conductive parts.</dd>
+<dt>CT</dt><dd>Centre tap; an electrical connection part-way along a transformer winding.</dd>
+<dt>Envelope</dt><dd>The space occupied by a part or assembly, including stated allowances.</dd>
+<dt>Harness</dt><dd>A grouped set of wires, contacts and connectors.</dd>
+<dt>Heater</dt><dd>The tube element that heats the cathode.</dd>
+<dt>HREF</dt><dd>The design name for the heater reference node.</dd>
+<dt>HV</dt><dd>High voltage; use the actual voltage and insulation requirement in each design check.</dd>
+<dt>ICM</dt><dd>Interpretable Context Methodology; the project structure that records ownership, inputs, outputs and checks.</dd>
+<dt>Impedance</dt><dd>Opposition to alternating current, including resistance and frequency-dependent effects; measured in ohms (Ω).</dd>
+<dt>Lead</dt><dd>A component terminal that connects to the board.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Magnetics</dt><dd>Transformers and inductors.</dd>
+<dt>Mains</dt><dd>The building AC power supply.</dd>
+<dt>Preamp</dt><dd>Preamplifier; the stages that prepare the input signal for the power amplifier.</dd>
+<dt>Qualification</dt><dd>Checks that show a design meets stated limits under stated conditions.</dd>
+<dt>Reservoir</dt><dd>A capacitor bank that stores energy after rectification.</dd>
+<dt>Tank</dt><dd>The mechanical spring-reverb assembly.</dd>
+<dt>Transformer</dt><dd>A magnetic device that transfers energy between windings.</dd>
+<dt>Winding</dt><dd>A coil of insulated wire in a transformer or inductor.</dd>
+<dt>K1</dt><dd>The candidate with the bulk and screen supply below and stage filters above.</dd>
+<dt>K4</dt><dd>The candidate with all power-supply filters below.</dd>
+<dt>Prototype</dt><dd>A test assembly used to check the design before release.</dd></dl></section><!-- /reader-key --></main></body></html>

@@ -1,0 +1,195 @@
+{
+  "status": "conditional packaging arithmetic; neither part adopted",
+  "assumptions": {
+    "PCB_nominal_thickness_mm": 1.6,
+    "trial_body_lift_mm": 3,
+    "bank_rows": 2,
+    "bank_columns": 2
+  },
+  "excluded": [
+    "PCB thickness tolerance and required solder protrusion",
+    "body-to-pin position tolerances, supports and board margins",
+    "connectors, mounting holes, creepage and clearance",
+    "lower components, separation and removal/tool envelopes",
+    "cabinet, speaker, transformer and thermal fit"
+  ],
+  "candidates": [
+    {
+      "mpn": "EZPV60506MTC",
+      "input_path": "power-film/panasonic-contract.json",
+      "input_sha256": "3ad199dbf07e064e15fc1d6bd563dacceac29db81b1557b6a58259475d9a11d3",
+      "max_body_L_W_H_mm": [
+        58,
+        26,
+        41
+      ],
+      "minimum_exposed_lead_mm": 2,
+      "lead_remaining_below_nominal_1_6_mm_PCB": {
+        "body_seated_mm": 0.4,
+        "body_raised_3_mm": -2.6
+      },
+      "conditional_four_body_2_by_2_extent_mm": [
+        126,
+        62,
+        41
+      ],
+      "body_gap_mm": 10,
+      "gap_basis": "manufacturer neighbor recommendation",
+      "upper_PCB_plus_body_height_mm": 42.6,
+      "orientation_comparisons": [
+        {
+          "name": "two_by_two",
+          "columns": 2,
+          "rows": 2,
+          "cell_body_L_W_H_mm": [
+            58,
+            26,
+            41
+          ],
+          "horizontal_body_and_nominal_PCB_extent_mm": [
+            126,
+            62,
+            42.6
+          ],
+          "vertical_body_and_nominal_PCB_extent_mm": [
+            126,
+            42.6,
+            62
+          ],
+          "local_depth_saved_vertical_mm": 19.4
+        },
+        {
+          "name": "short_axis_row",
+          "columns": 4,
+          "rows": 1,
+          "cell_body_L_W_H_mm": [
+            26,
+            58,
+            41
+          ],
+          "horizontal_body_and_nominal_PCB_extent_mm": [
+            134,
+            58,
+            42.6
+          ],
+          "vertical_body_and_nominal_PCB_extent_mm": [
+            134,
+            42.6,
+            58
+          ],
+          "local_depth_saved_vertical_mm": 15.4
+        },
+        {
+          "name": "long_axis_row",
+          "columns": 4,
+          "rows": 1,
+          "cell_body_L_W_H_mm": [
+            58,
+            26,
+            41
+          ],
+          "horizontal_body_and_nominal_PCB_extent_mm": [
+            262,
+            26,
+            42.6
+          ],
+          "vertical_body_and_nominal_PCB_extent_mm": [
+            262,
+            42.6,
+            26
+          ],
+          "local_depth_saved_vertical_mm": -16.6
+        }
+      ]
+    },
+    {
+      "mpn": "FC6136",
+      "input_path": "fc6136-fit-contract.json",
+      "input_sha256": "9deb91c6a0c0414d55d575e80079be6a21a20c2ce978d9af3ec1b971b7e6dfe7",
+      "max_body_L_W_H_mm": [
+        58.5,
+        36,
+        51
+      ],
+      "minimum_exposed_lead_mm": 3,
+      "lead_remaining_below_nominal_1_6_mm_PCB": {
+        "body_seated_mm": 1.4,
+        "body_raised_3_mm": -1.6
+      },
+      "conditional_four_body_2_by_2_extent_mm": [
+        127.0,
+        82,
+        51
+      ],
+      "body_gap_mm": 10,
+      "gap_basis": "comparison assumption only",
+      "upper_PCB_plus_body_height_mm": 52.6,
+      "orientation_comparisons": [
+        {
+          "name": "two_by_two",
+          "columns": 2,
+          "rows": 2,
+          "cell_body_L_W_H_mm": [
+            58.5,
+            36,
+            51
+          ],
+          "horizontal_body_and_nominal_PCB_extent_mm": [
+            127.0,
+            82,
+            52.6
+          ],
+          "vertical_body_and_nominal_PCB_extent_mm": [
+            127.0,
+            52.6,
+            82
+          ],
+          "local_depth_saved_vertical_mm": 29.4
+        },
+        {
+          "name": "short_axis_row",
+          "columns": 4,
+          "rows": 1,
+          "cell_body_L_W_H_mm": [
+            36,
+            58.5,
+            51
+          ],
+          "horizontal_body_and_nominal_PCB_extent_mm": [
+            174,
+            58.5,
+            52.6
+          ],
+          "vertical_body_and_nominal_PCB_extent_mm": [
+            174,
+            52.6,
+            58.5
+          ],
+          "local_depth_saved_vertical_mm": 5.9
+        },
+        {
+          "name": "long_axis_row",
+          "columns": 4,
+          "rows": 1,
+          "cell_body_L_W_H_mm": [
+            58.5,
+            36,
+            51
+          ],
+          "horizontal_body_and_nominal_PCB_extent_mm": [
+            264.0,
+            36,
+            52.6
+          ],
+          "vertical_body_and_nominal_PCB_extent_mm": [
+            264.0,
+            52.6,
+            36
+          ],
+          "local_depth_saved_vertical_mm": -16.6
+        }
+      ]
+    }
+  ],
+  "assembly_approved": false
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Capacitor mounting and thermal research</title><!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../docs/engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../docs/engineering-reader/assets/katex/katex.min.css"><script defer src="../../docs/engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../docs/engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../docs/engineering-reader/assets/math.js"></script><!-- /reader-head --></head><body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../docs/engineering-reader/index.html">Engineering status</a><a href="../../docs/engineering-reader/glossary.html">Vocabulary key</a><a href="../../docs/engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav --><main><p class="eyebrow">Renegade · Reviewed engineering record · 26 November 2026</p><h1>Capacitor mounting and thermal research</h1>
+<p>26 November 2026. Owner: delegated component-evidence researcher; integration owns adoption. Inputs: v2 plan, power-film contracts/reviews, exact manufacturer documents. Output: this research only. Circuit/Physical Design ladders L1/P1; one research session. Done condition: sourced mounting limits and unresolved evidence. No native CAD, selection, support design or fabrication approval.</p>
+<h2>Exact-package evidence</h2>
+<p><strong>Panasonic EZPV60506MTC.</strong> <a href="https://industrial.panasonic.com/content/data/CP/PDF/ezpv_je.pdf">Manufacturer R9 specification</a>, pages 1–3, 11–14 and 21–24: exposed leads 4±2 mm; maximum body 58×26×41 mm; diameter 1.2±0.2 mm. Avoid excessive lead-root force. Fixing resin needs compatibility/reliability evaluation: solvent, curing heat and shrinkage/expansion can damage the part/leads/joints. No explicit sideways/inverted mounting approval, permitted forming radius/force, clamp pressure or qualified retention hardware was found. Neighbor distance ≥10 mm is recommended against mutual heating. Category −40 to +105°C refers to case surface, including external heat and self-heating. Current and permissible self-rise derate above 70°C; voltage derates above 85°C. The 19.1 A figure applies at 70°C/10 kHz with ΔT&lt;20°C, not arbitrary mains ripple. Applicable current/self-rise curves approach zero at 100°C. Measure the heat-facing surface and maximum surface self-rise using the actual board/current; copper and lead connections affect heat escape. Soldering limits protect the component, not solder-joint manufacturability. These facts do not qualify a bank orientation or allow full ripple at +105°C.</p>
+<p><strong>CRC FC6136.</strong> <a href="../../engineering/component-selection/evidence/CRC-FC6136.pdf">Retained manufacturer approval 26124D02</a>, pages 1–3: exposed leads 4±1 mm; maximum body 58.5×36×51 mm; nominal diameter 1.2 mm without tolerance; 50 µF±10%, 900 VDC. Page 2 gives −40 to +105°C and 25 A maximum current but does not establish the necessary frequency and thermal measurement conditions. Its 100000-hour table entry at hotspot ≤85°C conflicts with the plotted life trend; the existing candidate register already flags this. Do not treat either as guaranteed amplifier life. No mounting orientation, permissible lead forming/root load, body clamp/adhesive specification, neighbor gap or qualified body retention is supplied. Maximum lead diameter, terminal grouping and body-to-pin position remain unresolved. <a href="https://www.csdcap.com/cate-35403-31887.html">CRC’s manufacturer DC-link range</a> was checked; linked product-detail images returned HTTP 403 through the research tool. No additional exact-part mounting instruction was recovered, and none is inferred from another CRC part.</p>
+<p>For context only, <a href="https://www.shinyei.co.jp/scc/eng/products/use.html">Shinyei’s manufacturer film-capacitor guidance</a> calls for body restraint for large parts or vibration and warns against lead pulling/torsion. This supports investigating a separate mechanical load path; it does <strong>not</strong> qualify Panasonic/CRC hardware, adhesive or orientations. Search retrieved the guidance; a later direct refresh timed out.</p>
+<h2>Calculation and arrangement implications</h2>
+<p>For straight through-hole insertion, available underside protrusion is <code>minimum exposed lead − body seating gap − board thickness</code>. With the present nominal 1.6 mm board and zero gap, Panasonic gives 0.4 mm and CRC 1.4 mm. A 3 mm lift gives −2.6 mm and −1.6 mm respectively. These are geometric calculations, omitting board tolerance and the required solder protrusion; even seated insertion needs a specified assembly stack. Short leads must not be forced into mismatched holes or used as suspension members. A wider hole calculation is not a released soldering process.</p>
+<table>
+<thead>
+<tr>
+<th>Arrangement</th>
+<th>Evidence-based comparison and remaining condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A: seated dedicated power-PCB area</td>
+<td>Baseline with fewest new interfaces. Seated bodies still need an evaluated retention/load path for a vibrating combo. Reserve real neighboring parts, heat, retention and tool access; existing body gaps/holes are not already qualified.</td>
+</tr>
+<tr>
+<td>B: supported horizontal bank PCB above power PCB</td>
+<td>Keep parts seated on their own board; PCB standoffs alone do not restrain bodies. Added height includes lower populated envelope, unresolved electrical/thermal separation, board, body and support. Avoid hot zones and blocked retaining screws. No proof that an upper bank is cooler.</td>
+</tr>
+<tr>
+<td>C: supported vertical bank PCB beside power PCB</td>
+<td>Rotating the complete board can avoid reforming leads but puts body weight/vibration in a different direction relative to joints. Side projection and support thickness replace apparent height savings. Thermal behavior, package orientation and body retention require qualification; neither document gives blanket permission.</td>
+</tr>
+</tbody>
+</table>
+<p>The comparison must distinguish <strong>board orientation</strong> from <strong>bending the capacitor body onto its side relative to the board</strong>. The latter needs a separately approved lead/seat/support arrangement; a CAD rotation is not permission. No new hardware size, clamp force, resin type, airflow benefit or HV clearance is established here. Panasonic’s thermal neighbor recommendation must not become a chassis/fastener/terminal insulation rule, nor be silently transferred to CRC.</p>
+<h2>Plan changes and concrete human checks</h2>
+<ol>
+<li>Compare A/B/C with bodies seated and explicit unresolved retention envelopes; exclude elevation on leads alone. Keep A preferred when equivalent. A dimensional shortlist can proceed; final ranking is conditional where support/thermal/insulation dimensions could reverse it.</li>
+<li>Preserve all four C12/C13/C25/C26 nodes and returns separately within the power block. A daughterboard requires rated removable connections, discharge/protection behavior and reviewed current/return loops; no generic header or merged return is assumed.</li>
+<li>Qualify exact mounting orientation and support compatibility before adoption: actual four-lead insertion gauge, seating/protrusion check, body restraint/load path, vibration and transport loads. Get exact-part manufacturer guidance where the documents are silent; no supplier contact was performed.</li>
+<li>Test case temperature at the heat-facing and hottest surfaces with actual ripple, enclosure, board copper, covers and nearby hot parts. Establish CRC current/hotspot/life conditions before using its ratings. Test each proposed arrangement; free-air measurements do not prove assembled thermal behavior.</li>
+<li>Keep supports wholly on the removable metal power/chassis assembly and fixed cabinet structure. Demonstrate independent wooden rear-cover removal, accessible fasteners, cassette withdrawal and connector service without moving the cover and electronics together.</li>
+</ol>
+<p>Verification performed: local contracts and approval text read; Panasonic R9 pages 1/11/12/13 and CRC page 3 rendered and visually checked; manufacturer web source checked; arithmetic independently evaluated below. No physical mounting, thermal, electrical or vibration test was performed. Shared catalogs/status and any resulting plan revision belong to integration.</p>
+<!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>Capacitor</dt><dd>A component that stores charge and electrical energy.</dd>
+<dt>Cassette</dt><dd>A removable assembly carrying the electronics and its supports.</dd>
+<dt>Chassis</dt><dd>The metal structure that supports and encloses the electronics.</dd>
+<dt>Clearance</dt><dd>The shortest distance through air between conductive parts.</dd>
+<dt>DC</dt><dd>Direct current; current that flows in one direction.</dd>
+<dt>Envelope</dt><dd>The space occupied by a part or assembly, including stated allowances.</dd>
+<dt>HV</dt><dd>High voltage; use the actual voltage and insulation requirement in each design check.</dd>
+<dt>Lead</dt><dd>A component terminal that connects to the board.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Mains</dt><dd>The building AC power supply.</dd>
+<dt>Nominal</dt><dd>The stated reference value before tolerance and operating variation.</dd>
+<dt>PCB</dt><dd>Printed circuit board.</dd>
+<dt>Populated</dt><dd>With the components installed.</dd>
+<dt>Qualification</dt><dd>Checks that show a design meets stated limits under stated conditions.</dd>
+<dt>Ripple</dt><dd>Periodic supply variation remaining after rectification and filtering.</dd>
+<dt>Tolerance</dt><dd>The permitted variation from a specified value.</dd></dl></section><!-- /reader-key --></main></body></html>

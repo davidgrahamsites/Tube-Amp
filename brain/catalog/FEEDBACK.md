@@ -1479,3 +1479,105 @@ Source: Current amplifier conversation during heater-reference and component-pow
 - [brain/records/DEC-021-design-journal.md](<../../brain/records/DEC-021-design-journal.md>)
 - [docs/design-journal/CONTEXT.md](<../../docs/design-journal/CONTEXT.md>)
 
+## FB-143 — drill-measurement-deferral-and-flexible-drive
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> I'll have to check those tomorrow. Is there such a thing as a flexible drill bit that can get in tight corners?
+
+Full drill measurements remain deferred until tomorrow; 46mm chuck measurement retained. Research flexible screwdriving extensions/right-angle adapters as possible aids, without treating the question as approval to relax ordinary service access.
+
+Source: Current amplifier conversation during populated chassis dependency review
+
+- [engineering/whole-amp/mechanical/review/driver-access-options.md](<../../engineering/whole-amp/mechanical/review/driver-access-options.md>)
+
+## FB-144 — supported-high-voltage-capacitor-bank-proposal
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> The high voltage capacitors... Couldn't they be soldered so the body is raised up over the other parts, or have a small breakout board on top with the capacitors on there? or is it better to plan something else?
+
+Evaluate elevated capacitor bodies versus a mechanically supported capacitor board and a revised power-board layout. This is a proposal request, not adoption of another physical board or permission to weaken insulation, cooling or serviceability. Preserve power-supply functional ownership.
+
+Source: Current amplifier conversation during populated chassis dependency review
+
+- [engineering/component-selection/power-film/assembly-review.md](<../../engineering/component-selection/power-film/assembly-review.md>)
+
+## FB-145 — five-pass-capacitor-fit-review
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> use the fivetimesplusskill to improve this fit
+
+Run Five Times Skill Plus to improve the packaging comparison; preserve functional power ownership and existing service constraints. No specific extra board or capacitor adopted.
+
+Source: Current amplifier conversation, referring to dedicated power-assembly capacitor area versus supported capacitor board
+
+- [plans/capacitor-bank-fit/CONTEXT.md](<../../plans/capacitor-bank-fit/CONTEXT.md>)
+- [plans/capacitor-bank-fit/final.md](<../../plans/capacitor-bank-fit/final.md>)
+
+## FB-146 — bottom-power-enclosure-five-pass-alien-review
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> since the transformer is to be chassi mounted on the bottom of the cabinet ... why not put the capacitors and the transfomers, rectifiers, etc there and then have cabling going to the board that's attached to the tubes, etc? please do a five times plus pass on this idea, and use the alien methods skill. with a five times plus pass, then synthesize your findings
+
+Evaluate bottom cabinet metal power enclosure and remote tube/audio board with independent five-pass reviews, source-backed Alien Method alternatives and final synthesis. Bottom mounting is a user-proposed direction, not already verified geometry; distinguish power and output transformers. Preserve functional blocks and service constraints.
+
+Source: Current amplifier conversation after capacitor fit review
+
+- [plans/bottom-power-enclosure/CONTEXT.md](<../../plans/bottom-power-enclosure/CONTEXT.md>)
+- [plans/power-packaging-alien/CONTEXT.md](<../../plans/power-packaging-alien/CONTEXT.md>)
+
+## FB-147 — combined-power-packaging-five-pass-review
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> then do a five times plus on everything we just found out
+
+Evaluate bottom cabinet metal power enclosure and remote tube/audio board with independent five-pass reviews, source-backed Alien Method alternatives and final synthesis. Bottom mounting is a user-proposed direction, not already verified geometry; distinguish power and output transformers. Preserve functional blocks and service constraints.
+
+Source: Current amplifier conversation after capacitor fit review
+
+- [plans/power-packaging-synthesis/CONTEXT.md](<../../plans/power-packaging-synthesis/CONTEXT.md>)
+
+## FB-148 — step-by-step-engineering-calculations-and-choice-log
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> save all the math and calculations and solutions along with the choices log so that the mathematical engineering aspects of it can also be broken down step by step and followed
+
+Persist mathematical derivations, inputs/units/sources, assumptions, calculations, failed cases, validation and decision links, with reproducible canonical artifacts and readable Luna narrative. Distinguish theoretical, simulated and measured evidence; track historical backfill.
+
+Source: Current amplifier conversation during final power-packaging synthesis
+
+- [docs/design-journal/CONTEXT.md](<../../docs/design-journal/CONTEXT.md>)
+- [docs/design-journal/calculations/CONTEXT.md](<../../docs/design-journal/calculations/CONTEXT.md>)
+
+## FB-149 — html-maintenance-english-mathematics
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> always use aircraft mechanic english in all documents, never say with two sentences what could be said with one, and make sure everything is katex formatted. Make and read HTML files instead of .md so they're human readable with katex
+
+Use concise maintenance English and HTML for authored/read engineering reports. Render equations with KaTeX, preserve sources and calculations. Keep required machine-routing contracts and old review evidence; do not claim all historical reports migrated.
+
+Source: Current amplifier conversation after power-packaging review
+
+- [docs/engineering-reader/document-standard.html](<../../docs/engineering-reader/document-standard.html>)
+
+## FB-150 — engineering-vocabulary-key
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> also have a vocabulary key for any jargon and engineering terms
+
+Define technical terms and abbreviations on each current report and link a shared vocabulary key.
+
+Source: Current amplifier conversation after power-packaging review
+
+- [docs/engineering-reader/glossary.html](<../../docs/engineering-reader/glossary.html>)
+
+## FB-151 — build-feasibility-and-progress
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> We've been working on this for a long time. Is the build impossible?
+
+Give a candid feasibility status. Distinguish unresolved engineering and fit faults from impossibility; prioritize exact parts, fault correction and one complete verified assembly over automatic review cycles.
+
+Source: Current amplifier conversation after power-packaging review
+
+- [docs/engineering-reader/index.html](<../../docs/engineering-reader/index.html>)
+

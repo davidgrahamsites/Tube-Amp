@@ -1,0 +1,1 @@
+Reader verification evidence. Owner: integration. Inputs: actual file, equation and browser checks. Outputs: latest verification receipt and one representative screenshot. Human check: distinguish reader verification from electrical or physical qualification.

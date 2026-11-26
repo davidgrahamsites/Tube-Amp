@@ -9,6 +9,8 @@ Owner: Renegade integration. One job: compare exact P057 purchase candidates wit
 Run `tools/check_packages.py` with KiCad's Python. It reads native pads and compares nominal pitch, a rigid-lead tolerance witness and centered maximum-body envelopes. It cannot specify a production drill or assess arbitrary component collisions. Inputs are hashed and the native board is read only. Effort: one research/check checkpoint; dependency: exact manufacturer and Chinese supplier evidence; done condition: reproducible comparison and a concrete unresolved-integration list, not selected parts or build readiness.
 
 ## Outputs
+
+`tools/assembly_options.py` reads the two candidate contracts with ordinary Python and writes `results/assembly-options.json`. It compares exposed lead length and conditional four-body envelopes; it does not size a finished daughterboard or approve assembly. [Assembly review](assembly-review.md) interprets the supported-bank proposal while leaving functional ownership and part selection unchanged.
 `results/package-checks.json` is generated evidence; `review.md` is the engineering interpretation. `evidence/` holds source documents and dated read-only supplier receipts. Component coverage remains owned by the parent module; this module proposes an alternative only.
 
 ## Human check

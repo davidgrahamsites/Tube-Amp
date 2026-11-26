@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Bottom power enclosure — mechanical and procurement research</title><!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../docs/engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../docs/engineering-reader/assets/katex/katex.min.css"><script defer src="../../docs/engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../docs/engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../docs/engineering-reader/assets/math.js"></script><!-- /reader-head --></head><body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../docs/engineering-reader/index.html">Engineering status</a><a href="../../docs/engineering-reader/glossary.html">Vocabulary key</a><a href="../../docs/engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav --><main><p class="eyebrow">Renegade · Reviewed engineering record · 26 November 2026</p><h1>Bottom power enclosure — mechanical and procurement research</h1>
+<p>2026-11-26. Owner: delegated mechanical researcher; integration owns adoption and common registers. Status: bounded research supporting <a href="v2.md">v2</a>, no geometry adoption, fabrication release, supplier contact or purchase. Applied Physical Design Agent Ladder P0/P1/P3 and Circuit Design Skill Ladder L0/L1. Only this file is authored by this worker.</p>
+<h2>Finding and scope</h2>
+<p>A lower metal power module is a credible packaging candidate, but <strong>neither lower allocation B nor C has demonstrated cabinet fit, safe thermal operation, low hum, structural retention or service access</strong>. Moving power below can reduce upper carried mass and separate power hardware from input circuitry, while taking the floor volume already intended for the tank and adding cable/connector/service requirements. No saved measurement establishes spare floor space. Unknowns prevent ranking, rather than constituting a pass.</p>
+<p>Inputs are <a href="../../engineering/whole-amp/mechanical/fit-register.json">mechanical register</a>, <a href="../../engineering/whole-amp/mechanical/review/tank-specifications.md">received tank record</a>, <a href="../../engineering/whole-amp/mechanical/review/three-board-chassis-concept.md">upper chassis concept</a>, <a href="../../engineering/component-selection/evidence/output-transformer-screen-2026-11-24.md">OT screen</a>, <a href="../../engineering/component-selection/evidence/mable-catalogue-review-2026-11-12.md">Mable catalogue screen</a>, <a href="../../engineering/component-selection/evidence/prototype-cost-allowance-2026-11-24.md">prototype allowance</a>, and <a href="../capacitor-bank-fit/geometry-research.html">previous capacitor geometry study</a>. Those records remain authoritative. Evidence retrieval is bounded; failed page retrieval is not a stock/unavailability claim.</p>
+<h2>Occupied and unknown volumes</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Supported fact</th>
+<th>Consequence for lower-module trial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cabinet</td>
+<td>Fixed delivered Mable yellow-tweed shell. User-reported widths 467 mm, depth reading 160 mm, inside height 383 mm; differing/unverified datums</td>
+<td>Do not construct a guaranteed 467 × 160 × 383 mm free box. Floor width/depth, corner joints, cleats, foot fasteners and floor thickness/material/condition remain unknown.</td>
+</tr>
+<tr>
+<td>Upper opening</td>
+<td>307–308 mm width, approximately 53 mm clear depth with upper rear cover on</td>
+<td>These constrain panel access; they do not define floor space or rear withdrawal clearance.</td>
+</tr>
+<tr>
+<td>Current Power PCB</td>
+<td>160 × 175 × 1.6 mm bare outline</td>
+<td>Even its rotated shallow dimension is 160 mm before walls, board margins, fasteners, cables or insulation. Whole-board transfer is the first screen, but cannot be declared to fit the reported 160 mm depth. Floor datum may differ; a repack is a separate change, not assumed saving.</td>
+</tr>
+<tr>
+<td>Received tank</td>
+<td>149.5 × 60 × 36.5 mm reported maximum envelope; T1 includes flanges, T2 fixed sockets, T3 feet; horizontal/open-side-down required</td>
+<td>Installed RCA plugs, bends, compliant mounts/bag, fastener access and spring clearance remain additional unknown volumes. Do not substitute catalogue 178/180/235 mm tanks.</td>
+</tr>
+<tr>
+<td>Speaker</td>
+<td>No selected exact speaker. Reference Seventy 80: 309 mm frame, 119 mm depth, 134 mm magnet; requires 283 mm cutout against received approximately 270 mm aperture</td>
+<td>Reference is not adopted. Basket shape, magnet, terminals, moving-system clearance and installed coordinates must enter common geometry. The apparent 160−119=41 mm residual is not verified space behind the speaker.</td>
+</tr>
+<tr>
+<td>Film bank</td>
+<td>Panasonic candidate maximum body 58 × 26 × 41 mm; CRC candidate 58.5 × 36 × 51 mm</td>
+<td>C has four bodies below; B has C26 below and C12/C13/C25 above. Include actual support/PCB/connector/insulation envelopes. Existing scalar 41 mm capacitor height does not cover CRC.</td>
+</tr>
+<tr>
+<td>Magnetics</td>
+<td>No exact approved PT/OT/choke/auxiliary set or complete drawings</td>
+<td>Core labels and catalogue body dimensions cannot supply full feet, bells, lead exits, tolerances, mass or mounting interfaces.</td>
+</tr>
+</tbody>
+</table>
+<p>The previous geometry study gives a Panasonic four-body 2 × 2 conditional array of 126 × 62 × 41 mm with the recorded 10 mm neighbor recommendation. This is a body-array bound, not a lower enclosure size; it excludes reservoirs, rectifiers, magnetics, other power parts and construction. The same study's 41 mm upper carrier width and 20 mm tier-depth overruns remain separate from lower power relocation. Lower placement does not automatically repair Main/Reverb geometry.</p>
+<h2>Structure, placement and removal</h2>
+<p><strong>Load path proposal:</strong> transformer feet/clamps → structural metal base or crossmember → removable lower-module mounting flanges → fixed floor/side structure → cabinet joints and feet. PCB standoffs and removable rear wood carry no transformer load. Floor mounting means attachment to fixed cabinet structure during use; it need not mean a permanently trapped power module. Retain a bolted removable metal module with reachable retention points and a supported extraction sequence.</p>
+<p>Do not prescribe sheet thickness, screw type or number from photographs. Required structural inputs are exact masses and centers of gravity; mounting-hole pattern and clamp stack; metal material/thickness/folds; support span; floor wood material/thickness and joints; edge distance, engagement and backing arrangements; cabinet foot positions; and the chosen carry/handling load case. Assess base bending, fastener shear/pullout, local wood crushing and loosening under speaker vibration. A possible backed/through-bolted load spreader must itself fit, avoid exposed underside hazards and preserve finish/feet; it is a proposal pending cabinet evidence. Low center of gravity is a plausible benefit, not proof of retention under handling.</p>
+<p>Keep the <strong>upper audio/tube module removable on fixed side supports</strong>, with the rear wooden cover independently removable. Lower retention, lid screws and connector latches must remain accessible after that cover is removed, without reaching behind a speaker magnet or removing unrelated assemblies. Prefer bench access to PCB screws after module withdrawal. If the lower box has a removable lid, verify its screw and lift/slide path independently of upper-module extraction; a box that only opens after removing its live-connected harness is not a completed service design.</p>
+<p>Reserve two separate sweeps: upper withdrawal with tubes/retainers/guards and plugged or deliberately disconnected cables; lower withdrawal with magnetics, inlet/fuse/selector protrusions, lid and harness. Neither sweep may rely on the rear wood as support. Tank relocation, if needed, is a distinct consequence: preserve horizontal/open-side-down orientation, support/compliance, cable access and a new hum test. Do not hang it vertically or use the power box lid as its mounting surface merely to reclaim floor area.</p>
+<p>Output-transformer placement remains a separate comparison. Keeping it near output tubes and feedback/speaker routes may be preferable; putting every transformer below would add output-stage wiring and alter coupling/stability conditions. The OT mass quoted below is not part of a settled lower load budget.</p>
+<h2>Ventilation and transformer mounting evidence</h2>
+<p>The lower enclosure needs an actual heat budget for transformer copper/core loss, rectifiers, resistors and capacitors under both mains cases. Locate the candidate air inlet/outlet and trace obstruction by the tank, bag, wood, speaker and upper assembly. Natural convection may send warmed air toward the upper electronics; the metal box does not establish cooling. Record component case/hot-spot and accessible-surface limits from the exact parts and applicable electrical review, then measure with covers fitted at the agreed operating/load and ambient conditions. A fan is not assumed. Vents must also meet touch, wire protection and mechanical requirements; no numerical vent area or clearance is established here.</p>
+<p>Manufacturer construction precedent is narrow: <a href="https://www.hammfg.com/electronics/small-case/general-purpose/516">Hammond 516</a>, directly read November 26, uses a substantial raised mounting panel and louvered sides. It illustrates independent structural support and ventilation, <strong>not</strong> a selected enclosure, sufficient thickness calculation or a transferable thermal clearance. Its listed size is not adopted.</p>
+<p><strong>Conditional toroid precaution:</strong> only if a toroidal PT/auxiliary transformer is actually selected, ensure mounting hardware cannot form a closed conductive path through its center and around the outside, including accidental contact between a center bolt/top clamp and the metal lid. This can act as a shorted transformer turn. The primary manufacturer source is <a href="https://toroid.com/power-supply-transformers-toroidal/">Toroid Corporation, power-supply transformer mounting caution</a>, retrieved in the November 26 search extract; direct open subsequently failed. Its <a href="https://toroid.com/mounting-hardware-options/">mounting-options page</a> was directly read and distinguishes horizontal/vertical hardware. Follow the exact selected maker's clamp/pad and torque instructions. No toroidal part is currently adopted, and this warning is not presented as the mounting mechanism for the EI candidates. <a href="https://mcitransformer.com/pdf/MCI-Manual-Toroids-Page.pdf">MCI manufacturer's toroid mounting sheet</a> was also retrieved; indexed text supports the same conditional shorted-turn caution. No generic torque value is inferred.</p>
+<p>For EI candidates, obtain the manufacturer's complete feet/bracket drawing, permitted mounting direction, fastener/clamp stack and insulation/earth instructions. Existing seller data does not establish these. Ordinary metal enclosure shielding is not evidence that 50/60 Hz magnetic pickup into the tank or input stages is controlled. Layout must be tested with actual loaded magnetics; match tank orientation/load/recovery gain and wiring, vary placement/orientation one factor at a time, then test the combined assembly.</p>
+<h2>Harness and tool service interface</h2>
+<p>Mechanical integration must supply bounded route lengths and minimum/maximum service positions to the electrical owner, rather than assume a generic vertical cable length. Include fixed anchor locations, edge protection, connector protrusion/latch access, bend radius, slack storage and retention against speaker/tube motion or heat. Distinguish an operating harness from a service loop: extra slack must neither pull terminals during extraction nor fall into the speaker or hot parts when stowed.</p>
+<p>Reserve separate routes for power/heater bundles and sensitive input/tank return. The electrical owner determines conductor current/voltage ratings, supply-return grouping, wrong-mate prevention and unmated protection. Both modules need an explicit PE/bonding and residual-charge service design; moving the upper module cannot silently remove lower protective bonding or discharge provisions. This research does not approve connectors or an energized disconnect sequence.</p>
+<p>Current tool evidence is only a 46 mm chuck diameter. The known radius is 23 mm, not a complete clearance rule. Full bit projection, chuck length, motor envelope/offset and bit-tip-to-back length are still missing. Check screw-axis approach, engagement and withdrawal at every depth with the selected tool and actual part obstruction. Retain deferred measurement rather than claiming a short or flexible driver solves access. An inert full-size mock-up should demonstrate cover removal, latch operation, supported module withdrawal, socket/tube/chip replacement, lid access and reconnection without cable strain.</p>
+<h2>China purchasing leads and comparable cost boundary</h2>
+<p>These are existing local project leads, not a new shopping selection. All need exact quantity-one domestic price, tax/shipping, availability/date, variant identity and drawings. No contact was made.</p>
+<table>
+<thead>
+<tr>
+<th>Lead</th>
+<th>Recorded catalogue evidence</th>
+<th>Qualification/quotation gap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://mableaudio.com/en/productview.asp?sid=10619">Mable MATR0277 PT</a></td>
+<td>Earlier five-unit plan records US$45 tier at ≥5</td>
+<td>Historical anchor only; page retrieval failed this session. No accepted switchable 120/220 V 50/60 Hz winding/thermal/insulation or complete envelope/mass evidence. Not a quantity-one quote.</td>
+</tr>
+<tr>
+<td><a href="https://mableaudio.com/en/productview.asp?sid=8793">Mable MATR0264 choke</a></td>
+<td>November 12 record: 10 H/250 mA, EI76, 1.6 kg; US$23.35 at ≥5</td>
+<td>Alternative to original 8 H/150 mA/~75 Ω, not drop-in. Need DCR, biased inductance, insulation, full mounting and one-piece RMB delivery.</td>
+</tr>
+<tr>
+<td><a href="https://www.mableaudio.com/en/productview.asp?sid=10643">Mable MATR0280 OT</a></td>
+<td>Directly reread November 26: 30 W, 8.5k primary, 0/4/8 Ω, body 86 × 45 × 72 mm, pitches 57 × 60 mm, 2.1 kg. Header US<span class="math">\(57; table ≥5 US\)</span>57</td>
+<td>Mounting pitch beyond stated body width means full tab envelope unknown. Different impedance from 7.6k baseline and no accepted EL34 DC/imbalance/leakage/phase qualification. No quantity-one RMB delivered quote or live-stock check.</td>
+</tr>
+<tr>
+<td><a href="https://www.mableaudio.com/en/productview.asp?sid=8762">Mable MATR0233</a> / <a href="https://www.mableaudio.com/en/productview.asp?sid=10642">MATR0279B</a></td>
+<td>November 24 record: US<span class="math">\(58 / US\)</span>54 header anchors; 4–6.6k / 10k primary respectively</td>
+<td>Both differ from baseline. MATR0233 weight conflicts 2/2.2 kg; MATR0279B 1.45 kg. Full envelope and electrical qualification remain absent.</td>
+</tr>
+<tr>
+<td><a href="https://www.mableaudio.com/en/productview.asp?sid=8858">Mable MATR0265 OT</a></td>
+<td>Earlier US$60 at ≥5; 3.6k primary</td>
+<td>Explicitly rejected as direct substitution in November 12 screen. Do not quote its price as cost of a compatible OT.</td>
+</tr>
+</tbody>
+</table>
+<p>Mable is the documented Shenzhen route already used for the delivered cabinet/tank; its directly read MATR0280 page links a <a href="http://shop36263610.taobao.com">Taobao shop</a>. The shop link is a purchasing lead, not verified stock, domestic price or manufacturer certification. Exact auxiliary supply magnetics remain undefined. Existing LCSC/RS China component routes do not themselves provide a qualified lower chassis, magnetic set or complete harness.</p>
+<p>For like-for-like A/B/C costing, preserve the same compatible magnetic set, circuit values, required dual-mains hardware and labor scope. Quote separately: metal base/lid/partitions and finish; lower fixed supports/load spreaders; upper supports still required; connector pairs/contacts/caps; rated wire, sleeving/grommets/strain relief; bonding hardware; harness manufacture/testing; tank relocation mounts/cables; extra board fabrication/repack; and assembly/inspection. Credit an upper-metalwork reduction only after actual drawings remove material or work. Moving existing capacitors is not a new capacitor purchase unless the package changes.</p>
+<p>The November 24 prototype estimate contains a <strong>¥700–1,100 unquoted magnetic allowance</strong>, plus <strong>¥1,300–2,500</strong> for a broad category covering electronics, PCBs, sockets, controls, harnesses and simple chassis/panel/hardware. Its <strong>¥150–400</strong> dual-mains addition is also unquoted. These are context for a common-BOM comparison, not bottom-module quotations, and cannot be added as independent enclosure prices. The dated selected-parts subtotal ¥359.3217 is already included in that broad category and is not the latest full amp BOM. <strong>No A/B/C cost delta or new total can be responsibly calculated from the present evidence.</strong></p>
+<h2>Gate handoff</h2>
+<table>
+<thead>
+<tr>
+<th>Gate</th>
+<th>Result now</th>
+<th>Owner / next evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lower occupied volume clears tank/speaker and independent rear cover</td>
+<td>UNKNOWN</td>
+<td>Mechanical: common datums, exact speaker/magnetics and complete installed envelopes, then inert mock-up</td>
+</tr>
+<tr>
+<td>Fixed floor and module metal retain handling/vibration loads</td>
+<td>UNKNOWN</td>
+<td>Mechanical/builder: wood/joint/support evidence, masses, fastener stack and justified structural checks</td>
+</tr>
+<tr>
+<td>Whole Power PCB relocation preserves function and fits</td>
+<td>UNKNOWN</td>
+<td>Electrical + mechanical: populated board/connector model and exact enclosure screen; one bounded repack only if needed</td>
+</tr>
+<tr>
+<td>Tank orientation retained</td>
+<td>Required; no installed pass</td>
+<td>Mechanical: horizontal/open-side-down mounting and plug/service proof</td>
+</tr>
+<tr>
+<td>Magnetic pickup and enclosed thermal behavior</td>
+<td>UNKNOWN</td>
+<td>Integration/builder: matched loaded placement test and covers-on thermal evidence</td>
+</tr>
+<tr>
+<td>Upper/lower removal, residual-charge checks and reconnection</td>
+<td>UNKNOWN</td>
+<td>Joint electrical/mechanical: defined connector state/bonding/discharge procedure plus inert service trial</td>
+</tr>
+<tr>
+<td>China cost advantage</td>
+<td>UNKNOWN</td>
+<td>Sourcing: same-revision quantity-one delivered BOM and metalwork/harness quotes</td>
+</tr>
+</tbody>
+</table>
+<p>Research is complete at the P0/P1 feasibility boundary. The next useful artifact is a single shared populated fit/service model with explicit unknown volumes and electrical interface ownership, followed by an inert trial. No blanket measurement request, native edit, final dimensions or supplier order follows from this report.</p>
+<!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>Capacitor</dt><dd>A component that stores charge and electrical energy.</dd>
+<dt>Chassis</dt><dd>The metal structure that supports and encloses the electronics.</dd>
+<dt>Chuck</dt><dd>The drill part that grips the bit.</dd>
+<dt>Clearance</dt><dd>The shortest distance through air between conductive parts.</dd>
+<dt>Datum</dt><dd>A fixed point, line or surface used as the measurement reference.</dd>
+<dt>DC</dt><dd>Direct current; current that flows in one direction.</dd>
+<dt>Envelope</dt><dd>The space occupied by a part or assembly, including stated allowances.</dd>
+<dt>Feedback</dt><dd>A signal returned from an output to an earlier stage to control gain or response.</dd>
+<dt>Harness</dt><dd>A grouped set of wires, contacts and connectors.</dd>
+<dt>Heater</dt><dd>The tube element that heats the cathode.</dd>
+<dt>Impedance</dt><dd>Opposition to alternating current, including resistance and frequency-dependent effects; measured in ohms (Ω).</dd>
+<dt>Lead</dt><dd>A component terminal that connects to the board.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Magnetics</dt><dd>Transformers and inductors.</dd>
+<dt>Mains</dt><dd>The building AC power supply.</dd>
+<dt>PCB</dt><dd>Printed circuit board.</dd>
+<dt>PE</dt><dd>Protective earth; the protective connection to exposed conductive parts.</dd>
+<dt>Populated</dt><dd>With the components installed.</dd>
+<dt>Qualification</dt><dd>Checks that show a design meets stated limits under stated conditions.</dd>
+<dt>Socket</dt><dd>A replaceable connection that holds a tube or integrated circuit.</dd>
+<dt>Strain relief</dt><dd>A support that keeps cable forces away from electrical terminations.</dd>
+<dt>Tank</dt><dd>The mechanical spring-reverb assembly.</dd>
+<dt>Transformer</dt><dd>A magnetic device that transfers energy between windings.</dd>
+<dt>Winding</dt><dd>A coil of insulated wire in a transformer or inductor.</dd>
+<dt>Gate</dt><dd>A checkpoint that requires specified evidence before the next activity.</dd>
+<dt>Prototype</dt><dd>A test assembly used to check the design before release.</dd></dl></section><!-- /reader-key --></main></body></html>

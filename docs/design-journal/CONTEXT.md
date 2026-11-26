@@ -6,10 +6,10 @@ Owner: Luna journal agent. The integration coordinator owns canonical records, s
 Canonical project requirements and engineering evidence under `brain/records/`, owned engineering review files, machine-readable result receipts, and the current baseline ID supplied at each checkpoint.
 
 ## Process
-Write a chronological, source-linked narrative of engineering problems and decisions for future design-guide and build-series use. Each chapter distinguishes reported facts, calculations, engineering interpretation, formal authority, implementation, verification, and open checks. Link to canonical sources instead of maintaining duplicate requirements. Never invent dialogue, measurements, failures, approvals, implementation, or physical-build outcomes. Mark pending coordinator verification plainly.
+Write a chronological, source-linked narrative of engineering problems and decisions for future design-guide and build-series use. Each chapter distinguishes reported facts, calculations, engineering interpretation, formal authority, implementation, verification, and open checks. Under FB-148, document every material calculation alongside the choice it informs: define symbols and units, cite inputs, show equation and numeric substitution, report result, validation, assumptions, and scope limits. Link canonical records instead of maintaining duplicate requirements. Never invent dialogue, measurements, failures, approvals, implementation, or physical-build outcomes. Mark pending coordinator verification plainly. Historical math coverage stays explicitly incomplete until backfill is audited.
 
 ## Outputs
-`README.md` is the entry index and editorial contract; `entry-template.md` is the stable chapter shape; `chapters/` contains narrative entries; `HANDOFF.md` records the next journal action and current backfill queue.
+`README.md` is the entry index and editorial contract; `entry-template.md` is the stable chapter shape; `chapters/` contains narrative entries; `calculations/` contains readable, source-linked derivations; `HANDOFF.md` records the next journal action and coverage/backfill queue.
 
 ## Review seam
 The journal owner checks narrative accuracy and source links. The integration coordinator verifies new canonical evidence and authority before a pending claim is promoted. Neither review turns simulation or CAD evidence into physical qualification.

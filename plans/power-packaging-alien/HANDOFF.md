@@ -1,0 +1,2 @@
+# Alien Method handoff
+Five phases complete. Six source-backed frozen cards with equal fields/set counts, separate membership, no novelty claim. Prioritize information: common whole fit/service; second protocol chosen by final.md decision tree (magnetic risk first when unresolved, filter proxy only if relevant and applicable). No experiments executed. Continue ../power-packaging-synthesis. Native unchanged; exact parts, geometry, heater/bias/protection and physical qualification remain holds.

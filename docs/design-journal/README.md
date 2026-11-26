@@ -12,6 +12,9 @@ Read each chapter alongside its linked validation record, review, contract, and 
 - [VAL-073–074: regulator contacts and rectifier integration](chapters/02-contacts-and-rectifier-integration.md)
 - [VAL-075: heater divider fault boundary](chapters/03-heater-divider-fault-boundary.md)
 - [VAL-076: shared heater-reference compatibility](chapters/heater-interface-boundary.md) — diagnostic checks passed; engineering qualification remains false.
+- [FB-143–145: capacitor-bank fit and tool access](chapters/capacitor-bank-and-driver-access.html) — standalone and combined five-pass reviews complete; no adoption.
+- [FB-146/147: lower power packaging and Alien Method](chapters/bottom-power-packaging.html) — four review cycles complete; no lower allocation adopted.
+- [FB-148: current power-packaging calculations](calculations/current-power-packaging.html) — step-by-step KaTeX-ready derivations; historical math remains to backfill.
 
 ## Backfill status
 

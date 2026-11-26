@@ -1,0 +1,1 @@
+Reader presentation assets. Owner: integration. Inputs: pinned KaTeX distribution and project CSS. Outputs: offline equation rendering, fonts and document layout. Preserve KaTeX license and provenance. Human check: equations render without network access.

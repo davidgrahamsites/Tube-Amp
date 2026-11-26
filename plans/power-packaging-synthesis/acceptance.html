@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Shared acceptance worksheet</title><!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../docs/engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../docs/engineering-reader/assets/katex/katex.min.css"><script defer src="../../docs/engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../docs/engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../docs/engineering-reader/assets/math.js"></script><!-- /reader-head --></head><body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../docs/engineering-reader/index.html">Engineering status</a><a href="../../docs/engineering-reader/glossary.html">Vocabulary key</a><a href="../../docs/engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav --><main><p class="eyebrow">Renegade · Reviewed engineering record · 26 November 2026</p><h1>Shared acceptance worksheet</h1>
+<p>November 26, 2026. Owner: /root integration; physical operator unassigned. Editable comparison worksheet, not certification or completed test. U=upper diagnostic, H=hybrid lower, L=all-filter lower. Each UNKNOWN remains a hold; no empty cell is a pass. A numeric limit must be sourced and frozen before testing, not chosen after a favorable trace.</p>
+<table>
+<thead>
+<tr>
+<th>Requirement / metric</th>
+<th>Limit or source basis</th>
+<th>U / H / L current state</th>
+<th>Next evidence / owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Functional endpoints/values</td>
+<td>Current circuit.json; no unreviewed changes</td>
+<td>Source baseline mapped; all physical allocations UNKNOWN</td>
+<td>Pin/return/component ownership table, integration</td>
+</tr>
+<tr>
+<td>Output power, distortion and treble/stability</td>
+<td>Approximately25W user target; exact test distortion/frequency/load and accepted response limits not finalized</td>
+<td>UNKNOWN / UNKNOWN / UNKNOWN</td>
+<td>Current output/feedback checks plus exact magnetics; electrical integration</td>
+</tr>
+<tr>
+<td>Dual mains and protection</td>
+<td>DEC-015,120V60Hz and220V50Hz; fuse/selector actual parts pending</td>
+<td>UNKNOWN / UNKNOWN / UNKNOWN</td>
+<td>Both operating/fault cases and source/fuse selection; electrical</td>
+</tr>
+<tr>
+<td>Heater voltage/reference</td>
+<td>Exact tube limits and HD-002; no final shared heater solution</td>
+<td>Existing fault / inherited hold / inherited hold</td>
+<td>Resolve reference/windings, load-end hot/startup cases; electrical</td>
+</tr>
+<tr>
+<td>Bias loss with B+ present</td>
+<td>Actual output-stage permissible fault envelope; not yet accepted</td>
+<td>UNKNOWN / UNKNOWN / UNKNOWN</td>
+<td>Bias/contact/return fault review; electrical</td>
+</tr>
+<tr>
+<td>Hum/noise</td>
+<td>Absolute dry/wet limits and uncertainty not yet frozen</td>
+<td>UNKNOWN / UNKNOWN / UNKNOWN</td>
+<td>Same actual loads/controls, tank orientation, mains modes, repeat baseline; electrical/builder</td>
+</tr>
+<tr>
+<td>Supply filtering/reset</td>
+<td>Load-end allowable disturbance/sequence from actual circuits, not invented proxy limit</td>
+<td>UNKNOWN / UNKNOWN / UNKNOWN</td>
+<td>Harness/parasitic models and applicable fixture; electrical</td>
+</tr>
+<tr>
+<td>Insulation and exposed contacts</td>
+<td>Actual working/transient/common-mode voltage, environment/material and applicable requirements pending</td>
+<td>UNKNOWN / UNKNOWN / UNKNOWN</td>
+<td>Pin/metal/creepage/clearance and unmated states; electrical</td>
+</tr>
+<tr>
+<td>PE and normal returns</td>
+<td>Existing grounding-contract: independent protective bonds, one GB1, no chassis normal return</td>
+<td>Logical baseline documented; all assemblies UNKNOWN</td>
+<td>Metal/bond schedule and physical tests; electrical/builder</td>
+</tr>
+<tr>
+<td>Discharge/partial disconnect</td>
+<td>Residual-voltage/time criteria and retained paths per store pending</td>
+<td>UNKNOWN / UNKNOWN / UNKNOWN</td>
+<td>Raw/film/bias/aux inventories, test points/procedure; electrical</td>
+</tr>
+<tr>
+<td>Temperature and lifetime</td>
+<td>Exact capacitor/transformer/regulator ratings and derating; no generic105°C acceptance</td>
+<td>UNKNOWN / UNKNOWN / UNKNOWN</td>
+<td>Enclosed heat budget, defined ambient/load and measurements; electrical/mechanical</td>
+</tr>
+<tr>
+<td>Whole fit/cover/module extraction</td>
+<td>No collision at sourced tolerance; independent wood removal; margins not released</td>
+<td>Existing diagnostic overruns / UNKNOWN / UNKNOWN</td>
+<td>Common frames/parts/cables/lids/tools, inert mock-up; mechanical</td>
+</tr>
+<tr>
+<td>Actual driver and fabrication access</td>
+<td>46mm chuck only; other dimensions expected Nov27 from Nov26 reply</td>
+<td>UNKNOWN / UNKNOWN / UNKNOWN</td>
+<td>User readings; bare-metal drill sequence and installed screw sweeps; mechanical</td>
+</tr>
+<tr>
+<td>Floor/transport retention</td>
+<td>Exact mass/CG, metal, floor/joints and justified handling load</td>
+<td>UNKNOWN / UNKNOWN / UNKNOWN</td>
+<td>Structural design and physical check; mechanical/builder</td>
+</tr>
+<tr>
+<td>Acoustics/tank behavior</td>
+<td>Retain horizontal/open-down tank; matched rear-radiation/acoustic comparison limits pending</td>
+<td>UNKNOWN / UNKNOWN / UNKNOWN</td>
+<td>Actual speaker/tank/mount/enclosure and comparison; builder</td>
+</tr>
+<tr>
+<td>Installed cost/sourcing</td>
+<td>Economical reliable China-source one-unit build; no numeric cap or qualified delta</td>
+<td>UNKNOWN / UNKNOWN / UNKNOWN</td>
+<td>Same BOM boundary, exact availability/MOQ/tax/freight/labor; integration</td>
+</tr>
+</tbody>
+</table>
+<p>Desk study completion is not an acceptance result. Physical work is unexecuted and operator/test prerequisites must be resolved before energization. See final.md for dependency order and research.md for evidence limits.</p>
+<h2>Gate assignment</h2>
+<p>Gate D is desk comparison only. Gate P requires the chosen fixture's insulation, PE, retained-charge procedure, ratings/loads, mechanical retention and test-access review; heater/bias faults must be resolved where those circuits are active. It does not require already having the hum/thermal results the test is designed to obtain. Gate A requires a representative populated as-built prototype to satisfy architecture-dependent electrical, thermal, acoustic, noise, retention and service criteria above. Gate R adds manufacturing tolerances, finalized native/production files, assembly/incoming/end-test instructions and remaining production release checks. No gate is currently passed by this worksheet.</p>
+<!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>Bias</dt><dd>A steady voltage or current that sets a device operating point.</dd>
+<dt>Capacitor</dt><dd>A component that stores charge and electrical energy.</dd>
+<dt>Chassis</dt><dd>The metal structure that supports and encloses the electronics.</dd>
+<dt>Chuck</dt><dd>The drill part that grips the bit.</dd>
+<dt>Clearance</dt><dd>The shortest distance through air between conductive parts.</dd>
+<dt>Common-mode voltage</dt><dd>Voltage shared by conductors relative to a specified reference.</dd>
+<dt>Creepage</dt><dd>The shortest path along an insulating surface between conductive parts.</dd>
+<dt>Derating</dt><dd>Operating below a component rating to allow for heat or other specified conditions.</dd>
+<dt>Envelope</dt><dd>The space occupied by a part or assembly, including stated allowances.</dd>
+<dt>Feedback</dt><dd>A signal returned from an output to an earlier stage to control gain or response.</dd>
+<dt>GB1</dt><dd>The design identifier for the declared signal-ground to chassis connection.</dd>
+<dt>Harness</dt><dd>A grouped set of wires, contacts and connectors.</dd>
+<dt>Heater</dt><dd>The tube element that heats the cathode.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Magnetics</dt><dd>Transformers and inductors.</dd>
+<dt>Mains</dt><dd>The building AC power supply.</dd>
+<dt>MOQ</dt><dd>Minimum order quantity.</dd>
+<dt>PE</dt><dd>Protective earth; the protective connection to exposed conductive parts.</dd>
+<dt>Populated</dt><dd>With the components installed.</dd>
+<dt>Tank</dt><dd>The mechanical spring-reverb assembly.</dd>
+<dt>Tolerance</dt><dd>The permitted variation from a specified value.</dd>
+<dt>Transformer</dt><dd>A magnetic device that transfers energy between windings.</dd>
+<dt>Gate</dt><dd>A checkpoint that requires specified evidence before the next activity.</dd>
+<dt>Prototype</dt><dd>A test assembly used to check the design before release.</dd></dl></section><!-- /reader-key --></main></body></html>

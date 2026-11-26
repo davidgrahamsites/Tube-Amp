@@ -1,0 +1,150 @@
+{
+  "input_sha256": "331699a2de6be585435998ad39af32460fd752efccdd2cfabdca726ead31ed85",
+  "factory_sha256": "3cef21caf233186c906d12197f72101095bf8eceeba4420d625e2d339910e719",
+  "sources": [
+    "engineering/whole-amp/reverb-600/circuit.json",
+    "engineering/whole-amp/aux-supply/load-review.md",
+    "plans/bottom-power-enclosure/harness-research.md",
+    "https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf",
+    "https://www.jj-electronic.com/images/stories/product/power_tubes/pdf/el34_e34l.pdf"
+  ],
+  "calculations": [
+    {
+      "name": "nominal_preamp_heaters",
+      "formula": "N * I_each",
+      "substitution": "4 * 0.3",
+      "result": 1.2,
+      "unit": "A",
+      "scope": "nominal"
+    },
+    {
+      "name": "nominal_output_heaters",
+      "formula": "N * I_each",
+      "substitution": "2 * 1.5",
+      "result": 3.0,
+      "unit": "A",
+      "scope": "nominal"
+    },
+    {
+      "name": "midpoint_current",
+      "formula": "V / R_series",
+      "substitution": "6.3 / 200",
+      "result": 0.0315,
+      "unit": "A",
+      "scope": "existing nominal topology"
+    },
+    {
+      "name": "heater_inventory",
+      "formula": "I_pre + I_output + I_midpoint + I_pilot",
+      "substitution": "1.2 + 3.0 + 0.0315 + 0.15",
+      "result": 4.381500000000001,
+      "unit": "A",
+      "scope": "nominal plus pilot allowance; not maximum"
+    },
+    {
+      "name": "existing_inventory_drop",
+      "formula": "I * R_loop",
+      "substitution": "4.381500000000001 * 0.01",
+      "result": 0.04381500000000001,
+      "unit": "V",
+      "scope": "hypothetical loop; isolated groups not adopted"
+    },
+    {
+      "name": "existing_inventory_heat",
+      "formula": "I^2 * R_loop",
+      "substitution": "4.381500000000001^2 * 0.01",
+      "result": 0.1919754225000001,
+      "unit": "W",
+      "scope": "hypothetical loop"
+    },
+    {
+      "name": "preamp_only_drop",
+      "formula": "I * R_loop",
+      "substitution": "1.2 * 0.01",
+      "result": 0.012,
+      "unit": "V",
+      "scope": "hypothetical loop; isolated groups not adopted"
+    },
+    {
+      "name": "preamp_only_heat",
+      "formula": "I^2 * R_loop",
+      "substitution": "1.2^2 * 0.01",
+      "result": 0.0144,
+      "unit": "W",
+      "scope": "hypothetical loop"
+    },
+    {
+      "name": "output_only_drop",
+      "formula": "I * R_loop",
+      "substitution": "3.0 * 0.01",
+      "result": 0.03,
+      "unit": "V",
+      "scope": "hypothetical loop; isolated groups not adopted"
+    },
+    {
+      "name": "output_only_heat",
+      "formula": "I^2 * R_loop",
+      "substitution": "3.0^2 * 0.01",
+      "result": 0.09,
+      "unit": "W",
+      "scope": "hypothetical loop"
+    },
+    {
+      "name": "loop_R_for_0.1V",
+      "formula": "V_budget / I",
+      "substitution": "0.1 / 4.381500000000001",
+      "result": 0.022823234052265204,
+      "unit": "ohm",
+      "scope": "illustrative budget, not an allowed design drop"
+    },
+    {
+      "name": "loop_R_for_0.2V",
+      "formula": "V_budget / I",
+      "substitution": "0.2 / 4.381500000000001",
+      "result": 0.04564646810453041,
+      "unit": "ohm",
+      "scope": "illustrative budget, not an allowed design drop"
+    },
+    {
+      "name": "series_reservoir",
+      "formula": "C_equal / 2",
+      "substitution": "0.00021999999999999998 / 2",
+      "result": 0.00010999999999999999,
+      "unit": "F",
+      "scope": "two equal nominal capacitors"
+    },
+    {
+      "name": "isolated_bleeder_tau",
+      "formula": "R_each * C_each",
+      "substitution": "220000 * 0.00021999999999999998",
+      "result": 48.4,
+      "unit": "s",
+      "scope": "isolated nominal RC, not safe service delay"
+    },
+    {
+      "name": "one_film_energy",
+      "formula": "0.5 * C * V^2",
+      "substitution": "0.5 * 4.9999999999999996e-05 * 400^2",
+      "result": 3.9999999999999996,
+      "unit": "J",
+      "scope": "illustrative voltage; no actual rail claim"
+    },
+    {
+      "name": "raw_series_pair_energy",
+      "formula": "0.5 * C * V^2",
+      "substitution": "0.5 * 0.00010999999999999999 * 400^2",
+      "result": 8.799999999999999,
+      "unit": "J",
+      "scope": "illustrative voltage; no actual rail claim"
+    }
+  ],
+  "limits": [
+    "Shared heater topology fails existing HD-002 screens; winding count/reference not approved",
+    "Nominal tube inventory excludes actual cold surge, tolerances and winding regulation",
+    "Pilot current is an allowance, not a selected part",
+    "Loop resistance includes both wires, all contacts/terminations; no actual harness selected",
+    "RC assumes isolated equal nominal capacitor/bleeder branches, not full network decay",
+    "400V is illustrative only; no safe waiting time or residual voltage criterion derived"
+  ],
+  "design_qualified": false
+}

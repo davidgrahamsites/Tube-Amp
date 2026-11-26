@@ -15,6 +15,9 @@
 ## Evidence and reasoning
 [Inputs, assumptions, calculation or test method, results, bounds, failures and controls. Link raw/detail artifacts.]
 
+## Calculation ledger
+For every material calculation alongside its choice: cite inputs; define symbols and units; show the equation and numeric substitution; report result and units; state validation, assumptions, and scope limits; link the reproducible receipt where available. Separate arithmetic, simulation, and measurements. If no calculation is needed, say so.
+
 ## Options and tradeoffs
 [Options actually evaluated and the reason each remains, fails, or is selected. Do not imply adoption from comparison alone.]
 

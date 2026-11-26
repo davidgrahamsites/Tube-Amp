@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Mechanism catalogue</title><!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../docs/engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../docs/engineering-reader/assets/katex/katex.min.css"><script defer src="../../docs/engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../docs/engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../docs/engineering-reader/assets/math.js"></script><!-- /reader-head --></head><body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../docs/engineering-reader/index.html">Engineering status</a><a href="../../docs/engineering-reader/glossary.html">Vocabulary key</a><a href="../../docs/engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav --><main><p class="eyebrow">Renegade · Reviewed engineering record · 26 November 2026</p><h1>Mechanism catalogue</h1>
+<p>Source-backed operations, not novelty claims. All implementation states are current project evidence or unadopted hypotheses. Updated with bottom-enclosure research before candidate selection.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Concrete mechanism and intended benefit</th>
+<th>Provenance</th>
+<th>Assumptions / limits / state</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td>Close rectifier/reservoir and return loop locally to limit loop impedance</td>
+<td>Current circuit and capacitor-bank-fit/interface-research.md; TI power-loop guidance linked there</td>
+<td>Exact current/pulse model needed; raw reservoir is C29/C30, not four film filters; current topology retained</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>Keep stage filter supply/return near the load to avoid extending its recharge/load loop</td>
+<td>Current B_SCREEN→B_PRE→B_EARLY topology; same interface research</td>
+<td>Physical loop effect is an engineering hypothesis until modeled/measured; no new capacitor values</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>Carry transformer mass through structural metal into fixed cabinet supports</td>
+<td>mechanical/CONTEXT and three-board concept; <a href="../bottom-power-enclosure/mechanical-research.html">mechanical research</a></td>
+<td>Floor material/load and fasteners unknown; not a qualified structure</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>Compare magnetic source orientation/distance against sensitive receiver pickup under matched load</td>
+<td><a href="../bottom-power-enclosure/magnetic-research.html">magnetic research</a>, Jensen/Magnetic Shield/Accutronics sources there</td>
+<td>No arbitrary safe distance or metal-box immunity; exact magnetics/tank required</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>Route supply with its return and account for full loop resistance/contact loss</td>
+<td><a href="../bottom-power-enclosure/harness-research.html">harness research</a> and grounding contract</td>
+<td>Twisting does not cancel voltage drop or establish insulation; heater groups unresolved</td>
+</tr>
+<tr>
+<td>M6</td>
+<td>Separate permanent protective bonds from deliberate circuit returns</td>
+<td>reverb-600/grounding-contract.json</td>
+<td>Physical bonding/tests open; no chassis-as-normal-return or audio-connector PE</td>
+</tr>
+<tr>
+<td>M7</td>
+<td>Provide independently accessible module connectors/fasteners and controlled discharge sequence</td>
+<td>capacitor interface and mechanical service contracts</td>
+<td>Exact connectors, touch protection and retained paths must be qualified; no hot swap</td>
+</tr>
+<tr>
+<td>M8</td>
+<td>Rotate a supported board to trade depth for height without lead reforming</td>
+<td>capacitor-bank-fit/geometry-research.md and mounting-research.md</td>
+<td>Candidate-specific height/retention/orientation unresolved; local geometry not whole fit</td>
+</tr>
+</tbody>
+</table>
+<p>Missing evidence: actual magnetics, speaker and common cabinet frames; temperature/noise/mechanical qualification; exact harness/connectors. Catalogue deliberately excludes DSP, switching-power redesign, active noise cancellation and novel materials because those would broaden the requested packaging scope.</p>
+<!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>B_SCREEN</dt><dd>The filtered supply node for the output-tube screen grids.</dd>
+<dt>B_PRE</dt><dd>The filtered supply node for the specified preamplifier stages.</dd>
+<dt>B_EARLY</dt><dd>The filtered supply node for the earlier preamplifier stages.</dd>
+<dt>Capacitor</dt><dd>A component that stores charge and electrical energy.</dd>
+<dt>Chassis</dt><dd>The metal structure that supports and encloses the electronics.</dd>
+<dt>Harness</dt><dd>A grouped set of wires, contacts and connectors.</dd>
+<dt>Heater</dt><dd>The tube element that heats the cathode.</dd>
+<dt>Impedance</dt><dd>Opposition to alternating current, including resistance and frequency-dependent effects; measured in ohms (Ω).</dd>
+<dt>Lead</dt><dd>A component terminal that connects to the board.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Loop resistance</dt><dd>The total resistance of the supply and return conductors, contacts and terminations.</dd>
+<dt>Magnetics</dt><dd>Transformers and inductors.</dd>
+<dt>PE</dt><dd>Protective earth; the protective connection to exposed conductive parts.</dd>
+<dt>Qualification</dt><dd>Checks that show a design meets stated limits under stated conditions.</dd>
+<dt>Rectifier</dt><dd>A circuit that changes alternating current into current of one polarity.</dd>
+<dt>Reservoir</dt><dd>A capacitor bank that stores energy after rectification.</dd>
+<dt>Tank</dt><dd>The mechanical spring-reverb assembly.</dd>
+<dt>Transformer</dt><dd>A magnetic device that transfers energy between windings.</dd></dl></section><!-- /reader-key --></main></body></html>

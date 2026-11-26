@@ -191,9 +191,21 @@ DEC-021/FB-142: retain problems, options, decisions and verification for a futur
 - [docs/design-journal](<../../docs/design-journal>)
 - [docs/CONTEXT.md](<../../docs/CONTEXT.md>)
 
+### MAT-021 — Capacitor and bottom-power packaging reviews
+Role: product. Status: research and conditional plans; no native adoption or populated fit approval. Owner: Electrical/mechanical integration.
+
+FB-144–147: exact capacitor body/lead evidence, independent five-pass reviews, source-backed Alien Method candidates and combined synthesis. Preserve power-block ownership and distinguish verified local arithmetic from whole-amplifier fit. FB-148–151: source-linked mathematical history, offline HTML/KaTeX reports, vocabulary keys and explicit build holds.
+
+- [plans/capacitor-bank-fit](<../../plans/capacitor-bank-fit>)
+- [plans/bottom-power-enclosure](<../../plans/bottom-power-enclosure>)
+- [plans/power-packaging-alien](<../../plans/power-packaging-alien>)
+- [plans/power-packaging-synthesis](<../../plans/power-packaging-synthesis>)
+- [engineering/component-selection/power-film](<../../engineering/component-selection/power-film>)
+- [docs/engineering-reader](<../../docs/engineering-reader>)
+
 ## Complete file inventory
 
-4821 files cataloged with path, role, owner and SHA256 in [FILES.json](FILES.json). No existence/hash check establishes circuit safety or fit.
+4999 files cataloged with path, role, owner and SHA256 in [FILES.json](FILES.json). No existence/hash check establishes circuit safety or fit.
 
 Historical native snapshots keep their existing paths and original internal layout. Their legacy scripts are not new-work templates. New active work separates tools/templates, editable registers and generated products.
 
