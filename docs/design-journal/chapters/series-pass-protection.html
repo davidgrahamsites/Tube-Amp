@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Series-pass short protection screen</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Series-pass short protection screen</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HD-007 · Steady-state model only</p>
+      </header>
+
+      <section>
+        <h2>Change under test</h2>
+        <p>HD-007 tests two series depletion MOSFETs. Each device has an independent gate-reference divider, gate resistor, and opposed generic 12 V gate clamps. A 100 kΩ output preload keeps the behavioral regulator above its minimum-load current in the sampled cases.</p>
+        <p>The 270 seeded DC cases combine three input voltages, three regulator profiles, warm or unpowered-tube load, three fault states, and five MOSFET/source-resistance sensitivities. The two device faults short Q1 or Q2 drain to source. This is a bounded steady-state comparison, not full fault qualification.</p>
+      </section>
+
+      <section>
+        <h2>Sampled device-short results</h2>
+        <p>Across the 270 cases, a single Q1 or Q2 drain-source short keeps modeled regulator differential at or below 18.78384 V. Maximum absolute gate-to-source voltage is 12.51462 V. Minimum regulator output current is 5.583256 mA, above the allocated 5 mA minimum.</p>
+        <p>The extra 100 kΩ preload draws current from the output. Its maximum modeled dissipation is 0.85355 W. The preload fixes the sampled minimum-load issue. Preload tolerance, heat and real-circuit operation still need qualification.</p>
+      </section>
+
+      <section>
+        <h2>Reject unbalanced solver results</h2>
+        <p>Two unseeded operating-point probes returned node voltages but failed output current balance by 6.14 mA and 8.87 mA. Those results were rejected. A vector from the simulator is not enough. The 270 main cases use initial node guesses and pass an independent output KCL check.</p>
+        <p>A seeded Q1-short case without the preload still gives only 3.847067 mA regulator output current. It is below the 5 mA minimum. Do not omit the preload based on the passing Q1/Q2 voltage results.</p>
+      </section>
+
+      <section>
+        <h2>Regulator-short fault remains open</h2>
+        <p>A separate regulator input-to-output short probe drives the modeled output to 437.931 V. This exceeds the 300 V ceiling. The pass-device short probes do not protect against an internal regulator short. Independent absolute output overvoltage protection remains unresolved.</p>
+        <div class="math">\[V_{OUT,reg-short}=437.931\;\mathrm{V}>300\;\mathrm{V}\]</div>
+        <p>The regulator is behavioral. This value is a warning from the model, not a prediction of a real regulator failure waveform.</p>
+      </section>
+
+      <section>
+        <h2>Limits and decision</h2>
+        <p>The depletion MOSFET models are generic. The gate clamps use a generic 12 V diode model, not an exact selected clamp part. The LM317 model is behavioral. The 36.2 kΩ warm-load resistor approximates only the nominal prior load; the 100 kΩ preload is a separate modeled load. No dynamic stability result is established.</p>
+        <p>Reverse-current paths, input collapse, regulator-short protection, exact hot safe operating area, clamp tolerance, resistor and capacitor faults, heat transfer, socket/carrier, sourcing, and populated fit remain open. No circuit or part is adopted. There is no hardware qualification or full fault acceptance.</p>
+        <p>Before adoption, select exact parts and build independent output overvoltage and fault interruption. Verify reverse paths, thermal limits, startup behavior, and assembled fit using supported device data or protected physical measurements.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>Series-pass MOSFET</dt>
+          <dd>A transistor in the supply path that controls current to the regulated output.</dd>
+          <dt>Depletion MOSFET</dt>
+          <dd>A normally-on MOSFET that needs gate control to reduce or stop conduction.</dd>
+          <dt>Gate-reference divider</dt>
+          <dd>Resistors that establish the gate control reference for one pass device.</dd>
+          <dt>Opposed gate clamps</dt>
+          <dd>Two opposing clamp diodes arranged to limit positive and negative gate-to-source voltage.</dd>
+          <dt>Output preload</dt>
+          <dd>A resistor that draws a defined minimum current from the regulator output.</dd>
+          <dt>Output KCL</dt>
+          <dd>Kirchhoff's current law applied at the output node: current entering and leaving must balance.</dd>
+          <dt>Seeded operating point</dt>
+          <dd>A simulator solve started from supplied node-voltage guesses. It still requires current-balance checks.</dd>
+          <dt>Regulator differential</dt>
+          <dd>The voltage between regulator input and output terminals.</dd>
+          <dt>Absolute output protection</dt>
+          <dd>A separate circuit that limits output voltage if the regulator control path fails.</dd>
+          <dt>Safe operating area (SOA)</dt>
+          <dd>The voltage, current, and temperature range in which a device can operate without damage.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/series-contract.json">HD-007 contract</a> — topology, sensitivities, fault cases, and open evidence.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/series-screen.json">HD-007 result receipt</a> — 270 seeded DC cases, rejected comparisons, and regulator-short probe.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/tools/series_protection.py">HD-007 protection tool</a> — topology construction, node seeding, and output KCL calculation.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/pass-contract.json">HD-006 pass-stage contract</a> — prior behavioral regulator and pass-device assumptions.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/sources/pass-device-candidate.json">Pass-device source record</a> — candidate data-sheet provenance and unresolved thermal and supply checks.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/sources/atl431-provenance.json">ATL431 source record</a> — model provenance and exclusions.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1651,3 +1651,15 @@ Source: engineering/component-selection/heater-divider-rating/results/pass-scree
 - [engineering/component-selection/heater-divider-rating/pass-review.html](<../../engineering/component-selection/heater-divider-rating/pass-review.html>)
 - [docs/design-journal/chapters/preamp-pass-model.html](<../../docs/design-journal/chapters/preamp-pass-model.html>)
 
+## FB-158 — series-pass-protection-boundary
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HD-007: separate single pass-device short protection from an absolute output-voltage limit.
+
+270 seeded DC sensitivity cases and explicit current-balance checks support a dual-pass candidate with100k preload. Unseeded probes rejected for6.14/8.87mA KCL errors. Pass-short differential stays below18.784V; regulator-short output437.93V still fails. No physical, dynamic, complete protection or native qualification.
+
+Source: engineering/component-selection/heater-divider-rating/results/series-screen.json
+
+- [engineering/component-selection/heater-divider-rating/series-review.html](<../../engineering/component-selection/heater-divider-rating/series-review.html>)
+- [docs/design-journal/chapters/series-pass-protection.html](<../../docs/design-journal/chapters/series-pass-protection.html>)
+

@@ -2353,6 +2353,23 @@
       ],
       "supersedes": [],
       "next_action": "Resolve independent overvoltage/fault interruption and reverse-current paths before accepting a real pass circuit; then exact parts, thermal/socket and populated fit."
+    },
+    {
+      "id": "FB-158",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "engineer",
+      "kind": "series-pass-protection-boundary",
+      "quote": "HD-007: separate single pass-device short protection from an absolute output-voltage limit.",
+      "source": "engineering/component-selection/heater-divider-rating/results/series-screen.json",
+      "interpretation": "270 seeded DC sensitivity cases and explicit current-balance checks support a dual-pass candidate with100k preload. Unseeded probes rejected for6.14/8.87mA KCL errors. Pass-short differential stays below18.784V; regulator-short output437.93V still fails. No physical, dynamic, complete protection or native qualification.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/component-selection/heater-divider-rating/series-review.html",
+        "docs/design-journal/chapters/series-pass-protection.html"
+      ],
+      "supersedes": [],
+      "next_action": "Implement and verify independent absolute output protection and reverse-current handling, then qualify exact parts, heat, socket/carrier and populated fit."
     }
   ]
 }

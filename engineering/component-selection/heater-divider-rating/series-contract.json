@@ -1,0 +1,109 @@
+{
+  "id": "HD-007",
+  "owner": "heater-divider-rating",
+  "baseline": "2578e1f9b412e87dd24be4d191303a3d906e1bd7",
+  "job": "Screen two independent series pass devices against one drain-source short; retain the regulator minimum-load boundary",
+  "prior_contract": "pass-contract.json",
+  "prior_contract_sha256": "8da630886e96acec6e4b70d727b7c25942b3db1b2f5ee2d4523aba0f55c678b6",
+  "adapter": "tools/pass_topology.py",
+  "adapter_sha256": "ee94c23fe5ff51a36eeaec855a55169bd4f05269497da6a18a1e52286fade823",
+  "topology": {
+    "gate_bias_total_each_ohm": 149700,
+    "gate_resistor_each_ohm": 100000,
+    "reference_upper_ohm": 1240000,
+    "reference_lower_ohm": 200000,
+    "preload_ohm": 100000,
+    "gate_clamp_nominal_V": 12,
+    "gate_clamp_model": "Generic diode BV12V IBV20mA RS1ohm; not an exact BZX85C12 model."
+  },
+  "input_V": [
+    320,
+    380,
+    550
+  ],
+  "profiles": [
+    "low",
+    "nominal",
+    "high"
+  ],
+  "cold": [
+    false,
+    true
+  ],
+  "faults": [
+    "none",
+    "q1_short",
+    "q2_short"
+  ],
+  "sensitivity": [
+    {
+      "vto1": -3.5,
+      "vto2": -3.5,
+      "source_ohm": 680
+    },
+    {
+      "vto1": -2.5,
+      "vto2": -4.5,
+      "source_ohm": 714
+    },
+    {
+      "vto1": -4.5,
+      "vto2": -2.5,
+      "source_ohm": 714
+    },
+    {
+      "vto1": -2.5,
+      "vto2": -4.5,
+      "source_ohm": 646
+    },
+    {
+      "vto1": -4.5,
+      "vto2": -2.5,
+      "source_ohm": 646
+    }
+  ],
+  "minimum_regulator_output_A": 0.005,
+  "output_KCL_tolerance_A": 1e-07,
+  "recorded_limits": {
+    "regulator_differential_V": 40,
+    "gate_source_abs_V": 20,
+    "output_ceiling_V": 300
+  },
+  "done_condition": "Source-bound steady-state protection comparison with explicit solver/current-balance checks and preserved native files. No transient, full fault or hardware qualification.",
+  "effort": "One bounded topology correction wave",
+  "required_human_evidence": "Exact device thermal and dynamic behavior, gate-clamp maximums, populated carrier/socket and heat geometry; no physical test requested in this wave.",
+  "remaining": [
+    "LM317 internal short and independent absolute output overvoltage protection",
+    "Reverse-current and input-collapse paths",
+    "Reference/divider/gate-resistor/capacitor faults",
+    "Supported dynamic models or protected prototype measurements",
+    "Exact hot SOA, full resistor tolerances, minimum reference-bias accuracy, sourcing, socket/carrier and populated fit"
+  ],
+  "sources": {
+    "BZX85C12": "https://www.vishay.com/docs/85607/bzx85.pdf",
+    "LR8_alternative": "https://ww1.microchip.com/downloads/en/DeviceDoc/20005399B.pdf",
+    "SHF_fuse_alternative": "https://www.schurter.com/en/datasheet/typ_SHF_6.3x32.pdf"
+  },
+  "alternative_limits": [
+    "LR8 specifies input up to450V and typical20mA current limit; this does not cover550V diagnostic input and the whole declared load range directly.",
+    "SHF6.3x32 specifies500VDC and minimum0.5A; it does not establish protection of this550V tens-of-mA branch. A250VAC fuse is not a550VDC interrupt rating."
+  ],
+  "adopted": false,
+  "conditional_dc_bound": {
+    "required_reference_upper_V": 19,
+    "required_cutoff_bias_V": 5,
+    "resulting_regulator_differential_upper_V": 24,
+    "status": "Required design bounds, not a qualified full-temperature reference or dynamic result. Healthy pass stage must carry more than its off-state leakage; source resistor drop is nonnegative.",
+    "cutoff_reference": "sources/ixtp3n100d2-manufacturer-extract.pdf; exact device hot limits and reference accuracy still need qualification."
+  },
+  "clamp_candidate_evidence": {
+    "manufacturer": "Vishay",
+    "candidate": "BZX85C12",
+    "document": "85607 Rev2.9 17-Sep-2025",
+    "zener_max_at_20mA_25C_V": 12.7,
+    "temperature_coefficient_max_percent_per_C": 0.085,
+    "opposed_pair_forward_max": "Not specified as a guaranteed maximum in this document; typical forward curves do not close the clamp bound.",
+    "model_limit": "Generic12V model is a nominal sensitivity device, not a worst-case clamp qualification.",
+    "selected": false
+  }
+}
