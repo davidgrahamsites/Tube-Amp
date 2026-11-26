@@ -1,0 +1,123 @@
+{
+  "id": "HD-009",
+  "baseline": "222ccd7c59a5f9551367a4e3a81eb95404da0379",
+  "owner": "heater-divider-rating",
+  "job": "Compare detector error and coupled loading for a modest preamp setpoint correction",
+  "inputs": {
+    "series-contract.json": "c662aeddc6a12fc1fcb9f7df3fbf32098273418821173f0596a137eb925e5b51",
+    "pass-contract.json": "8da630886e96acec6e4b70d727b7c25942b3db1b2f5ee2d4523aba0f55c678b6",
+    "supply-contract.json": "b17f99359b7a95b4c6949af3bd9ba894af9f56111dd914c927bd6c8c5f5ab241",
+    "tools/series_protection.py": "1d4b93ff4ba3c46c6c4dba0b3be701d8bb7b58d25c49ab9322e8e7b7810623ff",
+    "tools/pass_topology.py": "ee94c23fe5ff51a36eeaec855a55169bd4f05269497da6a18a1e52286fade823",
+    "tools/supply.py": "0c10951abba76e9bc0e9a17bb580c1be2a02344b68e81fece04fa1f9d37e93be"
+  },
+  "Rlower_old_ohm": 43200,
+  "Rlower_candidate_ohm": 42200,
+  "divider_top_each_ohm": 294000,
+  "divider_top_count": 4,
+  "divider_bottom_ohm": 10100,
+  "resistor_total_fraction": 0.004,
+  "reference": {
+    "part": "TI REF3425IDBVR",
+    "nominal_V": 2.5,
+    "initial_fraction": 0.0005,
+    "box_drift_ppm_per_C": 6,
+    "box_span_C": 165,
+    "line_ppm_per_V": 15,
+    "line_span_V": 9.5,
+    "source_load_ppm_per_mA": 30,
+    "source_load_mA": 0.03,
+    "unqualified_age_hysteresis_solder_fraction": 0.0002,
+    "output_preload_ohm": 100000
+  },
+  "comparator": {
+    "part": "TI LM2903BIDR",
+    "offset_abs_V": 0.004,
+    "input_abs_A": 6.25e-08,
+    "board_leakage_allocation_A": 1e-07,
+    "quiescent_max_A": 0.0008,
+    "package": "SOIC8; removable socket carrier required, no TI B-grade PDIP assumed"
+  },
+  "monitor": {
+    "rail_V": 8.2,
+    "feed_each_ohm": 22100,
+    "feed_count": 3,
+    "quiet_A": 0.00095,
+    "led_limit_A": 0.0015,
+    "ctr_allocation": 0.25,
+    "beta_allocation": 20,
+    "base_emitter_ohm": 100000,
+    "required_rail_range_V": [
+      7.5,
+      9
+    ],
+    "feed_fraction_allocation": 0.05
+  },
+  "input_V": [
+    320,
+    550
+  ],
+  "profiles": [
+    "low",
+    "high"
+  ],
+  "cold": [
+    true,
+    false
+  ],
+  "faults": [
+    "none",
+    "q1_short",
+    "q2_short",
+    "regulator_short"
+  ],
+  "limits": {
+    "normal_trip_margin_V": 2,
+    "trip_ceiling_margin_V": 2,
+    "ceiling_V": 300,
+    "kcl_A": 1e-07
+  },
+  "sources": [
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/ref34.pdf",
+      "revision": "SBAS804G April2026",
+      "facts": "2.5V reference,0.05percent initial,6ppm/C box method across\u221240..125C,15ppm/V line,30ppm/mA sourcing,95uA IQ,12V maximum recommended input. Aging/hysteresis plots and typical values are not guaranteed bounds."
+    },
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/lm393.pdf",
+      "revision": "SLCS005AH April2025",
+      "facts": "LM2903B SOIC full\u221240..125C offset4mV, input bias50nA and offset25nA; independent input bound62.5nA used. Both-channel IQ800uA, output low550mV at4mA/\u22121V differential. Response time is typical; B variant not listed in PDIP."
+    },
+    {
+      "url": "https://www.lcsc.com/product-detail/C187836.html",
+      "observed": "2026-11-26",
+      "facts": "REF3425IDBVR listing identity only; live stock, MOQ, domestic quote and socket carrier not confirmed."
+    },
+    {
+      "url": "https://www.lcsc.com/product-detail/C2869804.html",
+      "observed": "2026-11-26",
+      "facts": "LM2903BIDR listing identity only; live stock, MOQ, domestic quote and socket carrier not confirmed."
+    }
+  ],
+  "limitations": [
+    "0.4percent resistor total and200ppm additional reference drift are allocations, not selected-part/lifetime qualification.",
+    "DC controller interpolates LED current continuously with overdrive. It does not implement hysteresis, a latch, startup, detector saturation or a real comparator transfer curve.",
+    "Monitor8.2V rail is ideal. Positive sink current proves steady supply budget only; select/qualify shunt regulator, bias, clamp and capacitors separately.",
+    "Generic NPN BF20 and optocoupler CTR25percent are sensitivity assumptions, not guaranteed hot parts.",
+    "Source BJT is transformed into an exactly equivalent local-voltage wrapper to avoid invalid common-mode operating points. This is numerical adaptation, not a change to transistor physics.",
+    "Small-signal AC comparison uses existing simplified tube/transformer/effects models at one knob setting per channel; no clipping, noise or hardware claim.",
+    "Planned100k reference preload keeps REF3425 sourcing despite comparator input current. It is included in the quiet-current allocation; the reference/comparator are not transistor-level models."
+  ],
+  "done_condition": "Reproducible tolerance comparison, balanced coupled DC cases and small-signal response comparison; preserve failures and native hashes.",
+  "human_check": "Exact monitor/actuator parts, aging, sockets, startup/fault timing, reverse paths, thermal fit and protected prototype measurements remain required.",
+  "effort": "One detector/setpoint integration wave",
+  "adopted": false,
+  "vto_sensitivity_V": [
+    -2.5,
+    -5
+  ],
+  "source_ohm": [
+    646,
+    714
+  ]
+}

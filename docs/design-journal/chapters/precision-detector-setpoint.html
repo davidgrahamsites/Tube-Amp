@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Precision detector and lower setpoint</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Precision detector and lower setpoint</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HD-009 · Conditional static screen</p>
+      </header>
+
+      <section>
+        <h2>Setpoint carried forward</h2>
+        <p>HD-008 found no usable TL431BI trip window under its stated tolerance bounds against the 292.156 V normal maximum and 300 V ceiling. HD-009 lowered the regulator divider's lower resistor from 43.2 kΩ to 42.2 kΩ. The nominal setpoint moves from 273.41 V to 267.11 V.</p>
+        <div class="math">\[V_{out}=V_{ref}\left(1+\frac{R_{lower}}{R_{set}}\right)+I_{adj}R_{lower}\]</div>
+        <div class="math">\[V_{out}=1.25\left(1+\frac{42.2\,\mathrm{k\Omega}}{200\,\mathrm{\Omega}}\right)+(50\,\mathrm{\mu A})(42.2\,\mathrm{k\Omega})=267.11\;\mathrm{V}\]</div>
+        <p>The revised high-profile normal output is 285.42386 V. This is a candidate setpoint change. It is not built or adopted.</p>
+      </section>
+
+      <section>
+        <h2>Trip window and margin</h2>
+        <p>The candidate monitor uses a TI REF3425 reference and LM2903B comparator. The screen combines 0.4% total resistor allocation, reference initial and temperature terms, line and load terms, an additional 200 ppm aging/hysteresis/solder allocation, comparator offset and input current, and board leakage.</p>
+        <div class="math">\[e_{ref}=0.0005+(6\,\mathrm{ppm/^{\circ}C})(165\,^{\circ}\mathrm C)+(15\,\mathrm{ppm/V})(9.5\,\mathrm V)+(30\,\mathrm{ppm/mA})(0.03\,\mathrm{mA})+0.0002=0.0018334\]</div>
+        <p>The 200 ppm term is an unqualified allocation. It is not a guaranteed aging limit. The 64 threshold tolerance combinations span 290.0793 V to 297.1351 V.</p>
+        <div class="math">\[V_{trip}=(V_{ref}+V_{OS})\left(1+\frac{R_{top}}{R_{bottom}}\right)+(I_{bias}+I_{leak})R_{top}\]</div>
+        <div class="math">\[M_{normal}=290.0793-285.42386=4.65543\;\mathrm{V}\]</div>
+        <div class="math">\[M_{ceiling}=300-297.1351=2.86493\;\mathrm{V}\]</div>
+        <p>These are allocated static margins. The screen does not include detector timing, hysteresis, startup delay, saturation recovery, or transient overshoot.</p>
+      </section>
+
+      <section>
+        <h2>Controller cases and model checks</h2>
+        <p>The final DC grid has 512 balanced cases. It varies input voltage, regulator profile, warm or unpowered-tube load, four fault states, trip endpoints, both MOSFET VTO endpoints independently, and source resistance. The minimum modeled regulator output current is 6.67906 mA.</p>
+        <p>Six local-voltage wrapper fixtures compare a generic NPN directly and through the wrapper at 0 V and 300 V common-mode offset. Collector and base currents match within 1 nA. The largest collector-current difference is 0.300 nA at 300 V, consistent with simulator gmin. The wrapper is a numerical adaptation. It does not change transistor physics.</p>
+        <p>An unwrapped generic-NPN operating point returned 0.0134 V output but missed output current balance by 7.557 mA. That result was rejected. The final checker reports 4,427 passing checks and a maximum KCL error of 59.52 pA within its stated scope.</p>
+      </section>
+
+      <section>
+        <h2>Monitor supply and hardware boundary</h2>
+        <p>The 8.2 V monitor rail is ideal. A planned 100 kΩ reference preload keeps the reference sourcing by current budget; its load is included in the quiet-current allocation, but the REF3425 is not explicitly modeled. The calculation leaves 1.0389 mA of reserve at full allocated LED drive using a 7.5–9 V rail range and 5% feed-resistor allocation. This is a steady-state DC power budget only. It does not prove that a real monitor supply starts, remains regulated, or drives the LED.</p>
+        <p>The model allocates 25% optocoupler CTR and transistor beta 20. Neither is a guaranteed hot-part value. Select and verify the shunt supply, comparator drive, LED, optocoupler, clamps, and capacitors.</p>
+        <p>The LM2903B candidate is SOIC-8, not an assumed PDIP part. It needs a removable socket carrier. The REF3425IDBVR is a small surface-mount package and also needs a carrier for socketed service. LCSC records identify the parts only. Stock, MOQ, pricing, and carrier availability are unconfirmed.</p>
+      </section>
+
+      <section>
+        <h2>Small-signal comparison</h2>
+        <p>Four AC sweeps compare clean and dirty channels at 273.41 V and 267.11 V, from 20 Hz to 20 kHz, at one knob setting per channel. Modeled gain changes stay below 0.1 dB: −0.078 to −0.064 dB clean and −0.094 to −0.050 dB dirty.</p>
+        <p>This is a small-signal model comparison. It does not test clipping, output power, noise, or hardware performance.</p>
+      </section>
+
+      <section>
+        <h2>Decision and next work</h2>
+        <p>Carry 267.11 V forward as a setpoint candidate for the next engineering comparison. Do not treat it as a built supply. No native circuit or board change was made. The result marks adoption, transient qualification, and physical qualification false.</p>
+        <p>First recheck large-signal clipping, driver headroom and the approximately 25 W target at the lower setpoint. Then implement and test a real monitor supply, hysteretic or latched fault response, startup behavior, overshoot, reverse paths, and exact part limits. Confirm the SOIC and reference carriers, sockets, thermal fit, and populated assembly before adoption.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>Setpoint</dt>
+          <dd>The target voltage established by the regulator reference and divider.</dd>
+          <dt>Trip endpoint</dt>
+          <dd>The lowest or highest threshold from the declared component-error combinations.</dd>
+          <dt>Reference fraction</dt>
+          <dd>The calculated combined fractional allowance for reference error sources.</dd>
+          <dt>Common-mode offset</dt>
+          <dd>A voltage shift applied to the transistor terminals together.</dd>
+          <dt>Wrapper</dt>
+          <dd>A model connection that translates local voltages and currents to avoid an invalid simulator operating point.</dd>
+          <dt>gmin</dt>
+          <dd>A small conductance added by the simulator to help solve circuit equations.</dd>
+          <dt>Current balance (KCL)</dt>
+          <dd>Kirchhoff's current law: current entering a node must equal current leaving it.</dd>
+          <dt>Optocoupler CTR</dt>
+          <dd>Current transfer ratio from an optocoupler's LED input to its output transistor.</dd>
+          <dt>Hysteresis</dt>
+          <dd>A difference between the trip voltage and the reset voltage.</dd>
+          <dt>Latch</dt>
+          <dd>A circuit that holds a fault state until a separate reset condition occurs.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/detector-contract.json">HD-009 contract</a> — candidate values, error allocations, component packages, and limitations.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/detector-screen.json">HD-009 result receipt</a> — 512 DC cases, 64 threshold endpoints, six wrapper fixtures, and four AC sweeps.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/detector-checks.json">HD-009 independent checks</a> — 4,427 checks and declared scope.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/tools/detector_candidate.py">HD-009 screening tool</a> — tolerance, coupled-load, wrapper, and AC calculations.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/absolute-contract.json">HD-008 contract</a> — preceding forced-on protection screen.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/absolute-screen.json">HD-008 result</a> — previous detector window.</li>
+          <li><a href="https://www.ti.com/lit/ds/symlink/ref34.pdf">TI REF34 data sheet</a> — reference initial, temperature, line, and load specifications.</li>
+          <li><a href="https://www.ti.com/lit/ds/symlink/lm393.pdf">TI LM2903B data sheet</a> — comparator offset, input current, supply current, and package information.</li>
+          <li><a href="https://www.lcsc.com/product-detail/C187836.html">LCSC REF3425 listing</a> and <a href="https://www.lcsc.com/product-detail/C2869804.html">LCSC LM2903B listing</a> — identity records only.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

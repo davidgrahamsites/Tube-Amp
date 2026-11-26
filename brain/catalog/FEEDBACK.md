@@ -1675,3 +1675,15 @@ Source: engineering/component-selection/heater-divider-rating/results/absolute-s
 - [engineering/component-selection/heater-divider-rating/absolute-review.html](<../../engineering/component-selection/heater-divider-rating/absolute-review.html>)
 - [docs/design-journal/chapters/absolute-protection-authority.html](<../../docs/design-journal/chapters/absolute-protection-authority.html>)
 
+## FB-160 — precision-detector-setpoint
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HD-009: distinguish a static detector/setpoint candidate from qualified protection.
+
+512 coupled DC cases,64 threshold endpoints,6 wrapper fixtures and4 AC sweeps support the267.11V candidate. Allocated trip290.079–297.135V leaves4.655V normal and2.865V ceiling margins. Ideal monitor rail and continuous controller remain unimplemented hardware; no transient, physical or native qualification.
+
+Source: engineering/component-selection/heater-divider-rating/results/detector-screen.json
+
+- [engineering/component-selection/heater-divider-rating/detector-review.html](<../../engineering/component-selection/heater-divider-rating/detector-review.html>)
+- [docs/design-journal/chapters/precision-detector-setpoint.html](<../../docs/design-journal/chapters/precision-detector-setpoint.html>)
+

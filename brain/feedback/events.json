@@ -2387,6 +2387,23 @@
       ],
       "supersedes": [],
       "next_action": "Compare an exact tighter detector with a lower regulated setpoint; implement bounded detector supply and direct gate-reference actuator, then check dynamic/reverse behavior and populated fit."
+    },
+    {
+      "id": "FB-160",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "engineer",
+      "kind": "precision-detector-setpoint",
+      "quote": "HD-009: distinguish a static detector/setpoint candidate from qualified protection.",
+      "source": "engineering/component-selection/heater-divider-rating/results/detector-screen.json",
+      "interpretation": "512 coupled DC cases,64 threshold endpoints,6 wrapper fixtures and4 AC sweeps support the267.11V candidate. Allocated trip290.079–297.135V leaves4.655V normal and2.865V ceiling margins. Ideal monitor rail and continuous controller remain unimplemented hardware; no transient, physical or native qualification.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/component-selection/heater-divider-rating/detector-review.html",
+        "docs/design-journal/chapters/precision-detector-setpoint.html"
+      ],
+      "supersedes": [],
+      "next_action": "Recheck large-signal headroom and output power; then real monitor supply, latch/hysteresis, startup, reverse paths, hot part bounds and populated fit."
     }
   ]
 }
