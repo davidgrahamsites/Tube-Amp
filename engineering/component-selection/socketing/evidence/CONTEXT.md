@@ -5,3 +5,5 @@ Outputs: connfly-ds1009.pdf, drawing C-DS1009-XXXX-XXX-E, revision E dated 2021-
 Human check: verify that the ordered suffix matches the drawing; missing contact current and mating-lead limits remain qualification gaps.
 
 TE C-2199298 Rev A is a manufacturer-authored drawing from the recorded distributor mirror; current A1 comparison is pending. ti-hc14-n14-package.pdf and ti-opa2134-p8-package.pdf are single-page extracts of reviewed TI package drawings. Source URLs/revisions and all hashes are in package-sources.json.
+
+mill-max-248-249.pdf is the two-page primary manufacturer contact selection/compliancy guide. URL, retrieval date and SHA256 are held in ../contact-fit-contract.json. Human check: confirm rectangular-diagonal acceptance and replacement range on pages248–249; do not transfer this rule to another manufacturer without evidence.

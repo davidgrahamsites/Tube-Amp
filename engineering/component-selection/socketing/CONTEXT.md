@@ -8,3 +8,5 @@ Human check: trace each physical package to its socket drawing, pin-1 orientatio
 Current dimensional seam: socket-envelope.json carries provisional TE DIP candidate bounds to mechanical/tools/check_socket_fit.py. te-candidate-review.md separates nominal compatibility from release qualification. No native footprint or purchase is silently changed by this manifest.
 
 Draft footprint correction: footprint-contract.json declares the five native package changes and C352 clearance repair. Read footprint-review.md and results/footprint-checks.json; adopted draft geometry is distinct from final socket qualification.
+
+Contact tolerance seam: contact-fit-contract.json records exact lead/contact evidence; tools/check_contact_fit.py emits results/contact-fit.json. contact-review.md explains rejected fits and retains cooling requirements by linking to the auxiliary-supply owner. No contact selection or native mutation.

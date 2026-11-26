@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "reviewed_on": "2026-11-25",
+  "purpose": "Screen rectangular regulator leads and subsequent replacement, not qualify a socket assembly.",
+  "device_references": [
+    "U4",
+    "U5",
+    "U6",
+    "U7"
+  ],
+  "lead_mm": {
+    "width_min": 0.61,
+    "width_max": 0.88,
+    "thickness_min": 0.48,
+    "thickness_max": 0.7
+  },
+  "lead_sources": [
+    {
+      "url": "https://www.st.com/resource/en/datasheet/l78.pdf",
+      "revision": "DS0422 Rev38 February2025",
+      "pages_1_based": [
+        34,
+        36
+      ]
+    },
+    {
+      "url": "https://www.st.com/resource/en/datasheet/l79.pdf",
+      "revision": "DS0428 Rev24 January2019",
+      "pages_1_based": [
+        14,
+        16
+      ]
+    }
+  ],
+  "contact_source": {
+    "url": "https://www.mill-max.com/sites/default/files/external/catalog/2019-06/248-249.pdf",
+    "pages_printed": [
+      248,
+      249
+    ],
+    "local_file": "evidence/mill-max-248-249.pdf",
+    "sha256": "2dbd051298db6ffb45ed2c46c62572efa8df9494040ef90bdaabf66f062ee24f"
+  },
+  "method": "Manufacturer specifies rectangular lead diagonal as effective diameter. After insertion, maximum inserted diameter minus compliancy bounds the minimum subsequent diameter, also bounded by the original minimum.",
+  "contacts": [
+    {
+      "number": 34,
+      "minimum_in": 0.032,
+      "maximum_in": 0.046,
+      "compliancy_in": 0.01
+    },
+    {
+      "number": 36,
+      "minimum_in": 0.022,
+      "maximum_in": 0.042,
+      "compliancy_in": 0.022
+    },
+    {
+      "number": 18,
+      "minimum_in": 0.037,
+      "maximum_in": 0.043,
+      "compliancy_in": 0.004
+    }
+  ],
+  "limitations": [
+    "Only the three named contact types are screened; this is not an exhaustive market search.",
+    "Full independent package width/thickness extrema used; no measured sample substituted for replacement tolerance.",
+    "No exact shell, plating, insertion depth, retention, contact temperature, fault current or China purchase route qualified.",
+    "Do not reshape, file or thin regulator leads to force a fit.",
+    "A hypothetical contact used by the checker is not a procurement candidate."
+  ]
+}
