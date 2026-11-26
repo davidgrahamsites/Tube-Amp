@@ -1,0 +1,235 @@
+{
+  "evidence_check_passed": true,
+  "negative_controls": [
+    "missing case",
+    "wrong source",
+    "false adoption"
+  ],
+  "failed_cases": [],
+  "independent_metric_max_error": 3.136477744192234e-10,
+  "comparisons": [
+    {
+      "id": "clean-near-target-10",
+      "reference_W": 17.38994665200261,
+      "candidate_W": 17.389921689833535,
+      "fundamental_delta_dB": -6.234027213059744e-06,
+      "THD_delta_percentage_points": 0.00010797433960840763,
+      "waveform_NRMSE": 0.00024471087653892394,
+      "clipped_fraction": 0.0,
+      "settled": true,
+      "sampled_comparison_pass": true
+    },
+    {
+      "id": "clean-near-target-12",
+      "reference_W": 17.38994665200261,
+      "candidate_W": 17.389921689833535,
+      "fundamental_delta_dB": -6.234027213059744e-06,
+      "THD_delta_percentage_points": 0.00010797433960840763,
+      "waveform_NRMSE": 0.00024471087653892394,
+      "clipped_fraction": 0.0,
+      "settled": true,
+      "sampled_comparison_pass": true
+    },
+    {
+      "id": "clean-overload-10",
+      "reference_W": 33.90944992264832,
+      "candidate_W": 36.33861656480151,
+      "fundamental_delta_dB": 0.30047644675698887,
+      "THD_delta_percentage_points": -3.630953894745822,
+      "waveform_NRMSE": 0.41500695425654155,
+      "clipped_fraction": 0.8671875,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "clean-overload-12",
+      "reference_W": 33.90944992264832,
+      "candidate_W": 36.425542285741216,
+      "fundamental_delta_dB": 0.31085281322492264,
+      "THD_delta_percentage_points": -3.65058840302504,
+      "waveform_NRMSE": 0.41131080874772713,
+      "clipped_fraction": 0.8359375,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "dirty-low-10",
+      "reference_W": 32.6887880988341,
+      "candidate_W": 34.70889113286957,
+      "fundamental_delta_dB": 0.2604191932504804,
+      "THD_delta_percentage_points": -2.5724852217530696,
+      "waveform_NRMSE": 0.25339232502648223,
+      "clipped_fraction": 0.9140625,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "dirty-low-12",
+      "reference_W": 32.6887880988341,
+      "candidate_W": 34.83728503918737,
+      "fundamental_delta_dB": 0.27645482064039356,
+      "THD_delta_percentage_points": -2.6143283823748433,
+      "waveform_NRMSE": 0.2576388022055341,
+      "clipped_fraction": 0.90234375,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "dirty-overload-10",
+      "reference_W": 36.53158800863131,
+      "candidate_W": 36.1056070947836,
+      "fundamental_delta_dB": -0.05093899370340036,
+      "THD_delta_percentage_points": 0.25599408282233327,
+      "waveform_NRMSE": 0.056224379942729864,
+      "clipped_fraction": 0.98828125,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "dirty-overload-12",
+      "reference_W": 36.53158800863131,
+      "candidate_W": 36.1961109238775,
+      "fundamental_delta_dB": -0.04006640722200693,
+      "THD_delta_percentage_points": 0.25549239013833613,
+      "waveform_NRMSE": 0.05706567487277415,
+      "clipped_fraction": 0.984375,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "clean-bass-10",
+      "reference_W": 29.61144507202828,
+      "candidate_W": 31.608651540590415,
+      "fundamental_delta_dB": 0.28346366791785427,
+      "THD_delta_percentage_points": -7.72571621691678,
+      "waveform_NRMSE": 0.5140395667090141,
+      "clipped_fraction": 0.91015625,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "clean-bass-12",
+      "reference_W": 29.61144507202828,
+      "candidate_W": 32.33737772788314,
+      "fundamental_delta_dB": 0.382451976313104,
+      "THD_delta_percentage_points": -6.088157047121825,
+      "waveform_NRMSE": 0.536132219258796,
+      "clipped_fraction": 0.89453125,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "dirty-bass-10",
+      "reference_W": 31.691343945099963,
+      "candidate_W": 31.48631537069221,
+      "fundamental_delta_dB": -0.028188157667448734,
+      "THD_delta_percentage_points": -5.097797198417631,
+      "waveform_NRMSE": 0.3838464971815403,
+      "clipped_fraction": 0.94921875,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "dirty-bass-12",
+      "reference_W": 31.691343945099963,
+      "candidate_W": 32.18007499995904,
+      "fundamental_delta_dB": 0.06646395097676698,
+      "THD_delta_percentage_points": -3.5187496344900424,
+      "waveform_NRMSE": 0.39693607175037926,
+      "clipped_fraction": 0.9453125,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "clean-treble-10",
+      "reference_W": 31.512771807029882,
+      "candidate_W": 35.83710730549962,
+      "fundamental_delta_dB": 0.5584634246521086,
+      "THD_delta_percentage_points": -6.8715487053477275,
+      "waveform_NRMSE": 0.44332499055788005,
+      "clipped_fraction": 0.9296875,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "clean-treble-12",
+      "reference_W": 31.512771807029882,
+      "candidate_W": 35.93395752209003,
+      "fundamental_delta_dB": 0.5701844546433222,
+      "THD_delta_percentage_points": -6.870428047438573,
+      "waveform_NRMSE": 0.44133029414258296,
+      "clipped_fraction": 0.9140625,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "dirty-treble-10",
+      "reference_W": 36.28258583816617,
+      "candidate_W": 35.810022363950786,
+      "fundamental_delta_dB": -0.056936391626667006,
+      "THD_delta_percentage_points": -0.013157204850017479,
+      "waveform_NRMSE": 0.06772191713010078,
+      "clipped_fraction": 0.98046875,
+      "settled": true,
+      "sampled_comparison_pass": false
+    },
+    {
+      "id": "dirty-treble-12",
+      "reference_W": 36.28258583816617,
+      "candidate_W": 35.9100120779041,
+      "fundamental_delta_dB": -0.044826802028708826,
+      "THD_delta_percentage_points": 0.03738060093137108,
+      "waveform_NRMSE": 0.06818452060776976,
+      "clipped_fraction": 0.98046875,
+      "settled": true,
+      "sampled_comparison_pass": false
+    }
+  ],
+  "refinement": [
+    {
+      "id": "clean-bass-unlimited-fine",
+      "relative_power_change": 2.4798908421343332e-05,
+      "THD_delta_percentage_points": 0.0023133004207167573
+    },
+    {
+      "id": "clean-bass-10-fine",
+      "relative_power_change": 9.21734039400596e-06,
+      "THD_delta_percentage_points": 0.0012125031003762388
+    },
+    {
+      "id": "clean-bass-12-fine",
+      "relative_power_change": 1.7896016811987782e-05,
+      "THD_delta_percentage_points": 0.0016627227008711998
+    }
+  ],
+  "target_probe": [
+    {
+      "id": "clean-25w-probe-unlimited",
+      "power_W": 25.71339619003969,
+      "THD_percent": 6.601929146118576,
+      "FX_SEND_peak_V": 4.276119316939864,
+      "settling_relative": 1.0700102406522709e-05
+    },
+    {
+      "id": "clean-25w-probe-12",
+      "power_W": 25.712526486701595,
+      "THD_percent": 6.601509482128493,
+      "FX_SEND_peak_V": 4.27631776006385,
+      "settling_relative": 3.650249272241922e-05
+    }
+  ],
+  "retried_cases": 4,
+  "hardware_qualified": false,
+  "adopted": false,
+  "input_sha256": {
+    "contract.json": "04fc8748811bbdeee68f1774e697fb5376db7d3921376c57909e5b27b51d2bde",
+    "tools/run.py": "ef1dea3ba448fe20d1f4074359a3b46446ae731b14395367e640c3fb9ae7c2d8",
+    "tools/audit.py": "f61b65a919bb6df99de808af83a518201ce943655a9c5536346d3125e2fa1976",
+    "tools/retry.py": "ed23ff7949e4201c68ebd3d6e74cf82b211338619f2d59abca3b779ebf9c09f8",
+    "tools/target.py": "eb06c66401475a61f24a9d41c239ee776935ca4d80a204c4b3507c31c64507b8",
+    "results/summary.json": "70aeee8ba891821bdc9fb9cc3c98f1fd7124861c03887306f9b6fcc8b4d6f0fd",
+    "results/refinement.json": "c5426cbe04171c23c418893aa5d70c72faff6d8a6661bc3e4b0c296e8a936952",
+    "results/target.json": "8fedbbf00d86556fba8e99a43d0da74efebef402c6b840e4c4c70bdeea7efeac",
+    "results/retry.json": "14addd2a3a76844f3d320c2c30dde590c92ffe2b0a7de0ec15ad9f2831b6a35f"
+  }
+}

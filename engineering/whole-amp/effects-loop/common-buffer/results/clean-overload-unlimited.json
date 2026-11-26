@@ -1,0 +1,81 @@
+{
+  "status": "completed",
+  "case": {
+    "id": "clean-overload-unlimited",
+    "scenario": "clean-overload",
+    "channel": "clean",
+    "amp": 0.1,
+    "freq": 1000,
+    "volume": 1,
+    "tone": 0.5,
+    "gain": 0.5,
+    "ceiling_V": null
+  },
+  "end_s": 0.5,
+  "step_s": 1.0416666666666666e-05,
+  "signals": {
+    "FX_SEND": {
+      "min_V": -47.77864465851609,
+      "max_V": 46.38833360061672,
+      "mean_V": -0.006276095311052466,
+      "fundamental_Vpk": 47.160867435890545,
+      "THD_2_to_10_percent": 1.454149302821558
+    },
+    "BUF_OUT": {
+      "min_V": -47.77864465851609,
+      "max_V": 46.38833360061672,
+      "mean_V": -0.006276095311052466,
+      "fundamental_Vpk": 47.160867435890545,
+      "THD_2_to_10_percent": 1.454149302821558
+    },
+    "FX_RETURN": {
+      "min_V": -47.64770019485773,
+      "max_V": 46.22947080365113,
+      "mean_V": -0.006291288300067599,
+      "fundamental_Vpk": 47.02603885955767,
+      "THD_2_to_10_percent": 1.480379113090081
+    },
+    "MIX_OUT": {
+      "min_V": -38.884597538806055,
+      "max_V": 34.557381827054,
+      "mean_V": -0.008054958403569045,
+      "fundamental_Vpk": 37.81894220160403,
+      "THD_2_to_10_percent": 5.445304213608392
+    },
+    "SEND_IN": {
+      "min_V": -4.33132972602642,
+      "max_V": 4.203064649977485,
+      "mean_V": -0.00024439805421931914,
+      "fundamental_Vpk": 4.275089460831895,
+      "THD_2_to_10_percent": 1.480372384640161
+    },
+    "PI_G1": {
+      "min_V": 47.28641810840811,
+      "max_V": 120.69034091125157,
+      "mean_V": 86.1505767837285,
+      "fundamental_Vpk": 37.800623342817445,
+      "THD_2_to_10_percent": 5.449994051271082
+    },
+    "SPEAKER": {
+      "min_V": -16.751899276311207,
+      "max_V": 21.403690538655493,
+      "mean_V": -1.0106770046292013e-05,
+      "fundamental_Vpk": 23.292728452510257,
+      "THD_2_to_10_percent": 44.75765879870402
+    }
+  },
+  "settling_relative": {
+    "FX_SEND": 5.113603429297428e-07,
+    "BUF_OUT": 5.113603429297428e-07,
+    "FX_RETURN": 5.924865877934142e-07,
+    "MIX_OUT": 1.0692511807616492e-05,
+    "SEND_IN": 6.047451219065066e-07,
+    "PI_G1": 1.079918329753302e-05,
+    "SPEAKER": 8.8370981947322e-06
+  },
+  "clipped_fraction": 0,
+  "fundamental_load_W": 33.909449922648804,
+  "deck_sha256": "a7344ce9c71f1e6ff1bccfc801b59f923831dbf50b5b54984c8dd5583554aad9",
+  "waveform_sha256": "1c091f877a69c4d32b9429804d396659da02a4dab9cdbc6f9f34dab0a107b875",
+  "elapsed_s": 19.875414375
+}

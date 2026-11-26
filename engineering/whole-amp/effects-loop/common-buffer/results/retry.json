@@ -1,0 +1,99 @@
+{
+  "cases": [
+    {
+      "id": "clean-treble-unlimited",
+      "prior_result": {
+        "status": "timeout",
+        "case": {
+          "id": "clean-treble-unlimited",
+          "scenario": "clean-treble",
+          "channel": "clean",
+          "amp": 0.1,
+          "freq": 5000,
+          "volume": 1,
+          "tone": 0.5,
+          "gain": 0.5,
+          "ceiling_V": null
+        },
+        "error": "90 second wall bound; no completed result",
+        "elapsed_s": 90.00561183299999
+      },
+      "wall_limit_s": 300,
+      "final_status": "completed",
+      "elapsed_s": 105.143449042,
+      "unchanged_deck_sha256": "094f470b89cc3b935f2875e58be6a4d6b531d73b81033205e7f658ff9c133212"
+    },
+    {
+      "id": "dirty-treble-unlimited",
+      "prior_result": {
+        "status": "timeout",
+        "case": {
+          "id": "dirty-treble-unlimited",
+          "scenario": "dirty-treble",
+          "channel": "dirty",
+          "amp": 0.1,
+          "freq": 5000,
+          "volume": 1,
+          "tone": 0.5,
+          "gain": 0.5,
+          "ceiling_V": null
+        },
+        "error": "90 second wall bound; no completed result",
+        "elapsed_s": 90.00516645800008
+      },
+      "wall_limit_s": 300,
+      "final_status": "completed",
+      "elapsed_s": 142.126995333,
+      "unchanged_deck_sha256": "1b3da8184ee21e615f818f4b59d7b4b8f973ef40912390dcdbaa4e1798fafd65"
+    },
+    {
+      "id": "dirty-treble-10",
+      "prior_result": {
+        "status": "timeout",
+        "case": {
+          "id": "dirty-treble-10",
+          "scenario": "dirty-treble",
+          "channel": "dirty",
+          "amp": 0.1,
+          "freq": 5000,
+          "volume": 1,
+          "tone": 0.5,
+          "gain": 0.5,
+          "ceiling_V": 10
+        },
+        "error": "90 second wall bound; no completed result",
+        "elapsed_s": 90.00515754100002
+      },
+      "wall_limit_s": 300,
+      "final_status": "completed",
+      "elapsed_s": 147.045958167,
+      "unchanged_deck_sha256": "ae90c89b948e0e452c19cb6edd4b90ab37bc82e0e9804a3df2c8476b46f66711"
+    },
+    {
+      "id": "dirty-treble-12",
+      "prior_result": {
+        "status": "timeout",
+        "case": {
+          "id": "dirty-treble-12",
+          "scenario": "dirty-treble",
+          "channel": "dirty",
+          "amp": 0.1,
+          "freq": 5000,
+          "volume": 1,
+          "tone": 0.5,
+          "gain": 0.5,
+          "ceiling_V": 12
+        },
+        "error": "90 second wall bound; no completed result",
+        "elapsed_s": 90.00507500000003
+      },
+      "wall_limit_s": 300,
+      "final_status": "completed",
+      "elapsed_s": 131.84870379200004,
+      "unchanged_deck_sha256": "28848e0eafdf98bafa228dd531bfd243c35ebe92b4367b1118353562fd5d59c4"
+    }
+  ],
+  "retry_factory_sha256": "ed23ff7949e4201c68ebd3d6e74cf82b211338619f2d59abca3b779ebf9c09f8",
+  "worker_sha256": "ef1dea3ba448fe20d1f4074359a3b46446ae731b14395367e640c3fb9ae7c2d8",
+  "scope": "Only wall allowance changed; same worker, deck, measurement and numeric settings"
+}

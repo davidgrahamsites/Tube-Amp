@@ -1,0 +1,286 @@
+{
+  "cases": [
+    {
+      "status": "completed",
+      "case": {
+        "id": "clean-bass-unlimited-fine",
+        "scenario": "clean-bass",
+        "channel": "clean",
+        "amp": 0.1,
+        "freq": 82.4,
+        "volume": 1,
+        "tone": 0.5,
+        "gain": 0.5,
+        "ceiling_V": null,
+        "refinement": 2
+      },
+      "end_s": 0.5,
+      "step_s": 1e-05,
+      "signals": {
+        "FX_SEND": {
+          "min_V": -71.89350402784537,
+          "max_V": 67.46099061005245,
+          "mean_V": 0.000753054097299355,
+          "fundamental_Vpk": 70.01708296504994,
+          "THD_2_to_10_percent": 3.1228079016949644
+        },
+        "BUF_OUT": {
+          "min_V": -71.89350402784537,
+          "max_V": 67.46099061005245,
+          "mean_V": 0.000753054097299355,
+          "fundamental_Vpk": 70.01708296504994,
+          "THD_2_to_10_percent": 3.1228079016949644
+        },
+        "FX_RETURN": {
+          "min_V": -71.69546471345721,
+          "max_V": 67.23177080006617,
+          "mean_V": 0.0007228185348054694,
+          "fundamental_Vpk": 69.81397534690748,
+          "THD_2_to_10_percent": 3.150076380803783
+        },
+        "MIX_OUT": {
+          "min_V": -58.42230270885916,
+          "max_V": 51.17307625917737,
+          "mean_V": -0.0015417937657089098,
+          "fundamental_Vpk": 55.86529115321414,
+          "THD_2_to_10_percent": 7.3875866872841405
+        },
+        "SEND_IN": {
+          "min_V": -6.51611053010613,
+          "max_V": 6.1132110066215555,
+          "mean_V": 0.0007589435683483137,
+          "fundamental_Vpk": 6.345767714339775,
+          "THD_2_to_10_percent": 3.150245732022957
+        },
+        "PI_G1": {
+          "min_V": 18.022198528685035,
+          "max_V": 124.12508218940586,
+          "mean_V": 75.57790747544536,
+          "fundamental_Vpk": 54.78472511778565,
+          "THD_2_to_10_percent": 8.239019674815097
+        },
+        "SPEAKER": {
+          "min_V": -20.81716289209031,
+          "max_V": 22.71083130976445,
+          "mean_V": 0.002639453698886651,
+          "fundamental_Vpk": 21.766829597919195,
+          "THD_2_to_10_percent": 41.92995313235559
+        }
+      },
+      "settling_relative": {
+        "FX_SEND": 7.57737669414576e-06,
+        "BUF_OUT": 7.57737669414576e-06,
+        "FX_RETURN": 8.702860450501302e-06,
+        "MIX_OUT": 0.0001502772448996164,
+        "SEND_IN": 1.8746724852304525e-05,
+        "PI_G1": 0.00013120684737253835,
+        "SPEAKER": 0.00024700294470181197
+      },
+      "clipped_fraction": 0,
+      "fundamental_load_W": 29.612179421553193,
+      "deck_sha256": "d6dd5250bb2c11405696da09d108d31906bf880efd0f9aa08d3ea0c4005a914c",
+      "waveform_sha256": "fd36cf80b8632bf2a881ad330c073ae28de43d757be814a87c2bf55cf450475d",
+      "elapsed_s": 5.913746375
+    },
+    {
+      "status": "completed",
+      "case": {
+        "id": "clean-bass-10-fine",
+        "scenario": "clean-bass",
+        "channel": "clean",
+        "amp": 0.1,
+        "freq": 82.4,
+        "volume": 1,
+        "tone": 0.5,
+        "gain": 0.5,
+        "ceiling_V": 10,
+        "refinement": 2
+      },
+      "end_s": 0.5,
+      "step_s": 1e-05,
+      "signals": {
+        "FX_SEND": {
+          "min_V": -71.89327174825394,
+          "max_V": 67.46097451922716,
+          "mean_V": 0.0007575573352159637,
+          "fundamental_Vpk": 70.01709583401593,
+          "THD_2_to_10_percent": 3.1228230393115983
+        },
+        "BUF_OUT": {
+          "min_V": -10.0,
+          "max_V": 10.0,
+          "mean_V": 0.185457945417047,
+          "fundamental_Vpk": 12.684799983320712,
+          "THD_2_to_10_percent": 40.22380727550319
+        },
+        "FX_RETURN": {
+          "min_V": -9.979289267912995,
+          "max_V": 9.978227708666425,
+          "mean_V": 0.1853177935459298,
+          "fundamental_Vpk": 12.656192838635436,
+          "THD_2_to_10_percent": 40.22116698581122
+        },
+        "MIX_OUT": {
+          "min_V": -8.809563130736242,
+          "max_V": 8.671464259367777,
+          "mean_V": 0.17131582086796798,
+          "fundamental_Vpk": 10.946721826896601,
+          "THD_2_to_10_percent": 39.92118484648376
+        },
+        "SEND_IN": {
+          "min_V": -0.9458096926077079,
+          "max_V": 0.9127785202113353,
+          "mean_V": 1.3521410254374588e-05,
+          "fundamental_Vpk": 1.1503884691482387,
+          "THD_2_to_10_percent": 40.22677656969559
+        },
+        "PI_G1": {
+          "min_V": 75.33954022119588,
+          "max_V": 93.12041736991952,
+          "mean_V": 84.29793120146898,
+          "fundamental_Vpk": 10.807800888726236,
+          "THD_2_to_10_percent": 40.357842960415404
+        },
+        "SPEAKER": {
+          "min_V": -21.909122573863954,
+          "max_V": 21.832522707518244,
+          "mean_V": 0.0019868946810765566,
+          "fundamental_Vpk": 22.488732428862665,
+          "THD_2_to_10_percent": 34.20313611850231
+        }
+      },
+      "settling_relative": {
+        "FX_SEND": 8.0072010468388e-06,
+        "BUF_OUT": 1.828966846676614e-06,
+        "FX_RETURN": 2.610677454491444e-06,
+        "MIX_OUT": 9.249190771891869e-05,
+        "SEND_IN": 7.065940840992417e-07,
+        "PI_G1": 1.1923985588658513e-05,
+        "SPEAKER": 0.00010275153823898785
+      },
+      "clipped_fraction": 0.91015625,
+      "fundamental_load_W": 31.608942891061204,
+      "deck_sha256": "ad4fed476cf011f7d07463cee37f947510cb074644384251ababedb6fae77410",
+      "waveform_sha256": "6fcd85bd7edbcede0e89772d8f0d3efb80e6d72db68f1ac9cb39f2cbeb176081",
+      "elapsed_s": 6.098232457999999
+    },
+    {
+      "status": "completed",
+      "case": {
+        "id": "clean-bass-12-fine",
+        "scenario": "clean-bass",
+        "channel": "clean",
+        "amp": 0.1,
+        "freq": 82.4,
+        "volume": 1,
+        "tone": 0.5,
+        "gain": 0.5,
+        "ceiling_V": 12,
+        "refinement": 2
+      },
+      "end_s": 0.5,
+      "step_s": 1e-05,
+      "signals": {
+        "FX_SEND": {
+          "min_V": -71.89342507899516,
+          "max_V": 67.46101140657932,
+          "mean_V": 0.0007579809894938449,
+          "fundamental_Vpk": 70.01709223487255,
+          "THD_2_to_10_percent": 3.122811457266304
+        },
+        "BUF_OUT": {
+          "min_V": -12.0,
+          "max_V": 12.0,
+          "mean_V": 0.22209608750672216,
+          "fundamental_Vpk": 15.199551717224455,
+          "THD_2_to_10_percent": 39.1277407521055
+        },
+        "FX_RETURN": {
+          "min_V": -11.974519347971164,
+          "max_V": 11.973128696512125,
+          "mean_V": 0.221946778346456,
+          "fundamental_Vpk": 15.16458343225429,
+          "THD_2_to_10_percent": 39.125046998368795
+        },
+        "MIX_OUT": {
+          "min_V": -10.508405065486945,
+          "max_V": 10.338805352001732,
+          "mean_V": 0.20706683765606915,
+          "fundamental_Vpk": 13.047064592843673,
+          "THD_2_to_10_percent": 38.817786508178784
+        },
+        "SEND_IN": {
+          "min_V": -1.1343826552205534,
+          "max_V": 1.0948717736432845,
+          "mean_V": 5.109256820607366e-05,
+          "fundamental_Vpk": 1.3783883239792907,
+          "THD_2_to_10_percent": 39.13048235122215
+        },
+        "PI_G1": {
+          "min_V": 75.74195616239551,
+          "max_V": 97.1013266665982,
+          "mean_V": 86.52010911252572,
+          "fundamental_Vpk": 12.88739079333182,
+          "THD_2_to_10_percent": 39.22142904159109
+        },
+        "SPEAKER": {
+          "min_V": -22.075970082172788,
+          "max_V": 21.765446042154764,
+          "mean_V": -0.000326141010471126,
+          "fundamental_Vpk": 22.74658882508592,
+          "THD_2_to_10_percent": 35.84114550797534
+        }
+      },
+      "settling_relative": {
+        "FX_SEND": 6.574092310251143e-06,
+        "BUF_OUT": 1.950679793606481e-06,
+        "FX_RETURN": 1.119620107102314e-06,
+        "MIX_OUT": 9.59619216084236e-05,
+        "SEND_IN": 2.540377839496667e-06,
+        "PI_G1": 1.7997913723003507e-05,
+        "SPEAKER": 0.00011505664690577464
+      },
+      "clipped_fraction": 0.89453125,
+      "fundamental_load_W": 32.33795644859522,
+      "deck_sha256": "d0d9fe2de52f470cd2a578c937958d1fc3dde9ceaaab995c0c75ffa2416d01a6",
+      "waveform_sha256": "57d7e09199f9a73dfd036789e7af153a2f1de15779f6fe2e7582216726c2a0cb",
+      "elapsed_s": 6.256558791
+    }
+  ],
+  "source_sha256": {
+    "engineering/whole-amp/reverb-600/circuit.json": "c604d3bbbe9334188f6aa6b799b980d4c87de91ba63fb8f50146dbde4991b8e1",
+    "engineering/whole-amp/reverb-600/cad/02_dirty.kicad_sch": "b8c8bc3192cb8626ad893eb323ef44a2aa8b0297c3a9dd247559c5ed7b129774",
+    "engineering/whole-amp/reverb-600/cad/05b_bias_reverb_supply.kicad_sch": "a02659b6fb93079eb06705580cefecffb0b8d13682ae12354b0a7002cf4a8513",
+    "engineering/whole-amp/reverb-600/cad/07b_reverb_recovery.kicad_sch": "aa49f0ae095da0c3de41372296b5349ddc5c0b21c5dd0ec88866e3b9c73d92bb",
+    "engineering/whole-amp/reverb-600/cad/Renegade_220V_Reverb.kicad_sch": "88c5b4d1389c74b74faf11ed053af4e4a0f2cd285b99abf78d45f1bcafbf29da",
+    "engineering/whole-amp/reverb-600/cad/03_routing.kicad_sch": "845c199d1ba0d822f13e3edeb5c131db81e3199dca35a75b2f0c68258485e7aa",
+    "engineering/whole-amp/reverb-600/cad/02b_dirty_tone.kicad_sch": "1987279a558a68fda187cbc5028d67d1256472d0fed5892c70f6936ce380321f",
+    "engineering/whole-amp/reverb-600/cad/09b_latches_drivers.kicad_sch": "49197628a255bbd034f3fdc9fc63dabbcef156f802245f46caeacbc3bf2e049d",
+    "engineering/whole-amp/reverb-600/cad/05_supplies.kicad_sch": "f1ff8d0b66c3827d285e02bd4920c472d34aff096d453d755da4ae727e045c45",
+    "engineering/whole-amp/reverb-600/cad/09_controller.kicad_sch": "7d3645b075e50741bb69b7690a630df0f2df7b2b7de3194d4c1c52b1a3747d7c",
+    "engineering/whole-amp/reverb-600/cad/04_output.kicad_sch": "3fec27dc2d082dbdd12fbfbff195a3adcee6880485edec06adb807e0ecaee944",
+    "engineering/whole-amp/reverb-600/cad/04b_output_transformer.kicad_sch": "f7f9b036693bf01258414722be0becf19c413d7fe422df83272d99d97c82e518",
+    "engineering/whole-amp/reverb-600/cad/08_control_supply.kicad_sch": "89d62bee6b2b14032fed9acffa397e3ba9a2e160a28238d8878a3a7370a18705",
+    "engineering/whole-amp/reverb-600/cad/01_clean.kicad_sch": "17c5a20300546c04f3cfa1bc0dd674d11e07e5dc08874ac0156d6313b5381b43",
+    "engineering/whole-amp/reverb-600/cad/07c_reverb_output.kicad_sch": "03b4247d3391eee516359c2a60d9797d55294fa5f04d25b43bfbb48cd80c72dd",
+    "engineering/whole-amp/reverb-600/cad/07d_reverb_harness.kicad_sch": "d71bd6e68e8fa2c52e73375762af8fbfda24cc7f8eadf8796c0bc0a71c5879dc",
+    "engineering/whole-amp/reverb-600/cad/07a_reverb_send.kicad_sch": "9d1f04992431cba425ae5c6d565e82ae1525bc224ccc63fda2543f6be66056d8",
+    "engineering/whole-amp/reverb-600/cad/10_logic_power.kicad_sch": "16534078ff00c95265f1c8ae63dd2dbaf9c369a70943fa2acb1bd20739cd53eb",
+    "engineering/whole-amp/reverb-600/cad/06_heaters.kicad_sch": "f99c9f7ab06a7f3c6594ecdc9b4587834542d4c5005cbcdb1c415303edd19b29",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Main.kicad_pcb": "b97844b51aed2b7e99e142902bc5c12d6b35d96a2dd5afd7667dd2e879dc4bc6",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Control.kicad_pcb": "f58159d0651ed558b38064a48e60de965ecd72550732b60473f101cb88796b3d",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Power.kicad_pcb": "3ff2b701ece8ab2c7d7aca8da45cfdc4fc36fce1f9fda4b063c876e52c176788",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "cc9a6b88d6d175499e31275d1f2ffa9b2546e4ef6fcd2e8d97c6749c2c0fc9df",
+    "engineering/whole-amp/effects-loop/tools/fixture.py": "10ea514a6a49c35f4c2e3d4766da725b5a0befccb38d2c89d4f7d96d42585cd5",
+    "engineering/whole-amp/effects-loop/tools/run.py": "f088be4dd24b15274487e0be674f4a54d00d2cdd45a1c7e41735950cb015c668",
+    "engineering/whole-amp/effects-loop/tools/feedback_model.py": "798acb4cd6b78502971868d564b0280c6be8aec6205f3fe3312e9c2b5fc0d553",
+    "engineering/whole-amp/effects-loop/tools/loaded_feedback_model.py": "3843010b9ff006893137760cdddfaac02402c8671a5068ff9b4c15b7e995e736",
+    "engineering/whole-amp/effects-loop/tools/transformer_model.py": "bcb01c87ac723294e92eebc4f138ed3296a5d9841b341447c6db6f6a6853f0b1",
+    "engineering/whole-amp/simulation/models/dm12ax7s.inc": "ffa293249bd62b4d1d0b710b4bd42177221325d9533ddad8f0fa88dcecb0e7f6",
+    "engineering/whole-amp/simulation/models/6ca7s.inc": "02768bad91f6497d718e33c09493b8d471c6c3aafee92fb226b5c3376c068b01"
+  },
+  "contract_sha256": "04fc8748811bbdeee68f1774e697fb5376db7d3921376c57909e5b27b51d2bde",
+  "factory_sha256": "ef1dea3ba448fe20d1f4074359a3b46446ae731b14395367e640c3fb9ae7c2d8",
+  "adopted": false,
+  "hardware_qualified": false
+}
