@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test equipment and requirements export</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Test equipment and requirements export</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · Bench planning · Requirements published; no physical test claimed</p>
+      </header>
+
+      <section>
+        <h2>Why the guide was added</h2>
+        <p>The project needs equipment requirements tied to actual test articles. The new HTML guide stages equipment by test and records capability, evidence, and safety limits. It is not a purchasing list of approved models or an energizing procedure.</p>
+        <p>The canonical reader page and self-contained export carry the same guide. Both include a vocabulary key and KaTeX measurement equations. No equipment model or seller is approved, and no physical test result is claimed.</p>
+      </section>
+
+      <section>
+        <h2>Equipment follows the test article</h2>
+        <table>
+          <thead><tr><th>Test article</th><th>Equipment requirement</th><th>Limit</th></tr></thead>
+          <tbody>
+            <tr><td>HD-012 monitor fixture</td><td>Current-limited low-voltage DC supply, 0–3 V adjustable sense source, and two-channel scope; four channels preferred. Fit the exact comparator, reference, shunt regulator, optocouplers, resistors, and socket adapters.</td><td>Keep mains, tube supply, and high-voltage pass parts disconnected. Define ramp, current, timing, and acceptance limits before crediting a test.</td></tr>
+            <tr><td>Actual reverb tank</td><td>LCR meter or impedance analyzer that covers the tank's frequency and safe drive range, or a separately checked two-channel fixture.</td><td>The seller states 600 Ω input and 2,250 Ω output. The standard REW soundcard method covers only up to a few hundred ohms. Do not assume it qualifies this tank.</td></tr>
+            <tr><td>Powered amplifier</td><td>Actual tubes, transformers, supply loads, signal source, correctly matched non-inductive dummy load, and rated probes.</td><td>Output power, clipping, stability, rail, heat, and safety tests need separate acceptance limits and suitable protection.</td></tr>
+          </tbody>
+        </table>
+        <p>The available DT9205A meter is listed as on hand. Its condition, lead condition, accuracy, and voltage-category suitability are unverified. The guide does not assign it to a high-voltage test.</p>
+      </section>
+
+      <section>
+        <h2>Records and current status</h2>
+        <p>Each test record must identify the test article, date, operator, exact parts, instrument and probe setup, calibration check, connection diagram, operating conditions, limits fixed before testing, raw readings, uncertainty, result, and any retest. This keeps a simulation, equipment capability, and physical measurement distinct.</p>
+        <p>The low-voltage monitor fixture is the first hardware test gate. It can check startup, reference, comparator outputs, trip, release, and interrupted power without the complete amplifier. It does not qualify full-supply overshoot, insulation, resistor heating, or fault interruption.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>Test article</dt>
+          <dd>The specific circuit, fixture, part, tank, or assembly being tested.</dd>
+          <dt>Current limit</dt>
+          <dd>A supply setting that restricts current during a test.</dd>
+          <dt>Oscilloscope</dt>
+          <dd>An instrument that records voltage against time.</dd>
+          <dt>Impedance</dt>
+          <dd>Opposition to alternating current, including its phase change.</dd>
+          <dt>Dummy load</dt>
+          <dd>A resistor assembly that absorbs amplifier output power in place of a speaker.</dd>
+          <dt>DRC</dt>
+          <dd>Design-rule check of a PCB layout.</dd>
+          <dt>Native adoption</dt>
+          <dd>Acceptance into the project's editable schematic or board files.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../engineering-reader/test-equipment.html">Canonical test-equipment guide</a> — staged equipment, test requirements, measurement records, and limits.</li>
+          <li><a href="../../engineering-reader/exports/test-equipment.html">Self-contained test-equipment export</a> — offline copy for review.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/reset-review.html">HD-012 reset and startup review</a> — source for the initial low-voltage fixture gate.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

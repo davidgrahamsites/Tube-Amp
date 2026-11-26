@@ -1763,3 +1763,15 @@ Source: engineering/whole-amp/harness-integration/results/pot-voltage-checks.jso
 - [engineering/whole-amp/harness-integration/results/pot-fault-probe.json](<../../engineering/whole-amp/harness-integration/results/pot-fault-probe.json>)
 - [docs/design-journal/chapters/pot-voltage-fault-screen.html](<../../docs/design-journal/chapters/pot-voltage-fault-screen.html>)
 
+## FB-167 — test-equipment-html-export
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> Export the test equipment and requirements to an HTML file
+
+Export a readable offline HTML guide mapping tests to actual parts, instrument capabilities, evidence and unresolved limits; retain KaTeX and vocabulary. No equipment order or energized test authorization.
+
+Source: Current amplifier conversation following physical-hardware clarification
+
+- [docs/engineering-reader/test-equipment.html](<../../docs/engineering-reader/test-equipment.html>)
+- [docs/engineering-reader/exports/test-equipment.html](<../../docs/engineering-reader/exports/test-equipment.html>)
+
