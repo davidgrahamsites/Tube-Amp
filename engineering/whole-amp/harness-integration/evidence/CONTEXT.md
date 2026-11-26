@@ -1,0 +1,2 @@
+# Connector drawing evidence
+Owner: harness integration. Inputs: manufacturer-authored drawings retrieved from distributor mirrors on 26 November 2026. Process: preserve source PDFs and identify revisions and hashes in ../mating-geometry.json; compare current manufacturer text and inspect rendered views. Outputs: source evidence only, not fabrication drawings. Human check: compare the delivered part and current manufacturer drawing before release; the archived header is revision G, not current H1.

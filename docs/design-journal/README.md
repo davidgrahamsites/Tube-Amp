@@ -22,6 +22,7 @@ Read each chapter alongside its linked validation record, review, contract, and 
 - [HD-010: large-signal setpoint comparison](chapters/preamp-setpoint-headroom.html) — paired 1 kHz models; no clean-power or supply-dynamics qualification.
 - [HD-011: monitor supply and fault hold](chapters/monitor-fault-hold.html) — 182 scoped evidence checks pass; engineering qualification remains false.
 - [HD-012: monitor reset floor and startup boundary](chapters/monitor-reset-floor.html) — reset range is positive in allocated endpoints; startup and hardware remain unqualified.
+- [HI-004: harness header datum and mated envelope](chapters/harness-mating-datum.html) — nominal geometry checks pass; no actual placement or assembled-fit approval.
 - [FB-143–145: capacitor-bank fit and tool access](chapters/capacitor-bank-and-driver-access.html) — standalone and combined five-pass reviews complete; no adoption.
 - [FB-146/147: lower power packaging and Alien Method](chapters/bottom-power-packaging.html) — four review cycles complete; no lower allocation adopted.
 - [FB-148: current power-packaging calculations](calculations/current-power-packaging.html) — step-by-step KaTeX-ready derivations; historical math remains to backfill.

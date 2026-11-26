@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harness header datum and mated envelope</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Harness header datum and mated envelope</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HI-004 · Nominal geometry checked; assembled fit remains open</p>
+      </header>
+
+      <section>
+        <h2>Question and source review</h2>
+        <p>HI-004 resolves the board-edge datum for the 4-circuit header and separates header clearance from the plugged-in harness envelope. It uses Molex drawing SD-43045-001 for header 430450402, whose geometry is shared with 430450400, and housing 430250400.</p>
+        <p>The downloaded header drawing is Rev G from LCSC. Its page 1 whole view and enlarged location detail were reviewed; page 2 duplicates page 1. The current manufacturer drawing is Rev H1. Only its text was checked. Common nominal dimensions and the edge note agree, but a full visual revision comparison remains open. The housing drawing is Rev A. Its whole sheet, housing-size table, and right-angle mated view were visually reviewed. The manufacturer's text shows the same revision.</p>
+      </section>
+
+      <section>
+        <h2>Edge datum and placement limit</h2>
+        <p>The 10.16 mm maximum is measured along the insertion axis from the mating-side PCB edge to the locator-peg centre. It is not measured from the header face or signal-pin row. In the installed footprint coordinates, the peg centre is at <span class="math">\(y=-4.32\;\mathrm{mm}\)</span>. Therefore the mating-side edge must satisfy the relation below. This is a necessary placement limit only. The board edge must not cut through the locator peg.</p>
+        <div class="math">\[y_{edge}\ge y_{peg}-10.16\;\mathrm{mm}=-4.32\;\mathrm{mm}-10.16\;\mathrm{mm}=-14.48\;\mathrm{mm}\]</div>
+        <p>Six library geometry comparisons and four edge-control checks pass. The checks compare the peg, front, rear and stepped width with the library, compare the edge limit with the contract, and identify the mate extension. They do not check a mating connector on any board. The native board hashes are preserved; zero actual placements were checked.</p>
+      </section>
+
+      <section>
+        <h2>Why the header footprint is not enough</h2>
+        <p>The header front face is at <span class="math">\(y=-8.92\;\mathrm{mm}\)</span>; its rear body is at <span class="math">\(y=0.99\;\mathrm{mm}\)</span>. The mated wire-exit face is at <span class="math">\(y=-16.57\;\mathrm{mm}\)</span>. It extends 7.65 mm beyond the header front face. At the limiting edge position, that nominal exit face lies 2.09 mm past the board edge. This is a rigid-body comparison, not a clearance approval.</p>
+        <div class="math">\[L_{extension}=|-16.57-(-8.92)|=7.65\;\mathrm{mm}\]</div>
+        <div class="math">\[d_{past-edge}=|-16.57-(-14.48)|=2.09\;\mathrm{mm}\]</div>
+        <p>The family right-angle mated drawing gives 17.56 mm axial length and 10.81 mm height. The axial length runs from the wire-exit face to the header rear body. The drawing also calls out 11.0 mm latching height. The values do not include wire bend radius, withdrawal stroke, or finger access. No top pull tab is available.</p>
+        <p>A matching footprint or courtyard checks only the header body and its board interface. It does not reserve space for the housing, latch, harness bend, unplugging motion, fingers, or nearby chassis parts. The current nominal drawing comparison cannot establish service access or assembled fit.</p>
+      </section>
+
+      <section>
+        <h2>Status and required checks</h2>
+        <p>No board placement or native change was made. Full tolerance-envelope qualification, a visual Rev H1 comparison, mating-face harness numbering, wire bend radius, withdrawal stroke, finger access, exact revision confirmation, and populated-assembly fit remain open. Header pin maximum section, finished-hole capability, and electrical insulation remain separate checks.</p>
+        <p>Before fit approval, confirm exact part revisions and cavity markings. Mate an insulated sample harness in the populated assembly. Measure latch access, wire bend, withdrawal, and nearby clearances. Record the measurement method and actual part markings. The 10.16 mm edge limit alone is not fit approval.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>Locator peg</dt>
+          <dd>A molded post that locates the header housing on the board. Keep it intact.</dd>
+          <dt>Mating-side edge</dt>
+          <dd>The board edge nearest the connector insertion direction.</dd>
+          <dt>Mated envelope</dt>
+          <dd>The combined nominal dimensions of the header and plugged-in housing.</dd>
+          <dt>Wire-exit face</dt>
+          <dd>The face where the wires leave the right-angle housing.</dd>
+          <dt>Courtyard</dt>
+          <dd>A PCB layout outline used to reserve nominal component space. It does not include service access unless separately defined.</dd>
+          <dt>Withdrawal stroke</dt>
+          <dd>The free travel needed to unplug the housing from the header.</dd>
+          <dt>Finished-hole capability</dt>
+          <dd>The achievable diameter and tolerance of a plated PCB hole after manufacture.</dd>
+          <dt>Native board</dt>
+          <dd>The project's editable PCB design, distinct from a drawing or simulation.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/whole-amp/harness-integration/mating-geometry.json">HI-004 geometry contract</a> — dimensions, coordinate system, revisions, and unresolved fit limits.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/mating-geometry-checks.json">HI-004 geometry checks</a> — six library comparisons, four edge controls, native hashes, and zero actual placements.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/mating-geometry.svg">Nominal rigid-body drawing</a> — header and mated-family envelope.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/evidence/molex-header-rev-g.pdf">Molex 430450402 header, Rev G</a> — downloaded drawing, visually reviewed at the stated views.</li>
+          <li><a href="https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/430/43045/430450400_sd.pdf">Molex 430450400 header, Rev H1</a> — current manufacturer drawing; text checked only.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/evidence/molex-housing-rev-a.pdf">Molex 430250400 housing, Rev A</a> — downloaded drawing, visually reviewed at the stated views.</li>
+          <li><a href="https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/430/43025/430250400_sd.pdf">Molex 430250400 current manufacturer drawing</a> — the manufacturer text reports Rev A.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/mating-review.html">HI-004 engineering review</a> — drawing review, geometry, checks, and next actions.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/connector-contract.json">Harness connector contract</a> — interface assumptions and separate electrical/board gates.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,91 @@
+{
+  "id": "HI-004",
+  "owner": "harness-integration",
+  "date": "2026-11-26",
+  "baseline": "77e8cd592fbdc31103dadaa151b1f1bad18a742a",
+  "job": "Resolve header edge datum and mated-envelope distinction before connector placement",
+  "outputs": [
+    "results/mating-geometry-checks.json",
+    "results/mating-geometry.svg",
+    "mating-review.html"
+  ],
+  "done_condition": "Record visually checked source dimensions; compare installed footprint and derive edge constraint; reject header-only space as assembled fit; retain revision and extraction holds",
+  "effort": "One drawing and interface pass",
+  "native_adoption": false,
+  "sources": [
+    {
+      "file": "evidence/molex-header-rev-g.pdf",
+      "sha256": "312e79a8267f4c3a9634cceb05eb86d80389ccb3ae2711179719e5d34b60d5a4",
+      "document": "SD-43045-001",
+      "revision": "G",
+      "date": "2016-08-23",
+      "retrieved_from": "https://datasheet.lcsc.com/datasheet/pdf/bdf8b638d16decb674fc68f116af9d6b.pdf?productCode=C779799",
+      "visual_review": "Page 1 whole view and enlarged location detail; page 2 duplicates page 1",
+      "current_manufacturer_url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/430/43045/430450400_sd.pdf",
+      "current_revision": "H1",
+      "current_date": "2024-09-27",
+      "current_review": "Text only; common nominal dimensions and edge note agree. Full current visual revision comparison remains open."
+    },
+    {
+      "file": "evidence/molex-housing-rev-a.pdf",
+      "sha256": "3fa78847433b382fa07609fb9f44b5e8b017804b9b491250dc493eef9e029e28",
+      "document": "430250000-SD",
+      "revision": "A",
+      "date": "2018-06-01",
+      "retrieved_from": "https://www.qianhongda.cn/models/files/molex/43025-0400/430250400-sd.pdf",
+      "manufacturer_url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/430/43025/430250400_sd.pdf",
+      "visual_review": "Whole sheet, housing-size table and right-angle mated view; manufacturer text has same revision"
+    }
+  ],
+  "coordinates": {
+    "units": "mm",
+    "view": "PCB component side",
+    "origin": "installed library pad 1 centre",
+    "x": "toward pad 2",
+    "y": "toward pads 3 and 4; plug exits negative y",
+    "z": "above PCB component surface"
+  },
+  "header": {
+    "part": "430450402",
+    "shared_geometry_with": "430450400",
+    "body_A_nominal_mm": 9.65,
+    "side_step_each_nominal_mm": 0.25,
+    "front_to_peg_nominal_mm": 4.6,
+    "peg_y_mm": -4.32,
+    "front_to_rear_body_nominal_mm": 9.91,
+    "front_to_tail_extent_nominal_mm": 12.24,
+    "body_height_nominal_mm": 7.37,
+    "top_ramp_extra_nominal_mm": 1.4,
+    "tail_below_board_nominal_mm": 3.18,
+    "edge_to_peg_max_mm": 10.16,
+    "edge_datum": "Distance along insertion axis from mating-side PCB edge to locator peg centre, not header face or signal-pin row",
+    "recommended_board_thickness_mm": 1.57
+  },
+  "mate": {
+    "part": "430250400",
+    "four_circuit_A_nominal_mm": 6.85,
+    "A_tolerance_mm": [
+      -0.25,
+      0.35
+    ],
+    "four_circuit_height_reference_mm": 7.57,
+    "axial_length_reference_mm": 14.0,
+    "right_angle_mated_length_mm": 17.56,
+    "right_angle_mated_height_mm": 10.81,
+    "latching_height_callout_mm": 11.0,
+    "mated_dimension_scope": "Family right-angle mated illustration, wire-exit face to header rear body; no wire bend, withdrawal or finger space",
+    "top_pull_tab_available": false,
+    "first_circuit_mark": "Moulded rib or engraved 1; type tool-dependent"
+  },
+  "limits": {
+    "full_tolerance_envelope_qualified": false,
+    "header_current_revision_visual_comparison": false,
+    "mating_face_harness_numbering_qualified": false,
+    "wire_bend_radius_mm": null,
+    "withdrawal_stroke_mm": null,
+    "finger_access_mm": null,
+    "actual_board_placements": [],
+    "note": "Nominal rigid-body diagram only; never treat null service dimensions or an empty placement list as fit approval. Header pin maximum section, finished-hole capability and electrical insulation remain separate gates."
+  },
+  "human_check": "Check exact part revision, cavity markings, latch access and withdrawal with an insulated sample harness and populated assembly."
+}

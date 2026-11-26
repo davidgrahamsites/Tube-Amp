@@ -2455,6 +2455,24 @@
       ],
       "supersedes": [],
       "next_action": "Specify exact monitor/carrier parts and low-voltage startup fixture; retain full-supply ordering gate. Continue independent connector/socket and populated-fit work without freezing protection PCB."
+    },
+    {
+      "id": "FB-164",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "engineer",
+      "kind": "pot-connector-mating-datum",
+      "quote": "HI-004: include the mated connector and service space, not only the PCB header footprint.",
+      "source": "engineering/whole-amp/harness-integration/results/mating-geometry-checks.json",
+      "interpretation": "Archived manufacturer drawing visual review resolves 10.16mm edge-to-locator-peg datum. Nominal mate extends7.65mm beyond header face; six library comparisons and four edge controls pass. Current H1 visual/tolerance comparison and cable/latch/withdrawal qualification remain open. Zero native placements checked; no native change or fit release.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/harness-integration/mating-review.html",
+        "engineering/whole-amp/harness-integration/mating-geometry.json",
+        "docs/design-journal/chapters/harness-mating-datum.html"
+      ],
+      "supersedes": [],
+      "next_action": "Complete current-revision/tolerance and cavity-view review; select cable and reserve service space, then consume connector envelopes in populated board/chassis placement."
     }
   ]
 }

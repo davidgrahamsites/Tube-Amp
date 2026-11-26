@@ -1,0 +1,53 @@
+{
+  "id": "HI-004",
+  "inputs_sha256": {
+    "evidence/molex-header-rev-g.pdf": "312e79a8267f4c3a9634cceb05eb86d80389ccb3ae2711179719e5d34b60d5a4",
+    "evidence/molex-housing-rev-a.pdf": "3fa78847433b382fa07609fb9f44b5e8b017804b9b491250dc493eef9e029e28",
+    "mating-geometry.json": "cc6b5892b4f42fcc5246c734eef537f7440f4b965587035bebe6dc69c13ef377",
+    "connector-contract.json": "f3d904b57bb70fad5094e9e59fc3f99864ddf3512d1e19461f9958ef421c68f6",
+    "installed_footprint": "b0a5b9ae879fad87f0d4e2e9aaad172e945fb05057c1dd249af52bd3786e2b22",
+    "factory": "d4a998e10706fbdb89fc37f400b1a0dd6b395f99e7440fd71da80ae8c3e58cda"
+  },
+  "nominal_library_comparisons": {
+    "peg_y_matches_library": true,
+    "front_matches_library": true,
+    "rear_matches_library": true,
+    "stepped_width_matches_library": true,
+    "edge_limit_matches_contract": true,
+    "header_only_courtyard_not_mate": true
+  },
+  "edge_controls": {
+    "at_limit": true,
+    "one_micron_over_limit": false,
+    "edge_past_peg": false,
+    "incorrect_front_datum_example": false
+  },
+  "derived_mm": {
+    "header_front_y": -8.92,
+    "header_rear_y": 0.99,
+    "header_stepped_width": 10.15,
+    "mate_wire_exit_y": -16.57,
+    "mate_extension_beyond_header_front": 7.65,
+    "mating_side_edge_minimum_y": -14.48
+  },
+  "native_board_sha256": {
+    "pcb-measured-r/boards/Renegade_Control.kicad_pcb": "f58159d0651ed558b38064a48e60de965ecd72550732b60473f101cb88796b3d",
+    "pcb-measured-r/boards/Renegade_Main.kicad_pcb": "120d8e04debbf44825e4c64ea36a5d607ee571d75628cad43eddbc1d60944278",
+    "pcb-measured-r/boards/Renegade_Power.kicad_pcb": "95f5f1df46ee101253188b29496e63da45930dd524caf379a8b83b391c509b8a",
+    "pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "fa4ac0cbd3ced9b9e0758001c0f2cd488ded0953d3e2fd30025a6d57cc70da3d"
+  },
+  "actual_placements_checked": 0,
+  "evidence_checks_pass": true,
+  "assembled_fit_qualified": false,
+  "native_adoption": false,
+  "unresolved": {
+    "full_tolerance_envelope_qualified": false,
+    "header_current_revision_visual_comparison": false,
+    "mating_face_harness_numbering_qualified": false,
+    "wire_bend_radius_mm": null,
+    "withdrawal_stroke_mm": null,
+    "finger_access_mm": null,
+    "actual_board_placements": [],
+    "note": "Nominal rigid-body diagram only; never treat null service dimensions or an empty placement list as fit approval. Header pin maximum section, finished-hole capability and electrical insulation remain separate gates."
+  }
+}

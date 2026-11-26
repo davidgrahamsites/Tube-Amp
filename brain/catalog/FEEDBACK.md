@@ -1723,3 +1723,16 @@ Source: engineering/component-selection/heater-divider-rating/results/reset-chec
 - [engineering/component-selection/heater-divider-rating/reset-review.html](<../../engineering/component-selection/heater-divider-rating/reset-review.html>)
 - [docs/design-journal/chapters/monitor-reset-floor.html](<../../docs/design-journal/chapters/monitor-reset-floor.html>)
 
+## FB-164 — pot-connector-mating-datum
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HI-004: include the mated connector and service space, not only the PCB header footprint.
+
+Archived manufacturer drawing visual review resolves 10.16mm edge-to-locator-peg datum. Nominal mate extends7.65mm beyond header face; six library comparisons and four edge controls pass. Current H1 visual/tolerance comparison and cable/latch/withdrawal qualification remain open. Zero native placements checked; no native change or fit release.
+
+Source: engineering/whole-amp/harness-integration/results/mating-geometry-checks.json
+
+- [engineering/whole-amp/harness-integration/mating-review.html](<../../engineering/whole-amp/harness-integration/mating-review.html>)
+- [engineering/whole-amp/harness-integration/mating-geometry.json](<../../engineering/whole-amp/harness-integration/mating-geometry.json>)
+- [docs/design-journal/chapters/harness-mating-datum.html](<../../docs/design-journal/chapters/harness-mating-datum.html>)
+
