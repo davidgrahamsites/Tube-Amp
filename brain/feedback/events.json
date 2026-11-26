@@ -2473,6 +2473,24 @@
       ],
       "supersedes": [],
       "next_action": "Complete current-revision/tolerance and cavity-view review; select cable and reserve service space, then consume connector envelopes in populated board/chassis placement."
+    },
+    {
+      "id": "FB-165",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "engineer",
+      "kind": "pot-harness-wire-restraint-space",
+      "quote": "HI-005: reserve relaxed wire behind each pot plug before ties, twisting or forced bends.",
+      "source": "engineering/whole-amp/harness-integration/results/wire-dressing-checks.json",
+      "interpretation": "Manufacturer text recommends 12.70 mm of relaxed wire for 2\u20138 circuits. The straight-exit planning reserve places the nearest restraint edge at local y <= -29.27 mm, 20.35 mm beyond the header front. Ten interfaces and eight boundary controls are exported; no actual placement is checked. The source illustration, cable, bends, latch and withdrawal remain unqualified. No native adoption or fit release.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/harness-integration/wire-dressing-review.html",
+        "engineering/whole-amp/harness-integration/wire-dressing.json",
+        "docs/design-journal/chapters/pot-harness-wire-reserve.html"
+      ],
+      "supersedes": [],
+      "next_action": "Complete per-pot voltage/fault review and current drawing comparison, then populated placement using mated and relaxed-wire constraints; qualify bends, latch, extraction and drill access."
     }
   ]
 }

@@ -1736,3 +1736,16 @@ Source: engineering/whole-amp/harness-integration/results/mating-geometry-checks
 - [engineering/whole-amp/harness-integration/mating-geometry.json](<../../engineering/whole-amp/harness-integration/mating-geometry.json>)
 - [docs/design-journal/chapters/harness-mating-datum.html](<../../docs/design-journal/chapters/harness-mating-datum.html>)
 
+## FB-165 — pot-harness-wire-restraint-space
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HI-005: reserve relaxed wire behind each pot plug before ties, twisting or forced bends.
+
+Manufacturer text recommends 12.70 mm of relaxed wire for 2–8 circuits. The straight-exit planning reserve places the nearest restraint edge at local y <= -29.27 mm, 20.35 mm beyond the header front. Ten interfaces and eight boundary controls are exported; no actual placement is checked. The source illustration, cable, bends, latch and withdrawal remain unqualified. No native adoption or fit release.
+
+Source: engineering/whole-amp/harness-integration/results/wire-dressing-checks.json
+
+- [engineering/whole-amp/harness-integration/wire-dressing-review.html](<../../engineering/whole-amp/harness-integration/wire-dressing-review.html>)
+- [engineering/whole-amp/harness-integration/wire-dressing.json](<../../engineering/whole-amp/harness-integration/wire-dressing.json>)
+- [docs/design-journal/chapters/pot-harness-wire-reserve.html](<../../docs/design-journal/chapters/pot-harness-wire-reserve.html>)
+

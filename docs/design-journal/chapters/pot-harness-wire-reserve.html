@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pot harness wire reserve and service slack</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Pot harness wire reserve and service slack</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HI-005 · Placement reserve defined; fit and cable choice remain open</p>
+      </header>
+
+      <section>
+        <h2>Why reserve wire before placement</h2>
+        <p>A clear header footprint does not protect the wires from a tie or forced bend at the housing. Such loading can pull on the contacts. HI-005 exports a straight wire reserve behind each of ten candidate pot plugs: nine Main interfaces and one Reverb interface. This is a placement constraint only. No connector moved and no native change was made.</p>
+        <p>Molex PS-43045 Rev R recommends 12.70 mm of relaxed wire for connectors with two to eight circuits. The manufacturer PDF text was checked. Its dimension illustration was not visually verified because the download timed out. Wire gauge, construction, and insulation can require a different allowance.</p>
+      </section>
+
+      <section>
+        <h2>Nominal axial calculation</h2>
+        <p>Use the HI-004 wire-exit face at <span class="math">\(y=-16.57\;\mathrm{mm}\)</span> and reserve 12.70 mm in the negative-y direction. The restraint boundary is the nearest edge of a tie, clamp, or forced bend. Do not measure to its centre.</p>
+        <div class="math">\[y_{restraint}\leq y_{exit}-L_{free}=-16.57\;\mathrm{mm}-12.70\;\mathrm{mm}=-29.27\;\mathrm{mm}\]</div>
+        <p>This puts the nominal boundary 20.35 mm ahead of the header front and 30.26 mm ahead of its rear body:</p>
+        <div class="math">\[D_{front}=(-8.92)-(-29.27)=20.35\;\mathrm{mm},\qquad D_{rear}=0.99-(-29.27)=30.26\;\mathrm{mm}\]</div>
+        <p>The 20.35 mm front distance contains the 7.65 mm mated-housing extension plus 12.70 mm relaxed-wire reserve. For example, a 2 mm wide tie centered on the boundary puts its nearest edge 1 mm inside the reserve. Measure to that edge, not to the tie centre. These are nominal planning distances. They are not an approved cable length, enclosure size, or three-dimensional clearance envelope.</p>
+      </section>
+
+      <section>
+        <h2>Keep separate service checks</h2>
+        <p>Keep ties, twists, and forced bends outside the 12.70 mm reserve. The reserve does not specify the wire's bend radius. Check the selected wire, insulation, and routing separately. It also does not provide latch access, finger space, or the movement needed to unplug the housing.</p>
+        <p>The restraint check covers ten interfaces and eight boundary/invalid-input controls. The controls pass, including rejection of a tie located by its centre. Four board hashes are retained. Actual placements checked: zero. Populated fit is not qualified. The source keeps bend radius, withdrawal stroke, and finger access unset.</p>
+      </section>
+
+      <section>
+        <h2>Service slack can affect treble</h2>
+        <p>The 12.70 mm reserve adds physical wire to the connector service area. HI-003 found that hypothetical cable capacitance can change treble at high-impedance nodes. In that bounded screen, 1 pF to ground per lead with 0.5 pF mutual capacitance kept all 36 sampled settings within 1 dB. At 3 pF and 1.5 pF, all 36 remained within the proposed budget, but the largest change was 0.997 dB. At 5 pF and 2.5 pF, only 24 of 36 remained within the budget. The 1 dB limit is an engineering screen, not a user-approved product requirement.</p>
+        <p>HI-003 did not convert capacitance to cable length. The proposed wire has no installed capacitance matrix, and the experiment omitted cable resistance, inductance, and cross-harness coupling. The service reserve therefore cannot be treated as an arbitrary long loop. Route the shortest practical complete path that preserves contact strain relief, then test its actual capacitance and audio effect. Do not remove the reserve by forcing a bend against the housing.</p>
+        <p>At 100 pF per lead and 50 pF between leads, the midpoint-setting screen reported 20 kHz changes of −7.66 dB for RV1 clean treble, −4.95 dB for RV5 dirty treble, and −6.72 dB for RV8 master. These are hypothetical model results, not measurements of a selected cable. They show why wire length and service routing need joint mechanical and electrical review.</p>
+      </section>
+
+      <section>
+        <h2>Status and next checks</h2>
+        <p>The 12.70 mm straight-exit reserve is an engineering placement assumption based on manufacturer text. The source illustration, exact cable, crimps, full tolerances, bend radius, latch access, withdrawal, and populated fit remain open. No restraint, cable, or connector placement is approved.</p>
+        <p>Before placement freeze, verify the current connector drawing and exact parts. Select and qualify the wire and crimps. Measure the wire bend and service path in the populated assembly. Check the plug latch, unplugging stroke, chassis extraction, and rear-cover removal. Then model the selected cable's capacitance at sensitive pot nodes.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>Relaxed wire</dt>
+          <dd>Wire kept free of force that can shift contacts in the housing.</dd>
+          <dt>Restraint</dt>
+          <dd>A tie, clamp, or other feature that limits wire movement.</dd>
+          <dt>Service slack</dt>
+          <dd>Wire length reserved to permit assembly and service without pulling on contacts.</dd>
+          <dt>Bend radius</dt>
+          <dd>The radius of a wire bend. It depends on the selected wire and is not set by the straight reserve.</dd>
+          <dt>Capacitance</dt>
+          <dd>Electrical coupling that can change a high-frequency signal response.</dd>
+          <dt>Mutual capacitance</dt>
+          <dd>Capacitance between two conductors.</dd>
+          <dt>High-impedance node</dt>
+          <dd>A circuit point where a small added load can cause a significant signal change.</dd>
+          <dt>Withdrawal stroke</dt>
+          <dd>The free movement needed to unplug a connector.</dd>
+          <dt>Nominal</dt>
+          <dd>A reference value before manufacturing tolerances and operating variation.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/whole-amp/harness-integration/wire-dressing.json">HI-005 wire-reserve record</a> — source scope, placement assumption, interfaces, and open service gates.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/wire-dressing-checks.json">HI-005 checks</a> — ten interfaces, eight controls, preserved board hashes, and no actual placement.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/wire-dressing-review.html">HI-005 engineering review</a> — drawing scope, calculation, and placement instructions.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/mating-geometry.json">HI-004 mating geometry</a> — nominal header, housing, and wire-exit coordinates.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/mating-review.html">HI-004 drawing review</a> — source revisions and mated-envelope limits.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/cable-loading-review.md">HI-003 cable-loading review</a> — bounded capacitance sweep and treble sensitivity.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/cable-loading.json">HI-003 result receipt</a> — model scope, counts, and checked controls.</li>
+          <li><a href="https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/430/43045/PS-43045-001.pdf">Molex PS-43045 Rev R</a> — manufacturer specification, page 21, section 8.4.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

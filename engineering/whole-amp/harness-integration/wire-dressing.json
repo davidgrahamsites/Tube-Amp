@@ -1,0 +1,49 @@
+{
+  "id": "HI-005",
+  "owner": "harness-integration",
+  "date": "2026-11-26",
+  "job": "Reserve relaxed wire behind each candidate pot plug before restraints; preserve independent service gates",
+  "depends_on": [
+    "mating-geometry.json",
+    "connector-contract.json"
+  ],
+  "source": {
+    "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/430/43045/PS-43045-001.pdf",
+    "document": "PS-43045",
+    "revision": "R",
+    "date": "2025-11-14",
+    "page": 21,
+    "section": "8.4",
+    "retrieval": "Manufacturer PDF text read on 2026-11-26; local download timed out. Dimension illustration not visually verified.",
+    "scope": "General relaxed-wire recommendation; wire gauge, type and insulation can require adjustment."
+  },
+  "circuit_range": [
+    2,
+    8
+  ],
+  "relaxed_wire_minimum_mm": 12.7,
+  "planning_policy": {
+    "datum": "Candidate housing wire-exit face from HI-004",
+    "direction": [
+      0,
+      -1,
+      0
+    ],
+    "axial_reservation_mm": 12.7,
+    "status": "Engineering straight-exit planning reserve, not a verified manufacturer dimensional datum or approved wire bend",
+    "constraint": "No tie, twist or forced bend in this reserve; wire must not bias the contacts.",
+    "cross_section": "Wire cross-section and clearance remain unqualified; this axial rule is not a 3D collision envelope."
+  },
+  "service_gates": {
+    "wire_bend_radius_mm": null,
+    "unplug_stroke_mm": null,
+    "finger_access_mm": null,
+    "selected_wire_qualified": false,
+    "crimp_qualified": false,
+    "current_header_drawing_visual_check": false,
+    "actual_placements": []
+  },
+  "done_condition": "Publish per-interface axial restraint limits derived from existing candidate geometry, with no implicit fit approval; reject a tie inside the reserved region.",
+  "next_action": "Use this seam in populated placement; confirm the datum and wire behavior with actual parts, and measure bends, latch access and withdrawal.",
+  "native_adoption": false
+}
