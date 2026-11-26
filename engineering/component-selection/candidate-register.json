@@ -1169,12 +1169,12 @@
     "mpn": "CC1206JRNPO0BN331",
     "supplier_sku": "C527285",
     "supplier_url": "https://www.lcsc.com/product-detail/C527285.html",
-    "status": "candidate; electrical rating checked, domestic sourcing and native footprint integration pending",
+    "status": "Existing native C605 engineering selection reconciled; current domestic availability and assembled qualification pending",
     "observed": "2026-11-21",
     "unit_price_cny": null,
     "minimum_quantity": 10,
     "observed_domestic_stock": null,
-    "notes": "330pF 5% 100V C0G 1206. Manufacturer body 3.20 x 1.60mm, height 0.70mm maximum. Global indexed listing showed USD0.0402, MOQ10, stock4000; these are NOT verified mainland RMB price/stock. Evidence: evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md. Replaces rejected 50V candidate for C605 requirement >=63V; native board remains through-hole, so no selection or footprint compatibility claim."
+    "notes": "330pF 5% 100V C0G 1206; manufacturer nominal body3.20x1.60mm, maximum thickness0.70mm. Historical global indexed listing USD0.0402, MOQ10, stock4000 is not a mainland quote. Current source, native schematic and PCB use this exact MPN/1206 footprint; see rating-coverage/review.md. Exact-part evidence: evidence/reverb-repair-picks-2026-11-21.md. Native implementation no longer through-hole. No new stock observation."
   },
   {
     "coverage_ids": [
@@ -1280,5 +1280,21 @@
     "observed_domestic_stock": null,
     "notes": "DigiKey China own indexed listing reported stock 15472, MOQ1 and displayed price; search crawl ages differ (see VAL-067 retrieval.json). Direct page inaccessible. Stock, order increment, shipping cost and exact Shanghai checkout NOT verified. Manufacturer PDF retained in wet-protection/sources. No purchase.",
     "selection_evidence": "../whole-amp/reverb-600/wet-protection-integration/review.md"
+  },
+  {
+    "coverage_ids": [
+      "P133"
+    ],
+    "mpn": "RT0603BRD0710KL",
+    "supplier_sku": "C95204",
+    "supplier_url": "https://item.szlcsc.com/96405.html",
+    "status": "Native engineering selection from VAL-056; BOM reconciliation only, no new purchasing verification",
+    "observed": "2026-11-25",
+    "unit_price_cny": null,
+    "minimum_quantity": null,
+    "observed_domestic_stock": 492851,
+    "observed_minimum_buy_field": 1,
+    "observed_conversion_field": 20,
+    "notes": "Dated VAL-055/056 listing observation, not current reserved stock. Conflicting minimum-buy/conversion fields require checkout confirmation; price unknown. Manufacturer RT V17: 0.1W at70C, linear to zero at155C,75V power-limited, body maximum1.7x0.9x0.55mm. R304/R314 previously integrated; full logic power sequence and assembly remain unqualified."
   }
 ]

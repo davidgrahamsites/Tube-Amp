@@ -1239,7 +1239,7 @@
     ],
     "value": "330p",
     "requirement": "63V film/C0G",
-    "status": "candidate qualified electrically; domestic sourcing and1206 native integration pending",
+    "status": "Existing native 100V C0G engineering selection reconciled; procurement, thermal/assembly and full circuit qualification pending",
     "candidate_mpns": [
       "CC1206JRNPO0BN331"
     ],
@@ -1249,7 +1249,10 @@
         "reason": "50V below current63V requirement"
       }
     ],
-    "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md"
+    "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md",
+    "selected_mpn": "CC1206JRNPO0BN331",
+    "selection_evidence": "rating-coverage/review.md",
+    "package_evidence": "evidence/reverb-repair-picks-2026-11-21.md"
   },
   {
     "id": "P094",
@@ -1808,5 +1811,21 @@
     ],
     "selected_mpn": "BZX55C27-TAP",
     "selection_evidence": "../whole-amp/reverb-600/wet-protection-integration/review.md"
+  },
+  {
+    "id": "P133",
+    "refs": [
+      "R304",
+      "R314"
+    ],
+    "value": "10k",
+    "requirement": "Yageo RT0603 0.1W at70C,0.1%,25ppm/C; 75V maximum additionally limited by power; VAL-056 bounded 5.25V/9.8kohm case",
+    "status": "Previously integrated native selection reconciled into BOM; bounded dissipation screen passed, full power sequence/thermal/assembly qualification pending",
+    "candidate_mpns": [
+      "RT0603BRD0710KL"
+    ],
+    "selected_mpn": "RT0603BRD0710KL",
+    "selection_evidence": "../whole-amp/control-switching/debounce-input-review.md",
+    "package_evidence": "../whole-amp/control-switching/evidence/Yageo-RT-2026.pdf"
   }
 ]

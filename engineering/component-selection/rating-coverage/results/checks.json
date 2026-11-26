@@ -1,0 +1,96 @@
+{
+  "coverage": {
+    "physical_references": 240,
+    "coverage_groups": 133,
+    "selected_references": 149,
+    "all_references_accounted_for": true,
+    "all_parts_qualified": false
+  },
+  "native_identity": [
+    {
+      "reference": "C605",
+      "source_schematic_board_identity": true,
+      "component_drills": 0
+    },
+    {
+      "reference": "R304",
+      "source_schematic_board_identity": true,
+      "component_drills": 0
+    },
+    {
+      "reference": "R314",
+      "source_schematic_board_identity": true,
+      "component_drills": 0
+    }
+  ],
+  "unchanged_native_files": 22,
+  "negative_controls": [
+    {
+      "case": "missing_R304_R314",
+      "rejected": true,
+      "reason": "Missing coverage: R304, R314\nExplicit circuit/BOM MPN mismatch: R304\nExplicit circuit/BOM MPN mismatch: R314"
+    },
+    {
+      "case": "duplicate_reference",
+      "rejected": true,
+      "reason": "Duplicate coverage: R304, R314"
+    },
+    {
+      "case": "wrong_explicit_MPN",
+      "rejected": true,
+      "reason": "Explicit circuit/BOM MPN mismatch: R304\nExplicit circuit/BOM MPN mismatch: R314"
+    }
+  ],
+  "worksheet_rows": 240,
+  "bounded_resistors": [
+    "R304",
+    "R314"
+  ],
+  "bounded_thermal_results": [
+    {
+      "local_ambient_C": 70,
+      "bounded_power_W": 0.0028125,
+      "allowed_power_W": 0.1,
+      "utilization_fraction": 0.028124999999999997,
+      "continuous_voltage_bound_V": 31.304951684997057,
+      "passed_bounded_case": true
+    },
+    {
+      "local_ambient_C": 100,
+      "bounded_power_W": 0.0028125,
+      "allowed_power_W": 0.06470588235294118,
+      "utilization_fraction": 0.04346590909090908,
+      "continuous_voltage_bound_V": 25.18169269645755,
+      "passed_bounded_case": true
+    },
+    {
+      "local_ambient_C": 125,
+      "bounded_power_W": 0.0028125,
+      "allowed_power_W": 0.03529411764705883,
+      "utilization_fraction": 0.07968749999999998,
+      "continuous_voltage_bound_V": 18.597912596342002,
+      "passed_bounded_case": true
+    }
+  ],
+  "maximum_body_mm": [
+    1.7,
+    0.9,
+    0.55
+  ],
+  "rating_screen_limits": [
+    "Same bounded input-capacitor path as VAL-056; no new power-sequence qualification",
+    "5.25V and -2% are engineering allocations, not measured lifetime bounds",
+    "No external surge/ESD or abnormal supply/fault qualification",
+    "Local ambient and populated assembly not measured"
+  ],
+  "all_part_ratings_qualified": false,
+  "fabrication_ready": false,
+  "source_sha256": {
+    "engineering/whole-amp/reverb-600/circuit.json": "b5292e6766793b61c56ddc2d9a715fbfb11274777128a667f73c1ac774b70e66",
+    "engineering/component-selection/coverage.json": "79fdbf8edd69c3980faba8a652fa7ab107bdc4c943d34f7487db9de7e4230a4a",
+    "engineering/component-selection/candidate-register.json": "7c7bf85994aa7cce94630dd49020dc4abad910d29ae14ccf522beb3f08379e47",
+    "engineering/whole-amp/control-switching/evidence/Yageo-RT-2026.pdf": "00a9148c2958122200e8a93292e389392a795adcfe40562d6ca4f690d1e5d7d1",
+    "engineering/whole-amp/control-switching/results/debounce-input/checks.json": "12a8d184630c08ccc09775a803541c5cb8abfb9b18ff03420b050edc2b6ffcc8",
+    "engineering/component-selection/rating-coverage/rating-rules.json": "de3c8dea738a98ecb5aa0b12b98f29e5bb4296391ab67d045d809e6c4b214bce"
+  }
+}

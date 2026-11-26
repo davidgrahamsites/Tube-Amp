@@ -105,3 +105,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-069 | validation | pcb | verified | 2026-11-25 | [Conditional reverb current allocation](records/VAL-069-reverb-current-allocation.md) |
 | VAL-070 | validation | pcb | verified | 2026-11-25 | [Conditional R605 package integration](records/VAL-070-r605-package.md) |
 | VAL-071 | validation | pcb | verified | 2026-11-25 | [Thirteen FMP200 packages: finished-hole correction](records/VAL-071-fmp200-finished-holes.md) |
+| VAL-072 | validation | components | verified | 2026-11-25 | [Rating inventory and missing BOM references](records/VAL-072-rating-coverage.md) |

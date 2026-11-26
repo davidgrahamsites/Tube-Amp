@@ -1,0 +1,2 @@
+# Rating audit factory
+Owner: component selection. Inputs: parent contract and canonical current source/BOM. Process: audit.py validates reference identity, classifies required rating checks and calculates the limited RT0603 temperature screen. Outputs: results products only. Human check: assess the stated 5.25 V / 9.8 kohm bound and local temperature against the eventual powered assembly; do not substitute this for fault/ESD tests.

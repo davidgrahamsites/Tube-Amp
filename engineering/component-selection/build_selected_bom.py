@@ -4,6 +4,8 @@ import json,csv,math
 p=Path(__file__).resolve().parent;c=json.loads((p/'coverage.json').read_text());a=json.loads((p/'candidate-register.json').read_text());grouped={}
 for r in c:
  if 'selected_mpn' in r:grouped.setdefault(r['selected_mpn'],[]).extend(r['refs'])
+from check_coverage import validate
+coverage_check=validate(c,json.loads((p.parent/'whole-amp/reverb-600/circuit.json').read_text()))
 rows=[]
 for mpn,refs in grouped.items():
  matches=[r for r in a if r['mpn']==mpn];assert len(matches)==1,mpn;r=matches[0];moq=r['minimum_quantity'];buy=math.ceil(len(refs)/moq)*moq if moq else None;price=r['unit_price_cny']

@@ -1,0 +1,2 @@
+# Rating coverage evidence
+Owner: component selection. Inputs: source/BOM/rules and manufacturer data hashes recorded in checks.json. Process: regenerate with ../tools/audit.py. Outputs: one row per physical circuit reference, coverage regression checks, bounded resistor results and explicit remaining gates. Human check: compare count and a selected part against the native design. No fabricated or measured current/heat claim.

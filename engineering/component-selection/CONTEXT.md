@@ -12,3 +12,5 @@ P057 sourcing alternative and full-pitch insertion check: [power-film/CONTEXT.md
 Socket requirement: socketing/CONTEXT.md owns the exhaustive IC/tube manifest and qualified-contact gates. Native replacement geometry remains a PCB-module responsibility.
 
 C607 voltage-rated coupling replacement: [reverb-coupling/CONTEXT.md](reverb-coupling/CONTEXT.md) owns exact part sourcing, package integration and preserved connectivity/drill evidence after VAL-061's conditional fault finding.
+
+Rating coverage: check_coverage.py is the canonical source/coverage identity check used by build_selected_bom.py. [rating-coverage/CONTEXT.md](rating-coverage/CONTEXT.md) owns the per-part rating worksheet and bounded checks; it does not select missing parts or qualify all ratings. Its negative controls prevent another omitted integrated reference.

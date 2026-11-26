@@ -375,3 +375,11 @@ R605 now uses the documented FMP200 conditional envelope and0.9mm holes at15.24m
 Corrected 13 Main/Power FMP200 packages: 26 holes now0.9mm, pads1.8mm, with matching pad-end courtyard/silk clearance and corrected rating tags. Manufacturer maximum lead0.6mm leaves0.2mm diametral allowance at proposed finished-hole minimum0.8mm. Native-tree and drill comparisons, all22 unchanged source files and disposable baseline replay pass. Existing DRC/open counts remain Main43/105 and Power12/39; no new findings. Refreshed socket and mechanical inventories use current native hashes.
 
 This is package/insertion verification, not thermal/fault or populated-fit approval. Assembly standoff/height, supplier fabrication tolerance, remaining routing, three-board consolidation and actual drill-body/bit access remain open. Next: applicable per-part stress ratings and package envelopes, then chassis packing with known obstructions. Objective6 is not complete.
+
+## November25 rating/BOM reconciliation (VAL-072)
+
+R304/R314 were present in the native/source circuit but absent from central parts coverage. Added P133 and the existing RT0603BRD0710KL candidate to the registers and regenerated the selected subset. All240 physical references now have coverage. BOM generation rejects missing/duplicate references and explicit source-MPN mismatch; three negative controls pass. The rating worksheet lists applicable checks for every part.
+
+R304/R314 bounded dissipation2.8125mW each is below the manufacturer64.706mW allowance at an assumed100°C; no package enlargement is needed for that bound. No native circuit/layout changed. Dated supplier stock is preserved, while ambiguous order increments and unknown price remain unknown. Full part stress/fault/thermal qualification, unselected parts and populated three-board chassis/drill access remain open. Objective6 remains active.
+
+The staged-input test also rejected stale P093/C605 selection metadata. Reconciled the already-native CC1206JRNPO0BN331 using the existing manufacturer dossier and verified source/schematic/PCB identity; replaced a nonexistent working evidence pointer. All native hashes remain at c006f05; this is register correction only.
