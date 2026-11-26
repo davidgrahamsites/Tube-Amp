@@ -1,0 +1,332 @@
+stderr Warning: can't find the initialization file spinit.
+stdout ******
+stdout ** ngspice-45.2 shared library
+stdout ******
+stdout Note: Compatibility modes selected: ps a
+stdout Circuit: hd012 reset-floor fixture; no hardware qualification
+stdout Reducing trtol to 1 for xspice 'A' devices
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stderr Note: Starting dynamic gmin stepping
+stderr Warning: Dynamic gmin stepping failed
+stderr Note: Starting true gmin stepping
+stderr Warning: True gmin stepping failed
+stderr Note: Starting source stepping
+stderr Note: Source stepping completed
+stdout Initial Transient Solution
+stdout --------------------------
+stdout Node                                   Voltage
+stdout ----                                   -------
+stdout in                                         320
+stdout out                                        330
+stdout feed1                                  216.065
+stdout feed2                                   112.13
+stdout mon                                    8.19521
+stdout vr                                     2.49996
+stdout half                                      1.25
+stdout pos                                   0.240011
+stdout sen                                    2.81008
+stdout xmain.n859943                          8.19521
+stdout xmain.x_u5.n774212                     7.19521
+stdout xmain.x_u5.n774290                     7.19521
+stdout xmain.x_u5.n850209                  0.00156309
+stdout xmain.x_u5.x_u7.vmid                    4.0976
+stdout xmain.x_u5.x_u7.evmid_int1              4.0976
+stdout xmain.v+_buffer                        8.19521
+stdout xmain.v-_buffer                              0
+stdout xmain.x_u5.mid                          4.0976
+stdout xmain.x_u5.x_u7.eout_int1               4.0976
+stdout cmp                                  0.0969117
+stdout xmain.x_u5.control_mid                       1
+stdout xmain.x_u5.n778484                   0.0969117
+stdout xmain.x_u5.n789513                           1
+stdout xmain.x_u5.x_u9.e2_int1                      1
+stdout xmain.x_u5.control_hiz                       0
+stdout xmain.x_u5.1v                                1
+stdout xmain.x_u5.x_u3.3                      7.19521
+stdout xmain.x_u5.x_u3.e1_int1                7.19521
+stdout xmain.n860405                                0
+stdout xmain.x_u5.n778496                   0.0953486
+stdout xmain.x_u5.x_u10.4                           1
+stdout xmain.x_u5.x_u10.e1_int1                     1
+stdout xmain.x_u5.x_u8.6                            0
+stdout xmain.x_u5.x_u8.e1_int1                      0
+stdout xmain.n860457                                0
+stdout xmain.n859997                                0
+stdout xmain.x_u4.n03175                            0
+stdout xmain.n860391                                0
+stdout xmain.n860397                                0
+stdout xmain.x_u2.n20539                        -0.11
+stdout xmain.x_u2.x_u1.out2                         0
+stdout xmain.x_u2.x_u1.eout_int1                    0
+stdout xmain.x_u2.n20155                      6.19521
+stdout xmain.in+buff                         0.240011
+stdout xmain.x_u2.n20826                            0
+stdout xmain.x_u2.x_u21.out2                        0
+stdout xmain.x_u2.x_u21.eout_int1                   0
+stdout xmain.x_u2.n202710                     6.19521
+stdout xmain.in-buff                          2.81008
+stdout xmain.x_u2.n20833                            0
+stdout xmain.x_u2.x_u22.out2                        0
+stdout xmain.x_u2.x_u22.eout_int1                   0
+stdout xmain.x_u2.n20415                        -0.11
+stdout xmain.x_u2.n20840                            0
+stdout xmain.x_u2.x_u23.out2                        0
+stdout xmain.x_u2.x_u23.eout_int1                   0
+stdout xmain.x_u2.n20531                            0
+stdout xmain.x_u2.x_u24.6                           0
+stdout xmain.x_u2.x_u24.e1_int1                     0
+stdout xmain.x_u6.x_u1.evdd_new_int1          8.19521
+stdout xmain.x_u6.x_u1.evss_new_int1                0
+stdout xmain.x_u1.x_u1.evdd_new_int1         0.240011
+stdout xmain.x_u1.x_u1.evss_new_int1          2.81008
+stdout xmain.x_u7.n780252                        1.99
+stdout xmain.x_u7.x_u13.out1                  8.19521
+stdout xmain.x_u7.x_u13.eout_int1             8.19521
+stdout xmain.x_u7.n780066                     8.19521
+stdout xmain.x_u7.x_u16.4                           0
+stdout xmain.x_u7.x_u16.e1_int1                     0
+stdout xmain.x_u7.n780086                           0
+stdout xmain.x_u7.1v                                1
+stdout xmain.x_u7.n779976                       36.01
+stdout xmain.x_u7.x_u15.out2                        0
+stdout xmain.x_u7.x_u15.eout_int1                   0
+stdout xmain.x_u7.x_u5.out2                         0
+stdout xmain.x_u7.x_u5.eout_int1                    0
+stdout xmain.x_u3.vmid                         4.0976
+stdout xmain.x_u3.evmid_int1                   4.0976
+stdout xmain.x_u3.vh                                0
+stdout xmain.x_u3.evh_int1                          0
+stdout xmain.n860477                                0
+stdout xmain.x_u3.innnew                      2.81008
+stdout xmain.x_u3.einnnew_int1                2.81008
+stdout xmain.x_u3.out                               0
+stdout xmain.x_u3.eout_int1                         0
+stdout xmain.n860177                         0.240381
+stdout xhold.n859943                          8.19521
+stdout xhold.x_u5.n774212                     7.19521
+stdout xhold.x_u5.n774290                     7.19521
+stdout xhold.x_u5.n850209                 0.000225999
+stdout xhold.x_u5.x_u7.vmid                    4.0976
+stdout xhold.x_u5.x_u7.evmid_int1              4.0976
+stdout xhold.v+_buffer                        8.19521
+stdout xhold.v-_buffer                              0
+stdout xhold.x_u5.mid                          4.0976
+stdout xhold.x_u5.x_u7.eout_int1               4.0976
+stdout hold                                 0.0140119
+stdout xhold.x_u5.control_mid                       1
+stdout xhold.x_u5.n778484                   0.0140119
+stdout xhold.x_u5.n789513                           1
+stdout xhold.x_u5.x_u9.e2_int1                      1
+stdout xhold.x_u5.control_hiz                       0
+stdout xhold.x_u5.1v                                1
+stdout xhold.x_u5.x_u3.3                      7.19521
+stdout xhold.x_u5.x_u3.e1_int1                7.19521
+stdout xhold.n860405                                0
+stdout xhold.x_u5.n778496                   0.0137859
+stdout xhold.x_u5.x_u10.4                           1
+stdout xhold.x_u5.x_u10.e1_int1                     1
+stdout xhold.x_u5.x_u8.6                            0
+stdout xhold.x_u5.x_u8.e1_int1                      0
+stdout xhold.n860457                                0
+stdout xhold.n859997                                0
+stdout xhold.x_u4.n03175                            0
+stdout xhold.n860391                                0
+stdout xhold.n860397                                0
+stdout xhold.x_u2.n20539                        -0.11
+stdout xhold.x_u2.x_u1.out2                         0
+stdout xhold.x_u2.x_u1.eout_int1                    0
+stdout xhold.x_u2.n20155                      6.19521
+stdout xhold.in+buff                        0.0346372
+stdout xhold.x_u2.n20826                            0
+stdout xhold.x_u2.x_u21.out2                        0
+stdout xhold.x_u2.x_u21.eout_int1                   0
+stdout xhold.x_u2.n202710                     6.19521
+stdout xhold.in-buff                             1.25
+stdout xhold.x_u2.n20833                            0
+stdout xhold.x_u2.x_u22.out2                        0
+stdout xhold.x_u2.x_u22.eout_int1                   0
+stdout xhold.x_u2.n20415                        -0.11
+stdout xhold.x_u2.n20840                            0
+stdout xhold.x_u2.x_u23.out2                        0
+stdout xhold.x_u2.x_u23.eout_int1                   0
+stdout xhold.x_u2.n20531                            0
+stdout xhold.x_u2.x_u24.6                           0
+stdout xhold.x_u2.x_u24.e1_int1                     0
+stdout xhold.x_u6.x_u1.evdd_new_int1          8.19521
+stdout xhold.x_u6.x_u1.evss_new_int1                0
+stdout xhold.x_u1.x_u1.evdd_new_int1        0.0346372
+stdout fb                                   0.0346372
+stdout xhold.x_u1.x_u1.evss_new_int1             1.25
+stdout xhold.x_u7.n780252                        1.99
+stdout xhold.x_u7.x_u13.out1                  8.19521
+stdout xhold.x_u7.x_u13.eout_int1             8.19521
+stdout xhold.x_u7.n780066                     8.19521
+stdout xhold.x_u7.x_u16.4                           0
+stdout xhold.x_u7.x_u16.e1_int1                     0
+stdout xhold.x_u7.n780086                           0
+stdout xhold.x_u7.1v                                1
+stdout xhold.x_u7.n779976                       36.01
+stdout xhold.x_u7.x_u15.out2                        0
+stdout xhold.x_u7.x_u15.eout_int1                   0
+stdout xhold.x_u7.x_u5.out2                         0
+stdout xhold.x_u7.x_u5.eout_int1                    0
+stdout xhold.x_u3.vmid                         4.0976
+stdout xhold.x_u3.evmid_int1                   4.0976
+stdout xhold.x_u3.vh                                0
+stdout xhold.x_u3.evh_int1                          0
+stdout xhold.n860477                                0
+stdout xhold.x_u3.innnew                         1.25
+stdout xhold.x_u3.einnnew_int1                   1.25
+stdout xhold.x_u3.out                               0
+stdout xhold.x_u3.eout_int1                         0
+stdout xhold.n860177                        0.0350072
+stdout l1                                      2.7854
+stdout l2                                     1.44116
+stdout ld                                   0.0969117
+stdout b.xhold.x_u3.beout#branch                    0
+stdout b.xhold.x_u3.beinnnew#branch                 0
+stdout b.xhold.x_u3.bevh#branch                     0
+stdout b.xhold.x_u3.bevmid#branch                   0
+stdout b.xhold.x_u7.x_u5.beout#branch               0
+stdout b.xhold.x_u7.x_u15.beout#branch               0
+stdout b.xhold.x_u7.x_u16.be1#branch                0
+stdout b.xhold.x_u7.x_u13.beout#branch               0
+stdout b.xhold.x_u1.x_u1.bevss_new#branch               0
+stdout b.xhold.x_u1.x_u1.bevdd_new#branch               0
+stdout b.xhold.x_u6.x_u1.bevss_new#branch               0
+stdout b.xhold.x_u6.x_u1.bevdd_new#branch               0
+stdout b.xhold.x_u2.x_u24.be1#branch                0
+stdout b.xhold.x_u2.x_u23.beout#branch               0
+stdout b.xhold.x_u2.x_u22.beout#branch               0
+stdout b.xhold.x_u2.x_u21.beout#branch               0
+stdout b.xhold.x_u2.x_u1.beout#branch               0
+stdout b.xhold.x_u5.x_u8.be1#branch                 0
+stdout b.xhold.x_u5.x_u10.be1#branch                0
+stdout b.xhold.x_u5.x_u3.be1#branch                 0
+stdout b.xhold.x_u5.x_u9.be2#branch                 0
+stdout b.xhold.x_u5.x_u7.beout#branch               0
+stdout b.xhold.x_u5.x_u7.bevmid#branch               0
+stdout b.xmain.x_u3.beout#branch                    0
+stdout b.xmain.x_u3.beinnnew#branch                 0
+stdout b.xmain.x_u3.bevh#branch                     0
+stdout b.xmain.x_u3.bevmid#branch                   0
+stdout b.xmain.x_u7.x_u5.beout#branch               0
+stdout b.xmain.x_u7.x_u15.beout#branch               0
+stdout b.xmain.x_u7.x_u16.be1#branch                0
+stdout b.xmain.x_u7.x_u13.beout#branch               0
+stdout b.xmain.x_u1.x_u1.bevss_new#branch               0
+stdout b.xmain.x_u1.x_u1.bevdd_new#branch               0
+stdout b.xmain.x_u6.x_u1.bevss_new#branch               0
+stdout b.xmain.x_u6.x_u1.bevdd_new#branch               0
+stdout b.xmain.x_u2.x_u24.be1#branch                0
+stdout b.xmain.x_u2.x_u23.beout#branch               0
+stdout b.xmain.x_u2.x_u22.beout#branch               0
+stdout b.xmain.x_u2.x_u21.beout#branch               0
+stdout b.xmain.x_u2.x_u1.beout#branch               0
+stdout b.xmain.x_u5.x_u8.be1#branch                 0
+stdout b.xmain.x_u5.x_u10.be1#branch                0
+stdout b.xmain.x_u5.x_u3.be1#branch                 0
+stdout b.xmain.x_u5.x_u9.be2#branch                 0
+stdout b.xmain.x_u5.x_u7.beout#branch               0
+stdout b.xmain.x_u5.x_u7.bevmid#branch               0
+stdout l.xhold.x_u5.l_l1#branch          -0.000225999
+stdout l.xmain.x_u5.l_l1#branch           -0.00156309
+stdout e.xhold.x_u3.eout#branch                     0
+stdout e.xhold.x_u3.einnnew#branch                  0
+stdout e.xhold.x_u3.evh#branch                      0
+stdout e.xhold.x_u3.evmid#branch                    0
+stdout e.xhold.e_e1#branch                          0
+stdout e.xhold.x_u7.x_u5.eout#branch                0
+stdout e.xhold.x_u7.x_u15.eout#branch               0
+stdout e.xhold.x_u7.x_u16.e1#branch                 0
+stdout e.xhold.x_u7.x_u13.eout#branch               0
+stdout e.xhold.x_u1.x_u1.evss_new#branch               0
+stdout e.xhold.x_u1.x_u1.evdd_new#branch               0
+stdout e.xhold.x_u6.x_u1.evss_new#branch               0
+stdout e.xhold.x_u6.x_u1.evdd_new#branch               0
+stdout e.xhold.x_u2.x_u24.e1#branch                 0
+stdout e.xhold.x_u2.x_u23.eout#branch               0
+stdout e.xhold.x_u2.x_u22.eout#branch               0
+stdout e.xhold.x_u2.x_u21.eout#branch               0
+stdout e.xhold.x_u2.x_u1.eout#branch                0
+stdout e.xhold.x_u5.x_u8.e1#branch                  0
+stdout e.xhold.x_u5.x_u10.e1#branch        -1.001e-09
+stdout e.xhold.x_u5.x_u3.e1#branch       -1.77636e-15
+stdout e.xhold.x_u5.x_u9.e2#branch                  0
+stdout e.xhold.x_u5.x_u7.eout#branch     -4.08359e-12
+stdout e.xhold.x_u5.x_u7.evmid#branch               0
+stdout e.xmain.x_u3.eout#branch                     0
+stdout e.xmain.x_u3.einnnew#branch                  0
+stdout e.xmain.x_u3.evh#branch                      0
+stdout e.xmain.x_u3.evmid#branch                    0
+stdout e.xmain.e_e1#branch                          0
+stdout e.xmain.x_u7.x_u5.eout#branch                0
+stdout e.xmain.x_u7.x_u15.eout#branch               0
+stdout e.xmain.x_u7.x_u16.e1#branch                 0
+stdout e.xmain.x_u7.x_u13.eout#branch               0
+stdout e.xmain.x_u1.x_u1.evss_new#branch               0
+stdout e.xmain.x_u1.x_u1.evdd_new#branch               0
+stdout e.xmain.x_u6.x_u1.evss_new#branch               0
+stdout e.xmain.x_u6.x_u1.evdd_new#branch               0
+stdout e.xmain.x_u2.x_u24.e1#branch                 0
+stdout e.xmain.x_u2.x_u23.eout#branch               0
+stdout e.xmain.x_u2.x_u22.eout#branch               0
+stdout e.xmain.x_u2.x_u21.eout#branch               0
+stdout e.xmain.x_u2.x_u1.eout#branch                0
+stdout e.xmain.x_u5.x_u8.e1#branch                  0
+stdout e.xmain.x_u5.x_u10.e1#branch        -1.001e-09
+stdout e.xmain.x_u5.x_u3.e1#branch       -1.77636e-15
+stdout e.xmain.x_u5.x_u9.e2#branch                  0
+stdout e.xmain.x_u5.x_u7.eout#branch     -4.00069e-12
+stdout e.xmain.x_u5.x_u7.evmid#branch               0
+stdout vled#branch                         0.00148214
+stdout v.xhold.v_vhyst#branch                       0
+stdout v.xhold.v_vos#branch                         0
+stdout v.xhold.x_u7.v_vlogic#branch                 0
+stdout v.xhold.x_u7.v_vs_max_set#branch               0
+stdout v.xhold.x_u7.v_vs_min_set#branch               0
+stdout v.xhold.x_u2.v_vcmpp#branch                  0
+stdout v.xhold.x_u2.v_vcmnp#branch                  0
+stdout v.xhold.x_u2.v_vcmpn#branch                  0
+stdout v.xhold.x_u2.v_vcmnn#branch                  0
+stdout v.xhold.x_u5.v_v1#branch          -8.00521e-16
+stdout v.xhold.x_u5.v_vlogic#branch                 0
+stdout v.xmain.v_vhyst#branch                       0
+stdout v.xmain.v_vos#branch                         0
+stdout v.xmain.x_u7.v_vlogic#branch                 0
+stdout v.xmain.x_u7.v_vs_max_set#branch               0
+stdout v.xmain.x_u7.v_vs_min_set#branch               0
+stdout v.xmain.x_u2.v_vcmpp#branch                  0
+stdout v.xmain.x_u2.v_vcmnp#branch                  0
+stdout v.xmain.x_u2.v_vcmpn#branch                  0
+stdout v.xmain.x_u2.v_vcmnn#branch                  0
+stdout v.xmain.x_u5.v_v1#branch           1.65436e-24
+stdout v.xmain.x_u5.v_vlogic#branch                 0
+stdout vout#branch                       -0.000278223
+stdout vin#branch                         -0.00472432
+ Reference value :  0.00000e+00
+ Reference value :  2.77528e-02
+ Reference value :  5.57050e-02
+ Reference value :  8.37350e-02
+ Reference value :  1.11865e-01
+ Reference value :  1.40085e-01
+ Reference value :  1.68095e-01
+ Reference value :  1.95995e-01
+ Reference value :  2.23975e-01
+ Reference value :  2.46465e-01
+ Reference value :  2.74215e-01
+ Reference value :  3.02205e-01
+ Reference value :  3.30065e-01
+ Reference value :  3.58005e-01
+ Reference value :  3.85805e-01
+ Reference value :  4.13775e-01
+ Reference value :  4.41635e-01
+ Reference value :  4.69565e-01
+ Reference value :  4.97265e-01
+ Reference value :  5.25095e-01
+ Reference value :  5.53055e-01
+ Reference value :  5.81025e-01
+ Reference value :  6.08895e-01
+ Reference value :  6.36865e-01
+stdout No. of Data Rows : 65272

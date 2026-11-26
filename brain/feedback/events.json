@@ -2438,6 +2438,23 @@
       ],
       "supersedes": [],
       "next_action": "Implement reliable startup/reset with supported model behavior, resolve320V coupled solve and reverse/hot limits, then exact parts/carriers and populated fit."
+    },
+    {
+      "id": "FB-163",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "engineer",
+      "kind": "monitor-positive-reset-floor",
+      "quote": "HD-012: establish a positive reset threshold and separate unsupported startup modeling from hardware evidence.",
+      "source": "engineering/component-selection/heater-divider-rating/results/reset-checks.json",
+      "interpretation": "1k hold-output resistor gives allocated25.565–86.974V reset range versus old negative lower bound. Three powered-monitor runs complete and1695 evidence checks pass; nominal reset28.218V, half-step difference5.154mV. Isolated and coupled startup runs fail in model-invalid/convergence regions. No native adoption or startup qualification.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/component-selection/heater-divider-rating/reset-review.html",
+        "docs/design-journal/chapters/monitor-reset-floor.html"
+      ],
+      "supersedes": [],
+      "next_action": "Specify exact monitor/carrier parts and low-voltage startup fixture; retain full-supply ordering gate. Continue independent connector/socket and populated-fit work without freezing protection PCB."
     }
   ]
 }

@@ -1711,3 +1711,15 @@ Source: engineering/component-selection/heater-divider-rating/results/monitor-ch
 - [engineering/component-selection/heater-divider-rating/monitor-review.html](<../../engineering/component-selection/heater-divider-rating/monitor-review.html>)
 - [docs/design-journal/chapters/monitor-fault-hold.html](<../../docs/design-journal/chapters/monitor-fault-hold.html>)
 
+## FB-163 — monitor-positive-reset-floor
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HD-012: establish a positive reset threshold and separate unsupported startup modeling from hardware evidence.
+
+1k hold-output resistor gives allocated25.565–86.974V reset range versus old negative lower bound. Three powered-monitor runs complete and1695 evidence checks pass; nominal reset28.218V, half-step difference5.154mV. Isolated and coupled startup runs fail in model-invalid/convergence regions. No native adoption or startup qualification.
+
+Source: engineering/component-selection/heater-divider-rating/results/reset-checks.json
+
+- [engineering/component-selection/heater-divider-rating/reset-review.html](<../../engineering/component-selection/heater-divider-rating/reset-review.html>)
+- [docs/design-journal/chapters/monitor-reset-floor.html](<../../docs/design-journal/chapters/monitor-reset-floor.html>)
+

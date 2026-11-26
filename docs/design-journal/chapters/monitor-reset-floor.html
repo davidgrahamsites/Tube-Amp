@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monitor reset floor and startup boundary</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Monitor reset floor and startup boundary</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HD-012 · Evidence checks pass; startup and hardware remain unqualified</p>
+      </header>
+
+      <section>
+        <h2>Problem and change</h2>
+        <p>HD-011 used both LM2903B comparator sections for fault hold. Its release threshold had no guaranteed positive lower bound. Offset and input-bias allocations allowed the calculated threshold to fall to −0.665 V. A near-zero reset point depends too much on comparator behavior near ground.</p>
+        <p>HD-012 adds a 1 kΩ resistor from the HOLD comparator output to POS. The existing 10 kΩ feed from the 2.5 V reference remains. The added path raises POS while HOLD is high. It establishes a bounded release point without another logic device. This is a screened candidate. No native circuit change or part adoption is recorded.</p>
+        <p>The candidate reset window is 25.565–86.974 V across 1,024 old and candidate tolerance endpoints. The full window stays above zero and below the prior 102.914 V forced-clamp floor. The resistor's maximum calculated dissipation is 52.461 µW.</p>
+        <div class="math">\[V_{POS}=\frac{V_{REF}/R_{ISO}+V_{HOLD}/R_{RESET}-I_{BIAS}}{1/R_{ISO}+1/R_{RESET}}\]</div>
+        <div class="math">\[V_{RESET}=\left(V_{POS}+V_{OS}\right)\left(1+\frac{R_{SENSE,TOP}}{R_{SENSE,BOTTOM}}\right)+I_{SENSE}R_{SENSE,TOP}\]</div>
+        <div class="math">\[P_{RESET}=\frac{(V_{POS}-V_{HOLD})^2}{R_{RESET}}\]</div>
+        <p>The endpoint calculation uses 2.5 V reference, 10 kΩ isolation, 1 kΩ reset resistor, HOLD low at 0 or 0.55 V, 0.4% resistor tolerance, 4 mV comparator offset allocation, 162.5 nA input-bias-plus-board-leakage allocation, and the declared sense-resistor bounds. It enumerates all 512 tolerance and polarity combinations for each topology. The old topology has a −0.665 V minimum; the candidate has the positive range above. The resistor heat uses the relation below.</p>
+      </section>
+
+      <section>
+        <h2>Powered fixtures</h2>
+        <p>At nominal values, the release fixture resets at 28.218 V. A half-step run resets at 28.223 V, a 5.154 mV difference. The fast imposed-output trip fixture trips at 293.802 V. These are model fixtures with forced input and output waveforms. They do not prove full-supply overshoot, startup order, or fault protection.</p>
+        <p>The reset tool also adds a generic forward diode for the shunt path. In the isolated monitor-startup run, this confines negative MON to about −0.520 V instead of the prior −21.9 V excursion. The startup still stops when MON reaches 3.250 V at 26.379 ms. The comparator model requires a valid supply and common-mode range. POS near 2.5 V requires MON at least 4.5 V by the data-sheet common-mode limit. The isolated run stops before reaching that level.</p>
+        <p>The coupled 320 V and 550 V startup runs stop at 10.781 ms and 13.086 ms. They do not complete. The model combination still has invalid early ranges and ATL431 convergence limits. These failures identify a model boundary. They do not predict an amplifier startup waveform. No VINIT source or artificial reset stimulus is used in these new fixtures.</p>
+      </section>
+
+      <section>
+        <h2>Decision and next test</h2>
+        <p>Carry the 1 kΩ reset path as a candidate for low-voltage hardware testing. Keep monitor startup and complete amplifier startup unqualified. Full power-up requires the monitor to be valid before the protected output rises above the candidate's 25.565 V minimum reset point. The coupled model has not shown this sequence.</p>
+        <p>The next proof gate is a current-limited low-voltage fixture with the actual 8 V monitor rail, a scaled 0–3 V sense input, and an oscilloscope. It can check comparator startup, release, and hold without mains voltage, tubes, or high voltage. Select exact comparator, reference, shunt regulator, optocoupler, and carrier parts before that test. Do not treat the powered model fixtures as bench evidence.</p>
+        <p>The checker reports 1,695 passing checks across endpoint cases, KCL, waveforms, and native-hash preservation. It marks full startup qualification and hardware verification false. The reset resistor and monitor circuit remain unadopted.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>POS</dt>
+          <dd>Positive input node of the main threshold comparator.</dd>
+          <dt>HOLD</dt>
+          <dd>Output node of the second comparator section, used for feedback.</dd>
+          <dt>Reset floor</dt>
+          <dd>Lowest output voltage at which the held fault state can release.</dd>
+          <dt>Forced-clamp floor</dt>
+          <dd>Lowest output voltage found while the clamp is commanded on in the model.</dd>
+          <dt>Tolerance endpoint</dt>
+          <dd>A combination of declared minimum or maximum component and error values.</dd>
+          <dt>Comparator offset</dt>
+          <dd>Input difference that shifts the comparator switching point.</dd>
+          <dt>Input bias current</dt>
+          <dd>Small current into or out of a comparator input.</dd>
+          <dt>KCL</dt>
+          <dd>Kirchhoff's current law. Currents at a node must balance.</dd>
+          <dt>ATL431</dt>
+          <dd>The behavioral shunt-reference model used in the pass-regulator simulation.</dd>
+          <dt>Native circuit</dt>
+          <dd>The project schematic and board files, as distinct from generated simulation fixtures.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/reset-contract.json">HD-012 reset contract</a> — declared values, limits, and non-adoption status.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/tools/reset_bounds.py">Endpoint calculation</a> — tolerance and polarity enumeration.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/tools/reset_recovery.py">Fixture generator</a> — release, trip, and startup model setup.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/reset-bounds.json">Reset bounds</a> — old and candidate endpoint results.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/reset-checks.json">HD-012 independent checks</a> — 1,695 checks; startup and hardware verification remain false.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/reset-release.json">Nominal release fixture</a> — 28.218 V reset result.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/reset-release-fine.json">Refined release fixture</a> — 28.223 V reset result.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/reset-trip.json">Fast trip fixture</a> — 293.802 V trip under imposed waveforms.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/reset-monitor-startup.json">Isolated monitor startup</a> — incomplete before the comparator model reaches valid supply conditions.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/reset-coupled-320.json">Coupled 320 V startup</a> and <a href="../../../engineering/component-selection/heater-divider-rating/results/reset-coupled-550.json">coupled 550 V startup</a> — incomplete model runs.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/monitor-contract.json">HD-011 monitor contract</a> and <a href="../../../engineering/component-selection/heater-divider-rating/detector-contract.json">HD-009 detector contract</a> — inherited monitor and threshold limits.</li>
+          <li><a href="https://www.ti.com/lit/ds/symlink/lm393.pdf">TI LM2903B data sheet</a> — comparator supply and common-mode limits.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

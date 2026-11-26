@@ -444,3 +444,9 @@ Dual-pass DC candidate:270 seeded cases keep the sampled single-pass-short regul
 182 evidence checks pass for the finite-current monitor and two-comparator hold study. Corrected feedback removes64.975uA nominal idle LED current; initialized550V regulator-short probe peaks293.631917V and the half-step repeat differs0.360mV. Allocated detector window289.827–297.391V includes added load/leakage; feed-resistor heat bound1.726W each remains a selection/fit requirement.
 
 Startup is model-invalid and aborts;320V coupled reset probe has no transient solution. The successful diagnostic uses an initial test reset, not proposed hardware, and has not reached final clamp equilibrium by3s. No native change or qualified protection. [HTML report](engineering/component-selection/heater-divider-rating/monitor-review.html). Next: supported startup/reset,320V solve, reverse/hot limits and exact carriers, then populated fit. Objective6 remains incomplete.
+
+## November26 positive fault-reset threshold (HD-012)
+
+Candidate1k hold-output resistor changes the allocated reset range from−0.665..65.769V to25.565..86.974V. Three powered-monitor runs complete; nominal reset28.218V and refined28.223V.1,695 source/equation/waveform/native checks pass. The monitor's initial reset is no longer assumed to occur at an offset-sensitive near-zero threshold.
+
+Three startup runs still fail: the isolated comparator model crosses invalid-input logic, while the coupled pass/reference model stops earlier. No hardware startup, native adoption or protection release. [HTML report and low-voltage bench scope](engineering/component-selection/heater-divider-rating/reset-review.html). Next: exact monitor/carriers and low-voltage startup measurements; continue independent connector/socket selection and populated fit. Full-supply monitor-before25.565V ordering remains unproved. Objective6 remains incomplete.
