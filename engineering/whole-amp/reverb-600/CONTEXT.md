@@ -17,3 +17,5 @@ November 25 clamp/rail injection: `input-clamps/` owns bounded input and output 
 Current rail-load correction: [rail-load-integration/review.md](rail-load-integration/review.md), VAL-064. R619/R620 are now native; exact R601 package/rating synchronized. Earlier VAL-063 source-preservation claims are historical. Voltage-domain spacing/ground pour and whole-system qualification remain open.
 
 Wet-contact follow-up: [wet-protection/review.md](wet-protection/review.md), VAL-067, owns the local opposing-series Zener and resistor-rating correction candidate. No native adoption; preserve the relay hold until integration and application checks.
+
+Native wet-contact correction: [wet-protection-integration/review.md](wet-protection-integration/review.md), VAL-068. D603/D604 and coordinated R616/R618 corrections are now integrated; earlier VAL-067 is historical candidate evidence. Hardware/contact life and voltage-spacing release remain held.

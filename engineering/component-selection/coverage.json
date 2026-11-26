@@ -1294,14 +1294,14 @@
       "R618"
     ],
     "value": "1M",
-    "requirement": "1% 0.25W metal film, 250V minimum",
-    "status": "engineering selected for native 600R-1 revision; <=100C and stated voltage envelope; PCB integration pending",
+    "requirement": "1% MF0207 0.6W at70C; R618 requires 350V working-voltage rating under VAL-067 clamp fault screen",
+    "status": "MF0207 selected; R601/R618 source/schematic/PCB synchronized; other references and whole-system qualification pending",
     "candidate_mpns": [
       "RN 1/2WS 1M F T/B A1",
       "MF0207FTE52-1M"
     ],
     "selected_mpn": "MF0207FTE52-1M",
-    "selection_evidence": "evidence/reverb-resistor-picks-2026-11-19.md",
+    "selection_evidence": "../whole-amp/reverb-600/wet-protection-integration/review.md",
     "revision_note": "600R-1: R601 1M send attenuator; new R618 1M wet mix. R617 moved to WET_AC."
   },
   {
@@ -1325,11 +1325,14 @@
       "R616"
     ],
     "value": "100",
-    "requirement": "1% 0.25W metal film, 250V minimum",
-    "status": "candidate identified; qualification incomplete",
+    "requirement": "100 ohm, pulse-rated PR01 1W at70C, 5%; VAL-067 20W/1ms isolated-event envelope; exact formed-lead footprint",
+    "status": "Native draft integrated; scoped pulse/loading screens pass; contact life, full system and Shanghai checkout pending",
     "candidate_mpns": [
-      "MF0207FTE52-100R"
-    ]
+      "MF0207FTE52-100R",
+      "PR01000101000JA500"
+    ],
+    "selected_mpn": "PR01000101000JA500",
+    "selection_evidence": "../whole-amp/reverb-600/wet-protection-integration/review.md"
   },
   {
     "id": "P099",
@@ -1789,5 +1792,20 @@
     ],
     "selected_mpn": "MF0207FTE52-10K",
     "selection_evidence": "../whole-amp/reverb-600/rail-load-integration/review.md"
+  },
+  {
+    "id": "P132",
+    "refs": [
+      "D603",
+      "D604"
+    ],
+    "value": "27V opposing-series Zener pair",
+    "requirement": "Exact Vishay BZX55C27-TAP, DO35 common anodes; cathodes WET_AC/GND; VAL-067 envelope",
+    "status": "Native draft integrated; manufacturer identity and China listing researched; live stock, Shanghai checkout and hardware qualification pending",
+    "candidate_mpns": [
+      "BZX55C27-TAP"
+    ],
+    "selected_mpn": "BZX55C27-TAP",
+    "selection_evidence": "../whole-amp/reverb-600/wet-protection-integration/review.md"
   }
 ]

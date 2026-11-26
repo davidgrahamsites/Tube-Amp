@@ -2000,7 +2000,7 @@
       "all_corner_review_complete": false
     },
     "Control": {
-      "sha256": "ca65723ca8be01a4fc8fce46dccd3082610d0d28229695e0bea6b3564ef1e642",
+      "sha256": "f58159d0651ed558b38064a48e60de965ecd72550732b60473f101cb88796b3d",
       "nets": {
         "+12V": {
           "segments": 8,
@@ -2613,11 +2613,32 @@
               "pad": "2"
             },
             {
-              "reference": "U1",
+              "reference": "R304",
               "pad": "1"
             }
           ],
           "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DB_CH_INPUT": {
+          "segments": 3,
+          "length_mm": 5.749,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R304",
+              "pad": "2"
+            },
+            {
+              "reference": "U1",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": true,
           "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
@@ -2636,11 +2657,32 @@
               "pad": "2"
             },
             {
+              "reference": "R314",
+              "pad": "1"
+            }
+          ],
+          "has_routed_copper": false,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "DB_REV_INPUT": {
+          "segments": 3,
+          "length_mm": 5.288,
+          "widths_mm": [
+            0.3
+          ],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "R314",
+              "pad": "2"
+            },
+            {
               "reference": "U1",
               "pad": "3"
             }
           ],
-          "has_routed_copper": false,
+          "has_routed_copper": true,
           "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
@@ -3408,7 +3450,7 @@
       "all_corner_review_complete": false
     },
     "Reverb": {
-      "sha256": "2c1af294f09cb902c330ef5c52ceaadd44d48af136f5e22d5fe30e3e216f3683",
+      "sha256": "4a7cf4d9f732da74809d36ee3568bfd3651b641a9c05676021f23101ddbd45c8",
       "nets": {
         "+12V": {
           "segments": 11,
@@ -3437,8 +3479,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "+15V": {
-          "segments": 35,
-          "length_mm": 228.788,
+          "segments": 38,
+          "length_mm": 244.43,
           "widths_mm": [
             0.3
           ],
@@ -3503,6 +3545,10 @@
               "pad": "1"
             },
             {
+              "reference": "R619",
+              "pad": "1"
+            },
+            {
               "reference": "U10",
               "pad": "8"
             },
@@ -3520,8 +3566,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "-15V": {
-          "segments": 43,
-          "length_mm": 281.331,
+          "segments": 45,
+          "length_mm": 296.157,
           "widths_mm": [
             0.3
           ],
@@ -3584,6 +3630,10 @@
             {
               "reference": "JR6",
               "pad": "3"
+            },
+            {
+              "reference": "R620",
+              "pad": "2"
             },
             {
               "reference": "U10",
@@ -3725,10 +3775,11 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "GND": {
-          "segments": 119,
-          "length_mm": 504.854,
+          "segments": 128,
+          "length_mm": 560.939,
           "widths_mm": [
-            0.3
+            0.3,
+            0.4
           ],
           "vias": [
             {
@@ -3832,6 +3883,10 @@
               "pad": "1"
             },
             {
+              "reference": "D604",
+              "pad": "1"
+            },
+            {
               "reference": "JR1",
               "pad": "2"
             },
@@ -3854,6 +3909,10 @@
             {
               "reference": "JR6",
               "pad": "2"
+            },
+            {
+              "reference": "K3",
+              "pad": "11"
             },
             {
               "reference": "K3",
@@ -3882,6 +3941,14 @@
             {
               "reference": "R617",
               "pad": "2"
+            },
+            {
+              "reference": "R619",
+              "pad": "2"
+            },
+            {
+              "reference": "R620",
+              "pad": "1"
             },
             {
               "reference": "RV601",
@@ -3947,8 +4014,8 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "OUT_AC": {
-          "segments": 5,
-          "length_mm": 18.851,
+          "segments": 6,
+          "length_mm": 15.473,
           "widths_mm": [
             0.3
           ],
@@ -3969,7 +4036,7 @@
         },
         "OUT_BUF": {
           "segments": 13,
-          "length_mm": 38.489,
+          "length_mm": 36.629,
           "widths_mm": [
             0.3
           ],
@@ -4293,16 +4360,37 @@
           "current_qualification": "pending per-path current/stackup/thermal evidence"
         },
         "WET_AC": {
-          "segments": 6,
-          "length_mm": 22.766,
+          "segments": 15,
+          "length_mm": 63.359,
           "widths_mm": [
-            0.3
+            0.3,
+            0.4
           ],
-          "vias": [],
+          "vias": [
+            {
+              "at_mm": [
+                123.62,
+                30.62
+              ],
+              "outer_layer_diameters_mm": {
+                "F.Cu": 0.8,
+                "B.Cu": 0.8
+              },
+              "drill_mm": 0.4
+            }
+          ],
           "pad_connections": [
             {
               "reference": "C607",
               "pad": "2"
+            },
+            {
+              "reference": "D603",
+              "pad": "1"
+            },
+            {
+              "reference": "K3",
+              "pad": "13"
             },
             {
               "reference": "R617",
@@ -4407,6 +4495,27 @@
             {
               "reference": "U11",
               "pad": "5"
+            }
+          ],
+          "has_routed_copper": true,
+          "length_scope": "Sum of native tracks/arcs, not a source-to-load path length; zones excluded",
+          "current_qualification": "pending per-path current/stackup/thermal evidence"
+        },
+        "WET_Z_JOIN": {
+          "segments": 1,
+          "length_mm": 4.0,
+          "widths_mm": [
+            0.4
+          ],
+          "vias": [],
+          "pad_connections": [
+            {
+              "reference": "D603",
+              "pad": "2"
+            },
+            {
+              "reference": "D604",
+              "pad": "2"
             }
           ],
           "has_routed_copper": true,
@@ -4717,11 +4826,13 @@
             148.0,
             15.0
           ],
-          "segments": 2,
+          "segments": 3,
           "in_pad": true,
           "at_via": false,
           "pairwise_turns_degrees": [
-            90.0
+            90.0,
+            45.0,
+            45.0
           ],
           "right_angle_pair_present": true,
           "qualified": false
@@ -4849,11 +4960,13 @@
             137.0,
             15.0
           ],
-          "segments": 2,
+          "segments": 3,
           "in_pad": true,
           "at_via": false,
           "pairwise_turns_degrees": [
-            90.0
+            90.0,
+            135.0,
+            135.0
           ],
           "right_angle_pair_present": true,
           "qualified": false
@@ -5275,6 +5388,22 @@
           "qualified": false
         },
         {
+          "net": "GND",
+          "layer": "B.Cu",
+          "at_mm": [
+            114.0,
+            29.7
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
+        },
+        {
           "net": "WET_AC",
           "layer": "F.Cu",
           "at_mm": [
@@ -5468,6 +5597,22 @@
             90.0
           ],
           "right_angle_pair_present": true,
+          "qualified": false
+        },
+        {
+          "net": "OUT_BUF",
+          "layer": "F.Cu",
+          "at_mm": [
+            128.8,
+            60.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            135.0
+          ],
+          "right_angle_pair_present": false,
           "qualified": false
         },
         {
@@ -5742,6 +5887,54 @@
             135.0
           ],
           "right_angle_pair_present": false,
+          "qualified": false
+        },
+        {
+          "net": "WET_AC",
+          "layer": "B.Cu",
+          "at_mm": [
+            132.0,
+            32.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
+          "qualified": false
+        },
+        {
+          "net": "GND",
+          "layer": "B.Cu",
+          "at_mm": [
+            121.62,
+            29.7
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            135.0
+          ],
+          "right_angle_pair_present": false,
+          "qualified": false
+        },
+        {
+          "net": "GND",
+          "layer": "B.Cu",
+          "at_mm": [
+            125.5,
+            9.0
+          ],
+          "segments": 2,
+          "in_pad": true,
+          "at_via": false,
+          "pairwise_turns_degrees": [
+            90.0
+          ],
+          "right_angle_pair_present": true,
           "qualified": false
         }
       ],

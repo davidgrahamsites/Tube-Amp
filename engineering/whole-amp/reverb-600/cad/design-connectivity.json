@@ -3280,10 +3280,12 @@
         "2": "OUT_AC"
       },
       "source": "DEC-007 v0.4",
-      "rating": "1% 0.25W metal film, 250V minimum",
+      "rating": "5%, 1W at70C, 350V or sqrt(P*R); pulse budget VAL-067",
       "status": "600/2250 received-tank draft; electrical and physical qualification pending",
-      "datasheet": "",
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+      "datasheet": "https://www.vishay.com/docs/28729/pr010203.pdf",
+      "footprint": "Renegade_Selected:Vishay_PR01_P12.7",
+      "selected_mpn": "PR01000101000JA500",
+      "selection_evidence": "engineering/whole-amp/reverb-600/wet-protection-integration/review.md"
     },
     {
       "project": "Renegade_220V_Reverb",
@@ -4587,10 +4589,12 @@
         "2": "MIX_OUT"
       },
       "source": "DEC-007 v0.4",
-      "rating": "1% 0.25W metal film, 250V minimum",
+      "rating": "1%, 0.6W at70C derated to0W at155C; 350V or sqrt(P*R)",
       "status": "600/2250 received-tank draft; electrical and physical qualification pending",
-      "datasheet": "",
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+      "datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf",
+      "footprint": "Renegade_Selected:Yageo_MFR50S_MF0207_P10.16",
+      "selected_mpn": "MF0207FTE52-1M",
+      "selection_evidence": "engineering/whole-amp/reverb-600/wet-protection-integration/review.md"
     },
     {
       "project": "Renegade_220V_Reverb",
@@ -4629,6 +4633,44 @@
       "footprint": "Renegade_Selected:Yageo_MFR50S_MF0207_P10.16",
       "selected_mpn": "MF0207FTE52-10K",
       "selection_evidence": "engineering/whole-amp/reverb-600/rail-load-integration/review.md"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "D603",
+      "unit": 1,
+      "value": "BZX55C27",
+      "symbol": "Device_D_Zener",
+      "pins": {
+        "1": "WET_AC",
+        "2": "WET_Z_JOIN"
+      },
+      "source": "VAL-067 wet-contact correction",
+      "rating": "27V nominal; 500mW only at specified lead cooling; VAL-067 application screen",
+      "status": "Native draft; application qualification pending",
+      "datasheet": "https://www.vishay.com/docs/85604/bzx55.pdf",
+      "footprint": "Renegade_Selected:Vishay_BZX55_DO35_P12.7",
+      "selected_mpn": "BZX55C27-TAP",
+      "selection_evidence": "engineering/whole-amp/reverb-600/wet-protection-integration/review.md"
+    },
+    {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "D604",
+      "unit": 1,
+      "value": "BZX55C27",
+      "symbol": "Device_D_Zener",
+      "pins": {
+        "1": "GND",
+        "2": "WET_Z_JOIN"
+      },
+      "source": "VAL-067 wet-contact correction",
+      "rating": "27V nominal; 500mW only at specified lead cooling; VAL-067 application screen",
+      "status": "Native draft; application qualification pending",
+      "datasheet": "https://www.vishay.com/docs/85604/bzx55.pdf",
+      "footprint": "Renegade_Selected:Vishay_BZX55_DO35_P12.7",
+      "selected_mpn": "BZX55C27-TAP",
+      "selection_evidence": "engineering/whole-amp/reverb-600/wet-protection-integration/review.md"
     }
   ]
 }

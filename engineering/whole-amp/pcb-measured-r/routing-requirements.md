@@ -51,3 +51,11 @@ Primary references checked2026-11-21:
 - IPC-2152 public contents: https://www.electronics.org/TOC/IPC-2152.pdf (conductor thickness, environment, temperature-rise and via scope; full charts not accessed).
 
 November 24, FB-118/119: recheck every current path for actual current, stackup, temperature and voltage drop, including vias and pad necks. Inspect the user-marked Reverb U12/C615/R616 turns in native geometry and rendered copper; a simple-bend screen does not clear branches or pad transitions. No all-board ampacity claim is authorized by a default trace width or DRC pass.
+
+November25, FB-134: user again requires every trace to carry its actual current. Release requires a source-linked per-path current/stackup/thermal/drop budget and narrow-transition/via verification on all boards, including currently unrouted nets. VAL-068 local routing and DRC do not close this requirement.
+
+## November25 — width headroom and fabrication tolerance (DEC-020)
+
+See [source assessment](review/trace-width-research-2026-11-25.md). For power and return routes, target at least1.5× the qualified required minimum **finished** width; prefer2× where space permits without harming spacing, return geometry or parasitics. This is an engineering width target, not a current multiplier or IPC rule. Any reduced target needs a documented path-specific reason and still must meet the qualified minimum. Sensitive signal routes are assessed individually.
+
+Drawn width >= target multiplier × required minimum finished width / (1 − negative width tolerance). Provisionally allow20% narrowing based on JLCPCB's published capability:1.25× drawn only preserves the minimum,1.875× gives1.5× finished width,2.5× gives2×. Confirm the actual process/minimum finished thickness and avoid double-counting built-in tool allowances. Start with10°C trace self-heating above the local board baseline, subject to thermal-model/prototype review. Check wider-than-nominal copper and guaranteed finished spacing too. Current, fault and insulation qualification remain mandatory.

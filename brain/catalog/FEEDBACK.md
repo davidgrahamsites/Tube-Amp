@@ -1371,3 +1371,41 @@ Source: Current amplifier conversation
 - [brain/records/DEC-019-future-free-plugin-and-current-scope.md](<../../brain/records/DEC-019-future-free-plugin-and-current-scope.md>)
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 
+## FB-134 — all-trace-current-capacity-reinforcement
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> and all the traces need to be wide enough for the current that will pass through them!
+
+Reinforces mandatory all-board current-capacity qualification, including continuous/RMS currents, startup/fault duration, copper thickness/temperature rise, shared returns, pad necks and vias. No default trace width or clearance DRC is sufficient.
+
+Source: Current amplifier conversation during VAL-068 integration
+
+- [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+
+## FB-135 — trace-width-headroom
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> how much bigger should the traces be than specification? ... you could make them considerably bigger
+
+User requests defensible margin and favors wider copper where appropriate. Record engineering margin separately from manufacturing tolerance; no arbitrary all-net widening.
+
+Source: Current amplifier conversation; source locators and pasted attachment hash in linked digest
+
+- [brain/records/DEC-020-trace-width-margin.md](<../../brain/records/DEC-020-trace-width-margin.md>)
+- [engineering/whole-amp/pcb-measured-r/review/trace-width-research-2026-11-25.md](<../../engineering/whole-amp/pcb-measured-r/review/trace-width-research-2026-11-25.md>)
+- [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
+
+## FB-136 — trace-width-reference-digest
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> You probably know all this info ... also digest these articles
+
+Review user-pasted ALLPCB text and Autodesk, SierraConnect and DYC links; retain scoped findings and reject unsupported universal current/tolerance rules.
+
+Source: Current amplifier conversation; source locators and pasted attachment hash in linked digest
+
+- [brain/records/DEC-020-trace-width-margin.md](<../../brain/records/DEC-020-trace-width-margin.md>)
+- [engineering/whole-amp/pcb-measured-r/review/trace-width-research-2026-11-25.md](<../../engineering/whole-amp/pcb-measured-r/review/trace-width-research-2026-11-25.md>)
+- [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
+

@@ -33,6 +33,7 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | DEC-017 | decision | cross-domain | documented | 2026-11-25 | [Small-quantity marketplace sources](records/DEC-017-small-quantity-marketplaces.md) |
 | DEC-018 | decision | cross-domain | documented | 2026-11-25 | [Reusable circuit blocks with their own datasheets](records/DEC-018-functional-block-datasheets.md) |
 | DEC-019 | decision | cross-domain | documented | 2026-11-25 | [Finish the hardware; retain a future free amplifier plugin](records/DEC-019-future-free-plugin-and-current-scope.md) |
+| DEC-020 | decision | pcb | documented | 2026-11-25 | [Trace-width margin and manufacturing tolerance](records/DEC-020-trace-width-margin.md) |
 | VAL-001 | validation | schematic | verified | 2026-10-03 | [Extracted starter matches supplied archive](records/VAL-001-starter-archive-match.md) |
 | VAL-002 | validation | cross-domain | verified | 2026-10-04 | [KiCad MCP installation and scoped smoke checks](records/VAL-002-kicad-mcp-install.md) |
 | VAL-003 | validation | schematic | verified | 2026-10-04 | [Original PowerPoint received and inspected](records/VAL-003-original-ppt-intake.md) |
@@ -100,3 +101,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-065 | validation | cross-domain | documented | 2026-11-25 | [Reverb voltage-spacing and interface acceptance](records/VAL-065-reverb-voltage-spacing.md) |
 | VAL-066 | validation | cross-domain | documented | 2026-11-25 | [Common buffer: retain overload headroom](records/VAL-066-common-buffer-headroom.md) |
 | VAL-067 | validation | cross-domain | documented | 2026-11-25 | [Local wet-contact clamp correction set](records/VAL-067-wet-contact-protection.md) |
+| VAL-068 | validation | cross-domain | documented | 2026-11-25 | [Native wet-contact correction](records/VAL-068-native-wet-contact-protection.md) |

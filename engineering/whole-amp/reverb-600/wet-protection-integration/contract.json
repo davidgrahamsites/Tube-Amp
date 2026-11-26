@@ -1,0 +1,114 @@
+{
+  "baseline_commit": "37f24fe8346ae7f49940a1019322242617f20c22",
+  "native_sha256": {
+    "engineering/whole-amp/reverb-600/circuit.json": "c604d3bbbe9334188f6aa6b799b980d4c87de91ba63fb8f50146dbde4991b8e1",
+    "engineering/whole-amp/reverb-600/cad/design-connectivity.json": "2a30a754399660a6c47b35e14df1a48c287e98be92935be834f0fb6cb92da854",
+    "engineering/whole-amp/reverb-600/cad/07c_reverb_output.kicad_sch": "03b4247d3391eee516359c2a60d9797d55294fa5f04d25b43bfbb48cd80c72dd",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "cc9a6b88d6d175499e31275d1f2ffa9b2546e4ef6fcd2e8d97c6749c2c0fc9df"
+  },
+  "parts": {
+    "D603": {
+      "value": "BZX55C27",
+      "mpn": "BZX55C27-TAP",
+      "symbol": "Device:D_Zener",
+      "pins": {
+        "1": "WET_AC",
+        "2": "WET_Z_JOIN"
+      },
+      "footprint": "Renegade_Selected:Vishay_BZX55_DO35_P12.7",
+      "rating": "27V nominal; 500mW only at specified lead cooling; VAL-067 application screen",
+      "datasheet": "https://www.vishay.com/docs/85604/bzx55.pdf",
+      "schematic_at": [
+        285.75,
+        99.06,
+        270
+      ],
+      "board_at": [
+        120.5,
+        42.5
+      ],
+      "supplier_sku": "Exact distributor SKU unverified; search BZX55C27-TAP",
+      "supplier_url": "https://www.digikey.cn/zh/products/detail/vishay-general-semiconductor-diodes-division/BZX55C27-TAP/4826078",
+      "observed": "2026-11-25 indexed listing; live stock/Shanghai checkout unverified"
+    },
+    "D604": {
+      "value": "BZX55C27",
+      "mpn": "BZX55C27-TAP",
+      "symbol": "Device:D_Zener",
+      "pins": {
+        "1": "GND",
+        "2": "WET_Z_JOIN"
+      },
+      "footprint": "Renegade_Selected:Vishay_BZX55_DO35_P12.7",
+      "rating": "27V nominal; 500mW only at specified lead cooling; VAL-067 application screen",
+      "datasheet": "https://www.vishay.com/docs/85604/bzx55.pdf",
+      "schematic_at": [
+        285.75,
+        114.3,
+        90
+      ],
+      "board_at": [
+        120.5,
+        46.5
+      ],
+      "supplier_sku": "Exact distributor SKU unverified; search BZX55C27-TAP",
+      "supplier_url": "https://www.digikey.cn/zh/products/detail/vishay-general-semiconductor-diodes-division/BZX55C27-TAP/4826078",
+      "observed": "2026-11-25 indexed listing; live stock/Shanghai checkout unverified"
+    },
+    "R616": {
+      "value": "100",
+      "mpn": "PR01000101000JA500",
+      "pins": {
+        "1": "OUT_BUF",
+        "2": "OUT_AC"
+      },
+      "footprint": "Renegade_Selected:Vishay_PR01_P12.7",
+      "rating": "5%, 1W at70C, 350V or sqrt(P*R); pulse budget VAL-067",
+      "datasheet": "https://www.vishay.com/docs/28729/pr010203.pdf",
+      "supplier_sku": "Exact distributor SKU unverified; search PR01000101000JA500",
+      "supplier_url": "https://www.digikey.cn/zh/products/detail/vishay-beyschlag-draloric-bc-components/PR01000101000JA500/7350589",
+      "observed": "2026-11-25 indexed listing; live stock/Shanghai checkout unverified",
+      "board_at": [
+        128.46,
+        60
+      ]
+    },
+    "R618": {
+      "value": "1M",
+      "mpn": "MF0207FTE52-1M",
+      "pins": {
+        "1": "WET_AC",
+        "2": "MIX_OUT"
+      },
+      "footprint": "Renegade_Selected:Yageo_MFR50S_MF0207_P10.16",
+      "rating": "1%, 0.6W at70C derated to0W at155C; 350V or sqrt(P*R)",
+      "datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf",
+      "supplier_sku": "C1373811",
+      "supplier_url": "https://so.szlcsc.com/global.html?k=C1373811",
+      "observed": "2026-11-11 historical listing; current stock/Shanghai checkout unverified"
+    }
+  },
+  "finished_hole_tolerance_provisional_mm": 0.1,
+  "hole_geometry": {
+    "Vishay_BZX55_DO35_P12.7": {
+      "pitch": 12.7,
+      "drill": 0.9,
+      "pad": 1.8,
+      "lead_max": 0.6,
+      "body_length_max": 3.9,
+      "body_diameter_max": 1.7
+    },
+    "Vishay_PR01_P12.7": {
+      "pitch": 12.7,
+      "drill": 0.9,
+      "pad": 1.8,
+      "lead_max": 0.63,
+      "body_length_max": 6.5,
+      "coated_length_max": 8,
+      "body_diameter_max": 2.5
+    }
+  },
+  "fabricator_tolerance_verified": false,
+  "native_integrated": true,
+  "all_six_complete": false
+}
