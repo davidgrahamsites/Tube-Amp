@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><title>Build status and next work</title><!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="assets/reader.css"><link rel="stylesheet" href="assets/katex/katex.min.css"><script defer src="assets/katex/katex.min.js"></script><script defer src="assets/katex/auto-render.min.js"></script><script defer src="assets/math.js"></script><!-- /reader-head --></head><body><!-- reader-nav --><header><nav aria-label="Documents"><a href="index.html">Engineering status</a><a href="glossary.html">Vocabulary key</a><a href="document-standard.html">Document standard</a></nav></header><!-- /reader-nav --><main><p class="eyebrow">Renegade amplifier · Engineering record · 26 November 2026</p><h1>Build status and next work</h1><p class="notice"><strong>The build is not shown to be impossible.</strong> The complete assembly has not yet passed fit or operating checks. It is not ready for manufacture.</p>
 <h2>What prevents release</h2>
-<ul><li>The present carrier studies exceed the provisional cabinet frame by 41 mm in width or 20 mm in depth. These are different arrangements, not a single measured assembly.</li><li>The heater reference still fails modeled operating cases.</li><li>Exact transformers, speaker, capacitor assemblies and connectors remain unresolved.</li><li>The current native CAD has four incomplete boards; the intended build has three.</li><li>The 46 mm drill chuck is known; bit reach and motor-body clearance are pending.</li></ul>
+<ul><li>The present carrier studies exceed the provisional cabinet frame by 41 mm in width or 20 mm in depth. These are different arrangements, not a single measured assembly.</li><li>The native heater reference still fails; a separate-group correction passes conditional normal bounds but needs a real supply ceiling and fault protection.</li><li>Exact transformers, speaker, capacitor assemblies and connectors remain unresolved.</li><li>The current native CAD has four incomplete boards; the intended build has three.</li><li>The 46 mm drill chuck is known; bit reach and motor-body clearance are pending.</li></ul>
 <p>These findings require corrections. They do not prove that a revised assembly cannot fit. Repeated reviews cannot replace those corrections.</p>
 <h2>First layout to check</h2>
 <table><thead><tr><th>Location</th><th>Parts</th></tr></thead><tbody><tr><td>Lower metal enclosure</td><td>Power transformers, rectifiers, raw reservoir, bleeders, choke and screen filter. Keep their high-current loops local.</td></tr><tr><td>Upper assembly</td><td>Tube and audio circuits, local stage filters and bypass capacitors. Keep the output transformer near the output tubes for the first comparison.</td></tr><tr><td>Still to assign</td><td>Heater reference, bias supply, auxiliary regulators and the actual mains/standby switch paths.</td></tr></tbody></table>
@@ -13,13 +13,13 @@
 <li><strong>Finish the boards and harness.</strong> Recheck trace current capacity, insulation, holes, returns, bypass placement and accessible connectors after placement changes.</li>
 <li><strong>Verify the populated prototype.</strong> Check output, both mains settings, protection, hum, temperature, stability and service access against stated limits before production release.</li></ol>
 <p>No further five-pass review starts automatically. The next checkpoint must produce a corrected circuit, exact part evidence or a populated fit result.</p>
-<h2>Current reports</h2><p><a href="prototype-checks.html">Design sequence, physical tests and required hardware</a></p><ul>
+<h2>Current reports</h2><p><a href="../../engineering/component-selection/heater-divider-rating/correction-review.html">HD-003: heater correction, paired audio results and full calculations</a></p><p><a href="prototype-checks.html">Design sequence, physical tests and required hardware</a></p><ul>
 <li><a href="../../plans/power-packaging-synthesis/final.html">Combined work plan and completion criteria</a></li>
 <li><a href="../design-journal/calculations/current-power-packaging.html">Step-by-step calculations and linked choices</a></li>
 <li><a href="../../plans/power-packaging-synthesis/acceptance.html">Open acceptance checks</a> and <a href="../../plans/power-packaging-synthesis/interface-table.html">proposed physical connections</a></li>
 <li><a href="../../plans/capacitor-bank-fit/final.html">Capacitor-fit review</a>, <a href="../../plans/bottom-power-enclosure/final.html">lower-enclosure review</a> and <a href="../../plans/power-packaging-alien/final.html">alternative-layout review</a></li>
 <li><a href="../design-journal/chapters/bottom-power-packaging.html">Choices log</a></li></ul>
-<p>Four review cycles are complete. No native board or schematic changed during this review checkpoint. No physical test, new electrical simulation, purchase or fabrication occurred.</p><!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="glossary.html">full key</a> for related terms.</p><dl><dt>Bias</dt><dd>A steady voltage or current that sets a device operating point.</dd>
+<p>HD-003 completed 16 reference transients and five audio runs. Native boards and schematics remain unchanged. No physical test, purchase or fabrication occurred.</p><!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="glossary.html">full key</a> for related terms.</p><dl><dt>Bias</dt><dd>A steady voltage or current that sets a device operating point.</dd>
 <dt>Capacitor</dt><dd>A component that stores charge and electrical energy.</dd>
 <dt>Chuck</dt><dd>The drill part that grips the bit.</dd>
 <dt>Clearance</dt><dd>The shortest distance through air between conductive parts.</dd>
@@ -29,7 +29,6 @@
 <dt>Mains</dt><dd>The building AC power supply.</dd>
 <dt>Populated</dt><dd>With the components installed.</dd>
 <dt>Reservoir</dt><dd>A capacitor bank that stores energy after rectification.</dd>
-<dt>Schematic</dt><dd>A drawing of electrical connections and component functions.</dd>
 <dt>Standby</dt><dd>A switch state; it does not by itself prove the amplifier is de-energized.</dd>
 <dt>Tank</dt><dd>The mechanical spring-reverb assembly.</dd>
 <dt>Transformer</dt><dd>A magnetic device that transfers energy between windings.</dd>

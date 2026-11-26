@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heater-reference correction screen</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Heater-reference correction screen</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HD-003 · Diagnostic only</p>
+      </header>
+
+      <section>
+        <h2>Why the correction was screened</h2>
+        <p>The six tube heaters share one reference in the current circuit. The earlier screen found incompatible heater-to-cathode voltage windows in 14 of 38 completed cases. The shared divider calculated 33.177 kΩ nominal and 36.574 kΩ at its declared corner. Both exceed the JJ EL34 reference limit of 20 kΩ. Splitting heater groups and lowering the preamp rail were screened as bounded candidates. Neither was added to the circuit.</p>
+        <p>The current candidate has a 39 kΩ / 39 kΩ preamp reference, a 100 nF / 100 nF capacitor pair, and a separate output-tube reference. The screen evaluates 16 compensated resistance and capacitance tolerance corners. It tests a 300 V preamp ceiling. That ceiling is a calculation boundary. No regulator or clamp implementing it exists.</p>
+        <p>An earlier 100 kΩ / 100 kΩ candidate was rejected after adding the cold cathode return path. With +5% divider resistors, one 102 Ω midpoint resistor, and R22 at 105 kΩ, the total is 157.602 kΩ. That exceeds the 150 kΩ reference limit. The revised 39 kΩ candidate lowers this path.</p>
+      </section>
+
+      <section>
+        <h2>Normal-operation bound</h2>
+        <p>The worst calculated preamp heater-to-cathode voltage is 170.976 V. This includes a 5.770 V heater endpoint excursion and a 0.206 V leakage allocation. The comparison limit is 180 V.</p>
+        <div class="math">\[ V_{HK,\max}=165.000\;\mathrm{V}+5.770\;\mathrm{V}+0.206\;\mathrm{V}=170.976\;\mathrm{V} \]</div>
+        <div class="math">\[ M=180.000\;\mathrm{V}-170.976\;\mathrm{V}=9.024\;\mathrm{V} \]</div>
+        <p>This is an analytical margin under the declared bounds. It does not include startup cathode overshoot beyond the supply bounds. The 8 V RMS heater input is a diagnostic excursion, not an approved operating point. The 39 kΩ parts, capacitor tolerances, leakage allocation, and exact tubes are not selected or verified.</p>
+        <p>The preamp reference maximum is 20.475 kΩ. With one 102 Ω midpoint resistor and the 105 kΩ cathode return, the worst full path is 125.577 kΩ. With the B_PRE source path open, the lower divider leg gives a 146.052 kΩ path. Both are below the 150 kΩ reference limit. The output-group midpoint allowance is 102 Ω, below its 20 kΩ reference limit. These calculations do not prove winding isolation or real-tube compliance.</p>
+      </section>
+
+      <section>
+        <h2>Fault screen</h2>
+        <p>All eight declared single-part fault envelopes fail. One example is an open upper divider resistor: the possible heater-to-cathode voltage reaches 305.770 V. These are analytical fault envelopes, not simulated tube-fault waveforms. The normal-operation margin therefore does not establish fault safety. A fault policy and complete correction remain open.</p>
+      </section>
+
+      <section>
+        <h2>Paired audio-model results</h2>
+        <p>The candidate was compared with the existing 313 V model at the same clean input, then repeated at a 300 V preamp boundary. At 1 kHz nominal input of 0.009 V peak, the modeled fundamental power changed from 25.7131 W to 25.6296 W. Modeled total harmonic distortion changed from 6.6019% to 6.5745%.</p>
+        <p>The dirty overload pair changed from 36.1527 W and 43.5240% distortion to 36.1288 W and 43.4004%. These are overloaded, distorted model outputs. They are not a clean-output rating and do not establish an amplifier power rating.</p>
+        <p>The model uses generic tubes, stiff supply rails, an ideal buffer, and unselected magnetics. These results are simulation evidence only. No bench result is available here.</p>
+        <p>At 300 V, nominal divider current is 3.846 mA. Each 39 kΩ resistor dissipates 0.5769 W nominal; the corner screen reaches 0.6073 W. These values do not select a resistor. Hot derating, voltage rating, pulse behavior, source implementation, and exact parts remain open.</p>
+      </section>
+
+      <section>
+        <h2>Decision and remaining evidence</h2>
+        <p>HD-003 records a candidate boundary, not an adopted circuit. No native schematic or board change is made. The heater system is not qualified.</p>
+        <p>Next, implement the 300 V ceiling, select exact parts and resolve the fault cases before dependent routing. Verify winding isolation, cold and hot waveforms, temperature, noise and assembled fit on the prototype before production release.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>Heater reference (HREF)</dt>
+          <dd>The electrical reference applied to the tube heater circuit.</dd>
+          <dt>Heater-to-cathode voltage (VHK)</dt>
+          <dd>The voltage difference between a tube heater and its cathode.</dd>
+          <dt>Divider</dt>
+          <dd>Two series resistors that set a reference voltage from a supply.</dd>
+          <dt>Corner</dt>
+          <dd>A tested combination of component tolerances and operating limits.</dd>
+          <dt>Leakage allocation</dt>
+          <dd>The assumed current allowance for insulation leakage in this calculation.</dd>
+          <dt>Compensated tolerance</dt>
+          <dd>A tested resistor and capacitor tolerance combination used to bound the reference response.</dd>
+          <dt>Stiff rail</dt>
+          <dd>A modeled supply that does not sag when the circuit draws current.</dd>
+          <dt>Ideal buffer</dt>
+          <dd>A modeled stage that transfers a signal without its own loading or loss limits.</dd>
+          <dt>Total harmonic distortion (THD)</dt>
+          <dd>A measure of harmonic signal content relative to the fundamental.</dd>
+          <dt>Single-part fault envelope</dt>
+          <dd>A calculated range for a declared failure of one component. It is not a physical fault test.</dd>
+          <dt>V peak (Vpk)</dt>
+          <dd>The voltage from a waveform's center level to its positive peak.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/correction-screen.json">HD-003 correction screen result</a> — tolerance corners, fault cases, and paired model outputs.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/correction-100k-rejected.json">Rejected 100 kΩ candidate receipt</a> — retained evidence for the cathode-return resistance correction.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/correction-review.html">HD-003 engineering review</a> — revised limits, resistance paths, and calculation details.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/correction-contract.json">HD-003 correction contract</a> — candidate values, declared limits, and scope limits.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/interface-review.md">HD-002 heater-interface review</a> — prior shared-reference results and correction boundary.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/sources/tube-limits.json">Tube-limit source record</a> — provenance for reference tube limits.</li>
+          <li><a href="../../../engineering/whole-amp/reverb-600/circuit.json">Current circuit description</a> — source topology used by the screen.</li>
+          <li><a href="../../../brain/records/VAL-076-heater-interface-boundary.md">VAL-076</a> — accepted record for the prior interface boundary.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>HD-003 — Split heater reference</title><!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../../docs/engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../../docs/engineering-reader/assets/katex/katex.min.css"><script defer src="../../../docs/engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../../docs/engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../../docs/engineering-reader/assets/math.js"></script><!-- /reader-head --></head><body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../../docs/engineering-reader/index.html">Engineering status</a><a href="../../../docs/engineering-reader/glossary.html">Vocabulary key</a><a href="../../../docs/engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav --><main>
+<p class="eyebrow">Renegade · HD-003 · 26 November 2026 · Baseline d9e67a5</p>
+<h1>Split the heater references; bound the preamp supply</h1>
+<p class="notice"><strong>Conditional correction candidate.</strong> Separate the four preamp heaters from the two output-tube heaters. The calculations support further implementation work at a 300 V maximum preamp supply. The actual supply ceiling, fault protection and isolated windings are not implemented.</p>
+<h2>Problem and proposed circuit</h2>
+<p>The present common reference fails the earlier <a href="interface-review.md">HD-002 screen</a>. The output tubes need a low-resistance reference near ground; the dirty-channel cathode follower needs an elevated reference. Both halves of V3 share one heater, so moving only the output heaters does not resolve every high-supply case.</p>
+<table><thead><tr><th>Interface</th><th>Candidate</th><th>Required boundary</th></tr></thead><tbody>
+<tr><td>V1–V4 heaters</td><td>Separate isolated 6.3 V winding; 1.2 A nominal tube load</td><td>Own reference and winding insulation; no connection to the output heater winding</td></tr>
+<tr><td>Preamp reference</td><td>39 kΩ from B_PRE to HREF; 39 kΩ from HREF to ground; 100 nF across each resistor</td><td>Two 100 Ω midpoint resistors; replace the former reference network in this candidate, not in native CAD</td></tr>
+<tr><td>V5–V6 heaters</td><td>Separate isolated 6.3 V winding; 3 A nominal tube load</td><td>Own two 100 Ω midpoint resistors to ground; pilot load still to assign</td></tr>
+<tr><td>B_PRE</td><td>300 V maximum, including startup and supply variation</td><td>The current passive filter does not guarantee this limit</td></tr></tbody></table>
+<p>Keep the tube count, audio stages and functional blocks. These heater loads exclude pilot, winding regulation and cold-start allowances.</p>
+<h2>Primary limits</h2>
+<p>The JJ reference sheets specify 180 V heater-to-cathode and 150 kΩ heater-to-cathode resistance for <a href="https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc83s.pdf">ECC83S</a>, and 100 V and 20 kΩ for <a href="https://www.jj-electronic.com/images/stories/product/power_tubes/pdf/el34_e34l.pdf">EL34</a>. The <a href="https://www.jj-electronic.com/images/stories/product/preamplifying_tubes/pdf/ecc803s.pdf">ECC803S sheet</a> specifies 100 V; it is not a higher-limit substitute. Manufacturer documents were checked on 26 November 2026. Purchased tube identity remains open.</p>
+<h2>Inputs and calculation</h2>
+<p>Allocate ±5% total resistor variation, ±10% total capacitor variation, ±2% midpoint-resistor variation and 10 µA total reference leakage. These are design allocations, not selected-part guarantees. Use 8 V RMS as a heater excursion for this diagnostic only; it is not an approved operating voltage.</p>
+<p>Let <span class="math">\(R_t,R_b\)</span> be the upper and lower resistors, <span class="math">\(C_t,C_b\)</span> their parallel capacitors, and <span class="math">\(u\)</span> the B_PRE voltage. The reference transfer is:</p>
+<div class="math">\[H(s)=\frac{1/R_t+sC_t}{1/R_t+1/R_b+s(C_t+C_b)}=a_\infty+\frac{a_0-a_\infty}{1+s\tau}\]</div>
+<div class="math">\[a_0=\frac{R_b}{R_t+R_b},\qquad a_\infty=\frac{C_t}{C_t+C_b},\qquad \tau=(R_t\parallel R_b)(C_t+C_b)\]</div>
+<p>The allocated ranges are <span class="math">\(0.475\le a_0\le0.525\)</span> and <span class="math">\(0.45\le a_\infty\le0.55\)</span>. Nominal time constant is 3.9 ms. Equal ratios make the reference track half the supply; unequal ratios can produce a negative reference transient when the supply falls.</p>
+<p>For a supply between zero and 300 V, a corresponding bounded filter state and a cathode between ground and the instantaneous supply, the worst heater-to-cathode allocation is:</p>
+<div class="math">\[V_{h,pk}=8\sqrt2\frac{1.02}{2}=5.76999\ \mathrm V\]</div>
+<div class="math">\[R_{th,max}=(39\,000\times1.05)/2=20\,475\ \Omega\]</div>
+<div class="math">\[|V_{hk}|\le0.55(300)+5.76999+10^{-5}(20\,475+102)=170.97576\ \mathrm V\]</div>
+<div class="math">\[M=180-170.97576=9.02424\ \mathrm V\]</div>
+<p>The 102 Ω allowance uses one midpoint resistor, avoiding a dependency on unknown winding resistance. This voltage proof does not cover a cathode held above a collapsing supply by stored charge, a supply excursion above 300 V, excessive leakage or a component fault.</p>
+<h2>Include the cathode return resistance</h2>
+<p>The first 100 kΩ/100 kΩ candidate was rejected: its reference alone appeared acceptable, but the cold cathode-follower path also contains R22. At +5% variation the combined path exceeds 150 kΩ.</p>
+<div class="math">\[52\,500+102+105\,000=157\,602\ \Omega&gt;150\,000\ \Omega\]</div>
+<p>The revised 39 kΩ divider has these conservative cold paths; no conducting-tube impedance is credited:</p>
+<div class="math">\[R_{hk,max}=20\,475+102+105\,000=125\,577\ \Omega\]</div>
+<div class="math">\[R_{hk,source\ open}=40\,950+102+105\,000=146\,052\ \Omega\]</div>
+<p>The second expression uses only the lower divider resistor when the upper supply path is open. The checker verifies each cathode resistor value and path against the source circuit. Cathode-resistor faults remain separate checks.</p>
+<h2>Power and loading</h2>
+<div class="math">\[I_{divider}=\frac{300}{78\,000}=3.84615\ \mathrm{mA},\qquad P_R=I^2(39\,000)=0.576923\ \mathrm W\]</div>
+<p>The resistor corner screen reaches 0.60729 W per divider resistor. A nominal 2 W class is a starting point; working voltage, hot derating, pulse rating, lead temperature and China availability still govern selection. The two 100 nF capacitors add a nominal 50 nF series load to B_PRE. Neither capacitor is the former 47 µF part.</p>
+<h2>Completed comparisons</h2>
+<p>Sixteen startup/shutdown simulations agree with the independent linear-ramp solution to less than 0.001 V. Eight single-component fault envelopes can reach about 305.77 V heater-to-cathode; none is accepted. Those are conservative envelopes, not simulated tube-fault waveforms.</p>
+<table><thead><tr><th>1 kHz case</th><th>B_PRE 313 V</th><th>B_PRE 300 V</th></tr></thead><tbody>
+<tr><td>Clean, 9 mV peak input, volume full</td><td>25.7131 W; 6.6019% THD</td><td>25.6296 W; 6.5745% THD</td></tr>
+<tr><td>Dirty overload, 20 mV peak input, volume full</td><td>36.1527 W; 43.5240% THD</td><td>36.1288 W; 43.4004% THD</td></tr>
+<tr><td>Clean, halved timestep</td><td>Not repeated</td><td>25.6334 W; 6.5831% THD</td></tr></tbody></table>
+<p>Power is the fundamental component into the modeled 8 Ω load, not a measured clean-output rating. THD includes harmonics 2–10. Both comparisons use the same generic tubes, assumed transformer, ideal common buffer, 278 V B_EARLY, control settings and stiff supply sources; only B_PRE changes. These models do not include heater physics.</p>
+<p>Sampled small-signal gain changes stay below 0.08 dB at approximately 84 Hz, 1.02 kHz, 4.98 kHz, 10.22 kHz and 20 kHz. The 20 kHz changes are −0.0369 dB clean and −0.0448 dB dirty. This shows little incremental treble loss from the rail change; it does not clear the existing transformer-response or stability work.</p>
+<h2>Next engineering action</h2>
+<ol><li>Implement and check a real B_PRE ceiling, including unloaded startup, hot restart, mains extremes and shutdown.</li><li>Choose exact divider and capacitor parts; resolve reference and cathode-path faults without changing the audio stages merely to pass a screen.</li><li>Specify two isolated heater groups and check winding insulation, current, noise and thermal margins.</li><li>After those checks, revise the readable schematic, parts and connector interfaces; then update placement and routing.</li></ol>
+<p>No native schematic, PCB, selected part or mechanical file changed. Cabinet fit and full drill access remain open.</p>
+<h2>Reproduction and evidence</h2>
+<p>Run <code>python3 engineering/component-selection/heater-divider-rating/tools/correction.py</code>, then <code>python3 engineering/component-selection/heater-divider-rating/tools/check_correction.py</code> from the project root. The existing KiCad ngspice shared-library runtime executes the decks. Audio workers have a 120 s limit; incomplete runs remain failures.</p>
+<ul><li><a href="correction-contract.json">Inputs, assumptions and preserved source hashes</a></li><li><a href="results/correction-screen.json">Current calculations and simulation results</a></li><li><a href="results/correction-checks.json">Independent arithmetic and preservation checks</a></li><li><a href="results/correction-100k-rejected.json">Rejected 100 kΩ trial receipt</a>; its former deck files were replaced by the revised run and its hashes are historical, not current-file checks</li><li><a href="../../../docs/design-journal/chapters/heater-reference-correction.html">Design journal</a></li></ul>
+<!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>B_PRE</dt><dd>The filtered supply node for the specified preamplifier stages.</dd>
+<dt>B_EARLY</dt><dd>The filtered supply node for the earlier preamplifier stages.</dd>
+<dt>Capacitor</dt><dd>A component that stores charge and electrical energy.</dd>
+<dt>Derating</dt><dd>Operating below a component rating to allow for heat or other specified conditions.</dd>
+<dt>Ground</dt><dd>A named circuit reference; it is not automatically protective earth.</dd>
+<dt>Heater</dt><dd>The tube element that heats the cathode.</dd>
+<dt>Heater reference</dt><dd>The voltage used to set the heater circuit relative to the tube cathodes.</dd>
+<dt>HREF</dt><dd>The design name for the heater reference node.</dd>
+<dt>Impedance</dt><dd>Opposition to alternating current, including resistance and frequency-dependent effects; measured in ohms (Ω).</dd>
+<dt>Lead</dt><dd>A component terminal that connects to the board.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Mains</dt><dd>The building AC power supply.</dd>
+<dt>Nominal</dt><dd>The stated reference value before tolerance and operating variation.</dd>
+<dt>PCB</dt><dd>Printed circuit board.</dd>
+<dt>Preamp</dt><dd>Preamplifier; the stages that prepare the input signal for the power amplifier.</dd>
+<dt>Schematic</dt><dd>A drawing of electrical connections and component functions.</dd>
+<dt>Series</dt><dd>Connected in sequence so the same branch current passes through each part.</dd>
+<dt>Parallel</dt><dd>Connected across the same two electrical nodes.</dd>
+<dt>Transformer</dt><dd>A magnetic device that transfers energy between windings.</dd>
+<dt>Winding</dt><dd>A coil of insulated wire in a transformer or inductor.</dd>
+<dt>Thermal</dt><dd>Related to heat or temperature.</dd>
+<dt>Cathode</dt><dd>The tube electrode that emits electrons when heated.</dd>
+<dt>Cathode follower</dt><dd>A tube stage that takes its signal output from the cathode.</dd>
+<dt>Divider</dt><dd>Series components that produce a fraction of an applied voltage.</dd>
+<dt>THD</dt><dd>Total harmonic distortion; harmonic content relative to the fundamental, using the stated harmonic range.</dd>
+<dt>Fundamental</dt><dd>The waveform component at the applied signal frequency.</dd>
+<dt>Timestep</dt><dd>The time interval used by the simulator to resolve a waveform.</dd>
+<dt>Transient</dt><dd>A change in circuit conditions over time, such as startup or shutdown.</dd>
+<dt>Stiff supply</dt><dd>A modeled voltage source whose voltage does not change with load.</dd>
+<dt>Corner</dt><dd>A selected combination of component and operating limits.</dd></dl></section><!-- /reader-key --></main></body></html>

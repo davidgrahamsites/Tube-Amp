@@ -1603,3 +1603,15 @@ Source: Current amplifier conversation following HD-003 continuation
 
 - [docs/engineering-reader/prototype-checks.html](<../../docs/engineering-reader/prototype-checks.html>)
 
+## FB-154 — heater-correction-simulation
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HD-003: split heater references and a bounded preamp supply; include the cathode return in the resistance check.
+
+39k/39k candidate passes conditional normal voltage and cold resistance screens;100k/100k rejected after full path accounting.16 reference transients and5 audio runs complete. Actual300V ceiling, single faults and isolated winding implementation remain open; no native adoption.
+
+Source: engineering/component-selection/heater-divider-rating/results/correction-screen.json
+
+- [engineering/component-selection/heater-divider-rating/correction-review.html](<../../engineering/component-selection/heater-divider-rating/correction-review.html>)
+- [docs/design-journal/chapters/heater-reference-correction.html](<../../docs/design-journal/chapters/heater-reference-correction.html>)
+
