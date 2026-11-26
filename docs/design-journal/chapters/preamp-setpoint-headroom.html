@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preamp setpoint large-signal comparison</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Preamp setpoint large-signal comparison</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HD-010 · Paired 1 kHz model screen</p>
+      </header>
+
+      <section>
+        <h2>Question and test conditions</h2>
+        <p>HD-010 compares the earlier 273.41 V preamp setpoint with the 267.11 V candidate. It runs 16 cases: both setpoints, three input amplitudes per channel, two low-rail cases, and two finer-timestep repeats.</p>
+        <p>All runs use a 1 kHz input, an 8 Ω modeled load, one knob setting per channel, volume at 1, and tone and gain at 0.5. The model uses generic tubes and allocated reciprocal-transformer models. B_MAIN is stiff at 400 V, B_SCREEN at 380 V, and B_PRE is a fixed DC source. Supply and protection dynamics are absent.</p>
+      </section>
+
+      <section>
+        <h2>Paired clean-channel results</h2>
+        <table>
+          <thead><tr><th>Input</th><th>Fundamental power, 273.41 V → 267.11 V</th><th>THD harmonics 2–10, 273.41 V → 267.11 V</th></tr></thead>
+          <tbody>
+            <tr><td>3 mV peak</td><td>3.4551 W → 3.3935 W</td><td>1.7957% → 1.8183%</td></tr>
+            <tr><td>9 mV peak</td><td>24.4952 W → 24.1975 W</td><td>5.7816% → 5.6610%</td></tr>
+            <tr><td>18 mV peak</td><td>32.6874 W → 32.6466 W</td><td>21.8888% → 21.9537%</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Paired dirty-channel results</h2>
+        <table>
+          <thead><tr><th>Input</th><th>Fundamental power, 273.41 V → 267.11 V</th><th>THD harmonics 2–10, 273.41 V → 267.11 V</th></tr></thead>
+          <tbody>
+            <tr><td>0.21 mV peak</td><td>3.4406 W → 3.3672 W</td><td>1.8015% → 1.8286%</td></tr>
+            <tr><td>0.63 mV peak</td><td>24.4317 W → 24.0699 W</td><td>5.7609% → 5.6152%</td></tr>
+            <tr><td>1.26 mV peak</td><td>32.6699 W → 32.6160 W</td><td>21.8235% → 21.8431%</td></tr>
+          </tbody>
+        </table>
+        <p>The 18 mV clean case and 1.26 mV dirty case are overdriven. Their roughly 32.6 W outputs have about 22% distortion. They are not clean-output ratings. The 9 mV and 0.63 mV cases produce about 24 W fundamental with 5.6–5.8% distortion. None of these watt values is a clean 25 W amplifier rating.</p>
+      </section>
+
+      <section>
+        <h2>Low-rail and timestep checks</h2>
+        <p>At the 251.8806 V low-profile rail, the clean case produces 23.3912 W at 5.3645% THD. The dirty case produces 23.1210 W at 5.2529% THD.</p>
+        <p>The nominal 267.11 V clean case repeats at half the maximum timestep. Fundamental power changes from 24.1975 W to 24.1907 W, or −0.0281%. The dirty case changes from 24.0699 W to 24.0621 W, or −0.0324%. Both are below 0.033%. This checks timestep sensitivity for these two waveforms. It does not prove model accuracy or supply dynamics.</p>
+        <div class="math">\[\Delta P(\%)=100\frac{P_{fine}-P_{normal}}{P_{normal}}\]</div>
+      </section>
+
+      <section>
+        <h2>Scope and decision</h2>
+        <p>The saved waveforms settled within the checker tolerance. The independent check reports 205 passing checks for the stated paired comparison. Fundamental watts exclude harmonic power; THD is reported separately.</p>
+        <p>Carry 267.11 V as the candidate setpoint from HD-009. HD-010 compares simulated audio at two fixed supply values. It does not establish regulator behavior, clipping recovery, actual transformer response, physical output power, or a clean 25 W rating. No circuit change or physical qualification is recorded here.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>Preamp setpoint</dt>
+          <dd>The fixed DC voltage used for the preamp supply in each model case.</dd>
+          <dt>Fundamental power</dt>
+          <dd>Output power at the 1 kHz test frequency, excluding harmonic power.</dd>
+          <dt>Total harmonic distortion (THD)</dt>
+          <dd>Harmonic output relative to the fundamental. This report sums harmonics 2 through 10.</dd>
+          <dt>Stiff supply</dt>
+          <dd>A modeled rail that holds its voltage instead of sagging under load.</dd>
+          <dt>Fixed DC source</dt>
+          <dd>A supply model held at one voltage. It does not include regulator response.</dd>
+          <dt>Overdrive</dt>
+          <dd>An input level that drives the modeled signal path into substantial nonlinear distortion.</dd>
+          <dt>Timestep refinement</dt>
+          <dd>A repeat with smaller simulation time steps to check numerical sensitivity.</dd>
+          <dt>Settling</dt>
+          <dd>The reduction of waveform change between the final ten-cycle window and the preceding ten-cycle window.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/headroom-contract.json">HD-010 contract</a> — paired case matrix, test settings, and model limits.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/headroom-screen.json">HD-010 result receipt</a> — all 16 case metrics; saved waveforms are in the adjacent CSV files.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/headroom-checks.json">HD-010 independent checks</a> — 205 waveform and comparison checks.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/tools/headroom.py">HD-010 screen tool</a> — case construction and waveform measurements.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/detector-contract.json">HD-009 contract</a> — origin of the 267.11 V candidate setpoint.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/detector-screen.json">HD-009 result receipt</a> — detector and lower-setpoint evidence.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

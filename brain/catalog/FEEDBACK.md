@@ -1687,3 +1687,15 @@ Source: engineering/component-selection/heater-divider-rating/results/detector-s
 - [engineering/component-selection/heater-divider-rating/detector-review.html](<../../engineering/component-selection/heater-divider-rating/detector-review.html>)
 - [docs/design-journal/chapters/precision-detector-setpoint.html](<../../docs/design-journal/chapters/precision-detector-setpoint.html>)
 
+## FB-161 — preamp-setpoint-large-signal
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HD-010: report output watts with distortion before adopting the lower setpoint.
+
+16 nonlinear1kHz cases and205 independent waveform/source checks complete.267.11V gives24.197Wclean/24.070Wdirty at near-target input and5.6–5.7%THD; roughly32.6Woverdrive has22%THD and is not clean power. No native adoption, exact transformer, physical or real-supply qualification.
+
+Source: engineering/component-selection/heater-divider-rating/results/headroom-screen.json
+
+- [engineering/component-selection/heater-divider-rating/headroom-review.html](<../../engineering/component-selection/heater-divider-rating/headroom-review.html>)
+- [docs/design-journal/chapters/preamp-setpoint-headroom.html](<../../docs/design-journal/chapters/preamp-setpoint-headroom.html>)
+

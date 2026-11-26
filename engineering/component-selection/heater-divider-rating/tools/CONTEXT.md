@@ -12,3 +12,5 @@ HD-007: series_protection.py owns dual-pass deck changes behind the frozen HD-00
 HD-008: absolute_authority.py consumes frozen series/pass adapters and absolute-contract.json; check_absolute.py independently reconstructs DC current balance, actuator demand, coverage and detector-window arithmetic. Both write results only. Human check: forced control does not prove detection, timing, peak limits or real-part authority.
 
 HD-009: detector_candidate.py coordinates threshold calculations, series-adapter DC runs and existing supply-adapter AC sweeps using detector-contract.json. check_detector.py reconstructs interval endpoints, coupled current balance, monitor reserve and native/model dependency hashes independently. Outputs are results only. Human check: ideal rail current balance and continuous control do not qualify a real supply, latch or fault transition.
+
+HD-010: headroom.py consumes headroom-contract.json and supply.deck; each worker writes its own deck/waveform/receipt. check_headroom.py audits those products independently. Native CAD remains read-only.
