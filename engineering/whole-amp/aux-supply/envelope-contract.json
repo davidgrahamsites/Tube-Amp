@@ -38,7 +38,7 @@
     },
     {
       "name": "working_reserve",
-      "audio_each_rail_A": 0.05,
+      "audio_each_rail_A": 0.07,
       "logic_5V_A": 0.01,
       "relays_on": 3
     },
@@ -50,7 +50,7 @@
     }
   ],
   "load_basis": {
-    "audio": "Six OPA2134 channels at 5mA maximum quiescent per amplifier at stated datasheet conditions gives30mA each rail; 20/70mA added reserve is a test assumption, not a validated maximum signal/fault budget.",
+    "audio": "Six OPA2134 channels at5mA/channel at datasheet25C/\u00b115V conditions give30mA per rail. Working reserve raised from50 to70mA using pcb-measured-r/current-budget: independent10Vpeak output-load screen requires67.8881mA excluding native rail loads. The100mA expansion screen covers the conditional18Vpeak comparison98.0882mA excluding rail loads. R619/R620 are added separately by screen_cold_loads.py. Hot/startup/fault currents and achievable unclipped outputs remain unqualified.",
     "logic": "2/10/20mA scenario assumptions; not a verified current budget. Idle can violate L7805 minimum5mA regulation condition.",
     "relay": "G5V-2-H1 DC12 960ohm +/-10% at23C; use12.6V/864ohm per energized coil, ignoring transistor voltage drop. Colder operation remains to qualify."
   },

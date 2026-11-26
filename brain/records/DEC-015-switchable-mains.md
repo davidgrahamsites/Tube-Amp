@@ -3,7 +3,7 @@ id: DEC-015
 type: decision
 domain: cross-domain
 status: documented
-updated: 2026-11-24
+updated: 2026-11-25
 ---
 # Include switchable 120 V / 220 V mains in this build
 
@@ -24,3 +24,7 @@ Update T04–T06 supply/behavior corners, T08 magnetics/selector sourcing, T09 m
 
 ## Human check
 Compare the final selector markings, fuse instructions and all mains-winding connections against the selected transformer drawing and the actual unit before energizing. Both supply settings need physical validation, not only simulation or label changes.
+
+## Explicit fuse requirement — November25, FB-137
+
+User: “we should have proper fuses for120 and220 volts, also”. Select and verify protection for each mains mode using continuous input current, worst-line loading, transformer inrush, time-current curves/I²t coordination, interrupting capacity, voltage rating, holder/contact/temperature ratings and exact obtainable parts. Do not size from25W audio output or simply assume a2:1 pair. Document the physical fuse arrangement, replacement instructions and selector/fuse mismatch behavior. No numerical fuse values are selected yet. Update schematic, BOM, panel markings and both-mode test procedure together; protective earth is never fused.

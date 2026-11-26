@@ -1,0 +1,2 @@
+# Current-budget factories
+Owner: PCB integration. Inputs: parent contract and current circuit. Process: analyze.py performs passive nodal solves and emits numerical evidence; check.py independently verifies limiting-current arithmetic and freshness. Outputs: ../results/budget.json and checks.json. Human check: inspect assumptions before treating calculated currents as conductor requirements. No native CAD mutation.

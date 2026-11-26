@@ -1,0 +1,255 @@
+{
+  "baseline_commit": "f51f883bc0f1349bf8eb49079920280bc89a8f6e",
+  "source": "engineering/whole-amp/reverb-600/circuit.json",
+  "source_sha256": "12d0bb49e450329b1e37f1563994da8642b2feef28c4239ce8b3e271d896367c",
+  "expected_parts": {
+    "R24": {
+      "value": "10M",
+      "pins": {
+        "1": "MIX_OUT",
+        "2": "GND"
+      }
+    },
+    "C601": {
+      "value": "100n",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "IN_AC"
+      }
+    },
+    "R601": {
+      "value": "1M",
+      "pins": {
+        "1": "IN_AC",
+        "2": "SEND_IN"
+      }
+    },
+    "R602": {
+      "value": "100k",
+      "pins": {
+        "1": "SEND_IN",
+        "2": "GND"
+      }
+    },
+    "C602": {
+      "value": "22n",
+      "pins": {
+        "1": "SEND_BUF",
+        "2": "SEND_TOP"
+      }
+    },
+    "R603": {
+      "value": "10k",
+      "pins": {
+        "1": "DRV_FB",
+        "2": "GND"
+      }
+    },
+    "R604": {
+      "value": "10k",
+      "pins": {
+        "1": "DRIVER",
+        "2": "DRV_FB"
+      }
+    },
+    "R605": {
+      "value": "220",
+      "pins": {
+        "1": "DRIVER",
+        "2": "DRIVE_CAP"
+      }
+    },
+    "C603": {
+      "value": "2.2u",
+      "pins": {
+        "1": "DRIVE_CAP",
+        "2": "TANK_IN"
+      }
+    },
+    "C604": {
+      "value": "100n",
+      "pins": {
+        "1": "TANK_OUT",
+        "2": "REC_IN"
+      }
+    },
+    "R606": {
+      "value": "220k",
+      "pins": {
+        "1": "REC_IN",
+        "2": "GND"
+      }
+    },
+    "R607": {
+      "value": "1k",
+      "pins": {
+        "1": "REC_FB",
+        "2": "GND"
+      }
+    },
+    "R608": {
+      "value": "100k",
+      "pins": {
+        "1": "REC_OUT",
+        "2": "REC_FB"
+      }
+    },
+    "C605": {
+      "value": "330p",
+      "pins": {
+        "1": "REC_OUT",
+        "2": "REC_FB"
+      }
+    },
+    "C606": {
+      "value": "1u",
+      "pins": {
+        "1": "REC_OUT",
+        "2": "WET_TOP"
+      }
+    },
+    "R609": {
+      "value": "1M",
+      "pins": {
+        "1": "WET_W",
+        "2": "GND"
+      }
+    },
+    "R610": {
+      "value": "10k",
+      "pins": {
+        "1": "WET_BUF",
+        "2": "WET_MUTE"
+      }
+    },
+    "R611": {
+      "value": "100k",
+      "pins": {
+        "1": "WET_MUTE",
+        "2": "SUM"
+      }
+    },
+    "R612": {
+      "value": "100k",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "MIX_OUT"
+      }
+    },
+    "R613": {
+      "value": "100k",
+      "pins": {
+        "1": "SUM_INV",
+        "2": "SUM"
+      }
+    },
+    "R614": {
+      "value": "100k",
+      "pins": {
+        "1": "SUM_INV",
+        "2": "OUT_FB"
+      }
+    },
+    "R615": {
+      "value": "100k",
+      "pins": {
+        "1": "OUT_BUF",
+        "2": "OUT_FB"
+      }
+    },
+    "R616": {
+      "value": "100",
+      "pins": {
+        "1": "OUT_BUF",
+        "2": "OUT_AC"
+      }
+    },
+    "C607": {
+      "value": "1u",
+      "pins": {
+        "1": "OUT_AC",
+        "2": "WET_AC"
+      }
+    },
+    "R617": {
+      "value": "1M",
+      "pins": {
+        "1": "WET_AC",
+        "2": "GND"
+      }
+    },
+    "R618": {
+      "value": "1M",
+      "pins": {
+        "1": "WET_AC",
+        "2": "MIX_OUT"
+      }
+    }
+  },
+  "tank_source": "engineering/whole-amp/mechanical/fit-register.json",
+  "source_outputs": {
+    "SEND_BUF": "U10A",
+    "DRIVER": "U10B",
+    "REC_OUT": "U11A",
+    "WET_BUF": "U11B",
+    "SUM_INV": "U12A",
+    "OUT_BUF": "U12B"
+  },
+  "opamp_output_peak_V": [
+    10,
+    18
+  ],
+  "tube_interface_peak_V": 150,
+  "tube_interface_basis": "Retained VAL-067 signal envelope at FX_RETURN, not a rated external effects source",
+  "quiescent_A_per_channel_25C": 0.005,
+  "quiescent_basis": "TI SBOS058B section5.7, \u00b115V and25C table conditions; hot and startup maximum not established",
+  "rail_load_maximum_A": 0.001836734693877551,
+  "rail_load_basis": "R619/R620 native10k;18V and2percent low resistance screen inherited VAL-064",
+  "resistor_low_fraction": 0.02,
+  "R616_low_ohm": 93.8125,
+  "pot_total_low_ohm": 80000,
+  "frequency_min_Hz": 20,
+  "frequency_max_Hz": 20000,
+  "frequency_points": 241,
+  "tank_impedance_at_assumed_1kHz_ohm": [
+    480,
+    600,
+    720
+  ],
+  "driver_Rdc_low_fraction_screen": 0.1,
+  "C603_scales": [
+    0.95,
+    1.05
+  ],
+  "geometry_scenarios": {
+    "copper_thickness_um": 30,
+    "width_negative_fraction": 0.2,
+    "copper_resistivity_20C_ohm_m": 1.724e-08,
+    "temperature_coefficient_per_C": 0.00393,
+    "copper_temperature_C": 70,
+    "status": "Hypothetical minimum-finished-copper scenario; final fab and thermal conditions unconfirmed"
+  },
+  "sources": [
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+      "revision": "SBOS058B November2024",
+      "scope": "6channels\u00d75mA under table conditions; output short-current values typical only"
+    },
+    {
+      "url": "https://jlcpcb.com/capabilities/Capabilities",
+      "scope": "20percent possible track narrowing; actual process still requires confirmation"
+    },
+    {
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular31e2.pdf",
+      "scope": "Annealed-copper resistivity and temperature coefficient; illustrative material approximation, not selected PCB foil guarantee"
+    }
+  ],
+  "exclusions": [
+    "No opamp nonlinear clipping, stability, or guaranteed hot/startup current",
+    "No PI nonlinear grid-current or spring acoustic model",
+    "No arbitrary short or fuse clearing bound",
+    "Tank inductance is a seller-impedance surrogate and permitted drive is unknown",
+    "No IPC-2152 thermal qualification, vias/pad necks or finished thickness confirmation",
+    "Control/mains/heaters and new loop/expression circuitry require separate budgets"
+  ]
+}

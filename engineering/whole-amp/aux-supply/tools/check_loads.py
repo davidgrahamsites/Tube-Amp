@@ -126,12 +126,23 @@ def main():
     try: calculate(bad,ctrl,circuit)
     except AssertionError: rejected.append('double_counted_valve_package')
     else: raise AssertionError('Double-counted valve escaped')
-    # Compare against immutable historical room-temperature matrix, including R215.
+    # VAL-069 raises only the working allocation by 20 mA. Preserve the
+    # independent comparison to the historical room-temperature + R215 matrix.
+    audio_path=MODULE.parent/'pcb-measured-r/current-budget/results/budget.json'
+    audio=json.loads(audio_path.read_text())
+    audio_checks=json.loads((audio_path.parent/'checks.json').read_text())
+    assert audio_checks['passed'] and audio_checks['budget_sha256']==sha(audio_path)
+    assert audio['input_sha256']['engineering/whole-amp/reverb-600/circuit.json']==sha(MODULE.parent/'reverb-600/circuit.json')
+    allocation={x['name']:x['audio_each_rail_A'] for x in d['effective_contract']['loads']}
+    for name,peak in [('working_reserve',10),('expansion_stress',18)]:
+        required=max(x['each_rail_conditional_A'] for x in audio['cases'] if x['output_peak_V']==peak)-budget['reverb_rail_loads']['each_rail_maximum_A']
+        assert allocation[name]>=required, (name,allocation[name],required)
     old = json.loads((MODULE/'results/preload/raw-screen.json').read_text())
     for new, previous in zip(d['cases'],old['cases']):
         oldcase = copy.deepcopy(previous['case']); newcase = copy.deepcopy(new['case'])
         oldcase.pop('id'); newcase.pop('id')
-        extra=budget['reverb_rail_loads']['each_rail_maximum_A']
+        profile_delta={'idle':0.,'working_reserve':.020,'expansion_stress':0.}[newcase['load']['name']]
+        extra=budget['reverb_rail_loads']['each_rail_maximum_A']+profile_delta
         close(newcase['load']['audio_each_rail_A'],oldcase['load']['audio_each_rail_A']+extra)
         newcase['load']['audio_each_rail_A']=oldcase['load']['audio_each_rail_A']
         assert oldcase == newcase
@@ -144,6 +155,7 @@ def main():
     receipt = dict(status='Evidence checks pass; supply and copper remain unqualified',
                    cases=len(d['cases']),refinements=len(d['refinements']),negative_controls_rejected=rejected,
                    screen_sha256=sha(path),comparison_sha256=sha(MODULE/'results/preload/raw-screen.json'),
+                   reverb_output_budget_sha256=sha(audio_path),
                    factory_sha256={name:sha(MODULE/'tools'/name) for name in ['calculate_loads.py','screen_cold_loads.py','check_loads.py','screen_envelope.py','check_preload.py']})
     (path.parent/'checks.json').write_text(json.dumps(receipt,indent=2)+'\n')
     print(json.dumps(receipt))

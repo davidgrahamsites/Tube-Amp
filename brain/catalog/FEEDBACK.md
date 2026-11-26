@@ -1409,3 +1409,49 @@ Source: Current amplifier conversation; source locators and pasted attachment ha
 - [engineering/whole-amp/pcb-measured-r/review/trace-width-research-2026-11-25.md](<../../engineering/whole-amp/pcb-measured-r/review/trace-width-research-2026-11-25.md>)
 - [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
 
+## FB-137 — mains-mode-fuse-protection
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> we should have proper fuses for 120 and 220 volts, also
+
+Explicitly qualify and document mode-specific primary fusing, inrush/clearing/rating coordination and selector/fuse mismatch handling. Values await the actual load and transformer.
+
+Source: Current amplifier conversation during current-path analysis
+
+- [brain/records/DEC-015-switchable-mains.md](<../../brain/records/DEC-015-switchable-mains.md>)
+
+## FB-138 — tank-impedance-and-current-testing
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> don't we need to test the maximum current and impedance test conditions for the reverb tank?
+
+Require real low-level impedance characterization and bounded sample operating-drive tests; distinguish manufacturer maximum rating from non-destructive bench evidence. DC resistance and simulation are insufficient.
+
+Source: Current amplifier conversation during current-path analysis
+
+- [engineering/whole-amp/mechanical/review/tank-characterization-plan.md](<../../engineering/whole-amp/mechanical/review/tank-characterization-plan.md>)
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+
+## FB-139 — mac-tank-test-equipment
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> no, but if there's one i can buy on alibaba/taobao that connect to the computer, I could use that (it's just audio)
+
+User has no USB audio interface or oscilloscope/function generator; favors a budget Mac-connected instrument sourced through China marketplaces. Research a two-input calibrated audio fixture, without treating it as an HV instrument or purchase authorization.
+
+Source: Current amplifier conversation
+
+- [engineering/whole-amp/mechanical/review/tank-characterization-plan.md](<../../engineering/whole-amp/mechanical/review/tank-characterization-plan.md>)
+
+## FB-140 — additional-trace-width-research
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> absorb this info as well and add to icm anything that applies
+
+Review VSE, Patsnap skin effect, ALLPCB audio, JLCPCB and Sierra trace-capacity articles. Adopt only context-supported findings, record corrections and retain actual-current qualification gates.
+
+Source: Current amplifier conversation
+
+- [brain/records/DEC-020-trace-width-margin.md](<../../brain/records/DEC-020-trace-width-margin.md>)
+- [engineering/whole-amp/pcb-measured-r/review/trace-width-research-2026-11-25.md](<../../engineering/whole-amp/pcb-measured-r/review/trace-width-research-2026-11-25.md>)
+

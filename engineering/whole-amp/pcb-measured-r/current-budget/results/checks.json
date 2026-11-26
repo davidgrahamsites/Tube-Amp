@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "cases": 12,
+  "negative_controls_rejected": [
+    "halved_driver_current",
+    "missing_case",
+    "invented_thermal_approval",
+    "missing_source_hash"
+  ],
+  "budget_sha256": "d68371c23ba14116329d99825839c3c657aace3c4eab849dfa0aedc566a2a351",
+  "checks": "source/contract freshness, full case matrix, independent resonant driver maximum, current summation, wet clamp-off envelope, nodal residual and resistance scaling",
+  "scope": "Conditional passive model only; hot/startup/fault and physical tank limits remain open"
+}

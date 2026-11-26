@@ -45,3 +45,7 @@ Next: replace reserve load assumptions with actual signal/dynamic/fault budgets,
 ## 25 November update — native reverb loads
 
 The values above describe the November24 checkpoint. Current results/loads now include R619/R620; see [VAL-064 integration review](../reverb-600/rail-load-integration/review.md) for the replacement current/heat table and checks. All72 cases complete with44 engineering-flagged cases; those flags remain unresolved. The old source hashes and numerical values above are not current verification.
+
+## 25 November VAL-069 update — circuit-derived working allocation
+
+The working audio allocation is now70mA per rail before separately adding R619/R620, replacing50mA. [Current-budget review](../pcb-measured-r/current-budget/review.md) owns the passive-load assumptions and new current/heat table. All72 cases and four refinements complete;42 cases remain flagged. Historical numbers above are retained as dated evidence. The checker preserves the historical comparison with an explicit20mA working-profile delta and checks allocation against the new budget. The model still does not qualify hot/startup/fault current, actual transformer or cooling.

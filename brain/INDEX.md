@@ -28,7 +28,7 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | DEC-011 | decision | cross-domain | proposed | 2026-11-21 | [Pot mounting panel and cabinet packaging proposal](records/DEC-011-pot-panel-proposal.md) |
 | DEC-012 | decision | cross-domain | superseded | 2026-11-24 | [Keep current mains supply; defer multi-voltage variant](records/DEC-012-defer-multi-voltage-variant.md) |
 | DEC-014 | decision | schematic | documented | 2026-11-23 | [Effects-loop qualification and optical-control recommendation](records/DEC-014-effects-loop-optical-review.md) |
-| DEC-015 | decision | cross-domain | documented | 2026-11-24 | [Include switchable 120 V / 220 V mains in this build](records/DEC-015-switchable-mains.md) |
+| DEC-015 | decision | cross-domain | documented | 2026-11-25 | [Include switchable 120 V / 220 V mains in this build](records/DEC-015-switchable-mains.md) |
 | DEC-016 | decision | cross-domain | documented | 2026-11-25 | [Buffered loop approved; expression selector requested](records/DEC-016-buffered-loop-expression-selector.md) |
 | DEC-017 | decision | cross-domain | documented | 2026-11-25 | [Small-quantity marketplace sources](records/DEC-017-small-quantity-marketplaces.md) |
 | DEC-018 | decision | cross-domain | documented | 2026-11-25 | [Reusable circuit blocks with their own datasheets](records/DEC-018-functional-block-datasheets.md) |
@@ -102,3 +102,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-066 | validation | cross-domain | documented | 2026-11-25 | [Common buffer: retain overload headroom](records/VAL-066-common-buffer-headroom.md) |
 | VAL-067 | validation | cross-domain | documented | 2026-11-25 | [Local wet-contact clamp correction set](records/VAL-067-wet-contact-protection.md) |
 | VAL-068 | validation | cross-domain | documented | 2026-11-25 | [Native wet-contact correction](records/VAL-068-native-wet-contact-protection.md) |
+| VAL-069 | validation | pcb | verified | 2026-11-25 | [Conditional reverb current allocation](records/VAL-069-reverb-current-allocation.md) |
