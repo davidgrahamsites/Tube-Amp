@@ -1,5 +1,7 @@
 # Project status
 
+November 26 HD-005:680ohm feed candidate screened over570–805ohm;36DC and4audio runs complete,374 evidence checks pass. Minimum behavioral headroom margin1.082V; real pass circuit and independent fault disconnection remain open. Exact Vishay PR03 candidate has a ten-piece RS China route with stock shipping from elsewhere; Shanghai checkout unverified. No native adoption or populated-fit release. [HTML evidence](engineering/component-selection/heater-divider-rating/ceiling-review.html).
+
 November 26 HD-004: coupled preamp supply screening completes16 DC and six audio cases;197 evidence checks pass. Passive cold rail exceeds300V; proposed3.3k regulator feed causes low-input dropout. The shared-screen audio confound was corrected and retained as rejected evidence. Real ceiling/protection, native adoption and populated fit remain open. [HTML evidence](engineering/component-selection/heater-divider-rating/supply-review.html).
 
 November 26 HD-003: 16 reference transients and five paired audio runs complete; 171 arithmetic/source/preservation checks pass. The proposed 39k/39k split heater reference has a conditional 9.024V voltage margin and includes the full cold cathode return. The 100k trial was rejected. About25W and sampled treble are retained in the generic model; actual300V ceiling, faults and isolated windings remain unresolved. Native CAD unchanged; no fit or fabrication release. [HTML evidence](engineering/component-selection/heater-divider-rating/correction-review.html).

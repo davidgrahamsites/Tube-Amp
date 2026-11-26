@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preamp ceiling feed and dropout margin</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Preamp ceiling feed and dropout margin</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HD-005 · Conditional model evidence</p>
+      </header>
+
+      <section>
+        <h2>Issue and correction</h2>
+        <p>HD-004 used a 3.3 kΩ series feed ahead of a behavioral regulator. At the 320 V diagnostic input, the warm-load model fell to 254.835 V. It missed the 273.41 V nominal target. HD-005 reduced the feed to 680 Ω nominal and bounded it from 570 Ω to 805 Ω. This improved modeled headroom. It did not qualify a real regulator.</p>
+        <p>The feed range combines ±5% initial tolerance, then a 150 °C allocated film temperature, then sequential qualification shifts. The calculated 570.674–804.540 Ω range rounds outward to 570–805 Ω. These shifts are engineering allocations. They are not a lifetime guarantee.</p>
+      </section>
+
+      <section>
+        <h2>Headroom screen</h2>
+        <p>The tightest modeled headroom occurs at 320 V input, the high output profile, and the 805 Ω feed corner. The profile target is 292.156 V. Input current is 18.523 mA. After the feed drop, 12.934 V remains across the behavioral pass element. The limiter requires <span class="math">\(10+100I_{in}\)</span> volts, including its 100 Ω current-dependent slope term. The remaining modeled margin is 1.082 V.</p>
+        <div class="math">\[M=V_{in}-I_{in}R_{feed}-V_{out}-(10\;\mathrm{V}+100\;\Omega\cdot I_{in})\]</div>
+        <div class="math">\[M=320-(0.018523)(805)-292.1545-(10+100\cdot0.018523)=1.0822\;\mathrm{V}\]</div>
+        <p>This is the model's headroom margin, not a semiconductor data-sheet guarantee. The 36 DC cases cover three profiles, three input voltages, both feed endpoints, and warm or unpowered-tube conditions. Four audio cases completed. The independent receipt reports 374 checks passed within its stated scope.</p>
+      </section>
+
+      <section>
+        <h2>Normal heat and fault heat</h2>
+        <p>The largest normal modeled pass-element dissipation is 4.650 W. It occurs at the 550 V diagnostic input in the low output profile. The largest feed-resistor dissipation is 0.276 W. It occurs at 320 V in the high profile with the 805 Ω feed. These are model values. They do not establish case temperature or device ratings.</p>
+        <div class="math">\[P_{pass}=V_{pass}I_{in}=4.650\;\mathrm{W}\quad(550\;\mathrm{V\ input, low\ profile})\]</div>
+        <p>Fault heat is much higher. With the behavioral current limit active, the screen gives 15.987 W in the pass element and 0.7245 W in the feed resistor. If the pass element shorts and current limiting is absent, the feed-resistor calculation reaches 530.702 W at 550 V. No resistor or semiconductor is accepted for these faults. Independent fault interruption remains necessary.</p>
+        <p>A shunt clamp was rejected only as a way to keep the existing 5 W feed resistor at a 550 V diagnostic input while holding 300 V. Even at the favorable high-resistance corner, the feed dissipation is 5.952 W before thermal derating. This does not reject all shunt approaches or all lower input bounds.</p>
+      </section>
+
+      <section>
+        <h2>Feed-resistor sourcing boundary</h2>
+        <p>The exact candidate is Vishay PR03000206800JAC00, 680 Ω, 3 W at 70 °C, with a 750 V working-voltage rating. A China RS listing was observed. The listing showed a ten-piece pack. Other-location stock was visible, but Shanghai shipping and checkout were not checked. No order was placed.</p>
+        <p>The low normal modeled feed heat does not close the fault case. Verify hot derating, pulse behavior, lead temperature, and actual cabinet temperature. Do not treat the resistor listing as an approved build part.</p>
+      </section>
+
+      <section>
+        <h2>Decision and next step</h2>
+        <p>HD-005 supports further regulator design work only. The limiter remains behavioral. The tube and transformer models are generic. No semiconductor control-loop model, startup model, physical fault test, or safe-operating-area acceptance is included. No schematic or board change was made. The 300 V ceiling is not implemented in native hardware.</p>
+        <p>Next select a real pass device and controller. Check the full input-to-output range, current limit, safe operating area, heatsinking, startup, and independent differential protection. Then verify the assembled supply at actual rail limits, load, temperature, and fault conditions.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>Feed resistor</dt>
+          <dd>The series resistor between the high-voltage input and regulator stage.</dd>
+          <dt>Dropout</dt>
+          <dd>The condition where a regulator lacks the input headroom needed to hold its target voltage.</dd>
+          <dt>Headroom margin</dt>
+          <dd>Modeled pass-element voltage above the minimum voltage allocated for regulation.</dd>
+          <dt>Pass element</dt>
+          <dd>The controlled device that drops excess input voltage while supplying the load.</dd>
+          <dt>Shunt clamp</dt>
+          <dd>A device that holds voltage by diverting excess current into a load or return path.</dd>
+          <dt>Behavioral limiter</dt>
+          <dd>A simplified equation used to bound voltage and current. It is not a semiconductor circuit model.</dd>
+          <dt>Safe operating area (SOA)</dt>
+          <dd>The voltage, current, and temperature region in which a device can operate without damage.</dd>
+          <dt>Diagnostic input</dt>
+          <dd>A test boundary for analysis. It is not a selected transformer voltage.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/ceiling-contract.json">HD-005 contract</a> — feed limits, allocation method, component candidate, and scope.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/tools/ceiling.py">HD-005 screen tool</a> — profile and feed-corner calculations.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/ceiling-screen.json">HD-005 result receipt</a> — 36 DC cases, audio cases, and modeled heat.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/ceiling-checks.json">HD-005 independent check receipt</a> — 374 checks and declared scope.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/ceiling-review.html">HD-005 engineering review</a> — coordinator review.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/supply-review.html">HD-004 supply screen</a> — prior 3.3 kΩ feed dropout case.</li>
+          <li><a href="https://www.vishay.com/docs/28729/pr010203.pdf">Vishay PR series data sheet</a> — package, working voltage, and power ratings.</li>
+          <li><a href="https://www.rsonline.cn/web/p/through-hole-resistors/6835880">RS China candidate listing</a> — supplier observation; delivery and checkout remain unverified.</li>
+          <li><a href="https://www.st.com/resource/en/datasheet/stp4nk80z.pdf">STP4NK80Z data sheet</a> — pass-device candidate reference; SOA acceptance remains open.</li>
+          <li><a href="https://www.ti.com/lit/ds/symlink/lm317l-n.pdf">LM317L data sheet</a> — regulator reference and operating limits used for the earlier behavioral boundary.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

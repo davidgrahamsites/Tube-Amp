@@ -1627,3 +1627,15 @@ Source: engineering/component-selection/heater-divider-rating/results/supply-scr
 - [engineering/component-selection/heater-divider-rating/supply-review.html](<../../engineering/component-selection/heater-divider-rating/supply-review.html>)
 - [docs/design-journal/chapters/preamp-supply-load.html](<../../docs/design-journal/chapters/preamp-supply-load.html>)
 
+## FB-156 — preamp-ceiling-feed-boundary
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HD-005: qualify the feed budget before selecting the actual pass circuit.
+
+36DC and4audio cases complete;374 evidence checks pass.680ohm feed with570–805ohm allocated range clears behavioral dropout by1.082V minimum. Existing5W shunt feed fails550V diagnostic heat; pass-short protection remains unresolved. PR03 China RS pack10 candidate observed, stock from elsewhere and Shanghai delivery unchecked. No native adoption.
+
+Source: engineering/component-selection/heater-divider-rating/results/ceiling-screen.json
+
+- [engineering/component-selection/heater-divider-rating/ceiling-review.html](<../../engineering/component-selection/heater-divider-rating/ceiling-review.html>)
+- [docs/design-journal/chapters/preamp-ceiling-feed.html](<../../docs/design-journal/chapters/preamp-ceiling-feed.html>)
+

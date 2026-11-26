@@ -1,0 +1,63 @@
+{
+  "manufacturer": "IXYS / Littelfuse",
+  "mpn_candidate": "IXTP3N100D2",
+  "document_id": "DS100184E(4/17)",
+  "manufacturer_product_url": "https://www.littelfuse.com/products/power-semiconductors-control-ics/mosfets-si-sic/n-channel-depletion-mode/d2/ixtp3n100d2",
+  "mirror_bundle_url": "https://astrolkwx.com/wp-content/uploads/IXTP3N100D2_datasheet.pdf",
+  "retrieved_on": "2026-11-26",
+  "source_bundle_sha256": "9b20637f8855364eb3c1b529d2003a4deca230fb191549ecc11e272cc438033c",
+  "source_bundle_pages": 37,
+  "saved_pages_one_based": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "extract_sha256": "dced7a2193b0daaa590749fd2d099b67be88f46b24444a69d24b80de7fd17b07",
+  "provenance": "Manufacturer-authored datasheet plus disclaimer extracted from distributor bundle. Official legacy download returned403. Page1 document identity and page5 graphs visually/text inspected; this is not a verified latest revision.",
+  "facts": {
+    "normally_on": true,
+    "VDSX_V": 1000,
+    "VGS_continuous_abs_V": 20,
+    "junction_max_C": 150,
+    "RthJC_max_K_per_W": 1,
+    "RthCS_typical_K_per_W": 0.5,
+    "tab": "drain",
+    "pins": {
+      "1": "gate",
+      "2": "drain",
+      "3": "source"
+    },
+    "five_second_SOA": {
+      "VDS_V": 800,
+      "ID_A": 0.094,
+      "case_C": 75,
+      "minimum_W": 75
+    }
+  },
+  "visual_screen": {
+    "figure": 16,
+    "page_one_based": 5,
+    "case_C": 75,
+    "diagnostic_rectangle_max_V": 550,
+    "diagnostic_rectangle_max_A": 0.03,
+    "observation": "550V/30mA lies below the plotted DC boundary. Visual feasibility only; no curve digitization or extrapolation to other case temperatures.",
+    "adopted": false
+  },
+  "thermal_allocation": {
+    "ambient_C": 45,
+    "case_ceiling_C": 75,
+    "pass_short_limited_W": 15.987,
+    "case_to_ambient_required_K_per_W": 1.8765246762994934,
+    "note": "Ambient is provisional. Insulating interface and heatsink share this total. Typical0.5K/W case-to-sink does not qualify an insulating pad."
+  },
+  "open": [
+    "Latest supplied-device revision confirmation; manufacturer webpage lists5.5ohm while this older datasheet gives6ohm under its stated condition.",
+    "China small-quantity stock and Shanghai delivery not verified.",
+    "Actual gate/current limiter, LM317L differential protection, pass-short and resistor-fault disconnection.",
+    "Hot safe-operating-area, isolated mounting geometry and physical case temperature."
+  ],
+  "hardware_qualified": false
+}

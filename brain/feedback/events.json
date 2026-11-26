@@ -2319,6 +2319,23 @@
       ],
       "supersedes": [],
       "next_action": "Select actual input envelope and smallest workable ceiling circuit; qualify pass-device/current/differential/startup/thermal limits before native routing."
+    },
+    {
+      "id": "FB-156",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "engineer",
+      "kind": "preamp-ceiling-feed-boundary",
+      "quote": "HD-005: qualify the feed budget before selecting the actual pass circuit.",
+      "source": "engineering/component-selection/heater-divider-rating/results/ceiling-screen.json",
+      "interpretation": "36DC and4audio cases complete;374 evidence checks pass.680ohm feed with570–805ohm allocated range clears behavioral dropout by1.082V minimum. Existing5W shunt feed fails550V diagnostic heat; pass-short protection remains unresolved. PR03 China RS pack10 candidate observed, stock from elsewhere and Shanghai delivery unchecked. No native adoption.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/component-selection/heater-divider-rating/ceiling-review.html",
+        "docs/design-journal/chapters/preamp-ceiling-feed.html"
+      ],
+      "supersedes": [],
+      "next_action": "Qualify one real pass circuit and independent fault disconnection, then carry exact support/heatsink geometry into the power enclosure."
     }
   ]
 }
