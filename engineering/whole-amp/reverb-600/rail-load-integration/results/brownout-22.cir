@@ -1,0 +1,46 @@
+Auxiliary rectifier envelope; assumed raw loads, NOT regulator model
+VA s1 bxs1 0
+BXs1 bxs1 0 V=23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(1.6-time)/1.0))
+VB s2 bxs2 0
+BXs2 bxs2 0 V=-23.316667795742458*sin(2*pi*50*time)*max(0,min(1,(1.6-time)/1.0))
+RA s1 ac1 1.5539568345323742
+RB s2 ac2 1.5539568345323742
+D201 ac1 rawp rect
+D202 ac2 rawp rect
+D203 rawn ac1 rect
+D204 rawn ac2 rect
+RP rawp cp 0.15
+RN rawn cn 0.15
+C201 cp 0 0.008
+C208 0 cn 5440.0u
+IP rawp 0 PWL(0 0 0.05 0 0.06 0.234755806361)
+IN 0 rawn PWL(0 0 0.05 0 0.06 0.111965644396)
+RBP rawp 0 100meg
+RBN 0 rawn 100meg
+.model rect D(Is=10n N=1.8 Rs=0.05)
+.options reltol=1e-7 abstol=1e-11 vntol=1e-8 method=trap
+.save v(rawp) v(rawn) v(cp) v(cn) i(VA) i(VB) @D201[id] @D202[id] @D203[id] @D204[id]
+.tran 2e-05 2.1 0 2e-05
+IR619 rawp 0 PWL(0 0 .05 0 .06 0.00183673469387755)
+IR620 0 rawn PWL(0 0 .05 0 .06 0.00183673469387755)
+RRAW rawp raw_sense 2940
+RRAWG raw_sense 0 1010
+RRAWFB detfb raw_sense 1000000
+IRAWBIAS raw_sense 0 -6.25e-08
+IRAWCAP rawp 0 PWL(0 0 .05 0 .06 0.005)
+* Explicit bounded secondary envelope; not a manufacturer diode model
+BSA ac1 env I=max(0,v(ac1,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac1)))
+BSB ac2 env I=max(0,v(ac2,env)-0.4)/4606.0-0*min(1,max(0,v(env,ac2)))
+CENV env 0 2.64e-07
+RBENV env 0 10200.0
+RSTOP env sense 224400.0
+RSBOT sense 0 22440.0
+RFBDET detfb sense 8364000.0
+VFBDET detfb 0 5.25
+VREFDET detref 0 5.015
+RBIASDET detref sense 1020000.0
+IIBDET sense 0 -6.25e-08
+RCAPLEAK env 0 1000000000
+.save v(env) v(sense) v(ac1) v(ac2) @BSA[i] @BSB[i]
+
+.end

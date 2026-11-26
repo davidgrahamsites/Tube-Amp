@@ -291,7 +291,9 @@
         "C615",
         "C616",
         "C617",
-        "D341"
+        "D341",
+        "R619",
+        "R620"
       ],
       "ports": [
         "+12V",
@@ -9664,6 +9666,88 @@
         }
       ],
       "assembly": "Control"
+    },
+    "R619": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R619",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "+15V",
+        "2": "GND"
+      },
+      "source": "VAL-063 rail-load correction",
+      "rating": "1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower",
+      "status": "Native rail-load integration; full-system qualification pending",
+      "datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf",
+      "footprint": "Renegade_Selected:Yageo_MFR50S_MF0207_P10.16",
+      "selected_mpn": "MF0207FTE52-10K",
+      "selection_evidence": "engineering/whole-amp/reverb-600/rail-load-integration/review.md",
+      "units": [
+        {
+          "project": "Renegade_220V_Reverb",
+          "sheet": "07c_reverb_output",
+          "reference": "R619",
+          "unit": 1,
+          "value": "10k",
+          "symbol": "Device_R",
+          "pins": {
+            "1": "+15V",
+            "2": "GND"
+          },
+          "source": "VAL-063 rail-load correction",
+          "rating": "1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower",
+          "status": "Native rail-load integration; full-system qualification pending",
+          "datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf",
+          "footprint": "Renegade_Selected:Yageo_MFR50S_MF0207_P10.16",
+          "selected_mpn": "MF0207FTE52-10K",
+          "selection_evidence": "engineering/whole-amp/reverb-600/rail-load-integration/review.md"
+        }
+      ],
+      "assembly": "Reverb"
+    },
+    "R620": {
+      "project": "Renegade_220V_Reverb",
+      "sheet": "07c_reverb_output",
+      "reference": "R620",
+      "unit": 1,
+      "value": "10k",
+      "symbol": "Device_R",
+      "pins": {
+        "1": "GND",
+        "2": "-15V"
+      },
+      "source": "VAL-063 rail-load correction",
+      "rating": "1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower",
+      "status": "Native rail-load integration; full-system qualification pending",
+      "datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf",
+      "footprint": "Renegade_Selected:Yageo_MFR50S_MF0207_P10.16",
+      "selected_mpn": "MF0207FTE52-10K",
+      "selection_evidence": "engineering/whole-amp/reverb-600/rail-load-integration/review.md",
+      "units": [
+        {
+          "project": "Renegade_220V_Reverb",
+          "sheet": "07c_reverb_output",
+          "reference": "R620",
+          "unit": 1,
+          "value": "10k",
+          "symbol": "Device_R",
+          "pins": {
+            "1": "GND",
+            "2": "-15V"
+          },
+          "source": "VAL-063 rail-load correction",
+          "rating": "1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower",
+          "status": "Native rail-load integration; full-system qualification pending",
+          "datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf",
+          "footprint": "Renegade_Selected:Yageo_MFR50S_MF0207_P10.16",
+          "selected_mpn": "MF0207FTE52-10K",
+          "selection_evidence": "engineering/whole-amp/reverb-600/rail-load-integration/review.md"
+        }
+      ],
+      "assembly": "Reverb"
     }
   }
 }

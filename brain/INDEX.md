@@ -96,3 +96,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-061 | validation | cross-domain | documented | 2026-11-25 | [Reverb interface ratings and differential capacitor stress](records/VAL-061-reverb-interface-voltage.md) |
 | VAL-062 | validation | cross-domain | documented | 2026-11-25 | [C607 coupling capacitor voltage and footprint repair](records/VAL-062-reverb-coupling-capacitor.md) |
 | VAL-063 | validation | cross-domain | documented | 2026-11-25 | [Reverb clamp current and rail-load correction candidate](records/VAL-063-reverb-clamp-rail-load.md) |
+| VAL-064 | validation | cross-domain | documented | 2026-11-25 | [Native reverb rail loads and supply regression](records/VAL-064-reverb-rail-load-integration.md) |

@@ -13,3 +13,5 @@ November 24 T03: `grounding-contract.json` owns the explicit external GB1 signal
 November 25 interface-voltage: `interface-voltage/` owns the source-derived dry/wet stress screen and JR1/JR5 voltage-metadata correction. Its independent capacitor-differential checks inform the held ground-plane work; they do not qualify the selected RETURN, physical insulation or fault protection. Start with `interface-voltage/review.md` before accepting copper around the dry interface.
 
 November 25 clamp/rail injection: `input-clamps/` owns bounded input and output clamp injection, a two-rail load correction candidate and its analytic/SPICE evidence. `input-clamps/review.md` distinguishes the proposed 10k loads from native integration and full power-sequencing qualification.
+
+Current rail-load correction: [rail-load-integration/review.md](rail-load-integration/review.md), VAL-064. R619/R620 are now native; exact R601 package/rating synchronized. Earlier VAL-063 source-preservation claims are historical. Voltage-domain spacing/ground pour and whole-system qualification remain open.

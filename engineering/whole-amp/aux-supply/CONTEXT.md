@@ -12,3 +12,5 @@ Current load/model seam: load-review.md, load-contract.json and results/loads. T
 Unadopted transformer options: transformer-review.md and transformer-candidates.json own the115/230V candidate comparison in120/220V operating modes. Results/transformer-candidates retains the current comparison. The review links a ready-to-review supplier inquiry; no message or order has been sent.
 
 Advance-mute hold-up seam: hold-up-contract.json and hold-up-review.md own the unadopted adjustable-regulator/raw-reservoir comparison. results/hold-up distinguishes the rejected 25 VA tolerance corner from a targeted 50 VA reference. It does not modify transformer selection, native CAD or the complete current budget. Actual detector/contact timing, China sourcing and populated fit remain open.
+
+November25 VAL-064: current load contract and results/loads include native R619/R620. [Integration review](../reverb-600/rail-load-integration/review.md) owns the updated72-case current/heat table and32-case candidate brownout regression. The hold-up factory consumes this extra load for future runs; existing results/hold-up and transformer comparisons remain historical snapshots.

@@ -1,0 +1,544 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-25T16:13:32",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "Renegade_Reverb.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets GND and -15V)",
+            "items": [
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 139.5,
+                        "y": 24.0
+                    },
+                    "uuid": "4257148b-7746-4ba3-b58b-a23087501579"
+                },
+                {
+                    "description": "Track [-15V] on F.Cu, length 8.9661 mm",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 20.5
+                    },
+                    "uuid": "9d31ef9f-598a-5f11-a9e7-05d7e996407f"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets COIL_REV and GND)",
+            "items": [
+                {
+                    "description": "Track [COIL_REV] on B.Cu, length 26.3000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 20.0
+                    },
+                    "uuid": "31eb05b2-0008-4dc1-b6d2-20d7ad4e321e"
+                },
+                {
+                    "description": "PTH pad 1 [GND] of R620",
+                    "pos": {
+                        "x": 125.5,
+                        "y": 20.5
+                    },
+                    "uuid": "35048910-3c35-50e6-a654-681d7fbb5db5"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets -15V and GND)",
+            "items": [
+                {
+                    "description": "Track [-15V] on F.Cu, length 8.9661 mm",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 20.5
+                    },
+                    "uuid": "9d31ef9f-598a-5f11-a9e7-05d7e996407f"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 1.3000 mm",
+                    "pos": {
+                        "x": 140.8,
+                        "y": 24.0
+                    },
+                    "uuid": "a4cfebe5-7c2c-465a-916a-b63f69d10878"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets -15V and GND)",
+            "items": [
+                {
+                    "description": "Track [-15V] on F.Cu, length 8.9661 mm",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 20.5
+                    },
+                    "uuid": "9d31ef9f-598a-5f11-a9e7-05d7e996407f"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 9.0000 mm",
+                    "pos": {
+                        "x": 139.5,
+                        "y": 15.0
+                    },
+                    "uuid": "baaab101-9236-4d70-818a-51edbb17890e"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets -15V and GND)",
+            "items": [
+                {
+                    "description": "Track [-15V] on F.Cu, length 3.5355 mm",
+                    "pos": {
+                        "x": 142.0,
+                        "y": 28.5
+                    },
+                    "uuid": "bb09a4b7-66ed-5ac3-8e97-ee4c5e6fa3ae"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 3.2062 mm",
+                    "pos": {
+                        "x": 141.0,
+                        "y": 27.40625
+                    },
+                    "uuid": "d8d24d74-88de-4930-a4d0-b17f43fbef63"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [-15V] on F.Cu, length 3.5355 mm",
+                    "pos": {
+                        "x": 142.0,
+                        "y": 28.5
+                    },
+                    "uuid": "bb09a4b7-66ed-5ac3-8e97-ee4c5e6fa3ae"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 0.1326 mm",
+                    "pos": {
+                        "x": 140.90625,
+                        "y": 27.5
+                    },
+                    "uuid": "d2f452d3-ba47-46f6-b64f-1f6ffa299733"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [-15V] on F.Cu, length 8.9661 mm",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 20.5
+                    },
+                    "uuid": "9d31ef9f-598a-5f11-a9e7-05d7e996407f"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 3.2062 mm",
+                    "pos": {
+                        "x": 141.0,
+                        "y": 27.40625
+                    },
+                    "uuid": "d8d24d74-88de-4930-a4d0-b17f43fbef63"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and -15V)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 0.2812 mm",
+                    "pos": {
+                        "x": 140.625,
+                        "y": 27.5
+                    },
+                    "uuid": "01162aa2-9c2d-417d-a083-208e6f2931a3"
+                },
+                {
+                    "description": "Track [-15V] on F.Cu, length 3.5355 mm",
+                    "pos": {
+                        "x": 142.0,
+                        "y": 28.5
+                    },
+                    "uuid": "bb09a4b7-66ed-5ac3-8e97-ee4c5e6fa3ae"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [COIL_REV] on B.Cu, length 26.3000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 20.0
+                    },
+                    "uuid": "31eb05b2-0008-4dc1-b6d2-20d7ad4e321e"
+                },
+                {
+                    "description": "PTH pad 1 [GND] of R620",
+                    "pos": {
+                        "x": 125.5,
+                        "y": 20.5
+                    },
+                    "uuid": "35048910-3c35-50e6-a654-681d7fbb5db5"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [-15V] on F.Cu, length 8.9661 mm",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 20.5
+                    },
+                    "uuid": "9d31ef9f-598a-5f11-a9e7-05d7e996407f"
+                },
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 139.5,
+                        "y": 24.0
+                    },
+                    "uuid": "4257148b-7746-4ba3-b58b-a23087501579"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'LV copper clearance' clearance 0.2500 mm; actual 0.2000 mm)",
+            "items": [
+                {
+                    "description": "Track [COIL_REV] on B.Cu, length 26.3000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 20.0
+                    },
+                    "uuid": "31eb05b2-0008-4dc1-b6d2-20d7ad4e321e"
+                },
+                {
+                    "description": "Track [GND] on B.Cu, length 5.6569 mm",
+                    "pos": {
+                        "x": 125.5,
+                        "y": 20.5
+                    },
+                    "uuid": "c4826413-091a-535a-8c3e-3143c889c0ed"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets COIL_REV and -15V)",
+            "items": [
+                {
+                    "description": "Track [COIL_REV] on B.Cu, length 26.3000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 20.0
+                    },
+                    "uuid": "31eb05b2-0008-4dc1-b6d2-20d7ad4e321e"
+                },
+                {
+                    "description": "PTH pad 2 [-15V] of R620",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 20.5
+                    },
+                    "uuid": "92d1d8c2-93ae-5255-9962-f8600d40c50c"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'LV copper clearance' clearance 0.2500 mm; actual 0.1419 mm)",
+            "items": [
+                {
+                    "description": "Track [-15V] on F.Cu, length 3.5355 mm",
+                    "pos": {
+                        "x": 142.0,
+                        "y": 28.5
+                    },
+                    "uuid": "bb09a4b7-66ed-5ac3-8e97-ee4c5e6fa3ae"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 11.1750 mm",
+                    "pos": {
+                        "x": 140.5,
+                        "y": 38.8
+                    },
+                    "uuid": "f5e1b8e4-937a-4f53-8262-f701b16ec203"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and -15V)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 0.1768 mm",
+                    "pos": {
+                        "x": 140.625,
+                        "y": 27.5
+                    },
+                    "uuid": "2da2764a-f1ef-433e-a24e-a942308f502f"
+                },
+                {
+                    "description": "Track [-15V] on F.Cu, length 3.5355 mm",
+                    "pos": {
+                        "x": 142.0,
+                        "y": 28.5
+                    },
+                    "uuid": "bb09a4b7-66ed-5ac3-8e97-ee4c5e6fa3ae"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [COIL_REV] on B.Cu, length 26.3000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 20.0
+                    },
+                    "uuid": "31eb05b2-0008-4dc1-b6d2-20d7ad4e321e"
+                },
+                {
+                    "description": "PTH pad 2 [-15V] of R620",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 20.5
+                    },
+                    "uuid": "92d1d8c2-93ae-5255-9962-f8600d40c50c"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [COIL_REV] on B.Cu, length 26.3000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 20.0
+                    },
+                    "uuid": "31eb05b2-0008-4dc1-b6d2-20d7ad4e321e"
+                },
+                {
+                    "description": "PTH pad 1 [GND] of R620",
+                    "pos": {
+                        "x": 125.5,
+                        "y": 20.5
+                    },
+                    "uuid": "35048910-3c35-50e6-a654-681d7fbb5db5"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [COIL_REV] on B.Cu, length 26.3000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 20.0
+                    },
+                    "uuid": "31eb05b2-0008-4dc1-b6d2-20d7ad4e321e"
+                },
+                {
+                    "description": "PTH pad 2 [-15V] of R620",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 20.5
+                    },
+                    "uuid": "92d1d8c2-93ae-5255-9962-f8600d40c50c"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text '+15 GND -15 +12 COIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 134.0,
+                        "y": 7.0
+                    },
+                    "uuid": "9aa10fcf-d8d3-42bc-95b7-c211fad28e1a"
+                },
+                {
+                    "description": "Segment of R619 on F.Silkscreen",
+                    "pos": {
+                        "x": 126.54,
+                        "y": 7.0
+                    },
+                    "uuid": "b8958ab2-e752-54dc-96f0-b197fc6aad9b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Rectangle of R619 on F.Silkscreen",
+                    "pos": {
+                        "x": 127.31,
+                        "y": 5.63
+                    },
+                    "uuid": "5206aea6-fda7-5d71-b130-1919029a5334"
+                },
+                {
+                    "description": "PCB text '+15 GND -15 +12 COIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 134.0,
+                        "y": 7.0
+                    },
+                    "uuid": "9aa10fcf-d8d3-42bc-95b7-c211fad28e1a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "PCB text '+15 GND -15 +12 COIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 134.0,
+                        "y": 7.0
+                    },
+                    "uuid": "9aa10fcf-d8d3-42bc-95b7-c211fad28e1a"
+                },
+                {
+                    "description": "Segment of R619 on F.Silkscreen",
+                    "pos": {
+                        "x": 134.62,
+                        "y": 7.0
+                    },
+                    "uuid": "ffbd8f17-2bf3-5e18-a0c0-e6294a00eea8"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text '+15 GND -15 +12 COIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 134.0,
+                        "y": 7.0
+                    },
+                    "uuid": "9aa10fcf-d8d3-42bc-95b7-c211fad28e1a"
+                },
+                {
+                    "description": "PTH pad 1 [+15V] of R619",
+                    "pos": {
+                        "x": 125.5,
+                        "y": 7.0
+                    },
+                    "uuid": "98958ba3-d55e-5b20-ad02-bd81759cb03e"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text '+15 GND -15 +12 COIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 134.0,
+                        "y": 7.0
+                    },
+                    "uuid": "9aa10fcf-d8d3-42bc-95b7-c211fad28e1a"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of R619",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 7.0
+                    },
+                    "uuid": "6be5a8e5-af76-5583-b999-ec88f568df2a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

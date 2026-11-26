@@ -42,3 +42,7 @@ The 50 VA reference body is up to 83 mm diameter and 36 mm high before mounting 
 ## Next concrete action
 
 Design the actual secondary-loss detector and budget its worst detection delay plus the existing coil decay, contact travel and bounce against the supply reserve. The 20 ms value here is hypothetical, not a relay specification. Include slow brownouts, short interruptions, reference/logic sequencing and restart inhibit; keep the analog rail monitor for rail-specific failures. Resolve a Chinese-stocked transformer or supplier-confirmed winding specification, exact reservoir and thermal implementation before selecting the supply or editing native CAD. All six through-chassis scopes remain open; no fabrication release, purchase or supplier message.
+
+## 25 November load update
+
+R619/R620 now add up to1.836735mA per rail in the declared load allocation. The hold-up factory consumes it for future runs; the results reported above remain historical. [VAL-064](../reverb-600/rail-load-integration/review.md) separately reruns all32 VAL-054 brownout cases with only this added load and retains a0.38320ms conditional timing reserve. Neither screen qualifies the complete power system.

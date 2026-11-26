@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/reverb-600/cad/Renegade_220V_Reverb.kicad_sch</source>
-    <date>2026-11-24T03:43:43</date>
+    <date>2026-11-25T16:29:52</date>
     <tool>Eeschema 10.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -4597,7 +4597,7 @@
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
-        <field name="Rating">Low voltage only; soldered locking harness or retained socket</field>
+        <field name="Rating">Tube-level audio; connector voltage, insulation and fault envelope require qualification</field>
         <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
         <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</field>
         <field name="Datasheet"/>
@@ -4605,7 +4605,7 @@
       </fields>
       <libsource lib="Renegade_Draft" part="Connector_Generic_Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Source" value="600R-1 received-tank revision"/>
-      <property name="Rating" value="Low voltage only; soldered locking harness or retained socket"/>
+      <property name="Rating" value="Tube-level audio; connector voltage, insulation and fault envelope require qualification"/>
       <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
       <property name="Sheetname" value="07a_reverb_send"/>
       <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
@@ -4654,29 +4654,30 @@
     </comp>
     <comp ref="R601">
       <value>1M</value>
-      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <footprint>Renegade_Selected:Yageo_MFR50S_MF0207_P10.16</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
-        <field name="Rating">1% 0.25W metal film, 250V minimum</field>
+        <field name="Rating">1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower</field>
         <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
         <field name="MPN">MF0207FTE52-1M</field>
         <field name="Supplier_SKU">C1373811</field>
         <field name="Part_source">https://so.szlcsc.com/global.html?k=C1373811</field>
         <field name="Price_stock_observed">2026-11-11</field>
-        <field name="Part_status">Engineering selected; exact footprint integration and physical qualification pending</field>
-        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
-        <field name="Datasheet"/>
+        <field name="Part_status">Exact MF0207 package integrated; system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:Yageo_MFR50S_MF0207_P10.16</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
       <property name="Source" value="600R-1 received-tank revision"/>
-      <property name="Rating" value="1% 0.25W metal film, 250V minimum"/>
+      <property name="Rating" value="1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower"/>
       <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
       <property name="MPN" value="MF0207FTE52-1M"/>
       <property name="Supplier_SKU" value="C1373811"/>
       <property name="Part_source" value="https://so.szlcsc.com/global.html?k=C1373811"/>
       <property name="Price_stock_observed" value="2026-11-11"/>
-      <property name="Part_status" value="Engineering selected; exact footprint integration and physical qualification pending"/>
+      <property name="Part_status" value="Exact MF0207 package integrated; system qualification pending"/>
       <property name="Sheetname" value="07a_reverb_send"/>
       <property name="Sheetfile" value="07a_reverb_send.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -4885,7 +4886,7 @@
     </comp>
     <comp ref="U10">
       <value>OPA2134PA</value>
-      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <footprint>Renegade_Selected:TE_1-2199298-2_DIP8_Socket</footprint>
       <datasheet>https://www.ti.com/lit/ds/symlink/opa2134.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
@@ -4896,7 +4897,7 @@
         <field name="Part_source">https://www.lcsc.com/zh-CN/product-detail/C1346118.html</field>
         <field name="Price_stock_observed">2026-11-11</field>
         <field name="Part_status">Engineering selected; exact footprint integration and physical qualification pending</field>
-        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+        <field name="Footprint">Renegade_Selected:TE_1-2199298-2_DIP8_Socket</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/opa2134.pdf</field>
         <field name="Description"/>
       </fields>
@@ -4940,19 +4941,24 @@
     </comp>
     <comp ref="C604">
       <value>100n</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB104J63V82CB0236</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
         <field name="Rating">63V film/C0G</field>
         <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB104J63V82CB0236</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB104J63V82CB0236</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
       <property name="Source" value="600R-1 received-tank revision"/>
       <property name="Rating" value="63V film/C0G"/>
       <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
+      <property name="Selected_MPN" value="MEB104J63V82CB0236"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="07b_reverb_recovery"/>
       <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -5003,19 +5009,24 @@
     </comp>
     <comp ref="C606">
       <value>1u</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB105J63V82CB0235</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220712/44A2F3FCFA20D943DF6A492DC0D1EB3A.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
         <field name="Rating">63V film/C0G</field>
         <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB105J63V82CB0235</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB105J63V82CB0235</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220712/44A2F3FCFA20D943DF6A492DC0D1EB3A.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
       <property name="Source" value="600R-1 received-tank revision"/>
       <property name="Rating" value="63V film/C0G"/>
       <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
+      <property name="Selected_MPN" value="MEB105J63V82CB0235"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="07b_reverb_recovery"/>
       <property name="Sheetfile" value="07b_reverb_recovery.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -5433,7 +5444,7 @@
     </comp>
     <comp ref="U11">
       <value>OPA2134PA</value>
-      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <footprint>Renegade_Selected:TE_1-2199298-2_DIP8_Socket</footprint>
       <datasheet>https://www.ti.com/lit/ds/symlink/opa2134.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
@@ -5444,7 +5455,7 @@
         <field name="Part_source">https://www.lcsc.com/zh-CN/product-detail/C1346118.html</field>
         <field name="Price_stock_observed">2026-11-11</field>
         <field name="Part_status">Engineering selected; exact footprint integration and physical qualification pending</field>
-        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+        <field name="Footprint">Renegade_Selected:TE_1-2199298-2_DIP8_Socket</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/opa2134.pdf</field>
         <field name="Description"/>
       </fields>
@@ -5488,7 +5499,7 @@
     </comp>
     <comp ref="U12">
       <value>OPA2134PA</value>
-      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <footprint>Renegade_Selected:TE_1-2199298-2_DIP8_Socket</footprint>
       <datasheet>https://www.ti.com/lit/ds/symlink/opa2134.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
@@ -5499,7 +5510,7 @@
         <field name="Part_source">https://www.lcsc.com/zh-CN/product-detail/C1346118.html</field>
         <field name="Price_stock_observed">2026-11-11</field>
         <field name="Part_status">Engineering selected; exact footprint integration and physical qualification pending</field>
-        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+        <field name="Footprint">Renegade_Selected:TE_1-2199298-2_DIP8_Socket</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/opa2134.pdf</field>
         <field name="Description"/>
       </fields>
@@ -5543,19 +5554,24 @@
     </comp>
     <comp ref="C607">
       <value>1u</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MPP105J2W10KN22605</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20261027/114CD9545CFEB4C7867408678DF99EB1.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
-        <field name="Rating">63V film/C0G</field>
+        <field name="Rating">450VDC polypropylene; exact MPP105J2W10KN22605; system fault/thermal qualification pending</field>
         <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MPP105J2W10KN22605</field>
+        <field name="Selection_evidence">VAL-062; voltage-rated C607, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MPP105J2W10KN22605</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20261027/114CD9545CFEB4C7867408678DF99EB1.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
       <property name="Source" value="600R-1 received-tank revision"/>
-      <property name="Rating" value="63V film/C0G"/>
+      <property name="Rating" value="450VDC polypropylene; exact MPP105J2W10KN22605; system fault/thermal qualification pending"/>
       <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
+      <property name="Selected_MPN" value="MPP105J2W10KN22605"/>
+      <property name="Selection_evidence" value="VAL-062; voltage-rated C607, system qualification pending"/>
       <property name="Sheetname" value="07c_reverb_output"/>
       <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -5573,19 +5589,24 @@
     </comp>
     <comp ref="C610">
       <value>100n</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB104J63V82CB0236</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
         <field name="Rating">63V film/C0G</field>
         <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB104J63V82CB0236</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB104J63V82CB0236</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
       <property name="Source" value="600R-1 received-tank revision"/>
       <property name="Rating" value="63V film/C0G"/>
       <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
+      <property name="Selected_MPN" value="MEB104J63V82CB0236"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="07c_reverb_output"/>
       <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -5603,19 +5624,24 @@
     </comp>
     <comp ref="C611">
       <value>100n</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB104J63V82CB0236</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
         <field name="Rating">63V film/C0G</field>
         <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB104J63V82CB0236</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB104J63V82CB0236</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
       <property name="Source" value="600R-1 received-tank revision"/>
       <property name="Rating" value="63V film/C0G"/>
       <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
+      <property name="Selected_MPN" value="MEB104J63V82CB0236"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="07c_reverb_output"/>
       <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -5633,19 +5659,24 @@
     </comp>
     <comp ref="C612">
       <value>100n</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB104J63V82CB0236</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
         <field name="Rating">63V film/C0G</field>
         <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB104J63V82CB0236</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB104J63V82CB0236</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
       <property name="Source" value="600R-1 received-tank revision"/>
       <property name="Rating" value="63V film/C0G"/>
       <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
+      <property name="Selected_MPN" value="MEB104J63V82CB0236"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="07c_reverb_output"/>
       <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -5663,19 +5694,24 @@
     </comp>
     <comp ref="C613">
       <value>100n</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB104J63V82CB0236</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
         <field name="Rating">63V film/C0G</field>
         <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB104J63V82CB0236</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB104J63V82CB0236</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
       <property name="Source" value="600R-1 received-tank revision"/>
       <property name="Rating" value="63V film/C0G"/>
       <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
+      <property name="Selected_MPN" value="MEB104J63V82CB0236"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="07c_reverb_output"/>
       <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -5693,19 +5729,24 @@
     </comp>
     <comp ref="C614">
       <value>100n</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB104J63V82CB0236</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
         <field name="Rating">63V film/C0G</field>
         <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB104J63V82CB0236</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB104J63V82CB0236</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
       <property name="Source" value="600R-1 received-tank revision"/>
       <property name="Rating" value="63V film/C0G"/>
       <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
+      <property name="Selected_MPN" value="MEB104J63V82CB0236"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="07c_reverb_output"/>
       <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -5723,19 +5764,24 @@
     </comp>
     <comp ref="C615">
       <value>100n</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB104J63V82CB0236</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</datasheet>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
         <field name="Rating">63V film/C0G</field>
         <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB104J63V82CB0236</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB104J63V82CB0236</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
       <property name="Source" value="600R-1 received-tank revision"/>
       <property name="Rating" value="63V film/C0G"/>
       <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
+      <property name="Selected_MPN" value="MEB104J63V82CB0236"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="07c_reverb_output"/>
       <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -5753,7 +5799,7 @@
     </comp>
     <comp ref="C616">
       <value>47u</value>
-      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <footprint>Renegade_Selected:Panasonic_EEUFR1H470</footprint>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
         <field name="Rating">50V electrolytic</field>
@@ -5763,7 +5809,7 @@
         <field name="Part_source">https://so.szlcsc.com/global.html?k=C407950</field>
         <field name="Price_stock_observed">2026-11-11</field>
         <field name="Part_status">Engineering selected; exact footprint integration and physical qualification pending</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Footprint">Renegade_Selected:Panasonic_EEUFR1H470</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -5793,7 +5839,7 @@
     </comp>
     <comp ref="C617">
       <value>47u</value>
-      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <footprint>Renegade_Selected:Panasonic_EEUFR1H470</footprint>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
         <field name="Rating">50V electrolytic</field>
@@ -5803,7 +5849,7 @@
         <field name="Part_source">https://so.szlcsc.com/global.html?k=C407950</field>
         <field name="Price_stock_observed">2026-11-11</field>
         <field name="Part_status">Engineering selected; exact footprint integration and physical qualification pending</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Footprint">Renegade_Selected:Panasonic_EEUFR1H470</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -5836,7 +5882,7 @@
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <fields>
         <field name="Source">600R-1 received-tank revision</field>
-        <field name="Rating">Low voltage only; soldered locking harness or retained socket</field>
+        <field name="Rating">Tube-level audio; connector voltage, insulation and fault envelope require qualification</field>
         <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
         <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</field>
         <field name="Datasheet"/>
@@ -5844,7 +5890,7 @@
       </fields>
       <libsource lib="Renegade_Draft" part="Connector_Generic_Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Source" value="600R-1 received-tank revision"/>
-      <property name="Rating" value="Low voltage only; soldered locking harness or retained socket"/>
+      <property name="Rating" value="Tube-level audio; connector voltage, insulation and fault envelope require qualification"/>
       <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
       <property name="Sheetname" value="07c_reverb_output"/>
       <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
@@ -6124,6 +6170,88 @@
         </unit>
       </units>
     </comp>
+    <comp ref="R619">
+      <value>10k</value>
+      <footprint>Renegade_Selected:Yageo_MFR50S_MF0207_P10.16</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf</datasheet>
+      <fields>
+        <field name="Source">VAL-063 rail-load correction</field>
+        <field name="Rating">1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower</field>
+        <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
+        <field name="MPN">MF0207FTE52-10K</field>
+        <field name="Supplier_SKU">C513672</field>
+        <field name="Part_source">https://item.szlcsc.com/528499.html</field>
+        <field name="Price_stock_observed">2026-11-11</field>
+        <field name="Part_status">Exact package integrated; full-system validation pending</field>
+        <field name="Footprint">Renegade_Selected:Yageo_MFR50S_MF0207_P10.16</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="VAL-063 rail-load correction"/>
+      <property name="Rating" value="1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower"/>
+      <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
+      <property name="MPN" value="MF0207FTE52-10K"/>
+      <property name="Supplier_SKU" value="C513672"/>
+      <property name="Part_source" value="https://item.szlcsc.com/528499.html"/>
+      <property name="Price_stock_observed" value="2026-11-11"/>
+      <property name="Part_status" value="Exact package integrated; full-system validation pending"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>25049d8f-5bb8-5731-a5ea-e8f24e7a002f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R620">
+      <value>10k</value>
+      <footprint>Renegade_Selected:Yageo_MFR50S_MF0207_P10.16</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf</datasheet>
+      <fields>
+        <field name="Source">VAL-063 rail-load correction</field>
+        <field name="Rating">1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower</field>
+        <field name="Design_status">600/2250 received-tank draft; electrical and physical qualification pending</field>
+        <field name="MPN">MF0207FTE52-10K</field>
+        <field name="Supplier_SKU">C513672</field>
+        <field name="Part_source">https://item.szlcsc.com/528499.html</field>
+        <field name="Price_stock_observed">2026-11-11</field>
+        <field name="Part_status">Exact package integrated; full-system validation pending</field>
+        <field name="Footprint">Renegade_Selected:Yageo_MFR50S_MF0207_P10.16</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="VAL-063 rail-load correction"/>
+      <property name="Rating" value="1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower"/>
+      <property name="Design_status" value="600/2250 received-tank draft; electrical and physical qualification pending"/>
+      <property name="MPN" value="MF0207FTE52-10K"/>
+      <property name="Supplier_SKU" value="C513672"/>
+      <property name="Part_source" value="https://item.szlcsc.com/528499.html"/>
+      <property name="Price_stock_observed" value="2026-11-11"/>
+      <property name="Part_status" value="Exact package integrated; full-system validation pending"/>
+      <property name="Sheetname" value="07c_reverb_output"/>
+      <property name="Sheetfile" value="07c_reverb_output.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/07c_reverb_output/" tstamps="/8fe72301-58ee-52c0-a750-925f875cec11/"/>
+      <tstamps>04634033-be9a-51f9-b5b5-27b9bae0af2a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="RT1">
       <value>Received tank 600:2250 ohm</value>
       <fields>
@@ -6249,14 +6377,17 @@
     </comp>
     <comp ref="C203">
       <value>100n</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB104J63V82CB0236</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</datasheet>
       <fields>
         <field name="Source">DEC-007 v0.4</field>
         <field name="Rating">63V film/C0G</field>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB104J63V82CB0236</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB104J63V82CB0236</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
@@ -6264,6 +6395,8 @@
       <property name="Rating" value="63V film/C0G"/>
       <property name="Design_status" value="proposed"/>
       <property name="Assembly" value="Control"/>
+      <property name="Selected_MPN" value="MEB104J63V82CB0236"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="08_control_supply"/>
       <property name="Sheetfile" value="08_control_supply.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -6281,13 +6414,13 @@
     </comp>
     <comp ref="C204">
       <value>100u</value>
-      <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <footprint>Renegade_Selected:Panasonic_EEUFR1H101</footprint>
       <fields>
         <field name="Source">DEC-007 v0.4</field>
         <field name="Rating">50V electrolytic</field>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</field>
+        <field name="Footprint">Renegade_Selected:Panasonic_EEUFR1H101</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -6345,14 +6478,17 @@
     </comp>
     <comp ref="C206">
       <value>100n</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB104J63V82CB0236</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</datasheet>
       <fields>
         <field name="Source">DEC-007 v0.4</field>
         <field name="Rating">63V film/C0G</field>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB104J63V82CB0236</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB104J63V82CB0236</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
@@ -6360,6 +6496,8 @@
       <property name="Rating" value="63V film/C0G"/>
       <property name="Design_status" value="proposed"/>
       <property name="Assembly" value="Control"/>
+      <property name="Selected_MPN" value="MEB104J63V82CB0236"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="08_control_supply"/>
       <property name="Sheetfile" value="08_control_supply.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -6377,13 +6515,13 @@
     </comp>
     <comp ref="C207">
       <value>47u</value>
-      <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <footprint>Renegade_Selected:Panasonic_EEUFR1H470</footprint>
       <fields>
         <field name="Source">DEC-007 v0.4</field>
         <field name="Rating">50V electrolytic</field>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</field>
+        <field name="Footprint">Renegade_Selected:Panasonic_EEUFR1H470</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -6473,14 +6611,17 @@
     </comp>
     <comp ref="C210">
       <value>100n</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB104J63V82CB0236</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</datasheet>
       <fields>
         <field name="Source">DEC-007 v0.4</field>
         <field name="Rating">63V film/C0G</field>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB104J63V82CB0236</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB104J63V82CB0236</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
@@ -6488,6 +6629,8 @@
       <property name="Rating" value="63V film/C0G"/>
       <property name="Design_status" value="proposed"/>
       <property name="Assembly" value="Control"/>
+      <property name="Selected_MPN" value="MEB104J63V82CB0236"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="08_control_supply"/>
       <property name="Sheetfile" value="08_control_supply.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -6505,13 +6648,13 @@
     </comp>
     <comp ref="C211">
       <value>10u</value>
-      <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <footprint>Renegade_Selected:Panasonic_EEUFR1H100</footprint>
       <fields>
         <field name="Source">DEC-007 v0.4</field>
         <field name="Rating">50V electrolytic</field>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</field>
+        <field name="Footprint">Renegade_Selected:Panasonic_EEUFR1H100</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -6536,14 +6679,14 @@
       </units>
     </comp>
     <comp ref="C212">
-      <value>2.2u</value>
-      <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <value>47u</value>
+      <footprint>Renegade_Selected:Panasonic_EEUFR1H470</footprint>
       <fields>
         <field name="Source">DEC-007 v0.4</field>
         <field name="Rating">50V electrolytic</field>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</field>
+        <field name="Footprint">Renegade_Selected:Panasonic_EEUFR1H470</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -6569,14 +6712,17 @@
     </comp>
     <comp ref="C213">
       <value>100n</value>
-      <footprint>Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB104J63V82CB0236</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</datasheet>
       <fields>
         <field name="Source">DEC-007 v0.4</field>
         <field name="Rating">63V film/C0G</field>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB104J63V82CB0236</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB104J63V82CB0236</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220613/95E40529FEB7A3E68EC83AD5A7304622.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
@@ -6584,6 +6730,8 @@
       <property name="Rating" value="63V film/C0G"/>
       <property name="Design_status" value="proposed"/>
       <property name="Assembly" value="Control"/>
+      <property name="Selected_MPN" value="MEB104J63V82CB0236"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="08_control_supply"/>
       <property name="Sheetfile" value="08_control_supply.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -6601,13 +6749,13 @@
     </comp>
     <comp ref="C214">
       <value>10u</value>
-      <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <footprint>Renegade_Selected:Panasonic_EEUFR1H100</footprint>
       <fields>
         <field name="Source">DEC-007 v0.4</field>
         <field name="Rating">50V electrolytic</field>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</field>
+        <field name="Footprint">Renegade_Selected:Panasonic_EEUFR1H100</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -6887,6 +7035,39 @@
         </unit>
       </units>
     </comp>
+    <comp ref="R215">
+      <value>820</value>
+      <footprint>Renegade_Selected:UNI_ROYAL_MF0W4_P12.70mm</footprint>
+      <datasheet>https://www.uni-royal.cn/images/upload/UniroyalCatalog2024.06.07.pdf</datasheet>
+      <fields>
+        <field name="Source">VAL-027</field>
+        <field name="Rating">0.25W 1%</field>
+        <field name="Design_status">Engineering; procurement pending</field>
+        <field name="Assembly">Control</field>
+        <field name="Footprint">Renegade_Selected:UNI_ROYAL_MF0W4_P12.70mm</field>
+        <field name="Datasheet">https://www.uni-royal.cn/images/upload/UniroyalCatalog2024.06.07.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="VAL-027"/>
+      <property name="Rating" value="0.25W 1%"/>
+      <property name="Design_status" value="Engineering; procurement pending"/>
+      <property name="Assembly" value="Control"/>
+      <property name="Sheetname" value="08_control_supply"/>
+      <property name="Sheetfile" value="08_control_supply.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/08_control_supply/" tstamps="/06576ab5-afa1-5e26-bb42-7027176470f3/"/>
+      <tstamps>b15de993-1053-51c8-bcfa-4e68364fd888</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="T3">
       <value>220V 50Hz /18-0-18V 0.25A</value>
       <fields>
@@ -7053,14 +7234,17 @@
     </comp>
     <comp ref="C301">
       <value>1u</value>
-      <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB105J63V82CB0235</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220712/44A2F3FCFA20D943DF6A492DC0D1EB3A.pdf</datasheet>
       <fields>
         <field name="Source">Revision v0.2</field>
         <field name="Rating">16 V; effective capacitance/tolerance pending</field>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB105J63V82CB0235</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB105J63V82CB0235</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220712/44A2F3FCFA20D943DF6A492DC0D1EB3A.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
@@ -7068,6 +7252,8 @@
       <property name="Rating" value="16 V; effective capacitance/tolerance pending"/>
       <property name="Design_status" value="proposed"/>
       <property name="Assembly" value="Control"/>
+      <property name="Selected_MPN" value="MEB105J63V82CB0235"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="09_controller"/>
       <property name="Sheetfile" value="09_controller.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -7085,14 +7271,17 @@
     </comp>
     <comp ref="C311">
       <value>1u</value>
-      <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <footprint>Renegade_Selected:KNSCHA_MEB105J63V82CB0235</footprint>
+      <datasheet>https://atta.szlcsc.com/upload/public/pdf/source/20220712/44A2F3FCFA20D943DF6A492DC0D1EB3A.pdf</datasheet>
       <fields>
         <field name="Source">Revision v0.2</field>
         <field name="Rating">16 V; effective capacitance/tolerance pending</field>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</field>
-        <field name="Datasheet"/>
+        <field name="Selected_MPN">MEB105J63V82CB0235</field>
+        <field name="Selection_evidence">VAL-057; selected hardware identity, system qualification pending</field>
+        <field name="Footprint">Renegade_Selected:KNSCHA_MEB105J63V82CB0235</field>
+        <field name="Datasheet">https://atta.szlcsc.com/upload/public/pdf/source/20220712/44A2F3FCFA20D943DF6A492DC0D1EB3A.pdf</field>
         <field name="Description"/>
       </fields>
       <libsource lib="Renegade_Draft" part="Device_C" description="Unpolarized capacitor"/>
@@ -7100,6 +7289,8 @@
       <property name="Rating" value="16 V; effective capacitance/tolerance pending"/>
       <property name="Design_status" value="proposed"/>
       <property name="Assembly" value="Control"/>
+      <property name="Selected_MPN" value="MEB105J63V82CB0235"/>
+      <property name="Selection_evidence" value="VAL-057; selected hardware identity, system qualification pending"/>
       <property name="Sheetname" value="09_controller"/>
       <property name="Sheetfile" value="09_controller.kicad_sch"/>
       <property name="ki_keywords" value="cap capacitor"/>
@@ -7381,6 +7572,39 @@
         </unit>
       </units>
     </comp>
+    <comp ref="R304">
+      <value>10k</value>
+      <footprint>Renegade_Selected:Yageo_RT0603_IPC_Nominal</footprint>
+      <datasheet>https://yageogroup.com/content/datasheet/asset/file/pyu-rt_1-to-0-01_rohs_l</datasheet>
+      <fields>
+        <field name="Source">VAL-056 / LCSC C95204</field>
+        <field name="Rating">RT0603BRD0710KL; 0.1%, 25ppm/C, 0.1W at70C</field>
+        <field name="Design_status">Integrated input current limiter; full power sequence pending</field>
+        <field name="Assembly">Control</field>
+        <field name="Footprint">Renegade_Selected:Yageo_RT0603_IPC_Nominal</field>
+        <field name="Datasheet">https://yageogroup.com/content/datasheet/asset/file/pyu-rt_1-to-0-01_rohs_l</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="VAL-056 / LCSC C95204"/>
+      <property name="Rating" value="RT0603BRD0710KL; 0.1%, 25ppm/C, 0.1W at70C"/>
+      <property name="Design_status" value="Integrated input current limiter; full power sequence pending"/>
+      <property name="Assembly" value="Control"/>
+      <property name="Sheetname" value="09_controller"/>
+      <property name="Sheetfile" value="09_controller.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/09_controller/" tstamps="/ec32d9d4-9b48-5b52-9c2f-397185e020d6/"/>
+      <tstamps>84aa8764-1c8f-5634-8070-d2a933c5fab1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="R311">
       <value>1k</value>
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
@@ -7477,6 +7701,39 @@
         </unit>
       </units>
     </comp>
+    <comp ref="R314">
+      <value>10k</value>
+      <footprint>Renegade_Selected:Yageo_RT0603_IPC_Nominal</footprint>
+      <datasheet>https://yageogroup.com/content/datasheet/asset/file/pyu-rt_1-to-0-01_rohs_l</datasheet>
+      <fields>
+        <field name="Source">VAL-056 / LCSC C95204</field>
+        <field name="Rating">RT0603BRD0710KL; 0.1%, 25ppm/C, 0.1W at70C</field>
+        <field name="Design_status">Integrated input current limiter; full power sequence pending</field>
+        <field name="Assembly">Control</field>
+        <field name="Footprint">Renegade_Selected:Yageo_RT0603_IPC_Nominal</field>
+        <field name="Datasheet">https://yageogroup.com/content/datasheet/asset/file/pyu-rt_1-to-0-01_rohs_l</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_R" description="Resistor"/>
+      <property name="Source" value="VAL-056 / LCSC C95204"/>
+      <property name="Rating" value="RT0603BRD0710KL; 0.1%, 25ppm/C, 0.1W at70C"/>
+      <property name="Design_status" value="Integrated input current limiter; full power sequence pending"/>
+      <property name="Assembly" value="Control"/>
+      <property name="Sheetname" value="09_controller"/>
+      <property name="Sheetfile" value="09_controller.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/09_controller/" tstamps="/ec32d9d4-9b48-5b52-9c2f-397185e020d6/"/>
+      <tstamps>e8c62335-7c01-5a79-86e0-eb106bab322f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="SW1">
       <value>LOCAL CH</value>
       <fields>
@@ -7539,7 +7796,7 @@
     </comp>
     <comp ref="U1">
       <value>SN74HC14N</value>
-      <footprint>Package_DIP:DIP-14_W7.62mm</footprint>
+      <footprint>Renegade_Selected:TE_1-2199298-3_DIP14_Socket</footprint>
       <datasheet>https://www.ti.com/lit/ds/symlink/sn74hc14.pdf</datasheet>
       <fields>
         <field name="Display">74HC14N</field>
@@ -7547,7 +7804,7 @@
         <field name="Rating"/>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Package_DIP:DIP-14_W7.62mm</field>
+        <field name="Footprint">Renegade_Selected:TE_1-2199298-3_DIP14_Socket</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74hc14.pdf</field>
         <field name="Description"/>
       </fields>
@@ -7708,6 +7965,41 @@
         </unit>
       </units>
     </comp>
+    <comp ref="D333">
+      <value>1N4007</value>
+      <footprint>Renegade_Selected:Onsemi_1N4007RLG_P10.16</footprint>
+      <datasheet>https://www.onsemi.com/pdf/datasheet/1n4001-d.pdf</datasheet>
+      <fields>
+        <field name="Source">VAL-028</field>
+        <field name="Rating">Controller drain clamp; keep remote coil diodes</field>
+        <field name="Design_status">proposed</field>
+        <field name="Assembly">Control</field>
+        <field name="Selected_MPN">1N4007RLG</field>
+        <field name="Footprint">Renegade_Selected:Onsemi_1N4007RLG_P10.16</field>
+        <field name="Datasheet">https://www.onsemi.com/pdf/datasheet/1n4001-d.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Device_D" description="Diode"/>
+      <property name="Source" value="VAL-028"/>
+      <property name="Rating" value="Controller drain clamp; keep remote coil diodes"/>
+      <property name="Design_status" value="proposed"/>
+      <property name="Assembly" value="Control"/>
+      <property name="Selected_MPN" value="1N4007RLG"/>
+      <property name="Sheetname" value="09b_latches_drivers"/>
+      <property name="Sheetfile" value="09b_latches_drivers.kicad_sch"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/09b_latches_drivers/" tstamps="/0774e6be-6282-5572-be57-238f3edfef89/"/>
+      <tstamps>7e51085a-9b31-586d-908f-c2c0e6036378</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="D341">
       <value>1N4007 flyback</value>
       <footprint>Renegade_Selected:Onsemi_1N4007RLG_P10.16</footprint>
@@ -7742,70 +8034,105 @@
         </unit>
       </units>
     </comp>
-    <comp ref="Q1">
-      <value>2N7000</value>
-      <footprint>Package_TO_SOT_THT:TO-92_Inline_Wide</footprint>
-      <datasheet>https://www.onsemi.com/pdf/datasheet/2n7000-d.pdf</datasheet>
+    <comp ref="D342">
+      <value>1N4007</value>
+      <footprint>Renegade_Selected:Onsemi_1N4007RLG_P10.16</footprint>
+      <datasheet>https://www.onsemi.com/pdf/datasheet/1n4001-d.pdf</datasheet>
       <fields>
-        <field name="Source"/>
-        <field name="Rating">60 V; verify coil drain transient and gate drive</field>
+        <field name="Source">VAL-028</field>
+        <field name="Rating">Controller drain clamp; keep remote coil diodes</field>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline_Wide</field>
-        <field name="Datasheet">https://www.onsemi.com/pdf/datasheet/2n7000-d.pdf</field>
+        <field name="Selected_MPN">1N4007RLG</field>
+        <field name="Footprint">Renegade_Selected:Onsemi_1N4007RLG_P10.16</field>
+        <field name="Datasheet">https://www.onsemi.com/pdf/datasheet/1n4001-d.pdf</field>
         <field name="Description"/>
       </fields>
-      <libsource lib="Renegade_Draft" part="Transistor_FET_2N7000" description="0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92"/>
-      <property name="Source" value=""/>
-      <property name="Rating" value="60 V; verify coil drain transient and gate drive"/>
+      <libsource lib="Renegade_Draft" part="Device_D" description="Diode"/>
+      <property name="Source" value="VAL-028"/>
+      <property name="Rating" value="Controller drain clamp; keep remote coil diodes"/>
       <property name="Design_status" value="proposed"/>
+      <property name="Assembly" value="Control"/>
+      <property name="Selected_MPN" value="1N4007RLG"/>
+      <property name="Sheetname" value="09b_latches_drivers"/>
+      <property name="Sheetfile" value="09b_latches_drivers.kicad_sch"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/09b_latches_drivers/" tstamps="/0774e6be-6282-5572-be57-238f3edfef89/"/>
+      <tstamps>9f6d0434-c1df-50be-8c8b-3d2e749d4518</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q1">
+      <value>AO3400A</value>
+      <footprint>Renegade_Selected:AOS_SOT23_PO00001N</footprint>
+      <datasheet>https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf</datasheet>
+      <fields>
+        <field name="Source">VAL-028</field>
+        <field name="Rating">30V; RDS max48mOhm at2.5V/25C; local clamp</field>
+        <field name="Design_status">Engineering integrated; assembled transient qualification pending</field>
+        <field name="Assembly">Control</field>
+        <field name="Footprint">Renegade_Selected:AOS_SOT23_PO00001N</field>
+        <field name="Datasheet">https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Renegade_Draft" part="Transistor_FET_AO3400A" description="AOS AO3400A, 30V N-channel, G1 S2 D3; local drain clamp required"/>
+      <property name="Source" value="VAL-028"/>
+      <property name="Rating" value="30V; RDS max48mOhm at2.5V/25C; local clamp"/>
+      <property name="Design_status" value="Engineering integrated; assembled transient qualification pending"/>
       <property name="Assembly" value="Control"/>
       <property name="Sheetname" value="09b_latches_drivers"/>
       <property name="Sheetfile" value="09b_latches_drivers.kicad_sch"/>
       <property name="ki_keywords" value="N-Channel MOSFET Logic-Level"/>
-      <property name="ki_fp_filters" value="TO?92*"/>
+      <property name="ki_fp_filters" value="AOS_SOT23*"/>
       <sheetpath names="/09b_latches_drivers/" tstamps="/0774e6be-6282-5572-be57-238f3edfef89/"/>
       <tstamps>871c887f-7281-55c3-a1c4-14c4a43cfc5a</tstamps>
       <units>
         <unit name="A">
           <pins>
-            <pin num="2"/>
-            <pin num="3"/>
             <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
           </pins>
         </unit>
       </units>
     </comp>
     <comp ref="Q2">
-      <value>2N7000</value>
-      <footprint>Package_TO_SOT_THT:TO-92_Inline_Wide</footprint>
-      <datasheet>https://www.onsemi.com/pdf/datasheet/2n7000-d.pdf</datasheet>
+      <value>AO3400A</value>
+      <footprint>Renegade_Selected:AOS_SOT23_PO00001N</footprint>
+      <datasheet>https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf</datasheet>
       <fields>
-        <field name="Source"/>
-        <field name="Rating">60 V; verify coil drain transient and gate drive</field>
-        <field name="Design_status">proposed</field>
+        <field name="Source">VAL-028</field>
+        <field name="Rating">30V; RDS max48mOhm at2.5V/25C; local clamp</field>
+        <field name="Design_status">Engineering integrated; assembled transient qualification pending</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline_Wide</field>
-        <field name="Datasheet">https://www.onsemi.com/pdf/datasheet/2n7000-d.pdf</field>
+        <field name="Footprint">Renegade_Selected:AOS_SOT23_PO00001N</field>
+        <field name="Datasheet">https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf</field>
         <field name="Description"/>
       </fields>
-      <libsource lib="Renegade_Draft" part="Transistor_FET_2N7000" description="0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92"/>
-      <property name="Source" value=""/>
-      <property name="Rating" value="60 V; verify coil drain transient and gate drive"/>
-      <property name="Design_status" value="proposed"/>
+      <libsource lib="Renegade_Draft" part="Transistor_FET_AO3400A" description="AOS AO3400A, 30V N-channel, G1 S2 D3; local drain clamp required"/>
+      <property name="Source" value="VAL-028"/>
+      <property name="Rating" value="30V; RDS max48mOhm at2.5V/25C; local clamp"/>
+      <property name="Design_status" value="Engineering integrated; assembled transient qualification pending"/>
       <property name="Assembly" value="Control"/>
       <property name="Sheetname" value="09b_latches_drivers"/>
       <property name="Sheetfile" value="09b_latches_drivers.kicad_sch"/>
       <property name="ki_keywords" value="N-Channel MOSFET Logic-Level"/>
-      <property name="ki_fp_filters" value="TO?92*"/>
+      <property name="ki_fp_filters" value="AOS_SOT23*"/>
       <sheetpath names="/09b_latches_drivers/" tstamps="/0774e6be-6282-5572-be57-238f3edfef89/"/>
       <tstamps>1b475f44-19c6-58a1-82bd-8f28f35c7697</tstamps>
       <units>
         <unit name="A">
           <pins>
-            <pin num="2"/>
-            <pin num="3"/>
             <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
           </pins>
         </unit>
       </units>
@@ -8034,7 +8361,7 @@
     </comp>
     <comp ref="U2">
       <value>SN74HC74N</value>
-      <footprint>Package_DIP:DIP-14_W7.62mm</footprint>
+      <footprint>Renegade_Selected:TE_1-2199298-3_DIP14_Socket</footprint>
       <datasheet>https://www.ti.com/lit/ds/symlink/sn74hc74.pdf</datasheet>
       <fields>
         <field name="Display">74HC74N</field>
@@ -8042,7 +8369,7 @@
         <field name="Rating"/>
         <field name="Design_status">proposed</field>
         <field name="Assembly">Control</field>
-        <field name="Footprint">Package_DIP:DIP-14_W7.62mm</field>
+        <field name="Footprint">Renegade_Selected:TE_1-2199298-3_DIP14_Socket</field>
         <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74hc74.pdf</field>
         <field name="Description"/>
       </fields>
@@ -8861,22 +9188,22 @@
         <pin num="2" name="B" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Renegade_Draft" part="Transistor_FET_2N7000">
-      <description>0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92</description>
-      <docs>https://www.vishay.com/docs/70226/70226.pdf</docs>
+    <libpart lib="Renegade_Draft" part="Transistor_FET_AO3400A">
+      <description>AOS AO3400A, 30V N-channel, G1 S2 D3; local drain clamp required</description>
+      <docs>https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf</docs>
       <footprints>
-        <fp>TO?92*</fp>
+        <fp>AOS_SOT23*</fp>
       </footprints>
       <fields>
         <field name="Reference">Q</field>
-        <field name="Value">2N7000</field>
-        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
-        <field name="Datasheet">https://www.vishay.com/docs/70226/70226.pdf</field>
-        <field name="Description">0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92</field>
+        <field name="Value">AO3400A</field>
+        <field name="Footprint">Renegade_Selected:AOS_SOT23_PO00001N</field>
+        <field name="Datasheet">https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf</field>
+        <field name="Description">AOS AO3400A, 30V N-channel, G1 S2 D3; local drain clamp required</field>
       </fields>
       <pins>
-        <pin num="1" name="S" type="passive"/>
-        <pin num="2" name="G" type="input"/>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
         <pin num="3" name="D" type="passive"/>
       </pins>
     </libpart>
@@ -8944,6 +9271,7 @@
       <node ref="D206" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D301" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D311" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R215" pin="1" pintype="passive"/>
       <node ref="R302" pin="1" pintype="passive"/>
       <node ref="R312" pin="1" pintype="passive"/>
       <node ref="R321" pin="1" pintype="passive"/>
@@ -8964,7 +9292,9 @@
       <node ref="D206" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D331" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D332" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D333" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D341" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D342" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="JR6" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
       <node ref="K1" pin="1" pintype="passive"/>
       <node ref="K2" pin="1" pintype="passive"/>
@@ -8982,6 +9312,7 @@
       <node ref="D207" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D601" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="JR6" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R619" pin="1" pintype="passive"/>
       <node ref="U10" pin="8" pinfunction="V+_8" pintype="power_in"/>
       <node ref="U11" pin="8" pinfunction="V+_8" pintype="power_in"/>
       <node ref="U12" pin="8" pinfunction="V+_8" pintype="power_in"/>
@@ -8997,22 +9328,31 @@
       <node ref="D208" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D602" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="JR6" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R620" pin="2" pintype="passive"/>
       <node ref="U10" pin="4" pinfunction="V-_4" pintype="power_in"/>
       <node ref="U11" pin="4" pinfunction="V-_4" pintype="power_in"/>
       <node ref="U12" pin="4" pinfunction="V-_4" pintype="power_in"/>
       <node ref="U7" pin="3" pinfunction="VO_3" pintype="power_out"/>
     </net>
-    <net code="5" name="BIAS_AC" class="Default">
+    <net code="5" name="/09_controller/DB_CH_INPUT" class="Default">
+      <node ref="R304" pin="2" pintype="passive"/>
+      <node ref="U1" pin="1" pintype="input"/>
+    </net>
+    <net code="6" name="/09_controller/DB_REV_INPUT" class="Default">
+      <node ref="R314" pin="2" pintype="passive"/>
+      <node ref="U1" pin="3" pintype="input"/>
+    </net>
+    <net code="7" name="BIAS_AC" class="Default">
       <node ref="R40" pin="1" pintype="passive"/>
       <node ref="T1" pin="B" pinfunction="BIAS_TAP_B" pintype="passive"/>
     </net>
-    <net code="6" name="BIAS_OUT" class="Default">
+    <net code="8" name="BIAS_OUT" class="Default">
       <node ref="R33" pin="2" pintype="passive"/>
       <node ref="R34" pin="2" pintype="passive"/>
       <node ref="R38" pin="2" pintype="passive"/>
       <node ref="RV10" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="7" name="B_EARLY" class="Default">
+    <net code="9" name="B_EARLY" class="Default">
       <node ref="C12" pin="1" pintype="passive"/>
       <node ref="R12" pin="1" pintype="passive"/>
       <node ref="R15" pin="1" pintype="passive"/>
@@ -9020,12 +9360,12 @@
       <node ref="R4" pin="1" pintype="passive"/>
       <node ref="R7" pin="1" pintype="passive"/>
     </net>
-    <net code="8" name="B_MAIN" class="Default">
+    <net code="10" name="B_MAIN" class="Default">
       <node ref="L1" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="S2" pin="2" pinfunction="B_2" pintype="passive"/>
       <node ref="T2" pin="CT" pinfunction="BPLUS_CT" pintype="passive"/>
     </net>
-    <net code="9" name="B_PRE" class="Default">
+    <net code="11" name="B_PRE" class="Default">
       <node ref="C13" pin="1" pintype="passive"/>
       <node ref="C25" pin="1" pintype="passive"/>
       <node ref="R17" pin="1" pintype="passive"/>
@@ -9035,7 +9375,7 @@
       <node ref="R35" pin="2" pintype="passive"/>
       <node ref="V3" pin="6" pinfunction="A_6" pintype="passive"/>
     </net>
-    <net code="10" name="B_SCREEN" class="Default">
+    <net code="12" name="B_SCREEN" class="Default">
       <node ref="C26" pin="1" pintype="passive"/>
       <node ref="L1" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R35" pin="1" pintype="passive"/>
@@ -9043,71 +9383,73 @@
       <node ref="R42" pin="1" pintype="passive"/>
       <node ref="R506" pin="1" pintype="passive"/>
     </net>
-    <net code="11" name="CLEAN_OUT" class="Default">
+    <net code="13" name="CLEAN_OUT" class="Default">
       <node ref="C6" pin="2" pintype="passive"/>
       <node ref="K2" pin="6" pintype="passive"/>
       <node ref="R43" pin="1" pintype="passive"/>
     </net>
-    <net code="12" name="CLK_CH" class="Default">
+    <net code="14" name="CLK_CH" class="Default">
       <node ref="U1" pin="2" pintype="output"/>
       <node ref="U2" pin="3" pinfunction="C_3" pintype="input"/>
     </net>
-    <net code="13" name="CLK_REV" class="Default">
+    <net code="15" name="CLK_REV" class="Default">
       <node ref="U1" pin="4" pintype="output"/>
       <node ref="U2" pin="11" pinfunction="C_11" pintype="input"/>
     </net>
-    <net code="14" name="CL_G2" class="Default">
+    <net code="16" name="CL_G2" class="Default">
       <node ref="K1" pin="9" pintype="passive"/>
       <node ref="RV3" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="V1" pin="7" pinfunction="G_7" pintype="input"/>
     </net>
-    <net code="15" name="CL_IN" class="Default">
+    <net code="17" name="CL_IN" class="Default">
       <node ref="K1" pin="6" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
       <node ref="V1" pin="2" pinfunction="G_2" pintype="input"/>
     </net>
-    <net code="16" name="COIL_CH" class="Default">
+    <net code="18" name="COIL_CH" class="Default">
       <node ref="D331" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D332" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D333" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="K1" pin="16" pintype="passive"/>
       <node ref="K2" pin="16" pintype="passive"/>
       <node ref="Q1" pin="3" pinfunction="D_3" pintype="passive"/>
     </net>
-    <net code="17" name="COIL_REV" class="Default">
+    <net code="19" name="COIL_REV" class="Default">
       <node ref="D341" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D342" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="JR6" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
       <node ref="K3" pin="16" pintype="passive"/>
       <node ref="Q2" pin="3" pinfunction="D_3" pintype="passive"/>
     </net>
-    <net code="18" name="DIRTY_OUT" class="Default">
+    <net code="20" name="DIRTY_OUT" class="Default">
       <node ref="K2" pin="8" pintype="passive"/>
       <node ref="RV8" pin="2" pinfunction="2_2" pintype="passive"/>
     </net>
-    <net code="19" name="DR_G2" class="Default">
+    <net code="21" name="DR_G2" class="Default">
       <node ref="C9" pin="2" pintype="passive"/>
       <node ref="K1" pin="11" pintype="passive"/>
       <node ref="R13" pin="2" pintype="passive"/>
       <node ref="R14" pin="1" pintype="passive"/>
       <node ref="V2" pin="7" pinfunction="G_7" pintype="input"/>
     </net>
-    <net code="20" name="DR_IN" class="Default">
+    <net code="22" name="DR_IN" class="Default">
       <node ref="K1" pin="8" pintype="passive"/>
       <node ref="R10" pin="1" pintype="passive"/>
       <node ref="V2" pin="2" pinfunction="G_2" pintype="input"/>
     </net>
-    <net code="21" name="DR_P3" class="Default">
+    <net code="23" name="DR_P3" class="Default">
       <node ref="R21" pin="2" pintype="passive"/>
       <node ref="V3" pin="1" pinfunction="A_1" pintype="passive"/>
       <node ref="V3" pin="7" pinfunction="G_7" pintype="input"/>
     </net>
-    <net code="22" name="FX_RETURN" class="Default">
+    <net code="24" name="FX_RETURN" class="Default">
       <node ref="C601" pin="1" pintype="passive"/>
       <node ref="J4" pin="T" pintype="passive"/>
       <node ref="JR1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="R100" pin="1" pintype="passive"/>
       <node ref="R612" pin="1" pintype="passive"/>
     </net>
-    <net code="23" name="GND" class="Default">
+    <net code="25" name="GND" class="Default">
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C10" pin="2" pintype="passive"/>
       <node ref="C12" pin="2" pintype="passive"/>
@@ -9168,9 +9510,10 @@
       <node ref="JR6" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="K1" pin="13" pintype="passive"/>
       <node ref="K2" pin="13" pintype="passive"/>
+      <node ref="K3" pin="11" pintype="passive"/>
       <node ref="K3" pin="6" pintype="passive"/>
-      <node ref="Q1" pin="1" pinfunction="S_1" pintype="passive"/>
-      <node ref="Q2" pin="1" pinfunction="S_1" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="S_2" pintype="passive"/>
       <node ref="R10" pin="2" pintype="passive"/>
       <node ref="R100" pin="2" pintype="passive"/>
       <node ref="R11" pin="2" pintype="passive"/>
@@ -9181,6 +9524,7 @@
       <node ref="R19" pin="2" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
       <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="R215" pin="2" pintype="passive"/>
       <node ref="R22" pin="2" pintype="passive"/>
       <node ref="R24" pin="2" pintype="passive"/>
       <node ref="R3" pin="2" pintype="passive"/>
@@ -9198,6 +9542,8 @@
       <node ref="R607" pin="2" pintype="passive"/>
       <node ref="R609" pin="2" pintype="passive"/>
       <node ref="R617" pin="2" pintype="passive"/>
+      <node ref="R619" pin="2" pintype="passive"/>
+      <node ref="R620" pin="1" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
       <node ref="RT1" pin="2" pinfunction="IN_RETURN_2" pintype="passive"/>
       <node ref="RT1" pin="4" pinfunction="OUT_RETURN_4" pintype="passive"/>
@@ -9218,9 +9564,7 @@
       <node ref="T3" pin="CT" pinfunction="SEC_CT_CT" pintype="passive"/>
       <node ref="U1" pin="11" pintype="input"/>
       <node ref="U1" pin="13" pintype="input"/>
-      <node ref="U1" pin="5" pintype="input"/>
       <node ref="U1" pin="7" pinfunction="GND_7" pintype="power_in"/>
-      <node ref="U1" pin="9" pintype="input"/>
       <node ref="U12" pin="3" pinfunction="+_3" pintype="input"/>
       <node ref="U12" pin="5" pinfunction="+_5" pintype="input"/>
       <node ref="U2" pin="7" pinfunction="GND_7" pintype="power_in"/>
@@ -9230,7 +9574,7 @@
       <node ref="U6" pin="2" pinfunction="GND_2" pintype="power_in"/>
       <node ref="U7" pin="1" pinfunction="GND_1" pintype="power_in"/>
     </net>
-    <net code="24" name="HEAT_A" class="Default">
+    <net code="26" name="HEAT_A" class="Default">
       <node ref="JH1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="R508" pin="1" pintype="passive"/>
       <node ref="T1" pin="H1" pinfunction="6V3_A_H1" pintype="passive"/>
@@ -9245,7 +9589,7 @@
       <node ref="V5" pin="2" pinfunction="F1_2" pintype="power_in"/>
       <node ref="V6" pin="2" pinfunction="F1_2" pintype="power_in"/>
     </net>
-    <net code="25" name="HEAT_B" class="Default">
+    <net code="27" name="HEAT_B" class="Default">
       <node ref="JH1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="R509" pin="1" pintype="passive"/>
       <node ref="T1" pin="H2" pinfunction="6V3_B_H2" pintype="passive"/>
@@ -9256,188 +9600,189 @@
       <node ref="V5" pin="7" pinfunction="F2_7" pintype="power_in"/>
       <node ref="V6" pin="7" pinfunction="F2_7" pintype="power_in"/>
     </net>
-    <net code="26" name="L_SW" class="Default">
+    <net code="28" name="L_SW" class="Default">
       <node ref="S1" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="T1" pin="L" pinfunction="PRI_L_L" pintype="passive"/>
       <node ref="T3" pin="L" pinfunction="PRI_L_L" pintype="passive"/>
     </net>
-    <net code="27" name="MIX_OUT" class="Default">
+    <net code="29" name="MIX_OUT" class="Default">
       <node ref="C19" pin="1" pintype="passive"/>
       <node ref="JR5" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="R24" pin="1" pintype="passive"/>
       <node ref="R612" pin="2" pintype="passive"/>
       <node ref="R618" pin="2" pintype="passive"/>
     </net>
-    <net code="28" name="N_SW" class="Default">
+    <net code="30" name="N_SW" class="Default">
       <node ref="S1" pin="4" pinfunction="4_4" pintype="passive"/>
       <node ref="T1" pin="N" pinfunction="PRI_N_N" pintype="passive"/>
       <node ref="T3" pin="N" pinfunction="PRI_N_N" pintype="passive"/>
     </net>
-    <net code="29" name="Net-(C2-Pad2)" class="Default">
+    <net code="31" name="Net-(C2-Pad2)" class="Default">
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="RV1" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="30" name="Net-(C3-Pad1)" class="Default">
+    <net code="32" name="Net-(C3-Pad1)" class="Default">
       <node ref="C3" pin="1" pintype="passive"/>
       <node ref="C4" pin="1" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
     </net>
-    <net code="31" name="Net-(C3-Pad2)" class="Default">
+    <net code="33" name="Net-(C3-Pad2)" class="Default">
       <node ref="C3" pin="2" pintype="passive"/>
       <node ref="RV1" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="RV2" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="RV2" pin="2" pinfunction="2_2" pintype="passive"/>
     </net>
-    <net code="32" name="Net-(C4-Pad2)" class="Default">
+    <net code="34" name="Net-(C4-Pad2)" class="Default">
       <node ref="C4" pin="2" pintype="passive"/>
       <node ref="R6" pin="1" pintype="passive"/>
       <node ref="RV2" pin="3" pinfunction="3_3" pintype="passive"/>
     </net>
-    <net code="33" name="Net-(C8-Pad2)" class="Default">
+    <net code="35" name="Net-(C8-Pad2)" class="Default">
       <node ref="C8" pin="2" pintype="passive"/>
       <node ref="RV4" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="34" name="Net-(C9-Pad1)" class="Default">
+    <net code="36" name="Net-(C9-Pad1)" class="Default">
       <node ref="C9" pin="1" pintype="passive"/>
       <node ref="R13" pin="1" pintype="passive"/>
       <node ref="RV4" pin="2" pinfunction="2_2" pintype="passive"/>
     </net>
-    <net code="35" name="Net-(C11-Pad2)" class="Default">
+    <net code="37" name="Net-(C11-Pad2)" class="Default">
       <node ref="C11" pin="2" pintype="passive"/>
       <node ref="R18" pin="1" pintype="passive"/>
     </net>
-    <net code="36" name="Net-(C15-Pad2)" class="Default">
+    <net code="38" name="Net-(C15-Pad2)" class="Default">
       <node ref="C15" pin="2" pintype="passive"/>
       <node ref="RV5" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="37" name="Net-(C16-Pad1)" class="Default">
+    <net code="39" name="Net-(C16-Pad1)" class="Default">
       <node ref="C16" pin="1" pintype="passive"/>
       <node ref="C17" pin="1" pintype="passive"/>
       <node ref="R23" pin="2" pintype="passive"/>
     </net>
-    <net code="38" name="Net-(C16-Pad2)" class="Default">
+    <net code="40" name="Net-(C16-Pad2)" class="Default">
       <node ref="C16" pin="2" pintype="passive"/>
       <node ref="RV5" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="RV6" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="RV6" pin="2" pinfunction="2_2" pintype="passive"/>
     </net>
-    <net code="39" name="Net-(C17-Pad2)" class="Default">
+    <net code="41" name="Net-(C17-Pad2)" class="Default">
       <node ref="C17" pin="2" pintype="passive"/>
       <node ref="RV6" pin="3" pinfunction="3_3" pintype="passive"/>
       <node ref="RV7" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="40" name="Net-(C20-Pad2)" class="Default">
+    <net code="42" name="Net-(C20-Pad2)" class="Default">
       <node ref="C20" pin="2" pintype="passive"/>
       <node ref="C21" pin="1" pintype="passive"/>
       <node ref="R28" pin="2" pintype="passive"/>
       <node ref="R31" pin="2" pintype="passive"/>
       <node ref="R32" pin="1" pintype="passive"/>
     </net>
-    <net code="41" name="Net-(C21-Pad2)" class="Default">
+    <net code="43" name="Net-(C21-Pad2)" class="Default">
       <node ref="C21" pin="2" pintype="passive"/>
       <node ref="RV9" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="42" name="Net-(C23-Pad2)" class="Default">
+    <net code="44" name="Net-(C23-Pad2)" class="Default">
       <node ref="C23" pin="2" pintype="passive"/>
       <node ref="R33" pin="1" pintype="passive"/>
       <node ref="R36" pin="1" pintype="passive"/>
     </net>
-    <net code="43" name="Net-(C24-Pad2)" class="Default">
+    <net code="45" name="Net-(C24-Pad2)" class="Default">
       <node ref="C24" pin="2" pintype="passive"/>
       <node ref="R34" pin="1" pintype="passive"/>
       <node ref="R37" pin="1" pintype="passive"/>
     </net>
-    <net code="44" name="Net-(C27-Pad2)" class="Default">
+    <net code="46" name="Net-(C27-Pad2)" class="Default">
       <node ref="C27" pin="2" pintype="passive"/>
       <node ref="R38" pin="1" pintype="passive"/>
       <node ref="R39" pin="2" pintype="passive"/>
     </net>
-    <net code="45" name="Net-(C29-Pad2)" class="Default">
+    <net code="47" name="Net-(C29-Pad2)" class="Default">
       <node ref="C29" pin="2" pintype="passive"/>
       <node ref="C30" pin="1" pintype="passive"/>
       <node ref="R501" pin="2" pintype="passive"/>
       <node ref="R502" pin="1" pintype="passive"/>
     </net>
-    <net code="46" name="Net-(C301-Pad1)" class="Default">
+    <net code="48" name="Net-(C301-Pad1)" class="Default">
       <node ref="C301" pin="1" pintype="passive"/>
       <node ref="R303" pin="2" pintype="passive"/>
-      <node ref="U1" pin="1" pintype="input"/>
+      <node ref="R304" pin="1" pintype="passive"/>
     </net>
-    <net code="47" name="Net-(C311-Pad1)" class="Default">
+    <net code="49" name="Net-(C311-Pad1)" class="Default">
       <node ref="C311" pin="1" pintype="passive"/>
       <node ref="R313" pin="2" pintype="passive"/>
-      <node ref="U1" pin="3" pintype="input"/>
+      <node ref="R314" pin="1" pintype="passive"/>
     </net>
-    <net code="48" name="Net-(C505-Pad1)" class="Default">
+    <net code="50" name="Net-(C505-Pad1)" class="Default">
       <node ref="C505" pin="1" pintype="passive"/>
       <node ref="R506" pin="2" pintype="passive"/>
       <node ref="R507" pin="1" pintype="passive"/>
       <node ref="R508" pin="2" pintype="passive"/>
       <node ref="R509" pin="2" pintype="passive"/>
     </net>
-    <net code="49" name="Net-(C601-Pad2)" class="Default">
+    <net code="51" name="Net-(C601-Pad2)" class="Default">
       <node ref="C601" pin="2" pintype="passive"/>
       <node ref="R601" pin="1" pintype="passive"/>
     </net>
-    <net code="50" name="Net-(C602-Pad2)" class="Default">
+    <net code="52" name="Net-(C602-Pad2)" class="Default">
       <node ref="C602" pin="2" pintype="passive"/>
       <node ref="RV601" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="51" name="Net-(C603-Pad1)" class="Default">
+    <net code="53" name="Net-(C603-Pad1)" class="Default">
       <node ref="C603" pin="1" pintype="passive"/>
       <node ref="R605" pin="2" pintype="passive"/>
     </net>
-    <net code="52" name="Net-(C605-Pad1)" class="Default">
+    <net code="54" name="Net-(C605-Pad1)" class="Default">
       <node ref="C605" pin="1" pintype="passive"/>
       <node ref="C606" pin="1" pintype="passive"/>
       <node ref="R608" pin="1" pintype="passive"/>
       <node ref="U11" pin="1" pintype="output"/>
     </net>
-    <net code="53" name="Net-(C607-Pad1)" class="Default">
+    <net code="55" name="Net-(C607-Pad1)" class="Default">
       <node ref="C607" pin="1" pintype="passive"/>
       <node ref="R616" pin="2" pintype="passive"/>
     </net>
-    <net code="54" name="Net-(C607-Pad2)" class="Default">
+    <net code="56" name="Net-(C607-Pad2)" class="Default">
       <node ref="C607" pin="2" pintype="passive"/>
+      <node ref="K3" pin="13" pintype="passive"/>
       <node ref="R617" pin="1" pintype="passive"/>
       <node ref="R618" pin="1" pintype="passive"/>
     </net>
-    <net code="55" name="Net-(D3-A)" class="Default">
+    <net code="57" name="Net-(D3-A)" class="Default">
       <node ref="D3" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="T1" pin="HV1" pinfunction="HV_A_HV1" pintype="passive"/>
     </net>
-    <net code="56" name="Net-(D3-K)" class="Default">
+    <net code="58" name="Net-(D3-K)" class="Default">
       <node ref="D3" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D4" pin="2" pinfunction="A_2" pintype="passive"/>
     </net>
-    <net code="57" name="Net-(D4-K)" class="Default">
+    <net code="59" name="Net-(D4-K)" class="Default">
       <node ref="D4" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D6" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="F2" pin="1" pintype="passive"/>
     </net>
-    <net code="58" name="Net-(D5-A)" class="Default">
+    <net code="60" name="Net-(D5-A)" class="Default">
       <node ref="D5" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="T1" pin="HV2" pinfunction="HV_B_HV2" pintype="passive"/>
     </net>
-    <net code="59" name="Net-(D5-K)" class="Default">
+    <net code="61" name="Net-(D5-K)" class="Default">
       <node ref="D5" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D6" pin="2" pinfunction="A_2" pintype="passive"/>
     </net>
-    <net code="60" name="Net-(D7-A)" class="Default">
+    <net code="62" name="Net-(D7-A)" class="Default">
       <node ref="C28" pin="2" pintype="passive"/>
       <node ref="D7" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="R39" pin="1" pintype="passive"/>
     </net>
-    <net code="61" name="Net-(D7-K)" class="Default">
+    <net code="63" name="Net-(D7-K)" class="Default">
       <node ref="D7" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="R40" pin="2" pintype="passive"/>
     </net>
-    <net code="62" name="Net-(D201-A)" class="Default">
+    <net code="64" name="Net-(D201-A)" class="Default">
       <node ref="D201" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D203" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="T3" pin="S1" pinfunction="SEC_A_S1" pintype="passive"/>
     </net>
-    <net code="63" name="Net-(D201-K)" class="Default">
+    <net code="65" name="Net-(D201-K)" class="Default">
       <node ref="C201" pin="1" pintype="passive"/>
       <node ref="C202" pin="1" pintype="passive"/>
       <node ref="C209" pin="1" pintype="passive"/>
@@ -9448,12 +9793,12 @@
       <node ref="U4" pin="1" pinfunction="IN_1" pintype="power_in"/>
       <node ref="U6" pin="1" pinfunction="IN_1" pintype="power_in"/>
     </net>
-    <net code="64" name="Net-(D202-A)" class="Default">
+    <net code="66" name="Net-(D202-A)" class="Default">
       <node ref="D202" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D204" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="T3" pin="S2" pinfunction="SEC_B_S2" pintype="passive"/>
     </net>
-    <net code="65" name="Net-(D203-A)" class="Default">
+    <net code="67" name="Net-(D203-A)" class="Default">
       <node ref="C208" pin="2" pintype="passive"/>
       <node ref="C212" pin="2" pintype="passive"/>
       <node ref="D203" pin="2" pinfunction="A_2" pintype="passive"/>
@@ -9461,7 +9806,7 @@
       <node ref="D208" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="U7" pin="2" pinfunction="VI_2" pintype="power_in"/>
     </net>
-    <net code="66" name="Net-(D301-A)" class="Default">
+    <net code="68" name="Net-(D301-A)" class="Default">
       <node ref="D301" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D302" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="R301" pin="2" pintype="passive"/>
@@ -9469,7 +9814,7 @@
       <node ref="R303" pin="1" pintype="passive"/>
       <node ref="SW1" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="67" name="Net-(D311-A)" class="Default">
+    <net code="69" name="Net-(D311-A)" class="Default">
       <node ref="D311" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D312" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="R311" pin="2" pintype="passive"/>
@@ -9477,354 +9822,350 @@
       <node ref="R313" pin="1" pintype="passive"/>
       <node ref="SW2" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="68" name="Net-(D601-A)" class="Default">
+    <net code="70" name="Net-(D601-A)" class="Default">
       <node ref="D601" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D602" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="R601" pin="2" pintype="passive"/>
       <node ref="R602" pin="1" pintype="passive"/>
       <node ref="U10" pin="3" pinfunction="+_3" pintype="input"/>
     </net>
-    <net code="69" name="Net-(F1-Pad2)" class="Default">
+    <net code="71" name="Net-(F1-Pad2)" class="Default">
       <node ref="F1" pin="2" pintype="passive"/>
       <node ref="S1" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="70" name="Net-(J1-PadT)" class="Default">
+    <net code="72" name="Net-(J1-PadT)" class="Default">
       <node ref="J1" pin="T" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
     </net>
-    <net code="71" name="Net-(J2-PadR)" class="Default">
+    <net code="73" name="Net-(J2-PadR)" class="Default">
       <node ref="J2" pin="R" pintype="passive"/>
       <node ref="R311" pin="1" pintype="passive"/>
     </net>
-    <net code="72" name="Net-(J2-PadT)" class="Default">
+    <net code="74" name="Net-(J2-PadT)" class="Default">
       <node ref="J2" pin="T" pintype="passive"/>
       <node ref="R301" pin="1" pintype="passive"/>
     </net>
-    <net code="73" name="Net-(J3-PadT)" class="Default">
+    <net code="75" name="Net-(J3-PadT)" class="Default">
       <node ref="J3" pin="T" pintype="passive"/>
       <node ref="J4" pin="TN" pintype="passive"/>
       <node ref="K2" pin="4" pintype="passive"/>
     </net>
-    <net code="74" name="Net-(J5-PadT)" class="Default">
+    <net code="76" name="Net-(J5-PadT)" class="Default">
       <node ref="J5" pin="T" pintype="passive"/>
       <node ref="S3" pin="3" pinfunction="3_3" pintype="passive"/>
     </net>
-    <net code="75" name="Net-(J7-Pin_1)" class="Default">
+    <net code="77" name="Net-(J7-Pin_1)" class="Default">
       <node ref="F1" pin="1" pintype="passive"/>
       <node ref="J7" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
     </net>
-    <net code="76" name="Net-(J7-Pin_2)" class="Default">
+    <net code="78" name="Net-(J7-Pin_2)" class="Default">
       <node ref="J7" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="S1" pin="3" pinfunction="3_3" pintype="passive"/>
     </net>
-    <net code="77" name="Net-(JOT1-Pin_2)" class="Default">
+    <net code="79" name="Net-(JOT1-Pin_2)" class="Default">
       <node ref="JOT1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="S3" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="T2" pin="8" pinfunction="8_OHM_8" pintype="passive"/>
     </net>
-    <net code="78" name="Net-(JOT1-Pin_3)" class="Default">
+    <net code="80" name="Net-(JOT1-Pin_3)" class="Default">
       <node ref="JOT1" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
       <node ref="S3" pin="4" pinfunction="4_4" pintype="passive"/>
       <node ref="T2" pin="16" pinfunction="16_OHM_16" pintype="passive"/>
     </net>
-    <net code="79" name="Net-(K1-Pad4)" class="Default">
+    <net code="81" name="Net-(K1-Pad4)" class="Default">
       <node ref="K1" pin="4" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
     </net>
-    <net code="80" name="Net-(K3-Pad4)" class="Default">
+    <net code="82" name="Net-(K3-Pad4)" class="Default">
       <node ref="K3" pin="4" pintype="passive"/>
       <node ref="R610" pin="2" pintype="passive"/>
       <node ref="R611" pin="1" pintype="passive"/>
     </net>
-    <net code="81" name="Net-(Q1-G)" class="Default">
-      <node ref="Q1" pin="2" pinfunction="G_2" pintype="input"/>
+    <net code="83" name="Net-(Q1-G)" class="Default">
+      <node ref="Q1" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R331" pin="2" pintype="passive"/>
       <node ref="R332" pin="1" pintype="passive"/>
     </net>
-    <net code="82" name="Net-(Q2-G)" class="Default">
-      <node ref="Q2" pin="2" pinfunction="G_2" pintype="input"/>
+    <net code="84" name="Net-(Q2-G)" class="Default">
+      <node ref="Q2" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R341" pin="2" pintype="passive"/>
       <node ref="R342" pin="1" pintype="passive"/>
     </net>
-    <net code="83" name="Net-(R25-Pad2)" class="Default">
+    <net code="85" name="Net-(R25-Pad2)" class="Default">
       <node ref="R25" pin="2" pintype="passive"/>
       <node ref="R26" pin="2" pintype="passive"/>
       <node ref="R27" pin="2" pintype="passive"/>
       <node ref="R28" pin="1" pintype="passive"/>
     </net>
-    <net code="84" name="Net-(R503-Pad1)" class="Default">
+    <net code="86" name="Net-(R503-Pad1)" class="Default">
       <node ref="R503" pin="1" pintype="passive"/>
       <node ref="RV10" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="RV10" pin="3" pinfunction="3_3" pintype="passive"/>
     </net>
-    <net code="85" name="Net-(R604-Pad1)" class="Default">
+    <net code="87" name="Net-(R604-Pad1)" class="Default">
       <node ref="R604" pin="1" pintype="passive"/>
       <node ref="R605" pin="1" pintype="passive"/>
       <node ref="U10" pin="7" pintype="output"/>
     </net>
-    <net code="86" name="Net-(R615-Pad1)" class="Default">
+    <net code="88" name="Net-(R615-Pad1)" class="Default">
       <node ref="R615" pin="1" pintype="passive"/>
       <node ref="R616" pin="1" pintype="passive"/>
       <node ref="U12" pin="7" pintype="output"/>
     </net>
-    <net code="87" name="Net-(RV1-Pad2)" class="Default">
+    <net code="89" name="Net-(RV1-Pad2)" class="Default">
       <node ref="RV1" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="RV3" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="88" name="Net-(RV5-Pad2)" class="Default">
+    <net code="90" name="Net-(RV5-Pad2)" class="Default">
       <node ref="RV5" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="RV8" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="89" name="Net-(S2-A)" class="Default">
+    <net code="91" name="Net-(S2-A)" class="Default">
       <node ref="C29" pin="1" pintype="passive"/>
       <node ref="F2" pin="2" pintype="passive"/>
       <node ref="R501" pin="1" pintype="passive"/>
       <node ref="S2" pin="1" pinfunction="A_1" pintype="passive"/>
     </net>
-    <net code="90" name="Net-(U2A-D)" class="Default">
+    <net code="92" name="Net-(U2A-D)" class="Default">
       <node ref="U2" pin="2" pinfunction="D_2" pintype="input"/>
       <node ref="U2" pin="6" pinfunction="~{Q}_6" pintype="output"/>
     </net>
-    <net code="91" name="Net-(U2A-Q)" class="Default">
+    <net code="93" name="Net-(U2A-Q)" class="Default">
       <node ref="R331" pin="1" pintype="passive"/>
       <node ref="U2" pin="5" pinfunction="Q_5" pintype="output"/>
     </net>
-    <net code="92" name="Net-(U2A-~{R})" class="Default">
-      <node ref="R321" pin="2" pintype="passive"/>
-      <node ref="U2" pin="1" pinfunction="~{R}_1" pintype="input"/>
-      <node ref="U2" pin="13" pinfunction="~{R}_13" pintype="input"/>
-      <node ref="U3" pin="1" pinfunction="~{RESET}_1" pintype="output"/>
-    </net>
-    <net code="93" name="Net-(U2B-D)" class="Default">
+    <net code="94" name="Net-(U2B-D)" class="Default">
       <node ref="U2" pin="12" pinfunction="D_12" pintype="input"/>
       <node ref="U2" pin="8" pinfunction="~{Q}_8" pintype="output"/>
     </net>
-    <net code="94" name="Net-(U2B-Q)" class="Default">
+    <net code="95" name="Net-(U2B-Q)" class="Default">
       <node ref="R341" pin="1" pintype="passive"/>
       <node ref="U2" pin="9" pinfunction="Q_9" pintype="output"/>
     </net>
-    <net code="95" name="Net-(U3-CT)" class="Default">
+    <net code="96" name="Net-(U3-CT)" class="Default">
       <node ref="C321" pin="1" pintype="passive"/>
       <node ref="U3" pin="4" pinfunction="CT_4" pintype="input"/>
     </net>
-    <net code="96" name="Net-(U3-~{MR})" class="Default">
+    <net code="97" name="Net-(U3-~{MR})" class="Default">
       <node ref="R322" pin="2" pintype="passive"/>
       <node ref="SW3" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U3" pin="3" pinfunction="~{MR}_3" pintype="input"/>
     </net>
-    <net code="97" name="Net-(U10A--)" class="Default">
+    <net code="98" name="Net-(U10A--)" class="Default">
       <node ref="C602" pin="1" pintype="passive"/>
       <node ref="U10" pin="1" pintype="output"/>
       <node ref="U10" pin="2" pinfunction="-_2" pintype="input"/>
     </net>
-    <net code="98" name="Net-(U10B-+)" class="Default">
+    <net code="99" name="Net-(U10B-+)" class="Default">
       <node ref="RV601" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="U10" pin="5" pinfunction="+_5" pintype="input"/>
     </net>
-    <net code="99" name="Net-(U10B--)" class="Default">
+    <net code="100" name="Net-(U10B--)" class="Default">
       <node ref="R603" pin="1" pintype="passive"/>
       <node ref="R604" pin="2" pintype="passive"/>
       <node ref="U10" pin="6" pinfunction="-_6" pintype="input"/>
     </net>
-    <net code="100" name="Net-(U11A-+)" class="Default">
+    <net code="101" name="Net-(U11A-+)" class="Default">
       <node ref="C604" pin="2" pintype="passive"/>
       <node ref="R606" pin="1" pintype="passive"/>
       <node ref="U11" pin="3" pinfunction="+_3" pintype="input"/>
     </net>
-    <net code="101" name="Net-(U11A--)" class="Default">
+    <net code="102" name="Net-(U11A--)" class="Default">
       <node ref="C605" pin="2" pintype="passive"/>
       <node ref="R607" pin="1" pintype="passive"/>
       <node ref="R608" pin="2" pintype="passive"/>
       <node ref="U11" pin="2" pinfunction="-_2" pintype="input"/>
     </net>
-    <net code="102" name="Net-(U11B--)" class="Default">
+    <net code="103" name="Net-(U11B--)" class="Default">
       <node ref="R610" pin="1" pintype="passive"/>
       <node ref="U11" pin="6" pinfunction="-_6" pintype="input"/>
       <node ref="U11" pin="7" pintype="output"/>
     </net>
-    <net code="103" name="Net-(U12A--)" class="Default">
+    <net code="104" name="Net-(U12A--)" class="Default">
       <node ref="R611" pin="2" pintype="passive"/>
       <node ref="R613" pin="2" pintype="passive"/>
       <node ref="U12" pin="2" pinfunction="-_2" pintype="input"/>
     </net>
-    <net code="104" name="Net-(U12B--)" class="Default">
+    <net code="105" name="Net-(U12B--)" class="Default">
       <node ref="R614" pin="2" pintype="passive"/>
       <node ref="R615" pin="2" pintype="passive"/>
       <node ref="U12" pin="6" pinfunction="-_6" pintype="input"/>
     </net>
-    <net code="105" name="Net-(V1A-A)" class="Default">
+    <net code="106" name="Net-(V1A-A)" class="Default">
       <node ref="C6" pin="1" pintype="passive"/>
       <node ref="R7" pin="2" pintype="passive"/>
       <node ref="V1" pin="6" pinfunction="A_6" pintype="passive"/>
     </net>
-    <net code="106" name="Net-(V1A-K)" class="Default">
+    <net code="107" name="Net-(V1A-K)" class="Default">
       <node ref="C5" pin="1" pintype="passive"/>
       <node ref="R8" pin="1" pintype="passive"/>
       <node ref="V1" pin="8" pinfunction="K_8" pintype="passive"/>
     </net>
-    <net code="107" name="Net-(V1B-A)" class="Default">
+    <net code="108" name="Net-(V1B-A)" class="Default">
       <node ref="C2" pin="1" pintype="passive"/>
       <node ref="R4" pin="2" pintype="passive"/>
       <node ref="R5" pin="1" pintype="passive"/>
       <node ref="V1" pin="1" pinfunction="A_1" pintype="passive"/>
     </net>
-    <net code="108" name="Net-(V1B-K)" class="Default">
+    <net code="109" name="Net-(V1B-K)" class="Default">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="R3" pin="1" pintype="passive"/>
       <node ref="V1" pin="3" pinfunction="K_3" pintype="passive"/>
     </net>
-    <net code="109" name="Net-(V2A-A)" class="Default">
+    <net code="110" name="Net-(V2A-A)" class="Default">
       <node ref="C11" pin="1" pintype="passive"/>
       <node ref="R15" pin="2" pintype="passive"/>
       <node ref="V2" pin="6" pinfunction="A_6" pintype="passive"/>
     </net>
-    <net code="110" name="Net-(V2A-K)" class="Default">
+    <net code="111" name="Net-(V2A-K)" class="Default">
       <node ref="C10" pin="1" pintype="passive"/>
       <node ref="R16" pin="1" pintype="passive"/>
       <node ref="V2" pin="8" pinfunction="K_8" pintype="passive"/>
     </net>
-    <net code="111" name="Net-(V2B-A)" class="Default">
+    <net code="112" name="Net-(V2B-A)" class="Default">
       <node ref="C8" pin="1" pintype="passive"/>
       <node ref="R12" pin="2" pintype="passive"/>
       <node ref="V2" pin="1" pinfunction="A_1" pintype="passive"/>
     </net>
-    <net code="112" name="Net-(V2B-K)" class="Default">
+    <net code="113" name="Net-(V2B-K)" class="Default">
       <node ref="C7" pin="1" pintype="passive"/>
       <node ref="R11" pin="1" pintype="passive"/>
       <node ref="V2" pin="3" pinfunction="K_3" pintype="passive"/>
     </net>
-    <net code="113" name="Net-(V3A-K)" class="Default">
+    <net code="114" name="Net-(V3A-K)" class="Default">
       <node ref="C15" pin="1" pintype="passive"/>
       <node ref="R22" pin="1" pintype="passive"/>
       <node ref="R23" pin="1" pintype="passive"/>
       <node ref="V3" pin="8" pinfunction="K_8" pintype="passive"/>
     </net>
-    <net code="114" name="Net-(V3B-G)" class="Default">
+    <net code="115" name="Net-(V3B-G)" class="Default">
       <node ref="R18" pin="2" pintype="passive"/>
       <node ref="R19" pin="1" pintype="passive"/>
       <node ref="V3" pin="2" pinfunction="G_2" pintype="input"/>
     </net>
-    <net code="115" name="Net-(V3B-K)" class="Default">
+    <net code="116" name="Net-(V3B-K)" class="Default">
       <node ref="C14" pin="1" pintype="passive"/>
       <node ref="R20" pin="1" pintype="passive"/>
       <node ref="V3" pin="3" pinfunction="K_3" pintype="passive"/>
     </net>
-    <net code="116" name="Net-(V4A-A)" class="Default">
+    <net code="117" name="Net-(V4A-A)" class="Default">
       <node ref="C22" pin="2" pintype="passive"/>
       <node ref="C24" pin="1" pintype="passive"/>
       <node ref="R30" pin="2" pintype="passive"/>
       <node ref="V4" pin="6" pinfunction="A_6" pintype="passive"/>
     </net>
-    <net code="117" name="Net-(V4A-G)" class="Default">
+    <net code="118" name="Net-(V4A-G)" class="Default">
       <node ref="C20" pin="1" pintype="passive"/>
       <node ref="R27" pin="1" pintype="passive"/>
       <node ref="V4" pin="7" pinfunction="G_7" pintype="input"/>
     </net>
-    <net code="118" name="Net-(V4A-K)" class="Default">
+    <net code="119" name="Net-(V4A-K)" class="Default">
       <node ref="R26" pin="1" pintype="passive"/>
       <node ref="V4" pin="3" pinfunction="K_3" pintype="passive"/>
       <node ref="V4" pin="8" pinfunction="K_8" pintype="passive"/>
     </net>
-    <net code="119" name="Net-(V4B-A)" class="Default">
+    <net code="120" name="Net-(V4B-A)" class="Default">
       <node ref="C22" pin="1" pintype="passive"/>
       <node ref="C23" pin="1" pintype="passive"/>
       <node ref="R29" pin="2" pintype="passive"/>
       <node ref="V4" pin="1" pinfunction="A_1" pintype="passive"/>
     </net>
-    <net code="120" name="Net-(V4B-G)" class="Default">
+    <net code="121" name="Net-(V4B-G)" class="Default">
       <node ref="C19" pin="2" pintype="passive"/>
       <node ref="R25" pin="1" pintype="passive"/>
       <node ref="V4" pin="2" pinfunction="G_2" pintype="input"/>
     </net>
-    <net code="121" name="Net-(V5A-G1)" class="Default">
+    <net code="122" name="Net-(V5A-G1)" class="Default">
       <node ref="R36" pin="2" pintype="passive"/>
       <node ref="V5" pin="5" pinfunction="G1_5" pintype="input"/>
     </net>
-    <net code="122" name="Net-(V5A-G2)" class="Default">
+    <net code="123" name="Net-(V5A-G2)" class="Default">
       <node ref="R41" pin="2" pintype="passive"/>
       <node ref="V5" pin="4" pinfunction="G2_4" pintype="input"/>
     </net>
-    <net code="123" name="Net-(V5A-G3)" class="Default">
+    <net code="124" name="Net-(V5A-G3)" class="Default">
       <node ref="R110" pin="1" pintype="passive"/>
       <node ref="V5" pin="1" pinfunction="G3_1" pintype="passive"/>
       <node ref="V5" pin="8" pinfunction="K_8" pintype="passive"/>
     </net>
-    <net code="124" name="Net-(V6A-G1)" class="Default">
+    <net code="125" name="Net-(V6A-G1)" class="Default">
       <node ref="R37" pin="2" pintype="passive"/>
       <node ref="V6" pin="5" pinfunction="G1_5" pintype="input"/>
     </net>
-    <net code="125" name="Net-(V6A-G2)" class="Default">
+    <net code="126" name="Net-(V6A-G2)" class="Default">
       <node ref="R42" pin="2" pintype="passive"/>
       <node ref="V6" pin="4" pinfunction="G2_4" pintype="input"/>
     </net>
-    <net code="126" name="Net-(V6A-G3)" class="Default">
+    <net code="127" name="Net-(V6A-G3)" class="Default">
       <node ref="R111" pin="1" pintype="passive"/>
       <node ref="V6" pin="1" pinfunction="G3_1" pintype="passive"/>
       <node ref="V6" pin="8" pinfunction="K_8" pintype="passive"/>
     </net>
-    <net code="127" name="OT_4" class="Default">
+    <net code="128" name="OT_4" class="Default">
       <node ref="JOT1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="R31" pin="1" pintype="passive"/>
       <node ref="S3" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="T2" pin="4" pinfunction="4_OHM_4" pintype="passive"/>
     </net>
-    <net code="128" name="OT_PA" class="Default">
+    <net code="129" name="OT_PA" class="Default">
       <node ref="T2" pin="PA" pinfunction="PLATE_A_PA" pintype="passive"/>
       <node ref="V5" pin="3" pinfunction="A_3" pintype="passive"/>
     </net>
-    <net code="129" name="OT_PB" class="Default">
+    <net code="130" name="OT_PB" class="Default">
       <node ref="T2" pin="PB" pinfunction="PLATE_B_PB" pintype="passive"/>
       <node ref="V6" pin="3" pinfunction="A_3" pintype="passive"/>
     </net>
-    <net code="130" name="SUM_INV" class="Default">
+    <net code="131" name="RESET_INV" class="Default">
+      <node ref="U1" pin="6" pintype="output"/>
+      <node ref="U1" pin="9" pintype="input"/>
+    </net>
+    <net code="132" name="RESET_N" class="Default">
+      <node ref="U1" pin="8" pintype="output"/>
+      <node ref="U2" pin="1" pinfunction="~{R}_1" pintype="input"/>
+      <node ref="U2" pin="13" pinfunction="~{R}_13" pintype="input"/>
+    </net>
+    <net code="133" name="RESET_RAW_N" class="Default">
+      <node ref="R321" pin="2" pintype="passive"/>
+      <node ref="U1" pin="5" pintype="input"/>
+      <node ref="U3" pin="1" pinfunction="~{RESET}_1" pintype="output"/>
+    </net>
+    <net code="134" name="SUM_INV" class="Default">
       <node ref="R613" pin="1" pintype="passive"/>
       <node ref="R614" pin="1" pintype="passive"/>
       <node ref="U12" pin="1" pintype="output"/>
     </net>
-    <net code="131" name="TANK_IN" class="Default">
+    <net code="135" name="TANK_IN" class="Default">
       <node ref="C603" pin="2" pintype="passive"/>
       <node ref="JR2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="RT1" pin="1" pinfunction="INPUT_1" pintype="passive"/>
     </net>
-    <net code="132" name="TANK_OUT" class="Default">
+    <net code="136" name="TANK_OUT" class="Default">
       <node ref="C604" pin="1" pintype="passive"/>
       <node ref="JR3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="RT1" pin="3" pinfunction="OUTPUT_3" pintype="passive"/>
     </net>
-    <net code="133" name="WET_TOP" class="Default">
+    <net code="137" name="WET_TOP" class="Default">
       <node ref="C606" pin="2" pintype="passive"/>
       <node ref="JR4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="RV602" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="134" name="WET_W" class="Default">
+    <net code="138" name="WET_W" class="Default">
       <node ref="JR4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="R609" pin="1" pintype="passive"/>
       <node ref="RV602" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="U11" pin="5" pinfunction="+_5" pintype="input"/>
     </net>
-    <net code="135" name="unconnected-(K2-Pad9)" class="Default">
+    <net code="139" name="unconnected-(K2-Pad9)" class="Default">
       <node ref="K2" pin="9" pintype="passive+no_connect"/>
     </net>
-    <net code="136" name="unconnected-(K2-Pad11)" class="Default">
+    <net code="140" name="unconnected-(K2-Pad11)" class="Default">
       <node ref="K2" pin="11" pintype="passive+no_connect"/>
     </net>
-    <net code="137" name="unconnected-(K3-Pad8)" class="Default">
+    <net code="141" name="unconnected-(K3-Pad8)" class="Default">
       <node ref="K3" pin="8" pintype="passive+no_connect"/>
     </net>
-    <net code="138" name="unconnected-(K3-Pad9)" class="Default">
+    <net code="142" name="unconnected-(K3-Pad9)" class="Default">
       <node ref="K3" pin="9" pintype="passive+no_connect"/>
-    </net>
-    <net code="139" name="unconnected-(K3-Pad11)" class="Default">
-      <node ref="K3" pin="11" pintype="passive+no_connect"/>
-    </net>
-    <net code="140" name="unconnected-(K3-Pad13)" class="Default">
-      <node ref="K3" pin="13" pintype="passive+no_connect"/>
-    </net>
-    <net code="141" name="unconnected-(U1-Pad6)" class="Default">
-      <node ref="U1" pin="6" pintype="output+no_connect"/>
-    </net>
-    <net code="142" name="unconnected-(U1-Pad8)" class="Default">
-      <node ref="U1" pin="8" pintype="output+no_connect"/>
     </net>
     <net code="143" name="unconnected-(U1-Pad10)" class="Default">
       <node ref="U1" pin="10" pintype="output+no_connect"/>

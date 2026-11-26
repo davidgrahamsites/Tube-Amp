@@ -1,0 +1,337 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-25T16:15:01",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "Renegade_Reverb.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [+15V] on F.Cu, length 4.8000 mm",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 10.2
+                    },
+                    "uuid": "47ded13a-2ac7-4295-a91b-ae171b521565"
+                },
+                {
+                    "description": "Track [-15V] on F.Cu, length 12.5016 mm",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 9.0
+                    },
+                    "uuid": "9d31ef9f-598a-5f11-a9e7-05d7e996407f"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets -15V and +15V)",
+            "items": [
+                {
+                    "description": "Track [-15V] on F.Cu, length 12.5016 mm",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 9.0
+                    },
+                    "uuid": "9d31ef9f-598a-5f11-a9e7-05d7e996407f"
+                },
+                {
+                    "description": "Track [+15V] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 10.2
+                    },
+                    "uuid": "ca2e4624-d537-49df-9112-c56e6c36275a"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and -15V)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 139.5,
+                        "y": 12.7
+                    },
+                    "uuid": "44e99139-7636-47ca-abc4-bcc12a7a1ccd"
+                },
+                {
+                    "description": "Track [-15V] on F.Cu, length 12.5016 mm",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 9.0
+                    },
+                    "uuid": "9d31ef9f-598a-5f11-a9e7-05d7e996407f"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 2.3000 mm",
+                    "pos": {
+                        "x": 139.5,
+                        "y": 12.7
+                    },
+                    "uuid": "77e703fc-4357-40b4-ba78-59c13dff3077"
+                },
+                {
+                    "description": "Track [-15V] on F.Cu, length 12.5016 mm",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 9.0
+                    },
+                    "uuid": "9d31ef9f-598a-5f11-a9e7-05d7e996407f"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [-15V] on F.Cu, length 7.0711 mm",
+                    "pos": {
+                        "x": 144.5,
+                        "y": 21.0
+                    },
+                    "uuid": "bb09a4b7-66ed-5ac3-8e97-ee4c5e6fa3ae"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 3.2062 mm",
+                    "pos": {
+                        "x": 141.0,
+                        "y": 27.40625
+                    },
+                    "uuid": "d8d24d74-88de-4930-a4d0-b17f43fbef63"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets -15V and GND)",
+            "items": [
+                {
+                    "description": "Track [-15V] on F.Cu, length 7.0711 mm",
+                    "pos": {
+                        "x": 144.5,
+                        "y": 21.0
+                    },
+                    "uuid": "bb09a4b7-66ed-5ac3-8e97-ee4c5e6fa3ae"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 140.8,
+                        "y": 24.0
+                    },
+                    "uuid": "daa3019c-15e6-48d7-9183-6125ed6bbc8a"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'LV copper clearance' clearance 0.2500 mm; actual 0.1950 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 1.3000 mm",
+                    "pos": {
+                        "x": 140.8,
+                        "y": 24.0
+                    },
+                    "uuid": "a4cfebe5-7c2c-465a-916a-b63f69d10878"
+                },
+                {
+                    "description": "Track [-15V] on F.Cu, length 7.0711 mm",
+                    "pos": {
+                        "x": 144.5,
+                        "y": 21.0
+                    },
+                    "uuid": "bb09a4b7-66ed-5ac3-8e97-ee4c5e6fa3ae"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'LV copper clearance' clearance 0.2500 mm; actual 0.0818 mm)",
+            "items": [
+                {
+                    "description": "Track [+15V] on F.Cu, length 10.8000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 10.0
+                    },
+                    "uuid": "9494f59b-d4c4-4eb9-b428-648dd3678b0f"
+                },
+                {
+                    "description": "Track [-15V] on F.Cu, length 12.5016 mm",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 9.0
+                    },
+                    "uuid": "9d31ef9f-598a-5f11-a9e7-05d7e996407f"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'LV copper clearance' clearance 0.2500 mm; actual 0.0818 mm)",
+            "items": [
+                {
+                    "description": "Track [-15V] on F.Cu, length 12.5016 mm",
+                    "pos": {
+                        "x": 135.66,
+                        "y": 9.0
+                    },
+                    "uuid": "9d31ef9f-598a-5f11-a9e7-05d7e996407f"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 8.3000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 12.5
+                    },
+                    "uuid": "c688f19d-9db4-4de6-b53a-a7a582762c3a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'LV copper clearance' clearance 0.2500 mm; actual 0.0250 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on B.Cu, length 8.0000 mm",
+                    "pos": {
+                        "x": 130.5,
+                        "y": 14.0
+                    },
+                    "uuid": "41d6ee44-4ff2-597c-820c-50776aaef64d"
+                },
+                {
+                    "description": "PTH pad 1 [+15V] of C616",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 15.0
+                    },
+                    "uuid": "9cf9b4d9-964d-4bdf-b06c-d5068d910622"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Rectangle of R619 on F.Silkscreen",
+                    "pos": {
+                        "x": 127.31,
+                        "y": 3.63
+                    },
+                    "uuid": "5206aea6-fda7-5d71-b130-1919029a5334"
+                },
+                {
+                    "description": "PCB text '+15 GND -15 +12 COIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 134.0,
+                        "y": 7.0
+                    },
+                    "uuid": "9aa10fcf-d8d3-42bc-95b7-c211fad28e1a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of R620",
+                    "pos": {
+                        "x": 130.58,
+                        "y": 6.63
+                    },
+                    "uuid": "9208d94b-f4fb-5c21-8f3a-b37941563efc"
+                },
+                {
+                    "description": "PCB text '+15 GND -15 +12 COIL' on F.Silkscreen",
+                    "pos": {
+                        "x": 134.0,
+                        "y": 7.0
+                    },
+                    "uuid": "9aa10fcf-d8d3-42bc-95b7-c211fad28e1a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Rectangle of R619 on F.Silkscreen",
+                    "pos": {
+                        "x": 127.31,
+                        "y": 3.63
+                    },
+                    "uuid": "5206aea6-fda7-5d71-b130-1919029a5334"
+                },
+                {
+                    "description": "Reference field of R620",
+                    "pos": {
+                        "x": 130.58,
+                        "y": 6.63
+                    },
+                    "uuid": "9208d94b-f4fb-5c21-8f3a-b37941563efc"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        }
+    ]
+}

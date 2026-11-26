@@ -32,7 +32,7 @@ def check(d, expected_budget):
         assert case['winding'] in c['winding_scenarios']
         original = next(p for p in c['loads'] if p['name'] == profile['name'])
         assert profile['relays_on'] == original['relays_on']
-        close(profile['audio_each_rail_A'],original['audio_each_rail_A'])
+        close(profile['audio_each_rail_A'],original['audio_each_rail_A']+expected_budget['reverb_rail_loads']['each_rail_maximum_A'])
         logic = original['logic_5V_A']+d['preload']['maximum_current_A']
         close(profile['logic_5V_A'],logic)
         coil = expected_budget['relay']['one_coil_A']*profile['relays_on']
@@ -106,6 +106,7 @@ def main():
     close(budget['relay']['groups_A']['COIL_CH'],2*budget['relay']['groups_A']['COIL_REV'])
     mutations = {
         'room_temperature_resistance_reintroduced': lambda x:x['effective_contract'].__setitem__('relay_min_resistance_ohm',864),
+        'reverb_load_omitted': lambda x:x['cases'][0]['case']['load'].__setitem__('audio_each_rail_A',x['cases'][0]['case']['load']['audio_each_rail_A']-budget['reverb_rail_loads']['each_rail_maximum_A']),
         'preload_omitted': lambda x:x['cases'][0]['case']['load'].__setitem__('logic_5V_A',.002),
         'missing_case': lambda x:x['cases'].pop(),
         'incomplete_run': lambda x:x['cases'][0].__setitem__('completed_time_s',.2),
@@ -129,10 +130,14 @@ def main():
     old = json.loads((MODULE/'results/preload/raw-screen.json').read_text())
     for new, previous in zip(d['cases'],old['cases']):
         oldcase = copy.deepcopy(previous['case']); newcase = copy.deepcopy(new['case'])
-        oldcase.pop('id'); newcase.pop('id'); assert oldcase == newcase
+        oldcase.pop('id'); newcase.pop('id')
+        extra=budget['reverb_rail_loads']['each_rail_maximum_A']
+        close(newcase['load']['audio_each_rail_A'],oldcase['load']['audio_each_rail_A']+extra)
+        newcase['load']['audio_each_rail_A']=oldcase['load']['audio_each_rail_A']
+        assert oldcase == newcase
         delta = new['raw_load_A']['positive']-previous['raw_load_A']['positive']
-        close(delta,new['case']['load']['relays_on']*(budget['relay']['one_coil_A']-budget['relay']['room_temperature_one_coil_A']))
-        close(new['raw_load_A']['negative'],previous['raw_load_A']['negative'])
+        close(delta,new['case']['load']['relays_on']*(budget['relay']['one_coil_A']-budget['relay']['room_temperature_one_coil_A'])+extra)
+        close(new['raw_load_A']['negative'],previous['raw_load_A']['negative']+extra)
         if new['case']['load']['relays_on']:
             assert max(new['half_winding_rms_A'].values()) > max(previous['half_winding_rms_A'].values())
             assert new['raw_positive_V']['mean'] < previous['raw_positive_V']['mean']

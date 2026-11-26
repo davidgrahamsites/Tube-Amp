@@ -1,0 +1,4 @@
+# Reverb rail-load integration
+Owner: amplifier integration. Inputs: VAL-063 conditional screen, current circuit/schematic/PCB and selected Yageo MF0207 evidence. Process: hash-guarded addition of R619/R620, exact R601 package/rating, independent native and supply-load checks. Outputs: native correction and results; no fabrication approval. Human check: compare readable local supply branches, exact resistor lead fit and physical ground-return routing before assembly.
+
+Task: baseline ba3c80d; electrical checkpoint E adds two 10 kΩ loads across local ±15 V rails, preserving audio topology. Done for this module requires explicit connectivity delta, exact parts/holes, no new ERC/DRC/opens, rendered review and updated candidate supply loading. Actual power-system, thermal, transient and enclosure qualification remain separate gates. Estimated effort: one focused integration pass.

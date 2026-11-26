@@ -38,7 +38,17 @@ def calculate(contract, control, circuit):
     balance_r = sum(float(parts[ref, 1]['value']) for ref in ['R508', 'R509'])
     balance = contract['heater_nominal_V']/balance_r
     assert parts['JH1', 1]['pins'] == {'1': 'HEAT_A', '2': 'HEAT_B'}
+    rl=contract['reverb_rail_loads']
+    for ref,pins in rl['references'].items():
+        assert parts[ref,1]['pins']==pins and parts[ref,1]['value']=='10k'
+        assert parts[ref,1]['selected_mpn']==rl['mpn']
+    rail_load={'references':list(rl['references']), 'each_rail_nominal_A':rl['nominal_rail_V']/rl['nominal_ohm'],
+               'each_rail_maximum_A':rl['maximum_rail_V_allocation']/(rl['nominal_ohm']*(1-rl['resistance_fraction_allocation'])),
+               'each_resistor_nominal_W':rl['nominal_rail_V']**2/rl['nominal_ohm'],
+               'each_resistor_maximum_W':rl['maximum_rail_V_allocation']**2/(rl['nominal_ohm']*(1-rl['resistance_fraction_allocation'])),
+               'rail_voltage_allocation_V':rl['maximum_rail_V_allocation'], 'full_system_qualified':False}
     return {
+        'reverb_rail_loads':rail_load,
         'relay': {'cold_screen_resistance_ohm': cold_r, 'one_coil_A': one,
                   'room_temperature_one_coil_A': room,
                   'increase_over_room_fraction': one/room-1,

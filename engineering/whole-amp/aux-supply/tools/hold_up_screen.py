@@ -35,6 +35,9 @@ def load_case(c, base, budget, preload, bounds, profile):
     out = {'U4': coil+logic+base['iq_A']['U5']+bounds['U4']['divider_current_A'][1]+c['additional_positive_raw_current_A'],
            'U5': logic, 'U6': profile['audio_each_rail_A']+bounds['U6']['divider_current_A'][1],
            'U7': profile['audio_each_rail_A']+bounds['U7']['divider_current_A'][1]+c['additional_negative_raw_current_A']}
+    # Dedicated native rail loads are additional to the retained audio allowance.
+    extra=budget['reverb_rail_loads']['each_rail_maximum_A']
+    out['U6']+=extra;out['U7']+=extra
     adj = max(c['adjust_current_magnitude_A'])
     return out, out['U4']+out['U6']+2*adj, out['U7']+adj
 

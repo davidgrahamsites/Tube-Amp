@@ -55,6 +55,7 @@ def main():
     for index, (line,hz,winding,cap,original_load) in enumerate(combinations):
         profile = copy.deepcopy(original_load)
         profile['logic_5V_A'] += preload['maximum_current_A']
+        profile['audio_each_rail_A'] += budget['reverb_rail_loads']['each_rail_maximum_A']
         assert profile['relays_on'] <= relay_count
         case = dict(id=f'cold{index:03d}',line_factor=line,frequency_hz=hz,winding=winding,reservoir_uF=cap,load=profile)
         row, deck = evaluate(c,case,c['simulation']['max_step_s'])

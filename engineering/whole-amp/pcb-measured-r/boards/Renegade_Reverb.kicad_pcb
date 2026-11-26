@@ -8627,200 +8627,7 @@
 		(embedded_fonts no)
 	)
 	(footprint "Renegade_Selected:TE_1-2199298-2_DIP8_Socket" (layer "F.Cu") (uuid "e4d67468-39a4-4718-9075-383524ca757c") (at 49 26) (property "Reference" "U10" (at 3.81 -2.33 0) (layer "F.SilkS") (uuid "5c690ea4-9c2c-4c0e-90cb-6366b64943c5") (effects (font (size 1 1) (thickness 0.15)))) (property "Value" "OPA2134PA" (at 3.81 9.95 0) (layer "F.Fab") (hide yes) (uuid "83b38126-1c0a-4d1b-9edd-6629f216df3e") (effects (font (size 1 1) (thickness 0.15)))) (property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa2134.pdf" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "98aad7e7-b7bf-45ab-8605-e72d451bf609") (effects (font (size 1.27 1.27)))) (property "Description" "" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "8751f9a2-86b4-40f8-9977-ad7e11026a70") (effects (font (size 1.27 1.27)))) (property "KiLib_Generator" "package/DIP/legacy" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "9fca88cb-d30e-45f9-908b-f2547888f120") (effects (font (size 1 1) (thickness 0.15)))) (property "Source" "DEC-007 v0.4" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "98852741-94bd-4d54-804e-5c3301618f94") (effects (font (size 1.27 1.27) (thickness 0.15)))) (property "Rating" "PDIP-8; +/-15V; design linear signal limit 10Vpk" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "bdf57dc6-696b-47e7-b32d-07f720e52893") (effects (font (size 1.27 1.27) (thickness 0.15)))) (property "Design_status" "proposed" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "9ae6aa4e-dbfc-4ab0-9c33-6d2e43a35d7a") (effects (font (size 1.27 1.27) (thickness 0.15)))) (property "Selected_MPN" "OPA2134PA" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "a2a9af46-0491-485b-9298-08a52f0559da") (effects (font (size 1.27 1.27) (thickness 0.15)))) (property "Package_Status" "Existing package; exact dimensional qualification pending" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "b989b768-838a-49bc-a059-78c8bc11e2b1") (effects (font (size 1.27 1.27) (thickness 0.15)))) (path "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/bc21c5ab-5d4a-5953-8bf3-32faadb273ca") (attr through_hole) (duplicate_pad_numbers_are_jumpers no) (point (at 52.81 29.81) (size 1.27) (layer "F.Fab") (uuid "ba153557-f368-4167-a0c9-51e538baa9df")) (pad "1" thru_hole roundrect (at 0 0) (size 1.6 1.6) (drill 1.0) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (roundrect_rratio 0.15625) (net "SEND_BUF") (uuid "59b8e6cb-30f8-48c1-b5cc-42a576ebc86c")) (pad "2" thru_hole circle (at 0 2.54) (size 1.6 1.6) (drill 1.0) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (net "SEND_BUF") (uuid "4f1391c6-fa41-4064-a9f4-7a75c3d49b54")) (pad "3" thru_hole circle (at 0 5.08) (size 1.6 1.6) (drill 1.0) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (net "SEND_IN") (uuid "74eb509b-d56b-40b1-b928-1874dea60919")) (pad "4" thru_hole circle (at 0 7.62) (size 1.6 1.6) (drill 1.0) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (net "-15V") (uuid "32e8a0c0-f6ca-4557-855f-8307281e3f34")) (pad "5" thru_hole circle (at 7.62 7.62) (size 1.6 1.6) (drill 1.0) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (net "SEND_W") (uuid "823895a3-cff7-47e6-9e81-b742e710affd")) (pad "6" thru_hole circle (at 7.62 5.08) (size 1.6 1.6) (drill 1.0) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (net "DRV_FB") (uuid "1b8be32c-7859-4fbc-9886-64012ff906f6")) (pad "7" thru_hole circle (at 7.62 2.54) (size 1.6 1.6) (drill 1.0) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (net "DRIVER") (uuid "ee7eaebe-1e13-4c2d-a7a3-29f5641773e8")) (pad "8" thru_hole circle (at 7.62 0) (size 1.6 1.6) (drill 1.0) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (net "+15V") (uuid "fdc24045-7cbd-4aea-9ba9-8ddb440c4fe4")) (embedded_fonts no) (descr "TE C-2199298 Rev A; engineering draft; compare current A1 and sample before fabrication") (fp_rect (start -1.2900 -1.3700) (end 8.9100 8.9900) (stroke (width 0.1) (type solid)) (fill none) (layer "F.Fab") (uuid "6f074189-9d88-5cb1-8f0e-814326a4e191")) (fp_rect (start -1.5400 -1.6200) (end 9.1600 9.2400) (stroke (width 0.05) (type solid)) (fill none) (layer "F.CrtYd") (uuid "ed5b4612-75f8-5436-bb82-348f8f1dabee")) (fp_line (start 2.81 -1.3700) (end 4.81 -1.3700) (stroke (width .12) (type solid)) (layer "F.SilkS") (uuid "2aa7014a-82fa-5790-8c23-de830b96f0aa")))
-	(footprint "Renegade_Selected:Yageo_MFR50S_MF0207_P10.16"
-		(layer "F.Cu")
-		(uuid "eff429fc-e2c7-40dd-8759-5c362b162d7f")
-		(at 38 15)
-		(descr "YageoMFR50S orMF0207; nominal6.3+/-0.5 x2.4+/-0.2mm; lead0.55+/-0.05mm; formed10.16mm pitch; max-body courtyard; power/voltage by exact MPN and temperature.")
-		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
-		(property "Reference" "R601"
-			(at 5.08 -2.37 0)
-			(layer "F.SilkS")
-			(uuid "7454438b-f232-4865-9c4a-5e57da2ad0af")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Value" "1M"
-			(at 5.08 2.37 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "bd5d510c-2cf2-4306-b76d-2b1fa8a97ccd")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "43eb5520-f8a1-4340-92ce-21e06e92985f")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "ff7575d5-da86-4466-8a7e-1cd95414bd36")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "resistor/THT"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "0c46eaad-3dd2-4cb6-94db-7300c3b25b4f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Selected_MPN" "MF0207FTE52-1M"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "a267aa19-9a1c-4065-8bcf-f98e15962f49")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Status" "DRAFT - reroute and fit review required"
-			(at 0 0 0)
-			(layer "F.SilkS")
-			(hide yes)
-			(uuid "0875407f-a30a-44ce-8b6d-61e5d408d4e9")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
-		(path "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/8a9cb995-466e-5c4e-afee-087da21a4bc5")
-		(attr through_hole)
-		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start 1.04 0)
-			(end 1.81 0)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "31fad448-4115-4268-a710-583943f4f00c")
-		)
-		(fp_line
-			(start 9.12 0)
-			(end 8.35 0)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "ccce4e83-b182-4d1e-817a-133b7e0b079f")
-		)
-		(fp_rect
-			(start 1.81 -1.37)
-			(end 8.35 1.37)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.SilkS")
-			(uuid "ed777acc-a8d3-4507-b817-49312096438d")
-		)
-		(fp_rect
-			(start -1.05 -1.5)
-			(end 11.21 1.5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.CrtYd")
-			(uuid "b70771ad-842c-4e5c-bd75-b3dc64ea0352")
-		)
-		(fp_line
-			(start 0 0)
-			(end 1.93 0)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "8ef7630b-c7c6-4d81-a16a-6a7ee69cc980")
-		)
-		(fp_line
-			(start 10.16 0)
-			(end 8.23 0)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "73b13105-b9a8-403e-8e4e-ac5e84ad1f2f")
-		)
-		(fp_rect
-			(start 1.93 -1.25)
-			(end 8.23 1.25)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "701d9569-4e8b-4e61-adbb-91048d90f092")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 5.08 0 0)
-			(layer "F.Fab")
-			(uuid "3b1e11f3-673c-4562-9b13-c08e62a54c42")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(pad "1" thru_hole circle
-			(at 0 0)
-			(size 1.6 1.6)
-			(drill 0.8)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "IN_AC")
-			(uuid "78aae7fe-edd2-4720-9c91-b1132da6f9a8")
-		)
-		(pad "2" thru_hole circle
-			(at 10.16 0)
-			(size 1.6 1.6)
-			(drill 0.8)
-			(layers "*.Cu" "*.Mask")
-			(remove_unused_layers no)
-			(net "SEND_IN")
-			(uuid "1eb9b421-5063-4192-ac3c-e1f7832a3f30")
-		)
-		(embedded_fonts no)
-	)
+	(footprint "Renegade_Selected:Yageo_MFR50S_MF0207_P10.16" (layer "F.Cu") (uuid "eff429fc-e2c7-40dd-8759-5c362b162d7f") (at 38 15) (descr "YageoMFR50S orMF0207; nominal6.3+/-0.5 x2.4+/-0.2mm; lead0.55+/-0.05mm; formed10.16mm pitch; max-body courtyard; power/voltage by exact MPN and temperature.") (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm") (property "Reference" "R601" (at 5.08 -2.37 0) (layer "F.SilkS") (uuid "7454438b-f232-4865-9c4a-5e57da2ad0af") (effects (font (size 1 1) (thickness 0.15)))) (property "Value" "1M" (at 5.08 2.37 0) (layer "F.Fab") (hide yes) (uuid "bd5d510c-2cf2-4306-b76d-2b1fa8a97ccd") (effects (font (size 1 1) (thickness 0.15)))) (property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "43eb5520-f8a1-4340-92ce-21e06e92985f") (effects (font (size 1.27 1.27)))) (property "Description" "" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "ff7575d5-da86-4466-8a7e-1cd95414bd36") (effects (font (size 1.27 1.27)))) (property "KiLib_Generator" "resistor/THT" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "0c46eaad-3dd2-4cb6-94db-7300c3b25b4f") (effects (font (size 1 1) (thickness 0.15)))) (property "Selected_MPN" "MF0207FTE52-1M" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "a267aa19-9a1c-4065-8bcf-f98e15962f49") (effects (font (size 1.27 1.27) (thickness 0.15)))) (property "Status" "DRAFT - reroute and fit review required" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "0875407f-a30a-44ce-8b6d-61e5d408d4e9") (effects (font (size 1.27 1.27) (thickness 0.15)))) (path "/97ca3088-a174-52f9-956d-0a38bb8e2f56/905ab7bf-c478-5283-9fbb-463e3e3d1d16/8a9cb995-466e-5c4e-afee-087da21a4bc5") (attr through_hole) (duplicate_pad_numbers_are_jumpers no) (embedded_fonts no) (fp_line (start 1.04 0) (end 1.81 0) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "816d2955-a837-5270-a328-0a63eefacf81")) (fp_line (start 9.12 0) (end 8.35 0) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "18719ce7-9ad0-549d-8f8e-d233eb2c9c81")) (fp_rect (start 1.81 -1.37) (end 8.35 1.37) (stroke (width 0.12) (type solid)) (fill no) (layer "F.SilkS") (uuid "12e4e8e1-d57f-5d1a-975b-8ad439e9aafa")) (fp_rect (start -1.05 -1.5) (end 11.21 1.5) (stroke (width 0.05) (type solid)) (fill no) (layer "F.CrtYd") (uuid "57def106-c547-58ac-9fb6-3f31963544ef")) (fp_line (start 0 0) (end 1.93 0) (stroke (width 0.1) (type solid)) (layer "F.Fab") (uuid "d7329a16-e265-5d47-8cdf-9a82d16f23ac")) (fp_line (start 10.16 0) (end 8.23 0) (stroke (width 0.1) (type solid)) (layer "F.Fab") (uuid "def3ee4b-9a48-50d0-8291-b6c83cf25581")) (fp_rect (start 1.93 -1.25) (end 8.23 1.25) (stroke (width 0.1) (type solid)) (fill no) (layer "F.Fab") (uuid "e4af588b-6bf6-5b64-b88a-7e75d57d6b51")) (fp_text user "${REFERENCE}" (at 5.08 0 0) (layer "F.Fab") (uuid "0f46e54e-0741-519b-a266-9944f9dc7059") (effects (font (size 1 1) (thickness 0.15)))) (pad "1" thru_hole circle (at 0 0) (size 1.6 1.6) (drill 0.8) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (uuid "78aae7fe-edd2-4720-9c91-b1132da6f9a8") (net "IN_AC")) (pad "2" thru_hole circle (at 10.16 0) (size 1.6 1.6) (drill 0.8) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (uuid "1eb9b421-5063-4192-ac3c-e1f7832a3f30") (net "SEND_IN")) (property "Rating" "1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "a5636407-0dff-5a4a-9edb-28b97de1bc99") (effects (font (size 1.27 1.27)))))
 	(footprint "Renegade_Selected:Yageo_MFR50S_MF0207_P10.16"
 		(layer "F.Cu")
 		(uuid "f0a17a6e-e89a-462e-a28f-b2f5b7026840")
@@ -9526,17 +9333,7 @@
 			)
 		)
 	)
-	(gr_text "+15 GND -15 +12 COIL"
-		(at 134 7 0)
-		(layer "F.SilkS")
-		(uuid "9aa10fcf-d8d3-42bc-95b7-c211fad28e1a")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
+	(gr_text "JR6: +15 GND -15 +12 COIL" (at 100 5 0) (layer "F.SilkS") (uuid "9aa10fcf-d8d3-42bc-95b7-c211fad28e1a") (effects (font (size 1 1) (thickness 0.15))))
 	(gr_text "600R-1 PART INTEGRATION / DRAFT - DO NOT FABRICATE"
 		(at 80 98.025 0)
 		(layer "Dwgs.User")
@@ -12588,4 +12385,17 @@
 (segment (start 123.62 30.62) (end 125 32) (width 0.4) (layer "B.Cu") (net "WET_AC") (uuid "92ec8bf2-aa9d-5f8d-b29b-33465526d1b9"))
 (segment (start 125 32) (end 132 32) (width 0.4) (layer "B.Cu") (net "WET_AC") (uuid "6421cea9-55cd-5b2e-af67-cc58bdbab77f"))
 (segment (start 121.62 29.7) (end 114 29.7) (width 0.4) (layer "B.Cu") (net "GND") (uuid "308c515e-e693-5836-8c4c-7ce41353a272"))
-(via (at 123.62 30.62) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (net "WET_AC") (uuid "2f0f288f-f65f-5345-8ef2-90c068c3de13")))
+(via (at 123.62 30.62) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (net "WET_AC") (uuid "2f0f288f-f65f-5345-8ef2-90c068c3de13"))
+(footprint "Renegade_Selected:Yageo_MFR50S_MF0207_P10.16" (layer "F.Cu") (descr "YageoMFR50S orMF0207; nominal6.3+/-0.5 x2.4+/-0.2mm; lead0.55+/-0.05mm; formed10.16mm pitch; max-body courtyard; power/voltage by exact MPN and temperature.") (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm") (property "Reference" "R619" (at 5.08 -2.37 0) (layer "F.SilkS") (uuid "d16e8e7d-02e2-5f48-be87-93b47d578ede") (effects (font (size 1 1) (thickness 0.15)))) (property "Value" "10k" (at 5.08 2.37 0) (layer "F.Fab") (uuid "bb957103-2bea-510d-bbe6-40953520a7d0") (effects (font (size 1 1) (thickness 0.15)))) (property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "6996d15e-1e17-5079-8c18-c9654b8e32ce") (effects (font (size 1.27 1.27)))) (property "Description" "" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "d1cdd24f-17e7-5021-a7cf-d037935508e2") (effects (font (size 1.27 1.27)))) (property "KiLib_Generator" "resistor/THT" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "e5732ff5-2d0c-5f20-803f-9167430b9797") (effects (font (size 1 1) (thickness 0.15)))) (attr through_hole) (duplicate_pad_numbers_are_jumpers no) (fp_line (start 1.04 0) (end 1.81 0) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "b8958ab2-e752-54dc-96f0-b197fc6aad9b")) (fp_line (start 9.12 0) (end 8.35 0) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "ffbd8f17-2bf3-5e18-a0c0-e6294a00eea8")) (fp_rect (start 1.81 -1.37) (end 8.35 1.37) (stroke (width 0.12) (type solid)) (fill no) (layer "F.SilkS") (uuid "5206aea6-fda7-5d71-b130-1919029a5334")) (fp_rect (start -1.05 -1.5) (end 11.21 1.5) (stroke (width 0.05) (type solid)) (fill no) (layer "F.CrtYd") (uuid "b8b24e41-66e5-595f-b922-cab271351c4c")) (fp_line (start 0 0) (end 1.93 0) (stroke (width 0.1) (type solid)) (layer "F.Fab") (uuid "3e1603bd-0b1f-57ba-8ec4-c0cd90180c49")) (fp_line (start 10.16 0) (end 8.23 0) (stroke (width 0.1) (type solid)) (layer "F.Fab") (uuid "42ccfe5a-9223-5141-818f-53e56a5b10be")) (fp_rect (start 1.93 -1.25) (end 8.23 1.25) (stroke (width 0.1) (type solid)) (fill no) (layer "F.Fab") (uuid "df64f090-b047-5342-b6e4-e685b518f6ca")) (fp_text user "${REFERENCE}" (at 5.08 0 0) (layer "F.Fab") (uuid "751a5128-62ff-5508-9bf2-710671afe98f") (effects (font (size 1 1) (thickness 0.15)))) (pad "1" thru_hole circle (at 0 0) (size 1.6 1.6) (drill 0.8) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (uuid "98958ba3-d55e-5b20-ad02-bd81759cb03e") (net "+15V")) (pad "2" thru_hole circle (at 10.16 0) (size 1.6 1.6) (drill 0.8) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (uuid "6be5a8e5-af76-5583-b999-ec88f568df2a") (net "GND")) (embedded_fonts no) (at 125.5 5) (uuid "de9be8ed-7179-5465-b88a-e09269db28b5") (path "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/25049d8f-5bb8-5731-a5ea-e8f24e7a002f") (property "Selected_MPN" "MF0207FTE52-10K" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "b419ca18-c6d1-5662-ad4a-dc7beeb99010") (effects (font (size 1.27 1.27)))) (property "Rating" "1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "a5636407-0dff-5a4a-9edb-28b97de1bc99") (effects (font (size 1.27 1.27)))))
+(footprint "Renegade_Selected:Yageo_MFR50S_MF0207_P10.16" (layer "F.Cu") (descr "YageoMFR50S orMF0207; nominal6.3+/-0.5 x2.4+/-0.2mm; lead0.55+/-0.05mm; formed10.16mm pitch; max-body courtyard; power/voltage by exact MPN and temperature.") (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm") (property "Reference" "R620" (at 5.08 2.37 0) (layer "F.SilkS") (uuid "9208d94b-f4fb-5c21-8f3a-b37941563efc") (effects (font (size 1 1) (thickness 0.15)))) (property "Value" "10k" (at 5.08 2.37 0) (layer "F.Fab") (uuid "736bb6b0-5fbf-5765-8a29-35d1788283d2") (effects (font (size 1 1) (thickness 0.15)))) (property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20241025/0CD0A2F58C0737235B910632046DA29F.pdf" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "9c1b0c15-759e-5136-80c0-8663ad1a90e6") (effects (font (size 1.27 1.27)))) (property "Description" "" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "42756316-6f1d-5181-8189-0466ba859935") (effects (font (size 1.27 1.27)))) (property "KiLib_Generator" "resistor/THT" (at 0 0 0) (layer "F.SilkS") (hide yes) (uuid "52cd0088-f990-50b5-9eb5-abe518561d6d") (effects (font (size 1 1) (thickness 0.15)))) (attr through_hole) (duplicate_pad_numbers_are_jumpers no) (fp_line (start 1.04 0) (end 1.81 0) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "dcf71455-4261-5eb2-9a62-86460d92953e")) (fp_line (start 9.12 0) (end 8.35 0) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "0e3c93a4-cd54-5fc7-854e-030a964b0724")) (fp_rect (start 1.81 -1.37) (end 8.35 1.37) (stroke (width 0.12) (type solid)) (fill no) (layer "F.SilkS") (uuid "6e79b3bf-b80a-55ad-9635-1ef7cd510212")) (fp_rect (start -1.05 -1.5) (end 11.21 1.5) (stroke (width 0.05) (type solid)) (fill no) (layer "F.CrtYd") (uuid "30bc5794-dc37-5b35-90b6-ed8f20ec3097")) (fp_line (start 0 0) (end 1.93 0) (stroke (width 0.1) (type solid)) (layer "F.Fab") (uuid "4db75204-975f-5823-a7fb-bfad9599a1ae")) (fp_line (start 10.16 0) (end 8.23 0) (stroke (width 0.1) (type solid)) (layer "F.Fab") (uuid "8bb84ac9-fb01-56ad-897c-c862b844cd4b")) (fp_rect (start 1.93 -1.25) (end 8.23 1.25) (stroke (width 0.1) (type solid)) (fill no) (layer "F.Fab") (uuid "4c9bd4b2-af44-57d8-b252-1b72d1249a7a")) (fp_text user "${REFERENCE}" (at 5.08 0 0) (layer "F.Fab") (uuid "836c41f0-5210-51d0-85b7-16344df92c47") (effects (font (size 1 1) (thickness 0.15)))) (pad "1" thru_hole circle (at 0 0) (size 1.6 1.6) (drill 0.8) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (uuid "35048910-3c35-50e6-a654-681d7fbb5db5") (net "GND")) (pad "2" thru_hole circle (at 10.16 0) (size 1.6 1.6) (drill 0.8) (layers "*.Cu" "*.Mask") (remove_unused_layers no) (uuid "92d1d8c2-93ae-5255-9962-f8600d40c50c") (net "-15V")) (embedded_fonts no) (at 125.5 9) (uuid "94723b2e-d7b4-57ab-8006-4d52e75717cb") (path "/97ca3088-a174-52f9-956d-0a38bb8e2f56/8fe72301-58ee-52c0-a750-925f875cec11/04634033-be9a-51f9-b5b5-27b9bae0af2a") (property "Selected_MPN" "MF0207FTE52-10K" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "b419ca18-c6d1-5662-ad4a-dc7beeb99010") (effects (font (size 1.27 1.27)))) (property "Rating" "1% MF0207 metal film, 0.6W at70C derated to0W at155C; 350V max or sqrt(P*R), whichever lower" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "a5636407-0dff-5a4a-9edb-28b97de1bc99") (effects (font (size 1.27 1.27)))))
+(segment (start 125.5 5) (end 129.5 9) (width 0.3) (layer "F.Cu") (net "+15V") (uuid "a70d78f7-74b9-5541-bf6b-d812ee9b0e42"))
+(segment (start 129.5 9) (end 131 9) (width 0.3) (layer "F.Cu") (net "+15V") (uuid "2121e530-383b-5e98-b2ed-7ef7eb6115da"))
+(segment (start 131 9) (end 137 15) (width 0.3) (layer "F.Cu") (net "+15V") (uuid "29dcb182-c9ad-54a3-8028-8433dc6c99c1"))
+(segment (start 135.66 5) (end 129.5 5) (width 0.3) (layer "B.Cu") (net "GND") (uuid "63a75602-699a-5e49-8bb4-99aa713ea7c0"))
+(segment (start 129.5 5) (end 125.5 9) (width 0.3) (layer "B.Cu") (net "GND") (uuid "e5c26c15-9ee7-5f91-a9e1-80e65781ccfd"))
+(segment (start 125.5 9) (end 129.5 13) (width 0.3) (layer "B.Cu") (net "GND") (uuid "c4826413-091a-535a-8c3e-3143c889c0ed"))
+(segment (start 129.5 13) (end 137.5 13) (width 0.3) (layer "B.Cu") (net "GND") (uuid "41d6ee44-4ff2-597c-820c-50776aaef64d"))
+(segment (start 137.5 13) (end 139.5 15) (width 0.3) (layer "B.Cu") (net "GND") (uuid "2813fcce-c89c-5001-ad05-6da80029f981"))
+(segment (start 135.66 9) (end 142 9) (width 0.3) (layer "B.Cu") (net "-15V") (uuid "9d31ef9f-598a-5f11-a9e7-05d7e996407f"))
+(segment (start 142 9) (end 148 15) (width 0.3) (layer "B.Cu") (net "-15V") (uuid "6d5aa064-1496-5cb3-8d2d-86898ca9422c"))
+)

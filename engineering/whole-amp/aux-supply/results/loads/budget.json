@@ -1,4 +1,16 @@
 {
+  "reverb_rail_loads": {
+    "references": [
+      "R619",
+      "R620"
+    ],
+    "each_rail_nominal_A": 0.0015,
+    "each_rail_maximum_A": 0.001836734693877551,
+    "each_resistor_nominal_W": 0.0225,
+    "each_resistor_maximum_W": 0.03306122448979592,
+    "rail_voltage_allocation_V": 18,
+    "full_system_qualified": false
+  },
   "relay": {
     "cold_screen_resistance_ohm": 701.01504,
     "one_coil_A": 0.017973936764609216,
@@ -55,8 +67,8 @@
     "Exact transformer, heatsink, socket implementation and China procurement/delivery"
   ],
   "input_sha256": {
-    "aux-supply/load-contract.json": "7253eac0406a9588e921f6e369f9587e3d696e6df10950d93b550560cc49a32b",
+    "aux-supply/load-contract.json": "6ee273ef44dea3ab502dd6f76c5db89dbca588e747caa9375086a9c9497ae1f0",
     "control-switching/contract.json": "67b5316dc035eee7354e7febcabff62919fd0fdf29d50e16972db30cd381eea8",
-    "reverb-600/circuit.json": "716488a59e1699fbe48ecb58312fe400da6f06a3180f42444ebbd34e9b981c40"
+    "reverb-600/circuit.json": "c604d3bbbe9334188f6aa6b799b980d4c87de91ba63fb8f50146dbde4991b8e1"
   }
 }

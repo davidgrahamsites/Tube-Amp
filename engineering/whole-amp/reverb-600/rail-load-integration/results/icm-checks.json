@@ -1,0 +1,26 @@
+{
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "/Users/appleadmin/.codex/skills/icm-check/scripts/icm_check.py",
+        ".",
+        "engineering/whole-amp/reverb-600/rail-load-integration"
+      ],
+      "exit_code": 0,
+      "stdout": "ICM CHECK: clean\n"
+    },
+    {
+      "command": [
+        "python3",
+        "/Users/appleadmin/.codex/skills/icm-check/scripts/icm_check.py",
+        ".",
+        "engineering/whole-amp/aux-supply"
+      ],
+      "exit_code": 0,
+      "stdout": "ICM CHECK: clean\n"
+    }
+  ],
+  "manual_seam_review": "One correction module owns guarded edits/verification; supply owns shared load calculation; results separate from tools. Reverb circuit is native truth, board-plan remains placement inventory. No source layout regeneration or broad redesign.",
+  "fabrication_ready": false
+}
