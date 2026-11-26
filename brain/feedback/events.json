@@ -2253,6 +2253,38 @@
       ],
       "supersedes": [],
       "next_action": "Apply at the current documentation checkpoint and all subsequent engineering work."
+    },
+    {
+      "id": "FB-152",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "user",
+      "kind": "design-sequence-critical-review",
+      "quote": "shouldn't the procedure be to get ideal components that pass all the tests, then find those actual parts that match tolerances, then fit them to a board, then make the pcb traces? Please think critically about what I just said.",
+      "source": "Current amplifier conversation following HD-003 continuation",
+      "interpretation": "User requests critical evaluation, not automatic adoption. Engineering response: use ideal models only for concept checks; qualify real parts/limits before detailed placement/routing, with early mechanical feasibility and prototype validation.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "docs/engineering-reader/prototype-checks.html"
+      ],
+      "supersedes": [],
+      "next_action": "Continue schematic and part qualification; schedule physical evidence at its proper stage."
+    },
+    {
+      "id": "FB-153",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "user",
+      "kind": "physical-test-hardware-clarification",
+      "quote": "which tests require physical hardware? and which physical hardware?",
+      "source": "Current amplifier conversation following HD-003 continuation",
+      "interpretation": "Explain test articles and instruments, separate early unpowered/low-level tests from powered prototype and final safety/thermal checks. No purchase or energized test authorized by this question.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "docs/engineering-reader/prototype-checks.html"
+      ],
+      "supersedes": [],
+      "next_action": "Continue schematic and part qualification; schedule physical evidence at its proper stage."
     }
   ]
 }

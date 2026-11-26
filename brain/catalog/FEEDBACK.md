@@ -1581,3 +1581,25 @@ Source: Current amplifier conversation after power-packaging review
 
 - [docs/engineering-reader/index.html](<../../docs/engineering-reader/index.html>)
 
+## FB-152 — design-sequence-critical-review
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> shouldn't the procedure be to get ideal components that pass all the tests, then find those actual parts that match tolerances, then fit them to a board, then make the pcb traces? Please think critically about what I just said.
+
+User requests critical evaluation, not automatic adoption. Engineering response: use ideal models only for concept checks; qualify real parts/limits before detailed placement/routing, with early mechanical feasibility and prototype validation.
+
+Source: Current amplifier conversation following HD-003 continuation
+
+- [docs/engineering-reader/prototype-checks.html](<../../docs/engineering-reader/prototype-checks.html>)
+
+## FB-153 — physical-test-hardware-clarification
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> which tests require physical hardware? and which physical hardware?
+
+Explain test articles and instruments, separate early unpowered/low-level tests from powered prototype and final safety/thermal checks. No purchase or energized test authorized by this question.
+
+Source: Current amplifier conversation following HD-003 continuation
+
+- [docs/engineering-reader/prototype-checks.html](<../../docs/engineering-reader/prototype-checks.html>)
+
