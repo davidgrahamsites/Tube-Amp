@@ -8,3 +8,5 @@ HD-003: correction.py consumes correction-contract.json; analytical reference bo
 HD-006: pass_topology.py consumes ../pass-contract.json and unchanged manufacturer model bytes, generates simulator-only adapters and writes ../results. check_pass.py independently checks terminal current balance, case coverage, model applicability and retained waveform/source receipts. Human check: never interpret numerical completion as qualified stability or operation beyond absolute ratings.
 
 HD-007: series_protection.py owns dual-pass deck changes behind the frozen HD-006 deck adapter; check_series.py independently checks output current balance, minimum regulator current and the deliberately failing absolute-output probe. Outputs remain in ../results. Seeded DC solutions are not startup simulations.
+
+HD-008: absolute_authority.py consumes frozen series/pass adapters and absolute-contract.json; check_absolute.py independently reconstructs DC current balance, actuator demand, coverage and detector-window arithmetic. Both write results only. Human check: forced control does not prove detection, timing, peak limits or real-part authority.

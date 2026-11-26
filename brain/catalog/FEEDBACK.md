@@ -1663,3 +1663,15 @@ Source: engineering/component-selection/heater-divider-rating/results/series-scr
 - [engineering/component-selection/heater-divider-rating/series-review.html](<../../engineering/component-selection/heater-divider-rating/series-review.html>)
 - [docs/design-journal/chapters/series-pass-protection.html](<../../docs/design-journal/chapters/series-pass-protection.html>)
 
+## FB-159 — absolute-protection-control-authority
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HD-008: distinguish forced control authority from automatic protection.
+
+192 forced-on DC cases: upper-reference shunt reaches312.242V and fails2cases; direct sinks remain below276.273V with maximum2.733mA demand. TL431BI initial plus temperature bounds have no valid nominal trip window between the292.156V normal allocation and300V ceiling. No detector, real actuator, dynamics or native adoption is qualified.
+
+Source: engineering/component-selection/heater-divider-rating/results/absolute-screen.json
+
+- [engineering/component-selection/heater-divider-rating/absolute-review.html](<../../engineering/component-selection/heater-divider-rating/absolute-review.html>)
+- [docs/design-journal/chapters/absolute-protection-authority.html](<../../docs/design-journal/chapters/absolute-protection-authority.html>)
+

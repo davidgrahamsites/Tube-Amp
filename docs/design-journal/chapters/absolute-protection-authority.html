@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Absolute output protection authority</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Absolute output protection authority</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HD-008 · Forced-on DC screen</p>
+      </header>
+
+      <section>
+        <h2>Question and scope</h2>
+        <p>HD-007 screened two series pass devices against one device short. HD-008 asks whether a control path can force the output below 300 V and whether a detector has a usable trip window.</p>
+        <p>The 192 DC cases use three actuator modes, two input voltages, two regulator profiles, warm or unpowered-tube load, two MOSFET cutoff sensitivities per device, and two source-resistor values. The actuator is forced on. There is no automatic detector, LED supply, delay, transient protection, thermal proof, or physical test in these cases.</p>
+      </section>
+
+      <section>
+        <h2>Actuator comparison</h2>
+        <table>
+          <thead><tr><th>Forced-on mode</th><th>Maximum output</th><th>Cases above 300 V</th><th>Maximum actuator current</th></tr></thead>
+          <tbody>
+            <tr><td>Upper-reference shunt</td><td>312.242 V</td><td>2</td><td>Not applicable</td></tr>
+            <tr><td>Direct sink on both references</td><td>276.199 V</td><td>0</td><td>2.729 mA</td></tr>
+            <tr><td>Direct sink on first reference</td><td>276.272 V</td><td>0</td><td>2.733 mA</td></tr>
+          </tbody>
+        </table>
+        <p>The upper-reference shunt does not control the two worst sampled cases. Direct sinks have more authority in this model. These are forced-on equilibria. They do not prove an automatic trigger, response time, or peak-voltage limit.</p>
+        <p>The MOSFET VTO of −5 V is an allocated cutoff sensitivity. It is not a guaranteed hot device limit. The gate clamps and pass devices remain generic models.</p>
+      </section>
+
+      <section>
+        <h2>Detector window has no overlap</h2>
+        <p>The maximum normal output calculated from the unchanged HD-006 programming profile is 292.156 V. The proposed ceiling is 300 V. A TL431BI reference has a 2.483–2.507 V initial range at 25 °C, at 10 mA cathode current, plus up to 34 mV full-temperature deviation in the cited specification. The screen uses those endpoints before adding divider, bias, or transient errors.</p>
+        <div class="math">\[r_{min}=\frac{2.483-0.034}{2.495}=0.981563,\qquad r_{max}=\frac{2.507+0.034}{2.495}=1.018437\]</div>
+        <div class="math">\[V_{trip,min}=\frac{292.156}{r_{min}}=297.644\;\mathrm{V},\qquad V_{trip,max}=\frac{300}{r_{max}}=294.569\;\mathrm{V}\]</div>
+        <p>A nominal threshold must be above 297.644 V to avoid a trip at the screened normal maximum. It must be below 294.569 V to trip by the 300 V ceiling. The requirements conflict:</p>
+        <div class="math">\[297.644\;\mathrm{V}>294.569\;\mathrm{V}\quad\Rightarrow\quad\text{no feasible nominal trip point}\]</div>
+        <p>This is a necessary-window calculation only. It has no allowance for divider error, detector bias, noise, hysteresis, startup, or overshoot. The detector as bounded here cannot meet both requirements.</p>
+      </section>
+
+      <section>
+        <h2>Decision and next comparison</h2>
+        <p>No detector or actuator is adopted. The direct-sink cases show a control-authority boundary, not a protection circuit. The next comparison is an exact detector tolerance stack against a lower regulator setpoint. Do not adopt the detector until the normal and trip windows overlap with margin.</p>
+        <p>Verify the detector supply during startup, faults, and input collapse. Then check exact clamp and pass-device behavior, hot MOSFET limits, transient overshoot, reverse paths, isolation, thermal design, socket/carrier, and populated fit. No automatic protection or hardware qualification is established.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>Actuator</dt>
+          <dd>The control element that changes the regulator reference or pass-device state.</dd>
+          <dt>Forced-on case</dt>
+          <dd>A model run that commands the actuator on without modeling the detector that would trigger it.</dd>
+          <dt>Upper-reference shunt</dt>
+          <dd>A 100 Ω path across each upper reference-divider resistor; the reference still controls the gate above the output.</dd>
+          <dt>Direct sink</dt>
+          <dd>A modeled current sink connected directly to one or both regulator reference nodes.</dd>
+          <dt>Cutoff sensitivity</dt>
+          <dd>A selected transistor threshold value used to explore model response. It is not a guaranteed device limit.</dd>
+          <dt>Detector window</dt>
+          <dd>The range of nominal trip values that must satisfy normal-operation and maximum-voltage requirements.</dd>
+          <dt>Full-temperature deviation</dt>
+          <dd>The specified change in reference voltage across the stated temperature range.</dd>
+          <dt>Hysteresis</dt>
+          <dd>A difference between the voltage that turns protection on and the voltage that lets it turn off.</dd>
+          <dt>Transient overshoot</dt>
+          <dd>A temporary voltage peak above the steady-state value during a change or fault.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/absolute-contract.json">HD-008 contract</a> — case ranges, actuator modes, limits, and scope.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/absolute-screen.json">HD-008 results</a> — forced-on actuator summaries and detector-window calculation.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/tools/absolute_authority.py">HD-008 screen tool</a> — case construction and detector calculation.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/series-screen.json">HD-007 series-pass evidence</a> — pass-stage context and preserved native hashes.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/pass-contract.json">HD-006 programming profile</a> — inputs for the normal-output upper allocation.</li>
+          <li><a href="https://www.ti.com/lit/ds/symlink/tl431.pdf">TI TL431 data sheet</a> — reference limits used in the necessary-window check.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

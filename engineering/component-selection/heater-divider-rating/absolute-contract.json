@@ -1,0 +1,78 @@
+{
+  "id": "HD-008",
+  "baseline": "d710958f0fae784c8db2ce1cce6624bdd7692013",
+  "owner": "heater-divider-rating",
+  "job": "Define absolute-protection actuator authority and detector tolerance before implementing the monitor",
+  "inputs": [
+    "series-contract.json",
+    "pass-contract.json",
+    "tools/series_protection.py",
+    "tools/pass_topology.py"
+  ],
+  "input_sha256": {
+    "series-contract.json": "c662aeddc6a12fc1fcb9f7df3fbf32098273418821173f0596a137eb925e5b51",
+    "pass-contract.json": "8da630886e96acec6e4b70d727b7c25942b3db1b2f5ee2d4523aba0f55c678b6",
+    "tools/series_protection.py": "1d4b93ff4ba3c46c6c4dba0b3be701d8bb7b58d25c49ab9322e8e7b7810623ff",
+    "tools/pass_topology.py": "ee94c23fe5ff51a36eeaec855a55169bd4f05269497da6a18a1e52286fade823"
+  },
+  "input_V": [
+    320,
+    550
+  ],
+  "profiles": [
+    "low",
+    "high"
+  ],
+  "cold": [
+    true,
+    false
+  ],
+  "vto_V": [
+    -2.5,
+    -5
+  ],
+  "source_ohm": [
+    646,
+    714
+  ],
+  "modes": [
+    "reference_upper_shunt",
+    "direct_both",
+    "direct_first"
+  ],
+  "actuator": {
+    "offset_V": 0.9,
+    "conductance_S": 0.01,
+    "current_cap_A": 0.005,
+    "upper_shunt_ohm": 100
+  },
+  "limits": {
+    "output_V": 300,
+    "kcl_A": 1e-07,
+    "gate_source_V": 20
+  },
+  "adopted": false,
+  "model_qualification": false,
+  "scope": "Forced-on DC authority only. No detector, LED supply, delay, thermal, reversal or physical proof.",
+  "done_condition": "Independent current-balance and source preservation checks; reject insufficient control paths; retain required detector window.",
+  "human_evidence": "Exact parts, hot control authority, transient overshoot and reversal must be verified before adopting the protection.",
+  "effort": "One bounded actuator and detector-window wave",
+  "limitations": [
+    "VTO=-5 is an allocated cutoff sensitivity, not a guaranteed hot transistor limit. Fixed KP and generic clamps remain surrogates.",
+    "The direct current sink is an interface requirement, not a qualified optocoupler/transistor circuit.",
+    "Control is forced on. A low forced-on equilibrium does not prove automatic fault detection or a peak-voltage bound.",
+    "An independent detector must be powered and operational through startup, faults and input collapse."
+  ],
+  "sources": [
+    {
+      "url": "https://www.vishay.com/docs/83432/vo618a.pdf",
+      "document": "83432 Rev2.1 22-Jan-2025",
+      "fact": "DIP4 VO618A CTR minimum50percent at1mA LED and5V collector; saturation maximum0.4V at1mA LED/0.25mA collector,25C. These do not establish hot saturation at the required actuator current."
+    },
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/tl431.pdf",
+      "document": "SLVS543S May2024",
+      "fact": "TL431B initial Vref2483\u20132507mV at25C/10mA; BI full-temperature deviation up to34mV. Typical drift cannot be used as a guaranteed trip bound."
+    }
+  ]
+}
