@@ -160,13 +160,16 @@
     "No populated cabinet, tool, bend, latch or withdrawal fit approval",
     "Additional four-cavity symbol/NC metadata must be integrated before native adoption",
     "New trace length and via parasitics require electrical comparison before release",
-    "Copper DC screen is conditional; finished foil/barrel minima, populated thermal behavior, startup/fault protection and remaining board current paths are not qualified"
+    "Copper DC screen is conditional; finished foil/barrel minima, populated thermal behavior, startup/fault protection and remaining board current paths are not qualified",
+    "CU-002 supply widening meets only the conditional DC-drop and width-margin screen; supply protection, transients and thermal rise remain open"
   ],
   "done_condition": "Native-parseable connector candidate with declared 0.6 mm wet-signal routes and nominal copper stackup; source-derived pad nets; preserve unrelated items; native DRC and conditional DC screen; no fabrication release",
   "effort": "One bounded connector placement and routing pass",
   "existing_net_widths_mm": {
     "WET_TOP": 0.6,
-    "WET_W": 0.6
+    "WET_W": 0.6,
+    "+15V": 0.8,
+    "-15V": 0.8
   },
   "construction": {
     "layers": 2,

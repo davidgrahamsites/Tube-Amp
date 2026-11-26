@@ -4,14 +4,14 @@
   "kicad": "10.0.6",
   "input_hashes": {
     "engineering/whole-amp/reverb-600/circuit.json": "db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a",
-    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "ca78491f074d43b32d44b38a7d67dd5d8ab27889bcd154613c69daaf945a9427",
+    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "e2f6a2494cfc7db3067f9249dcaab8711794704427e7c40575d7d1d05538c5b2",
     "engineering/whole-amp/harness-integration/connector-contract.json": "f3d904b57bb70fad5094e9e59fc3f99864ddf3512d1e19461f9958ef421c68f6",
     "engineering/whole-amp/harness-integration/mating-geometry.json": "cc6b5892b4f42fcc5246c734eef537f7440f4b965587035bebe6dc69c13ef377",
     "engineering/whole-amp/harness-integration/wire-dressing.json": "e39f2dd9770749a16d467b1270d99eb936329be8540c6cdcd798ae038b8708dc",
     "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "fa4ac0cbd3ced9b9e0758001c0f2cd488ded0953d3e2fd30025a6d57cc70da3d",
-    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "ab69f20a92f8f29bc20d2cdc3566e78fe7f7685e95f8a684d9a74ea8f245298f",
-    "engineering/whole-amp/harness-integration/tools/check_reverb_connector.py": "2bd0f718da97ac893cb31cb853dc46a2131495ed5eb240477156bb6a4c1c3935",
-    "engineering/whole-amp/harness-integration/tools/place_reverb_connector.py": "bb800e3b95abc0642b3ddaa0c580e5f9425dca6060c10d125973a33c9eaa485c"
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "ded8f7aaff4cdd16f1646c6ddfba8537060149c1edf900f80ef343dc9396d4bc",
+    "engineering/whole-amp/harness-integration/tools/check_reverb_connector.py": "4c10ef322e63f30f8bd8248e5ebf235f287269d0aa5bba52cb994a418ced9b13",
+    "engineering/whole-amp/harness-integration/tools/place_reverb_connector.py": "63236755c407a228519a561f36c081b4a147b43fc2350785fc88a8e87beccc3f"
   },
   "checks": {
     "source_revision": true,
@@ -21,6 +21,8 @@
     "gr_text_identities_preserved": true,
     "segment_only_declared_existing_changes": true,
     "segment_new_count": true,
+    "arc_only_declared_existing_changes": true,
+    "arc_new_count": true,
     "via_only_declared_existing_changes": true,
     "via_new_count": true,
     "native_routes_match_specification": true,
@@ -30,7 +32,7 @@
     "existing_custom_rules_preserved": true,
     "other_setup_preserved": true,
     "nominal_stackup": true,
-    "existing_wet_routes_width_only": true,
+    "existing_declared_routes_width_only": true,
     "circuit_terminal_parity": true,
     "pot_nets_preserved": true,
     "position_and_orientation": true,
@@ -40,7 +42,7 @@
     "round_locator_drill": true,
     "requested_route_style": true,
     "new_trace_width_requirement": true,
-    "whole_wet_nets_widened": true,
+    "whole_declared_nets_widened": true,
     "via_project_minimum": true,
     "rectangular_board_datum": true,
     "nominal_mating_edge_rule": true,
@@ -152,7 +154,7 @@
   "drc": {
     "violations": 0,
     "unconnected": 0,
-    "sha256": "36cacc52180767105456a7cf1b80a0ed35f87ff2c0fc0e3b34c756719b46d561"
+    "sha256": "9773429076f03df1aa5c41db46e1b744cf4c952a1e15e876672abaa61f761f22"
   },
   "evidence_checks_pass": true,
   "native_adoption": false,
@@ -163,6 +165,7 @@
     "No populated cabinet, tool, bend, latch or withdrawal fit approval",
     "Additional four-cavity symbol/NC metadata must be integrated before native adoption",
     "New trace length and via parasitics require electrical comparison before release",
-    "Copper DC screen is conditional; finished foil/barrel minima, populated thermal behavior, startup/fault protection and remaining board current paths are not qualified"
+    "Copper DC screen is conditional; finished foil/barrel minima, populated thermal behavior, startup/fault protection and remaining board current paths are not qualified",
+    "CU-002 supply widening meets only the conditional DC-drop and width-margin screen; supply protection, transients and thermal rise remain open"
   ]
 }

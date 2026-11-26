@@ -1,0 +1,205 @@
+{
+  "id": "CU-002",
+  "input_hashes": {
+    "engineering/whole-amp/pcb-measured-r/current-budget/supply-copper.json": "cc4305ca4cd9d98eacda13c8183df3c031b1c5d7f5c149654a5246068e8de024",
+    "engineering/whole-amp/pcb-measured-r/current-budget/contract.json": "21198f560d1ed01031c0a8dbf16d4c30ff0852600c70f65560bd7f9a5016cbfe",
+    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "e2f6a2494cfc7db3067f9249dcaab8711794704427e7c40575d7d1d05538c5b2",
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "ded8f7aaff4cdd16f1646c6ddfba8537060149c1edf900f80ef343dc9396d4bc",
+    "engineering/whole-amp/reverb-600/circuit.json": "db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a",
+    "engineering/whole-amp/pcb-measured-r/current-budget/tools/analyze.py": "7af13d8ae6c0398a285c6faaa3f2213ba01d9386800e1a150c7a11c27ad3c819",
+    "engineering/whole-amp/pcb-measured-r/current-budget/tools/check_candidate_copper.py": "21e50be1201a7a0368eb264fd00eeb775f68bf06556b74c02097ac9d3bb6d5b0",
+    "engineering/whole-amp/pcb-measured-r/current-budget/tools/check_supply_copper.py": "e2c84306e8ba36e0375e6408f62b4651e5596e3cd76c146ee62c65e0f9c9a40b",
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/drc.json": "9773429076f03df1aa5c41db46e1b744cf4c952a1e15e876672abaa61f761f22"
+  },
+  "load_rebase": {
+    "method": "Recomputed current source passive values, complete opamp pin maps and measured tank seam using the retained pure model; old whole-source SHA is historical.",
+    "old_contract_whole_source_matches": false,
+    "tank_measurement_sha256": "6fc5d9b4d4b49e4eddaf5cc320c156c0c8a2de7c6070208c2e51b6102dd154bf",
+    "cases": 12,
+    "each_rail_max_A_by_output": {
+      "10": 0.069724782791113,
+      "18": 0.09992492703798278
+    },
+    "maximum_KCL_residual_A_per_V": 2.4532694666933987e-18
+  },
+  "conditions": {
+    "id": "CU-002",
+    "date": "2026-11-26",
+    "owner": "PCB current-budget",
+    "task": "Size candidate reverb supply copper from conditional loads and actual geometry, then check native clearance without relaxing rules",
+    "nets": [
+      "+15V",
+      "-15V"
+    ],
+    "screen_current_A": 0.1,
+    "track_via_drop_limit_V": 0.05,
+    "minimum_finished_width_margin": 1.5,
+    "copper_temperature_C": 70,
+    "construction_contract": "engineering/whole-amp/harness-integration/reverb-connector-placement.json",
+    "opamp_combined_pins": {
+      "U10": {
+        "1": "SEND_BUF",
+        "2": "SEND_BUF",
+        "3": "SEND_IN",
+        "4": "-15V",
+        "5": "SEND_W",
+        "6": "DRV_FB",
+        "7": "DRIVER",
+        "8": "+15V"
+      },
+      "U11": {
+        "1": "REC_OUT",
+        "2": "REC_FB",
+        "3": "REC_IN",
+        "4": "-15V",
+        "5": "WET_W",
+        "6": "WET_BUF",
+        "7": "WET_BUF",
+        "8": "+15V"
+      },
+      "U12": {
+        "1": "SUM_INV",
+        "2": "SUM",
+        "3": "GND",
+        "4": "-15V",
+        "5": "GND",
+        "6": "OUT_FB",
+        "7": "OUT_BUF",
+        "8": "+15V"
+      }
+    },
+    "sources": [
+      {
+        "url": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+        "revision": "SBOS058B November2024",
+        "scope": "5mA maximum quiescent per channel under25C electrical-table conditions; short-circuit values typical, not fault bounds"
+      },
+      {
+        "path": "engineering/whole-amp/pcb-measured-r/routing-requirements.md",
+        "scope": "DEC-020 minimum1.5x finished-width target for power/returns; manufacturing narrowing separate"
+      }
+    ],
+    "limits": [
+      "100mA covers only the existing independent ideal-source passive-load diagnostic; hot quiescent/startup/fault conditions are excluded",
+      "50mV is the track-plus-via engineering allocation per rail, not the total allowed supply error",
+      "No pad, connector, harness or ground-return loss qualification",
+      "No IPC-2152 or physical thermal approval; 70C is an assumed copper temperature",
+      "Minimum finished foil/barrel requirements remain supplier-unconfirmed"
+    ],
+    "done_condition": "Conditional DC/geometry checks pass; native DRC has zero violations/opens; failed1mm geometry recorded; unresolved release gates remain explicit"
+  },
+  "rails": {
+    "+15V": {
+      "track_count": 38,
+      "via_count": 3,
+      "track_length_sum_mm": 244.42967412714444,
+      "drawn_widths_mm": [
+        0.8
+      ],
+      "via_resistance_sum_ohm": 0.005098296647662396,
+      "minimum_finished_width_from_drop_mm": 0.3395968787102725,
+      "minimum_drawn_width_with_margin_mm": 0.6367441475817609,
+      "actual_finished_width_margin": 1.884587403837763,
+      "track_via_resistance_sum_ohm": 0.26770309934586706,
+      "track_via_drop_V": 0.026770309934586706,
+      "track_via_loss_W_at_screen_current": 0.002677030993458671,
+      "comparisons": [
+        {
+          "drawn_width_mm": 0.3,
+          "track_via_drop_V": 0.0705377770509542,
+          "finished_width_margin": 0.7067202764391609
+        },
+        {
+          "drawn_width_mm": 0.6,
+          "track_via_drop_V": 0.03552380335786021,
+          "finished_width_margin": 1.4134405528783218
+        },
+        {
+          "drawn_width_mm": 0.8,
+          "track_via_drop_V": 0.026770309934586713,
+          "finished_width_margin": 1.884587403837763
+        },
+        {
+          "drawn_width_mm": 1.0,
+          "track_via_drop_V": 0.021518213880622625,
+          "finished_width_margin": 2.3557342547972033
+        }
+      ]
+    },
+    "-15V": {
+      "track_count": 45,
+      "via_count": 3,
+      "track_length_sum_mm": 296.1565512114595,
+      "drawn_widths_mm": [
+        0.8
+      ],
+      "via_resistance_sum_ohm": 0.005098296647662396,
+      "minimum_finished_width_from_drop_mm": 0.41146330027300754,
+      "minimum_drawn_width_with_margin_mm": 0.7714936880118891,
+      "actual_finished_width_margin": 1.5554242615935798,
+      "track_via_resistance_sum_ohm": 0.3232762469165462,
+      "track_via_drop_V": 0.03232762469165462,
+      "track_via_loss_W_at_screen_current": 0.0032327624691654627,
+      "comparisons": [
+        {
+          "drawn_width_mm": 0.3,
+          "track_via_drop_V": 0.085357283069802,
+          "finished_width_margin": 0.5832840980975923
+        },
+        {
+          "drawn_width_mm": 0.6,
+          "track_via_drop_V": 0.04293355636728412,
+          "finished_width_margin": 1.1665681961951846
+        },
+        {
+          "drawn_width_mm": 0.8,
+          "track_via_drop_V": 0.03232762469165464,
+          "finished_width_margin": 1.5554242615935798
+        },
+        {
+          "drawn_width_mm": 1.0,
+          "track_via_drop_V": 0.02596406568627696,
+          "finished_width_margin": 1.9442803269919744
+        }
+      ]
+    }
+  },
+  "checks": {
+    "passive_values_and_pins_match": true,
+    "U10_identity_and_complete_pin_map": true,
+    "U11_identity_and_complete_pin_map": true,
+    "U12_identity_and_complete_pin_map": true,
+    "rail_shunts": true,
+    "pots": true,
+    "recomputed_diagnostic_load_covered": true,
+    "resonance_maxima": true,
+    "+15V_native_width": true,
+    "+15V_drop": true,
+    "+15V_finished_width_margin": true,
+    "-15V_native_width": true,
+    "-15V_drop": true,
+    "-15V_finished_width_margin": true,
+    "native_drc_zero": true
+  },
+  "controls": {
+    "old_0p3mm_rejected": true,
+    "0p6mm_fails_margin_on_at_least_one_rail": true,
+    "narrow_arc_rejected": true,
+    "halved_thickness_rejected": true
+  },
+  "evidence_checks_pass": true,
+  "rejected_width_trial": {
+    "drawn_width_mm": 1.0,
+    "straight_segments_only": true,
+    "clearance_findings": 10,
+    "missed_arc_trial": {
+      "count": 4,
+      "net": "+15V",
+      "drawn_width_mm": 0.3,
+      "detected_by": "Native width rule and independent whole-net minimum-width/margin checks; repaired before acceptance"
+    },
+    "note": "Initial temporary export also lacked its library table (41 configuration warnings); table restored before accepted0.8mm test. Neither kind of finding was waived."
+  },
+  "thermal_fault_qualified": false,
+  "fabrication_ready": false
+}

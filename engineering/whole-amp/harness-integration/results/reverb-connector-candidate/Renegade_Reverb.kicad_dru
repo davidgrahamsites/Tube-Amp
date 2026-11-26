@@ -4,3 +4,4 @@
 (rule "Board edge" (constraint edge_clearance (min 1.0mm)))
 
 (rule "HI008 wet signal width" (condition "A.NetName == 'WET_TOP' || A.NetName == 'WET_W'") (constraint track_width (min 0.60mm)))
+(rule "CU002 supply width" (condition "A.NetName == '+15V' || A.NetName == '-15V'") (constraint track_width (min 0.80mm)))

@@ -43,6 +43,15 @@
         <div class="math">\[V_{drop}=IR,\quad V_{WET\_TOP}=0.25\;\mathrm{mA}(0.064953\;\Omega)=16.2383\;\mathrm{\mu V}\]</div>
         <div class="math">\[V_{WET\_W}=0.25\;\mathrm{mA}(0.064085\;\Omega)=16.0212\;\mathrm{\mu V}\]</div>
         <p>Both values are below the screen’s 0.1 mV track/via-drop threshold. These values cover modeled track and via resistance only. Pad, contact, and harness resistance are excluded. The total-length method overbounds branched parallel paths. Temperature rise, fault current, startup current, and current capacity are not qualified. The inventory covers all four active boards, but this result screens only the Reverb candidate's wet nets; it does not qualify all boards or shared returns.</p>
+        <h3>CU-002 supply-rail copper</h3>
+        <p>The same separate candidate now uses 0.8 mm on all 79 straight segments and four arcs on +15V and −15V. The existing 0.6 mm WET_TOP/WET_W routes remain unchanged. The supply-path geometry, footprints, and mounting locations did not change. The active source board, circuit, and schematic remain unchanged.</p>
+        <p>The current check re-read passive values and complete op-amp pin maps, then recomputed 12 load cases with the retained pure model. It records the old whole-source hash as historical. At the 18 V diagnostic condition, the maximum rail allocation is 99.925 mA. This fits the 100 mA calculation screen under 25 °C quiescent-current conditions only. Hot, startup, and fault current remain unqualified.</p>
+        <p>The width screen uses 30 µm finished copper, 20% narrowing, 70 °C assumed copper, a 50 mV track-plus-via drop allowance per rail, and 1.5× margin on finished width. At 0.8 mm drawn width, the modeled drops are:</p>
+        <div class="math">\[V_{+15}=0.100\;\mathrm A(0.267703\;\Omega)=26.7703\;\mathrm{mV},\quad V_{-15}=0.100\;\mathrm A(0.323276\;\Omega)=32.3276\;\mathrm{mV}\]</div>
+        <div class="math">\[w_{drawn,required}=0.636744\;\mathrm{mm}\;( +15\;\mathrm V),\quad0.771494\;\mathrm{mm}\;( -15\;\mathrm V)\]</div>
+        <p>The −15 V rail sets the 0.8 mm choice. At 0.3 mm, both rails exceed the 50 mV allocation. At 0.6 mm, both drops fall below 50 mV, but neither rail reaches the 1.5× finished-width margin. The earlier 0.3 mm wet-signal result is separate: those tracks passed their lower-current diagnostic. These supply rails do not pass their stated screen at 0.3 mm.</p>
+        <p>A 1.0 mm straight-segment trial caused ten clearance findings and was rejected. A temporary export also produced 41 missing-library warnings; the library table was restored before the accepted 0.8 mm run. The first 0.8 mm factory omitted four segments and 15 arcs, so native preservation and current checks failed. The factory and checker were corrected to include <code>PCB_ARC</code>. No DRC finding was waived. The final candidate reports zero violations and zero opens. The supply review records 15 passing evidence checks and four passing negative controls, including rejection of the old 0.3 mm drop, the 0.6 mm margin, a narrow arc, and half-thickness copper.</p>
+        <p>This is a conditional DC-drop and geometry screen. It does not qualify thermal rise, hot copper, fault or startup current, pads, connectors, harness losses, other rails, or the other active-board nets. The all-board inventory is not an all-board qualification.</p>
       </section>
 
       <section>
@@ -85,6 +94,8 @@
           <li><a href="../../../engineering/whole-amp/harness-integration/results/reverb-connector-candidate/service-geometry.json">Mechanical service geometry</a> — restraint and clearance interface; fit remains unapproved.</li>
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/copper-review.html">FB-169 copper review</a> — width revision, stackup requirements, and conditional drop screen.</li>
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/results/candidate-copper.json">FB-169 candidate-copper receipt</a> — input assumptions, track/via calculation, and four-board inventory.</li>
+          <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html">CU-002 supply-copper review</a> — rail-width trial history, load assumptions, and 0.8 mm results.</li>
+          <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/results/supply-copper.json">CU-002 supply-copper receipt</a> — twelve recomputed load cases and candidate rail geometry.</li>
           <li><a href="harness-mating-datum.html">HI-004 mating datum</a> and <a href="pot-harness-wire-reserve.html">HI-005 wire reserve</a> — inherited nominal geometry.</li>
         </ul>
       </section>

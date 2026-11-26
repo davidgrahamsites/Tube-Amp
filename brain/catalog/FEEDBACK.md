@@ -1800,4 +1800,5 @@ Source: Current amplifier conversation during HI-008 candidate checkpoint
 - [engineering/whole-amp/harness-integration/reverb-connector-placement.json](<../../engineering/whole-amp/harness-integration/reverb-connector-placement.json>)
 - [engineering/whole-amp/harness-integration/reverb-placement-review.html](<../../engineering/whole-amp/harness-integration/reverb-placement-review.html>)
 - [engineering/whole-amp/pcb-measured-r/current-budget/copper-review.html](<../../engineering/whole-amp/pcb-measured-r/current-budget/copper-review.html>)
+- [engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html](<../../engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html>)
 

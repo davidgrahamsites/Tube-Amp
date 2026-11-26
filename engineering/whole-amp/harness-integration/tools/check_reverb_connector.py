@@ -23,16 +23,16 @@ def close(a,b):return abs(a-b)<1e-6
 def main():
  c=json.loads((M/'reverb-connector-placement.json').read_text());h=json.loads((M/'mating-geometry.json').read_text());w=json.loads((M/'wire-dressing.json').read_text());src=ROOT/c['baseline_board'];target=O/src.name
  checks={};checks['source_revision']=sha(src)==c['baseline_sha256']
- for kind in ['footprint','gr_text','segment','via']:
+ for kind in ['footprint','gr_text','segment','arc','via']:
   a,b=named(src,kind),named(target,kind)
   changed={u for u in a if u not in b or a[u]!=b[u]}
   if kind=='footprint':expected={u for u,raw in a.items() if ref(raw)==c['reference']}
   elif kind=='gr_text':expected={u for u,raw in a.items() if v.parse(raw)[1] in ['"PANEL REVERB"','"RENEGADE 600R-1 / DRAFT"']}
-  elif kind=='segment':expected=set(c['remove_segments'])|{u for u,raw in a.items() if v.field(v.parse(raw),'net')[1].strip('"') in c['existing_net_widths_mm']}
+  elif kind in ['segment','arc']:expected=(set(c['remove_segments']) if kind=='segment' else set())|{u for u,raw in a.items() if v.field(v.parse(raw),'net')[1].strip('"') in c['existing_net_widths_mm']}
   else:expected=set()
   checks[kind+'_only_declared_existing_changes']=changed==expected
   if kind in ['footprint','gr_text']:checks[kind+'_identities_preserved']=set(a)==set(b)
-  else:checks[kind+'_new_count']=len(set(b)-set(a))==(sum(len(r['points'])-1 for r in c['routes']) if kind=='segment' else len(c['vias']))
+  else:checks[kind+'_new_count']=len(set(b)-set(a))==(sum(len(r['points'])-1 for r in c['routes']) if kind=='segment' else len(c['vias']) if kind=='via' else 0)
  def new_atoms(kind):
   old,new=named(src,kind),named(target,kind)
   return [v.parse(new[u]) for u in set(new)-set(old)]
@@ -43,24 +43,24 @@ def main():
  actual_vias=collections.Counter((v.field(n,'net')[1].strip('"'),point(n,'at'),float(v.field(n,'size')[1]),float(v.field(n,'drill')[1]),tuple(v.field(n,'layers')[1:])) for n in new_atoms('via'))
  expected_vias=collections.Counter((q['net'],tuple(q['at_mm']),q['size_mm'],q['drill_mm'],('"F.Cu"','"B.Cu"')) for q in c['vias'])
  checks['native_vias_match_specification']=actual_vias==expected_vias
- a,b=v.parse(src.read_text()),v.parse(target.read_text());excluded={'footprint','gr_text','segment','via','setup'}
+ a,b=v.parse(src.read_text()),v.parse(target.read_text());excluded={'footprint','gr_text','segment','arc','via','setup'}
  checks['other_board_data_unchanged']=[n for n in a[1:] if n[0] not in excluded]==[n for n in b[1:] if n[0] not in excluded]
  checks['project_preserved']=src.with_suffix('.kicad_pro').read_bytes()==target.with_suffix('.kicad_pro').read_bytes()
- expected_rule='\n(rule "HI008 wet signal width" (condition "A.NetName == \'WET_TOP\' || A.NetName == \'WET_W\'") (constraint track_width (min 0.60mm)))\n'
+ expected_rule='\n(rule "HI008 wet signal width" (condition "A.NetName == \'WET_TOP\' || A.NetName == \'WET_W\'") (constraint track_width (min 0.60mm)))\n(rule "CU002 supply width" (condition "A.NetName == \'+15V\' || A.NetName == \'-15V\'") (constraint track_width (min 0.80mm)))\n'
  checks['existing_custom_rules_preserved']=target.with_suffix('.kicad_dru').read_text()==src.with_suffix('.kicad_dru').read_text()+expected_rule
  sa,sb=v.field(a,'setup'),v.field(b,'setup');stack=v.field(sb,'stackup')
  checks['other_setup_preserved']=sa==[sb[0]]+[n for n in sb[1:] if n[0]!='stackup']
  layers=[n for n in stack[1:] if n[0]=='layer'];cu=[n for n in layers if n[1] in ('"F.Cu"','"B.Cu"')]
  checks['nominal_stackup']=len(cu)==2 and all(close(float(v.field(n,'thickness')[1]),c['construction']['outer_copper_nominal_um']/1000) for n in cu) and close(sum(float(v.field(n,'thickness')[1]) for n in layers),1.6)
- # Existing wet routes may change width only; coordinates/layers/nets/UUIDs stay fixed.
- oldseg,newseg=named(src,'segment'),named(target,'segment')
+ # Existing declared routes may change width only; coordinates/layers/nets/UUIDs stay fixed.
+ oldseg={**named(src,'segment'),**named(src,'arc')};newseg={**named(target,'segment'),**named(target,'arc')}
  width_only=True
  for u,raw in oldseg.items():
   if u in c['remove_segments']:continue
   oldnode=v.parse(raw);newnode=v.parse(newseg[u]);net=v.field(oldnode,'net')[1].strip('"')
   if net in c['existing_net_widths_mm']:
    v.field(oldnode,'width')[1]=str(c['existing_net_widths_mm'][net]);width_only &= oldnode==newnode
- checks['existing_wet_routes_width_only']=width_only
+ checks['existing_declared_routes_width_only']=width_only
  board=p.LoadBoard(str(target));original=p.LoadBoard(str(src));fp=next(f for f in board.GetFootprints() if f.GetReference()==c['reference']);pad_data={q.GetNumber():{'xy_mm':xy(q.GetPosition()),'net':q.GetNetname(),'drill_mm':xy(q.GetDrillSize()),'shape':int(q.GetDrillShape())} for q in fp.Pads()}
  circuit_path=M.parent/'reverb-600/circuit.json'
  components=json.loads(circuit_path.read_text())['components'];source_jr4=next(q for q in components if q['reference']=='JR4')
@@ -74,7 +74,7 @@ def main():
  checks['round_locator_drill']=pad_data['']['drill_mm']==[spec['locator_hole_nominal_mm']]*2 and pad_data['']['shape']==int(p.PAD_DRILL_SHAPE_CIRCLE)
  checks['requested_route_style']=all((a[0]==z[0] or a[1]==z[1] or close(abs(a[0]-z[0]),abs(a[1]-z[1]))) for r in c['routes'] for a,z in zip(r['points'],r['points'][1:]))
  checks['new_trace_width_requirement']=all(close(r['width_mm'],.6) for r in c['routes'])
- checks['whole_wet_nets_widened']=all(close(p.ToMM(t.GetWidth()),c['existing_net_widths_mm'][t.GetNetname()]) for t in board.GetTracks() if not isinstance(t,p.PCB_VIA) and t.GetNetname() in c['existing_net_widths_mm'])
+ checks['whole_declared_nets_widened']=all(close(p.ToMM(t.GetWidth()),c['existing_net_widths_mm'][t.GetNetname()]) for t in board.GetTracks() if not isinstance(t,p.PCB_VIA) and t.GetNetname() in c['existing_net_widths_mm'])
  rules=json.loads(src.with_suffix('.kicad_pro').read_text())['board']['design_settings']['rules']
  checks['via_project_minimum']=all(q['size_mm']>=rules['min_via_diameter'] and q['drill_mm']>=rules['min_through_hole_diameter'] for q in c['vias'])
  # Exact 180 degree proposal: transform local negative-y plug exit to positive board-y.

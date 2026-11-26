@@ -1,0 +1,66 @@
+{
+  "id": "CU-002",
+  "date": "2026-11-26",
+  "owner": "PCB current-budget",
+  "task": "Size candidate reverb supply copper from conditional loads and actual geometry, then check native clearance without relaxing rules",
+  "nets": [
+    "+15V",
+    "-15V"
+  ],
+  "screen_current_A": 0.1,
+  "track_via_drop_limit_V": 0.05,
+  "minimum_finished_width_margin": 1.5,
+  "copper_temperature_C": 70,
+  "construction_contract": "engineering/whole-amp/harness-integration/reverb-connector-placement.json",
+  "opamp_combined_pins": {
+    "U10": {
+      "1": "SEND_BUF",
+      "2": "SEND_BUF",
+      "3": "SEND_IN",
+      "4": "-15V",
+      "5": "SEND_W",
+      "6": "DRV_FB",
+      "7": "DRIVER",
+      "8": "+15V"
+    },
+    "U11": {
+      "1": "REC_OUT",
+      "2": "REC_FB",
+      "3": "REC_IN",
+      "4": "-15V",
+      "5": "WET_W",
+      "6": "WET_BUF",
+      "7": "WET_BUF",
+      "8": "+15V"
+    },
+    "U12": {
+      "1": "SUM_INV",
+      "2": "SUM",
+      "3": "GND",
+      "4": "-15V",
+      "5": "GND",
+      "6": "OUT_FB",
+      "7": "OUT_BUF",
+      "8": "+15V"
+    }
+  },
+  "sources": [
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/opa2134.pdf",
+      "revision": "SBOS058B November2024",
+      "scope": "5mA maximum quiescent per channel under25C electrical-table conditions; short-circuit values typical, not fault bounds"
+    },
+    {
+      "path": "engineering/whole-amp/pcb-measured-r/routing-requirements.md",
+      "scope": "DEC-020 minimum1.5x finished-width target for power/returns; manufacturing narrowing separate"
+    }
+  ],
+  "limits": [
+    "100mA covers only the existing independent ideal-source passive-load diagnostic; hot quiescent/startup/fault conditions are excluded",
+    "50mV is the track-plus-via engineering allocation per rail, not the total allowed supply error",
+    "No pad, connector, harness or ground-return loss qualification",
+    "No IPC-2152 or physical thermal approval; 70C is an assumed copper temperature",
+    "Minimum finished foil/barrel requirements remain supplier-unconfirmed"
+  ],
+  "done_condition": "Conditional DC/geometry checks pass; native DRC has zero violations/opens; failed1mm geometry recorded; unresolved release gates remain explicit"
+}

@@ -2,11 +2,11 @@
   "id": "CU-001",
   "scope": "HI-008 wet-control DC geometry screen plus all-active-board inventory",
   "input_hashes": {
-    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "ca78491f074d43b32d44b38a7d67dd5d8ab27889bcd154613c69daaf945a9427",
-    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "ab69f20a92f8f29bc20d2cdc3566e78fe7f7685e95f8a684d9a74ea8f245298f",
+    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "e2f6a2494cfc7db3067f9249dcaab8711794704427e7c40575d7d1d05538c5b2",
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "ded8f7aaff4cdd16f1646c6ddfba8537060149c1edf900f80ef343dc9396d4bc",
     "engineering/whole-amp/reverb-600/circuit.json": "db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a",
     "engineering/whole-amp/pcb-measured-r/current-budget/contract.json": "21198f560d1ed01031c0a8dbf16d4c30ff0852600c70f65560bd7f9a5016cbfe",
-    "engineering/whole-amp/pcb-measured-r/current-budget/tools/check_candidate_copper.py": "de41689fa0f40065dcb2d316fac6563930a6c077e0c9ccd126c81c81d0605f3f"
+    "engineering/whole-amp/pcb-measured-r/current-budget/tools/check_candidate_copper.py": "21e50be1201a7a0368eb264fd00eeb775f68bf06556b74c02097ac9d3bb6d5b0"
   },
   "construction": {
     "layers": 2,
@@ -26,7 +26,8 @@
     "track_via_peak_drop_limit_V": 0.0001,
     "normal_bias_current_allowance_A": 6.632653061224497e-06,
     "thermal_rise_qualified": false,
-    "fault_or_startup_bound": false
+    "fault_or_startup_bound": false,
+    "input_clamp_conduction_included": false
   },
   "candidate_nets": {
     "WET_TOP": {

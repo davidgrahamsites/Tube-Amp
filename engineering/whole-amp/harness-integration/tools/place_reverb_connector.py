@@ -36,11 +36,12 @@ def main():
  original=src.read_text();edits=[];removed=[];widened=[]
  for a,z in spans(original,'footprint'):
   if prop(v.parse(original[a:z]),'Reference')[2]==json.dumps(c['reference']):edits.append((a,z,new_fp))
- for a,z in spans(original,'segment'):
-  node=v.parse(original[a:z]);u=v.field(node,'uuid')[1].strip('"')
-  if u in c['remove_segments']:removed.append(u);edits.append((a,z,''))
-  elif v.field(node,'net')[1].strip('"') in c['existing_net_widths_mm']:
-   v.field(node,'width')[1]=str(c['existing_net_widths_mm'][v.field(node,'net')[1].strip('"')]);edits.append((a,z,emit(node)));widened.append(u)
+ for kind in ['segment','arc']:
+  for a,z in spans(original,kind):
+   node=v.parse(original[a:z]);u=v.field(node,'uuid')[1].strip('"')
+   if kind=='segment' and u in c['remove_segments']:removed.append(u);edits.append((a,z,''))
+   elif v.field(node,'net')[1].strip('"') in c['existing_net_widths_mm']:
+    v.field(node,'width')[1]=str(c['existing_net_widths_mm'][v.field(node,'net')[1].strip('"')]);edits.append((a,z,emit(node)));widened.append(u)
  assert sorted(removed)==sorted(c['remove_segments'])
  for a,z in spans(original,'gr_text'):
   node=v.parse(original[a:z])
@@ -67,7 +68,7 @@ def main():
  target=out/src.name;target.write_text(text);p.LoadBoard(str(target))
  for ext in ('.kicad_pro','.kicad_dru'):shutil.copyfile(src.with_suffix(ext),target.with_suffix(ext))
  dru=target.with_suffix('.kicad_dru')
- dru.write_text(dru.read_text()+'\n(rule "HI008 wet signal width" (condition "A.NetName == \'WET_TOP\' || A.NetName == \'WET_W\'") (constraint track_width (min 0.60mm)))\n')
+ dru.write_text(dru.read_text()+'\n(rule "HI008 wet signal width" (condition "A.NetName == \'WET_TOP\' || A.NetName == \'WET_W\'") (constraint track_width (min 0.60mm)))\n(rule "CU002 supply width" (condition "A.NetName == \'+15V\' || A.NetName == \'-15V\'") (constraint track_width (min 0.80mm)))\n')
  table=(src.parent/'fp-lib-table').read_text().replace('${KIPRJMOD}/../../../component-selection','${KIPRJMOD}/../../../../component-selection').replace('${KIPRJMOD}/../../libraries','${KIPRJMOD}/../../../libraries')
  (out/'fp-lib-table').write_text(table)
  print(target)

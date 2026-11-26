@@ -29,3 +29,5 @@ HI-007 source follow-up: `evidence/pot-rating-source-review.html` records the ex
 HI-008: reverb-connector-placement.json owns the proposed JR4 position and scoped route edits. tools/place_reverb_connector.py writes only results/reverb-connector-candidate/; tools/check_reverb_connector.py verifies the native delta, source pin map, drills, project rules and nominal plug reserve. Public mechanical seam: results/reverb-connector-candidate/service-geometry.json. Read reverb-placement-review.html. This is a board candidate, not an adopted schematic/PCB or a populated cabinet/service approval.
 
 CU-001 follow-up: the HI-008 contract also owns candidate nominal and minimum finished copper requirements. Existing wet-net segments change width only; a wet-net width rule is appended. The current-budget module owns the conditional loss calculation and all-board inventory; read ../pcb-measured-r/current-budget/copper-review.html.
+
+CU-002 extends the same candidate to 0.8 mm supply segments and arcs using current-budget/supply-copper.json targets. No route centreline or mounting geometry changes. The candidate remains separate from active native files.
