@@ -9,3 +9,7 @@ Human check: compare the derived terminal mapping against readable schematic and
 `check_mating_geometry.py` reads candidate geometry, source hashes and installed library; it derives the peg-based edge limit and nominal mated bounds, tests datum errors, and writes JSON/SVG without changing boards.
 
 `check_wire_dressing.py` derives axial wire-restraint bounds from the sibling contracts, challenges incorrect restraints, and writes a per-pot mechanical interface plus an explanatory SVG. It does not change a PCB or set cable bend radii.
+
+`check_pot_voltage.py` owns the normalized DC fault screen and its report. It retains true zero-ohm endpoints, current and power balance, analytic controls and source hashes. Run with Python plus NumPy, then decorate the generated HTML with the shared reader tool. It does not change the circuit or boards.
+
+`pot_fault_probe.py` consumes the linear-screen settings and shared generic tube/supply fixture. Each DC solve has a 35 s worker deadline. Run after `check_pot_voltage.py`, then apply the reader decorator; the report only includes paired results whose linear-input hash matches.

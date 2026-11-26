@@ -1,0 +1,180 @@
+{
+  "id": "HI-006",
+  "owner": "harness-integration",
+  "date": "2026-11-26",
+  "job": "Identify DC coupling-fault paths to panel pots before connector adoption",
+  "circuit": "../reverb-600/circuit.json",
+  "normalization_v": 1.0,
+  "electrical_wiper_fractions": [
+    0,
+    0.5,
+    1
+  ],
+  "groups": [
+    {
+      "id": "clean",
+      "parts": [
+        "R4",
+        "R5",
+        "R6",
+        "RV1",
+        "RV2",
+        "RV3"
+      ],
+      "supply_node": "B_EARLY",
+      "faults": [
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "modes": {
+        "active": [],
+        "inactive": [
+          [
+            "CL_G2",
+            "GND"
+          ]
+        ]
+      },
+      "assumption": "Cold/open first tube; actual R4 and R5 feed retained; grid current omitted. Inactive channel grounds CL_G2."
+    },
+    {
+      "id": "dirty_gain",
+      "parts": [
+        "R12",
+        "R13",
+        "R14",
+        "RV4"
+      ],
+      "supply_node": "B_EARLY",
+      "faults": [
+        "C8"
+      ],
+      "modes": {
+        "active": [],
+        "inactive": [
+          [
+            "DR_G2",
+            "GND"
+          ]
+        ]
+      },
+      "assumption": "Cold/open first tube; R12 feed retained. Later grid current omitted; inactive channel grounds DR_G2."
+    },
+    {
+      "id": "dirty_tone",
+      "parts": [
+        "R22",
+        "R23",
+        "RV5",
+        "RV6",
+        "RV7",
+        "RV8",
+        "R24",
+        "R612",
+        "R617",
+        "R618"
+      ],
+      "supply_node": "DR_CF",
+      "faults": [
+        "C15",
+        "C16",
+        "C17"
+      ],
+      "modes": {
+        "active": [
+          [
+            "DIRTY_OUT",
+            "FX_RETURN"
+          ]
+        ],
+        "inactive": []
+      },
+      "assumption": "Ideal fixed cathode-follower output voltage; actual R23 retained. Active mode uses normalled native effects path; C607 blocks wet-output DC."
+    },
+    {
+      "id": "pi_backfeed",
+      "parts": [
+        "R25",
+        "R24",
+        "R612",
+        "R617",
+        "R618",
+        "RV5",
+        "RV6",
+        "RV7",
+        "RV8"
+      ],
+      "supply_node": "PI_TAIL_TOP",
+      "faults": [
+        "C19"
+      ],
+      "modes": {
+        "dirty_selected": [
+          [
+            "DIRTY_OUT",
+            "FX_RETURN"
+          ]
+        ]
+      },
+      "assumption": "Fixed PI-tail voltage drives R25 and failed C19 backward through the native normalled effects path. Future buffered path needs a new review."
+    },
+    {
+      "id": "presence",
+      "parts": [
+        "R28",
+        "R31",
+        "R32",
+        "RV9"
+      ],
+      "supply_node": "PI_TAIL_TOP",
+      "faults": [
+        "C21"
+      ],
+      "modes": {
+        "dc_secondary_grounded": [
+          [
+            "OT_4",
+            "GND"
+          ]
+        ]
+      },
+      "assumption": "Fixed PI-tail voltage through R28; secondary has zero DC. This is not a direct B+ feed."
+    },
+    {
+      "id": "reverb",
+      "parts": [
+        "RV602"
+      ],
+      "supply_node": "REC_OUT",
+      "faults": [
+        "C606"
+      ],
+      "modes": {
+        "unloaded_wiper": []
+      },
+      "assumption": "Fixed recovery-output voltage; unloaded wiper only. Real op-amp current limit, mute and summing input are excluded; no worst-case power claim."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.taiwanalpha.com/downloads?id=104&target=products",
+      "finding": "RV24AF family: maximum operating 250 V AC; 500 V AC for one minute is dielectric testing, not continuous use; exact DC working limit unresolved."
+    },
+    {
+      "url": "https://cdnimages.opentip.com/Docs/CED/r-va1ma_specification_sheet.pdf",
+      "finding": "Earlier archived customer-sheet review reports 0.25 W for A1M at 0\u201350 C; supplied suffix and taper tolerance remain unresolved. Used only as a comparison, not a rating for every pot."
+    }
+  ],
+  "illustrative_source_voltages_v": {
+    "B_EARLY": 300,
+    "DR_CF": 300,
+    "PI_TAIL_TOP": 25,
+    "REC_OUT": 15
+  },
+  "comparison_track_power_w": 0.25,
+  "comparison_status": "Conditional examples only; source voltages are not qualified operating/fault maxima and power comparison is not a selected-part rating.",
+  "scope": "Single listed coupling-capacitor DC short, nominal resistors and sampled electrical pot positions. Intact capacitors open at DC. No tube nonlinear model, transients, leakage, resistor faults, semiconductor faults, wire opens or tolerance sweep.",
+  "native_adoption": false,
+  "done_condition": "Derive pin-level reach and conditional stress from source topology, verify network solution and retain excluded conditions; do not claim full insulation approval."
+}

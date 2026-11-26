@@ -1,0 +1,1613 @@
+{
+  "id": "HI-006",
+  "inputs_sha256": {
+    "voltage-screen.json": "422eb127646ae4e4a6854c1bec64ddacfe64cd4828a5c4229761622f7251e89a",
+    "../reverb-600/circuit.json": "db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a",
+    "tools/check_pot_voltage.py": "d0f2795b40a2117945f95bd807fdfea72c96b266e7792ecfba56879909345895",
+    "connector-contract.json": "f3d904b57bb70fad5094e9e59fc3f99864ddf3512d1e19461f9958ef421c68f6"
+  },
+  "numpy_version": "2.4.4",
+  "cases": 1050,
+  "pot_rows": 3912,
+  "controls": [
+    {
+      "case": "divider",
+      "calculated": 0.9090909090909091,
+      "analytic": 0.9090909090909091
+    },
+    {
+      "case": "open_capacitor",
+      "calculated": 0.0,
+      "analytic": 0
+    },
+    {
+      "case": "shorted_capacitor",
+      "calculated": 0.9090909090909091,
+      "analytic": 0.9090909090909091
+    },
+    {
+      "case": "zero_endpoint",
+      "calculated": 0.0,
+      "analytic": 0
+    },
+    {
+      "case": "ideal_source_short",
+      "rejected": true
+    },
+    {
+      "case": "C8_native_endpoint_divider",
+      "calculated": 0.9090909090909091,
+      "analytic": 0.9090909090909091
+    },
+    {
+      "case": "C21_native_parallel_load",
+      "calculated": 0.5838509316770186,
+      "analytic": 0.5838509316770186
+    }
+  ],
+  "max_kcl_residual_a_per_v": 1.0164395367051604e-20,
+  "max_power_balance_error_w_per_v2": 1.3552527156068805e-20,
+  "summaries": [
+    {
+      "group": "clean",
+      "fault": null,
+      "source_node": "B_EARLY",
+      "example_source_v": 300,
+      "assumption": "Cold/open first tube; actual R4 and R5 feed retained; grid current omitted. Inactive channel grounds CL_G2.",
+      "pots": {
+        "RV1": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 0,
+              "RV2": 0,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 0,
+              "RV2": 0,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        },
+        "RV2": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 0,
+              "RV2": 0,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 0,
+              "RV2": 0,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        },
+        "RV3": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 0,
+              "RV2": 0,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 0,
+              "RV2": 0,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        }
+      }
+    },
+    {
+      "group": "clean",
+      "fault": "C2",
+      "source_node": "B_EARLY",
+      "example_source_v": 300,
+      "assumption": "Cold/open first tube; actual R4 and R5 feed retained; grid current omitted. Inactive channel grounds CL_G2.",
+      "pots": {
+        "RV1": {
+          "voltage_ratio": 0.8828658625199826,
+          "power_w_per_v2": 2.4691358024691354e-06,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 0,
+              "RV2": 1,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.8828658625199826,
+              0.5900305188199391,
+              0.5900305188199391
+            ]
+          },
+          "power_case": {
+            "mode": "inactive",
+            "settings": {
+              "RV1": 0.5,
+              "RV2": 0,
+              "RV3": 1
+            },
+            "pin_voltage_ratios": [
+              0.5555555555555555,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 264.8597587559948,
+          "example_total_track_w": 0.22222222222222218,
+          "source_v_for_comparison_power": 318.1980515339464
+        },
+        "RV2": {
+          "voltage_ratio": 0.6805229634596046,
+          "power_w_per_v2": 5.640652634791148e-07,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 1,
+              "RV2": 1,
+              "RV3": 1
+            },
+            "pin_voltage_ratios": [
+              0.6805229634596046,
+              0.6805229634596046,
+              0.010056989607777409
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 1,
+              "RV2": 0.5,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.5469994689325544,
+              0.5469994689325544,
+              0.015932023366967602
+            ]
+          },
+          "example_terminal_v": 204.15688903788137,
+          "example_total_track_w": 0.05076587371312033,
+          "source_v_for_comparison_power": 665.7410344871347
+        },
+        "RV3": {
+          "voltage_ratio": 0.8481394569225613,
+          "power_w_per_v2": 1.2225144809398592e-06,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 1,
+              "RV2": 1,
+              "RV3": 1
+            },
+            "pin_voltage_ratios": [
+              0.8481394569225613,
+              0.8481394569225613,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "inactive",
+            "settings": {
+              "RV1": 1,
+              "RV2": 1,
+              "RV3": 0.5
+            },
+            "pin_voltage_ratios": [
+              0.7818294190358467,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 254.4418370767684,
+          "example_total_track_w": 0.11002630328458733,
+          "source_v_for_comparison_power": 452.21295334380784
+        }
+      }
+    },
+    {
+      "group": "clean",
+      "fault": "C3",
+      "source_node": "B_EARLY",
+      "example_source_v": 300,
+      "assumption": "Cold/open first tube; actual R4 and R5 feed retained; grid current omitted. Inactive channel grounds CL_G2.",
+      "pots": {
+        "RV1": {
+          "voltage_ratio": 0.7368956004065631,
+          "power_w_per_v2": 1.0225658539333078e-06,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 1,
+              "RV2": 1,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.5895164803252504,
+              0.5895164803252504,
+              0.7368956004065631
+            ]
+          },
+          "power_case": {
+            "mode": "inactive",
+            "settings": {
+              "RV1": 0.5,
+              "RV2": 1,
+              "RV3": 1
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.3575202536104262
+            ]
+          },
+          "example_terminal_v": 221.06868012196892,
+          "example_total_track_w": 0.0920309268539977,
+          "source_v_for_comparison_power": 494.4522541351252
+        },
+        "RV2": {
+          "voltage_ratio": 0.7368956004065631,
+          "power_w_per_v2": 7.863529885722777e-07,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 1,
+              "RV2": 1,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.7368956004065631,
+              0.7368956004065631,
+              0.01089008276462901
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 1,
+              "RV2": 0.5,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.6458490092801604,
+              0.6458490092801604,
+              0.018811136192626032
+            ]
+          },
+          "example_terminal_v": 221.06868012196892,
+          "example_total_track_w": 0.070771768971505,
+          "source_v_for_comparison_power": 563.8469473181531
+        },
+        "RV3": {
+          "voltage_ratio": 0.7157968970380815,
+          "power_w_per_v2": 7.841444093770796e-07,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 0,
+              "RV2": 1,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.7157968970380815,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "inactive",
+            "settings": {
+              "RV1": 0,
+              "RV2": 1,
+              "RV3": 0.5
+            },
+            "pin_voltage_ratios": [
+              0.6261566933991362,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 214.73906911142444,
+          "example_total_track_w": 0.07057299684393716,
+          "source_v_for_comparison_power": 564.6404395583221
+        }
+      }
+    },
+    {
+      "group": "clean",
+      "fault": "C4",
+      "source_node": "B_EARLY",
+      "example_source_v": 300,
+      "assumption": "Cold/open first tube; actual R4 and R5 feed retained; grid current omitted. Inactive channel grounds CL_G2.",
+      "pots": {
+        "RV1": {
+          "voltage_ratio": 0.06899724011039558,
+          "power_w_per_v2": 3.151205336041035e-08,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 1,
+              "RV2": 0,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.05519779208831647,
+              0.05519779208831647,
+              0.06899724011039558
+            ]
+          },
+          "power_case": {
+            "mode": "inactive",
+            "settings": {
+              "RV1": 0.5,
+              "RV2": 0,
+              "RV3": 1
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.06276150627615062
+            ]
+          },
+          "example_terminal_v": 20.699172033118675,
+          "example_total_track_w": 0.002836084802436931,
+          "source_v_for_comparison_power": 2816.6420117264147
+        },
+        "RV2": {
+          "voltage_ratio": 0.06933744221879816,
+          "power_w_per_v2": 9.213570565713237e-09,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 1,
+              "RV2": 1,
+              "RV3": 1
+            },
+            "pin_voltage_ratios": [
+              0.038520801232665644,
+              0.038520801232665644,
+              0.06933744221879816
+            ]
+          },
+          "power_case": {
+            "mode": "inactive",
+            "settings": {
+              "RV1": 0,
+              "RV2": 0.5,
+              "RV3": 1
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.06787330316742082
+            ]
+          },
+          "example_terminal_v": 20.801232665639446,
+          "example_total_track_w": 0.0008292213509141914,
+          "source_v_for_comparison_power": 5209.019954740899
+        },
+        "RV3": {
+          "voltage_ratio": 0.06880733944954129,
+          "power_w_per_v2": 9.213570565713237e-09,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV1": 0,
+              "RV2": 0,
+              "RV3": 0
+            },
+            "pin_voltage_ratios": [
+              0.06880733944954129,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "inactive",
+            "settings": {
+              "RV1": 0,
+              "RV2": 0,
+              "RV3": 0.5
+            },
+            "pin_voltage_ratios": [
+              0.06787330316742082,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 20.642201834862387,
+          "example_total_track_w": 0.0008292213509141914,
+          "source_v_for_comparison_power": 5209.019954740899
+        }
+      }
+    },
+    {
+      "group": "dirty_gain",
+      "fault": null,
+      "source_node": "B_EARLY",
+      "example_source_v": 300,
+      "assumption": "Cold/open first tube; R12 feed retained. Later grid current omitted; inactive channel grounds DR_G2.",
+      "pots": {
+        "RV4": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV4": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV4": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        }
+      }
+    },
+    {
+      "group": "dirty_gain",
+      "fault": "C8",
+      "source_node": "B_EARLY",
+      "example_source_v": 300,
+      "assumption": "Cold/open first tube; R12 feed retained. Later grid current omitted; inactive channel grounds DR_G2.",
+      "pots": {
+        "RV4": {
+          "voltage_ratio": 0.9090909090909091,
+          "power_w_per_v2": 8.702765139200797e-07,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV4": 0
+            },
+            "pin_voltage_ratios": [
+              0.9090909090909091,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "inactive",
+            "settings": {
+              "RV4": 0.5
+            },
+            "pin_voltage_ratios": [
+              0.8812729498164015,
+              0.2876376988984088,
+              0.0
+            ]
+          },
+          "example_terminal_v": 272.7272727272727,
+          "example_total_track_w": 0.07832488625280717,
+          "source_v_for_comparison_power": 535.9710997776531
+        }
+      }
+    },
+    {
+      "group": "dirty_tone",
+      "fault": null,
+      "source_node": "DR_CF",
+      "example_source_v": 300,
+      "assumption": "Ideal fixed cathode-follower output voltage; actual R23 retained. Active mode uses normalled native effects path; C607 blocks wet-output DC.",
+      "pots": {
+        "RV5": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        },
+        "RV6": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        },
+        "RV7": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        },
+        "RV8": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        }
+      }
+    },
+    {
+      "group": "dirty_tone",
+      "fault": "C15",
+      "source_node": "DR_CF",
+      "example_source_v": 300,
+      "assumption": "Ideal fixed cathode-follower output voltage; actual R23 retained. Active mode uses normalled native effects path; C607 blocks wet-output DC.",
+      "pots": {
+        "RV5": {
+          "voltage_ratio": 1.0,
+          "power_w_per_v2": 4.031791924186713e-06,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              1.0,
+              0.08888888888888889,
+              0.08888888888888889
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0.5,
+              "RV6": 0,
+              "RV7": 1,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              1.0,
+              0.4554242749731471,
+              0.0
+            ]
+          },
+          "example_terminal_v": 300.0,
+          "example_total_track_w": 0.36286127317680417,
+          "source_v_for_comparison_power": 249.01238564049254
+        },
+        "RV6": {
+          "voltage_ratio": 0.8039215686274509,
+          "power_w_per_v2": 8.888888888888887e-07,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.8039215686274509,
+              0.8039215686274509,
+              0.019607843137254895
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 0.5,
+              "RV7": 1,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.6666666666666666,
+              0.6666666666666666,
+              0.0
+            ]
+          },
+          "example_terminal_v": 241.17647058823528,
+          "example_total_track_w": 0.07999999999999997,
+          "source_v_for_comparison_power": 530.3300858899107
+        },
+        "RV7": {
+          "voltage_ratio": 0.0909090909090909,
+          "power_w_per_v2": 3.305785123966941e-07,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0909090909090909,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0909090909090909,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 27.27272727272727,
+          "example_total_track_w": 0.02975206611570247,
+          "source_v_for_comparison_power": 869.6263565463045
+        },
+        "RV8": {
+          "voltage_ratio": 1.0,
+          "power_w_per_v2": 1.0153678027457144e-06,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0.5
+            },
+            "pin_voltage_ratios": [
+              1.0,
+              0.4380165289256197,
+              0.0
+            ]
+          },
+          "example_terminal_v": 300.0,
+          "example_total_track_w": 0.0913831022471143,
+          "source_v_for_comparison_power": 496.20177149601784
+        }
+      }
+    },
+    {
+      "group": "dirty_tone",
+      "fault": "C16",
+      "source_node": "DR_CF",
+      "example_source_v": 300,
+      "assumption": "Ideal fixed cathode-follower output voltage; actual R23 retained. Active mode uses normalled native effects path; C607 blocks wet-output DC.",
+      "pots": {
+        "RV5": {
+          "voltage_ratio": 0.9446482222181264,
+          "power_w_per_v2": 2.769142515502892e-07,
+          "voltage_case": {
+            "mode": "inactive",
+            "settings": {
+              "RV5": 1,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              0.7557185777745012,
+              0.7557185777745012,
+              0.9446482222181264
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              0.6720482068560049,
+              0.6720482068560049,
+              0.9351614199175543
+            ]
+          },
+          "example_terminal_v": 283.3944666654379,
+          "example_total_track_w": 0.02492228263952603,
+          "source_v_for_comparison_power": 950.1613282397875
+        },
+        "RV6": {
+          "voltage_ratio": 0.9446482222181264,
+          "power_w_per_v2": 1.675971436619922e-06,
+          "voltage_case": {
+            "mode": "inactive",
+            "settings": {
+              "RV5": 1,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              0.9446482222181264,
+              0.9446482222181264,
+              0.02304020054190552
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 0.5,
+              "RV7": 1,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.9154155986818014,
+              0.9154155986818014,
+              0.0
+            ]
+          },
+          "example_terminal_v": 283.3944666654379,
+          "example_total_track_w": 0.150837429295793,
+          "source_v_for_comparison_power": 386.2217238840923
+        },
+        "RV7": {
+          "voltage_ratio": 0.42618479372655976,
+          "power_w_per_v2": 7.265339136150011e-06,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.42618479372655976,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.42618479372655976,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 127.85543811796794,
+          "example_total_track_w": 0.6538805222535009,
+          "source_v_for_comparison_power": 185.4992075454772
+        },
+        "RV8": {
+          "voltage_ratio": 0.9387951365832438,
+          "power_w_per_v2": 8.880462837534343e-07,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.9387951365832438,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 0.5
+            },
+            "pin_voltage_ratios": [
+              0.9352034637779731,
+              0.4096345750432442,
+              0.0
+            ]
+          },
+          "example_terminal_v": 281.6385409749731,
+          "example_total_track_w": 0.07992416553780908,
+          "source_v_for_comparison_power": 530.5816228390502
+        }
+      }
+    },
+    {
+      "group": "dirty_tone",
+      "fault": "C17",
+      "source_node": "DR_CF",
+      "example_source_v": 300,
+      "assumption": "Ideal fixed cathode-follower output voltage; actual R23 retained. Active mode uses normalled native effects path; C607 blocks wet-output DC.",
+      "pots": {
+        "RV5": {
+          "voltage_ratio": 0.42618479372655976,
+          "power_w_per_v2": 5.6990407626838444e-08,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.3409478349812478,
+              0.3409478349812478,
+              0.42618479372655976
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              0.30487980257594666,
+              0.30487980257594666,
+              0.4242431215089824
+            ]
+          },
+          "example_terminal_v": 127.85543811796794,
+          "example_total_track_w": 0.00512913668641546,
+          "source_v_for_comparison_power": 2094.44578313253
+        },
+        "RV6": {
+          "voltage_ratio": 0.42832667047401474,
+          "power_w_per_v2": 6.990406124988647e-08,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.23795926137445267,
+              0.23795926137445267,
+              0.42832667047401474
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0.5,
+              "RV7": 0,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              0.2387613242694128,
+              0.2387613242694128,
+              0.4257159461030097
+            ]
+          },
+          "example_terminal_v": 128.49800114220443,
+          "example_total_track_w": 0.0062913655124897825,
+          "source_v_for_comparison_power": 1891.118749168778
+        },
+        "RV7": {
+          "voltage_ratio": 0.42832667047401474,
+          "power_w_per_v2": 7.338549465574208e-06,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.42832667047401474,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 1,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.42832667047401474,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 128.49800114220443,
+          "example_total_track_w": 0.6604694519016787,
+          "source_v_for_comparison_power": 184.57160609849447
+        },
+        "RV8": {
+          "voltage_ratio": 0.42498937526561836,
+          "power_w_per_v2": 1.8275561203936982e-07,
+          "voltage_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.42498937526561836,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "active",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0.5
+            },
+            "pin_voltage_ratios": [
+              0.4242517741437828,
+              0.18582928950099573,
+              0.0
+            ]
+          },
+          "example_terminal_v": 127.49681257968551,
+          "example_total_track_w": 0.016448005083543285,
+          "source_v_for_comparison_power": 1169.5926846680684
+        }
+      }
+    },
+    {
+      "group": "pi_backfeed",
+      "fault": null,
+      "source_node": "PI_TAIL_TOP",
+      "example_source_v": 25,
+      "assumption": "Fixed PI-tail voltage drives R25 and failed C19 backward through the native normalled effects path. Future buffered path needs a new review.",
+      "pots": {
+        "RV5": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        },
+        "RV6": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        },
+        "RV7": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        },
+        "RV8": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        }
+      }
+    },
+    {
+      "group": "pi_backfeed",
+      "fault": "C19",
+      "source_node": "PI_TAIL_TOP",
+      "example_source_v": 25,
+      "assumption": "Fixed PI-tail voltage drives R25 and failed C19 backward through the native normalled effects path. Future buffered path needs a new review.",
+      "pots": {
+        "RV5": {
+          "voltage_ratio": 0.27249412267578527,
+          "power_w_per_v2": 7.304601899196492e-08,
+          "voltage_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 1,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              0.27249412267578527,
+              0.27249412267578527,
+              0.21906390254327834
+            ]
+          },
+          "power_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 1,
+              "RV6": 0,
+              "RV7": 1,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              0.13513513513513511,
+              0.13513513513513511,
+              0.0
+            ]
+          },
+          "example_terminal_v": 6.812353066894632,
+          "example_total_track_w": 4.5653761869978074e-05,
+          "source_v_for_comparison_power": 1850.0000000000002
+        },
+        "RV6": {
+          "voltage_ratio": 0.2569566307345197,
+          "power_w_per_v2": 7.750015500030982e-08,
+          "voltage_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 0,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              0.2569566307345197,
+              0.2569566307345197,
+              0.006267234895963893
+            ]
+          },
+          "power_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0.5,
+              "RV7": 1,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              0.19685039370078716,
+              0.19685039370078716,
+              0.0
+            ]
+          },
+          "example_terminal_v": 6.423915768362992,
+          "example_total_track_w": 4.8437596875193636e-05,
+          "source_v_for_comparison_power": 1796.0512242138327
+        },
+        "RV7": {
+          "voltage_ratio": 0.020341741253051264,
+          "power_w_per_v2": 1.6551457488243503e-08,
+          "voltage_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              0.020341741253051264,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 0,
+              "RV6": 0,
+              "RV7": 0,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              0.020341741253051264,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.5085435313262816,
+          "example_total_track_w": 1.0344660930152189e-05,
+          "source_v_for_comparison_power": 3886.439244346938
+        },
+        "RV8": {
+          "voltage_ratio": 0.27249412267578527,
+          "power_w_per_v2": 1.0320260149005673e-07,
+          "voltage_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 1,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 1
+            },
+            "pin_voltage_ratios": [
+              0.27249412267578527,
+              0.27249412267578527,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "dirty_selected",
+            "settings": {
+              "RV5": 1,
+              "RV6": 1,
+              "RV7": 0,
+              "RV8": 0.5
+            },
+            "pin_voltage_ratios": [
+              0.15705838876570585,
+              0.21864991377186507,
+              0.0
+            ]
+          },
+          "example_terminal_v": 6.812353066894632,
+          "example_total_track_w": 6.450162593128545e-05,
+          "source_v_for_comparison_power": 1556.412398829056
+        }
+      }
+    },
+    {
+      "group": "presence",
+      "fault": null,
+      "source_node": "PI_TAIL_TOP",
+      "example_source_v": 25,
+      "assumption": "Fixed PI-tail voltage through R28; secondary has zero DC. This is not a direct B+ feed.",
+      "pots": {
+        "RV9": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "dc_secondary_grounded",
+            "settings": {
+              "RV9": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "dc_secondary_grounded",
+            "settings": {
+              "RV9": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        }
+      }
+    },
+    {
+      "group": "presence",
+      "fault": "C21",
+      "source_node": "PI_TAIL_TOP",
+      "example_source_v": 25,
+      "assumption": "Fixed PI-tail voltage through R28; secondary has zero DC. This is not a direct B+ feed.",
+      "pots": {
+        "RV9": {
+          "voltage_ratio": 0.5838509316770186,
+          "power_w_per_v2": 1.7922030243933113e-05,
+          "voltage_case": {
+            "mode": "dc_secondary_grounded",
+            "settings": {
+              "RV9": 0
+            },
+            "pin_voltage_ratios": [
+              0.5838509316770186,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "dc_secondary_grounded",
+            "settings": {
+              "RV9": 0.5
+            },
+            "pin_voltage_ratios": [
+              0.473313192346425,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 14.596273291925465,
+          "example_total_track_w": 0.011201268902458195,
+          "source_v_for_comparison_power": 118.10720753496228
+        }
+      }
+    },
+    {
+      "group": "reverb",
+      "fault": null,
+      "source_node": "REC_OUT",
+      "example_source_v": 15,
+      "assumption": "Fixed recovery-output voltage; unloaded wiper only. Real op-amp current limit, mute and summing input are excluded; no worst-case power claim.",
+      "pots": {
+        "RV602": {
+          "voltage_ratio": 0.0,
+          "power_w_per_v2": 0.0,
+          "voltage_case": {
+            "mode": "unloaded_wiper",
+            "settings": {
+              "RV602": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "unloaded_wiper",
+            "settings": {
+              "RV602": 0
+            },
+            "pin_voltage_ratios": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 0.0,
+          "example_total_track_w": 0.0,
+          "source_v_for_comparison_power": null
+        }
+      }
+    },
+    {
+      "group": "reverb",
+      "fault": "C606",
+      "source_node": "REC_OUT",
+      "example_source_v": 15,
+      "assumption": "Fixed recovery-output voltage; unloaded wiper only. Real op-amp current limit, mute and summing input are excluded; no worst-case power claim.",
+      "pots": {
+        "RV602": {
+          "voltage_ratio": 1.0,
+          "power_w_per_v2": 1e-05,
+          "voltage_case": {
+            "mode": "unloaded_wiper",
+            "settings": {
+              "RV602": 0
+            },
+            "pin_voltage_ratios": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          },
+          "power_case": {
+            "mode": "unloaded_wiper",
+            "settings": {
+              "RV602": 0
+            },
+            "pin_voltage_ratios": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          },
+          "example_terminal_v": 15.0,
+          "example_total_track_w": 0.0022500000000000003,
+          "source_v_for_comparison_power": 158.11388300841895
+        }
+      }
+    }
+  ],
+  "case_csv_sha256": "2cf8eb43f061b8997c9fd167574b222790c06f5948e8fd03d27f0b7a6a4deca6",
+  "scope": "Single listed coupling-capacitor DC short, nominal resistors and sampled electrical pot positions. Intact capacitors open at DC. No tube nonlinear model, transients, leakage, resistor faults, semiconductor faults, wire opens or tolerance sweep.",
+  "evidence_checks_pass": true,
+  "actual_maximum_voltage_qualified": false,
+  "pot_rating_qualified": false,
+  "harness_insulation_qualified": false,
+  "native_adoption": false
+}

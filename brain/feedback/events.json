@@ -2491,6 +2491,25 @@
       ],
       "supersedes": [],
       "next_action": "Complete per-pot voltage/fault review and current drawing comparison, then populated placement using mated and relaxed-wire constraints; qualify bends, latch, extraction and drill access."
+    },
+    {
+      "id": "FB-166",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "engineer",
+      "kind": "pot-harness-dc-fault-screen",
+      "quote": "HI-006: distinguish normal DC blocking from coupling-fault exposure before selecting pot harness insulation.",
+      "source": "engineering/whole-amp/harness-integration/results/pot-voltage-checks.json",
+      "interpretation": "1,050 normalized passive DC cases and seven analytic/rejection controls identify ten capacitor-short paths. Twelve loaded generic-tube DC cases complete; C17 gives RV7 total-track power 0.162057 W at fixed B_PRE 267.11 V and 0.289923 W at 355 V. The 0.25 W reference is not a qualified RV7 rating. Exact source bounds, pot DC/track/wiper limits, leakage, transients and other faults remain open. Circuit and boards are unchanged; no insulation or fit release.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/harness-integration/pot-voltage-review.html",
+        "engineering/whole-amp/harness-integration/voltage-screen.json",
+        "engineering/whole-amp/harness-integration/results/pot-fault-probe.json",
+        "docs/design-journal/chapters/pot-voltage-fault-screen.html"
+      ],
+      "supersedes": [],
+      "next_action": "Resolve exact pot DC and power limits and actual source bounds before connector adoption; retain short cable routes and separate populated service, electrical insulation and drill-access checks."
     }
   ]
 }

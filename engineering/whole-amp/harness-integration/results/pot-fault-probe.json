@@ -1,0 +1,960 @@
+{
+  "id": "HI-006-loaded-probe",
+  "scope": "Generic tube DC, fixed B_PRE and desired buffer fixture, three selected settings; no exact tube, supply dynamics, faults beyond listed capacitor, thermal/wiper or native adoption qualification.",
+  "endpoint_approximation_ohm": 1,
+  "fault_short_ohm": 0.001,
+  "inputs_sha256": {
+    "engineering/whole-amp/harness-integration/tools/pot_fault_probe.py": "57448f91944b68b5264774c944d00c40fd2a0e96b7e335b8840b42c39dd7d697",
+    "engineering/whole-amp/harness-integration/results/pot-voltage-checks.json": "dc9a461a0b20e67cd323e9600127e1df90c8e6a3895c0487d811337fb02bbf55",
+    "engineering/whole-amp/reverb-600/circuit.json": "db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a",
+    "engineering/component-selection/heater-divider-rating/tools/supply.py": "0c10951abba76e9bc0e9a17bb580c1be2a02344b68e81fece04fa1f9d37e93be",
+    "engineering/component-selection/heater-divider-rating/supply-contract.json": "b17f99359b7a95b4c6949af3bd9ba894af9f56111dd914c927bd6c8c5f5ab241",
+    "engineering/whole-amp/effects-loop/tools/fixture.py": "10ea514a6a49c35f4c2e3d4766da725b5a0befccb38d2c89d4f7d96d42585cd5",
+    "engineering/whole-amp/effects-loop/tools/loaded_feedback_model.py": "3843010b9ff006893137760cdddfaac02402c8671a5068ff9b4c15b7e995e736",
+    "engineering/whole-amp/effects-loop/tools/feedback_model.py": "798acb4cd6b78502971868d564b0280c6be8aec6205f3fe3312e9c2b5fc0d553",
+    "engineering/whole-amp/effects-loop/tools/run.py": "f088be4dd24b15274487e0be674f4a54d00d2cdd45a1c7e41735950cb015c668",
+    "engineering/whole-amp/tools/spice_runtime.py": "3df496fbbce173c6f8a602b9a17a731389f011634af809106184418572b9cf9b",
+    "engineering/whole-amp/simulation/models/dm12ax7s.inc": "ffa293249bd62b4d1d0b710b4bd42177221325d9533ddad8f0fa88dcecb0e7f6",
+    "engineering/whole-amp/simulation/models/6ca7s.inc": "02768bad91f6497d718e33c09493b8d471c6c3aafee92fb226b5c3376c068b01"
+  },
+  "cases": [
+    {
+      "case": {
+        "pre_v": 267.11,
+        "settings": {
+          "RV5": 0.5,
+          "RV6": 0,
+          "RV7": 1,
+          "RV8": 1
+        },
+        "fault": null,
+        "setting_source_fault": "C15"
+      },
+      "status": "completed",
+      "voltages": {
+        "B_PRE": 267.11,
+        "B_EARLY": 237.04794745351325,
+        "DR_CF": 150.02193692860624,
+        "DR_TONE": 150.0219319778825,
+        "DR_TREBLE_TOP": 0.0,
+        "DR_TREBLE_W": 0.0,
+        "DR_BASS_TOP": 0.0,
+        "DR_BASS_BOTTOM": 0.0,
+        "DIRTY_OUT": 0.0,
+        "GND": 0.0
+      },
+      "pots": {
+        "RV5": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV6": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV7": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV8": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        }
+      },
+      "tone_kcl_residual_a": null,
+      "deck_sha256": "3eb3495d578ea101ddf16717767c93daa5af4fbdd2e7b3be44c04651e309f6c5"
+    },
+    {
+      "case": {
+        "pre_v": 267.11,
+        "settings": {
+          "RV5": 0.5,
+          "RV6": 0,
+          "RV7": 1,
+          "RV8": 1
+        },
+        "fault": "C15",
+        "setting_source_fault": "C15"
+      },
+      "status": "completed",
+      "voltages": {
+        "B_PRE": 267.11,
+        "B_EARLY": 237.04794745351325,
+        "DR_CF": 149.67132772228467,
+        "DR_TONE": 149.67132278313102,
+        "DR_TREBLE_TOP": 149.67132705708244,
+        "DR_TREBLE_W": 66.52106671334973,
+        "DR_BASS_TOP": 0.0010643200382903224,
+        "DR_BASS_BOTTOM": 0.0005321600191448951,
+        "DIRTY_OUT": 66.52093367135265,
+        "GND": 0.0
+      },
+      "pots": {
+        "RV5": {
+          "terminal_v": [
+            149.67132705708244,
+            66.52106671334973,
+            0.0010643200382903224
+          ],
+          "segment_power_w": [
+            0.055311726361844234,
+            0.03539928574724927
+          ],
+          "total_track_w": 0.0907110121090935
+        },
+        "RV6": {
+          "terminal_v": [
+            0.0010643200382903224,
+            0.0010643200382903224,
+            0.0005321600191448951
+          ],
+          "segment_power_w": [
+            0.0,
+            2.831942859768615e-07
+          ],
+          "total_track_w": 2.831942859768615e-07
+        },
+        "RV7": {
+          "terminal_v": [
+            0.0005321600191448951,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            2.8319428597629517e-07,
+            0.0
+          ],
+          "total_track_w": 2.8319428597629517e-07
+        },
+        "RV8": {
+          "terminal_v": [
+            66.52106671334973,
+            66.52093367135265,
+            0.0
+          ],
+          "segment_power_w": [
+            1.770017298549181e-08,
+            0.004425034616508499
+          ],
+          "total_track_w": 0.0044250523166814845
+        }
+      },
+      "tone_kcl_residual_a": null,
+      "deck_sha256": "26c922e66988540262a3414e38def698a05ce46d5d706d6f9f30dc12cb920ffe"
+    },
+    {
+      "case": {
+        "pre_v": 267.11,
+        "settings": {
+          "RV5": 1,
+          "RV6": 0,
+          "RV7": 0,
+          "RV8": 0
+        },
+        "fault": null,
+        "setting_source_fault": "C16"
+      },
+      "status": "completed",
+      "voltages": {
+        "B_PRE": 267.11,
+        "B_EARLY": 237.04794745351325,
+        "DR_CF": 150.02193692860624,
+        "DR_TONE": 150.0219319778825,
+        "DR_TREBLE_TOP": 0.0,
+        "DR_TREBLE_W": 0.0,
+        "DR_BASS_TOP": 0.0,
+        "DR_BASS_BOTTOM": 0.0,
+        "DIRTY_OUT": 0.0,
+        "GND": 0.0
+      },
+      "pots": {
+        "RV5": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV6": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV7": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV8": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        }
+      },
+      "tone_kcl_residual_a": null,
+      "deck_sha256": "ade232f8e8efe8e28c9cca07046515a07543d24b0c2a654d5a09133a7212e870"
+    },
+    {
+      "case": {
+        "pre_v": 267.11,
+        "settings": {
+          "RV5": 1,
+          "RV6": 0,
+          "RV7": 0,
+          "RV8": 0
+        },
+        "fault": "C16",
+        "setting_source_fault": "C16"
+      },
+      "status": "completed",
+      "voltages": {
+        "B_PRE": 267.11,
+        "B_EARLY": 237.04794745351325,
+        "DR_CF": 148.59822998039152,
+        "DR_TONE": 63.33172931049195,
+        "DR_TREBLE_TOP": 50.66537124696926,
+        "DR_TREBLE_W": 50.66537124701993,
+        "DR_BASS_TOP": 63.331726726658665,
+        "DR_BASS_BOTTOM": 63.32919355885297,
+        "DIRTY_OUT": 5.066526991638128e-05,
+        "GND": 0.0
+      },
+      "pots": {
+        "RV5": {
+          "terminal_v": [
+            50.66537124696926,
+            50.66537124701993,
+            63.331726726658665
+          ],
+          "segment_power_w": [
+            2.5673275454719624e-21,
+            0.0006417462445462973
+          ],
+          "total_track_w": 0.0006417462445462973
+        },
+        "RV6": {
+          "terminal_v": [
+            63.331726726658665,
+            63.331726726658665,
+            63.32919355885297
+          ],
+          "segment_power_w": [
+            0.0,
+            6.416939131806315e-06
+          ],
+          "total_track_w": 6.416939131806315e-06
+        },
+        "RV7": {
+          "terminal_v": [
+            63.32919355885297,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.16042347027258658,
+            0.0
+          ],
+          "total_track_w": 0.16042347027258658
+        },
+        "RV8": {
+          "terminal_v": [
+            50.66537124701993,
+            5.066526991638128e-05,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0025669747096515013,
+            2.56696957569977e-09
+          ],
+          "total_track_w": 0.002566977276621077
+        }
+      },
+      "tone_kcl_residual_a": 6.763711379170756e-11,
+      "deck_sha256": "7e3658942a8be4e0b38ca8117d2a41d7b2ad1e03302fc3808e6e6c0f30d344cf"
+    },
+    {
+      "case": {
+        "pre_v": 267.11,
+        "settings": {
+          "RV5": 1,
+          "RV6": 1,
+          "RV7": 0,
+          "RV8": 0
+        },
+        "fault": null,
+        "setting_source_fault": "C17"
+      },
+      "status": "completed",
+      "voltages": {
+        "B_PRE": 267.11,
+        "B_EARLY": 237.04794745351325,
+        "DR_CF": 150.02193692860624,
+        "DR_TONE": 150.0219319778825,
+        "DR_TREBLE_TOP": 0.0,
+        "DR_TREBLE_W": 0.0,
+        "DR_BASS_TOP": 0.0,
+        "DR_BASS_BOTTOM": 0.0,
+        "DIRTY_OUT": 0.0,
+        "GND": 0.0
+      },
+      "pots": {
+        "RV5": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV6": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV7": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV8": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        }
+      },
+      "tone_kcl_residual_a": null,
+      "deck_sha256": "b5831643094562d0d014067189e5e7312123ea2cde3a839cb9ac9917e63c6062"
+    },
+    {
+      "case": {
+        "pre_v": 267.11,
+        "settings": {
+          "RV5": 1,
+          "RV6": 1,
+          "RV7": 0,
+          "RV8": 0
+        },
+        "fault": "C17",
+        "setting_source_fault": "C17"
+      },
+      "status": "completed",
+      "voltages": {
+        "B_PRE": 267.11,
+        "B_EARLY": 237.04794745351325,
+        "DR_CF": 148.6034876245468,
+        "DR_TONE": 63.65083624308858,
+        "DR_TREBLE_TOP": 28.28922797172466,
+        "DR_TREBLE_W": 28.28922797175295,
+        "DR_BASS_TOP": 35.36154203785858,
+        "DR_BASS_BOTTOM": 63.65083366876587,
+        "DIRTY_OUT": 2.8289171393354993e-05,
+        "GND": 0.0
+      },
+      "pots": {
+        "RV5": {
+          "terminal_v": [
+            28.28922797172466,
+            28.28922797175295,
+            35.36154203785858
+          ],
+          "segment_power_w": [
+            8.003387556613306e-22,
+            0.00020007050499854198
+          ],
+          "total_track_w": 0.00020007050499854198
+        },
+        "RV6": {
+          "terminal_v": [
+            35.36154203785858,
+            35.36154203785858,
+            63.65083366876587
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0008002840209785214
+          ],
+          "total_track_w": 0.0008002840209785214
+        },
+        "RV7": {
+          "terminal_v": [
+            63.65083366876587,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.16205714506915597,
+            0.0
+          ],
+          "total_track_w": 0.16205714506915597
+        },
+        "RV8": {
+          "terminal_v": [
+            28.28922797175295,
+            2.8289171393354993e-05,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0008002788186809725,
+            8.002772181226145e-10
+          ],
+          "total_track_w": 0.0008002796189581906
+        }
+      },
+      "tone_kcl_residual_a": 6.212990321871614e-11,
+      "deck_sha256": "7c6bd20958c19bfb862cee14e3d494b0f75478b459ee98015e102ae64bf27129"
+    },
+    {
+      "case": {
+        "pre_v": 355.0,
+        "settings": {
+          "RV5": 0.5,
+          "RV6": 0,
+          "RV7": 1,
+          "RV8": 1
+        },
+        "fault": null,
+        "setting_source_fault": "C15"
+      },
+      "status": "completed",
+      "voltages": {
+        "B_PRE": 355.0,
+        "B_EARLY": 315.64868581984985,
+        "DR_CF": 200.48078270541274,
+        "DR_TONE": 200.48077608954713,
+        "DR_TREBLE_TOP": 0.0,
+        "DR_TREBLE_W": 0.0,
+        "DR_BASS_TOP": 0.0,
+        "DR_BASS_BOTTOM": 0.0,
+        "DIRTY_OUT": 0.0,
+        "GND": 0.0
+      },
+      "pots": {
+        "RV5": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV6": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV7": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV8": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        }
+      },
+      "tone_kcl_residual_a": null,
+      "deck_sha256": "9dbd1a1f5d06b56d4c211572909052ee5a63874a77bc3da469e26dc8d751bddb"
+    },
+    {
+      "case": {
+        "pre_v": 355.0,
+        "settings": {
+          "RV5": 0.5,
+          "RV6": 0,
+          "RV7": 1,
+          "RV8": 1
+        },
+        "fault": "C15",
+        "setting_source_fault": "C15"
+      },
+      "status": "completed",
+      "voltages": {
+        "B_PRE": 355.0,
+        "B_EARLY": 315.64868581984985,
+        "DR_CF": 200.06275342767987,
+        "DR_TONE": 200.06274682560922,
+        "DR_TREBLE_TOP": 200.06275253851697,
+        "DR_TREBLE_W": 88.91741638260106,
+        "DR_BASS_TOP": 0.0014226558996236667,
+        "DR_BASS_BOTTOM": 0.0007113279498114776,
+        "DIRTY_OUT": 88.91723854795056,
+        "GND": 0.0
+      },
+      "pots": {
+        "RV5": {
+          "terminal_v": [
+            200.06275253851697,
+            88.91741638260106,
+            0.0014226558996236667
+          ],
+          "segment_power_w": [
+            0.09882628599369239,
+            0.06324843152325449
+          ],
+          "total_track_w": 0.16207471751694688
+        },
+        "RV6": {
+          "terminal_v": [
+            0.0014226558996236667,
+            0.0014226558996236667,
+            0.0007113279498114776
+          ],
+          "segment_power_w": [
+            0.0,
+            5.059874521840122e-07
+          ],
+          "total_track_w": 5.059874521840122e-07
+        },
+        "RV7": {
+          "terminal_v": [
+            0.0007113279498114776,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            5.05987452183e-07,
+            0.0
+          ],
+          "total_track_w": 5.05987452183e-07
+        },
+        "RV8": {
+          "terminal_v": [
+            88.91741638260106,
+            88.91723854795056,
+            0.0
+          ],
+          "segment_power_w": [
+            3.162516291866546e-08,
+            0.007906275310993145
+          ],
+          "total_track_w": 0.007906306936156064
+        }
+      },
+      "tone_kcl_residual_a": null,
+      "deck_sha256": "d479f4018c0727c7dc8604a11ee09f3566f7ddd4d5294616a6f22227a48513cb"
+    },
+    {
+      "case": {
+        "pre_v": 355.0,
+        "settings": {
+          "RV5": 1,
+          "RV6": 0,
+          "RV7": 0,
+          "RV8": 0
+        },
+        "fault": null,
+        "setting_source_fault": "C16"
+      },
+      "status": "completed",
+      "voltages": {
+        "B_PRE": 355.0,
+        "B_EARLY": 315.64868581984985,
+        "DR_CF": 200.48078270541274,
+        "DR_TONE": 200.48077608954713,
+        "DR_TREBLE_TOP": 0.0,
+        "DR_TREBLE_W": 0.0,
+        "DR_BASS_TOP": 0.0,
+        "DR_BASS_BOTTOM": 0.0,
+        "DIRTY_OUT": 0.0,
+        "GND": 0.0
+      },
+      "pots": {
+        "RV5": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV6": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV7": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV8": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        }
+      },
+      "tone_kcl_residual_a": null,
+      "deck_sha256": "61c064ee37bdd521bfd4e90a8f7dd34da0ecffcaea390485b81e862096d4f6c5"
+    },
+    {
+      "case": {
+        "pre_v": 355.0,
+        "settings": {
+          "RV5": 1,
+          "RV6": 0,
+          "RV7": 0,
+          "RV8": 0
+        },
+        "fault": "C16",
+        "setting_source_fault": "C16"
+      },
+      "status": "completed",
+      "voltages": {
+        "B_PRE": 355.0,
+        "B_EARLY": 315.64868581984985,
+        "DR_CF": 198.75684343790775,
+        "DR_TONE": 84.70904807465351,
+        "DR_TREBLE_TOP": 67.76722213976676,
+        "DR_TREBLE_W": 67.76722213983453,
+        "DR_BASS_TOP": 84.70904461865979,
+        "DR_BASS_BOTTOM": 84.70565639231938,
+        "DIRTY_OUT": 6.776708660552915e-05,
+        "GND": 0.0
+      },
+      "pots": {
+        "RV5": {
+          "terminal_v": [
+            67.76722213976676,
+            67.76722213983453,
+            84.70904461865979
+          ],
+          "segment_power_w": [
+            4.5929851766344336e-21,
+            0.0011481013956161153
+          ],
+          "total_track_w": 0.0011481013956161153
+        },
+        "RV6": {
+          "terminal_v": [
+            84.70904461865979,
+            84.70904461865979,
+            84.70565639231938
+          ],
+          "segment_power_w": [
+            0.0,
+            1.1480077733815978e-05
+          ],
+          "total_track_w": 1.1480077733815978e-05
+        },
+        "RV7": {
+          "terminal_v": [
+            84.70565639231938,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.2870019289941471,
+            0.0
+          ],
+          "total_track_w": 0.2870019289941471
+        },
+        "RV8": {
+          "terminal_v": [
+            67.76722213983453,
+            6.776708660552915e-05,
+            0.0
+          ],
+          "segment_power_w": [
+            0.004592387211779848,
+            4.592378027001288e-09
+          ],
+          "total_track_w": 0.004592391804157875
+        }
+      },
+      "tone_kcl_residual_a": 7.835064845182482e-11,
+      "deck_sha256": "b2730d09c779cfa150ca588e7971177134ef4410477feea2bb04c9a0b0fd36c5"
+    },
+    {
+      "case": {
+        "pre_v": 355.0,
+        "settings": {
+          "RV5": 1,
+          "RV6": 1,
+          "RV7": 0,
+          "RV8": 0
+        },
+        "fault": null,
+        "setting_source_fault": "C17"
+      },
+      "status": "completed",
+      "voltages": {
+        "B_PRE": 355.0,
+        "B_EARLY": 315.64868581984985,
+        "DR_CF": 200.48078270541274,
+        "DR_TONE": 200.48077608954713,
+        "DR_TREBLE_TOP": 0.0,
+        "DR_TREBLE_W": 0.0,
+        "DR_BASS_TOP": 0.0,
+        "DR_BASS_BOTTOM": 0.0,
+        "DIRTY_OUT": 0.0,
+        "GND": 0.0
+      },
+      "pots": {
+        "RV5": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV6": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV7": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        },
+        "RV8": {
+          "terminal_v": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0,
+            0.0
+          ],
+          "total_track_w": 0.0
+        }
+      },
+      "tone_kcl_residual_a": null,
+      "deck_sha256": "6de8d12da85a6fe21e18f842425bf786108fcbaee0919739d98c35371d3afee3"
+    },
+    {
+      "case": {
+        "pre_v": 355.0,
+        "settings": {
+          "RV5": 1,
+          "RV6": 1,
+          "RV7": 0,
+          "RV8": 0
+        },
+        "fault": "C17",
+        "setting_source_fault": "C17"
+      },
+      "status": "completed",
+      "voltages": {
+        "B_PRE": 355.0,
+        "B_EARLY": 315.64868581984985,
+        "DR_CF": 198.76332440534736,
+        "DR_TONE": 85.13563184210791,
+        "DR_TREBLE_TOP": 37.838015018376545,
+        "DR_TREBLE_W": 37.83801501841439,
+        "DR_BASS_TOP": 47.29752823367255,
+        "DR_BASS_BOTTOM": 85.13562839884459,
+        "DIRTY_OUT": 3.783793934246191e-05,
+        "GND": 0.0
+      },
+      "pots": {
+        "RV5": {
+          "terminal_v": [
+            37.838015018376545,
+            37.83801501841439,
+            47.29752823367255
+          ],
+          "segment_power_w": [
+            1.43213095443898e-21,
+            0.0003579295610785753
+          ],
+          "total_track_w": 0.0003579295610785753
+        },
+        "RV6": {
+          "terminal_v": [
+            47.29752823367255,
+            47.29752823367255,
+            85.13562839884459
+          ],
+          "segment_power_w": [
+            0.0,
+            0.001431721824109592
+          ],
+          "total_track_w": 0.001431721824109592
+        },
+        "RV7": {
+          "terminal_v": [
+            85.13562839884459,
+            0.0,
+            0.0
+          ],
+          "segment_power_w": [
+            0.2899230089146461,
+            0.0
+          ],
+          "total_track_w": 0.2899230089146461
+        },
+        "RV8": {
+          "terminal_v": [
+            37.83801501841439,
+            3.783793934246191e-05,
+            0.0
+          ],
+          "segment_power_w": [
+            0.0014317125171101502,
+            1.4317096536838268e-09
+          ],
+          "total_track_w": 0.0014317139488198038
+        }
+      },
+      "tone_kcl_residual_a": 8.67640941731862e-11,
+      "deck_sha256": "63c686e2c7e19c8d58efb61cd402702abac7aa9738daeb6912de061afdb64bfc"
+    }
+  ],
+  "native_adoption": false,
+  "hardware_qualified": false
+}

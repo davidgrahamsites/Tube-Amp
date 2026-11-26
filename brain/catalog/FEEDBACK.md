@@ -1749,3 +1749,17 @@ Source: engineering/whole-amp/harness-integration/results/wire-dressing-checks.j
 - [engineering/whole-amp/harness-integration/wire-dressing.json](<../../engineering/whole-amp/harness-integration/wire-dressing.json>)
 - [docs/design-journal/chapters/pot-harness-wire-reserve.html](<../../docs/design-journal/chapters/pot-harness-wire-reserve.html>)
 
+## FB-166 — pot-harness-dc-fault-screen
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HI-006: distinguish normal DC blocking from coupling-fault exposure before selecting pot harness insulation.
+
+1,050 normalized passive DC cases and seven analytic/rejection controls identify ten capacitor-short paths. Twelve loaded generic-tube DC cases complete; C17 gives RV7 total-track power 0.162057 W at fixed B_PRE 267.11 V and 0.289923 W at 355 V. The 0.25 W reference is not a qualified RV7 rating. Exact source bounds, pot DC/track/wiper limits, leakage, transients and other faults remain open. Circuit and boards are unchanged; no insulation or fit release.
+
+Source: engineering/whole-amp/harness-integration/results/pot-voltage-checks.json
+
+- [engineering/whole-amp/harness-integration/pot-voltage-review.html](<../../engineering/whole-amp/harness-integration/pot-voltage-review.html>)
+- [engineering/whole-amp/harness-integration/voltage-screen.json](<../../engineering/whole-amp/harness-integration/voltage-screen.json>)
+- [engineering/whole-amp/harness-integration/results/pot-fault-probe.json](<../../engineering/whole-amp/harness-integration/results/pot-fault-probe.json>)
+- [docs/design-journal/chapters/pot-voltage-fault-screen.html](<../../docs/design-journal/chapters/pot-voltage-fault-screen.html>)
+

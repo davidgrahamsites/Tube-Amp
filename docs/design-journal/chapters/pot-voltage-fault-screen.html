@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pot harness DC fault screen</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Pot harness DC fault screen</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HI-006 · Conditional electrical screen; no part approval</p>
+      </header>
+
+      <section>
+        <h2>Why the harness needs a DC review</h2>
+        <p>Several panel potentiometers connect through coupling capacitors to tube-stage nodes. A shorted capacitor can put DC on a pot and its harness. Normal blocking does not prove a low-voltage fault condition. A connector voltage rating also cannot protect a lower-rated pot or insulation.</p>
+        <p>HI-006 checks 1,050 normalized linear DC cases, seven analytic or rejection controls, and ten capacitor-short scenarios: C2, C3, C4, C8, C15, C16, C17, C19, C21, and C606. Each network uses source-derived resistor values and exact zero-ohm fault endpoints. Wiper settings are electrical resistance fractions 0, 0.5, and 1. They are not shaft angles or audio-taper positions.</p>
+      </section>
+
+      <section>
+        <h2>Model boundary and assumptions</h2>
+        <p>The 1,050-case screen treats each network as a linear DC circuit. It opens intact capacitors at DC and omits capacitor leakage, nonlinear tube behavior, and signal transients. It does not find actual maximum voltages or prove full single-fault safety. Its values depend on stated source assumptions and operating states.</p>
+        <ul>
+          <li>Clean and dirty-gain screens use a cold, open first tube and retain the actual feed resistors. They omit later grid current. The inactive channel grounds its second-grid node.</li>
+          <li>The dirty-tone screen uses an ideal fixed cathode-follower output voltage and retains R23. The normalled effects path is active; C607 blocks wet-output DC.</li>
+          <li>The C19 case drives the phase-inverter tail through R25 and sends DC backward through the native normalled effects path. A future buffered effects path needs a new review.</li>
+          <li>The presence case drives through R28 from a fixed phase-inverter tail. It is not a direct B+ feed. The reverb case uses a fixed recovery output and an unloaded wiper. It omits real op-amp current limit, mute, and summing-input behavior.</li>
+        </ul>
+        <p>These choices preserve the existing functional blocks. They do not approve a connector, pot, wire, insulation system, or circuit change.</p>
+      </section>
+
+      <section>
+        <h2>Normalized calculation</h2>
+        <p>For each setting and fault, the network reports a terminal coefficient \(\alpha\) and total track-power coefficient \(\beta\). The source voltage \(V_s\) is then applied as a stated scenario:</p>
+        <div class="math">\[|V_{terminal}|=\alpha|V_s|,\qquad P_{track}=\beta V_s^2\]</div>
+        <p>For a comparison power \(P_c\), the source voltage at that comparison is:</p>
+        <div class="math">\[V_{s,c}=\sqrt{\frac{P_c}{\beta}}\]</div>
+        <p>Example: C8 short, first tube open, and RV4 wiper at the grounded end. The actual R12 feed and 1 MΩ pot produce:</p>
+        <div class="math">\[V_{RV4,1}=V_{B\_EARLY}\frac{1\;\mathrm{M\Omega}}{100\;\mathrm{k\Omega}+1\;\mathrm{M\Omega}}=0.909091V_{B\_EARLY}\]</div>
+        <p>At an assumed 300 V B_EARLY source, <span class="math">\(0.909091\times300\;\mathrm V=272.727\;\mathrm V\)</span>. This is a conditional arithmetic example. It is not a measured source voltage or a qualified supply maximum.</p>
+      </section>
+
+      <section>
+        <h2>Fault cases that need follow-up</h2>
+        <p>The examples below use assumed source values: 300 V for B_EARLY and DR_CF, 25 V for PI_TAIL_TOP, and 15 V for REC_OUT. Voltage and total track-power maxima can occur at different wiper settings. These figures are not continuous-setting or fault-envelope maxima.</p>
+        <table>
+          <thead><tr><th>Short</th><th>Path</th><th>Illustrative result</th><th>Limit</th></tr></thead>
+          <tbody>
+            <tr><td>C8</td><td>B_EARLY through R12 to RV4</td><td>272.727 V at the terminal for the 300 V example</td><td>Tube-grid current and real source behavior are omitted.</td></tr>
+            <tr><td>C17</td><td>DR_CF through dirty tone network to RV7</td><td>At 300 V, model track power is 0.660469 W; terminal reaches 128.498 V.</td><td>Fixed stiff source does not represent actual follower impedance or current state.</td></tr>
+            <tr><td>C19</td><td>PI_TAIL_TOP back through the normalled loop</td><td>At 25 V, RV5 terminal reaches 6.812 V.</td><td>Recheck when the buffered effects path is integrated.</td></tr>
+            <tr><td>C606</td><td>REC_OUT to RV602</td><td>At 15 V, the unloaded RV602 wiper reaches 15 V.</td><td>Op-amp output current, mute, and summing input are not modeled.</td></tr>
+          </tbody>
+        </table>
+        <p>For C17, the modeled RV7 track coefficient is <span class="math">\(7.338549\times10^{-6}\;\mathrm{W/V^2}\)</span>. At 300 V, the model gives <span class="math">\(7.338549\times10^{-6}\times300^2=0.660469\;\mathrm W\)</span>. The 0.25 W comparison is reached near 184.57 V at DR_CF. That comparison comes from an earlier A1M customer-sheet review. The proposed RV7 is a B25K candidate; 0.25 W is not a verified rating for RV7. Actual follower impedance and current under the fault can change the result.</p>
+        <div class="math">\[V_{DR\_CF,c}=\sqrt{\frac{0.25\;\mathrm W}{7.338549\times10^{-6}\;\mathrm{W/V^2}}}\approx184.57\;\mathrm V\]</div>
+        <p>C19 is a separate path concern. The existing normalled jack path can backfeed DC into dirty pots. Keep that routing visible in any future buffered-loop review.</p>
+      </section>
+
+      <section>
+        <h2>Loaded-tube follow-up</h2>
+        <p>A second screen ran 12 paired generic-tube DC cases. It used three C15, C16, and C17 settings, each intact and faulted, at fixed B_PRE values of 267.11 V and 355 V. It uses generic tube models and the desired buffered-loop fixture, not the native normalled-path linear screen. Pot endpoints use a 1 Ω approximation; a failed capacitor uses 1 mΩ. The model tubes are not exact production tubes. No actual supply dynamics or hardware were tested.</p>
+        <table>
+          <thead><tr><th>B_PRE, V</th><th>Short</th><th>Loaded DR_CF, V</th><th>Largest total track power</th></tr></thead>
+          <tbody>
+            <tr><td>267.11</td><td>C15</td><td>149.671</td><td>RV5: 0.090711 W</td></tr>
+            <tr><td>267.11</td><td>C16</td><td>148.598</td><td>RV7: 0.160423 W</td></tr>
+            <tr><td>267.11</td><td>C17</td><td>148.603</td><td>RV7: 0.162057 W</td></tr>
+            <tr><td>355</td><td>C15</td><td>200.063</td><td>RV5: 0.162075 W</td></tr>
+            <tr><td>355</td><td>C16</td><td>198.757</td><td>RV7: 0.287002 W</td></tr>
+            <tr><td>355</td><td>C17</td><td>198.763</td><td>RV7: 0.289923 W</td></tr>
+          </tbody>
+        </table>
+        <p>For C17, loaded DR_CF is 148.603 V and RV7 total-track power is 0.162057 W at 267.11 V B_PRE. At 355 V B_PRE, DR_CF is 198.763 V and RV7 power is 0.289923 W. The second result is above the 0.25 W A1M comparison. Do not call either result a pass or failure. The exact linear RV7 rating is unknown. Other Alpha family sheets may specify different limits. Actual tube variation, supply behavior, hot operation, and wiper or partial-track stress remain open. Do not redesign solely because this conditional comparison exceeds 0.25 W.</p>
+        <p>The earlier 300 V stiff-source screen gave 0.660469 W for C17/RV7. The loaded-tube fixture gives lower values under a different source and loop model. These results are not interchangeable acceptance tests. Their difference shows why the actual follower impedance and operating state matter.</p>
+      </section>
+
+      <section>
+        <h2>Pot rating and decision</h2>
+        <p>The Alpha RV24AF family sheet lists 250 V AC maximum operation. This does not establish a 250 V DC working rating for the exact suffix. The 500 V AC, one-minute dielectric test is an insulation test, not a continuous working limit. Exact DC, total-track, partial-track, and wiper limits remain unresolved.</p>
+        <p>Keep the current pot values and functional blocks. Do not approve lower-voltage wire from normal DC conditions. Do not treat a high-voltage connector as protection for the pot. Do not add a blocking component without reviewing response, fault behavior, and fit. No native change or connector, pot, or insulation approval was made.</p>
+        <p>The result receipt passes seven analytic and rejection controls. Maximum KCL residual is <span class="math">\(1.02\times10^{-20}\;\mathrm{A/V}\)</span>; maximum power-balance error is <span class="math">\(1.36\times10^{-20}\;\mathrm{W/V^2}\)</span>. These checks support the linear calculation within its declared scope. They do not verify source maxima, full single-fault safety, or physical parts.</p>
+      </section>
+
+      <section>
+        <h2>Next checks</h2>
+        <p>Use selected supply and tube models to bound B_EARLY, DR_CF, PI_TAIL_TOP, and REC_OUT. Obtain exact pot DC, track-power, partial-track, and wiper limits. Include local heating and insulation. Recheck C19 with the future buffered loop. Preserve block ownership and functions while reviewing any evidence-based correction.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>DC</dt>
+          <dd>A steady voltage or current that does not alternate polarity.</dd>
+          <dt>AC</dt>
+          <dd>Alternating current, whose polarity changes with time.</dd>
+          <dt>Coupling capacitor</dt>
+          <dd>A capacitor that passes changing signals and normally blocks steady DC.</dd>
+          <dt>Potentiometer</dt>
+          <dd>A variable resistor with a moving contact called a wiper.</dd>
+          <dt>Track</dt>
+          <dd>The resistive element inside a potentiometer.</dd>
+          <dt>Wiper</dt>
+          <dd>The moving contact on the potentiometer track.</dd>
+          <dt>Normalized coefficient</dt>
+          <dd>A result calculated for a unit source, then scaled to a stated source voltage.</dd>
+          <dt>Stiff source</dt>
+          <dd>A model source that holds voltage when the load changes.</dd>
+          <dt>Source impedance</dt>
+          <dd>The resistance and reactance that limit current from a source.</dd>
+          <dt>Normalled path</dt>
+          <dd>The jack path used when no external plug interrupts its contacts.</dd>
+          <dt>Phase inverter</dt>
+          <dd>The amplifier stage that drives the output tubes with opposite signals.</dd>
+          <dt>Cathode follower</dt>
+          <dd>A tube stage whose output follows its input voltage and can supply load current.</dd>
+          <dt>Dielectric test</dt>
+          <dd>A specified insulation withstand test; it does not set continuous working voltage.</dd>
+          <dt>Working voltage</dt>
+          <dd>The continuous operating voltage allowed for a part under stated conditions.</dd>
+          <dt>A1M</dt>
+          <dd>An audio-taper potentiometer value code for 1 MΩ.</dd>
+          <dt>B25K</dt>
+          <dd>A linear-taper potentiometer value code for 25 kΩ.</dd>
+          <dt>Grid current</dt>
+          <dd>Current flowing into a tube control grid.</dd>
+          <dt>KCL</dt>
+          <dd>Kirchhoff's current law: current entering a node balances current leaving it.</dd>
+          <dt>B+ / B_EARLY</dt>
+          <dd>The high-voltage DC supply; B_EARLY is the named supply node used in this screen.</dd>
+          <dt>PI_TAIL_TOP</dt>
+          <dd>The upper node of the phase-inverter tail network.</dd>
+          <dt>DR_CF</dt>
+          <dd>The dirty-channel cathode-follower output node used as the modeled source boundary.</dd>
+          <dt>REC_OUT</dt>
+          <dd>The reverb recovery-stage output node used in the screen.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/whole-amp/harness-integration/pot-voltage-review.html">HI-006 engineering review</a> — model assumptions, examples, and decision limits.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/voltage-screen.json">HI-006 source contract</a> — fault scenarios, source assumptions, and normalized calculation scope.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/pot-voltage-checks.json">HI-006 check receipt</a> — 1,050 cases and seven analytic/rejection controls.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/pot-voltage-cases.csv">HI-006 case table</a> — per-setting normalized terminal and track results.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/pot-fault-probe.json">Loaded-tube follow-up</a> — 12 paired generic-tube DC cases at two fixed B_PRE values; no hardware qualification.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/pot-fault-example.cir">Loaded-tube example deck</a> — generated candidate-fixture circuit.</li>
+          <li><a href="../../../engineering/component-selection/evidence/control-panel-parts-2026-11-21.md">Earlier control-parts review</a> — proposed values, suffix limits, and the A1M comparison; does not qualify RV7.</li>
+          <li><a href="https://cdnimages.opentip.com/Docs/CED/r-va1ma_specification_sheet.pdf">Archived A1M customer sheet</a> — the source for the 0.25 W comparison only.</li>
+          <li><a href="https://www.taiwanalpha.com/downloads?id=104&amp;target=products">Taiwan Alpha RV24AF family data</a> — AC operating and dielectric test claims; exact DC rating remains open.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/connector-contract.json">Harness connector contract</a> — separate connector and insulation release gates.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
