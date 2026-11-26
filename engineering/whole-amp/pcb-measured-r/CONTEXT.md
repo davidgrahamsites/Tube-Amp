@@ -30,3 +30,5 @@ Task RB-004: PCB integration owns this one-pass correction, depending on the exa
 November25 current-budget seam: [current-budget/CONTEXT.md](current-budget/CONTEXT.md) owns revision-bound passive reverb load allocation and hypothetical conductor resistance comparisons. Its results/budget.json feeds the auxiliary-load review; it is not a thermal ampacity or native-routing acceptance. Source review and corrections remain in review/trace-width-research-2026-11-25.md, with the adopted rules in routing-requirements.md.
 
 R605 package: [r605-package/CONTEXT.md](r605-package/CONTEXT.md) owns its conditional FMP200 native placement, local routing, drill evidence and source-bound component envelope. Full hot/fault qualification remains open.
+
+FMP200 Main/Power correction: [fmp200-holes/CONTEXT.md](fmp200-holes/CONTEXT.md) owns the 13-package/26-hole correction and exact native preservation checks. See VAL-071 for scope and remaining fit/stress gates.

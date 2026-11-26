@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "unchanged_source_files": 22,
+  "resistors": 13,
+  "resized_holes": 26,
+  "finished_hole_min_mm": 0.8,
+  "maximum_lead_mm": 0.6,
+  "diametral_allowance_mm": 0.20000000000000007,
+  "annular_ring_before_registration_mm": 0.4,
+  "boards": {
+    "Renegade_Main": {
+      "references": [
+        "R12",
+        "R15",
+        "R21",
+        "R22",
+        "R30",
+        "R31",
+        "R4",
+        "R5",
+        "R7"
+      ],
+      "resized_holes": 18,
+      "unchanged_drill_count": 178,
+      "existing_DRC_findings": 43,
+      "existing_unconnected_items": 105,
+      "new_DRC_findings": 0,
+      "placement_and_connectivity_unchanged": true
+    },
+    "Renegade_Power": {
+      "references": [
+        "R501",
+        "R502",
+        "R506",
+        "R507"
+      ],
+      "resized_holes": 8,
+      "unchanged_drill_count": 79,
+      "existing_DRC_findings": 12,
+      "existing_unconnected_items": 39,
+      "new_DRC_findings": 0,
+      "placement_and_connectivity_unchanged": true
+    }
+  },
+  "unchanged_scope": "All source schematic/circuit files, board placements, nets, tracks, vias, other footprints, mounts and outline",
+  "fabrication_ready": false,
+  "remaining_holds": [
+    "Actual supplier finished-hole/registration tolerances",
+    "Hot/pulse/fault resistor ratings",
+    "Assembly standoff and chassis fit",
+    "Existing unrouted connections and DRC findings"
+  ],
+  "input_sha256": {
+    "engineering/component-selection/footprints/Renegade_Selected.pretty/Yageo_FMP200_L9.0_D3.9_P15.24.kicad_mod": "75e6232e85d2925a52fbb784dc8f6e8ad1fb2f0f33116a011346b88c059e7f10",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Main.kicad_pcb": "120d8e04debbf44825e4c64ea36a5d607ee571d75628cad43eddbc1d60944278",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Power.kicad_pcb": "6829beb4430b8f449ed9f891939912fca0a41ffcddf1c4d5dbcc8f0fdce8531a"
+  }
+}

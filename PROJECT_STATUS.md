@@ -369,3 +369,9 @@ November25 current-budget and reference checkpoint (VAL-069):12 source-bound pas
 ## 25 November 2026 — VAL-070 R605 package correction
 
 R605 now uses the documented FMP200 conditional envelope and0.9mm holes at15.24mm pitch; local routing avoids existing ground/control paths.240 components/145 nets and all18 schematic page rasters remain unchanged. Reverb DRC0/opens0; all54 other footprints and chassis mounts preserved. Two R605 holes move/grow and one0.4mm via is added. The conditional7.2mm component-height envelope is saved for populated fit. Direct18Vrms resistor stress fails at100C; hot/fault/purchasing qualification remains open. VAL-069 and72 supply cases/four refinements rerun unchanged, with42 supply flags retained. Scoped ICM passes. See [VAL-070](brain/records/VAL-070-r605-package.md). Next: remaining power parts/legacy FMP200 holes and driver fault/thermal limits, then populated three-board fit. Objective6 is not complete; no fabrication release.
+
+## November25 FMP200 hole checkpoint (VAL-071)
+
+Corrected 13 Main/Power FMP200 packages: 26 holes now0.9mm, pads1.8mm, with matching pad-end courtyard/silk clearance and corrected rating tags. Manufacturer maximum lead0.6mm leaves0.2mm diametral allowance at proposed finished-hole minimum0.8mm. Native-tree and drill comparisons, all22 unchanged source files and disposable baseline replay pass. Existing DRC/open counts remain Main43/105 and Power12/39; no new findings. Refreshed socket and mechanical inventories use current native hashes.
+
+This is package/insertion verification, not thermal/fault or populated-fit approval. Assembly standoff/height, supplier fabrication tolerance, remaining routing, three-board consolidation and actual drill-body/bit access remain open. Next: applicable per-part stress ratings and package envelopes, then chassis packing with known obstructions. Objective6 is not complete.
