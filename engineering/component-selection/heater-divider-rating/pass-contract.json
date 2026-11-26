@@ -1,0 +1,70 @@
+{
+  "id": "HD-006",
+  "baseline": "ecc2c7184257d7d909103688121e8e03a9087be9",
+  "owner": "heater-divider-rating",
+  "job": "Check floating-reference model translation and reject unsafe pass-stage assumptions before native adoption",
+  "prior_contract": "ceiling-contract.json",
+  "prior_contract_sha256": "bc83f3a99d1e6f5b22bca47f2fa36c47f0cc0bfab0a5778b65e2f514526bfe10",
+  "model": "sources/ATL431A_TRANS.LIB",
+  "model_sha256": "dc4d940b7cdbed14408533fb509b8911c334adc4291bb10f2e14aaf2d0d0062d",
+  "input_V": [
+    320,
+    380,
+    550
+  ],
+  "vto_sensitivity_V": [
+    -2.5,
+    -3.5,
+    -4.5
+  ],
+  "profiles": {
+    "low": {
+      "vref": 1.2,
+      "iadj": 0,
+      "rset": 201,
+      "rlow": 42984
+    },
+    "nominal": {
+      "vref": 1.25,
+      "iadj": 5e-05,
+      "rset": 200,
+      "rlow": 43200
+    },
+    "high": {
+      "vref": 1.313,
+      "iadj": 0.000101,
+      "rset": 199,
+      "rlow": 43416
+    }
+  },
+  "topology": {
+    "drain_feed_ohm": 100,
+    "source_ohm": 680,
+    "gate_bias_each_ohm": 49900,
+    "gate_upper_ohm": 700000,
+    "gate_lower_ohm": 100000,
+    "local_input_F": 1e-07,
+    "local_input_series_ohm": 1,
+    "output_F": 0.0001,
+    "heater_divider_ohm": 78000,
+    "extra_warm_load_ohm": 36200
+  },
+  "transient_stop_s": 2,
+  "transient_max_step_s": 0.0001,
+  "limits": {
+    "output_ceiling_V": 300,
+    "regulator_differential_V": 40,
+    "gate_source_abs_V": 20
+  },
+  "limitations": [
+    "ATL431 manufacturer model excludes loop behavior and temperature. No stability or hot qualification from these runs.",
+    "Generic MOSFET LEVEL1 fit is a sensitivity surrogate, not an IXTP3N100D2 validated model. VTO sweep with fixed KP is not a statistical device bound.",
+    "LM317L-N is behavioral. No reverse conduction, thermal shutdown, internal fault protection or measured dynamics are asserted.",
+    "The extra warm resistor approximates only the nominal prior load; it does not reproduce the nonlinear tube amplifier.",
+    "100ohm drain feed plus680ohm source resistor replaces the previous680ohm drain-feed topology for this experiment only. Neither is adopted.",
+    "Exact input envelope, parts, fault interruption, reversal, thermal/SOA, socket/carrier, sourcing and populated fit remain open."
+  ],
+  "done_condition": "Reproducible adapter fixtures and bounded candidate evidence, explicit failures and unchanged native hashes. Not circuit qualification.",
+  "estimated_effort": "One scoped simulation and reporting wave",
+  "human_evidence": "Exact device/revision, supported models or bench response, hot/fault protection, sourcing and mechanical assembly before adoption."
+}

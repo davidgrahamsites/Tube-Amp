@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preamp pass-stage model boundary</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Preamp pass-stage model boundary</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HD-006 · Model evidence only</p>
+      </header>
+
+      <section>
+        <h2>Why the model translation needed checks</h2>
+        <p>The candidate supply uses a floating regulator reference. The TI ATL431A model contains internal ground references that failed our floating fixture and syntax that needs translation for this simulator. The downloaded model file remains unchanged.</p>
+        <p>The fixture screen used three stages: syntax-only, fixed-clamp translation, and a floating adapter around the model core. It used 18 fixtures: two common-mode offsets and three injected-current levels per stage. The syntax-only and unwrapped grounded-model results were rejected. They do not represent the required floating interface.</p>
+        <p>The translated model uses local helper syntax for the clamp function. The floating wrapper uses controlled sources to refer the model core to the adapter return. This proves only that the model can be exercised in the proposed reference arrangement. It does not prove hardware behavior.</p>
+      </section>
+
+      <section>
+        <h2>What the pass-stage screen contains</h2>
+        <p>The screen combines a generic MOSFET LEVEL 1 sensitivity model, a behavioral LM317L model, the adapted ATL431 reference, and a fixed warm-load resistor. The fixed load approximates the nominal earlier supply load. It does not reproduce nonlinear tube current.</p>
+        <p>Fifty-four DC cases cover three supply inputs, three regulator profiles, warm or unpowered-tube load, and three MOSFET threshold-voltage values. Two fault probes cover an output short and a pass-device short. Four 2 s startup integrations cover 320 V, 380 V, 550 V, and a finer 320 V timestep.</p>
+        <p>The startup integrations are diagnostics. The ATL431 model excludes loop behavior and temperature. These runs do not establish dynamic stability.</p>
+      </section>
+
+      <section>
+        <h2>Topology change for this experiment</h2>
+        <p>HD-005 placed 680 Ω in the supply feed. HD-006 instead places 100 Ω in the MOSFET drain feed and 680 Ω in the source path. This is a different experimental topology. Neither arrangement is adopted.</p>
+        <p>The current model also uses an assumed gate-bias network, local capacitors, a behavioral regulator, and an added load resistor. It omits a gate-voltage protection circuit, reverse-current behavior, thermal shutdown, real semiconductor dynamics, and independent fault interruption.</p>
+      </section>
+
+      <section>
+        <h2>Pass-short result exceeds model limits</h2>
+        <p>In the pass-short probe at 550 V input, the modeled regulator differential reaches 265.059 V. The LM317L candidate has a 40 V input-to-output absolute maximum. The behavioral model does not enforce that device limit.</p>
+        <div class="math">\[V_{REG}=V(REGIN)-V(OUT)=538.466-273.407=265.059\;\mathrm{V}\]</div>
+        <p>The modeled MOSFET gate-to-source voltage reaches −255.086 V. The candidate device has a published ±20 V continuous gate-to-source limit; the surrogate does not enforce it.</p>
+        <div class="math">\[V_{GS}=V(G)-V(S)=293.435-548.521=-255.086\;\mathrm{V}\]</div>
+        <p>Both values exceed the devices' model applicability. Treat them as fault probes that expose missing protection. Do not use them as valid device operating predictions or accepted fault performance.</p>
+      </section>
+
+      <section>
+        <h2>Decision and next checks</h2>
+        <p>HD-006 does not qualify a regulator circuit. The MOSFET is a surrogate, not a validated model of the candidate IXTP3N100D2. The LM317L is behavioral. The reference model has no loop or temperature behavior. No native schematic or board changed. Nothing is adopted.</p>
+        <p>Before circuit adoption, define and verify gate-voltage protection and current limiting, floating-reference wiring, input-to-output differential protection, reverse-current path, pass-short interruption, thermal design, and exact semiconductor safe operating area. Check socket, carrier, insulation, wiring, and populated fit. Repeat startup and stability work with a supported model or physical measurements.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>Floating reference</dt>
+          <dd>A reference node that moves with a local return instead of staying at ground.</dd>
+          <dt>Clamp function</dt>
+          <dd>A mathematical limit that restricts a value to a stated range.</dd>
+          <dt>Controlled source</dt>
+          <dd>A modeled source whose output follows a voltage or current elsewhere in the circuit.</dd>
+          <dt>Pass device</dt>
+          <dd>The transistor that controls current between the supply input and regulated output.</dd>
+          <dt>Common-mode offset</dt>
+          <dd>A voltage shift applied to related reference nodes together.</dd>
+          <dt>Surrogate model</dt>
+          <dd>A simplified model used to explore sensitivity. It is not a validated model of the selected part.</dd>
+          <dt>Gate-to-source voltage (VGS)</dt>
+          <dd>The voltage difference between the transistor gate and source terminals.</dd>
+          <dt>Regulator differential</dt>
+          <dd>The voltage between the regulator input and output terminals.</dd>
+          <dt>Model applicability</dt>
+          <dd>The conditions under which a model's equations represent the device closely enough for the intended use.</dd>
+          <dt>Safe operating area (SOA)</dt>
+          <dd>The voltage, current, and temperature region in which a device can operate without damage.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/pass-contract.json">HD-006 contract</a> — topology, sensitivity ranges, limits, and declared model restrictions.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/pass-screen.json">HD-006 result receipt</a> — 18 fixtures, 54 DC cases, fault probes, startup diagnostics, and native-source hashes.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/pass-checks.json">HD-006 evidence checks</a> — model applicability and preservation checks.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/tools/pass_topology.py">HD-006 topology tool</a> — fixture translation, adapter, DC cases, faults, and startup decks.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/sources/ATL431A_TRANS.LIB">Preserved TI ATL431A model</a> — source model bytes used by the translation.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/sources/atl431-provenance.json">ATL431 model provenance</a> — version, source, hash, and stated limitations.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/sources/pass-device-candidate.json">Pass-device candidate evidence</a> — device limits, model caveats, and open checks.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/ceiling-review.html">HD-005 feed and ceiling review</a> — prior supply-feed boundary.</li>
+        </ul>
+      </section>
+    </article>
+  <!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>Bias</dt><dd>A steady voltage or current that sets a device operating point.</dd>
+<dt>DC</dt><dd>Direct current; current that flows in one direction.</dd>
+<dt>Ground</dt><dd>A named circuit reference; it is not automatically protective earth.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Node</dt><dd>An electrical connection shared by specified components.</dd>
+<dt>Nominal</dt><dd>The stated reference value before tolerance and operating variation.</dd>
+<dt>Populated</dt><dd>With the components installed.</dd>
+<dt>Preamp</dt><dd>Preamplifier; the stages that prepare the input signal for the power amplifier.</dd>
+<dt>Schematic</dt><dd>A drawing of electrical connections and component functions.</dd>
+<dt>Socket</dt><dd>A replaceable connection that holds a tube or integrated circuit.</dd>
+<dt>Gate</dt><dd>A checkpoint that requires specified evidence before the next activity.</dd>
+<dt>Thermal</dt><dd>Related to heat or temperature.</dd>
+<dt>Timestep</dt><dd>The time interval used by the simulator to resolve a waveform.</dd></dl></section><!-- /reader-key --></main>
+</body>
+</html>

@@ -1639,3 +1639,15 @@ Source: engineering/component-selection/heater-divider-rating/results/ceiling-sc
 - [engineering/component-selection/heater-divider-rating/ceiling-review.html](<../../engineering/component-selection/heater-divider-rating/ceiling-review.html>)
 - [docs/design-journal/chapters/preamp-ceiling-feed.html](<../../docs/design-journal/chapters/preamp-ceiling-feed.html>)
 
+## FB-157 — preamp-pass-model-boundary
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HD-006: validate the floating-reference adapter and retain the pass-short protection failure.
+
+18 adapter fixtures,54 DC sensitivity cases,2 fault probes and4 full startup diagnostics recorded;421 evidence checks pass. Pass short exceeds regulator and gate limits; reference excludes loop/temperature, other devices are surrogate/behavioral. No qualification or native adoption.
+
+Source: engineering/component-selection/heater-divider-rating/results/pass-screen.json
+
+- [engineering/component-selection/heater-divider-rating/pass-review.html](<../../engineering/component-selection/heater-divider-rating/pass-review.html>)
+- [docs/design-journal/chapters/preamp-pass-model.html](<../../docs/design-journal/chapters/preamp-pass-model.html>)
+

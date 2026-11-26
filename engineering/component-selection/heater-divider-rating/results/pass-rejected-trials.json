@@ -1,0 +1,43 @@
+{
+  "authority": "engineer",
+  "source": "Interactive /tmp probe tool outputs before the canonical HD-006 runner; old temporary waveforms were overwritten. These are historical notes, not reproducible current receipts.",
+  "trials": [
+    {
+      "id": "fixed-adjust-current-at-zero-input",
+      "local_input_F": 0,
+      "behavioral_gain_A_per_V": 1000,
+      "out_at_zero_input_V": 0.79073,
+      "end_s": 0.0106789608,
+      "required_end_s": 2,
+      "disposition": "Reject: unpowered current injection and incomplete transient."
+    },
+    {
+      "id": "conditional-adjust-current-no-bypass",
+      "local_input_F": 0,
+      "behavioral_gain_A_per_V": 1000,
+      "end_s": 0.0106176519,
+      "required_end_s": 2,
+      "disposition": "Reject: timestep-too-small stop; no complete transient."
+    },
+    {
+      "id": "local-bypass-lower-gain",
+      "local_input_F": 1e-07,
+      "series_ohm": 1,
+      "behavioral_gain_A_per_V": 100,
+      "input_V": 380,
+      "end_s": 2,
+      "extra_load_ohm": 38531.6,
+      "disposition": "Superseded: both bypass and gain changed, so their effects were confounded."
+    },
+    {
+      "id": "local-bypass-restored-gain",
+      "local_input_F": 1e-07,
+      "series_ohm": 1,
+      "behavioral_gain_A_per_V": 1000,
+      "input_V": 320,
+      "end_s": 2,
+      "extra_load_ohm": 38531.6,
+      "disposition": "Completed numerical probe. Canonical runner corrects approximate extra load to36200ohm and adds full receipts; none proves physical dynamics."
+    }
+  ]
+}

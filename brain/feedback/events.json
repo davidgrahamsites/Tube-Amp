@@ -2336,6 +2336,23 @@
       ],
       "supersedes": [],
       "next_action": "Qualify one real pass circuit and independent fault disconnection, then carry exact support/heatsink geometry into the power enclosure."
+    },
+    {
+      "id": "FB-157",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "engineer",
+      "kind": "preamp-pass-model-boundary",
+      "quote": "HD-006: validate the floating-reference adapter and retain the pass-short protection failure.",
+      "source": "engineering/component-selection/heater-divider-rating/results/pass-screen.json",
+      "interpretation": "18 adapter fixtures,54 DC sensitivity cases,2 fault probes and4 full startup diagnostics recorded;421 evidence checks pass. Pass short exceeds regulator and gate limits; reference excludes loop/temperature, other devices are surrogate/behavioral. No qualification or native adoption.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/component-selection/heater-divider-rating/pass-review.html",
+        "docs/design-journal/chapters/preamp-pass-model.html"
+      ],
+      "supersedes": [],
+      "next_action": "Resolve independent overvoltage/fault interruption and reverse-current paths before accepting a real pass circuit; then exact parts, thermal/socket and populated fit."
     }
   ]
 }
