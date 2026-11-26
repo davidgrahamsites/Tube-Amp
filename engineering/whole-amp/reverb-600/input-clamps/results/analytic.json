@@ -1,0 +1,49 @@
+{
+  "comparison": [
+    {
+      "nominal_rail_load_ohm": null,
+      "maximum_equilibrium_magnitude_V": null,
+      "two_rail_span_bound_V": null,
+      "maximum_input_clamp_A": 0.0003193877551020408,
+      "injection_at_15V_A": 0.0007570228091236494,
+      "minimum_sink_at_15V_A": 0,
+      "margin_at_15V_A": -0.0007570228091236494,
+      "holds_15V_without_regulator_sink": false,
+      "less_than_36V_total": false
+    },
+    {
+      "nominal_rail_load_ohm": 47000,
+      "maximum_equilibrium_magnitude_V": 29.017654883308477,
+      "two_rail_span_bound_V": 58.035309766616955,
+      "maximum_input_clamp_A": 0.0003193877551020408,
+      "injection_at_15V_A": 0.0007570228091236494,
+      "minimum_sink_at_15V_A": 0.00031289111389236547,
+      "margin_at_15V_A": -0.0004441316952312839,
+      "holds_15V_without_regulator_sink": false,
+      "less_than_36V_total": false
+    },
+    {
+      "nominal_rail_load_ohm": 10000,
+      "maximum_equilibrium_magnitude_V": 8.445322551001654,
+      "two_rail_span_bound_V": 30,
+      "maximum_input_clamp_A": 0.0003193877551020408,
+      "injection_at_15V_A": 0.0007570228091236494,
+      "minimum_sink_at_15V_A": 0.0014705882352941176,
+      "margin_at_15V_A": 0.0007135654261704683,
+      "holds_15V_without_regulator_sink": true,
+      "less_than_36V_total": true
+    }
+  ],
+  "selected_10k_max_power_at_18V_W": 0.03306122448979592,
+  "selected_MF0207_power_allowance_at_100C_W": 0.38823529411764707,
+  "R601_max_power_upper_W": 0.09996836734693877,
+  "R601_selected_working_rating_V": 350,
+  "R601_source_metadata_minimum_V": 250,
+  "R601_metadata_needs_exact_part_sync": true,
+  "isolated_charge_100n_plus20percent_times313V_C": 3.756e-05,
+  "single_pulse_rail_rise_upper_V": 0.9989361702127659,
+  "source_sha256": "b4ffab5f67eae124d2fefd80d184ddf9389622812bdd697559c0a32e9ac7028c",
+  "scope": "Sufficient pointwise rail-current barrier under declared bounds; no minimum IC load credited",
+  "hardware_qualified": false,
+  "native_correction_integrated": false
+}

@@ -1,0 +1,3 @@
+# Reverb input clamp results
+Owner: electrical integration. One job: Generated clamp-current and rail-injection evidence; not fabrication or hardware validation.
+Inputs: ../../circuit.json, exact TI/onsemi/Yageo evidence linked from ../review.md, and ../contract.json. Process: ../tools/analyze.py calculates current/rail bounds; ../tools/simulate.py exercises the declared ideal-clamp envelope. Outputs: ../review.md and ../results; native edits require a separate preservation check. Human check: measure actual powered/unpowered rail and input behavior with selected parts; the bounded model is not physical qualification.

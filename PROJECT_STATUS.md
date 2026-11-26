@@ -323,3 +323,17 @@ November 25 interface-voltage checkpoint (VAL-061): JR1/JR5 low-voltage metadata
 ## 25 November 2026 — VAL-062 C607 coupling repair
 
 C607 is now exact KNSCHA MPP105J2W10KN22605 1uF/450V polypropylene, with a manufacturer-derived 10mm-pitch footprint, two 1mm round holes and local 45-degree escapes. ICKey China lists minimum one, ¥0.7282 at the one-piece tier, mainland delivery; exact Shanghai checkout remains open. See engineering/component-selection/reverb-coupling/review.md and brain/records/VAL-062-reverb-coupling-capacitor.md. Native comparison preserves 144 nets, 236 identities and 18 schematic page rasters; one unchanged ERC finding, zero Reverb DRC/opens under existing rules, 136 other drill hits unchanged. No ground pour or voltage-spacing qualification claimed. Next: D601/D602 input clamp/rail injection, then voltage clearances and plane; hand-forming, fabricator tolerance and chassis height remain gates. Two pre-existing missing candidate rows, AO3400A and MFR0W4F8200A50, are now restored with exact identities and unknown domestic price/MOQ marked null; selected-BOM generation succeeds while retaining procurement holds. All six build scopes remain incomplete; no procurement/fabrication release.
+
+## 25 November 2026 — reusable block documentation requirement
+
+DEC-018/FB-128 adds a required final library of functional-block datasheets and a compatible-interface matrix for reuse in future amplifiers. The template and evidence/acceptance contract are established at engineering/functional-blocks/; final populated sheets remain pending the completed design and corresponding validation.
+
+### 25 November 2026 — VAL-063 reverb rail-injection screen
+
+Existing input and output coupling paths are screened with 36 DC cases, 12 native-value transients and 2 refinements. Independent DC/KCL checks pass; maximum refinement difference is 0.273 mV. Two 10 kΩ rail loads are selected as a correction candidate, adding 1.5 mA / 22.5 mW per rail and retaining 713.6 µA margin under the declared combined-injection allocation. The no-load C6-short fixture reaches 36.004 V total; the 10 kΩ fixture remains below 30.001 V. Ideal clamps, source-only regulators and no credited minimum IC load make this a conditional screen, not hardware qualification. Native CAD unchanged; next integrate R619/R620 and exact R601 identity, update supply/shutdown loading, then voltage clearances/plane. See engineering/whole-amp/reverb-600/input-clamps/review.md. All six scopes remain incomplete.
+
+### Reuse, future plugin and scope restraint (FB-129–132)
+
+Block datasheets also support future interface-adapter blocks. DEC-019 records a future free DSP/VST amplifier model for recording and promotion, after hardware completion. CircuitCodex is an optional targeted reference with explicit DC-only model and nonphysical-layout limits. Do not broadly overhaul the current design for these ideas: preserve blocks and finish concrete defects and unmet requirements. No plugin implementation, public release or hardware qualification is claimed.
+
+FB-133 also adds a future ICM/RAG library of CircuitCodex functional blocks indexed by operating characteristics, with source/license/evidence provenance and numerical compatibility checks. Extraction and retrieval implementation remain deferred until after current hardware work.

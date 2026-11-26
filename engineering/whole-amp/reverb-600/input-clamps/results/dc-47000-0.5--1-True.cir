@@ -1,0 +1,16 @@
+Reverb input rail-injection bound; ideal clamp, no IC load
+.options method=gear reltol=1e-6 abstol=1p vntol=1u
+R601 IN_AC SEND_IN 980000
+R602 SEND_IN 0 102000
+BCP SEND_IN VP I=max(0,(v(SEND_IN)-v(VP)-0.5)/1)
+BCN VN SEND_IN I=max(0,(v(VN)-v(SEND_IN)-0.5)/1)
+C616 VP 0 3.76e-05 IC=15
+C617 0 VN 3.76e-05 IC=15
+RleakP VP 0 1e12
+RleakN VN 0 1e12
+BREGP 0 VP I=max(0,(15-v(VP))/1)
+BREGN VN 0 I=max(0,(v(VN)-(-15))/1)
+RloadP VP 0 47940.0
+RloadN VN 0 47940.0
+VTERM IN_AC 0 -313
+.end

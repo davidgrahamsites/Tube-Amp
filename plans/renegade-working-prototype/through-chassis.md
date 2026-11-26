@@ -21,6 +21,8 @@ All six tubes require sockets. IC sockets remain the default; FB-117 permits a d
 
 Outputs are checked engineering artifacts in their modules, linked evidence and current handoff/catalogs. The design is not build-ready merely because a simulation finishes. Fabrication packages and physical commissioning remain T15–T18 gates.
 
+Final reuse handoff is also required by DEC-018/FB-128: publish a revisioned datasheet for every functional block with operating/current/loading characteristics, evidence status, required/preferred companion interfaces and a checked block-to-block compatibility matrix. Use `engineering/functional-blocks/CONTEXT.md`. This adds a documentation/verification deliverable; none of the six engineering scopes is replaced or reduced.
+
 ## Current next actions
 
 1. Inventory socket requirements against every active IC/tube reference, including parts whose package must change; retain pending qualification explicitly.

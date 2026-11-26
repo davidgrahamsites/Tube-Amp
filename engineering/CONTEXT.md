@@ -15,5 +15,7 @@ Each engineering module has one contract, explicit revision/release status and l
 
 [Tube matcher](tube-matcher/CONTEXT.md): standalone EL34/12AX7 characterization and pairing instrument design.
 
+[Reusable functional-block datasheets](functional-blocks/CONTEXT.md): final circuit-module operating and interface contracts, companion compatibility and revisioned reuse evidence required by DEC-018.
+
 ## Human check
 Review the affected module's schematic, component stresses, physical implementation and actual validation before fabrication or energization.

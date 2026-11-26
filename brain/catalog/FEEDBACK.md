@@ -1298,3 +1298,76 @@ Source: Current build conversation
 
 - [brain/records/VAL-059-ground-plane-audit.md](<../../brain/records/VAL-059-ground-plane-audit.md>)
 
+## FB-128 — reusable-functional-block-datasheets
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> save these all as orthogonal functional blocks with datasheets and operating characteristics for each functional block ... That way if we built another amp with different features, we can start with some of what we have already
+
+Require final reusable engineering datasheets for every functional block, including operating/current/loading characteristics and explicit requirements for compatible upstream/downstream blocks. Preserve one responsibility per block and document real shared-supply/ground/control dependencies; do not imply electrical independence or universal interchangeability. Derived/simulated/measured/unverified evidence must be distinguished.
+
+Source: Current build conversation; functional block datasheet request and reuse clarification
+
+- [brain/records/DEC-018-functional-block-datasheets.md](<../../brain/records/DEC-018-functional-block-datasheets.md>)
+- [engineering/functional-blocks/CONTEXT.md](<../../engineering/functional-blocks/CONTEXT.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+
+## FB-129 — interface-adapter-reuse
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> that would also help to build converters to interface different functional blocks
+
+Extend block documentation to reusable interface adapters; no new adapter required in current hardware.
+
+Source: Current amplifier conversation
+
+- [brain/records/DEC-018-functional-block-datasheets.md](<../../brain/records/DEC-018-functional-block-datasheets.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+
+## FB-130 — future-free-plugin
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> a free VST would be an excellent advertisement and helpful for people recording
+
+Save future DSP/VST emulation as a free public recording and promotional product after hardware; no current plugin build or publication.
+
+Source: Current amplifier conversation
+
+- [brain/records/DEC-019-future-free-plugin-and-current-scope.md](<../../brain/records/DEC-019-future-free-plugin-and-current-scope.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+
+## FB-131 — reference-resource
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> https://circuitcodex.com/ if you need any reference material
+
+Record inspected optional reference and its explicit DC/model/layout limitations; no wholesale adoption.
+
+Source: Current amplifier conversation
+
+- [brain/records/DEC-019-future-free-plugin-and-current-scope.md](<../../brain/records/DEC-019-future-free-plugin-and-current-scope.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+
+## FB-132 — preserve-current-scope
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> don't super overhaul anything if we're getting close to the finish line
+
+No broad redesign for new reference or future reuse/plugin ideas; fix concrete defects and finish current requirements.
+
+Source: Current amplifier conversation
+
+- [brain/records/DEC-019-future-free-plugin-and-current-scope.md](<../../brain/records/DEC-019-future-free-plugin-and-current-scope.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+
+## FB-133 — future-functional-block-rag-library
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> later dig this site for functional blocks and save them all by characteristic. Save them in ICM and RAG them
+
+Future CircuitCodex-derived functional-block library in ICM, characteristic-based structured filtering and RAG retrieval; retain provenance, license and validation limits. Defer implementation while completing current amplifier.
+
+Source: Current amplifier conversation
+
+- [brain/records/DEC-019-future-free-plugin-and-current-scope.md](<../../brain/records/DEC-019-future-free-plugin-and-current-scope.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+

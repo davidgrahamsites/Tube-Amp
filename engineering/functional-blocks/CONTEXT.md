@@ -1,0 +1,6 @@
+# Reusable functional-block datasheets
+Owner: Renegade electrical integration. One job: publish revisioned, evidence-backed interface contracts for reusable circuit blocks, as required by DEC-018.
+Inputs: ../../Renegade_Codex_Handoff.md, ../whole-amp/reverb-600/circuit.json and its native CAD, ../component-selection/coverage.json, module-owned simulation/measurement evidence and physical contracts.
+Process: use datasheet-template.md for each final functional block; reference canonical sources instead of copying divergent values. Document shared supply/ground/control dependencies. Distinguish design target, calculation, simulation, manufacturer limit, measured result and unknown. Final reuse acceptance requires a block-to-block compatibility matrix with numerical checks and margins.
+Outputs: one human-readable datasheet per functional block, an index and compatibility matrix, with revision/hash links to editable schematic, PCB implementation, BOM and evidence. This folder currently defines the delivery contract; complete final datasheets do not yet exist.
+Human check: choose a replacement upstream or downstream block and verify every electrical/control/mechanical interface requirement and corner case from the datasheet without needing chat history. Bench-dependent characteristics remain provisional until measured.

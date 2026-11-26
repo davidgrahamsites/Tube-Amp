@@ -31,6 +31,8 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | DEC-015 | decision | cross-domain | documented | 2026-11-24 | [Include switchable 120 V / 220 V mains in this build](records/DEC-015-switchable-mains.md) |
 | DEC-016 | decision | cross-domain | documented | 2026-11-25 | [Buffered loop approved; expression selector requested](records/DEC-016-buffered-loop-expression-selector.md) |
 | DEC-017 | decision | cross-domain | documented | 2026-11-25 | [Small-quantity marketplace sources](records/DEC-017-small-quantity-marketplaces.md) |
+| DEC-018 | decision | cross-domain | documented | 2026-11-25 | [Reusable circuit blocks with their own datasheets](records/DEC-018-functional-block-datasheets.md) |
+| DEC-019 | decision | cross-domain | documented | 2026-11-25 | [Finish the hardware; retain a future free amplifier plugin](records/DEC-019-future-free-plugin-and-current-scope.md) |
 | VAL-001 | validation | schematic | verified | 2026-10-03 | [Extracted starter matches supplied archive](records/VAL-001-starter-archive-match.md) |
 | VAL-002 | validation | cross-domain | verified | 2026-10-04 | [KiCad MCP installation and scoped smoke checks](records/VAL-002-kicad-mcp-install.md) |
 | VAL-003 | validation | schematic | verified | 2026-10-04 | [Original PowerPoint received and inspected](records/VAL-003-original-ppt-intake.md) |
@@ -93,3 +95,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-060 | validation | pcb | documented | 2026-11-25 | [Reverb pour candidate exposes signal-voltage classification fault](records/VAL-060-reverb-ground-plane-voltage-hold.md) |
 | VAL-061 | validation | cross-domain | documented | 2026-11-25 | [Reverb interface ratings and differential capacitor stress](records/VAL-061-reverb-interface-voltage.md) |
 | VAL-062 | validation | cross-domain | documented | 2026-11-25 | [C607 coupling capacitor voltage and footprint repair](records/VAL-062-reverb-coupling-capacitor.md) |
+| VAL-063 | validation | cross-domain | documented | 2026-11-25 | [Reverb clamp current and rail-load correction candidate](records/VAL-063-reverb-clamp-rail-load.md) |

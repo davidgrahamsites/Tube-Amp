@@ -1,0 +1,61 @@
+{
+  "baseline_commit": "eb179818b2c6feec25b4834f1522eab47337b8b3",
+  "circuit_sha256": "b4ffab5f67eae124d2fefd80d184ddf9389622812bdd697559c0a32e9ac7028c",
+  "terminal_envelope": {
+    "node": "IN_AC",
+    "absolute_V": 313,
+    "basis": "available plate-supply screen inherited from VAL-061; explicit engineering allocation, not measured overshoot or arbitrary effects source rating",
+    "resistor_fraction": 0.02,
+    "rail_capacitor_min_F": 3.76e-05,
+    "rail_source_V": 15,
+    "rail_absmax_total_V": 36,
+    "input_absmax_A": 0.01,
+    "clamp_forward_drop_V": [
+      0,
+      0.5,
+      1.0
+    ],
+    "clamp_dynamic_resistance_ohm": 1,
+    "output_clamp_injection_allocation_A": 0.0006,
+    "output_allocation_basis": "Conditional OUT_BUF clamp allocation0.6mA; approximately(313V-15V)/(R617||R618 at low2percent) with both1M resistors intact. Must verify against C607 charge and native transient fixture; not an arbitrary external-source guarantee."
+  },
+  "comparison_rail_load_ohm": [
+    null,
+    47000,
+    10000
+  ],
+  "selected_correction": {
+    "nominal_ohm": 10000,
+    "mpn": "MF0207FTE52-10K",
+    "references": [
+      "R619",
+      "R620"
+    ],
+    "connections": [
+      [
+        "+15V",
+        "GND"
+      ],
+      [
+        "GND",
+        "-15V"
+      ]
+    ],
+    "native_integrated": false,
+    "reason": "existing sourced exact part; covers combined input and output-interface injection allocation, with1.5mA nominal extra load per rail"
+  },
+  "transients": {
+    "end_s": 12,
+    "rise_s": 0.001,
+    "plate_V": 313,
+    "maxstep_s": 0.001
+  },
+  "limits": [
+    "Pointwise rail bound applies only with R601/R602 intact and IN_AC bounded as declared. It is not a complete single-fault safety proof.",
+    "No guaranteed minimum opamp load is credited. Source-only regulators can deliver current but cannot absorb it.",
+    "Ideal piecewise clamps bracket forward drop and do not model diode leakage, parasitic capacitance, reverse recovery or internal IC current sharing.",
+    "Actual transformer/supply overshoot, phase-inverter loading, cable ESD and regulator stability remain open.",
+    "Two-percent resistance allowance includes initial/thermal allowance only, not guaranteed lifetime drift. C601 exact part/tolerance remains open.",
+    "Output-clamp behavioral path is a stress surrogate, not a guaranteed OPA2134 output protection model. The0.6mA allocation requires actual full-system verification."
+  ]
+}
