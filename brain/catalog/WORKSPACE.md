@@ -183,9 +183,17 @@ Role: product. Status: scoped simulated evidence; hardware qualification pending
 
 - [engineering/whole-amp/electric-input-headroom](<../../engineering/whole-amp/electric-input-headroom>)
 
+### MAT-020 — Luna amplifier design journal
+Role: product. Status: initial source-linked narrative; historical backfill and physical build pending. Owner: Luna journal worker; integration technical review.
+
+DEC-021/FB-142: retain problems, options, decisions and verification for a future design guide/post series. Derived narrative; canonical engineering records remain authoritative. Current entries VAL-070–076; no physical-build claim.
+
+- [docs/design-journal](<../../docs/design-journal>)
+- [docs/CONTEXT.md](<../../docs/CONTEXT.md>)
+
 ## Complete file inventory
 
-4800 files cataloged with path, role, owner and SHA256 in [FILES.json](FILES.json). No existence/hash check establishes circuit safety or fit.
+4821 files cataloged with path, role, owner and SHA256 in [FILES.json](FILES.json). No existence/hash check establishes circuit safety or fit.
 
 Historical native snapshots keep their existing paths and original internal layout. Their legacy scripts are not new-work templates. New active work separates tools/templates, editable registers and generated products.
 

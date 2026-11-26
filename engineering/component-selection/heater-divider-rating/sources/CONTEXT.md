@@ -1,0 +1,2 @@
+# Primary tube evidence
+Owner: heater-divider rating. Inputs: manufacturer datasheet URLs in tube-limits.json. Process: record independently read first-page ratings and scope. Outputs: source observations; direct PDF download returned403, so no local PDF archive is claimed. Human check: verify current manufacturer document and purchased tube identity; reference-model limits cannot be transferred to other makes.

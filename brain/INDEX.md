@@ -34,6 +34,7 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | DEC-018 | decision | cross-domain | documented | 2026-11-25 | [Reusable circuit blocks with their own datasheets](records/DEC-018-functional-block-datasheets.md) |
 | DEC-019 | decision | cross-domain | documented | 2026-11-25 | [Finish the hardware; retain a future free amplifier plugin](records/DEC-019-future-free-plugin-and-current-scope.md) |
 | DEC-020 | decision | pcb | documented | 2026-11-25 | [Trace-width margin and manufacturing tolerance](records/DEC-020-trace-width-margin.md) |
+| DEC-021 | decision | cross-domain | documented | 2026-11-26 | [Maintain a Luna-authored amplifier design journal](records/DEC-021-design-journal.md) |
 | VAL-001 | validation | schematic | verified | 2026-10-03 | [Extracted starter matches supplied archive](records/VAL-001-starter-archive-match.md) |
 | VAL-002 | validation | cross-domain | verified | 2026-10-04 | [KiCad MCP installation and scoped smoke checks](records/VAL-002-kicad-mcp-install.md) |
 | VAL-003 | validation | schematic | verified | 2026-10-04 | [Original PowerPoint received and inspected](records/VAL-003-original-ppt-intake.md) |
@@ -109,3 +110,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-073 | validation | components | documented | 2026-11-25 | [Regulator contact tolerance and cooling boundary](records/VAL-073-regulator-contact-tolerance.md) |
 | VAL-074 | validation | pcb | documented | 2026-11-26 | [Selected rectifier identity and package integration](records/VAL-074-rectifier-package-integration.md) |
 | VAL-075 | validation | components | documented | 2026-11-26 | [Heater-elevation rating and fault boundary](records/VAL-075-heater-divider-rating-boundary.md) |
+| VAL-076 | validation | components | documented | 2026-11-26 | [Shared heater-reference compatibility](records/VAL-076-heater-interface-boundary.md) |

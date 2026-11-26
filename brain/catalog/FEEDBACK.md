@@ -1467,3 +1467,15 @@ Source: Current amplifier conversation during R605 package review
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 - [engineering/component-selection/task-card.md](<../../engineering/component-selection/task-card.md>)
 
+## FB-142 — ongoing-luna-design-journal
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> remember to keep an agent of luna writing all the problems and decisions that follow, enough detail that a design guide to the amp that follows the issues and solves can be written (or a long series of posts) that will eventually be paired with the actual build
+
+Assign a Luna agent to maintain a detailed evidence-linked engineering narrative throughout active work. Preserve problems, options, reasoning, adopted decisions, failed and successful checks, and later physical-build evidence for a design guide or post series. Journal remains derived from canonical ICM records.
+
+Source: Current amplifier conversation during heater-reference and component-power checks
+
+- [brain/records/DEC-021-design-journal.md](<../../brain/records/DEC-021-design-journal.md>)
+- [docs/design-journal/CONTEXT.md](<../../docs/design-journal/CONTEXT.md>)
+

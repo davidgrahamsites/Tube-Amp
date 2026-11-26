@@ -399,3 +399,9 @@ Pulse/thermal and actual-transformer qualification remain open; prior generic si
 ## November26 heater-divider rating boundary (VAL-075)
 
 4,032 DC corners and eight RC startups expose a gap in the earlier normal-only R506 screen: C505 short can exceed both its500V continuous rating and100°C derated power. P111 is held for correction. Three higher-rated/series alternatives pass that bounded resistor case, but lower-divider open and feed-short faults also need heater-reference protection review. Native circuit/boards remain unchanged. [Evidence](brain/records/VAL-075-heater-divider-rating-boundary.md). Next exact tube heater-cathode limits and the complete local correction, then sourcing/package/fit. Objective6 is incomplete.
+
+## November26 heater-interface and journal checkpoint (VAL-076 / DEC-021)
+
+38 generic-model cases complete;14 have an empty shared heater-reference interval under the declared conservative JJ tube limits. Two longer/finer runs reproduce the result. Independent114-window audit and22 native hashes pass; engineering qualification remains false. The existing33.177kΩ nominal reference also exceeds the reference EL34’s20kΩ limit. Separate heater groups plus a bounded preamp rail/reference are candidates only; the355V preamp case prevents treating group separation alone as a cure. No native change or fabrication release. [Evidence](brain/records/VAL-076-heater-interface-boundary.md).
+
+User FB-142 assigns an ongoing Luna journal owner for a future design guide/build post series. [Design journal](docs/design-journal/README.md) now covers VAL-070–076 with source-linked problems, options, decisions, checks and physical-build placeholders. AGENTS.md and DEC-021 preserve the continuation workflow; older backfill remains queued. Next: complete the least intrusive heater-reference envelope and continue part stress/selection, routing and populated three-board fit. Objective6 remains active.
