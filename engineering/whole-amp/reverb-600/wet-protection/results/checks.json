@@ -1,0 +1,47 @@
+{
+  "evidence_passed": true,
+  "negative_controls": [
+    "missing run",
+    "false native adoption",
+    "changed source"
+  ],
+  "engineering_screens": {
+    "ideal_clamp_voltage_below_relay_limit": true,
+    "C607_branch_current_below_relay_limit": true,
+    "resistive_load_product_screen": true,
+    "normal_peak_below_leakage_test_voltage": true,
+    "normal_peak_below_low_clamp_screen": true,
+    "capacitance_audio_sensitivity": true,
+    "pair_thermal_screen": true,
+    "existing_R618_250V_sufficient": false,
+    "proposed_R618_350V_sufficient_in_screen": true
+  },
+  "timestep_refinement_relative": {
+    "contact_peak_A": 1.22662918766898e-11,
+    "R616_energy_J": 2.1486432673692025e-08,
+    "R616_peak_W": 2.592042505039655e-14
+  },
+  "required_native_delta": {
+    "D603/D604": "Proposed opposing-series Vishay BZX55C27-TAP pair; reference availability checked",
+    "R618": "Keep1M resistance; adopt already-investigated MF0207FTE52-1M350V/0.6W package with exact pin/courtyard review",
+    "R616": "PR01000101000JA500100ohm5% candidate passes isolated-event pulse screen; integration pending"
+  },
+  "unresolved": [
+    "Exact current Chinese stock/MOQ and Shanghai address route",
+    "Actual hot/cold leakage and capacitance; no manufacturer nonlinear/SPICE model",
+    "R616 repeated-pulse/application qualification; capacitive contact life/bounce/arcing",
+    "Direct diode/PCB-capacitance contact pulse, not included in0.405A bound",
+    "Native readable schematic, PCB integration and fresh voltage/routing checks",
+    "Integrated loop/power/protection, harness and populated three-board fit"
+  ],
+  "native_integrated": false,
+  "all_six_complete": false,
+  "input_sha256": {
+    "contract.json": "eadfb8d7e62b805270596800d97f1736e5df8eae1af94e4fdf02d19586894b5b",
+    "results/analytic.json": "632b7998a6b1026496f721ee1795b8c52a99d7edbb6009597fc7910912cd67ff",
+    "results/screen.json": "69236173049a09846a343e627904d82cc0b658e27834772d8b6ef56d5312538b",
+    "results/pulse-budget.json": "5761f24c7c8d8b7b819ababb2dc3dd7bc1773529614281eabeddd5e93c77c081",
+    "tools/check.py": "53532807225f3475404cd0dc6c9b69853154e8ce2a061f04db391dca3b8424c1",
+    "sources/retrieval.json": "496e788916b2e89a54574d63dc8ca9667c3701d5df8015a367a4c00b74def657"
+  }
+}

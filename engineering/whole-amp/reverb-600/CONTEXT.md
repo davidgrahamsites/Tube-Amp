@@ -15,3 +15,5 @@ November 25 interface-voltage: `interface-voltage/` owns the source-derived dry/
 November 25 clamp/rail injection: `input-clamps/` owns bounded input and output clamp injection, a two-rail load correction candidate and its analytic/SPICE evidence. `input-clamps/review.md` distinguishes the proposed 10k loads from native integration and full power-sequencing qualification.
 
 Current rail-load correction: [rail-load-integration/review.md](rail-load-integration/review.md), VAL-064. R619/R620 are now native; exact R601 package/rating synchronized. Earlier VAL-063 source-preservation claims are historical. Voltage-domain spacing/ground pour and whole-system qualification remain open.
+
+Wet-contact follow-up: [wet-protection/review.md](wet-protection/review.md), VAL-067, owns the local opposing-series Zener and resistor-rating correction candidate. No native adoption; preserve the relay hold until integration and application checks.

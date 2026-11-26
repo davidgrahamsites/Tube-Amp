@@ -99,3 +99,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-064 | validation | cross-domain | documented | 2026-11-25 | [Native reverb rail loads and supply regression](records/VAL-064-reverb-rail-load-integration.md) |
 | VAL-065 | validation | cross-domain | documented | 2026-11-25 | [Reverb voltage-spacing and interface acceptance](records/VAL-065-reverb-voltage-spacing.md) |
 | VAL-066 | validation | cross-domain | documented | 2026-11-25 | [Common buffer: retain overload headroom](records/VAL-066-common-buffer-headroom.md) |
+| VAL-067 | validation | cross-domain | documented | 2026-11-25 | [Local wet-contact clamp correction set](records/VAL-067-wet-contact-protection.md) |

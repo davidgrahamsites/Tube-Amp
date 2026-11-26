@@ -1,0 +1,40 @@
+{
+  "candidate": "PR01000101000JA500",
+  "manufacturer": "Vishay",
+  "R_ohm": 100,
+  "tolerance": 0.05,
+  "R_min_ohm": 93.8125,
+  "R_max_ohm": 106.3125,
+  "peak_W": 17.103141544492306,
+  "C607_branch_peak_A": 0.42698005632065245,
+  "worst_RC_s": 0.00011694374999999999,
+  "upper_power_after_1ms_W": 6.392455642600472e-07,
+  "rectangular_screen": {
+    "duration_s": 0.001,
+    "peak_W": 20,
+    "peak_V": 50,
+    "period_s": 1,
+    "added_tail_W": 1e-06,
+    "ambient_max_C": 70
+  },
+  "manufacturer_curve": {
+    "document": "sources/Vishay-PR01.pdf",
+    "revision": "08-Jul-2025",
+    "page": 9,
+    "evidence": "Visually inspected PR01 curve at1ms,tp/ti1000. Adopt50W as deliberately rounded-down screen; curve is about100W. Voltage curve1000V.",
+    "conservative_power_W": 50,
+    "voltage_V": 1000
+  },
+  "passed": true,
+  "limits": [
+    "Not a qualification of arbitrary repeated operation or relay bounce",
+    "Different tolerance from native1%; full output-buffer stability and exact footprint not yet integrated",
+    "Procurement is an indexed Chinese listing, not verified live stock"
+  ],
+  "source_sha256": "c604d3bbbe9334188f6aa6b799b980d4c87de91ba63fb8f50146dbde4991b8e1",
+  "inputs_sha256": {
+    "results/analytic.json": "632b7998a6b1026496f721ee1795b8c52a99d7edbb6009597fc7910912cd67ff",
+    "sources/Vishay-PR01.pdf": "1b65216400497850afb3e740f378a10a77cd584809e647ae7fcdb707d9b6a2bc",
+    "tools/pulse_budget.py": "012b26bff2fb82fb81dadea5ceadc5d551b1e1c4f181e152b9ca227c88208d41"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "baseline_commit": "297850bf928c95b94c7ac4754dee895c308eac3b",
+  "source": "engineering/whole-amp/reverb-600/circuit.json",
+  "source_sha256": "c604d3bbbe9334188f6aa6b799b980d4c87de91ba63fb8f50146dbde4991b8e1",
+  "candidate": {
+    "mpn": "BZX55C27-TAP",
+    "manufacturer": "Vishay",
+    "quantity": 2,
+    "connection": "Opposing series diodes from WET_AC to GND, common anodes; cathode1=WET_AC, cathode2=GND",
+    "normal_voltage_peak_allocation_V": 20,
+    "clamp_threshold_screen_V": [
+      23,
+      35.6,
+      40
+    ],
+    "slope_screen_ohm": 220,
+    "pair_capacitance_screen_F": [
+      0,
+      1e-10,
+      5e-10,
+      1e-09
+    ],
+    "leakage_screen_A": 2e-06,
+    "temperature_range_screen_C": [
+      -25,
+      150
+    ],
+    "status": "Candidate only; not native; capacitance/temperature screen is not a guaranteed manufacturer model",
+    "selection_reason": "27V rather than24V: leakage is specified at20V, exceeding the19.19V conservative wet-node sum.24V part only has18V leakage test."
+  },
+  "dc": {
+    "supply_V": [
+      278,
+      313,
+      344.3,
+      400
+    ],
+    "resistor_tolerance": 0.01,
+    "fault": "C6 short; plate-current omitted; original clean channel and native passive dry mix"
+  },
+  "ac": {
+    "frequencies_Hz": [
+      20,
+      82.4,
+      1000,
+      20000
+    ],
+    "source_ohm": [
+      1000,
+      40000,
+      200000
+    ],
+    "dry_peak_V": 150,
+    "wet_peak_V": 18,
+    "capacitor_tolerance": 0.1,
+    "gain_change_limit_dB": 0.05
+  },
+  "contact": {
+    "relay": "G5V-2-H1 DC12",
+    "max_voltage_V": 125,
+    "max_current_A": 1,
+    "max_resistive_switch_W": 24,
+    "capacitor_tolerance": 0.1,
+    "series_resistor_tolerance": 0.01,
+    "limits": "Resistive rating screening only; capacitive contact life, bounce, arcing and lead inductance are not qualified"
+  },
+  "native_integrated": false,
+  "all_six_complete": false
+}
