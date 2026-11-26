@@ -1,0 +1,9 @@
+{
+  "case": "startup-550",
+  "completed": false,
+  "last_time_s": 0.01663658568183791,
+  "reason": "ngspice timestep too small at ATL431 core",
+  "deck_sha256": "25a79f6d29cc1551858fea72d816882086cc8cd8386022d640daf62950551c23",
+  "factory_sha256": "179739cffe3b29807fd0b53f622908469fb6f203cd75044256d25604bf12da14",
+  "trace": "Traceback (most recent call last):\n  File \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/component-selection/heater-divider-rating/tools/monitor_hold.py\", line 107, in <module>\n    a=p.parse_args();run(a.case,a.step)\n                     ~~~^^^^^^^^^^^^^^^\n  File \"/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/component-selection/heater-divider-rating/tools/monitor_hold.py\", line 87, in run\n    assert abs(t[-1]-stop)<1e-9,(name,t[-1],sp.logs[-10:])\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('startup-550', np.float64(0.01663658568183791), ['stdout v.xref.x_core.v_v3#branch          1.35017e-08', 'stdout v.xref.x_core.v_v2#branch         -3.42891e-07', 'stdout v.xref.x_core.v_v1#branch                    0', 'stdout vin#branch                        -0.000389838', ' Reference value :  0.00000e+00\\r', ' Reference value :  1.08512e-02\\r', ' Reference value :  1.08678e-02\\r', 'stdout No. of Data Rows : 3092', 'stderr doAnalyses: TRAN:  Timestep too small; time = 0.0166366, timestep = 2.5e-17: trouble with node \"v.xref.x_core.v_v2#branch\"', 'stderr tran simulation(s) aborted'])\n"
+}

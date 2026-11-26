@@ -1,0 +1,104 @@
+{
+  "id": "HD-011",
+  "owner": "heater-divider-rating",
+  "baseline": "bd8ae933a1e1df82327b39b4a55f0ca195dde993",
+  "job": "Implement and test a finite-current monitor rail and two-comparator fault hold before native adoption",
+  "inputs": {
+    "detector-contract.json": "2cfb83b36afa29dadc9640bf9da9c5f1f16a39675d02707ccda747c63e2332d6",
+    "series-contract.json": "c662aeddc6a12fc1fcb9f7df3fbf32098273418821173f0596a137eb925e5b51",
+    "tools/detector_candidate.py": "38fbb17f41bf8de8171353aaf5ad3015bc558cb59dbfdb0a3a06de1dd34a5959",
+    "tools/series_protection.py": "1d4b93ff4ba3c46c6c4dba0b3be701d8bb7b58d25c49ab9322e8e7b7810623ff",
+    "tools/pass_topology.py": "ee94c23fe5ff51a36eeaec855a55169bd4f05269497da6a18a1e52286fade823",
+    "sources/LM2903B.lib": "2b679067d9b67ab593bc1005e7acee49cfebfc601acd403da0443084257e030c"
+  },
+  "model": {
+    "url": "https://www.ti.com/lit/zip/SLCJ011",
+    "file": "lm2903b.lib",
+    "version": "1.0",
+    "date": "2023-01-26",
+    "downloaded": "2026-11-26",
+    "translation": [
+      "ngbehavior=psa before loading the full generated deck",
+      "Remove TC=0,0 in generated text; preserve downloaded bytes"
+    ],
+    "limitation": "TI model deliberately returns midsupply for invalid supply/input ranges; actual device does not. Typical delay/offset/output impedance do not establish maximum response time or hot limits."
+  },
+  "monitor": {
+    "shunt_candidate": "LM4040CIM3-8.2/NOPB",
+    "nominal_V": 8.192,
+    "allocated_V": [
+      8,
+      8.4
+    ],
+    "feed_each_ohm": 22000,
+    "feed_count": 3,
+    "feed_total_fraction": 0.05,
+    "input_V": [
+      320,
+      550
+    ],
+    "shunt_min_A": 9.5e-05,
+    "shunt_max_A": 0.015,
+    "shunt_dynamic_surrogate_ohm": 1.5,
+    "cap_F": 1e-06,
+    "comparator_IQ_max_A": 0.0008,
+    "reference_IQ_EN_max_A": 9.7e-05,
+    "reference_load_allocation_A": 0.00045,
+    "pullup_ohm": 100000,
+    "feedback_upper_ohm": 2000000,
+    "feedback_lower_ohm": 1000000,
+    "LED_resistor_ohm": 3650,
+    "LED_resistor_fraction": 0.01,
+    "LED_count": 2,
+    "LED_VF_allocation_V": [
+      0.8,
+      1.8
+    ],
+    "VOL_allocation_V": 0.55,
+    "reference_isolation_ohm": 10000,
+    "reference_isolation_fraction": 0.004,
+    "off_output_leakage_allocation_A": 5e-08,
+    "board_leakage_allocation_A": 1e-07,
+    "ambient_assumption_C": 60,
+    "thermal_resistance_sensitivity_C_per_W": 326
+  },
+  "sources": [
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/lm4040-n.pdf",
+      "facts": "C grade 8.192V: full-temperature initial94mV, current regulation2.5mV and18mV, minimum95uA, maximum15mA. I grade specification -40..85C; carrier thermal rise unverified."
+    },
+    {
+      "url": "https://www.lcsc.com/product-detail/C701890.html",
+      "facts": "TI part listing identity only; stock, minimum order, delivery and authenticity not qualified."
+    },
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/lm393.pdf",
+      "facts": "Use both LM2903B halves.50nA output leakage maximum at stated36V test; allocate50nA to held-off output at2.5V pending application validation.550mV VOL at specified4mA/-1V differential is an allocation for this hold calculation, not proof at small overdrive."
+    },
+    {
+      "url": "https://www.vishay.com/docs/83432/vo618a.pdf",
+      "facts": "VO618A candidate DIP4. CTR grades specified at1mA/5V/25C; hot CTR25percent remains unqualified. VF.8..1.8V is an allocation."
+    },
+    {
+      "url": "https://nmg.gitlab.io/ngspice-manual/startingngspice/compatibility/pspicecompatibilitymode.html",
+      "facts": "ps translates included files; psa translates entire deck."
+    }
+  ],
+  "choices": [
+    "Feed monitor from IN so it retains supply when OUT is clamped. Restore100k OUT preload for regulator minimum-load requirement.",
+    "Use unused comparator half to pull the threshold low during a fault; this is deep hysteresis with low-voltage reset, not a power-cycle latch.",
+    "Reject40k/20k feedback divider: nominal off-state LED current about65uA.2M/1M reduces divider load; include bias/leakage in future hot validation.",
+    "Do not adopt diode hold: conservative reset voltage can exceed lowest forced-clamp equilibrium. PNP feedback leakage and extra logic-chip complexity are avoided provisionally."
+  ],
+  "limitations": [
+    "Shunt/reference are finite-current VI surrogates, not manufacturer transient models. Startup/thermal behavior is not qualified.",
+    "LED, optocoupler and NPN models remain generic; no guaranteed delay, CTR, lifetime or reverse behavior.",
+    "Standalone imposed-OUT fixture demonstrates monitor logic, not protected supply overshoot.",
+    "Coupled operating point can initialize on fault-held branch. Resetprobe adds a diagnostic3V source to hold comparator input for20ms; this is not proposed hardware.",
+    "Startup solver aborts remain failures, not successful protection. Native files are unchanged."
+  ],
+  "done_condition": "Reproducible monitor/current calculations and state fixtures with explicit coupled/startup failures; no fabrication release",
+  "human_check": "Select exact hot parts/carriers, provide reliable power-on reset and reverse handling, then qualify coupled dynamics and prototype hardware",
+  "effort": "One monitor integration wave",
+  "adopted": false
+}

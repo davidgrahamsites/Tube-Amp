@@ -1699,3 +1699,15 @@ Source: engineering/component-selection/heater-divider-rating/results/headroom-s
 - [engineering/component-selection/heater-divider-rating/headroom-review.html](<../../engineering/component-selection/heater-divider-rating/headroom-review.html>)
 - [docs/design-journal/chapters/preamp-setpoint-headroom.html](<../../docs/design-journal/chapters/preamp-setpoint-headroom.html>)
 
+## FB-162 — monitor-supply-fault-hold
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HD-011: preserve startup and solver failures while replacing the ideal monitor rail and analog controller.
+
+182 evidence checks pass. Corrected divider removes64.975uA nominal idle LED current; initialized550V regulator-short probe peaks293.631917V, fine-step difference0.360mV. Startup is model-invalid/aborted,320V probe has no transient solution, and diagnostic reset is not hardware. No native adoption or protection qualification.
+
+Source: engineering/component-selection/heater-divider-rating/results/monitor-checks.json
+
+- [engineering/component-selection/heater-divider-rating/monitor-review.html](<../../engineering/component-selection/heater-divider-rating/monitor-review.html>)
+- [docs/design-journal/chapters/monitor-fault-hold.html](<../../docs/design-journal/chapters/monitor-fault-hold.html>)
+

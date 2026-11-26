@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monitor supply and fault hold</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Monitor supply and fault hold</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HD-011 · Evidence review complete; no qualification</p>
+      </header>
+
+      <section>
+        <h2>Why the monitor changed</h2>
+        <p>HD-009 screened detector trip tolerance but did not prove monitor power, startup, or held-fault behavior. HD-011 adds a finite-current monitor rail and uses both comparator sections. It tests whether a fault hold can remain active while B_PRE is clamped.</p>
+        <p>The rail is fed from the high-voltage input through three series 22 kΩ resistors. This keeps monitor power available while the output is low. A 100 kΩ output preload is restored for the regulator's minimum-load requirement.</p>
+      </section>
+
+      <section>
+        <h2>Comparator source and model boundary</h2>
+        <p>The LM2903B model is TI PSPICE model version 1.0 from SLCJ011. The downloaded library is preserved unchanged. The generated deck sets <code>ngbehavior=psa</code> and removes generated <code>TC=0,0</code> syntax for simulator compatibility. The TI model returns mid-supply for invalid supply or input ranges. The real comparator does not behave that way. This translation adds no device limits.</p>
+        <p>The LM4040 8.192 V shunt and REF3425 reference use finite-current behavioral surrogates. The LED, optocoupler, and NPN stage also use generic models. The screen allocates 25% optocoupler CTR and NPN beta 20. These are sensitivity values, not guaranteed hot-part limits. Their temperature, startup, timing, and hot-current behavior are not qualified.</p>
+      </section>
+
+      <section>
+        <h2>Feedback divider correction</h2>
+        <p>The 40 kΩ / 20 kΩ feedback divider was rejected. Its nominal fixture produced 64.975 µA LED current while off. The revised 2 MΩ / 1 MΩ divider reduces this path's load. The checked model reports −8.38 pA, a numerical floor near zero. Comparator bias, board leakage, hot drift, and switching margins still require validation.</p>
+        <div class="math">\[I_{divider}=\frac{V_{CMP}}{R_{upper}+R_{lower}}\]</div>
+        <p>Here, \(V_{CMP}\) is the main comparator output voltage; this divider estimate neglects input bias current.</p>
+        <p>The feed calculation spans 4.496–8.644 mA for a 320–550 V input. The LED calculation allocates 1.044–1.882 mA over the 8.0–8.4 V monitor rail, two 0.8–1.8 V LED drops, 0–0.55 V comparator low output, and a 3.65 kΩ resistor at ±1%.</p>
+        <div class="math">\[I_{LED}=\frac{V_{MON}-2V_F-V_{OL}}{R_{LED}}\]</div>
+      </section>
+
+      <section>
+        <h2>Hold behavior and rejected alternatives</h2>
+        <p>The second comparator section feeds the fault state back to the threshold network. This creates deep hysteresis. It is not a power-cycle latch. The supply can release the hold when it collapses.</p>
+        <p>A diode hold was rejected because the conservative reset voltage could exceed the lowest forced-clamp equilibrium. PNP feedback was avoided because off-state leakage could reduce the hold margin. An added logic chip was avoided to limit circuit complexity. These are design choices for continued screening. None is adopted in native hardware.</p>
+        <p>A standalone imposed-output fixture can exercise the monitor logic. It does not prove a real supply will detect and hold a regulator fault. Coupled operating-point solves can also initialize on the fault-held branch. A fault-held result is not evidence of successful normal startup.</p>
+      </section>
+
+      <section>
+        <h2>Current evidence and qualification status</h2>
+        <p>The monitor budget gives 4.496–8.644 mA through the three input-feed resistors. The allocated LED range is 1.044–1.882 mA. Minimum calculated shunt-current reserve is 1.180 mA. Maximum shunt dissipation is 72.612 mW. A rough 60 °C ambient plus 326 °C/W sensitivity gives 83.672 °C. This is an unqualified thermal estimate.</p>
+        <div class="math">\[I_{feed}=\frac{V_{IN}-V_{MON}}{3R_{feed}}\]</div>
+        <div class="math">\[T_{estimate}=60\;^{\circ}\mathrm C+(0.072612\;\mathrm W)(326\;^{\circ}\mathrm C/\mathrm W)=83.672\;^{\circ}\mathrm C\]</div>
+        <p>The 22 kΩ feed resistors reach a 1.726 W per-part bound. Their exact ratings, derating, pulse limits, and physical heat path remain open. The calculated trip window is 289.827–297.391 V. This includes a 2.134 mV positive input-error allocation and a 0.45 mA reference-load allocation. Against the 285.424 V normal maximum, the calculated normal margin is 4.403 V. The margin to the 300 V ceiling is 2.609 V. The allocated reset upper bound is 66.022 V. These are static allocations, not measured thresholds.</p>
+        <div class="math">\[M_{normal}=289.827-285.424=4.403\;\mathrm V,\qquad M_{ceiling}=300-297.391=2.609\;\mathrm V\]</div>
+        <p>The standalone imposed-output fixture trips at about 293.636 V and resets when its imposed output falls to about 1.845 V. This exercises monitor logic with an externally imposed waveform. It does not test an automatic response from the amplifier supply.</p>
+        <p>The coupled 550 V reset probe used a temporary 3 V source to hold the monitor off for its first 20 ms. This source is a diagnostic stimulus, not proposed hardware. After the modeled regulator short at 1.5 s, the detector tripped at 1.606367 s and 293.631 V. The 20 µs run peaked at 293.631917 V. The refined 10 µs run peaked at 293.631558 V. Their peak difference was 0.360 mV. At 3 s, output was still falling at 275.351 V and had not reached clamp equilibrium. The test does not prove a bound on real fault overshoot.</p>
+        <p>The startup run did not complete. It stopped at 15.297 ms with the modeled monitor rail between −21.873 V and −16.279 V. The coupled model reaches invalid ranges and the ATL431 core causes solver difficulty. Treat this as a failed model run, not a predicted physical supply waveform. A 320 V reset probe produced no transient rows. The 550 V DC fault probe initialized on the fault-held branch and showed no trip event. Neither result demonstrates normal startup or automatic detection.</p>
+        <p>The independent checker reports 182 passing evidence checks. Normal-node KCL error is 2.787 nA. The check file marks engineering qualification false. It validates the saved cases and calculations within their scope; it does not validate hardware.</p>
+        <p>The monitor feed, 2 MΩ / 1 MΩ divider, and comparator hold remain candidates. None is adopted.</p>
+        <p>Before adoption, verify the monitor rail, comparator output, LED and optocoupler drive, hold and reset thresholds, power-up sequence, reverse paths, thermal rise, exact hot parts, and carrier fit. No schematic or board change is recorded here.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>Monitor rail</dt>
+          <dd>The low-voltage supply that powers the detector and fault-hold circuit.</dd>
+          <dt>Fault hold</dt>
+          <dd>Feedback that keeps the detector in its fault state after the output falls.</dd>
+          <dt>Deep hysteresis</dt>
+          <dd>A large separation between fault trip and release thresholds.</dd>
+          <dt>Power-cycle latch</dt>
+          <dd>A fault state that remains set until a deliberate power cycle or reset.</dd>
+          <dt>Forced-clamp equilibrium</dt>
+          <dd>A steady model state with the clamp commanded on. It does not represent automatic fault detection.</dd>
+          <dt>Finite-current model</dt>
+          <dd>A model that includes limited current instead of an ideal voltage source.</dd>
+          <dt>Surrogate</dt>
+          <dd>A simplified model used to explore circuit behavior. It is not an exact device model.</dd>
+          <dt>CTR</dt>
+          <dd>Optocoupler current transfer ratio from its LED input to its output transistor.</dd>
+          <dt>Startup qualification</dt>
+          <dd>Evidence that the real circuit reaches its normal state safely and reliably from power-off.</dd>
+          <dt>B_PRE</dt>
+          <dd>The preamp supply node controlled by the pass regulator.</dd>
+          <dt>ATL431</dt>
+          <dd>The behavioral shunt-reference model used in the pass-regulator simulation.</dd>
+          <dt>KCL</dt>
+          <dd>Kirchhoff's current law; currents into and out of a node must balance.</dd>
+          <dt>LED</dt>
+          <dd>Light-emitting diode used to drive the optocoupler.</dd>
+          <dt>NPN</dt>
+          <dd>A bipolar transistor type used in the simplified monitor model.</dd>
+          <dt>PSPICE</dt>
+          <dd>Cadence circuit-simulation model format.</dd>
+          <dt>TI</dt>
+          <dd>Texas Instruments, the source of the comparator model and component data sheets.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/monitor-contract.json">HD-011 contract</a> — current monitor topology, allocations, and stated limits.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/tools/monitor_hold.py">HD-011 monitor tool</a> — imposed-output, coupled, reset, and startup fixtures.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/sources/LM2903B.lib">Preserved TI LM2903B model</a> — downloaded PSPICE library.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/sources/atl431-provenance.json">ATL431 model provenance</a> — existing reference model limitations relevant to the startup failure.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/monitor-checks.json">HD-011 independent checks</a> — 182 evidence checks; engineering qualification remains false.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/monitor-budget.json">HD-011 monitor budget</a> — declared finite-current calculations.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/monitor-fixture.json">Imposed-output monitor fixture</a> — trip and reset response with externally set output.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/monitor-fixture-rejected.json">Rejected low-impedance divider fixture</a> — 40 kΩ / 20 kΩ feedback and high idle LED current.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/monitor-fault-550.json">550 V DC fault probe</a> — initializes on the fault-held branch; no trip event.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/monitor-startup-550.json">550 V startup probe</a> — incomplete at invalid monitor-rail voltages.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/monitor-resetprobe-320.json">320 V reset probe</a> — no transient rows.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/monitor-resetprobe-550.json">Coarse 550 V reset probe</a> — fault-hold timing and sampled state.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/monitor-resetprobe-550-fine.json">Refined 550 V reset probe</a> — forced-off diagnostic interval and held-fault response.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/monitor-waveforms.json">Compressed waveform manifest</a> — hashes for retained waveform files.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/detector-contract.json">HD-009 detector contract</a> — source of the earlier comparator and reference candidates.</li>
+          <li><a href="https://www.ti.com/lit/ds/symlink/lm4040-n.pdf">TI LM4040 data sheet</a>, <a href="https://www.ti.com/lit/ds/symlink/ref34.pdf">TI REF34 data sheet</a>, and <a href="https://www.ti.com/lit/ds/symlink/lm393.pdf">TI LM2903B data sheet</a> — component limits and package information.</li>
+          <li><a href="https://www.vishay.com/docs/83432/vo618a.pdf">Vishay VO618A data sheet</a> — optocoupler CTR information; allocated hot CTR remains unqualified.</li>
+          <li><a href="https://www.lcsc.com/product-detail/C701890.html">LCSC LM4040 listing</a>, <a href="https://www.lcsc.com/product-detail/C187836.html">REF3425 listing</a>, and <a href="https://www.lcsc.com/product-detail/C2869804.html">LM2903B listing</a> — identity records only; stock, price, MOQ, and delivery are unconfirmed.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

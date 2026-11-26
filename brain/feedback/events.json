@@ -2421,6 +2421,23 @@
       ],
       "supersedes": [],
       "next_action": "Implement actual monitor supply and fault response, check startup/overshoot/reverse paths and hot part limits, then integrate exact parts into native circuits and populated fit."
+    },
+    {
+      "id": "FB-162",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "engineer",
+      "kind": "monitor-supply-fault-hold",
+      "quote": "HD-011: preserve startup and solver failures while replacing the ideal monitor rail and analog controller.",
+      "source": "engineering/component-selection/heater-divider-rating/results/monitor-checks.json",
+      "interpretation": "182 evidence checks pass. Corrected divider removes64.975uA nominal idle LED current; initialized550V regulator-short probe peaks293.631917V, fine-step difference0.360mV. Startup is model-invalid/aborted,320V probe has no transient solution, and diagnostic reset is not hardware. No native adoption or protection qualification.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/component-selection/heater-divider-rating/monitor-review.html",
+        "docs/design-journal/chapters/monitor-fault-hold.html"
+      ],
+      "supersedes": [],
+      "next_action": "Implement reliable startup/reset with supported model behavior, resolve320V coupled solve and reverse/hot limits, then exact parts/carriers and populated fit."
     }
   ]
 }

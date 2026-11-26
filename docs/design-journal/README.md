@@ -12,6 +12,15 @@ Read each chapter alongside its linked validation record, review, contract, and 
 - [VAL-073–074: regulator contacts and rectifier integration](chapters/02-contacts-and-rectifier-integration.md)
 - [VAL-075: heater divider fault boundary](chapters/03-heater-divider-fault-boundary.md)
 - [VAL-076: shared heater-reference compatibility](chapters/heater-interface-boundary.md) — diagnostic checks passed; engineering qualification remains false.
+- [HD-003: corrected heater-reference candidate](chapters/heater-reference-correction.html) — 39 kΩ reference candidate; normal margin only, no fault qualification.
+- [HD-004: preamp supply load](chapters/preamp-supply-load.html) — passive-feed and behavioral-regulator screen; no regulator adopted.
+- [HD-005: preamp ceiling feed](chapters/preamp-ceiling-feed.html) — conditional feed and dropout screen; semiconductor acceptance remains open.
+- [HD-006: preamp pass-stage model](chapters/preamp-pass-model.html) — model translation and fault boundary; no circuit qualification.
+- [HD-007: series-pass protection screen](chapters/series-pass-protection.html) — sampled device-short cases; regulator-short protection remains open.
+- [HD-008: absolute output protection authority](chapters/absolute-protection-authority.html) — forced-on actuator screen; no automatic protection adopted.
+- [HD-009: precision detector and setpoint](chapters/precision-detector-setpoint.html) — 512 static cases; 267.11 V remains a candidate.
+- [HD-010: large-signal setpoint comparison](chapters/preamp-setpoint-headroom.html) — paired 1 kHz models; no clean-power or supply-dynamics qualification.
+- [HD-011: monitor supply and fault hold](chapters/monitor-fault-hold.html) — 182 scoped evidence checks pass; engineering qualification remains false.
 - [FB-143–145: capacitor-bank fit and tool access](chapters/capacitor-bank-and-driver-access.html) — standalone and combined five-pass reviews complete; no adoption.
 - [FB-146/147: lower power packaging and Alien Method](chapters/bottom-power-packaging.html) — four review cycles complete; no lower allocation adopted.
 - [FB-148: current power-packaging calculations](calculations/current-power-packaging.html) — step-by-step KaTeX-ready derivations; historical math remains to backfill.

@@ -1,2 +1,4 @@
 # Primary tube evidence
 Owner: heater-divider rating. Inputs: manufacturer datasheet URLs in tube-limits.json. Process: record independently read first-page ratings and scope. Outputs: source observations; direct PDF download returned403, so no local PDF archive is claimed. Human check: verify current manufacturer document and purchased tube identity; reference-model limits cannot be transferred to other makes.
+
+HD-011 also preserves TI LM2903B.lib from https://www.ti.com/lit/zip/SLCJ011, downloaded26November2026. monitor-contract.json records the raw hash, version, generated translation and limitations. The copyright header remains intact; generated adaptations belong in run decks. Human check: confirm model operating range and exact purchased part before treating simulation as device evidence.

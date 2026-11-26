@@ -438,3 +438,9 @@ Dual-pass DC candidate:270 seeded cases keep the sampled single-pass-short regul
 ## November26 large-signal setpoint comparison (HD-010)
 
 16 nonlinear1kHz runs complete;205 independent evidence checks pass. At267.11V and the same near-target inputs, clean24.495→24.197W and dirty24.432→24.070W, with5.6–5.7%THD. Low251.881V cases give23.391/23.121W; two refined runs agree within0.033%power. This retains the approximate output scale in the generic model, not a clean25W rating or real-supply qualification. [Report](engineering/component-selection/heater-divider-rating/headroom-review.html). Next: actual monitor supply, latched/hysteretic fault response, startup/overshoot/reverse paths and exact hot parts, then native adoption and populated fit. No native change; objective6 remains incomplete.
+
+## November26 monitor supply and fault hold (HD-011)
+
+182 evidence checks pass for the finite-current monitor and two-comparator hold study. Corrected feedback removes64.975uA nominal idle LED current; initialized550V regulator-short probe peaks293.631917V and the half-step repeat differs0.360mV. Allocated detector window289.827–297.391V includes added load/leakage; feed-resistor heat bound1.726W each remains a selection/fit requirement.
+
+Startup is model-invalid and aborts;320V coupled reset probe has no transient solution. The successful diagnostic uses an initial test reset, not proposed hardware, and has not reached final clamp equilibrium by3s. No native change or qualified protection. [HTML report](engineering/component-selection/heater-divider-rating/monitor-review.html). Next: supported startup/reset,320V solve, reverse/hot limits and exact carriers, then populated fit. Objective6 remains incomplete.
