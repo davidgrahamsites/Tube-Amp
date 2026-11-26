@@ -1,0 +1,51 @@
+{
+  "baseline_commit": "306efaababa3f2b540b784946750ee91faff9552",
+  "input_sha256": {
+    "engineering/whole-amp/reverb-600/circuit.json": "12d0bb49e450329b1e37f1563994da8642b2feef28c4239ce8b3e271d896367c",
+    "engineering/whole-amp/reverb-600/cad/design-connectivity.json": "a7c791d93fea490ee1d8d8c6b42e8528997873916a84f856635dbaf382e359ac",
+    "engineering/whole-amp/reverb-600/cad/07a_reverb_send.kicad_sch": "9d1f04992431cba425ae5c6d565e82ae1525bc224ccc63fda2543f6be66056d8",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "4a7cf4d9f732da74809d36ee3568bfd3651b641a9c05676021f23101ddbd45c8"
+  },
+  "reference": "R605",
+  "mpn_candidate": "FMP200FRF52-220R",
+  "datasheet": "https://yageogroup.com/content/datasheet/asset/file/YAGEO-FMP_DATASHEET",
+  "datasheet_revision": "2026-01-13 V9, pages 2-4",
+  "footprint": "Renegade_Selected:Yageo_FMP200_P15.24_Drill0.9",
+  "rating": "220 ohm; 2W at70C candidate, linear derating to155C; hot/overload qualification pending",
+  "pins": {
+    "1": "DRIVER",
+    "2": "DRIVE_CAP"
+  },
+  "body_length_max_mm": 9.5,
+  "body_diameter_max_mm": 4.2,
+  "lead_diameter_max_mm": 0.6,
+  "pitch_mm": 15.24,
+  "drill_mm": 0.9,
+  "pad_diameter_mm": 1.8,
+  "finished_hole_minus_tolerance_mm": 0.1,
+  "diametral_assembly_allowance_mm": 0.2,
+  "courtyard_margin_mm": 0.5,
+  "board_at_mm": [
+    75.76,
+    50
+  ],
+  "body_standoff_provisional_mm": 3,
+  "local_ambient_screen_C": [
+    70,
+    100,
+    125
+  ],
+  "nominal_R_ohm": 220,
+  "initial_tolerance_fraction": 0.01,
+  "tcr_fraction_per_C": 0.0001,
+  "reference_temperature_C": 25,
+  "power_W_at70C": 2,
+  "derating_zero_C": 155,
+  "direct_voltage_screens_Vrms": [
+    7.071067811865475,
+    16,
+    12.727922061357855,
+    18
+  ],
+  "scope": "Package correction for conditional candidate. Does not select purchase part or clear sustained short/hot faults; no other functional block changes."
+}

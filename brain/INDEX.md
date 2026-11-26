@@ -103,3 +103,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-067 | validation | cross-domain | documented | 2026-11-25 | [Local wet-contact clamp correction set](records/VAL-067-wet-contact-protection.md) |
 | VAL-068 | validation | cross-domain | documented | 2026-11-25 | [Native wet-contact correction](records/VAL-068-native-wet-contact-protection.md) |
 | VAL-069 | validation | pcb | verified | 2026-11-25 | [Conditional reverb current allocation](records/VAL-069-reverb-current-allocation.md) |
+| VAL-070 | validation | pcb | verified | 2026-11-25 | [Conditional R605 package integration](records/VAL-070-r605-package.md) |

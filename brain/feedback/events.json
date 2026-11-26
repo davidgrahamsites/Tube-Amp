@@ -2072,6 +2072,23 @@
       ],
       "supersedes": [],
       "next_action": "Complete source assessment and preserve limits in the linked engineering record."
+    },
+    {
+      "id": "FB-141",
+      "recorded_on": "2026-11-25",
+      "occurred_on": "2026-11-25",
+      "authority": "user",
+      "kind": "all-component-power-and-size",
+      "quote": "yes, we should know the watts of all parts and pick the right size",
+      "source": "Current amplifier conversation during R605 package review",
+      "interpretation": "Qualify actual dissipation and temperature/pulse derating before assigning physical packages; use voltage/ripple/thermal ratings as appropriate for components without a simple wattage rating. Unknown stress or package limits remain explicit.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "engineering/component-selection/task-card.md"
+      ],
+      "supersedes": [],
+      "next_action": "Audit per-reference stress/rating evidence and correct undersized packages, starting with R605."
     }
   ]
 }

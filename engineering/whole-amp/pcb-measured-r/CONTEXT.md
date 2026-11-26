@@ -28,3 +28,5 @@ November24 remaining-branch checkpoint supersedes that four-candidate remainder:
 Task RB-004: PCB integration owns this one-pass correction, depending on the exact 9ce4c37 baseline and existing project rules. Output is four repaired junctions, native comparisons and visual plots, not completed routing or ampacity approval. Human check: inspect the plotted branches, pad escapes and final manufactured copper before assembly. Current-budget, selected-part and populated three-board fit work remains separate.
 
 November25 current-budget seam: [current-budget/CONTEXT.md](current-budget/CONTEXT.md) owns revision-bound passive reverb load allocation and hypothetical conductor resistance comparisons. Its results/budget.json feeds the auxiliary-load review; it is not a thermal ampacity or native-routing acceptance. Source review and corrections remain in review/trace-width-research-2026-11-25.md, with the adopted rules in routing-requirements.md.
+
+R605 package: [r605-package/CONTEXT.md](r605-package/CONTEXT.md) owns its conditional FMP200 native placement, local routing, drill evidence and source-bound component envelope. Full hot/fault qualification remains open.

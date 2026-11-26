@@ -2883,10 +2883,12 @@
         "2": "DRIVE_CAP"
       },
       "source": "DEC-007 v0.4",
-      "rating": "220 ohm; select >=2W flameproof part; tank drive current requires commissioning",
+      "rating": "220 ohm; 2W at70C candidate, linear derating to155C; hot/overload qualification pending",
       "status": "600/2250 received-tank draft; electrical and physical qualification pending",
-      "datasheet": "",
-      "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+      "datasheet": "https://yageogroup.com/content/datasheet/asset/file/YAGEO-FMP_DATASHEET",
+      "footprint": "Renegade_Selected:Yageo_FMP200_P15.24_Drill0.9",
+      "package_candidate_mpn": "FMP200FRF52-220R",
+      "package_evidence": "engineering/whole-amp/pcb-measured-r/r605-package/review.md"
     },
     {
       "project": "Renegade_220V_Reverb",

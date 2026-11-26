@@ -1455,3 +1455,15 @@ Source: Current amplifier conversation
 - [brain/records/DEC-020-trace-width-margin.md](<../../brain/records/DEC-020-trace-width-margin.md>)
 - [engineering/whole-amp/pcb-measured-r/review/trace-width-research-2026-11-25.md](<../../engineering/whole-amp/pcb-measured-r/review/trace-width-research-2026-11-25.md>)
 
+## FB-141 — all-component-power-and-size
+Authority: user. Disposition: incorporated. Recorded: 2026-11-25. Original date: 2026-11-25.
+
+> yes, we should know the watts of all parts and pick the right size
+
+Qualify actual dissipation and temperature/pulse derating before assigning physical packages; use voltage/ripple/thermal ratings as appropriate for components without a simple wattage rating. Unknown stress or package limits remain explicit.
+
+Source: Current amplifier conversation during R605 package review
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [engineering/component-selection/task-card.md](<../../engineering/component-selection/task-card.md>)
+
