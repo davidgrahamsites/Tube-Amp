@@ -1,0 +1,181 @@
+{
+  "id": "HI-008",
+  "date": "2026-11-26",
+  "owner": "harness-integration",
+  "job": "Place and route a removable reverb-pot connector candidate using the current board and the existing four-cavity interface",
+  "baseline_board": "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb",
+  "baseline_sha256": "fa4ac0cbd3ced9b9e0758001c0f2cd488ded0953d3e2fd30025a6d57cc70da3d",
+  "reference": "JR4",
+  "header": "430450402",
+  "mate": "430250400",
+  "position_mm": [
+    73,
+    90.5
+  ],
+  "angle_deg": 180,
+  "native_adoption": false,
+  "cavity_nets": {
+    "1": "WET_TOP",
+    "2": "WET_W",
+    "3": "GND",
+    "4": null
+  },
+  "remove_segments": [
+    "317ba5f2-24c8-4158-b3ab-a1a52e55748c",
+    "2bc3d5a3-d25c-4c88-b296-ea30689d26f7",
+    "69847193-8ca7-4bd6-9247-1708a9044929",
+    "74cde2fe-414f-4de3-8e6e-e95afa4578a1",
+    "dadd416d-7430-425d-987a-179b461364c2",
+    "f755a0b9-4aa8-45f4-bec8-00d2b565e0cf",
+    "c0a8e6cf-d3d7-4f1e-ae15-b665c47f9f3a",
+    "654faae5-3270-47d8-8960-b6ac605e8f68"
+  ],
+  "routes": [
+    {
+      "net": "WET_TOP",
+      "layer": "F.Cu",
+      "width_mm": 0.6,
+      "points": [
+        [
+          60,
+          61
+        ],
+        [
+          64.5,
+          61
+        ],
+        [
+          65.5,
+          62
+        ],
+        [
+          65.5,
+          84.5
+        ]
+      ]
+    },
+    {
+      "net": "WET_TOP",
+      "layer": "B.Cu",
+      "width_mm": 0.6,
+      "points": [
+        [
+          65.5,
+          84.5
+        ],
+        [
+          65.5,
+          91.5
+        ],
+        [
+          66.5,
+          92.5
+        ],
+        [
+          71,
+          92.5
+        ],
+        [
+          73,
+          90.5
+        ]
+      ]
+    },
+    {
+      "net": "WET_W",
+      "layer": "F.Cu",
+      "width_mm": 0.6,
+      "points": [
+        [
+          68,
+          77
+        ],
+        [
+          68,
+          84.5
+        ]
+      ]
+    },
+    {
+      "net": "WET_W",
+      "layer": "B.Cu",
+      "width_mm": 0.6,
+      "points": [
+        [
+          68,
+          84.5
+        ],
+        [
+          68,
+          88.5
+        ],
+        [
+          70,
+          90.5
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width_mm": 0.6,
+      "points": [
+        [
+          73,
+          87.5
+        ],
+        [
+          77.5,
+          83
+        ],
+        [
+          78,
+          83
+        ]
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "net": "WET_TOP",
+      "at_mm": [
+        65.5,
+        84.5
+      ],
+      "size_mm": 0.8,
+      "drill_mm": 0.4
+    },
+    {
+      "net": "WET_W",
+      "at_mm": [
+        68,
+        84.5
+      ],
+      "size_mm": 0.8,
+      "drill_mm": 0.4
+    }
+  ],
+  "holds": [
+    "Placement candidate only; exact connector, wire, contacts and cavity-view qualification remain open",
+    "No populated cabinet, tool, bend, latch or withdrawal fit approval",
+    "Additional four-cavity symbol/NC metadata must be integrated before native adoption",
+    "New trace length and via parasitics require electrical comparison before release",
+    "Copper DC screen is conditional; finished foil/barrel minima, populated thermal behavior, startup/fault protection and remaining board current paths are not qualified"
+  ],
+  "done_condition": "Native-parseable connector candidate with declared 0.6 mm wet-signal routes and nominal copper stackup; source-derived pad nets; preserve unrelated items; native DRC and conditional DC screen; no fabrication release",
+  "effort": "One bounded connector placement and routing pass",
+  "existing_net_widths_mm": {
+    "WET_TOP": 0.6,
+    "WET_W": 0.6
+  },
+  "construction": {
+    "layers": 2,
+    "board_nominal_mm": 1.6,
+    "outer_copper_nominal_um": 35,
+    "outer_copper_minimum_finished_um_required": 30,
+    "via_barrel_minimum_um_required": 20,
+    "negative_width_tolerance_fraction": 0.2,
+    "fabricator_confirmed": false,
+    "basis": "Proposed 1 oz outer copper. Minimum finished foil and barrel thickness are acceptance requirements, not a verified JLCPCB guarantee. Native stackup records nominal thickness only."
+  }
+}

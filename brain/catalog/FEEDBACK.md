@@ -1775,3 +1775,29 @@ Source: Current amplifier conversation following physical-hardware clarification
 - [docs/engineering-reader/test-equipment.html](<../../docs/engineering-reader/test-equipment.html>)
 - [docs/engineering-reader/exports/test-equipment.html](<../../docs/engineering-reader/exports/test-equipment.html>)
 
+## FB-168 — reverb-pot-connector-placement-candidate
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HI-008: move JR4 to an accessible edge while preserving circuit terminals and project rules.
+
+Corrected four-cavity candidate at (73,90.5) mm / 180 degrees has zero DRC violations and zero opens. Eight old segments replaced by twelve segments and two 0.8/0.4 mm vias; 0.3 mm width retained, not current-qualified. Source items, circuit terminal mapping and project rules preserved. Nominal mated wire exit extends 7.07 mm and first restraint 19.77 mm beyond lower board edge. First 19-finding trial rejected; checker circle-enum assumption corrected. No active native adoption, parasitic/loading, actual connector/cabinet/service or full drill-access approval.
+
+Source: engineering/whole-amp/harness-integration/results/reverb-connector-candidate/checks.json
+
+- [engineering/whole-amp/harness-integration/reverb-placement-review.html](<../../engineering/whole-amp/harness-integration/reverb-placement-review.html>)
+- [engineering/whole-amp/harness-integration/reverb-connector-placement.json](<../../engineering/whole-amp/harness-integration/reverb-connector-placement.json>)
+- [engineering/whole-amp/harness-integration/results/reverb-connector-candidate/service-geometry.json](<../../engineering/whole-amp/harness-integration/results/reverb-connector-candidate/service-geometry.json>)
+
+## FB-169 — pcb-trace-width-correction
+Authority: user. Disposition: open. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> yeah the only problem is the traces are way too narrow / might as well use the correct width (and thickness matters too!!!!)
+
+The user rejects retaining the visually narrow candidate routing. Widen feasible routes and review the full-board current-based widths, pad escapes, vias and clearance; do not equate existing 0.3mm rules or zero DRC with current qualification. Preserve functional blocks and source evidence. Explicitly specify minimum finished copper thickness and the current, temperature-rise, voltage-drop and manufacturing-tolerance basis; do not widen only for appearance.
+
+Source: Current amplifier conversation during HI-008 candidate checkpoint
+
+- [engineering/whole-amp/harness-integration/reverb-connector-placement.json](<../../engineering/whole-amp/harness-integration/reverb-connector-placement.json>)
+- [engineering/whole-amp/harness-integration/reverb-placement-review.html](<../../engineering/whole-amp/harness-integration/reverb-placement-review.html>)
+- [engineering/whole-amp/pcb-measured-r/current-budget/copper-review.html](<../../engineering/whole-amp/pcb-measured-r/current-budget/copper-review.html>)
+

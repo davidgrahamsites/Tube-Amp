@@ -13,3 +13,5 @@ Human check: source agreement is not physical pinout, crimp, insulation, stock o
 `pot-voltage-checks.json` and `pot-voltage-cases.csv` come from `../tools/check_pot_voltage.py`. Coefficients and sampled extrema are conditional on `../voltage-screen.json`; the illustrative source voltages are not qualified maxima. Do not promote these results to working-voltage or local track/wiper approval.
 
 `pot-fault-probe.json`, `pot-fault-probe.log` and `pot-fault-example.cir` retain the bounded loaded-tube DC follow-up. The desired buffered path, generic tubes, fixed supply and endpoint approximations differ from the native-path linear screen; no exact-part or thermal approval follows.
+
+reverb-connector-candidate/ contains the single current HI-008 KiCad placement proposal and its checks. service-geometry.json is a nominal board-coordinate interface for mechanical placement, not a complete 3D service envelope or fit approval.

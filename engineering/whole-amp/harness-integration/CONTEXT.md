@@ -25,3 +25,7 @@ Task HI-006: `voltage-screen.json` owns the declared DC coupling-fault experimen
 HI-006 loaded follow-up: run `tools/pot_fault_probe.py` with KiCad Python after the linear screen. It reuses the generic tube/supply/buffer factory for 12 bounded DC solves, retains paired results and one example deck, then refreshes the HTML. Fixed supply and sampled settings do not qualify exact parts or protection.
 
 HI-007 source follow-up: `evidence/pot-rating-source-review.html` records the exact B25K-3LA rating conflict and excludes unmatched historical/shaft variants from qualification. It consumes HI-006 numerical evidence without rerunning or changing it.
+
+HI-008: reverb-connector-placement.json owns the proposed JR4 position and scoped route edits. tools/place_reverb_connector.py writes only results/reverb-connector-candidate/; tools/check_reverb_connector.py verifies the native delta, source pin map, drills, project rules and nominal plug reserve. Public mechanical seam: results/reverb-connector-candidate/service-geometry.json. Read reverb-placement-review.html. This is a board candidate, not an adopted schematic/PCB or a populated cabinet/service approval.
+
+CU-001 follow-up: the HI-008 contract also owns candidate nominal and minimum finished copper requirements. Existing wet-net segments change width only; a wet-net width rule is appended. The current-budget module owns the conditional loss calculation and all-board inventory; read ../pcb-measured-r/current-budget/copper-review.html.

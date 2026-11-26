@@ -1,0 +1,168 @@
+{
+  "id": "HI-008",
+  "date": "2026-11-26",
+  "kicad": "10.0.6",
+  "input_hashes": {
+    "engineering/whole-amp/reverb-600/circuit.json": "db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a",
+    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "ca78491f074d43b32d44b38a7d67dd5d8ab27889bcd154613c69daaf945a9427",
+    "engineering/whole-amp/harness-integration/connector-contract.json": "f3d904b57bb70fad5094e9e59fc3f99864ddf3512d1e19461f9958ef421c68f6",
+    "engineering/whole-amp/harness-integration/mating-geometry.json": "cc6b5892b4f42fcc5246c734eef537f7440f4b965587035bebe6dc69c13ef377",
+    "engineering/whole-amp/harness-integration/wire-dressing.json": "e39f2dd9770749a16d467b1270d99eb936329be8540c6cdcd798ae038b8708dc",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "fa4ac0cbd3ced9b9e0758001c0f2cd488ded0953d3e2fd30025a6d57cc70da3d",
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "ab69f20a92f8f29bc20d2cdc3566e78fe7f7685e95f8a684d9a74ea8f245298f",
+    "engineering/whole-amp/harness-integration/tools/check_reverb_connector.py": "2bd0f718da97ac893cb31cb853dc46a2131495ed5eb240477156bb6a4c1c3935",
+    "engineering/whole-amp/harness-integration/tools/place_reverb_connector.py": "bb800e3b95abc0642b3ddaa0c580e5f9425dca6060c10d125973a33c9eaa485c"
+  },
+  "checks": {
+    "source_revision": true,
+    "footprint_only_declared_existing_changes": true,
+    "footprint_identities_preserved": true,
+    "gr_text_only_declared_existing_changes": true,
+    "gr_text_identities_preserved": true,
+    "segment_only_declared_existing_changes": true,
+    "segment_new_count": true,
+    "via_only_declared_existing_changes": true,
+    "via_new_count": true,
+    "native_routes_match_specification": true,
+    "native_vias_match_specification": true,
+    "other_board_data_unchanged": true,
+    "project_preserved": true,
+    "existing_custom_rules_preserved": true,
+    "other_setup_preserved": true,
+    "nominal_stackup": true,
+    "existing_wet_routes_width_only": true,
+    "circuit_terminal_parity": true,
+    "pot_nets_preserved": true,
+    "position_and_orientation": true,
+    "contact_positions_match_rotation": true,
+    "header_identity": true,
+    "four_round_contact_drills": true,
+    "round_locator_drill": true,
+    "requested_route_style": true,
+    "new_trace_width_requirement": true,
+    "whole_wet_nets_widened": true,
+    "via_project_minimum": true,
+    "rectangular_board_datum": true,
+    "nominal_mating_edge_rule": true,
+    "only_pot_net_lengths_changed": true,
+    "zero_DRC_violations": true,
+    "zero_open_connections": true
+  },
+  "controls": {
+    "tie_at_limit": true,
+    "tie_one_mm_early_rejected": true,
+    "board_edge_not_wire_exit": true,
+    "header_front_not_restraint": true
+  },
+  "pads": {
+    "": {
+      "xy_mm": [
+        71.5,
+        94.82
+      ],
+      "net": "",
+      "drill_mm": [
+        3.0,
+        3.0
+      ],
+      "shape": 1
+    },
+    "1": {
+      "xy_mm": [
+        73.0,
+        90.5
+      ],
+      "net": "WET_TOP",
+      "drill_mm": [
+        1.02,
+        1.02
+      ],
+      "shape": 1
+    },
+    "2": {
+      "xy_mm": [
+        70.0,
+        90.5
+      ],
+      "net": "WET_W",
+      "drill_mm": [
+        1.02,
+        1.02
+      ],
+      "shape": 1
+    },
+    "3": {
+      "xy_mm": [
+        73.0,
+        87.5
+      ],
+      "net": "GND",
+      "drill_mm": [
+        1.02,
+        1.02
+      ],
+      "shape": 1
+    },
+    "4": {
+      "xy_mm": [
+        70.0,
+        87.5
+      ],
+      "net": "",
+      "drill_mm": [
+        1.02,
+        1.02
+      ],
+      "shape": 1
+    }
+  },
+  "geometry": {
+    "frame": "PCB component side; upper-left edge origin, x right, y down, z above component surface; nominal only",
+    "board_size_mm": [
+      160,
+      100
+    ],
+    "pad1_xy_mm": [
+      73,
+      90.5
+    ],
+    "peg_xy_mm": [
+      71.5,
+      94.82
+    ],
+    "edge_to_peg_mm": 5.18,
+    "header_front_y_mm": 99.42,
+    "header_rear_y_mm": 89.51,
+    "mated_wire_exit_y_mm": 107.07,
+    "first_restraint_y_min_mm": 119.77,
+    "wire_exit_beyond_edge_mm": 7.07,
+    "restraint_beyond_edge_mm": 19.77,
+    "mated_height_mm": 10.81,
+    "latching_height_callout_mm": 11.0,
+    "fit_approved": false,
+    "bend_radius_mm": null,
+    "withdrawal_mm": null,
+    "finger_space_mm": null
+  },
+  "route_length_delta_mm": {
+    "GND": 6.703961,
+    "WET_TOP": 31.156854,
+    "WET_W": -4.134416
+  },
+  "drc": {
+    "violations": 0,
+    "unconnected": 0,
+    "sha256": "36cacc52180767105456a7cf1b80a0ed35f87ff2c0fc0e3b34c756719b46d561"
+  },
+  "evidence_checks_pass": true,
+  "native_adoption": false,
+  "electrical_parasitics_qualified": false,
+  "fabrication_ready": false,
+  "holds": [
+    "Placement candidate only; exact connector, wire, contacts and cavity-view qualification remain open",
+    "No populated cabinet, tool, bend, latch or withdrawal fit approval",
+    "Additional four-cavity symbol/NC metadata must be integrated before native adoption",
+    "New trace length and via parasitics require electrical comparison before release",
+    "Copper DC screen is conditional; finished foil/barrel minima, populated thermal behavior, startup/fault protection and remaining board current paths are not qualified"
+  ]
+}

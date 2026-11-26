@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reverb pot connector candidate</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Reverb pot connector candidate</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HI-008 · Candidate checks pass; adoption remains open</p>
+      </header>
+
+      <section>
+        <h2>Purpose and result</h2>
+        <p>HI-008 places a removable connector for the Reverb pot on a separate candidate board. The candidate preserves the three signal assignments: cavity 1 WET_TOP, cavity 2 WET_W, cavity 3 GND, and cavity 4 unassigned. The active board, schematic, and circuit are unchanged.</p>
+        <p>The corrected candidate parses in KiCad. Its recorded DRC run reports zero violations and zero open connections. This confirms only the declared candidate and rule set. It does not approve the connector, electrical loading, insulation, fabrication, or physical fit.</p>
+      </section>
+
+      <section>
+        <h2>Placement and service space</h2>
+        <p>JR4 pad 1 is at <span class="math">\((73,90.5)\;\mathrm{mm}\)</span>, rotated 180 degrees on the 160 mm × 100 mm board. The locator peg is 5.18 mm inside the lower edge. The wire-exit face is 7.07 mm beyond the edge.</p>
+        <p>Using the HI-004 local wire-exit coordinate and the HI-005 straight reserve:</p>
+        <div class="math">\[y_{exit}=90.5-(-16.57)=107.07\;\mathrm{mm}\]</div>
+        <div class="math">\[y_{restraint}=107.07+12.70=119.77\;\mathrm{mm}\]</div>
+        <p>The first-restraint line lies 19.77 mm beyond the board edge. This is a nominal straight-wire reservation. It is not a complete keepout. Bend radius, wire spread, latch access, withdrawal, cabinet clearance, and tool access remain open.</p>
+      </section>
+
+      <section>
+        <h2>Route repair and checker correction</h2>
+        <p>The first routing trial had 19 DRC findings and was rejected. The candidate still removes eight segments, adds twelve, and adds two vias. FB-169 widened every WET_TOP and WET_W candidate segment to 0.6 mm, including retained source segments. It also widened the new JR4 ground branch to 0.6 mm. Earlier 0.3 mm widths no longer describe these routes. The candidate uses 0.8 mm vias with 0.4 mm drills. The earlier 0.3 mm wet routes were not shown defective; they also pass this limited DC-drop screen. The 0.6 mm width adds conductor margin and lowers the calculated loss.</p>
+        <p>The existing project rules were preserved. The candidate adds a 0.6 mm minimum-width rule for the wet nets; no rule was weakened. Unrelated candidate-board items remain unchanged. The active Reverb board, circuit, and schematic remain unchanged.</p>
+        <p>The initial checker read KiCad's circle-drill enumeration as zero. The native enumeration is one. The checker now uses KiCad's named circle constant. The footprint hole geometry did not change to satisfy the corrected check. This was a checker defect, not a hardware change.</p>
+        <p>The revised candidate still adds trace length to WET_TOP and GND and reduces it on WET_W. These changes need a parasitic-loading comparison. The four-cavity symbol and unassigned-cavity metadata also need integration before native adoption.</p>
+      </section>
+
+      <section>
+        <h2>FB-169 copper screen</h2>
+        <p>The candidate copper calculation uses a two-layer, 1.6 mm board with 35 µm nominal outer copper. Its acceptance requirements are at least 30 µm finished foil and 20 µm via-barrel copper. A fabricator has not confirmed either minimum. The four active boards still have no explicit stackup. Only the separate Reverb candidate has an explicit nominal copper stackup; it has not been adopted.</p>
+        <p>The conditional calculation assumes 70 °C copper, 20% track-width reduction, and 0.25 mA screen current. The resistor envelope is <span class="math">\(18\;\mathrm V/80\;\mathrm{k\Omega}+18\;\mathrm V/980\;\mathrm{k\Omega}=0.243367\;\mathrm{mA}\)</span>. The difference is <span class="math">\(0.25-0.243367=0.006633\;\mathrm{mA}=6.633\;\mathrm{\mu A}\)</span> in this calculation screen. This is a diagnostic source condition, not a fault or startup bound.</p>
+        <div class="math">\[V_{drop}=IR,\quad V_{WET\_TOP}=0.25\;\mathrm{mA}(0.064953\;\Omega)=16.2383\;\mathrm{\mu V}\]</div>
+        <div class="math">\[V_{WET\_W}=0.25\;\mathrm{mA}(0.064085\;\Omega)=16.0212\;\mathrm{\mu V}\]</div>
+        <p>Both values are below the screen’s 0.1 mV track/via-drop threshold. These values cover modeled track and via resistance only. Pad, contact, and harness resistance are excluded. The total-length method overbounds branched parallel paths. Temperature rise, fault current, startup current, and current capacity are not qualified. The inventory covers all four active boards, but this result screens only the Reverb candidate's wet nets; it does not qualify all boards or shared returns.</p>
+      </section>
+
+      <section>
+        <h2>Decision and remaining gates</h2>
+        <p>Keep the existing functional blocks and signal assignments. Do not move the candidate into the active project yet. Confirm the exact connector and current drawing, cavity viewing direction, wire, contact, crimp, and China sourcing. Add matching four-cavity schematic metadata. Check trace and cable loading.</p>
+        <p>Check actual mating, restraint, latch, withdrawal, cabinet, drill, and service access in the populated assembly. The candidate geometry has not been tested in the cabinet. DRC success is not fit approval or fabrication release.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>Native adoption</dt>
+          <dd>Integration into the active schematic and board files.</dd>
+          <dt>DRC</dt>
+          <dd>Design-rule check of the PCB geometry and connections.</dd>
+          <dt>Open connection</dt>
+          <dd>A required electrical connection that is not routed to completion.</dd>
+          <dt>Via</dt>
+          <dd>A plated hole that connects copper layers.</dd>
+          <dt>Parasitic loading</dt>
+          <dd>Unintended capacitance or other electrical loading added by wiring and layout.</dd>
+          <dt>Restraint</dt>
+          <dd>A tie, clamp, or support that fixes the wire position.</dd>
+          <dt>Unassigned cavity</dt>
+          <dd>A connector contact position with no approved electrical connection.</dd>
+          <dt>Keepout</dt>
+          <dd>A defined region that other parts or wires must not enter.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/whole-amp/harness-integration/reverb-placement-review.html">HI-008 engineering review</a> — route repair, placement, service geometry, and open adoption gates.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/reverb-connector-candidate/checks.json">HI-008 independent checks</a> — source parity, unchanged unrelated items, route checks, zero DRC violations, and zero opens.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/reverb-connector-candidate/drc.json">Candidate DRC receipt</a> — KiCad 10.0.6 run and reported findings.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/reverb-connector-candidate/rejected-trial.json">Rejected first trial</a> — initial 19-finding candidate summary.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/reverb-connector-placement.json">Placement and route inputs</a> — candidate location, nets, geometry, and holds.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb">Editable candidate board</a> — separate from the active source board.</li>
+          <li><a href="../../../engineering/whole-amp/harness-integration/results/reverb-connector-candidate/service-geometry.json">Mechanical service geometry</a> — restraint and clearance interface; fit remains unapproved.</li>
+          <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/copper-review.html">FB-169 copper review</a> — width revision, stackup requirements, and conditional drop screen.</li>
+          <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/results/candidate-copper.json">FB-169 candidate-copper receipt</a> — input assumptions, track/via calculation, and four-board inventory.</li>
+          <li><a href="harness-mating-datum.html">HI-004 mating datum</a> and <a href="pot-harness-wire-reserve.html">HI-005 wire reserve</a> — inherited nominal geometry.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

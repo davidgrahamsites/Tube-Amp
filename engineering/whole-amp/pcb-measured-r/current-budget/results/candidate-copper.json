@@ -1,0 +1,1224 @@
+{
+  "id": "CU-001",
+  "scope": "HI-008 wet-control DC geometry screen plus all-active-board inventory",
+  "input_hashes": {
+    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "ca78491f074d43b32d44b38a7d67dd5d8ab27889bcd154613c69daaf945a9427",
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "ab69f20a92f8f29bc20d2cdc3566e78fe7f7685e95f8a684d9a74ea8f245298f",
+    "engineering/whole-amp/reverb-600/circuit.json": "db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a",
+    "engineering/whole-amp/pcb-measured-r/current-budget/contract.json": "21198f560d1ed01031c0a8dbf16d4c30ff0852600c70f65560bd7f9a5016cbfe",
+    "engineering/whole-amp/pcb-measured-r/current-budget/tools/check_candidate_copper.py": "de41689fa0f40065dcb2d316fac6563930a6c077e0c9ccd126c81c81d0605f3f"
+  },
+  "construction": {
+    "layers": 2,
+    "board_nominal_mm": 1.6,
+    "outer_copper_nominal_um": 35,
+    "outer_copper_minimum_finished_um_required": 30,
+    "via_barrel_minimum_um_required": 20,
+    "negative_width_tolerance_fraction": 0.2,
+    "fabricator_confirmed": false,
+    "basis": "Proposed 1 oz outer copper. Minimum finished foil and barrel thickness are acceptance requirements, not a verified JLCPCB guarantee. Native stackup records nominal thickness only."
+  },
+  "conditions": {
+    "forced_source_peak_V": 18,
+    "resistor_load_bound_A": 0.0002433673469387755,
+    "screen_current_A": 0.00025,
+    "temperature_C_assumed": 70,
+    "track_via_peak_drop_limit_V": 0.0001,
+    "normal_bias_current_allowance_A": 6.632653061224497e-06,
+    "thermal_rise_qualified": false,
+    "fault_or_startup_bound": false
+  },
+  "candidate_nets": {
+    "WET_TOP": {
+      "tracks": [
+        {
+          "length_mm": 4.5,
+          "drawn_width_mm": 0.6,
+          "layer": "F.Cu",
+          "resistance_ohm": 0.00644614375
+        },
+        {
+          "length_mm": 1.4142135623730951,
+          "drawn_width_mm": 0.6,
+          "layer": "F.Cu",
+          "resistance_ohm": 0.002025827536945903
+        },
+        {
+          "length_mm": 22.5,
+          "drawn_width_mm": 0.6,
+          "layer": "F.Cu",
+          "resistance_ohm": 0.032230718750000005
+        },
+        {
+          "length_mm": 7.0,
+          "drawn_width_mm": 0.6,
+          "layer": "B.Cu",
+          "resistance_ohm": 0.010027334722222224
+        },
+        {
+          "length_mm": 1.4142135623730951,
+          "drawn_width_mm": 0.6,
+          "layer": "B.Cu",
+          "resistance_ohm": 0.002025827536945903
+        },
+        {
+          "length_mm": 4.5,
+          "drawn_width_mm": 0.6,
+          "layer": "B.Cu",
+          "resistance_ohm": 0.00644614375
+        },
+        {
+          "length_mm": 2.8284271247461903,
+          "drawn_width_mm": 0.6,
+          "layer": "B.Cu",
+          "resistance_ohm": 0.004051655073891806
+        }
+      ],
+      "vias": [
+        {
+          "drill_nominal_mm": 0.4,
+          "finished_hole_minimum_assumed_mm": 0.32,
+          "barrel_area_mm2": 0.021362830044410582,
+          "resistance_ohm": 0.0016994322158874655
+        }
+      ],
+      "pads": [
+        {
+          "reference": "JR4",
+          "pin": "1",
+          "pad_minimum_dimension_mm": 1.5,
+          "hole_nominal_mm": 1.02,
+          "nominal_radial_ring_mm": 0.24,
+          "qualified": false
+        },
+        {
+          "reference": "C606",
+          "pin": "2",
+          "pad_minimum_dimension_mm": 1.8,
+          "hole_nominal_mm": 0.9,
+          "nominal_radial_ring_mm": 0.45,
+          "qualified": false
+        }
+      ],
+      "track_via_resistance_sum_ohm": 0.06495308333589331,
+      "track_via_peak_drop_V": 1.6238270833973327e-05,
+      "track_via_loss_W_at_screen_current": 4.059567708493332e-09,
+      "track_length_sum_mm": 44.156854249492376,
+      "pad_contact_harness_resistance_included": false
+    },
+    "WET_W": {
+      "tracks": [
+        {
+          "length_mm": 0.16970562748477142,
+          "drawn_width_mm": 0.6,
+          "layer": "F.Cu",
+          "resistance_ohm": 0.00024309930443350833
+        },
+        {
+          "length_mm": 20.3,
+          "drawn_width_mm": 0.6,
+          "layer": "B.Cu",
+          "resistance_ohm": 0.02907927069444445
+        },
+        {
+          "length_mm": 8.3,
+          "drawn_width_mm": 0.6,
+          "layer": "B.Cu",
+          "resistance_ohm": 0.01188955402777778
+        },
+        {
+          "length_mm": 0.28284271247461906,
+          "drawn_width_mm": 0.6,
+          "layer": "B.Cu",
+          "resistance_ohm": 0.00040516550738918067
+        },
+        {
+          "length_mm": 0.16970562748477142,
+          "drawn_width_mm": 0.6,
+          "layer": "B.Cu",
+          "resistance_ohm": 0.00024309930443350833
+        },
+        {
+          "length_mm": 7.5,
+          "drawn_width_mm": 0.6,
+          "layer": "F.Cu",
+          "resistance_ohm": 0.01074357291666667
+        },
+        {
+          "length_mm": 4.0,
+          "drawn_width_mm": 0.6,
+          "layer": "B.Cu",
+          "resistance_ohm": 0.005729905555555557
+        },
+        {
+          "length_mm": 2.8284271247461903,
+          "drawn_width_mm": 0.6,
+          "layer": "B.Cu",
+          "resistance_ohm": 0.004051655073891806
+        }
+      ],
+      "vias": [
+        {
+          "drill_nominal_mm": 0.4,
+          "finished_hole_minimum_assumed_mm": 0.32,
+          "barrel_area_mm2": 0.021362830044410582,
+          "resistance_ohm": 0.0016994322158874655
+        }
+      ],
+      "pads": [
+        {
+          "reference": "U11",
+          "pin": "5",
+          "pad_minimum_dimension_mm": 1.6,
+          "hole_nominal_mm": 1.0,
+          "nominal_radial_ring_mm": 0.30000000000000004,
+          "qualified": false
+        },
+        {
+          "reference": "JR4",
+          "pin": "2",
+          "pad_minimum_dimension_mm": 1.5,
+          "hole_nominal_mm": 1.02,
+          "nominal_radial_ring_mm": 0.24,
+          "qualified": false
+        },
+        {
+          "reference": "R609",
+          "pin": "1",
+          "pad_minimum_dimension_mm": 1.6,
+          "hole_nominal_mm": 0.8,
+          "nominal_radial_ring_mm": 0.4,
+          "qualified": false
+        }
+      ],
+      "track_via_resistance_sum_ohm": 0.06408475460047992,
+      "track_via_peak_drop_V": 1.602118865011998e-05,
+      "track_via_loss_W_at_screen_current": 4.005297162529995e-09,
+      "track_length_sum_mm": 43.55068109219035,
+      "pad_contact_harness_resistance_included": false
+    }
+  },
+  "active_boards": {
+    "Renegade_Control": {
+      "sha256": "f58159d0651ed558b38064a48e60de965ecd72550732b60473f101cb88796b3d",
+      "explicit_stackup_present": false,
+      "nets": {
+        "+12V": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 8,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "+15V": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "+5V": {
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "track_count": 7,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "-15V": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "BTN_CH": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "BTN_REV": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CH_GATE": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 8,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CH_Q": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CH_QN": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 3,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CLK_CH": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 4,
+          "via_count": 1,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CLK_REV": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 6,
+          "via_count": 1,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "COIL_CH": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 8,
+          "via_count": 1,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "COIL_REV": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 11,
+          "via_count": 1,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CTRL_AC1": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 7,
+          "via_count": 1,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CTRL_AC2": {
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "track_count": 9,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CTRL_RAW": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 22,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DB_CH": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DB_CH_INPUT": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 3,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DB_REV": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DB_REV_INPUT": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 3,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "GND": {
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "track_count": 30,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "MR_N": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "NEG_RAW": {
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "track_count": 19,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "PEDAL_CH": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "PEDAL_REV": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "RESET_CT": {
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "track_count": 5,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "RESET_INV": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 3,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "RESET_N": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 15,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "RESET_RAW_N": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 11,
+          "via_count": 1,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "REV_GATE": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 8,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "REV_Q": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "REV_QN": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 3,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "unconnected-(U1-Pad10)": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "unconnected-(U1-Pad12)": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        }
+      }
+    },
+    "Renegade_Main": {
+      "sha256": "120d8e04debbf44825e4c64ea36a5d607ee571d75628cad43eddbc1d60944278",
+      "explicit_stackup_present": false,
+      "nets": {
+        "+12V": {
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "track_count": 23,
+          "via_count": 1,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "BIAS_OUT": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "B_EARLY": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "B_PRE": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CLEAN_OUT": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CL_BASS_BOTTOM": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CL_BASS_TOP": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CL_G2": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 4,
+          "via_count": 1,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CL_IN": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CL_K1": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CL_K2": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CL_P1": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CL_P2": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CL_TONE": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "CL_TREBLE_TOP": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 4,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "COIL_CH": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 10,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DIRTY_OUT": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 2,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_BASS_BOTTOM": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_BASS_TOP": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_C3": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_CF": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_G2": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_G3": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_GAIN_TOP": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_GAIN_W": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_IN": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_K1": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_K2": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_K3": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_P1": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_P2": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_P3": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_TONE": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DR_TREBLE_TOP": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 6,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "FX_SEND": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 4,
+          "via_count": 1,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "GND": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "GRID_A_FEED": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "GRID_B_FEED": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "INPUT": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "INPUT_STOP": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "MIX_OUT": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "NFB_NODE": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "OT_4": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "PI_G1": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "PI_G2": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "PI_K": {
+          "widths_mm": [
+            0.45,
+            0.6
+          ],
+          "track_count": 10,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "PI_P1": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "PI_P2": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "PI_TAIL_TOP": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "PRES_TOP": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "unconnected-(K2-Pad11)": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "unconnected-(K2-Pad9)": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        }
+      }
+    },
+    "Renegade_Power": {
+      "sha256": "95f5f1df46ee101253188b29496e63da45930dd524caf379a8b83b391c509b8a",
+      "explicit_stackup_present": false,
+      "nets": {
+        "BIAS_AC": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 2,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "BIAS_DIODE_AC": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "BIAS_FILTER": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "BIAS_MIN": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "BIAS_OUT": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "BIAS_RAW": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "B_EARLY": {
+          "widths_mm": [
+            0.45,
+            0.6
+          ],
+          "track_count": 6,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "B_PRE": {
+          "widths_mm": [
+            0.6
+          ],
+          "track_count": 9,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "B_RAW": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "B_RECT": {
+          "widths_mm": [
+            0.6
+          ],
+          "track_count": 8,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "B_SCREEN": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "GND": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "HEAT_A": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "HEAT_B": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "HREF": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "HV_A": {
+          "widths_mm": [
+            0.6
+          ],
+          "track_count": 6,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "HV_B": {
+          "widths_mm": [
+            0.6
+          ],
+          "track_count": 1,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "HV_CAP_MID": {
+          "widths_mm": [],
+          "track_count": 0,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "HV_MID_A": {
+          "widths_mm": [
+            0.6
+          ],
+          "track_count": 1,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "HV_MID_B": {
+          "widths_mm": [
+            0.6
+          ],
+          "track_count": 1,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        }
+      }
+    },
+    "Renegade_Reverb": {
+      "sha256": "fa4ac0cbd3ced9b9e0758001c0f2cd488ded0953d3e2fd30025a6d57cc70da3d",
+      "explicit_stackup_present": false,
+      "nets": {
+        "+12V": {
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "track_count": 11,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "+15V": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 38,
+          "via_count": 3,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "-15V": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 45,
+          "via_count": 3,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "COIL_REV": {
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "track_count": 9,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DRIVER": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 15,
+          "via_count": 1,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DRIVE_CAP": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 1,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "DRV_FB": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 10,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "FX_RETURN": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 4,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "GND": {
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "track_count": 128,
+          "via_count": 6,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "IN_AC": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 1,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "MIX_OUT": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 11,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "OUT_AC": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 6,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "OUT_BUF": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 13,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "OUT_FB": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 10,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "REC_FB": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 22,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "REC_IN": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 9,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "REC_OUT": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 8,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "SEND_BUF": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 8,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "SEND_IN": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 17,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "SEND_TOP": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 3,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "SEND_W": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 11,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "SUM": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 12,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "SUM_INV": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 6,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "TANK_IN": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 1,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "TANK_OUT": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 1,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "WET_AC": {
+          "widths_mm": [
+            0.3,
+            0.4
+          ],
+          "track_count": 15,
+          "via_count": 1,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "WET_BUF": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 10,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "WET_MUTE": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 8,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "WET_TOP": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 1,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "WET_W": {
+          "widths_mm": [
+            0.3
+          ],
+          "track_count": 10,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        },
+        "WET_Z_JOIN": {
+          "widths_mm": [
+            0.4
+          ],
+          "track_count": 1,
+          "via_count": 0,
+          "current_thermal_fault_qualification": "pending"
+        }
+      }
+    }
+  },
+  "checks": {
+    "native_load_values_unchanged": true,
+    "pot_value_and_map": true,
+    "declared_current_covers_resistor_load": true,
+    "WET_TOP_all_segments_wide": true,
+    "WET_TOP_track_via_drop_screen": true,
+    "WET_W_all_segments_wide": true,
+    "WET_W_track_via_drop_screen": true
+  },
+  "controls": {
+    "double_width_halves_R": true,
+    "double_thickness_halves_R": true,
+    "20_percent_narrowing_increases_R_25_percent": true,
+    "unit_reference": true,
+    "thin_copper_failed_screen": true
+  },
+  "evidence_checks_pass": true,
+  "fab_confirmed": false,
+  "fabrication_ready": false,
+  "limits": [
+    "70 C is an assumed copper temperature for resistance, not a predicted operating temperature.",
+    "18 V peak is a diagnostic excitation, not guaranteed op-amp swing.",
+    "Minimum foil and barrel thickness need fabricator acceptance; JLC publishes average barrel thickness only.",
+    "Pad/contact/harness losses, mutual coupling, peak transients, shorts and thermal rise remain unqualified.",
+    "Net length sums overbound track resistance when branches are parallel; this is not source-to-load extraction.",
+    "Other nets and boards require their own budgets; no heater, supply or shared-return current qualification follows."
+  ]
+}

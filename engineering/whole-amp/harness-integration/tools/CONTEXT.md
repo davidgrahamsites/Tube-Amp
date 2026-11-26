@@ -13,3 +13,7 @@ Human check: compare the derived terminal mapping against readable schematic and
 `check_pot_voltage.py` owns the normalized DC fault screen and its report. It retains true zero-ohm endpoints, current and power balance, analytic controls and source hashes. Run with Python plus NumPy, then decorate the generated HTML with the shared reader tool. It does not change the circuit or boards.
 
 `pot_fault_probe.py` consumes the linear-screen settings and shared generic tube/supply fixture. Each DC solve has a 35 s worker deadline. Run after `check_pot_voltage.py`, then apply the reader decorator; the report only includes paired results whose linear-input hash matches.
+
+place_reverb_connector.py applies only the declared JR4/route/label delta to a hash-guarded source copy. check_reverb_connector.py independently compares source/candidate root items, circuit terminals, drill shapes and native DRC, then exports nominal mating/service coordinates. Both use KiCad Python; only the candidate directory is writable output. No active board, rule exclusion or schematic is changed.
+
+The HI-008 factory also applies declared existing wet-net widths, nominal stackup and an added wet-net minimum rule. The checker verifies width-only changes, retained original rules and all wet segments. Current/thermal qualification stays with the current-budget module.

@@ -25,6 +25,7 @@ Read each chapter alongside its linked validation record, review, contract, and 
 - [HI-004: harness header datum and mated envelope](chapters/harness-mating-datum.html) — nominal geometry checks pass; no actual placement or assembled-fit approval.
 - [HI-005: pot harness wire reserve and service slack](chapters/pot-harness-wire-reserve.html) — 12.70 mm nominal reserve; no placement or service-fit approval.
 - [HI-006: pot harness DC fault screen](chapters/pot-voltage-fault-screen.html) — 1,050 normalized cases plus 12 generic-tube probes; exact pot and insulation limits remain open.
+- [HI-008: Reverb pot connector candidate](chapters/reverb-pot-connector-candidate.html) — corrected candidate has zero DRC violations and zero open connections after 0.6 mm wet-route widening; conditional copper drops do not qualify parts or fit.
 - [Bench planning: test equipment and requirements](chapters/test-equipment-plan.html) — staged HTML guide and offline export; no equipment models approved and no physical tests claimed.
 - [FB-143–145: capacitor-bank fit and tool access](chapters/capacitor-bank-and-driver-access.html) — standalone and combined five-pass reviews complete; no adoption.
 - [FB-146/147: lower power packaging and Alien Method](chapters/bottom-power-packaging.html) — four review cycles complete; no lower allocation adopted.

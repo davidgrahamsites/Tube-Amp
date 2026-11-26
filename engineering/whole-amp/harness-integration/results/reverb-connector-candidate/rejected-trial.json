@@ -1,0 +1,181 @@
+{
+  "id": "HI-008-initial",
+  "adopted": false,
+  "board_sha256": "9c722982db9cbf0e3908f90558dc02cd9092a2d168276e3e005b7619d66d8f52",
+  "placement": {
+    "id": "HI-008",
+    "date": "2026-11-26",
+    "owner": "harness-integration",
+    "job": "Place and route a removable reverb-pot connector candidate using the current board and the existing four-cavity interface",
+    "baseline_board": "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb",
+    "baseline_sha256": "fa4ac0cbd3ced9b9e0758001c0f2cd488ded0953d3e2fd30025a6d57cc70da3d",
+    "reference": "JR4",
+    "header": "430450402",
+    "mate": "430250400",
+    "position_mm": [
+      73,
+      92
+    ],
+    "angle_deg": 180,
+    "native_adoption": false,
+    "cavity_nets": {
+      "1": "WET_TOP",
+      "2": "WET_W",
+      "3": "GND",
+      "4": null
+    },
+    "remove_segments": [
+      "317ba5f2-24c8-4158-b3ab-a1a52e55748c",
+      "2bc3d5a3-d25c-4c88-b296-ea30689d26f7",
+      "69847193-8ca7-4bd6-9247-1708a9044929",
+      "74cde2fe-414f-4de3-8e6e-e95afa4578a1",
+      "dadd416d-7430-425d-987a-179b461364c2",
+      "f755a0b9-4aa8-45f4-bec8-00d2b565e0cf",
+      "c0a8e6cf-d3d7-4f1e-ae15-b665c47f9f3a",
+      "654faae5-3270-47d8-8960-b6ac605e8f68"
+    ],
+    "routes": [
+      {
+        "net": "WET_TOP",
+        "layer": "F.Cu",
+        "width_mm": 0.3,
+        "points": [
+          [
+            60,
+            61
+          ],
+          [
+            65.5,
+            66.5
+          ],
+          [
+            65.5,
+            82
+          ]
+        ]
+      },
+      {
+        "net": "WET_TOP",
+        "layer": "B.Cu",
+        "width_mm": 0.3,
+        "points": [
+          [
+            65.5,
+            82
+          ],
+          [
+            65.5,
+            93
+          ],
+          [
+            66.5,
+            94
+          ],
+          [
+            71,
+            94
+          ],
+          [
+            73,
+            92
+          ]
+        ]
+      },
+      {
+        "net": "WET_W",
+        "layer": "F.Cu",
+        "width_mm": 0.3,
+        "points": [
+          [
+            68,
+            77
+          ],
+          [
+            68,
+            83
+          ]
+        ]
+      },
+      {
+        "net": "WET_W",
+        "layer": "B.Cu",
+        "width_mm": 0.3,
+        "points": [
+          [
+            68,
+            83
+          ],
+          [
+            68,
+            90
+          ],
+          [
+            70,
+            92
+          ]
+        ]
+      },
+      {
+        "net": "GND",
+        "layer": "B.Cu",
+        "width_mm": 0.3,
+        "points": [
+          [
+            73,
+            89
+          ],
+          [
+            78,
+            84
+          ],
+          [
+            78,
+            83
+          ]
+        ]
+      }
+    ],
+    "vias": [
+      {
+        "net": "WET_TOP",
+        "at_mm": [
+          65.5,
+          82
+        ],
+        "size_mm": 0.7,
+        "drill_mm": 0.3
+      },
+      {
+        "net": "WET_W",
+        "at_mm": [
+          68,
+          83
+        ],
+        "size_mm": 0.7,
+        "drill_mm": 0.3
+      }
+    ],
+    "holds": [
+      "Placement candidate only; exact connector, wire, contacts and cavity-view qualification remain open",
+      "No populated cabinet, tool, bend, latch or withdrawal fit approval",
+      "Additional four-cavity symbol/NC metadata must be integrated before native adoption",
+      "New trace length and via parasitics require electrical comparison before release"
+    ],
+    "done_condition": "Native-parseable current candidate with source-derived pad nets; preserve every unrelated native item; native DRC reports all residual issues; export candidate geometry and service reserve for mechanical review",
+    "effort": "One bounded connector placement and routing pass"
+  },
+  "drc_types": {
+    "tracks_crossing": 4,
+    "shorting_items": 2,
+    "clearance": 1,
+    "hole_clearance": 2,
+    "drill_out_of_range": 2,
+    "via_diameter": 2,
+    "silk_edge_clearance": 4,
+    "silk_overlap": 1,
+    "silk_over_copper": 1
+  },
+  "violations": 19,
+  "opens": 0,
+  "reason": "Routes crossed feedback, ground and negative supply copper; via dimensions below project minimum; edge and label silk interference. Correct placement/routes and retain project rules."
+}
