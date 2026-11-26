@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preamp supply load and regulator boundary</title>
+<!-- reader-head --><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head --></head>
+<body><!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <article>
+      <header>
+        <h1>Preamp supply load and regulator boundary</h1>
+        <p><time datetime="2026-11-26">November 26, 2026</time> · HD-004 · Candidate screen</p>
+      </header>
+
+      <section>
+        <h2>Problem and correction to the comparison</h2>
+        <p>The heater-reference screen needs a bounded B_PRE supply. The existing passive feed does not hold B_PRE below 300 V in the unpowered-tube DC case. A fixed B_PRE comparison also needs the rest of the amplifier supply model to remain connected.</p>
+        <p>The first audio comparison changed <code>screen_V</code>. That changed the EL34 screen supply and regulator input together. Its audio difference cannot be assigned to one cause. The rejected result remains in the record, but it is not evidence for an isolated preamp-supply comparison.</p>
+        <p>The revised screen uses an independent <code>SUPPLY_IN</code> node for the preamp feed. It holds the EL34 screen supply at 380 V. R17 remains connected between B_PRE and B_EARLY, so the early rail moves with B_PRE and its load. The audio comparison therefore includes this real source-circuit coupling.</p>
+      </section>
+
+      <section>
+        <h2>Passive and fixed-rail bounds</h2>
+        <p>With the passive 10 kΩ feed and amplifier tube instances removed in the unpowered-tube case, 380 V at the input produces 336.818 V at B_PRE. This exceeds the proposed 300 V ceiling. The existing passive feed cannot enforce that ceiling across the screened cases. This is a DC case, not a physical startup test.</p>
+        <p>At fixed 300 V B_PRE, the DC screen draws 12.13394 mA. R17 and the connected load place B_EARLY at 266.479 V. The early rail is not an independent fixed source.</p>
+      </section>
+
+      <section>
+        <h2>Regulator setpoint and modeled load</h2>
+        <p>The candidate uses an LM317L-N reference equation as a setpoint calculation. It is not a complete regulator circuit.</p>
+        <div class="math">\[V_{out}=V_{ref}\left(1+\frac{R_{lower}}{R_{set}}\right)+I_{adj}R_{lower}\]</div>
+        <p>At nominal values, 1.25 V, 200 Ω, 43.2 kΩ, and 50 µA give 273.41 V. The programming branch draws 6.3 mA. At 380 V supply input, the modeled total DC current is 17.38442 mA. It includes the amplifier load and programming branch.</p>
+        <p>The 3.3 kΩ feed does not maintain the setpoint at a 320 V input. In the warm-load behavioral case, B_PRE falls to 254.835 V. Treat this as a dropout warning from the model. It is not a verified LM317 or pass-device limit.</p>
+        <p>The candidate model reaches about 273.41 V at 380 V and 550 V input. A 550 V input cannot connect directly to an LM317L. A real design needs a pass device and independent protection across the regulator input and output.</p>
+      </section>
+
+      <section>
+        <h2>Audio comparison status</h2>
+        <p>The current result receipt contains paired audio cases for fixed and limited rails. The 380 V limited case has a finer timestep repeat. The receipt currently marks the audio workers complete. Coordinator validation passed 197 evidence checks, including independent current balance, saved-waveform power and distortion, supply isolation, and timestep comparison. These checks do not qualify a real regulator or physical amplifier.</p>
+        <p>The model uses generic tube models, a behavioral limiter, stiff supplies, an ideal buffer, and unselected magnetics. It does not model real regulator dynamics, pass-device safe operating area, startup faults, tube cold-heater behavior, or a built supply. No native circuit change or hardware qualification follows from this screen.</p>
+      </section>
+
+      <section>
+        <h2>Open engineering checks</h2>
+        <ul>
+          <li>Implement and verify a real 300 V B_PRE ceiling across line, load, cold startup, hot restart, and shutdown.</li>
+          <li>Check regulator stability, pass-device safe operating area, heatsinking, current limit, and input-to-output fault protection.</li>
+          <li>Check the 320 V dropout case with a real regulator and actual source impedance.</li>
+          <li>Confirm actual transformer rails and the coupled B_EARLY load.</li>
+          <li>Measure startup, fault response, temperature, and noise on the assembled supply.</li>
+        </ul>
+        <p>No regulator, pass device, resistor network, or transformer is adopted here. The 300 V boundary remains unimplemented. The heater system and amplifier remain unqualified.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2>
+        <dl>
+          <dt>B_PRE</dt>
+          <dd>The preamp supply rail in the circuit model.</dd>
+          <dt>B_EARLY</dt>
+          <dd>The early-stage supply rail fed from B_PRE through R17.</dd>
+          <dt>SUPPLY_IN</dt>
+          <dd>The independent input node used by the preamp supply screen.</dd>
+          <dt>Setpoint</dt>
+          <dd>The target output voltage calculated from the regulator reference and resistor values.</dd>
+          <dt>Programming load</dt>
+          <dd>The current drawn by the regulator setting resistors and adjustment terminal.</dd>
+          <dt>Dropout</dt>
+          <dd>The condition where the regulator input lacks enough voltage or current headroom to hold its setpoint.</dd>
+          <dt>Unpowered-tube case</dt>
+          <dd>A DC model with tube instances removed. It does not represent heater warmup or startup timing.</dd>
+          <dt>Behavioral limiter</dt>
+          <dd>A simplified equation model used to screen voltage and current bounds. It is not a physical regulator model.</dd>
+          <dt>Safe operating area (SOA)</dt>
+          <dd>The voltage-current-temperature region in which a device can operate without damage.</dd>
+          <dt>Confounded comparison</dt>
+          <dd>A comparison where more than one changing condition can explain the result.</dd>
+          <dt>Stiff supply</dt>
+          <dd>A modeled supply that holds its voltage under load.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/supply-contract.json">HD-004 contract</a> — input assumptions, candidate regulator bounds, and required evidence.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/tools/supply.py">HD-004 screen tool</a> — independent supply input, R17 connection, behavioral limiter, and modeled cases.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/supply-screen.json">HD-004 result receipt</a> — DC cases and paired audio model outputs; evidence checks pass.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/supply-confounded-rejected.json">Rejected confounded result</a> — records why the earlier screen-supply comparison was not used.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/supply-review.html">HD-004 engineering review</a> — current engineering interpretation.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/results/supply-checks.json">HD-004 independent checks</a> — 197 passing evidence checks.</li>
+          <li><a href="../../../engineering/component-selection/heater-divider-rating/correction-review.html">HD-003 heater-reference candidate</a> — prior reference and cathode-return bounds.</li>
+          <li><a href="../../../engineering/whole-amp/reverb-600/circuit.json">Circuit description</a> — source topology and R17 relationship.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

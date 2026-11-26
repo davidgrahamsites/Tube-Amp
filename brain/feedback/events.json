@@ -2302,6 +2302,23 @@
       ],
       "supersedes": [],
       "next_action": "Implement real preamp supply ceiling and resolve reference faults before dependent routing."
+    },
+    {
+      "id": "FB-155",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "engineer",
+      "kind": "preamp-supply-load-boundary",
+      "quote": "HD-004: couple the early-stage load and isolate regulator input from output-tube screens.",
+      "source": "engineering/component-selection/heater-divider-rating/results/supply-screen.json",
+      "interpretation": "16 DC and six audio cases complete;197 independent evidence checks pass. Passive cold380V input gives336.818V preamp rail. Candidate273.41V regulator needs17.384mA at nominal warm load;3.3k feed causes low-input dropout. Rejected shared-screen comparison retained. Real protection and native adoption remain open.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/component-selection/heater-divider-rating/supply-review.html",
+        "docs/design-journal/chapters/preamp-supply-load.html"
+      ],
+      "supersedes": [],
+      "next_action": "Select actual input envelope and smallest workable ceiling circuit; qualify pass-device/current/differential/startup/thermal limits before native routing."
     }
   ]
 }

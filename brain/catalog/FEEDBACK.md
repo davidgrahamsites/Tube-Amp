@@ -1615,3 +1615,15 @@ Source: engineering/component-selection/heater-divider-rating/results/correction
 - [engineering/component-selection/heater-divider-rating/correction-review.html](<../../engineering/component-selection/heater-divider-rating/correction-review.html>)
 - [docs/design-journal/chapters/heater-reference-correction.html](<../../docs/design-journal/chapters/heater-reference-correction.html>)
 
+## FB-155 — preamp-supply-load-boundary
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> HD-004: couple the early-stage load and isolate regulator input from output-tube screens.
+
+16 DC and six audio cases complete;197 independent evidence checks pass. Passive cold380V input gives336.818V preamp rail. Candidate273.41V regulator needs17.384mA at nominal warm load;3.3k feed causes low-input dropout. Rejected shared-screen comparison retained. Real protection and native adoption remain open.
+
+Source: engineering/component-selection/heater-divider-rating/results/supply-screen.json
+
+- [engineering/component-selection/heater-divider-rating/supply-review.html](<../../engineering/component-selection/heater-divider-rating/supply-review.html>)
+- [docs/design-journal/chapters/preamp-supply-load.html](<../../docs/design-journal/chapters/preamp-supply-load.html>)
+
