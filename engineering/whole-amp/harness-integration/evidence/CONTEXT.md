@@ -1,2 +1,4 @@
 # Connector drawing evidence
 Owner: harness integration. Inputs: manufacturer-authored drawings retrieved from distributor mirrors on 26 November 2026. Process: preserve source PDFs and identify revisions and hashes in ../mating-geometry.json; compare current manufacturer text and inspect rendered views. Outputs: source evidence only, not fabrication drawings. Human check: compare the delivered part and current manufacturer drawing before release; the archived header is revision G, not current H1.
+
+HI-007: `pot-rating-source-review.html` owns the dated comparison of exact pot rating evidence and its unresolved limits. The source links and authorship are explicit; the review does not turn a distributor listing or search excerpt into a manufacturer qualification. Human check: match the delivered suffix to a current manufacturer specification before accepting the load.

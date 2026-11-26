@@ -85,6 +85,13 @@
       </section>
 
       <section>
+        <h2>26 November 2026 — exact pot-rating source review</h2>
+        <p>The proposed RV7/RV9 part, RV24AF-10-15R1-B25K-3LA, remains unqualified. The current Alpha family sheet states 250 V AC operation and a 500 V AC, one-minute dielectric test. It gives no track-power rating. The current Mouser listing reports 250 mW and 250 V AC for the exact suffix. Its linked <a href="https://nz.mouser.com/datasheet/3/140/1/RV24AF.pdf">manufacturer PDF</a> is the same four-page family document and still gives no DC, temperature-dependent, partial-track, or wiper limits.</p>
+        <p>An older distributor-authored 2008 TW-700187 sheet reports 0.5 W for linear parts, 0.25 W for audio parts, and 500 V for linear parts. It does not establish the current 3LA suffix or its rating conditions. It is not manufacturer qualification and does not support an automatic replacement. A separate 20K-shaft customer PDF (a different shaft option) could not be visually retrieved after an HTTP/2 error and HTTP/1 timeout. Do not treat search-result text claiming 0.5 W as exact-part evidence.</p>
+        <p>Exact DC, hot, total-track, partial-track, and wiper limits are still required. No pot replacement, routing change, or other redesign is adopted from these comparisons. See the <a href="../../../engineering/whole-amp/harness-integration/evidence/pot-rating-source-review.html">dated source review</a>.</p>
+      </section>
+
+      <section>
         <h2>Next checks</h2>
         <p>Use selected supply and tube models to bound B_EARLY, DR_CF, PI_TAIL_TOP, and REC_OUT. Obtain exact pot DC, track-power, partial-track, and wiper limits. Include local heating and insulation. Recheck C19 with the future buffered loop. Preserve block ownership and functions while reviewing any evidence-based correction.</p>
       </section>
@@ -120,6 +127,8 @@
           <dd>A specified insulation withstand test; it does not set continuous working voltage.</dd>
           <dt>Working voltage</dt>
           <dd>The continuous operating voltage allowed for a part under stated conditions.</dd>
+          <dt>Hot rating</dt>
+          <dd>A limit at elevated part temperature. It does not mean simply powered or energized.</dd>
           <dt>A1M</dt>
           <dd>An audio-taper potentiometer value code for 1 MΩ.</dd>
           <dt>B25K</dt>

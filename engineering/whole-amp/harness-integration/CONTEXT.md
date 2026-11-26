@@ -23,3 +23,5 @@ Task HI-005: `wire-dressing.json` owns the sourced relaxed-wire rule and the exp
 Task HI-006: `voltage-screen.json` owns the declared DC coupling-fault experiment. `tools/check_pot_voltage.py` reads current circuit values/endpoints, solves normalized passive networks and generates JSON, CSV and `pot-voltage-review.html`. Keep sampled results distinct from actual maxima; no connector, pot or insulation approval follows. Human check: confirm exact part DC/track/wiper limits and source bounds before native adoption.
 
 HI-006 loaded follow-up: run `tools/pot_fault_probe.py` with KiCad Python after the linear screen. It reuses the generic tube/supply/buffer factory for 12 bounded DC solves, retains paired results and one example deck, then refreshes the HTML. Fixed supply and sampled settings do not qualify exact parts or protection.
+
+HI-007 source follow-up: `evidence/pot-rating-source-review.html` records the exact B25K-3LA rating conflict and excludes unmatched historical/shaft variants from qualification. It consumes HI-006 numerical evidence without rerunning or changing it.
