@@ -395,3 +395,7 @@ Current auxiliary-supply results imply 4.286827 W maximum conditional shared hea
 D3–D6 now consistently use the already-selected BY255P-E3/54 and manufacturer-sized DO-201AD footprint. Eight holes are1.7mm; four supporting placements and17 scoped route segments are corrected without changing functional blocks, mounts or outline. All145 net groups,20 other native files and17 other schematic page rasters are preserved. ERC1 and PowerDRC12/39 opens remain unchanged; no new finding. Mechanical inventory and maximum package envelopes are refreshed.
 
 Pulse/thermal and actual-transformer qualification remain open; prior generic simulations do not establish BY255 performance. Three-board consolidation, remaining routing and full drill-body/bit access are still required. [Evidence](brain/records/VAL-074-rectifier-package-integration.md). Objective6 is incomplete; no fabrication release.
+
+## November26 heater-divider rating boundary (VAL-075)
+
+4,032 DC corners and eight RC startups expose a gap in the earlier normal-only R506 screen: C505 short can exceed both its500V continuous rating and100°C derated power. P111 is held for correction. Three higher-rated/series alternatives pass that bounded resistor case, but lower-divider open and feed-short faults also need heater-reference protection review. Native circuit/boards remain unchanged. [Evidence](brain/records/VAL-075-heater-divider-rating-boundary.md). Next exact tube heater-cathode limits and the complete local correction, then sourcing/package/fit. Objective6 is incomplete.
