@@ -1,0 +1,2200 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-25T16:59:11",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "Renegade_Reverb.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 3.3158 mm)",
+            "items": [
+                {
+                    "description": "Via [WET_AC] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 123.62,
+                        "y": 30.62
+                    },
+                    "uuid": "2f0f288f-f65f-5345-8ef2-90c068c3de13"
+                },
+                {
+                    "description": "PTH pad 9 [<no net>] of K3",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 34.78
+                    },
+                    "uuid": "10827c49-877a-49ad-b4ee-80d5afa007bf"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 3.2558 mm)",
+            "items": [
+                {
+                    "description": "Track [WET_AC] on B.Cu, length 1.9516 mm",
+                    "pos": {
+                        "x": 123.62,
+                        "y": 30.62
+                    },
+                    "uuid": "92ec8bf2-aa9d-5f8d-b29b-33465526d1b9"
+                },
+                {
+                    "description": "PTH pad 9 [<no net>] of K3",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 34.78
+                    },
+                    "uuid": "10827c49-877a-49ad-b4ee-80d5afa007bf"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 2.2000 mm)",
+            "items": [
+                {
+                    "description": "Track [REC_OUT] on B.Cu, length 14.6000 mm",
+                    "pos": {
+                        "x": 54.8,
+                        "y": 59.5
+                    },
+                    "uuid": "1f5305a2-5a80-4e6d-96f8-0da9f9f092af"
+                },
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 3.9500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [REC_IN] of C604",
+                    "pos": {
+                        "x": 22.0,
+                        "y": 62.0
+                    },
+                    "uuid": "ac5e8f0e-437d-4998-9d00-1e4cd766c031"
+                },
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 3.9500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [-15V] of C611",
+                    "pos": {
+                        "x": 48.0,
+                        "y": 52.0
+                    },
+                    "uuid": "0830b94a-9b01-4602-9bef-983058e0d23f"
+                },
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 1.0500 mm)",
+            "items": [
+                {
+                    "description": "Track [+15V] on B.Cu, length 66.7000 mm",
+                    "pos": {
+                        "x": 123.7,
+                        "y": 59.0
+                    },
+                    "uuid": "169f1f31-a20f-40e1-9817-f1ca7160c296"
+                },
+                {
+                    "description": "PTH pad 1 [FX_RETURN] of R612",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "8d53d227-b440-4005-a966-3c7a6cb70fda"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 0.8400 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [GND] of JR1",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 17.54
+                    },
+                    "uuid": "d83af632-3103-468b-a1dd-0a49c0173c4b"
+                },
+                {
+                    "description": "PTH pad 1 [FX_RETURN] of JR1",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 15.0
+                    },
+                    "uuid": "61d99255-5881-4747-81f2-3d53f36af389"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 3.9500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [TANK_OUT] of C604",
+                    "pos": {
+                        "x": 17.0,
+                        "y": 62.0
+                    },
+                    "uuid": "801201ce-a066-4dfb-9323-04533d2cede2"
+                },
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 1.4500 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 29.8000 mm",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 17.5
+                    },
+                    "uuid": "a6f36dc3-872f-4dd0-84f6-2e151315d79b"
+                },
+                {
+                    "description": "PTH pad 2 [IN_AC] of C601",
+                    "pos": {
+                        "x": 26.0,
+                        "y": 15.0
+                    },
+                    "uuid": "670d4e5d-e36a-49ba-82eb-6ba720d706f0"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 2.9460 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 13 [WET_AC] of K3",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 24.62
+                    },
+                    "uuid": "dfe507b1-6048-4759-bf69-fc6d9dda6688"
+                },
+                {
+                    "description": "Via [-15V] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 27.5
+                    },
+                    "uuid": "cc1e2afd-163e-4dd2-b601-a25821086b39"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 2.5700 mm)",
+            "items": [
+                {
+                    "description": "Via [WET_AC] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 123.62,
+                        "y": 30.62
+                    },
+                    "uuid": "2f0f288f-f65f-5345-8ef2-90c068c3de13"
+                },
+                {
+                    "description": "Track [-15V] on B.Cu, length 20.8000 mm",
+                    "pos": {
+                        "x": 139.3,
+                        "y": 27.5
+                    },
+                    "uuid": "ea89cc7a-cb38-4df3-b2ad-40d1de826b3b"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 3.3900 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [MIX_OUT] of R612",
+                    "pos": {
+                        "x": 114.16,
+                        "y": 57.0
+                    },
+                    "uuid": "68bc52c5-2699-4def-ae3e-3cd5de02a0f0"
+                },
+                {
+                    "description": "Track [-15V] on F.Cu, length 45.8000 mm",
+                    "pos": {
+                        "x": 118.5,
+                        "y": 27.5
+                    },
+                    "uuid": "0769962c-6630-476e-9673-665484e5279c"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 2.8300 mm)",
+            "items": [
+                {
+                    "description": "Via [WET_AC] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 123.62,
+                        "y": 30.62
+                    },
+                    "uuid": "2f0f288f-f65f-5345-8ef2-90c068c3de13"
+                },
+                {
+                    "description": "Track [+15V] on F.Cu, length 43.8000 mm",
+                    "pos": {
+                        "x": 127.0,
+                        "y": 15.2
+                    },
+                    "uuid": "4fa04f19-f83f-4887-829e-fb82d5fddb0d"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 25.8000 mm",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 57.0
+                    },
+                    "uuid": "08da52a1-ee66-49d4-93ad-245127da9da7"
+                },
+                {
+                    "description": "Track (arc) [+15V] on B.Cu, length 1.2566 mm",
+                    "pos": {
+                        "x": 125.3,
+                        "y": 59.8
+                    },
+                    "uuid": "10f7f0a3-de23-5f3a-aad9-a0998a1efe86"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 4.9497 mm",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "f3647a0a-63ee-5abd-b27d-8cee1ad2e588"
+                },
+                {
+                    "description": "Track (arc) [GND] on F.Cu, length 1.2566 mm",
+                    "pos": {
+                        "x": 143.8,
+                        "y": 52.3
+                    },
+                    "uuid": "bb009f4c-cab1-5bc2-911b-4ab9a30e83bb"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 0.3300 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 13 [WET_AC] of K3",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 24.62
+                    },
+                    "uuid": "dfe507b1-6048-4759-bf69-fc6d9dda6688"
+                },
+                {
+                    "description": "Track [GND] on B.Cu, length 22.8000 mm",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 26.0
+                    },
+                    "uuid": "4b832704-4ee7-46b0-b7b4-31adaf96e301"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 0.7100 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [MIX_OUT] of R618",
+                    "pos": {
+                        "x": 142.16,
+                        "y": 32.0
+                    },
+                    "uuid": "9c3ba20d-4b9e-49cd-85c3-458d05c886f8"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 11.1750 mm",
+                    "pos": {
+                        "x": 140.5,
+                        "y": 38.8
+                    },
+                    "uuid": "f5e1b8e4-937a-4f53-8262-f701b16ec203"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 0.7100 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 17.0000 mm",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 32.0
+                    },
+                    "uuid": "4f380277-42ba-4c72-bfb0-57d96ff12c01"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of R617",
+                    "pos": {
+                        "x": 143.16,
+                        "y": 39.0
+                    },
+                    "uuid": "b871f32f-2b0a-4d27-8892-8f0650268d63"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 0.4000 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 7.6000 mm",
+                    "pos": {
+                        "x": 140.0,
+                        "y": 49.2
+                    },
+                    "uuid": "6ab4ba42-b73a-4d00-9f91-932c25613662"
+                },
+                {
+                    "description": "PTH pad 2 [WET_AC] of C607",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "0ccc9b82-9394-44af-8c80-65721b6d6fea"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 3.5707 mm)",
+            "items": [
+                {
+                    "description": "Track [COIL_REV] on B.Cu, length 26.3000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 20.0
+                    },
+                    "uuid": "31eb05b2-0008-4dc1-b6d2-20d7ad4e321e"
+                },
+                {
+                    "description": "PTH pad 13 [WET_AC] of K3",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 24.62
+                    },
+                    "uuid": "dfe507b1-6048-4759-bf69-fc6d9dda6688"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 2.0500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [OUT_BUF] of R616",
+                    "pos": {
+                        "x": 131.0,
+                        "y": 60.0
+                    },
+                    "uuid": "e3b8c53c-25c0-4420-89aa-3bb3656b4eac"
+                },
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 25.8000 mm",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 57.0
+                    },
+                    "uuid": "08da52a1-ee66-49d4-93ad-245127da9da7"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Creepage violation (rule 'Tube interface conditional spacing' creepage 4.0000 mm; actual 2.3439 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [OUT_AC] of R616",
+                    "pos": {
+                        "x": 141.16,
+                        "y": 60.0
+                    },
+                    "uuid": "134c04ca-2a40-46c1-a233-6cacca674bf9"
+                },
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 25.8000 mm",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 57.0
+                    },
+                    "uuid": "08da52a1-ee66-49d4-93ad-245127da9da7"
+                }
+            ],
+            "severity": "error",
+            "type": "creepage"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.5580 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [IN_AC] of R601",
+                    "pos": {
+                        "x": 38.0,
+                        "y": 15.0
+                    },
+                    "uuid": "78aae7fe-edd2-4720-9c91-b1132da6f9a8"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 29.8000 mm",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 17.5
+                    },
+                    "uuid": "a6f36dc3-872f-4dd0-84f6-2e151315d79b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.4500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [FX_RETURN] of C601",
+                    "pos": {
+                        "x": 16.0,
+                        "y": 15.0
+                    },
+                    "uuid": "19604754-9bda-4c74-b021-d79a18d4d519"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 29.8000 mm",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 17.5
+                    },
+                    "uuid": "a6f36dc3-872f-4dd0-84f6-2e151315d79b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.4500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [IN_AC] of C601",
+                    "pos": {
+                        "x": 26.0,
+                        "y": 15.0
+                    },
+                    "uuid": "670d4e5d-e36a-49ba-82eb-6ba720d706f0"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 29.8000 mm",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 17.5
+                    },
+                    "uuid": "a6f36dc3-872f-4dd0-84f6-2e151315d79b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.7500 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [IN_AC] of R601",
+                    "pos": {
+                        "x": 38.0,
+                        "y": 15.0
+                    },
+                    "uuid": "78aae7fe-edd2-4720-9c91-b1132da6f9a8"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 3.5000 mm",
+                    "pos": {
+                        "x": 38.0,
+                        "y": 17.7
+                    },
+                    "uuid": "e66f21a2-6b91-4bb6-b7e2-64d0ee249d1e"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.3553 mm)",
+            "items": [
+                {
+                    "description": "Track (arc) [GND] on F.Cu, length 1.2566 mm",
+                    "pos": {
+                        "x": 143.8,
+                        "y": 52.3
+                    },
+                    "uuid": "bb009f4c-cab1-5bc2-911b-4ab9a30e83bb"
+                },
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 4.9497 mm",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "f3647a0a-63ee-5abd-b27d-8cee1ad2e588"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.6015 mm)",
+            "items": [
+                {
+                    "description": "Via [WET_AC] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 123.62,
+                        "y": 30.62
+                    },
+                    "uuid": "2f0f288f-f65f-5345-8ef2-90c068c3de13"
+                },
+                {
+                    "description": "Track [GND] on B.Cu, length 7.6200 mm",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 29.7
+                    },
+                    "uuid": "308c515e-e693-5836-8c4c-7ce41353a272"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.1527 mm)",
+            "items": [
+                {
+                    "description": "Track (arc) [GND] on F.Cu, length 1.2566 mm",
+                    "pos": {
+                        "x": 143.8,
+                        "y": 50.7
+                    },
+                    "uuid": "ed0ff806-1704-5d21-a387-c22ca471f1ac"
+                },
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 4.9497 mm",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "f3647a0a-63ee-5abd-b27d-8cee1ad2e588"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.9000 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 11 [GND] of K3",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 29.7
+                    },
+                    "uuid": "61fa379f-18b4-4206-b7c7-dd36072e26cc"
+                },
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 4.0000 mm",
+                    "pos": {
+                        "x": 123.62,
+                        "y": 26.62
+                    },
+                    "uuid": "cd31ad94-f4c2-5c96-90ee-b74a73bad476"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.1015 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 11 [GND] of K3",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 29.7
+                    },
+                    "uuid": "61fa379f-18b4-4206-b7c7-dd36072e26cc"
+                },
+                {
+                    "description": "Track [WET_AC] on B.Cu, length 1.9516 mm",
+                    "pos": {
+                        "x": 123.62,
+                        "y": 30.62
+                    },
+                    "uuid": "92ec8bf2-aa9d-5f8d-b29b-33465526d1b9"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.9015 mm)",
+            "items": [
+                {
+                    "description": "Via [WET_AC] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 123.62,
+                        "y": 30.62
+                    },
+                    "uuid": "2f0f288f-f65f-5345-8ef2-90c068c3de13"
+                },
+                {
+                    "description": "PTH pad 11 [GND] of K3",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 29.7
+                    },
+                    "uuid": "61fa379f-18b4-4206-b7c7-dd36072e26cc"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.9015 mm)",
+            "items": [
+                {
+                    "description": "Via [WET_AC] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 123.62,
+                        "y": 30.62
+                    },
+                    "uuid": "2f0f288f-f65f-5345-8ef2-90c068c3de13"
+                },
+                {
+                    "description": "PTH pad 11 [GND] of K3",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 29.7
+                    },
+                    "uuid": "61fa379f-18b4-4206-b7c7-dd36072e26cc"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.3527 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [WET_AC] of C607",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "0ccc9b82-9394-44af-8c80-65721b6d6fea"
+                },
+                {
+                    "description": "Track (arc) [GND] on F.Cu, length 1.2566 mm",
+                    "pos": {
+                        "x": 143.8,
+                        "y": 50.7
+                    },
+                    "uuid": "ed0ff806-1704-5d21-a387-c22ca471f1ac"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.8015 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on B.Cu, length 7.6200 mm",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 29.7
+                    },
+                    "uuid": "308c515e-e693-5836-8c4c-7ce41353a272"
+                },
+                {
+                    "description": "Track [WET_AC] on B.Cu, length 1.9516 mm",
+                    "pos": {
+                        "x": 123.62,
+                        "y": 30.62
+                    },
+                    "uuid": "92ec8bf2-aa9d-5f8d-b29b-33465526d1b9"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.5553 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [WET_AC] of C607",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "0ccc9b82-9394-44af-8c80-65721b6d6fea"
+                },
+                {
+                    "description": "Track (arc) [GND] on F.Cu, length 1.2566 mm",
+                    "pos": {
+                        "x": 143.8,
+                        "y": 52.3
+                    },
+                    "uuid": "bb009f4c-cab1-5bc2-911b-4ab9a30e83bb"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.4000 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [WET_AC] of C607",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "0ccc9b82-9394-44af-8c80-65721b6d6fea"
+                },
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 7.6000 mm",
+                    "pos": {
+                        "x": 140.0,
+                        "y": 49.2
+                    },
+                    "uuid": "6ab4ba42-b73a-4d00-9f91-932c25613662"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.3439 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [OUT_AC] of R616",
+                    "pos": {
+                        "x": 141.16,
+                        "y": 60.0
+                    },
+                    "uuid": "134c04ca-2a40-46c1-a233-6cacca674bf9"
+                },
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 57.0
+                    },
+                    "uuid": "50002968-9327-48b4-97b1-2719703c5661"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.4538 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [OUT_AC] of R616",
+                    "pos": {
+                        "x": 141.16,
+                        "y": 60.0
+                    },
+                    "uuid": "134c04ca-2a40-46c1-a233-6cacca674bf9"
+                },
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 7.6000 mm",
+                    "pos": {
+                        "x": 140.0,
+                        "y": 49.2
+                    },
+                    "uuid": "6ab4ba42-b73a-4d00-9f91-932c25613662"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.0500 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 25.8000 mm",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 57.0
+                    },
+                    "uuid": "08da52a1-ee66-49d4-93ad-245127da9da7"
+                },
+                {
+                    "description": "PTH pad 1 [OUT_BUF] of R616",
+                    "pos": {
+                        "x": 131.0,
+                        "y": 60.0
+                    },
+                    "uuid": "e3b8c53c-25c0-4420-89aa-3bb3656b4eac"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.2000 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 17.0000 mm",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 32.0
+                    },
+                    "uuid": "4f380277-42ba-4c72-bfb0-57d96ff12c01"
+                },
+                {
+                    "description": "Track [GND] on B.Cu, length 0.1600 mm",
+                    "pos": {
+                        "x": 143.16,
+                        "y": 39.0
+                    },
+                    "uuid": "d7a21743-6776-4a10-935b-9bbd0daec4e6"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.5400 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [GND] of JR5",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 51.54
+                    },
+                    "uuid": "54a17890-bf1a-4802-8ffd-b259037fc7be"
+                },
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 7.8000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 49.0
+                    },
+                    "uuid": "58ecaf52-4066-4845-8448-b1a77ab125dd"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.5000 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [FX_RETURN] of JR1",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 15.0
+                    },
+                    "uuid": "61d99255-5881-4747-81f2-3d53f36af389"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 29.8000 mm",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 17.5
+                    },
+                    "uuid": "a6f36dc3-872f-4dd0-84f6-2e151315d79b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.5000 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [FX_RETURN] of JR1",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 15.0
+                    },
+                    "uuid": "61d99255-5881-4747-81f2-3d53f36af389"
+                },
+                {
+                    "description": "Track [GND] on B.Cu, length 0.0400 mm",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 17.54
+                    },
+                    "uuid": "fe5fe17f-b9d0-400e-ac9a-ee23d7bc6e1b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.7100 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 17.0000 mm",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 32.0
+                    },
+                    "uuid": "4f380277-42ba-4c72-bfb0-57d96ff12c01"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of R617",
+                    "pos": {
+                        "x": 143.16,
+                        "y": 39.0
+                    },
+                    "uuid": "b871f32f-2b0a-4d27-8892-8f0650268d63"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.3300 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on B.Cu, length 22.8000 mm",
+                    "pos": {
+                        "x": 137.0,
+                        "y": 26.0
+                    },
+                    "uuid": "4b832704-4ee7-46b0-b7b4-31adaf96e301"
+                },
+                {
+                    "description": "PTH pad 13 [WET_AC] of K3",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 24.62
+                    },
+                    "uuid": "dfe507b1-6048-4759-bf69-fc6d9dda6688"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.2000 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on B.Cu, length 0.0400 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 51.54
+                    },
+                    "uuid": "248d1774-aa44-45e7-9c81-2123867324b5"
+                },
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 7.8000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 49.0
+                    },
+                    "uuid": "58ecaf52-4066-4845-8448-b1a77ab125dd"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.7000 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 25.8000 mm",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 57.0
+                    },
+                    "uuid": "08da52a1-ee66-49d4-93ad-245127da9da7"
+                },
+                {
+                    "description": "Track (arc) [+15V] on B.Cu, length 1.2566 mm",
+                    "pos": {
+                        "x": 123.7,
+                        "y": 59.8
+                    },
+                    "uuid": "2ea5316e-50d0-5084-9022-63ba9bf6986f"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.5000 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on B.Cu, length 0.0400 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 51.54
+                    },
+                    "uuid": "248d1774-aa44-45e7-9c81-2123867324b5"
+                },
+                {
+                    "description": "PTH pad 1 [MIX_OUT] of JR5",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 49.0
+                    },
+                    "uuid": "97be5b27-29c5-4ac4-9e3a-21b1300b9b30"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.7000 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 25.8000 mm",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 57.0
+                    },
+                    "uuid": "08da52a1-ee66-49d4-93ad-245127da9da7"
+                },
+                {
+                    "description": "Track (arc) [+15V] on B.Cu, length 1.2566 mm",
+                    "pos": {
+                        "x": 125.3,
+                        "y": 59.8
+                    },
+                    "uuid": "10f7f0a3-de23-5f3a-aad9-a0998a1efe86"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.3439 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 25.8000 mm",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 57.0
+                    },
+                    "uuid": "08da52a1-ee66-49d4-93ad-245127da9da7"
+                },
+                {
+                    "description": "PTH pad 2 [OUT_AC] of R616",
+                    "pos": {
+                        "x": 141.16,
+                        "y": 60.0
+                    },
+                    "uuid": "134c04ca-2a40-46c1-a233-6cacca674bf9"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.2318 mm)",
+            "items": [
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 138.0,
+                        "y": 39.2
+                    },
+                    "uuid": "4962f28b-f95b-4c52-88f6-076808c6b43a"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 140.7,
+                        "y": 39.0
+                    },
+                    "uuid": "e17b4f4d-5d04-4b73-9989-edb38af8696a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.5000 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [MIX_OUT] of JR5",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 49.0
+                    },
+                    "uuid": "97be5b27-29c5-4ac4-9e3a-21b1300b9b30"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 0.0400 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 51.54
+                    },
+                    "uuid": "df018d3a-e034-4a4d-b4c5-15ef41a21c91"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.2318 mm)",
+            "items": [
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 138.0,
+                        "y": 39.2
+                    },
+                    "uuid": "4962f28b-f95b-4c52-88f6-076808c6b43a"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 11.1750 mm",
+                    "pos": {
+                        "x": 140.5,
+                        "y": 38.8
+                    },
+                    "uuid": "f5e1b8e4-937a-4f53-8262-f701b16ec203"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.2318 mm)",
+            "items": [
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 10.3000 mm",
+                    "pos": {
+                        "x": 138.0,
+                        "y": 49.5
+                    },
+                    "uuid": "348f5790-1d65-5850-980d-05a8fec50b8d"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 140.7,
+                        "y": 39.0
+                    },
+                    "uuid": "e17b4f4d-5d04-4b73-9989-edb38af8696a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.4074 mm)",
+            "items": [
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 4.8000 mm",
+                    "pos": {
+                        "x": 137.8,
+                        "y": 39.0
+                    },
+                    "uuid": "c6fb09da-873d-450a-93ee-0778f5d6c9e8"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 140.7,
+                        "y": 39.0
+                    },
+                    "uuid": "e17b4f4d-5d04-4b73-9989-edb38af8696a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.2318 mm)",
+            "items": [
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 10.3000 mm",
+                    "pos": {
+                        "x": 138.0,
+                        "y": 49.5
+                    },
+                    "uuid": "348f5790-1d65-5850-980d-05a8fec50b8d"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 11.1750 mm",
+                    "pos": {
+                        "x": 140.5,
+                        "y": 38.8
+                    },
+                    "uuid": "f5e1b8e4-937a-4f53-8262-f701b16ec203"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.4074 mm)",
+            "items": [
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 138.0,
+                        "y": 39.2
+                    },
+                    "uuid": "4962f28b-f95b-4c52-88f6-076808c6b43a"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 2.3000 mm",
+                    "pos": {
+                        "x": 143.0,
+                        "y": 39.0
+                    },
+                    "uuid": "ac8e26eb-48af-4fb0-ac4f-a3359f7ddebc"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.6459 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [WET_AC] of C607",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "0ccc9b82-9394-44af-8c80-65721b6d6fea"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 4.2000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 51.5
+                    },
+                    "uuid": "ac5b8676-27b6-4ed3-81ff-87835e28d6a9"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.4000 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [WET_AC] of C607",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "0ccc9b82-9394-44af-8c80-65721b6d6fea"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 11.5000 mm",
+                    "pos": {
+                        "x": 143.0,
+                        "y": 63.8
+                    },
+                    "uuid": "c4c22678-0f5a-4707-afb0-16b0b39b7930"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.4459 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 4.2000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 51.5
+                    },
+                    "uuid": "ac5b8676-27b6-4ed3-81ff-87835e28d6a9"
+                },
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 4.9497 mm",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "f3647a0a-63ee-5abd-b27d-8cee1ad2e588"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.4074 mm)",
+            "items": [
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 4.8000 mm",
+                    "pos": {
+                        "x": 137.8,
+                        "y": 39.0
+                    },
+                    "uuid": "c6fb09da-873d-450a-93ee-0778f5d6c9e8"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 11.1750 mm",
+                    "pos": {
+                        "x": 140.5,
+                        "y": 38.8
+                    },
+                    "uuid": "f5e1b8e4-937a-4f53-8262-f701b16ec203"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.2000 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 11.5000 mm",
+                    "pos": {
+                        "x": 143.0,
+                        "y": 63.8
+                    },
+                    "uuid": "c4c22678-0f5a-4707-afb0-16b0b39b7930"
+                },
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 4.9497 mm",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "f3647a0a-63ee-5abd-b27d-8cee1ad2e588"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.5000 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [MIX_OUT] of JR5",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 49.0
+                    },
+                    "uuid": "97be5b27-29c5-4ac4-9e3a-21b1300b9b30"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 4.2000 mm",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 51.5
+                    },
+                    "uuid": "ac5b8676-27b6-4ed3-81ff-87835e28d6a9"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.2000 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on F.Cu, length 0.1600 mm",
+                    "pos": {
+                        "x": 142.16,
+                        "y": 32.0
+                    },
+                    "uuid": "ca40ca90-e6c0-4579-8411-f60aeb2793c9"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 11.1750 mm",
+                    "pos": {
+                        "x": 140.5,
+                        "y": 38.8
+                    },
+                    "uuid": "f5e1b8e4-937a-4f53-8262-f701b16ec203"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.7100 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [MIX_OUT] of R618",
+                    "pos": {
+                        "x": 142.16,
+                        "y": 32.0
+                    },
+                    "uuid": "9c3ba20d-4b9e-49cd-85c3-458d05c886f8"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 11.1750 mm",
+                    "pos": {
+                        "x": 140.5,
+                        "y": 38.8
+                    },
+                    "uuid": "f5e1b8e4-937a-4f53-8262-f701b16ec203"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.6459 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [WET_AC] of C607",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "0ccc9b82-9394-44af-8c80-65721b6d6fea"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 11.7000 mm",
+                    "pos": {
+                        "x": 143.0,
+                        "y": 50.7
+                    },
+                    "uuid": "383e838f-dc44-4f6f-8f9b-4864c2714512"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.4074 mm)",
+            "items": [
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 10.3000 mm",
+                    "pos": {
+                        "x": 138.0,
+                        "y": 49.5
+                    },
+                    "uuid": "348f5790-1d65-5850-980d-05a8fec50b8d"
+                },
+                {
+                    "description": "Track [GND] on F.Cu, length 2.3000 mm",
+                    "pos": {
+                        "x": 143.0,
+                        "y": 39.0
+                    },
+                    "uuid": "ac8e26eb-48af-4fb0-ac4f-a3359f7ddebc"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.3870 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 11.7000 mm",
+                    "pos": {
+                        "x": 143.0,
+                        "y": 50.7
+                    },
+                    "uuid": "383e838f-dc44-4f6f-8f9b-4864c2714512"
+                },
+                {
+                    "description": "Track [WET_AC] on F.Cu, length 4.9497 mm",
+                    "pos": {
+                        "x": 141.5,
+                        "y": 53.0
+                    },
+                    "uuid": "f3647a0a-63ee-5abd-b27d-8cee1ad2e588"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.5580 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 37.8,
+                        "y": 17.5
+                    },
+                    "uuid": "02db9ba6-89d8-42d2-b70b-a5403327577e"
+                },
+                {
+                    "description": "PTH pad 1 [IN_AC] of R601",
+                    "pos": {
+                        "x": 38.0,
+                        "y": 15.0
+                    },
+                    "uuid": "78aae7fe-edd2-4720-9c91-b1132da6f9a8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.7000 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 25.8000 mm",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 57.0
+                    },
+                    "uuid": "08da52a1-ee66-49d4-93ad-245127da9da7"
+                },
+                {
+                    "description": "Track [+15V] on B.Cu, length 1.7000 mm",
+                    "pos": {
+                        "x": 127.0,
+                        "y": 59.0
+                    },
+                    "uuid": "6b317f3a-cec1-4ea4-895d-6482eef746ec"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.5000 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on F.Cu, length 0.0400 mm",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 17.54
+                    },
+                    "uuid": "060dea71-7212-4287-bc94-b8002bc4db56"
+                },
+                {
+                    "description": "PTH pad 1 [FX_RETURN] of JR1",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 15.0
+                    },
+                    "uuid": "61d99255-5881-4747-81f2-3d53f36af389"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.4500 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 25.8000 mm",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 57.0
+                    },
+                    "uuid": "08da52a1-ee66-49d4-93ad-245127da9da7"
+                },
+                {
+                    "description": "Via [+15V] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 127.0,
+                        "y": 59.0
+                    },
+                    "uuid": "dec5d930-6c48-4e4a-8f3b-b95590152d54"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.7000 mm)",
+            "items": [
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 25.8000 mm",
+                    "pos": {
+                        "x": 139.8,
+                        "y": 57.0
+                    },
+                    "uuid": "08da52a1-ee66-49d4-93ad-245127da9da7"
+                },
+                {
+                    "description": "Track [+15V] on B.Cu, length 66.7000 mm",
+                    "pos": {
+                        "x": 123.7,
+                        "y": 59.0
+                    },
+                    "uuid": "169f1f31-a20f-40e1-9817-f1ca7160c296"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.7000 mm)",
+            "items": [
+                {
+                    "description": "Track [+15V] on B.Cu, length 66.7000 mm",
+                    "pos": {
+                        "x": 123.7,
+                        "y": 59.0
+                    },
+                    "uuid": "169f1f31-a20f-40e1-9817-f1ca7160c296"
+                },
+                {
+                    "description": "Track [MIX_OUT] on B.Cu, length 0.1600 mm",
+                    "pos": {
+                        "x": 114.16,
+                        "y": 57.0
+                    },
+                    "uuid": "eed12200-6aa3-427a-94a9-51e08b1c21fa"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.0500 mm)",
+            "items": [
+                {
+                    "description": "Track [+15V] on B.Cu, length 66.7000 mm",
+                    "pos": {
+                        "x": 123.7,
+                        "y": 59.0
+                    },
+                    "uuid": "169f1f31-a20f-40e1-9817-f1ca7160c296"
+                },
+                {
+                    "description": "PTH pad 2 [MIX_OUT] of R612",
+                    "pos": {
+                        "x": 114.16,
+                        "y": 57.0
+                    },
+                    "uuid": "68bc52c5-2699-4def-ae3e-3cd5de02a0f0"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.0500 mm)",
+            "items": [
+                {
+                    "description": "Track [+15V] on B.Cu, length 66.7000 mm",
+                    "pos": {
+                        "x": 123.7,
+                        "y": 59.0
+                    },
+                    "uuid": "169f1f31-a20f-40e1-9817-f1ca7160c296"
+                },
+                {
+                    "description": "PTH pad 1 [FX_RETURN] of R612",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "8d53d227-b440-4005-a966-3c7a6cb70fda"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.8300 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 13 [WET_AC] of K3",
+                    "pos": {
+                        "x": 121.62,
+                        "y": 24.62
+                    },
+                    "uuid": "dfe507b1-6048-4759-bf69-fc6d9dda6688"
+                },
+                {
+                    "description": "Track [-15V] on B.Cu, length 20.8000 mm",
+                    "pos": {
+                        "x": 139.3,
+                        "y": 27.5
+                    },
+                    "uuid": "ea89cc7a-cb38-4df3-b2ad-40d1de826b3b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.2000 mm)",
+            "items": [
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                },
+                {
+                    "description": "Track [REC_OUT] on B.Cu, length 12.5000 mm",
+                    "pos": {
+                        "x": 53.0,
+                        "y": 72.0
+                    },
+                    "uuid": "9836ea5d-5dfb-40eb-bcfb-83a82a9ce1af"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.2000 mm)",
+            "items": [
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 8.0000 mm",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 15.0
+                    },
+                    "uuid": "4d180cbe-c57d-4d64-af8e-dec74f941939"
+                },
+                {
+                    "description": "Track [GND] on B.Cu, length 0.0400 mm",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 17.54
+                    },
+                    "uuid": "fe5fe17f-b9d0-400e-ac9a-ee23d7bc6e1b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.4000 mm)",
+            "items": [
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                },
+                {
+                    "description": "Track [REC_OUT] on B.Cu, length 1.3000 mm",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 61.0
+                    },
+                    "uuid": "d97f25f7-25ae-4e6e-bf88-31531635f506"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.5400 mm)",
+            "items": [
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 8.0000 mm",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 15.0
+                    },
+                    "uuid": "4d180cbe-c57d-4d64-af8e-dec74f941939"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of JR1",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 17.54
+                    },
+                    "uuid": "d83af632-3103-468b-a1dd-0a49c0173c4b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.2000 mm)",
+            "items": [
+                {
+                    "description": "Track [REC_OUT] on B.Cu, length 14.6000 mm",
+                    "pos": {
+                        "x": 54.8,
+                        "y": 59.5
+                    },
+                    "uuid": "1f5305a2-5a80-4e6d-96f8-0da9f9f092af"
+                },
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.2000 mm)",
+            "items": [
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                },
+                {
+                    "description": "Track [REC_OUT] on B.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 54.8,
+                        "y": 59.5
+                    },
+                    "uuid": "a72bd873-62bb-40e6-9520-cfbc9a430823"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.4500 mm)",
+            "items": [
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                },
+                {
+                    "description": "Via [+15V] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 57.0,
+                        "y": 59.0
+                    },
+                    "uuid": "e52b86fc-4c67-49b8-bfdf-6ed196b690dd"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.4000 mm)",
+            "items": [
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                },
+                {
+                    "description": "Track [REC_OUT] on B.Cu, length 1.3000 mm",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 59.7
+                    },
+                    "uuid": "9eaa2ced-c70e-4802-ab03-56230b960dcf"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 2.2000 mm)",
+            "items": [
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                },
+                {
+                    "description": "Track [REC_OUT] on B.Cu, length 0.2828 mm",
+                    "pos": {
+                        "x": 40.2,
+                        "y": 59.5
+                    },
+                    "uuid": "b6468c98-6bef-4f1a-b205-f64fc6382288"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.7000 mm)",
+            "items": [
+                {
+                    "description": "Track [+15V] on B.Cu, length 66.7000 mm",
+                    "pos": {
+                        "x": 123.7,
+                        "y": 59.0
+                    },
+                    "uuid": "169f1f31-a20f-40e1-9817-f1ca7160c296"
+                },
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.9500 mm)",
+            "items": [
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                },
+                {
+                    "description": "PTH pad 1 [+15V] of C612",
+                    "pos": {
+                        "x": 52.0,
+                        "y": 54.0
+                    },
+                    "uuid": "a4e8cb58-b91b-4ead-8ab9-3a0dd1191d8c"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 1.9500 mm)",
+            "items": [
+                {
+                    "description": "Track [FX_RETURN] on B.Cu, length 87.8000 mm",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 57.0
+                    },
+                    "uuid": "4738c909-588a-45ed-ba74-d62b8f483f28"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of C612",
+                    "pos": {
+                        "x": 57.0,
+                        "y": 54.0
+                    },
+                    "uuid": "92e3c261-a745-4c0d-80fa-d3a64ca0d2ce"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.8400 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [FX_RETURN] of JR1",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 15.0
+                    },
+                    "uuid": "61d99255-5881-4747-81f2-3d53f36af389"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of JR1",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 17.54
+                    },
+                    "uuid": "d83af632-3103-468b-a1dd-0a49c0173c4b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.8400 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [FX_RETURN] of JR1",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 15.0
+                    },
+                    "uuid": "61d99255-5881-4747-81f2-3d53f36af389"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of JR1",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 17.54
+                    },
+                    "uuid": "d83af632-3103-468b-a1dd-0a49c0173c4b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.8400 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [MIX_OUT] of JR5",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 49.0
+                    },
+                    "uuid": "97be5b27-29c5-4ac4-9e3a-21b1300b9b30"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of JR5",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 51.54
+                    },
+                    "uuid": "54a17890-bf1a-4802-8ffd-b259037fc7be"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'Tube interface conditional spacing' clearance 2.5000 mm; actual 0.8400 mm)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [MIX_OUT] of JR5",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 49.0
+                    },
+                    "uuid": "97be5b27-29c5-4ac4-9e3a-21b1300b9b30"
+                },
+                {
+                    "description": "PTH pad 2 [GND] of JR5",
+                    "pos": {
+                        "x": 148.0,
+                        "y": 51.54
+                    },
+                    "uuid": "54a17890-bf1a-4802-8ffd-b259037fc7be"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        }
+    ]
+}

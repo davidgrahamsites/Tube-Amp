@@ -1,0 +1,4 @@
+# Reverb voltage-domain spacing
+Owner: amplifier integration. Inputs: current native circuit/boards at579a009, VAL061/063/064 envelopes and manufacturer insulation/connector data. Process: bind the affected interfaces, compare connectors and run stricter conditional spacing on temporary board copies. Outputs: contract.json and review.md, reproducible DRC evidence and canonical connector requirement corrections. Human check: confirm actual supply extremes, material/environment and populated connector/harness clearances before release.
+
+Task: one focused spacing/connector pass. Done means recorded voltage assumptions, native-preserving rule test, exact existing defects and justified next repair; this is not a manufacturing gate or a new architecture. Source circuit stays in reverb-600; this module owns only voltage-interface acceptance evidence.

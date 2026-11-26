@@ -1,0 +1,10 @@
+(version 1)
+(rule "LV copper clearance" (constraint clearance (min 0.25mm)))
+(rule "Trace width" (constraint track_width (min 0.30mm)))
+(rule "Board edge" (constraint edge_clearance (min 1.0mm)))
+
+# Conditional screen only; see voltage-spacing/contract.json.
+(rule "Tube interface conditional spacing"
+  (condition "A.NetName == 'FX_RETURN' || A.NetName == 'IN_AC' || A.NetName == 'MIX_OUT' || A.NetName == 'WET_AC' || B.NetName == 'FX_RETURN' || B.NetName == 'IN_AC' || B.NetName == 'MIX_OUT' || B.NetName == 'WET_AC'")
+  (constraint clearance (min 2.5mm))
+  (constraint creepage (min 4.0mm)))

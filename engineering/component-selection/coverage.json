@@ -964,8 +964,8 @@
       "JR1"
     ],
     "value": "JR1 harness",
-    "requirement": "Low voltage only; soldered locking harness or retained socket",
-    "status": "candidate identified; retention, native geometry, wire/shield and procurement qualification incomplete",
+    "requirement": "Tube-level audio; qualify working/fault voltage, creepage, clearance and insulated retained mating harness; not low-voltage-only",
+    "status": "selection held: XH 250 V candidate rejected for retained tube-level fault envelope; exact replacement and Shanghai procurement pending",
     "candidate_mpns": [
       "B2B-XH-A(LF)(SN)"
     ],
@@ -976,8 +976,18 @@
       "retention": "Independent clamp/retainer required; XH has no positive latch",
       "native_pitch_mm": 2.5,
       "native_integration": "Replace generic2.54mm footprint only after qualification",
-      "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md"
-    }
+      "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md",
+      "qualification_status": "Historical XH candidate only; rejected for current voltage envelope, do not integrate"
+    },
+    "rejected_candidates": [
+      {
+        "mpn": "B2B-XH-A(LF)(SN)",
+        "scope": "Current JR1/JR5 tube-derived interface only",
+        "reason": "250 V AC/DC rating below retained conditional DC fault screen",
+        "evidence": "engineering/whole-amp/reverb-600/voltage-spacing/review.md"
+      }
+    ],
+    "voltage_evidence": "engineering/whole-amp/reverb-600/voltage-spacing/review.md"
   },
   {
     "id": "P078",
@@ -1300,13 +1310,14 @@
       "K3"
     ],
     "value": "G5V-2-H1 DC12",
-    "requirement": "",
-    "status": "engineering selected; scoped checks only; see relay-selection-2026-11-15.md",
+    "requirement": "Qualify K3 wet-contact switching exposure during C6 fault; 125 V DC maximum switching voltage is not dielectric withstand",
+    "status": "engineering selection held for fault-time switching review; conditional open wet-contact 138.422 V exceeds 125 V DC maximum; no manufacturing approval",
     "candidate_mpns": [
       "G5V-2-H1 DC12"
     ],
     "selected_mpn": "G5V-2-H1 DC12",
-    "selection_evidence": "relay-selection-2026-11-15.md"
+    "selection_evidence": "relay-selection-2026-11-15.md",
+    "voltage_evidence": "engineering/whole-amp/reverb-600/voltage-spacing/review.md"
   },
   {
     "id": "P098",
@@ -1326,8 +1337,8 @@
       "JR5"
     ],
     "value": "JR5 harness",
-    "requirement": "Low voltage only; soldered locking harness or retained socket",
-    "status": "candidate identified; retention, native geometry, wire/shield and procurement qualification incomplete",
+    "requirement": "Tube-level audio; qualify working/fault voltage, creepage, clearance and insulated retained mating harness; not low-voltage-only",
+    "status": "selection held: XH 250 V candidate rejected for retained tube-level fault envelope; exact replacement and Shanghai procurement pending",
     "candidate_mpns": [
       "B2B-XH-A(LF)(SN)"
     ],
@@ -1338,8 +1349,18 @@
       "retention": "Independent clamp/retainer required; XH has no positive latch",
       "native_pitch_mm": 2.5,
       "native_integration": "Replace generic2.54mm footprint only after qualification",
-      "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md"
-    }
+      "evidence": "engineering/component-selection/evidence/electric-reverb-connectors-and-capacitors-2026-11-21.md",
+      "qualification_status": "Historical XH candidate only; rejected for current voltage envelope, do not integrate"
+    },
+    "rejected_candidates": [
+      {
+        "mpn": "B2B-XH-A(LF)(SN)",
+        "scope": "Current JR1/JR5 tube-derived interface only",
+        "reason": "250 V AC/DC rating below retained conditional DC fault screen",
+        "evidence": "engineering/whole-amp/reverb-600/voltage-spacing/review.md"
+      }
+    ],
+    "voltage_evidence": "engineering/whole-amp/reverb-600/voltage-spacing/review.md"
   },
   {
     "id": "P100",

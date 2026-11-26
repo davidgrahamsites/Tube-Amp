@@ -1,0 +1,61 @@
+{
+  "commands": [
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--all-track-errors",
+        "-o",
+        "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/reverb-600/voltage-spacing/results/baseline-drc.json",
+        "/var/folders/k5/slv6r3fn5fj2wy0_vgspl0q00000gn/T/renegade-voltage-spacing-p_50p8pn/Renegade_Reverb.kicad_pcb"
+      ],
+      "returncode": 0,
+      "stdout": "Found 0 violations\nFound 0 unconnected items\nSaved DRC Report to /Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/reverb-600/voltage-spacing/results/baseline-drc.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--all-track-errors",
+        "-o",
+        "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/reverb-600/voltage-spacing/results/candidate-drc.json",
+        "/var/folders/k5/slv6r3fn5fj2wy0_vgspl0q00000gn/T/renegade-voltage-spacing-p_50p8pn/Renegade_Reverb.kicad_pcb"
+      ],
+      "returncode": 0,
+      "stdout": "Found 94 violations\nFound 0 unconnected items\nSaved DRC Report to /Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/reverb-600/voltage-spacing/results/candidate-drc.json\n",
+      "stderr": ""
+    }
+  ],
+  "counts": {
+    "baseline": {
+      "violations": 0,
+      "opens": 0
+    },
+    "candidate": {
+      "violations": 94,
+      "opens": 0
+    }
+  },
+  "active_native_unchanged": true,
+  "version": "10.0.6",
+  "input_sha256": {
+    "contract.json": "15202b5f77813d2b887ad7e992c663e3a8ff051dc938a0d852c35a353b93d08d",
+    "tools/run.py": "171e1b333857c77958324f15ee11f47a1cd5dd63fc9e301cae5f95dbb6afd5ed"
+  },
+  "report_sha256": {
+    "results/candidate.kicad_dru": "7db27d295f912c9b6c4ca908167699cb8d1bcd35ea1bc8283a158f7e4c27289a",
+    "results/baseline-drc.json": "c09a071b92e74140bf2712058b573e0db615b65b0240f58edd2e517474adb53d",
+    "results/candidate-drc.json": "677e9b880945f38c221d3f01f1a225684052631a21ed83aedb6dd69b823a1cab"
+  },
+  "full_voltage_envelope_qualified": false,
+  "adopted": false
+}

@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "negative_controls": [
+    "missing net",
+    "weakened clearance",
+    "stale native",
+    "missing rule operand"
+  ],
+  "retained_fixture_commit": "70b20d1",
+  "unchanged_electrical_references": [
+    "R7",
+    "R43",
+    "C6",
+    "C601",
+    "R601",
+    "R602",
+    "R612",
+    "R616",
+    "C607",
+    "R617",
+    "R618",
+    "R24",
+    "K3",
+    "JR1",
+    "JR5"
+  ],
+  "dc_max_error_V": 0,
+  "stress_sha256": "bceb37f20b1b545483cd803fb15c20cf80e144347e7c90e6f14bd67814a3dbb8",
+  "geometry": {
+    "JR1": {
+      "pads": [
+        "1",
+        "2"
+      ],
+      "center_spacing_mm": 2.54,
+      "copper_gap_mm": 0.84,
+      "meaning": "Planar copper edge gap; component body insulation is separate"
+    },
+    "JR5": {
+      "pads": [
+        "1",
+        "2"
+      ],
+      "center_spacing_mm": 2.54,
+      "copper_gap_mm": 0.84,
+      "meaning": "Planar copper edge gap; component body insulation is separate"
+    },
+    "K3": {
+      "pads": [
+        "13",
+        "11"
+      ],
+      "center_spacing_mm": 5.079999999999999,
+      "copper_gap_mm": 3.28,
+      "meaning": "Planar copper edge gap; component body insulation is separate"
+    }
+  },
+  "drc_counts": {
+    "creepage": 22,
+    "clearance": 72
+  },
+  "unique_typed_item_pairs": 91,
+  "pad_only_reports": 5,
+  "other_reports": 89,
+  "dc_fault_peak_V": {
+    "FX_RETURN": 293.4548027595967,
+    "MIX_OUT": 276.84415354678936,
+    "WET_AC": 138.42207677339468
+  },
+  "limits": [
+    "Conditional old passive fixture re-bound, not new whole-amp simulation",
+    "K3 open contact; fault-time switching and actual source envelope unqualified",
+    "DRC reports may repeat a physical constraint; counts are not unique defects",
+    "New loop and protection integration will require fresh voltage evidence"
+  ],
+  "native_unchanged": true,
+  "release_ready": false,
+  "checker_sha256": "2de8b25a5c53be46affd977e946ec563427be379561a665a4f9e1f7042a17818"
+}
