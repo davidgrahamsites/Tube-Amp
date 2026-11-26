@@ -1,0 +1,95 @@
+[
+  {
+    "args": [
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "-o",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/rectifier-package/results/before/netlist.xml",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/reverb-600/cad/Renegade_220V_Reverb.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "-o",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/rectifier-package/results/before/erc.json",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/reverb-600/cad/Renegade_220V_Reverb.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "Found 1 violations\nSaved ERC Report to /Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/rectifier-package/results/before/erc.json\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "sch",
+      "export",
+      "pdf",
+      "-o",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/rectifier-package/results/before/schematics.pdf",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/reverb-600/cad/Renegade_220V_Reverb.kicad_sch"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/rectifier-package/results/before/schematics.pdf'.\nDone.\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--all-track-errors",
+      "-o",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/rectifier-package/results/before/drc.json",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/boards/Renegade_Power.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Found 12 violations\nFound 39 unconnected items\nSaved DRC Report to /Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/rectifier-package/results/before/drc.json\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "pcb",
+      "export",
+      "drill",
+      "--format",
+      "excellon",
+      "--excellon-units",
+      "mm",
+      "--output",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/rectifier-package/results/before/",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/boards/Renegade_Power.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Created file '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/rectifier-package/results/before/Renegade_Power.drl'\nDone.\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "pcb",
+      "export",
+      "svg",
+      "--layers",
+      "F.Cu,B.Cu,F.Silkscreen,F.Courtyard,Edge.Cuts",
+      "--output",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/rectifier-package/results/before/board.svg",
+      "--mode-single",
+      "--exclude-drawing-sheet",
+      "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/boards/Renegade_Power.kicad_pcb"
+    ],
+    "exit_code": 0,
+    "stdout": "Plotted to '/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/whole-amp/pcb-measured-r/rectifier-package/results/before/board.svg'.\nDone.\n",
+    "stderr": ""
+  }
+]

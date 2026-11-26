@@ -1,0 +1,231 @@
+{
+  "baseline_commit": "061a72c039857e2a1bb4cbe34faba4491a39c8e2",
+  "input_sha256": {
+    "engineering/whole-amp/reverb-600/circuit.json": "b5292e6766793b61c56ddc2d9a715fbfb11274777128a667f73c1ac774b70e66",
+    "engineering/whole-amp/reverb-600/cad/design-connectivity.json": "1028a4e27dd4e6a3d968e5d13ea473854456e66e64049925bf8aceb20468ef25",
+    "engineering/whole-amp/reverb-600/cad/05_supplies.kicad_sch": "f1ff8d0b66c3827d285e02bd4920c472d34aff096d453d755da4ae727e045c45",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Power.kicad_pcb": "6829beb4430b8f449ed9f891939912fca0a41ffcddf1c4d5dbcc8f0fdce8531a"
+  },
+  "references": [
+    "D3",
+    "D4",
+    "D5",
+    "D6"
+  ],
+  "mpn": "BY255P-E3/54",
+  "display_value": "BY255P",
+  "footprint": "Renegade_Selected:Vishay_BY255P_DO201AD_P30.48",
+  "datasheet": "https://www.vishay.com/docs/88838/by251p.pdf",
+  "datasheet_path": "engineering/component-selection/evidence/Vishay-BY255P.pdf",
+  "datasheet_sha256": "bafe8315ed4acb759e530b29abdb88cc83a5b1897a0a2a2e00ce313c0e0f6b0f",
+  "body_length_max_mm": 9.5,
+  "body_diameter_max_mm": 5.3,
+  "lead_diameter_max_mm": 1.32,
+  "pitch_mm": 30.48,
+  "drill_mm": 1.7,
+  "pad_mm": 2.6,
+  "finished_hole_tolerance_mm": 0.1,
+  "minimum_diametral_allowance_mm": 0.2,
+  "body_standoff_proposal_mm": 3,
+  "placements": {
+    "D5": [
+      12,
+      130.5,
+      -90
+    ],
+    "D6": [
+      27,
+      160.98,
+      90
+    ],
+    "D3": [
+      42,
+      130.5,
+      -90
+    ],
+    "D4": [
+      57,
+      160.98,
+      90
+    ]
+  },
+  "nets": [
+    "HV_MID_A",
+    "HV_MID_B",
+    "HV_A",
+    "HV_B",
+    "B_RECT"
+  ],
+  "route_width_mm": 0.6,
+  "routes": [
+    [
+      "HV_MID_B",
+      "F.Cu",
+      [
+        [
+          12,
+          130.5
+        ],
+        [
+          27,
+          130.5
+        ]
+      ]
+    ],
+    [
+      "HV_MID_A",
+      "F.Cu",
+      [
+        [
+          42,
+          130.5
+        ],
+        [
+          57,
+          130.5
+        ]
+      ]
+    ],
+    [
+      "HV_B",
+      "F.Cu",
+      [
+        [
+          12,
+          160.98
+        ],
+        [
+          12,
+          167
+        ]
+      ]
+    ],
+    [
+      "HV_A",
+      "F.Cu",
+      [
+        [
+          42,
+          160.98
+        ],
+        [
+          48,
+          166.98
+        ],
+        [
+          48,
+          171
+        ],
+        [
+          50,
+          173
+        ],
+        [
+          64,
+          173
+        ],
+        [
+          66,
+          171
+        ],
+        [
+          66,
+          167
+        ]
+      ]
+    ],
+    [
+      "B_RECT",
+      "B.Cu",
+      [
+        [
+          27,
+          160.98
+        ],
+        [
+          27,
+          153.5
+        ],
+        [
+          29,
+          151.5
+        ],
+        [
+          55,
+          151.5
+        ],
+        [
+          57,
+          153.5
+        ],
+        [
+          57,
+          160.98
+        ]
+      ]
+    ],
+    [
+      "B_RECT",
+      "F.Cu",
+      [
+        [
+          27,
+          160.98
+        ],
+        [
+          27,
+          163
+        ],
+        [
+          31,
+          167
+        ],
+        [
+          34,
+          167
+        ]
+      ]
+    ]
+  ],
+  "qualification": "Selected identity and package repair only; actual transformer, pulse/heating/spacing and populated fit pending.",
+  "supporting_moves": {
+    "R501": [
+      14.38,
+      121.5
+    ],
+    "R502": [
+      42.38,
+      121.5
+    ],
+    "JP012": [
+      12,
+      167
+    ],
+    "JP006": [
+      34,
+      167
+    ]
+  },
+  "protected_native_sha256": {
+    "engineering/whole-amp/reverb-600/cad/02_dirty.kicad_sch": "b8c8bc3192cb8626ad893eb323ef44a2aa8b0297c3a9dd247559c5ed7b129774",
+    "engineering/whole-amp/reverb-600/cad/05b_bias_reverb_supply.kicad_sch": "a02659b6fb93079eb06705580cefecffb0b8d13682ae12354b0a7002cf4a8513",
+    "engineering/whole-amp/reverb-600/cad/07b_reverb_recovery.kicad_sch": "aa49f0ae095da0c3de41372296b5349ddc5c0b21c5dd0ec88866e3b9c73d92bb",
+    "engineering/whole-amp/reverb-600/cad/Renegade_220V_Reverb.kicad_sch": "88c5b4d1389c74b74faf11ed053af4e4a0f2cd285b99abf78d45f1bcafbf29da",
+    "engineering/whole-amp/reverb-600/cad/03_routing.kicad_sch": "845c199d1ba0d822f13e3edeb5c131db81e3199dca35a75b2f0c68258485e7aa",
+    "engineering/whole-amp/reverb-600/cad/02b_dirty_tone.kicad_sch": "1987279a558a68fda187cbc5028d67d1256472d0fed5892c70f6936ce380321f",
+    "engineering/whole-amp/reverb-600/cad/09b_latches_drivers.kicad_sch": "49197628a255bbd034f3fdc9fc63dabbcef156f802245f46caeacbc3bf2e049d",
+    "engineering/whole-amp/reverb-600/cad/09_controller.kicad_sch": "7d3645b075e50741bb69b7690a630df0f2df7b2b7de3194d4c1c52b1a3747d7c",
+    "engineering/whole-amp/reverb-600/cad/04_output.kicad_sch": "3fec27dc2d082dbdd12fbfbff195a3adcee6880485edec06adb807e0ecaee944",
+    "engineering/whole-amp/reverb-600/cad/04b_output_transformer.kicad_sch": "f7f9b036693bf01258414722be0becf19c413d7fe422df83272d99d97c82e518",
+    "engineering/whole-amp/reverb-600/cad/08_control_supply.kicad_sch": "89d62bee6b2b14032fed9acffa397e3ba9a2e160a28238d8878a3a7370a18705",
+    "engineering/whole-amp/reverb-600/cad/01_clean.kicad_sch": "17c5a20300546c04f3cfa1bc0dd674d11e07e5dc08874ac0156d6313b5381b43",
+    "engineering/whole-amp/reverb-600/cad/07c_reverb_output.kicad_sch": "d421b0ffcd9c9057b60b5ba57c945fe294d6a7fb7b6b0f57284c1db208ec6fa1",
+    "engineering/whole-amp/reverb-600/cad/07d_reverb_harness.kicad_sch": "d71bd6e68e8fa2c52e73375762af8fbfda24cc7f8eadf8796c0bc0a71c5879dc",
+    "engineering/whole-amp/reverb-600/cad/07a_reverb_send.kicad_sch": "1d152da3df76db4115aa49e1fc1eb82babbbf2e4ca31c2abfcdff6d2db066215",
+    "engineering/whole-amp/reverb-600/cad/10_logic_power.kicad_sch": "16534078ff00c95265f1c8ae63dd2dbaf9c369a70943fa2acb1bd20739cd53eb",
+    "engineering/whole-amp/reverb-600/cad/06_heaters.kicad_sch": "f99c9f7ab06a7f3c6594ecdc9b4587834542d4c5005cbcdb1c415303edd19b29",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Main.kicad_pcb": "120d8e04debbf44825e4c64ea36a5d607ee571d75628cad43eddbc1d60944278",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Control.kicad_pcb": "f58159d0651ed558b38064a48e60de965ecd72550732b60473f101cb88796b3d",
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "fa4ac0cbd3ced9b9e0758001c0f2cd488ded0953d3e2fd30025a6d57cc70da3d"
+  }
+}

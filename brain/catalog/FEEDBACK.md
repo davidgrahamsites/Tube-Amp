@@ -1,6 +1,6 @@
 # Feedback and decision trail
 
-Generated as of 2026-11-25; source: ../feedback/events.json. Backfilled original timestamps may be unknown. Incorporated means recorded, not build-complete.
+Generated as of 2026-11-26; source: ../feedback/events.json. Backfilled original timestamps may be unknown. Incorporated means recorded, not build-complete.
 
 ## FB-001 — requirement
 Authority: user. Disposition: incorporated. Recorded: 2026-11-20. Original date: unknown.

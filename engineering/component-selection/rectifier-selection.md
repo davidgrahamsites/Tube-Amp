@@ -7,3 +7,7 @@ Manufacturer evidence/Vishay-BY255P.pdf, document88838 revised19-Dec-2025:1300V 
 A conservative reverse-voltage calculation for the existing assumed300-0-300VAC transformer,242V mains stress and1.12 secondary multiplier gives each half522.693V peak. Total possible centre-tapped reverse stress is1045.387V. **Each selected diode alone** is rated1300V, so this static bound does not depend on equal reverse-voltage sharing in each pair. Utilization80.414%; no transient or actual-transformer guarantee. The assumed100Ω winding resistance bounds initial zero-charge current at5.227A, but this alone does not validate surge energy or repetitive heating.
 
 Do not use the existing generic DM1000V SPICE model as a BY255 manufacturer model. It has not been replaced with a fabricated model. Supply current/pulse/thermal simulation, exact transformer evidence and native pin/footprint checks remain open. The data-sheet3A/thermal claims assume approximately10mm leads; a compact DO-201 pad pitch must not silently inherit those mounting conditions. Either retain the specified lead exposure or qualify the actual layout at its much lower operating current. Cathode is the marked band.
+
+## November 26 native reconciliation
+
+The selected identity, exact DO-201AD lead/body limits and 30.48 mm custom footprint are now integrated for D3–D6. See [native package review](../whole-amp/pcb-measured-r/rectifier-package/review.md) and VAL-074. This closes the source/native identity and scoped hole mismatch, not the electrical pulse/thermal or actual-transformer gates above.

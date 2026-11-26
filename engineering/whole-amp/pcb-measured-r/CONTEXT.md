@@ -32,3 +32,5 @@ November25 current-budget seam: [current-budget/CONTEXT.md](current-budget/CONTE
 R605 package: [r605-package/CONTEXT.md](r605-package/CONTEXT.md) owns its conditional FMP200 native placement, local routing, drill evidence and source-bound component envelope. Full hot/fault qualification remains open.
 
 FMP200 Main/Power correction: [fmp200-holes/CONTEXT.md](fmp200-holes/CONTEXT.md) owns the 13-package/26-hole correction and exact native preservation checks. See VAL-071 for scope and remaining fit/stress gates.
+
+November26 rectifier reconciliation: [rectifier-package/CONTEXT.md](rectifier-package/CONTEXT.md) owns the selected BY255P identity, eight resized holes, four supporting placement moves and scoped route repair. Its current package envelopes supersede historical R501/R502 positions; existing thermal, complete routing and populated-fit gates remain open. See VAL-074.

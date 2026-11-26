@@ -107,3 +107,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-071 | validation | pcb | verified | 2026-11-25 | [Thirteen FMP200 packages: finished-hole correction](records/VAL-071-fmp200-finished-holes.md) |
 | VAL-072 | validation | components | verified | 2026-11-25 | [Rating inventory and missing BOM references](records/VAL-072-rating-coverage.md) |
 | VAL-073 | validation | components | documented | 2026-11-25 | [Regulator contact tolerance and cooling boundary](records/VAL-073-regulator-contact-tolerance.md) |
+| VAL-074 | validation | pcb | documented | 2026-11-26 | [Selected rectifier identity and package integration](records/VAL-074-rectifier-package-integration.md) |
