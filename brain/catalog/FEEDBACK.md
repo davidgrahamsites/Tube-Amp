@@ -1882,3 +1882,40 @@ Source: Current chat, resumed CB-003 checkpoint
 - [docs/design-journal/entry-template.md](<../../docs/design-journal/entry-template.md>)
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 
+## FB-176 — drill-envelope-measurements
+Authority: user. Disposition: incorporated. Recorded: 2026-11-27. Original date: 2026-11-27.
+
+> 21 cm from drill bit to back of drilll, 28mm bit to chuck, widest chuck 39mm
+
+Tip-to-rear210 mm and bit projection28 mm recorded. New widest chuck39 mm conflicts with prior46 mm; retain46 mm provisional clearance envelope. Motor housing width is not supplied. Clarification pending; no access qualification.
+
+Source: Reply to drill measurement question call_f091c169b55d4a8f8b2347227bdc6e10
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [engineering/whole-amp/mechanical/review/tool-access-checks.json](<../../engineering/whole-amp/mechanical/review/tool-access-checks.json>)
+
+## FB-177 — output-stage-current-heat-screen
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-27. Original date: 2026-11-27.
+
+> CB-004: a larger transistor package alone does not establish the required heat path.
+
+Twelve ideal load/bias cases pass44 arithmetic checks. At135V peak20kHz/340kohm/500pF, load-only peak8.4916mA;13mA trial bias produces5.2W standing pair heat. Calculated shared-sink limits8.327/7.077C/W assume70C ambient125C target2C/W interface. No device/SOA/sourcing/fit qualification or native change.
+
+Source: engineering/whole-amp/effects-loop/common-buffer/results/output-heat.json
+
+- [engineering/whole-amp/effects-loop/common-buffer/composite-review.html](<../../engineering/whole-amp/effects-loop/common-buffer/composite-review.html>)
+- [engineering/whole-amp/effects-loop/common-buffer/output-heat.json](<../../engineering/whole-amp/effects-loop/common-buffer/output-heat.json>)
+- [docs/design-journal/chapters/composite-return-feasibility.html](<../../docs/design-journal/chapters/composite-return-feasibility.html>)
+
+## FB-178 — drill-diameter-clarification
+Authority: user. Disposition: incorporated. Recorded: 2026-11-27. Original date: 2026-11-27.
+
+> 46.5 is widest chuck diameter, and the widest width of the motor housing is 51mm
+
+Use46.5 mm maximum chuck diameter and51 mm motor housing width. Resolves earlier39/46 mm discrepancy. Retain210 mm tip-to-rear and28 mm projection. Cross-section and length are reported dimensions, not swept-access qualification.
+
+Source: Reply to clarification call_480fe1cd47c74e63a4e13513c5f745e0
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [engineering/whole-amp/mechanical/review/tool-access-checks.json](<../../engineering/whole-amp/mechanical/review/tool-access-checks.json>)
+

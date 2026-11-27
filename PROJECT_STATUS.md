@@ -493,3 +493,6 @@ November26 FB-173: clarified minimum finished copper and 50% width margin in the
 
 
 November27 FB-175: reinforced aircraft-mechanic English in the writing standard, journal contract and chapter template. Revised the current composite-return chapter for direct wording and defined terms. Untouched historical chapters are not claimed reviewed. Electrical results and native files are unchanged by the writing edit.
+
+
+November27 CB-004 / FB-176–178: twelve ideal load/bias cases pass44 arithmetic checks. The500pF overload case needs8.4916mA load-only peak;13mA trial bias produces5.2W standing heat. No device, hot continuous operation or populated heat path is qualified. [Calculation](engineering/whole-amp/effects-loop/common-buffer/composite-review.html#output-current-heat). Drill tip-to-rear210 mm and bit projection28 mm are recorded; FB-178 resolves widest chuck to46.5 mm and supplies motor housing width51 mm. Housing height/axis offset, chuck length, actual fastener positions and swept access remain open. No native CAD change; objective6 remains incomplete.

@@ -80,7 +80,7 @@
         "reported_on": "2026-11-21",
         "diameter_mm": 270,
         "approximate": true,
-        "source": "User confirmed: Yes \u2014 27 cm (270 mm)",
+        "source": "User confirmed: Yes — 27 cm (270 mm)",
         "datum": "Inside edge to opposite inside edge of large round speaker opening, per S1 instructions",
         "horizontal_and_vertical_separately_reported": false,
         "reported_uncertainty_mm": null,
@@ -258,7 +258,7 @@
       "setup": "Per instructed isolated-tank procedure; operator reports readings, setup not independently inspected",
       "interpretation": "Finite winding-path DC resistance at both sockets; does not exclude shorted turns or establish acoustic performance, AC impedance, grounding or allowable drive current."
     },
-    "note": "Label photograph-confirmed. User-reported coil DC readings76ohm IN/235ohm OUT and outer envelope149.5\u00d760\u00d736.5mm now recorded in electrical_measurements/mechanical_measurements. AC test conditions, safe drive current, mounting-hole pattern and installed cable envelope remain unresolved.",
+    "note": "Label photograph-confirmed. User-reported coil DC readings76ohm IN/235ohm OUT and outer envelope149.5×60×36.5mm now recorded in electrical_measurements/mechanical_measurements. AC test conditions, safe drive current, mounting-hole pattern and installed cable envelope remain unresolved.",
     "supplier_statement_date": "2026-11-19",
     "supplier_statement_source": "User relayed seller reply in chat",
     "supplier_statement": "3 spring, input IMP 600ohm, Output IMP 2250ohm, MEDIUM DECAY, input insulated Output grounded, no lock, Mount horizontal Open side Down",
@@ -305,7 +305,7 @@
     "status": "PROPOSAL / paper-fit study only; no drilling or fabrication release",
     "source": "engineering/component-selection/evidence/control-panel-parts-2026-11-21.md",
     "panel_attachment": "Metal panel/chassis carries pot torque; wired solder lugs. Attachment holes and finished perimeter unresolved.",
-    "opening_basis": "FB-073 user measured307\u2013308mm straight narrow width and approximately53mm clear depth, upper rear cover ON. Use307mm width for provisional rectangular screen; actual corner shape, uncertainty and elevation unresolved.",
+    "opening_basis": "FB-073 user measured307–308mm straight narrow width and approximately53mm clear depth, upper rear cover ON. Use307mm width for provisional rectangular screen; actual corner shape, uncertainty and elevation unresolved.",
     "screen_frame_mm": [
       307,
       53
@@ -649,8 +649,8 @@
     "reported_on": "2026-11-21",
     "status": "partial-user-measurement-received",
     "user_reply": "I will have to give you that information tomorrow",
-    "verification": "46 mm chuck diameter received November24; bit reach and full drill body/length remain pending. No screw-access pass.",
-    "latest_source": "FB-120"
+    "verification": "Widest chuck46.5 mm and motor housing width51 mm received November27; diameter conflict resolved. Tip-to-rear210 mm and bit projection28 mm retained. Full tool approach/withdrawal remains unverified.",
+    "latest_source": "FB-178"
   },
   "speaker_offset_photo_review": {
     "source": "FB-079",
@@ -704,17 +704,36 @@
     "reported_on": "2026-11-24",
     "source_quote": "the chuck is 46 mm diameter at the turning part",
     "units": "mm",
-    "chuck_diameter_mm": 46,
+    "chuck_diameter_mm": 46.5,
     "reported_uncertainty_mm": null,
     "chuck_axial_length_mm": null,
-    "bit_projection_beyond_chuck_mm": null,
-    "motor_body_width_mm": null,
+    "bit_projection_beyond_chuck_mm": 28,
+    "motor_body_width_mm": 51,
     "motor_body_height_mm": null,
     "motor_body_offset_from_axis_mm": null,
-    "bit_tip_to_tool_back_mm": null,
+    "bit_tip_to_tool_back_mm": 210,
     "exact_model": null,
     "provisional_radial_allowance_mm": 2,
     "allowance_authority": "engineering proposal; not a measured tolerance or access qualification",
-    "status": "partial measurement; full approach/withdrawal not verified"
+    "status": "Reported chuck diameter, body width, bit projection and overall length recorded; full approach/withdrawal not verified",
+    "latest_source_feedback": "FB-178",
+    "latest_reported_on": "2026-11-27",
+    "latest_source_quote": "46.5 is widest chuck diameter, and the widest width of the motor housing is 51mm",
+    "latest_reported_chuck_diameter_mm": 46.5,
+    "chuck_diameter_use_basis": "FB-178 resolves39/46 mm reports; use46.5 mm widest chuck diameter.",
+    "length_conversion": "21 cm x 10 = 210 mm",
+    "measurement_setup": "Reply to usual screwdriver bit fitted instruction; setup and uncertainty not independently verified",
+    "measurement_history": [
+      {
+        "feedback": "FB-120",
+        "chuck_diameter_mm": 46
+      },
+      {
+        "feedback": "FB-176",
+        "chuck_diameter_mm": 39,
+        "bit_projection_beyond_chuck_mm": 28,
+        "bit_tip_to_tool_back_mm": 210
+      }
+    ]
   }
 }

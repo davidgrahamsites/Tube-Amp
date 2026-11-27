@@ -20,3 +20,5 @@ PCB envelope diagnostic: fit-register.json/pcb_envelope_study owns trial placeme
 Socket envelope seam: component-selection/socketing/socket-envelope.json is consumed read-only by tools/check_socket_fit.py. review/socket-fit-checks.json compares provisional DIP bodies and holes with native boards; it does not establish populated chassis, retention or drill access.
 
 Updated November24: FB-120 supplies46mm chuck diameter under fit-register.json/drill_tool_measurements. tools/check_tool_access.py generates review/tool-access-checks.json; full tool access remains pending. socket-study.md and tools/socket_fit_cad.py add conservative socket/IC bounds and service space to the existing failing board trial; read review/socket-fit-cad-checks.json.
+
+November27 FB-176/178: bit projection28 mm, tip-to-rear210 mm, widest chuck46.5 mm and motor housing width51 mm received. FB-178 resolves earlier39/46 mm reports. check_tool_access.py records dimensions and handling allowances; housing height/axis offset, chuck length, mounting positions and swept access remain open.

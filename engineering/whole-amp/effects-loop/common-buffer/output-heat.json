@@ -1,0 +1,28 @@
+{
+  "id": "CB-004",
+  "date": "2026-11-27",
+  "owner": "Amplifier integration",
+  "purpose": "Compare output current and mounting heat requirements before selecting a replacement for the small follower and sink devices.",
+  "supply_V": 400,
+  "output_dc_V": 200,
+  "signal_peak_V": 135,
+  "frequency_Hz": 20000,
+  "load_ohm": 340000,
+  "load_capacitance_pF": [100, 250, 500],
+  "trial_bias_A": [0.002, 0.003, 0.010, 0.013],
+  "ambient_C_assumed": 70,
+  "junction_design_limit_C_assumed": 125,
+  "insulating_interface_C_per_W_assumed": 2,
+  "candidates": [
+    {"part": "Vishay IRF820PbF", "type": "enhancement", "package": "TO-220AB", "VDS_V": 500, "theta_JC_max_C_per_W": 2.5, "theta_JA_max_C_per_W": 62, "source": "https://www.vishay.com/docs/91059/91059.pdf", "revision": "S21-0852 Rev D 16-Aug-2021", "notes": "DC/hot linear operation and exact source remain open. Larger switch-current rating does not approve linear operation."},
+    {"part": "Littelfuse/IXYS IXTP01N100D", "type": "depletion", "package": "TO-220", "VDS_V": 1000, "theta_JC_max_C_per_W": 5, "source": "https://www.littelfuse.com/assetdocs/littelfuse-discrete-mosfets-ixt-01n100d-datasheet?assetguid=90f68c0c-66ed-4288-bfb0-3c2769323c27", "revision": "DS98809F May2019", "notes": "Drain tab requires electrical isolation for a grounded common heat sink. Official model not retrieved; manufacturer page returned HTTP403. China listing is a lead, not stock or delivery approval.", "china_lead": "https://www.digikey.cn/zh/products/detail/ixys/IXTP01N100D/584171"}
+  ],
+  "other_screened_leads": [
+    {"part":"Microchip DN2470K4-G","source":"https://ww1.microchip.com/downloads/en/devicedoc/20005410a.pdf","note":"700V TO-252 option; no selection. A PCB heat path would need a separate calculation and exact hot limits."},
+    {"part":"Microchip DN3765","source":"https://www.microchip.com/en-us/product/DN3765","note":"650V TO-252 option; no selection. Official SPICE model not located in this pass."}
+  ],
+  "scope": "Ideal class-A pair calculation. Excludes feedback current, gate charging, gain-stage heat, bias tolerances, faults and shared heat from other parts. Current floor is a load-only lower bound. No physical model, SOA, sourcing or fit qualification.",
+  "headroom_basis": "135V peak/20kHz is a retained overload stress, not the normal 25W clean requirement. 100/250/500pF are load scenarios, not measured wiring capacitance.",
+  "selected_part": null,
+  "native_adopted": false
+}

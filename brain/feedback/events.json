@@ -2674,6 +2674,60 @@
       ],
       "supersedes": [],
       "next_action": "Use the maintenance-English review before each chapter delivery; revise older chapters when used. Continue current circuit, PCB and fit work."
+    },
+    {
+      "id": "FB-176",
+      "recorded_on": "2026-11-27",
+      "occurred_on": "2026-11-27",
+      "authority": "user",
+      "kind": "drill-envelope-measurements",
+      "quote": "21 cm from drill bit to back of drilll, 28mm bit to chuck, widest chuck 39mm",
+      "source": "Reply to drill measurement question call_f091c169b55d4a8f8b2347227bdc6e10",
+      "interpretation": "Tip-to-rear210 mm and bit projection28 mm recorded. New widest chuck39 mm conflicts with prior46 mm; retain46 mm provisional clearance envelope. Motor housing width is not supplied. Clarification pending; no access qualification.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/tool-access-checks.json"
+      ],
+      "supersedes": [],
+      "next_action": "Resolve chuck diameter and obtain motor housing width; check complete approach/withdrawal against populated assembly and actual fastener positions."
+    },
+    {
+      "id": "FB-177",
+      "recorded_on": "2026-11-27",
+      "occurred_on": "2026-11-27",
+      "authority": "engineer",
+      "kind": "output-stage-current-heat-screen",
+      "quote": "CB-004: a larger transistor package alone does not establish the required heat path.",
+      "source": "engineering/whole-amp/effects-loop/common-buffer/results/output-heat.json",
+      "interpretation": "Twelve ideal load/bias cases pass44 arithmetic checks. At135V peak20kHz/340kohm/500pF, load-only peak8.4916mA;13mA trial bias produces5.2W standing pair heat. Calculated shared-sink limits8.327/7.077C/W assume70C ambient125C target2C/W interface. No device/SOA/sourcing/fit qualification or native change.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/common-buffer/composite-review.html",
+        "engineering/whole-amp/effects-loop/common-buffer/output-heat.json",
+        "docs/design-journal/chapters/composite-return-feasibility.html"
+      ],
+      "supersedes": [],
+      "next_action": "Determine actual integrated load, qualify hot continuous devices and gate protection; then select insulated heat path and check populated chassis access."
+    },
+    {
+      "id": "FB-178",
+      "recorded_on": "2026-11-27",
+      "occurred_on": "2026-11-27",
+      "authority": "user",
+      "kind": "drill-diameter-clarification",
+      "quote": "46.5 is widest chuck diameter, and the widest width of the motor housing is 51mm",
+      "source": "Reply to clarification call_480fe1cd47c74e63a4e13513c5f745e0",
+      "interpretation": "Use46.5 mm maximum chuck diameter and51 mm motor housing width. Resolves earlier39/46 mm discrepancy. Retain210 mm tip-to-rear and28 mm projection. Cross-section and length are reported dimensions, not swept-access qualification.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/tool-access-checks.json"
+      ],
+      "supersedes": [
+        "FB-176"
+      ],
+      "next_action": "Use measured width/length in assembly study; establish housing shape/axis offset, chuck length and actual fasteners before swept-clearance approval."
     }
   ]
 }

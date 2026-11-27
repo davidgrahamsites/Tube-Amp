@@ -12,7 +12,7 @@
     <article>
       <header>
         <h1>Composite recovery stage feasibility</h1>
-        <p><time datetime="2026-11-26">November 26, 2026</time> · CB-002 · Model evidence only; no device or circuit adopted</p>
+        <p><time datetime="2026-11-27">November 26–27, 2026</time> · CB-002–004 and FB-176/178 · Model and partial measurement evidence only; no device or circuit adopted</p>
       </header>
 
       <section>
@@ -78,6 +78,43 @@
       </section>
 
       <section>
+        <h2>CB-004 output current and heat screen</h2>
+        <p>This calculation asks how much output current and shared heat sinking a two-device class-A output pair may need. The 135 V peak at 20 kHz is an overload stress case. It is not the normal 25 W clean-output requirement. The 100 pF, 250 pF, and 500 pF values are load scenarios. They are not measured wiring capacitance.</p>
+        <p>For a resistive load in parallel with capacitance, calculate peak load current from the resistor and capacitor currents, which differ in phase by 90 degrees:</p>
+        <div class="math">\[I_{load,pk}=\sqrt{\left(\frac{V_{pk}}{R_L}\right)^2+\left(2\pi f C_L V_{pk}\right)^2}\]</div>
+        <p>Use <span class="math">\(V_{pk}=135\;\mathrm V\)</span>, <span class="math">\(R_L=340\;\mathrm{k\Omega}\)</span>, and <span class="math">\(f=20\;\mathrm{kHz}\)</span>. The resistor current is <span class="math">\(135/340{,}000=0.397059\;\mathrm{mA}\)</span>. The calculated total peaks are:</p>
+        <table>
+          <thead><tr><th>Load capacitance</th><th>Peak load current</th><th>2 mA bias minus peak</th></tr></thead>
+          <tbody>
+            <tr><td>100 pF</td><td>1.742307 mA</td><td>+0.257693 mA</td></tr>
+            <tr><td>250 pF</td><td>4.259696 mA</td><td>−2.259696 mA</td></tr>
+            <tr><td>500 pF</td><td>8.491588 mA</td><td>−6.491588 mA</td></tr>
+          </tbody>
+        </table>
+        <p>This is a load-only current floor. It excludes feedback current, gate charging, bias variation, protection, and faults. The 2 mA bias clears the 100 pF scenario only. It does not clear 250 pF or 500 pF. At 500 pF, a 13 mA trial bias leaves <span class="math">\(13-8.491588=4.508412\;\mathrm{mA}\)</span> above this load-current floor. This is not a chosen bias or a complete current rating.</p>
+        <p>At the stated 200 V output bias and 400 V supply, the 13 mA no-signal standing losses are:</p>
+        <div class="math">\[P_{follower}=(400-200)(0.013)=2.6\;\mathrm W,\quad P_{sink}=200(0.013)=2.6\;\mathrm W,\quad P_{pair}=5.2\;\mathrm W\]</div>
+        <p>The model allocates a shared sink with 70 °C ambient, a 125 °C junction design target, and an assumed 2 °C/W insulating interface. For each device, calculate local case-to-junction rise from its 2.6 W standing loss, then allocate the remaining rise across the shared sink:</p>
+        <div class="math">\[\theta_{SA,max}=\frac{T_{J,target}-T_A-P_{device}(\theta_{JC}+\theta_{interface})}{P_{pair}}\]</div>
+        <table>
+          <thead><tr><th>Illustrative lead</th><th>Maximum \(\theta_{JC}\)</th><th>Calculated common sink-to-air ceiling</th></tr></thead>
+          <tbody>
+            <tr><td>IRF820PbF</td><td>2.5 °C/W</td><td>8.3269 °C/W</td></tr>
+            <tr><td>IXTP01N100D</td><td>5 °C/W</td><td>7.0769 °C/W</td></tr>
+          </tbody>
+        </table>
+        <p>For the IRF820 example, the local rise is <span class="math">\(2.6(2.5+2)=11.7\;^\circ\mathrm C\)</span>; the remaining sink budget is <span class="math">\((125-70-11.7)/5.2=8.3269\;^\circ\mathrm C/\mathrm W\)</span>. For the IXTP01N100D, it is <span class="math">\((125-70-2.6(5+2))/5.2=7.0769\;^\circ\mathrm C/\mathrm W\)</span>. The insulating interface value is assumed. These ceilings reach the junction target exactly. Select a lower sink resistance after mounting tolerances, enclosure airflow and other shared heat are known. Neither result selects a device or heat sink.</p>
+        <p>The calculation receipt passes 44 checks. These examples do not qualify safe operating area, DC or hot linear operation, exact sourcing, tab insulation, mounting fit, bias tolerance, or shared heat from nearby parts. No device is selected. Native CAD is unchanged.</p>
+      </section>
+
+      <section>
+        <h2>FB-176/178 drill measurements</h2>
+        <p>FB-176 reported 21 cm from the drill-bit tip to the tool back and 28 mm from the bit to the chuck. The first value converts to <span class="math">\(21\;\mathrm{cm}\times10=210\;\mathrm{mm}\)</span>. FB-176 also reported a 39 mm widest chuck. FB-178 clarified that the widest chuck diameter is 46.5 mm and the motor housing is 51 mm wide. This resolves the earlier chuck conflict; the 39 mm report remains part of the measurement history.</p>
+        <p>With the proposed 2 mm clearance allowance on each side, the chuck cross-section is <span class="math">\(46.5+2(2)=50.5\;\mathrm{mm}\)</span>. The corresponding axis-to-obstruction distance is <span class="math">\(46.5/2+2=25.25\;\mathrm{mm}\)</span>, only where the obstruction overlaps the chuck axially. For the motor housing, the same allowance gives <span class="math">\(51+2(2)=55\;\mathrm{mm}\)</span> across its width. Do not treat the housing as a circular envelope centered on the drill axis.</p>
+        <p>The exact tool model, measurement setup, and uncertainty are not verified. Housing height and axis offset, chuck axial length, and fastener positions remain unknown. Full approach, withdrawal, stabilization, and screw access remain unverified. These dimensions do not establish swept clearance or a pass.</p>
+      </section>
+
+      <section>
         <h2>Vocabulary</h2><dl><dt>Compensation</dt><dd>Parts used to control feedback response and reduce the risk of oscillation.</dd><dt>IDSS</dt><dd>Drain current at zero gate-to-source voltage under stated test conditions.</dd><dt>Threshold voltage</dt><dd>A model or data-sheet value used to describe when transistor conduction changes.</dd><dt>Square-law model</dt><dd>A simplified transistor model in which current depends on the square of a voltage difference.</dd><dt>Current-balance error</dt><dd>The difference between currents entering and leaving a connection point.</dd><dt>Safe operating area</dt><dd>Allowed combinations of voltage, current, temperature and time for a device.</dd></dl>
         <dl>
           <dt>AC</dt><dd>Alternating current; a small-signal frequency test in this record.</dd>
@@ -92,6 +129,10 @@
           <dt>Valid model domain</dt><dd>The voltage and current range where the model represents supported behavior.</dd>
           <dt>Internal node guess</dt><dd>A starting estimate for a simulator's numerical solution. It does not set or force the final voltage.</dd>
           <dt>.nodeset</dt><dd>An ngspice command that gives initial voltage guesses while allowing the solver to find its own final operating point.</dd>
+          <dt>Load-only current floor</dt><dd>Minimum peak output current calculated for the stated load alone. It excludes feedback, gate charging, tolerances, and faults.</dd>
+          <dt>Standing loss</dt><dd>Power dissipated at the stated DC bias before the output signal is applied.</dd>
+          <dt>Sink-to-air thermal resistance</dt><dd>Temperature rise of the shared heat sink divided by its total heat flow to air, in °C/W.</dd>
+          <dt>Motor-body offset</dt><dd>Distance between the drill axis and the outer motor housing.</dd>
         </dl>
       </section>
 
@@ -107,6 +148,11 @@
           <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-comp10-strong.json">10 pF strong sensitivity</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-comp10-weak.json">weak sensitivity</a>, and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-low-threshold-seeded.json">seeded low-threshold result</a>.</li>
           <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-servo-sink-1k.json">Servo sink at 1 kHz</a> and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-servo-sink-20k.json">servo sink at 20 kHz</a>.</li>
           <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-20k-cap500.json">500 pF ideal-sink stress result</a>.</li>
+          <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/output-heat.json">CB-004 load and heat inputs</a> and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/output-heat.json">44-check calculation receipt</a>.</li>
+          <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/tools/output_heat.py">CB-004 calculation tool</a> — current, standing loss, and shared-sink budgets.</li>
+          <li><a href="https://www.vishay.com/docs/91059/91059.pdf">Vishay IRF820PbF data sheet</a> and <a href="https://www.littelfuse.com/assetdocs/littelfuse-discrete-mosfets-ixt-01n100d-datasheet?assetguid=90f68c0c-66ed-4288-bfb0-3c2769323c27">Littelfuse/IXYS IXTP01N100D data sheet</a> — thermal-property inputs only; operating-area and exact-device qualification remain open.</li>
+          <li><a href="../../../brain/feedback/events.json">FB-176/178 user measurement records</a> and <a href="../../../engineering/whole-amp/mechanical/fit-register.json">mechanical fit register</a> — retained 210 mm length and 28 mm bit projection, clarified 46.5 mm chuck and 51 mm housing width, and remaining measurements.</li>
+          <li><a href="../../../engineering/whole-amp/mechanical/review/tool-access-checks.json">Updated partial tool-access screen</a> — 50.5 mm chuck envelope and 55 mm housing width with proposed allowances; no swept access or screw-access pass.</li>
           <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/operating-point.json">CB-003 operating-point test contract</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/op-summary.json">20-run result receipt</a>, and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/op-audit.json">69-check audit</a>.</li>
           <li><a href="https://www.microchip.com/content/dam/mchp/documents/OTH/ProductDocuments/DataSheets/LND150-LND250-N-Channel-Depletion-Mode-DMOS-FETs-Data-Sheet-20005454A.pdf">Microchip LND150/LND250 data sheet</a> — sensitivity source; not a model for the generic transistor.</li>
         </ul>

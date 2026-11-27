@@ -16,10 +16,19 @@ missing = [k for k in (
     'motor_body_offset_from_axis_mm', 'bit_tip_to_tool_back_mm'
 ) if tool[k] is None]
 result = {
-    'scope': 'Reported chuck cross-section only; not a swept tool collision test',
-    'source_feedback': tool['source_feedback'],
-    'measured_chuck_diameter_mm': diameter,
+    'scope': 'Partial tool dimensions and conservative chuck cross-section; not a swept collision test',
+    'source_feedback': tool.get('latest_source_feedback', tool['source_feedback']),
+    'clearance_chuck_diameter_mm': diameter,
+    'latest_reported_chuck_diameter_mm': tool.get('latest_reported_chuck_diameter_mm', diameter),
+    'chuck_diameter_conflict': tool.get('latest_reported_chuck_diameter_mm', diameter) != diameter,
+    'latest_source_feedback': tool.get('latest_source_feedback', tool['source_feedback']),
+    'bit_projection_beyond_chuck_mm': tool['bit_projection_beyond_chuck_mm'],
+    'bit_tip_to_tool_back_mm': tool['bit_tip_to_tool_back_mm'],
+    'chuck_front_to_tool_back_mm': (tool['bit_tip_to_tool_back_mm'] - tool['bit_projection_beyond_chuck_mm']) if tool['bit_tip_to_tool_back_mm'] is not None and tool['bit_projection_beyond_chuck_mm'] is not None else None,
     'chuck_radius_mm': diameter / 2,
+    'motor_body_width_mm': tool['motor_body_width_mm'],
+    'proposed_motor_width_with_allowance_mm': tool['motor_body_width_mm'] + 2 * margin if tool['motor_body_width_mm'] is not None else None,
+    'motor_width_scope': 'Across housing only; not a centered circular envelope. Height and axis offset remain unknown.',
     'proposed_radial_allowance_mm': margin,
     'proposed_cross_section_diameter_mm': diameter + 2 * margin,
     'conditional_axis_to_obstruction_mm': diameter / 2 + margin,

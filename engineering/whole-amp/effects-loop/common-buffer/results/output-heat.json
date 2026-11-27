@@ -1,0 +1,385 @@
+{
+  "id": "CB-004",
+  "date": "2026-11-27",
+  "input_hashes": {
+    "engineering/whole-amp/effects-loop/common-buffer/output-heat.json": "3ac4953b5c3ad547a18833f47588aed6f5a2086b37db01c94dd03e7fd05ad497",
+    "engineering/whole-amp/effects-loop/common-buffer/tools/output_heat.py": "4a16cb5fa5ecb5318fdff8a8efbf50414b127fc4befec353cdb7d7b4d1943f6b"
+  },
+  "checks": {
+    "100:current_peak": true,
+    "100:0.002:power_integral": true,
+    "100:0.002:Vishay IRF820PbF:thermal_balance": true,
+    "100:0.002:Littelfuse/IXYS IXTP01N100D:thermal_balance": true,
+    "100:0.003:power_integral": true,
+    "100:0.003:Vishay IRF820PbF:thermal_balance": true,
+    "100:0.003:Littelfuse/IXYS IXTP01N100D:thermal_balance": true,
+    "100:0.01:power_integral": true,
+    "100:0.01:Vishay IRF820PbF:thermal_balance": true,
+    "100:0.01:Littelfuse/IXYS IXTP01N100D:thermal_balance": true,
+    "100:0.013:power_integral": true,
+    "100:0.013:Vishay IRF820PbF:thermal_balance": true,
+    "100:0.013:Littelfuse/IXYS IXTP01N100D:thermal_balance": true,
+    "250:current_peak": true,
+    "250:0.002:power_integral": true,
+    "250:0.002:Vishay IRF820PbF:thermal_balance": true,
+    "250:0.002:Littelfuse/IXYS IXTP01N100D:thermal_balance": true,
+    "250:0.003:power_integral": true,
+    "250:0.003:Vishay IRF820PbF:thermal_balance": true,
+    "250:0.003:Littelfuse/IXYS IXTP01N100D:thermal_balance": true,
+    "250:0.01:power_integral": true,
+    "250:0.01:Vishay IRF820PbF:thermal_balance": true,
+    "250:0.01:Littelfuse/IXYS IXTP01N100D:thermal_balance": true,
+    "250:0.013:power_integral": true,
+    "250:0.013:Vishay IRF820PbF:thermal_balance": true,
+    "250:0.013:Littelfuse/IXYS IXTP01N100D:thermal_balance": true,
+    "500:current_peak": true,
+    "500:0.002:power_integral": true,
+    "500:0.002:Vishay IRF820PbF:thermal_balance": true,
+    "500:0.002:Littelfuse/IXYS IXTP01N100D:thermal_balance": true,
+    "500:0.003:power_integral": true,
+    "500:0.003:Vishay IRF820PbF:thermal_balance": true,
+    "500:0.003:Littelfuse/IXYS IXTP01N100D:thermal_balance": true,
+    "500:0.01:power_integral": true,
+    "500:0.01:Vishay IRF820PbF:thermal_balance": true,
+    "500:0.01:Littelfuse/IXYS IXTP01N100D:thermal_balance": true,
+    "500:0.013:power_integral": true,
+    "500:0.013:Vishay IRF820PbF:thermal_balance": true,
+    "500:0.013:Littelfuse/IXYS IXTP01N100D:thermal_balance": true,
+    "native_not_adopted": true,
+    "all_cases": true,
+    "500p_13mA_current": true,
+    "500p_13mA_heat": true,
+    "500p_13mA_sink_budget": true
+  },
+  "passed": true,
+  "cases": [
+    {
+      "load_pF": 100,
+      "bias_A": 0.002,
+      "load_peak_A": 0.001742306618451591,
+      "load_current_margin_ratio": 1.1479035772575004,
+      "ideal_follower_min_A": 0.000257693381548409,
+      "load_current_floor_met": true,
+      "follower_sine_mean_W_if_no_cutoff": 0.37319852941176473,
+      "sink_sine_mean_W": 0.4,
+      "follower_standing_W": 0.4,
+      "sink_standing_W": 0.4,
+      "pair_standing_W": 0.8,
+      "mounting": [
+        {
+          "part": "Vishay IRF820PbF",
+          "common_sink_to_air_budget_C_per_W": 66.5,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": 94.8
+        },
+        {
+          "part": "Littelfuse/IXYS IXTP01N100D",
+          "common_sink_to_air_budget_C_per_W": 65.25,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": null
+        }
+      ]
+    },
+    {
+      "load_pF": 100,
+      "bias_A": 0.003,
+      "load_peak_A": 0.001742306618451591,
+      "load_current_margin_ratio": 1.7218553658862505,
+      "ideal_follower_min_A": 0.001257693381548409,
+      "load_current_floor_met": true,
+      "follower_sine_mean_W_if_no_cutoff": 0.5731985294117646,
+      "sink_sine_mean_W": 0.6,
+      "follower_standing_W": 0.6,
+      "sink_standing_W": 0.6,
+      "pair_standing_W": 1.2,
+      "mounting": [
+        {
+          "part": "Vishay IRF820PbF",
+          "common_sink_to_air_budget_C_per_W": 43.583333333333336,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": 107.19999999999999
+        },
+        {
+          "part": "Littelfuse/IXYS IXTP01N100D",
+          "common_sink_to_air_budget_C_per_W": 42.333333333333336,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": null
+        }
+      ]
+    },
+    {
+      "load_pF": 100,
+      "bias_A": 0.01,
+      "load_peak_A": 0.001742306618451591,
+      "load_current_margin_ratio": 5.739517886287501,
+      "ideal_follower_min_A": 0.00825769338154841,
+      "load_current_floor_met": true,
+      "follower_sine_mean_W_if_no_cutoff": 1.9731985294117647,
+      "sink_sine_mean_W": 2.0,
+      "follower_standing_W": 2.0,
+      "sink_standing_W": 2.0,
+      "pair_standing_W": 4.0,
+      "mounting": [
+        {
+          "part": "Vishay IRF820PbF",
+          "common_sink_to_air_budget_C_per_W": 11.5,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": 194.0
+        },
+        {
+          "part": "Littelfuse/IXYS IXTP01N100D",
+          "common_sink_to_air_budget_C_per_W": 10.25,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": null
+        }
+      ]
+    },
+    {
+      "load_pF": 100,
+      "bias_A": 0.013,
+      "load_peak_A": 0.001742306618451591,
+      "load_current_margin_ratio": 7.461373252173751,
+      "ideal_follower_min_A": 0.011257693381548408,
+      "load_current_floor_met": true,
+      "follower_sine_mean_W_if_no_cutoff": 2.5731985294117647,
+      "sink_sine_mean_W": 2.6,
+      "follower_standing_W": 2.6,
+      "sink_standing_W": 2.6,
+      "pair_standing_W": 5.2,
+      "mounting": [
+        {
+          "part": "Vishay IRF820PbF",
+          "common_sink_to_air_budget_C_per_W": 8.326923076923077,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": 231.20000000000002
+        },
+        {
+          "part": "Littelfuse/IXYS IXTP01N100D",
+          "common_sink_to_air_budget_C_per_W": 7.076923076923076,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": null
+        }
+      ]
+    },
+    {
+      "load_pF": 250,
+      "bias_A": 0.002,
+      "load_peak_A": 0.004259695966888707,
+      "load_current_margin_ratio": 0.46951707716849217,
+      "ideal_follower_min_A": -0.002259695966888707,
+      "load_current_floor_met": false,
+      "follower_sine_mean_W_if_no_cutoff": null,
+      "sink_sine_mean_W": 0.4,
+      "follower_standing_W": 0.4,
+      "sink_standing_W": 0.4,
+      "pair_standing_W": 0.8,
+      "mounting": [
+        {
+          "part": "Vishay IRF820PbF",
+          "common_sink_to_air_budget_C_per_W": 66.5,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": 94.8
+        },
+        {
+          "part": "Littelfuse/IXYS IXTP01N100D",
+          "common_sink_to_air_budget_C_per_W": 65.25,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": null
+        }
+      ]
+    },
+    {
+      "load_pF": 250,
+      "bias_A": 0.003,
+      "load_peak_A": 0.004259695966888707,
+      "load_current_margin_ratio": 0.7042756157527383,
+      "ideal_follower_min_A": -0.001259695966888707,
+      "load_current_floor_met": false,
+      "follower_sine_mean_W_if_no_cutoff": null,
+      "sink_sine_mean_W": 0.6,
+      "follower_standing_W": 0.6,
+      "sink_standing_W": 0.6,
+      "pair_standing_W": 1.2,
+      "mounting": [
+        {
+          "part": "Vishay IRF820PbF",
+          "common_sink_to_air_budget_C_per_W": 43.583333333333336,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": 107.19999999999999
+        },
+        {
+          "part": "Littelfuse/IXYS IXTP01N100D",
+          "common_sink_to_air_budget_C_per_W": 42.333333333333336,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": null
+        }
+      ]
+    },
+    {
+      "load_pF": 250,
+      "bias_A": 0.01,
+      "load_peak_A": 0.004259695966888707,
+      "load_current_margin_ratio": 2.347585385842461,
+      "ideal_follower_min_A": 0.005740304033111293,
+      "load_current_floor_met": true,
+      "follower_sine_mean_W_if_no_cutoff": 1.9731985294117647,
+      "sink_sine_mean_W": 2.0,
+      "follower_standing_W": 2.0,
+      "sink_standing_W": 2.0,
+      "pair_standing_W": 4.0,
+      "mounting": [
+        {
+          "part": "Vishay IRF820PbF",
+          "common_sink_to_air_budget_C_per_W": 11.5,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": 194.0
+        },
+        {
+          "part": "Littelfuse/IXYS IXTP01N100D",
+          "common_sink_to_air_budget_C_per_W": 10.25,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": null
+        }
+      ]
+    },
+    {
+      "load_pF": 250,
+      "bias_A": 0.013,
+      "load_peak_A": 0.004259695966888707,
+      "load_current_margin_ratio": 3.0518610015951992,
+      "ideal_follower_min_A": 0.008740304033111292,
+      "load_current_floor_met": true,
+      "follower_sine_mean_W_if_no_cutoff": 2.5731985294117647,
+      "sink_sine_mean_W": 2.6,
+      "follower_standing_W": 2.6,
+      "sink_standing_W": 2.6,
+      "pair_standing_W": 5.2,
+      "mounting": [
+        {
+          "part": "Vishay IRF820PbF",
+          "common_sink_to_air_budget_C_per_W": 8.326923076923077,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": 231.20000000000002
+        },
+        {
+          "part": "Littelfuse/IXYS IXTP01N100D",
+          "common_sink_to_air_budget_C_per_W": 7.076923076923076,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": null
+        }
+      ]
+    },
+    {
+      "load_pF": 500,
+      "bias_A": 0.002,
+      "load_peak_A": 0.008491588296266134,
+      "load_current_margin_ratio": 0.23552719823680418,
+      "ideal_follower_min_A": -0.006491588296266134,
+      "load_current_floor_met": false,
+      "follower_sine_mean_W_if_no_cutoff": null,
+      "sink_sine_mean_W": 0.4,
+      "follower_standing_W": 0.4,
+      "sink_standing_W": 0.4,
+      "pair_standing_W": 0.8,
+      "mounting": [
+        {
+          "part": "Vishay IRF820PbF",
+          "common_sink_to_air_budget_C_per_W": 66.5,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": 94.8
+        },
+        {
+          "part": "Littelfuse/IXYS IXTP01N100D",
+          "common_sink_to_air_budget_C_per_W": 65.25,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": null
+        }
+      ]
+    },
+    {
+      "load_pF": 500,
+      "bias_A": 0.003,
+      "load_peak_A": 0.008491588296266134,
+      "load_current_margin_ratio": 0.35329079735520624,
+      "ideal_follower_min_A": -0.005491588296266134,
+      "load_current_floor_met": false,
+      "follower_sine_mean_W_if_no_cutoff": null,
+      "sink_sine_mean_W": 0.6,
+      "follower_standing_W": 0.6,
+      "sink_standing_W": 0.6,
+      "pair_standing_W": 1.2,
+      "mounting": [
+        {
+          "part": "Vishay IRF820PbF",
+          "common_sink_to_air_budget_C_per_W": 43.583333333333336,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": 107.19999999999999
+        },
+        {
+          "part": "Littelfuse/IXYS IXTP01N100D",
+          "common_sink_to_air_budget_C_per_W": 42.333333333333336,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": null
+        }
+      ]
+    },
+    {
+      "load_pF": 500,
+      "bias_A": 0.01,
+      "load_peak_A": 0.008491588296266134,
+      "load_current_margin_ratio": 1.1776359911840208,
+      "ideal_follower_min_A": 0.0015084117037338658,
+      "load_current_floor_met": true,
+      "follower_sine_mean_W_if_no_cutoff": 1.9731985294117647,
+      "sink_sine_mean_W": 2.0,
+      "follower_standing_W": 2.0,
+      "sink_standing_W": 2.0,
+      "pair_standing_W": 4.0,
+      "mounting": [
+        {
+          "part": "Vishay IRF820PbF",
+          "common_sink_to_air_budget_C_per_W": 11.5,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": 194.0
+        },
+        {
+          "part": "Littelfuse/IXYS IXTP01N100D",
+          "common_sink_to_air_budget_C_per_W": 10.25,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": null
+        }
+      ]
+    },
+    {
+      "load_pF": 500,
+      "bias_A": 0.013,
+      "load_peak_A": 0.008491588296266134,
+      "load_current_margin_ratio": 1.530926788539227,
+      "ideal_follower_min_A": 0.004508411703733865,
+      "load_current_floor_met": true,
+      "follower_sine_mean_W_if_no_cutoff": 2.5731985294117647,
+      "sink_sine_mean_W": 2.6,
+      "follower_standing_W": 2.6,
+      "sink_standing_W": 2.6,
+      "pair_standing_W": 5.2,
+      "mounting": [
+        {
+          "part": "Vishay IRF820PbF",
+          "common_sink_to_air_budget_C_per_W": 8.326923076923077,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": 231.20000000000002
+        },
+        {
+          "part": "Littelfuse/IXYS IXTP01N100D",
+          "common_sink_to_air_budget_C_per_W": 7.076923076923076,
+          "interface_is_assumed": true,
+          "bare_air_junction_C_if_theta_JA_given": null
+        }
+      ]
+    }
+  ],
+  "selected_part": null,
+  "native_adopted": false,
+  "SOA_qualified": false,
+  "physical_fit_qualified": false
+}
