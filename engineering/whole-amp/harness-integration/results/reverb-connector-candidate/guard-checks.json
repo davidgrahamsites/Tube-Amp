@@ -1,0 +1,53 @@
+{
+  "id": "HI-008-CU003-GUARDS",
+  "input_hashes": {
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "a620ede01b83c953503f7eed2e26fc27f381380e295ca36dd900121ef188d51a",
+    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "23a4f21d1ac64a9bb831952a239c0407a23f2a2550c2dea8cfd8bc678226a2e3",
+    "engineering/whole-amp/harness-integration/tools/check_reverb_connector.py": "02460a1caf1ddb7e9962b35aecb01a199b1cc827a94fbbbd3c814bf396931887",
+    "engineering/whole-amp/harness-integration/tools/test_reverb_candidate_guards.py": "78f8c99bef9f206aa2ce3c27378f70e2dc430b402f9e73151d24714d3e807031"
+  },
+  "controls": {
+    "undersized_relay": {
+      "rejected": true,
+      "target_gate_failed": true,
+      "failed_checks": [
+        "existing_routes_only_declared_width_and_endpoint_changes",
+        "declared_native_widths_and_necks",
+        "zero_DRC_violations"
+      ],
+      "drc": {
+        "violations": 1,
+        "unconnected": 0,
+        "sha256": "3c7015110aa2011c2aa9b31cd105becb65f00d11c947dcb960cf2b01f797de1d"
+      }
+    },
+    "altered_ground_endpoint": {
+      "rejected": true,
+      "target_gate_failed": true,
+      "failed_checks": [
+        "existing_routes_only_declared_width_and_endpoint_changes"
+      ],
+      "drc": {
+        "violations": 0,
+        "unconnected": 0,
+        "sha256": "fd27237b8813dedccf42c19b7cf584453af4333ddede301157e1d27555e43b5d"
+      }
+    },
+    "widened_HV_adjacent_neck": {
+      "rejected": true,
+      "target_gate_failed": true,
+      "failed_checks": [
+        "existing_routes_only_declared_width_and_endpoint_changes",
+        "declared_native_widths_and_necks",
+        "zero_DRC_violations"
+      ],
+      "drc": {
+        "violations": 1,
+        "unconnected": 0,
+        "sha256": "67730c733620eb6c1d50083b25764a8f28066a880cd45bdbac3e3ff8d4058397"
+      }
+    }
+  },
+  "all_pass": true,
+  "source_candidate_preserved": true
+}

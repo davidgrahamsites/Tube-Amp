@@ -5,3 +5,6 @@
 
 (rule "HI008 wet signal width" (condition "A.NetName == 'WET_TOP' || A.NetName == 'WET_W'") (constraint track_width (min 0.60mm)))
 (rule "CU002 supply width" (condition "A.NetName == '+15V' || A.NetName == '-15V'") (constraint track_width (min 0.80mm)))
+(rule "CU003 relay and driver width" (condition "A.NetName == '+12V' || A.NetName == 'COIL_REV' || A.NetName == 'DRIVER' || A.NetName == 'DRIVE_CAP' || A.NetName == 'TANK_IN'") (constraint track_width (min 0.80mm)))
+(rule "CU003 audio width" (condition "A.NetName == 'SEND_BUF' || A.NetName == 'REC_OUT' || A.NetName == 'WET_BUF' || A.NetName == 'SUM_INV' || A.NetName == 'OUT_BUF' || A.NetName == 'OUT_AC'") (constraint track_width (min 0.60mm)))
+(rule "CU003 ground local minimum" (condition "A.NetName == 'GND'") (constraint track_width (min 0.30mm)))

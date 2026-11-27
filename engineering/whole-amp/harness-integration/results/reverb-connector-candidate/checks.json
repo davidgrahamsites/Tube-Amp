@@ -4,14 +4,14 @@
   "kicad": "10.0.6",
   "input_hashes": {
     "engineering/whole-amp/reverb-600/circuit.json": "db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a",
-    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "e2f6a2494cfc7db3067f9249dcaab8711794704427e7c40575d7d1d05538c5b2",
+    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "23a4f21d1ac64a9bb831952a239c0407a23f2a2550c2dea8cfd8bc678226a2e3",
     "engineering/whole-amp/harness-integration/connector-contract.json": "f3d904b57bb70fad5094e9e59fc3f99864ddf3512d1e19461f9958ef421c68f6",
     "engineering/whole-amp/harness-integration/mating-geometry.json": "cc6b5892b4f42fcc5246c734eef537f7440f4b965587035bebe6dc69c13ef377",
     "engineering/whole-amp/harness-integration/wire-dressing.json": "e39f2dd9770749a16d467b1270d99eb936329be8540c6cdcd798ae038b8708dc",
     "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "fa4ac0cbd3ced9b9e0758001c0f2cd488ded0953d3e2fd30025a6d57cc70da3d",
-    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "ded8f7aaff4cdd16f1646c6ddfba8537060149c1edf900f80ef343dc9396d4bc",
-    "engineering/whole-amp/harness-integration/tools/check_reverb_connector.py": "4c10ef322e63f30f8bd8248e5ebf235f287269d0aa5bba52cb994a418ced9b13",
-    "engineering/whole-amp/harness-integration/tools/place_reverb_connector.py": "63236755c407a228519a561f36c081b4a147b43fc2350785fc88a8e87beccc3f"
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "a620ede01b83c953503f7eed2e26fc27f381380e295ca36dd900121ef188d51a",
+    "engineering/whole-amp/harness-integration/tools/check_reverb_connector.py": "02460a1caf1ddb7e9962b35aecb01a199b1cc827a94fbbbd3c814bf396931887",
+    "engineering/whole-amp/harness-integration/tools/place_reverb_connector.py": "9078ca019e91f92f4dc1b8b20dcfc23f0c3cdc760d36ee3c91d7f1b7554ea0da"
   },
   "checks": {
     "source_revision": true,
@@ -32,7 +32,8 @@
     "existing_custom_rules_preserved": true,
     "other_setup_preserved": true,
     "nominal_stackup": true,
-    "existing_declared_routes_width_only": true,
+    "overrides_reference_retained_items": true,
+    "existing_routes_only_declared_width_and_endpoint_changes": true,
     "circuit_terminal_parity": true,
     "pot_nets_preserved": true,
     "position_and_orientation": true,
@@ -42,11 +43,12 @@
     "round_locator_drill": true,
     "requested_route_style": true,
     "new_trace_width_requirement": true,
-    "whole_declared_nets_widened": true,
+    "declared_native_widths_and_necks": true,
+    "detours_use_45_degree_or_orthogonal_segments": true,
     "via_project_minimum": true,
     "rectangular_board_datum": true,
     "nominal_mating_edge_rule": true,
-    "only_pot_net_lengths_changed": true,
+    "only_declared_net_lengths_changed": true,
     "zero_DRC_violations": true,
     "zero_open_connections": true
   },
@@ -147,14 +149,15 @@
     "finger_space_mm": null
   },
   "route_length_delta_mm": {
-    "GND": 6.703961,
+    "+12V": 0.6,
+    "GND": 6.411068,
     "WET_TOP": 31.156854,
     "WET_W": -4.134416
   },
   "drc": {
     "violations": 0,
     "unconnected": 0,
-    "sha256": "9773429076f03df1aa5c41db46e1b744cf4c952a1e15e876672abaa61f761f22"
+    "sha256": "6c3289e7ae0d1e1871bfaa261e4ecd5fe658cf65449ecae6d594df21f326845e"
   },
   "evidence_checks_pass": true,
   "native_adoption": false,
@@ -166,6 +169,7 @@
     "Additional four-cavity symbol/NC metadata must be integrated before native adoption",
     "New trace length and via parasitics require electrical comparison before release",
     "Copper DC screen is conditional; finished foil/barrel minima, populated thermal behavior, startup/fault protection and remaining board current paths are not qualified",
-    "CU-002 supply widening meets only the conditional DC-drop and width-margin screen; supply protection, transients and thermal rise remain open"
+    "CU-002 supply widening meets only the conditional DC-drop and width-margin screen; supply protection, transients and thermal rise remain open",
+    "CU-003 broadening is a geometric/resistance improvement only; shared ground, relay/driver current, thermal rise, fault protection and sensitive-node loading still require qualification."
   ]
 }

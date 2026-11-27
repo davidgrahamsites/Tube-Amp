@@ -1802,3 +1802,17 @@ Source: Current amplifier conversation during HI-008 candidate checkpoint
 - [engineering/whole-amp/pcb-measured-r/current-budget/copper-review.html](<../../engineering/whole-amp/pcb-measured-r/current-budget/copper-review.html>)
 - [engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html](<../../engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html>)
 
+## FB-170 — wider-remaining-copper
+Authority: user. Disposition: open. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> I don't know... I still think the traces could be made bigger.... they seem awfully small
+
+User asks for further width headroom on remaining narrow routes. Review remaining low-impedance, driver, relay and return paths; use available board area and reroute where justified while retaining current/thickness, voltage-clearance, noise and sensitive-node loading checks. Do not declare every narrow signal trace defective from appearance.
+
+Source: Current chat after CU-002 rail widening
+
+- [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
+- [engineering/whole-amp/harness-integration/reverb-connector-placement.json](<../../engineering/whole-amp/harness-integration/reverb-connector-placement.json>)
+- [engineering/whole-amp/harness-integration/reverb-placement-review.html](<../../engineering/whole-amp/harness-integration/reverb-placement-review.html>)
+- [engineering/whole-amp/pcb-measured-r/current-budget/results/broad-copper.json](<../../engineering/whole-amp/pcb-measured-r/current-budget/results/broad-copper.json>)
+

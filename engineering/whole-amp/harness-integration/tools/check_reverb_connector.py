@@ -30,7 +30,7 @@ def main():
   elif kind=='gr_text':expected={u for u,raw in a.items() if v.parse(raw)[1] in ['"PANEL REVERB"','"RENEGADE 600R-1 / DRAFT"']}
   elif kind in ['segment','arc']:expected=(set(c['remove_segments']) if kind=='segment' else set())|{u for u,raw in a.items() if v.field(v.parse(raw),'net')[1].strip('"') in c['existing_net_widths_mm']}
   else:expected=set()
-  checks[kind+'_only_declared_existing_changes']=changed==expected
+  checks[kind+'_only_declared_existing_changes']=changed<=expected if kind in ['segment','arc'] else changed==expected
   if kind in ['footprint','gr_text']:checks[kind+'_identities_preserved']=set(a)==set(b)
   else:checks[kind+'_new_count']=len(set(b)-set(a))==(sum(len(r['points'])-1 for r in c['routes']) if kind=='segment' else len(c['vias']) if kind=='via' else 0)
  def new_atoms(kind):
@@ -47,20 +47,29 @@ def main():
  checks['other_board_data_unchanged']=[n for n in a[1:] if n[0] not in excluded]==[n for n in b[1:] if n[0] not in excluded]
  checks['project_preserved']=src.with_suffix('.kicad_pro').read_bytes()==target.with_suffix('.kicad_pro').read_bytes()
  expected_rule='\n(rule "HI008 wet signal width" (condition "A.NetName == \'WET_TOP\' || A.NetName == \'WET_W\'") (constraint track_width (min 0.60mm)))\n(rule "CU002 supply width" (condition "A.NetName == \'+15V\' || A.NetName == \'-15V\'") (constraint track_width (min 0.80mm)))\n'
+ for rule in c.get('additional_width_rules',[]):
+  condition=' || '.join("A.NetName == '"+net+"'" for net in rule['nets'])
+  expected_rule+=f'(rule "{rule["name"]}" (condition "{condition}") (constraint track_width (min {rule["minimum_mm"]:.2f}mm)))\n'
  checks['existing_custom_rules_preserved']=target.with_suffix('.kicad_dru').read_text()==src.with_suffix('.kicad_dru').read_text()+expected_rule
  sa,sb=v.field(a,'setup'),v.field(b,'setup');stack=v.field(sb,'stackup')
  checks['other_setup_preserved']=sa==[sb[0]]+[n for n in sb[1:] if n[0]!='stackup']
  layers=[n for n in stack[1:] if n[0]=='layer'];cu=[n for n in layers if n[1] in ('"F.Cu"','"B.Cu"')]
  checks['nominal_stackup']=len(cu)==2 and all(close(float(v.field(n,'thickness')[1]),c['construction']['outer_copper_nominal_um']/1000) for n in cu) and close(sum(float(v.field(n,'thickness')[1]) for n in layers),1.6)
- # Existing declared routes may change width only; coordinates/layers/nets/UUIDs stay fixed.
+ # Permit only declared widths and explicit segment endpoints; preserve every other field.
  oldseg={**named(src,'segment'),**named(src,'arc')};newseg={**named(target,'segment'),**named(target,'arc')}
+ overrides=c.get('existing_item_overrides',{})
+ checks['overrides_reference_retained_items']=set(overrides)<=set(oldseg)-set(c['remove_segments'])
  width_only=True
  for u,raw in oldseg.items():
   if u in c['remove_segments']:continue
   oldnode=v.parse(raw);newnode=v.parse(newseg[u]);net=v.field(oldnode,'net')[1].strip('"')
   if net in c['existing_net_widths_mm']:
-   v.field(oldnode,'width')[1]=str(c['existing_net_widths_mm'][net]);width_only &= oldnode==newnode
- checks['existing_declared_routes_width_only']=width_only
+   change=overrides.get(u,{})
+   v.field(oldnode,'width')[1]=str(change.get('width_mm',c['existing_net_widths_mm'][net]))
+   for key in ['start','end']:
+    if key+'_mm' in change:v.field(oldnode,key)[1:3]=list(map(str,change[key+'_mm']))
+   width_only &= oldnode==newnode
+ checks['existing_routes_only_declared_width_and_endpoint_changes']=width_only
  board=p.LoadBoard(str(target));original=p.LoadBoard(str(src));fp=next(f for f in board.GetFootprints() if f.GetReference()==c['reference']);pad_data={q.GetNumber():{'xy_mm':xy(q.GetPosition()),'net':q.GetNetname(),'drill_mm':xy(q.GetDrillSize()),'shape':int(q.GetDrillShape())} for q in fp.Pads()}
  circuit_path=M.parent/'reverb-600/circuit.json'
  components=json.loads(circuit_path.read_text())['components'];source_jr4=next(q for q in components if q['reference']=='JR4')
@@ -73,8 +82,9 @@ def main():
  checks['four_round_contact_drills']=all(q['drill_mm']==[spec['contact_holes_nominal_mm']]*2 and q['shape']==int(p.PAD_DRILL_SHAPE_CIRCLE) for k,q in pad_data.items() if k)
  checks['round_locator_drill']=pad_data['']['drill_mm']==[spec['locator_hole_nominal_mm']]*2 and pad_data['']['shape']==int(p.PAD_DRILL_SHAPE_CIRCLE)
  checks['requested_route_style']=all((a[0]==z[0] or a[1]==z[1] or close(abs(a[0]-z[0]),abs(a[1]-z[1]))) for r in c['routes'] for a,z in zip(r['points'],r['points'][1:]))
- checks['new_trace_width_requirement']=all(close(r['width_mm'],.6) for r in c['routes'])
- checks['whole_declared_nets_widened']=all(close(p.ToMM(t.GetWidth()),c['existing_net_widths_mm'][t.GetNetname()]) for t in board.GetTracks() if not isinstance(t,p.PCB_VIA) and t.GetNetname() in c['existing_net_widths_mm'])
+ checks['new_trace_width_requirement']=all(r['width_mm']>=.6 for r in c['routes'])
+ checks['declared_native_widths_and_necks']=all(close(p.ToMM(t.GetWidth()),overrides.get(t.m_Uuid.AsString(),{}).get('width_mm',c['existing_net_widths_mm'][t.GetNetname()])) for t in board.GetTracks() if not isinstance(t,p.PCB_VIA) and t.GetNetname() in c['existing_net_widths_mm'] and t.m_Uuid.AsString() in oldseg)
+ checks['detours_use_45_degree_or_orthogonal_segments']=all(q['start_mm'][0]==q['end_mm'][0] or q['start_mm'][1]==q['end_mm'][1] or close(abs(q['start_mm'][0]-q['end_mm'][0]),abs(q['start_mm'][1]-q['end_mm'][1])) for q in overrides.values() if 'start_mm' in q)
  rules=json.loads(src.with_suffix('.kicad_pro').read_text())['board']['design_settings']['rules']
  checks['via_project_minimum']=all(q['size_mm']>=rules['min_via_diameter'] and q['drill_mm']>=rules['min_through_hole_diameter'] for q in c['vias'])
  # Exact 180 degree proposal: transform local negative-y plug exit to positive board-y.
@@ -98,7 +108,7 @@ def main():
    if not isinstance(t,p.PCB_VIA):d[t.GetNetname()]+=p.ToMM(t.GetLength())
   return d
  before,after=lengths(original),lengths(board);delta={net:round(after[net]-before[net],6) for net in sorted(set(before)|set(after)) if not close(before[net],after[net])}
- checks['only_pot_net_lengths_changed']=set(delta)<={'WET_TOP','WET_W','GND'}
+ checks['only_declared_net_lengths_changed']=set(delta)<={'WET_TOP','WET_W','GND','+12V'}
  drc_path=O/'drc.json';run=subprocess.run([CLI,'pcb','drc','--format','json','--severity-all','--all-track-errors','--output',str(drc_path),str(target)],capture_output=True,text=True);assert run.returncode==0,run.stderr
  d=json.loads(drc_path.read_text());checks['zero_DRC_violations']=not d['violations'];checks['zero_open_connections']=not d['unconnected_items']
  inputs=[circuit_path,M/'reverb-connector-placement.json',M/'connector-contract.json',M/'mating-geometry.json',M/'wire-dressing.json',src,target,Path(__file__),M/'tools/place_reverb_connector.py']

@@ -41,7 +41,12 @@ def main():
    node=v.parse(original[a:z]);u=v.field(node,'uuid')[1].strip('"')
    if kind=='segment' and u in c['remove_segments']:removed.append(u);edits.append((a,z,''))
    elif v.field(node,'net')[1].strip('"') in c['existing_net_widths_mm']:
-    v.field(node,'width')[1]=str(c['existing_net_widths_mm'][v.field(node,'net')[1].strip('"')]);edits.append((a,z,emit(node)));widened.append(u)
+    change=c.get('existing_item_overrides',{}).get(u,{})
+    v.field(node,'width')[1]=str(change.get('width_mm',c['existing_net_widths_mm'][v.field(node,'net')[1].strip('"')]))
+    for key in ['start','end']:
+     if key+'_mm' in change:
+      assert kind=='segment';v.field(node,key)[1:3]=list(map(str,change[key+'_mm']))
+    edits.append((a,z,emit(node)));widened.append(u)
  assert sorted(removed)==sorted(c['remove_segments'])
  for a,z in spans(original,'gr_text'):
   node=v.parse(original[a:z])
@@ -69,6 +74,9 @@ def main():
  for ext in ('.kicad_pro','.kicad_dru'):shutil.copyfile(src.with_suffix(ext),target.with_suffix(ext))
  dru=target.with_suffix('.kicad_dru')
  dru.write_text(dru.read_text()+'\n(rule "HI008 wet signal width" (condition "A.NetName == \'WET_TOP\' || A.NetName == \'WET_W\'") (constraint track_width (min 0.60mm)))\n(rule "CU002 supply width" (condition "A.NetName == \'+15V\' || A.NetName == \'-15V\'") (constraint track_width (min 0.80mm)))\n')
+ for rule in c.get('additional_width_rules',[]):
+  condition=' || '.join("A.NetName == '"+net+"'" for net in rule['nets'])
+  with dru.open('a') as stream:stream.write(f'(rule "{rule["name"]}" (condition "{condition}") (constraint track_width (min {rule["minimum_mm"]:.2f}mm)))\n')
  table=(src.parent/'fp-lib-table').read_text().replace('${KIPRJMOD}/../../../component-selection','${KIPRJMOD}/../../../../component-selection').replace('${KIPRJMOD}/../../libraries','${KIPRJMOD}/../../../libraries')
  (out/'fp-lib-table').write_text(table)
  print(target)

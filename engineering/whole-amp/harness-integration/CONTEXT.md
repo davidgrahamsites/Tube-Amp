@@ -31,3 +31,7 @@ HI-008: reverb-connector-placement.json owns the proposed JR4 position and scope
 CU-001 follow-up: the HI-008 contract also owns candidate nominal and minimum finished copper requirements. Existing wet-net segments change width only; a wet-net width rule is appended. The current-budget module owns the conditional loss calculation and all-board inventory; read ../pcb-measured-r/current-budget/copper-review.html.
 
 CU-002 extends the same candidate to 0.8 mm supply segments and arcs using current-budget/supply-copper.json targets. No route centreline or mounting geometry changes. The candidate remains separate from active native files.
+
+CU-003 extends the candidate to relay/driver, selected driven audio nets and broader ground. The same contract owns explicit endpoint changes and local necks, including two retained 0.3 mm C607-adjacent sections. The checker preserves all undeclared data and adds no DRC waiver; current-budget owns the resistance comparison.
+
+CU-003 guard tests: tools/test_reverb_candidate_guards.py creates temporary candidate copies, rejects undersized relay copper, an undeclared ground endpoint, and a widened C607-adjacent neck, then deletes each copy. Public evidence: results/reverb-connector-candidate/guard-checks.json. The actual candidate is hash-preserved.

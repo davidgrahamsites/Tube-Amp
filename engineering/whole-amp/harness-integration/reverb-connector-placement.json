@@ -118,7 +118,7 @@
     {
       "net": "GND",
       "layer": "B.Cu",
-      "width_mm": 0.6,
+      "width_mm": 1.0,
       "points": [
         [
           73,
@@ -131,6 +131,21 @@
         [
           78,
           83
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": "B.Cu",
+      "width_mm": 0.6,
+      "points": [
+        [
+          137,
+          26
+        ],
+        [
+          136.5,
+          26.5
         ]
       ]
     }
@@ -161,15 +176,28 @@
     "Additional four-cavity symbol/NC metadata must be integrated before native adoption",
     "New trace length and via parasitics require electrical comparison before release",
     "Copper DC screen is conditional; finished foil/barrel minima, populated thermal behavior, startup/fault protection and remaining board current paths are not qualified",
-    "CU-002 supply widening meets only the conditional DC-drop and width-margin screen; supply protection, transients and thermal rise remain open"
+    "CU-002 supply widening meets only the conditional DC-drop and width-margin screen; supply protection, transients and thermal rise remain open",
+    "CU-003 broadening is a geometric/resistance improvement only; shared ground, relay/driver current, thermal rise, fault protection and sensitive-node loading still require qualification."
   ],
-  "done_condition": "Native-parseable connector candidate with declared 0.6 mm wet-signal routes and nominal copper stackup; source-derived pad nets; preserve unrelated items; native DRC and conditional DC screen; no fabrication release",
+  "done_condition": "Reproducible candidate with declared widths, explicit local necks and relay-area detours; preserve undeclared geometry and source connectivity; zero native DRC/open connections. Conditional copper calculations and parasitic/thermal/fit holds remain explicit.",
   "effort": "One bounded connector placement and routing pass",
   "existing_net_widths_mm": {
     "WET_TOP": 0.6,
     "WET_W": 0.6,
     "+15V": 0.8,
-    "-15V": 0.8
+    "-15V": 0.8,
+    "+12V": 0.8,
+    "COIL_REV": 0.8,
+    "DRIVER": 0.8,
+    "DRIVE_CAP": 0.8,
+    "TANK_IN": 0.8,
+    "SEND_BUF": 0.6,
+    "REC_OUT": 0.6,
+    "WET_BUF": 0.6,
+    "SUM_INV": 0.6,
+    "OUT_BUF": 0.6,
+    "OUT_AC": 0.6,
+    "GND": 1.0
   },
   "construction": {
     "layers": 2,
@@ -180,5 +208,180 @@
     "negative_width_tolerance_fraction": 0.2,
     "fabricator_confirmed": false,
     "basis": "Proposed 1 oz outer copper. Minimum finished foil and barrel thickness are acceptance requirements, not a verified JLCPCB guarantee. Native stackup records nominal thickness only."
-  }
+  },
+  "existing_item_overrides": {
+    "30989c05-ab25-41b2-84a7-61a69a2afe6e": {
+      "width_mm": 0.8,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied."
+    },
+    "c4c22678-0f5a-4707-afb0-16b0b39b7930": {
+      "width_mm": 0.3,
+      "reason": "Retain source width near C607 WET_AC tube-side node; do not reduce existing spacing before high-voltage insulation qualification."
+    },
+    "bb009f4c-cab1-5bc2-911b-4ab9a30e83bb": {
+      "width_mm": 0.3,
+      "reason": "Retain source width near C607 WET_AC tube-side node; do not reduce existing spacing before high-voltage insulation qualification."
+    },
+    "d8d24d74-88de-4930-a4d0-b17f43fbef63": {
+      "width_mm": 0.8,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied."
+    },
+    "4b832704-4ee7-46b0-b7b4-31adaf96e301": {
+      "width_mm": 0.6,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied.",
+      "start_mm": [
+        136.5,
+        26.5
+      ],
+      "end_mm": [
+        114.2,
+        26.5
+      ]
+    },
+    "eb300848-4a17-4d3b-acef-52ab55f39b1e": {
+      "width_mm": 0.6,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied.",
+      "start_mm": [
+        114,
+        26.7
+      ],
+      "end_mm": [
+        114.2,
+        26.5
+      ]
+    },
+    "2cc78dcc-2683-4461-85e3-23b485d00820": {
+      "width_mm": 0.6,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied.",
+      "start_mm": [
+        114,
+        26.7
+      ],
+      "end_mm": [
+        114,
+        29.5
+      ]
+    },
+    "c0af2054-1d34-433a-bdc0-170c96b2f882": {
+      "width_mm": 0.8,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied."
+    },
+    "db9aa5c6-b887-4fdf-85a1-8027f40d5e35": {
+      "width_mm": 0.8,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied."
+    },
+    "2813fcce-c89c-5001-ad05-6da80029f981": {
+      "width_mm": 0.6,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied."
+    },
+    "3d537126-cea5-4fb2-8a10-4504a9c0a362": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        123.1,
+        15.2
+      ],
+      "end_mm": [
+        123.3,
+        15.4
+      ]
+    },
+    "68488812-29eb-4ed2-afd3-1d0af37df731": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        123.1,
+        15.2
+      ],
+      "end_mm": [
+        114.2,
+        15.2
+      ]
+    },
+    "753d7088-ba6a-4bee-b419-cb29c98bb5fa": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        123.5,
+        17.5
+      ],
+      "end_mm": [
+        123.3,
+        17.3
+      ]
+    },
+    "84aa8adc-a227-4878-809b-e35cc7456370": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        148,
+        17.5
+      ],
+      "end_mm": [
+        123.5,
+        17.5
+      ]
+    },
+    "9a1ec778-b7d4-4ddb-bf57-ea4ae4522f5e": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        114.2,
+        15.2
+      ],
+      "end_mm": [
+        114,
+        15.4
+      ]
+    },
+    "c1ef2e25-64c6-485c-8a23-50996a46a64f": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        114,
+        15.4
+      ],
+      "end_mm": [
+        114,
+        17
+      ]
+    },
+    "e292cd06-37c5-421c-af90-ca7aeab2723f": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        123.3,
+        17.3
+      ],
+      "end_mm": [
+        123.3,
+        15.4
+      ]
+    }
+  },
+  "additional_width_rules": [
+    {
+      "name": "CU003 relay and driver width",
+      "nets": [
+        "+12V",
+        "COIL_REV",
+        "DRIVER",
+        "DRIVE_CAP",
+        "TANK_IN"
+      ],
+      "minimum_mm": 0.8
+    },
+    {
+      "name": "CU003 audio width",
+      "nets": [
+        "SEND_BUF",
+        "REC_OUT",
+        "WET_BUF",
+        "SUM_INV",
+        "OUT_BUF",
+        "OUT_AC"
+      ],
+      "minimum_mm": 0.6
+    },
+    {
+      "name": "CU003 ground local minimum",
+      "nets": [
+        "GND"
+      ],
+      "minimum_mm": 0.3
+    }
+  ]
 }

@@ -55,6 +55,32 @@
       </section>
 
       <section>
+        <h2>FB-170 / CU-003 broader copper pass</h2>
+        <p>The user asked for wider copper where practical. The candidate uses 0.8 mm on +12V, COIL_REV, DRIVER, DRIVE_CAP, and TANK_IN. It uses 0.6 mm on SEND_BUF, REC_OUT, WET_BUF, SUM_INV, OUT_BUF, and OUT_AC. Most GND sections use 1.0 mm. Eight local GND necks use 0.6 or 0.8 mm for pad clearance. Two original 0.3 mm sections beside C607 at the tube-side WET_AC node remain unchanged until high-voltage spacing is reviewed. SUM_INV is U12A's output; its sensitive SUM input was not widened.</p>
+        <p>Ten straight segments moved around K3 to retain clearance after widening: the +12V path moves 0.3 mm from the relay-coil pad, and the nearby ground path uses a 0.6 mm neck at y = 26.5 mm. One additional GND diagonal was added. No footprints, mount holes, or functional blocks moved. This is a separate candidate; the active board, schematic, and circuit remain unchanged.</p>
+        <p>Uniform widening first produced 17 findings: 11 clearance errors, three shorts, and three mask bridges. The corrected candidate reports zero DRC violations and zero opens. The refreshed HI-008 checker passes 37 checks and four controls. CU-003 passes 18 checks and three controls. No rule exception was added. These checks do not approve high-voltage spacing.</p>
+        <p>The comparison sums each net's modeled track resistance. It assumes 30 μm finished foil, 20% width loss, and copper at 70 °C. The board's 35 μm nominal outer copper is not fabricator-confirmed at the required finished minimum. For each segment, the estimate uses <span class="math">\(R_i=\rho_{70}L_i/(0.8w_it)\)</span> and sums <span class="math">\(R_{sum}=\sum_iR_i\)</span>. This is a geometry comparison. It does not solve the shared-ground transfer path, noise, or current distribution.</p>
+        <table>
+          <thead><tr><th>Net group</th><th>Drawn width</th><th>Source sum (Ω)</th><th>Candidate sum (Ω)</th><th>Change</th></tr></thead>
+          <tbody>
+            <tr><td>+12V</td><td>0.8 mm</td><td>0.120065</td><td>0.047287</td><td>−60.62%</td></tr>
+            <tr><td>COIL_REV</td><td>0.8 mm</td><td>0.098733</td><td>0.038643</td><td>−60.86%</td></tr>
+            <tr><td>DRIVER</td><td>0.8 mm</td><td>0.141651</td><td>0.053119</td><td>−62.50%</td></tr>
+            <tr><td>DRIVE_CAP</td><td>0.8 mm</td><td>0.025785</td><td>0.009669</td><td>−62.50%</td></tr>
+            <tr><td>TANK_IN</td><td>0.8 mm</td><td>0.022920</td><td>0.008595</td><td>−62.50%</td></tr>
+            <tr><td>SEND_BUF</td><td>0.6 mm</td><td>0.069749</td><td>0.034875</td><td>−50.00%</td></tr>
+            <tr><td>REC_OUT</td><td>0.6 mm</td><td>0.094975</td><td>0.047487</td><td>−50.00%</td></tr>
+            <tr><td>WET_BUF</td><td>0.6 mm</td><td>0.158452</td><td>0.079226</td><td>−50.00%</td></tr>
+            <tr><td>SUM_INV</td><td>0.6 mm</td><td>0.154036</td><td>0.077018</td><td>−50.00%</td></tr>
+            <tr><td>OUT_BUF</td><td>0.6 mm</td><td>0.104939</td><td>0.052470</td><td>−50.00%</td></tr>
+            <tr><td>OUT_AC</td><td>0.6 mm</td><td>0.044329</td><td>0.022164</td><td>−50.00%</td></tr>
+            <tr><td>GND</td><td>1.0 mm mostly; local 0.3, 0.6, and 0.8 mm</td><td>1.587164</td><td>0.537476</td><td>−66.14%</td></tr>
+          </tbody>
+        </table>
+        <p>These reductions are not a shared-return or noise result. Vias, pads, connector contacts, harnesses, mutual coupling, and actual heating are excluded. The 70 °C value is an assumption, not a measured board temperature. No thermal, fault-current, startup-current, high-voltage insulation, fabrication, or complete-board qualification is claimed. Keep the candidate separate until those checks and physical fit are complete.</p>
+      </section>
+
+      <section>
         <h2>Decision and remaining gates</h2>
         <p>Keep the existing functional blocks and signal assignments. Do not move the candidate into the active project yet. Confirm the exact connector and current drawing, cavity viewing direction, wire, contact, crimp, and China sourcing. Add matching four-cavity schematic metadata. Check trace and cable loading.</p>
         <p>Check actual mating, restraint, latch, withdrawal, cabinet, drill, and service access in the populated assembly. The candidate geometry has not been tested in the cabinet. DRC success is not fit approval or fabrication release.</p>
@@ -79,6 +105,12 @@
           <dd>A connector contact position with no approved electrical connection.</dd>
           <dt>Keepout</dt>
           <dd>A defined region that other parts or wires must not enter.</dd>
+          <dt>Track resistance sum</dt>
+          <dd>The sum of estimated resistance for every copper segment on a net. It does not solve shared-return voltage or noise.</dd>
+          <dt>Neck</dt>
+          <dd>A short, narrower copper segment used to preserve clearance around a pad or component.</dd>
+          <dt>Mask bridge</dt>
+          <dd>A solder-mask web or clearance finding between nearby copper features.</dd>
         </dl>
       </section>
 
@@ -96,6 +128,8 @@
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/results/candidate-copper.json">FB-169 candidate-copper receipt</a> — input assumptions, track/via calculation, and four-board inventory.</li>
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html">CU-002 supply-copper review</a> — rail-width trial history, load assumptions, and 0.8 mm results.</li>
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/results/supply-copper.json">CU-002 supply-copper receipt</a> — twelve recomputed load cases and candidate rail geometry.</li>
+          <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/results/broad-copper.json">FB-170 / CU-003 calculation receipt</a> — per-net track-resistance sums, conditions, checks, and exclusions.</li>
+          <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/tools/check_broad_copper.py">CU-003 checker</a> — calculation and candidate preservation checks.</li>
           <li><a href="harness-mating-datum.html">HI-004 mating datum</a> and <a href="pot-harness-wire-reserve.html">HI-005 wire reserve</a> — inherited nominal geometry.</li>
         </ul>
       </section>

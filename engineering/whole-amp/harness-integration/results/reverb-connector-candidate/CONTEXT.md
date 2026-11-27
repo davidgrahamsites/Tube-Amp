@@ -3,3 +3,5 @@ Reverb pot connector candidate. Owner: harness-integration. Inputs: ../../reverb
 The current candidate uses 0.6 mm complete wet nets and a nominal 35 µm two-layer copper stack. Minimum finished copper requirements are in the parent contract; supplier acceptance is pending. Read ../../../pcb-measured-r/current-budget/copper-review.html for the conditional loss screen.
 
 CU-002 also sets both supply rails to 0.8 mm, including their four original arcs. Conditional drop/margin checks are in ../../../pcb-measured-r/current-budget/supply-copper-review.html; full thermal/fault qualification remains open.
+
+CU-003 adds broader relay/driver, audio and ground copper with explicit local necks and relay detours. guard-checks.json proves rejection of three corruptions without retaining disposable board copies. Full current, thermal, HV insulation and populated-service checks remain open.

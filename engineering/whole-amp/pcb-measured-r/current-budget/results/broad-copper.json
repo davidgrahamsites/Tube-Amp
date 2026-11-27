@@ -1,0 +1,433 @@
+{
+  "id": "CU-003",
+  "date": "2026-11-26",
+  "input_hashes": {
+    "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "fa4ac0cbd3ced9b9e0758001c0f2cd488ded0953d3e2fd30025a6d57cc70da3d",
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "a620ede01b83c953503f7eed2e26fc27f381380e295ca36dd900121ef188d51a",
+    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "23a4f21d1ac64a9bb831952a239c0407a23f2a2550c2dea8cfd8bc678226a2e3",
+    "engineering/whole-amp/reverb-600/circuit.json": "db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a",
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/checks.json": "72f4bf29d4c4223c099c0196832608f36bbab4d2fe83ffd107d8394395f81a65",
+    "engineering/whole-amp/pcb-measured-r/current-budget/tools/check_broad_copper.py": "96fa1c8d0a65c02935c548a0436b2868058cb574dda105398c97f178575869e9",
+    "engineering/whole-amp/pcb-measured-r/current-budget/tools/check_candidate_copper.py": "21e50be1201a7a0368eb264fd00eeb775f68bf06556b74c02097ac9d3bb6d5b0"
+  },
+  "conditions": {
+    "copper_temperature_C_assumed": 70,
+    "finished_foil_minimum_um_required": 30,
+    "negative_width_tolerance_fraction": 0.2,
+    "same_construction_for_both_boards": true
+  },
+  "nets": {
+    "+12V": {
+      "before": {
+        "segments_and_arcs": 11,
+        "length_sum_mm": 43.41457965453104,
+        "drawn_widths_mm": [
+          0.3,
+          0.4
+        ],
+        "track_resistance_sum_ohm": 0.12006463231906125
+      },
+      "after": {
+        "segments_and_arcs": 11,
+        "length_sum_mm": 44.01457965453104,
+        "drawn_widths_mm": [
+          0.8
+        ],
+        "track_resistance_sum_ohm": 0.04728738459148873
+      },
+      "reduction_percent": 60.61505900769626
+    },
+    "COIL_REV": {
+      "before": {
+        "segments_and_arcs": 9,
+        "length_sum_mm": 35.9688942295818,
+        "drawn_widths_mm": [
+          0.3,
+          0.4
+        ],
+        "track_resistance_sum_ohm": 0.09873309517839342
+      },
+      "after": {
+        "segments_and_arcs": 9,
+        "length_sum_mm": 35.9688942295818,
+        "drawn_widths_mm": [
+          0.8
+        ],
+        "track_resistance_sum_ohm": 0.03864344378873829
+      },
+      "reduction_percent": 60.86069851358721
+    },
+    "DRIVER": {
+      "before": {
+        "segments_and_arcs": 15,
+        "length_sum_mm": 49.44262285282489,
+        "drawn_widths_mm": [
+          0.3
+        ],
+        "track_resistance_sum_ohm": 0.14165077968281975
+      },
+      "after": {
+        "segments_and_arcs": 15,
+        "length_sum_mm": 49.44262285282489,
+        "drawn_widths_mm": [
+          0.8
+        ],
+        "track_resistance_sum_ohm": 0.05311904238105738
+      },
+      "reduction_percent": 62.50000000000002
+    },
+    "DRIVE_CAP": {
+      "before": {
+        "segments_and_arcs": 1,
+        "length_sum_mm": 9.0,
+        "drawn_widths_mm": [
+          0.3
+        ],
+        "track_resistance_sum_ohm": 0.025784575
+      },
+      "after": {
+        "segments_and_arcs": 1,
+        "length_sum_mm": 9.0,
+        "drawn_widths_mm": [
+          0.8
+        ],
+        "track_resistance_sum_ohm": 0.009669215624999998
+      },
+      "reduction_percent": 62.500000000000014
+    },
+    "TANK_IN": {
+      "before": {
+        "segments_and_arcs": 1,
+        "length_sum_mm": 8.0,
+        "drawn_widths_mm": [
+          0.3
+        ],
+        "track_resistance_sum_ohm": 0.022919622222222227
+      },
+      "after": {
+        "segments_and_arcs": 1,
+        "length_sum_mm": 8.0,
+        "drawn_widths_mm": [
+          0.8
+        ],
+        "track_resistance_sum_ohm": 0.008594858333333332
+      },
+      "reduction_percent": 62.50000000000002
+    },
+    "SEND_BUF": {
+      "before": {
+        "segments_and_arcs": 8,
+        "length_sum_mm": 24.345685424949238,
+        "drawn_widths_mm": [
+          0.3
+        ],
+        "track_resistance_sum_ohm": 0.06974923908511228
+      },
+      "after": {
+        "segments_and_arcs": 8,
+        "length_sum_mm": 24.345685424949238,
+        "drawn_widths_mm": [
+          0.6
+        ],
+        "track_resistance_sum_ohm": 0.03487461954255614
+      },
+      "reduction_percent": 50.0
+    },
+    "REC_OUT": {
+      "before": {
+        "segments_and_arcs": 8,
+        "length_sum_mm": 33.15059920523572,
+        "drawn_widths_mm": [
+          0.3
+        ],
+        "track_resistance_sum_ohm": 0.09497490127803788
+      },
+      "after": {
+        "segments_and_arcs": 8,
+        "length_sum_mm": 33.15059920523572,
+        "drawn_widths_mm": [
+          0.6
+        ],
+        "track_resistance_sum_ohm": 0.04748745063901894
+      },
+      "reduction_percent": 50.0
+    },
+    "WET_BUF": {
+      "before": {
+        "segments_and_arcs": 10,
+        "length_sum_mm": 55.30711173979982,
+        "drawn_widths_mm": [
+          0.3
+        ],
+        "track_resistance_sum_ohm": 0.1584522634098055
+      },
+      "after": {
+        "segments_and_arcs": 10,
+        "length_sum_mm": 55.30711173979982,
+        "drawn_widths_mm": [
+          0.6
+        ],
+        "track_resistance_sum_ohm": 0.07922613170490275
+      },
+      "reduction_percent": 50.0
+    },
+    "SUM_INV": {
+      "before": {
+        "segments_and_arcs": 6,
+        "length_sum_mm": 53.76568542494924,
+        "drawn_widths_mm": [
+          0.3
+        ],
+        "track_resistance_sum_ohm": 0.15403614980733452
+      },
+      "after": {
+        "segments_and_arcs": 6,
+        "length_sum_mm": 53.76568542494924,
+        "drawn_widths_mm": [
+          0.6
+        ],
+        "track_resistance_sum_ohm": 0.07701807490366726
+      },
+      "reduction_percent": 50.0
+    },
+    "OUT_BUF": {
+      "before": {
+        "segments_and_arcs": 13,
+        "length_sum_mm": 36.62868741609869,
+        "drawn_widths_mm": [
+          0.3
+        ],
+        "track_resistance_sum_ohm": 0.1049394597591059
+      },
+      "after": {
+        "segments_and_arcs": 13,
+        "length_sum_mm": 36.62868741609869,
+        "drawn_widths_mm": [
+          0.6
+        ],
+        "track_resistance_sum_ohm": 0.05246972987955295
+      },
+      "reduction_percent": 50.0
+    },
+    "OUT_AC": {
+      "before": {
+        "segments_and_arcs": 6,
+        "length_sum_mm": 15.472691193458118,
+        "drawn_widths_mm": [
+          0.3
+        ],
+        "track_resistance_sum_ohm": 0.0443285296143956
+      },
+      "after": {
+        "segments_and_arcs": 6,
+        "length_sum_mm": 15.472691193458118,
+        "drawn_widths_mm": [
+          0.6
+        ],
+        "track_resistance_sum_ohm": 0.0221642648071978
+      },
+      "reduction_percent": 50.0
+    },
+    "GND": {
+      "before": {
+        "segments_and_arcs": 128,
+        "length_sum_mm": 560.9390812523194,
+        "drawn_widths_mm": [
+          0.3,
+          0.4
+        ],
+        "track_resistance_sum_ohm": 1.5871644366284994
+      },
+      "after": {
+        "segments_and_arcs": 129,
+        "length_sum_mm": 567.350149064185,
+        "drawn_widths_mm": [
+          0.3,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "track_resistance_sum_ohm": 0.5374761274484998
+      },
+      "reduction_percent": 66.13607796113287
+    }
+  },
+  "local_necks": {
+    "30989c05-ab25-41b2-84a7-61a69a2afe6e": {
+      "width_mm": 0.8,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied."
+    },
+    "c4c22678-0f5a-4707-afb0-16b0b39b7930": {
+      "width_mm": 0.3,
+      "reason": "Retain source width near C607 WET_AC tube-side node; do not reduce existing spacing before high-voltage insulation qualification."
+    },
+    "bb009f4c-cab1-5bc2-911b-4ab9a30e83bb": {
+      "width_mm": 0.3,
+      "reason": "Retain source width near C607 WET_AC tube-side node; do not reduce existing spacing before high-voltage insulation qualification."
+    },
+    "d8d24d74-88de-4930-a4d0-b17f43fbef63": {
+      "width_mm": 0.8,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied."
+    },
+    "4b832704-4ee7-46b0-b7b4-31adaf96e301": {
+      "width_mm": 0.6,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied.",
+      "start_mm": [
+        136.5,
+        26.5
+      ],
+      "end_mm": [
+        114.2,
+        26.5
+      ]
+    },
+    "eb300848-4a17-4d3b-acef-52ab55f39b1e": {
+      "width_mm": 0.6,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied.",
+      "start_mm": [
+        114,
+        26.7
+      ],
+      "end_mm": [
+        114.2,
+        26.5
+      ]
+    },
+    "2cc78dcc-2683-4461-85e3-23b485d00820": {
+      "width_mm": 0.6,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied.",
+      "start_mm": [
+        114,
+        26.7
+      ],
+      "end_mm": [
+        114,
+        29.5
+      ]
+    },
+    "c0af2054-1d34-433a-bdc0-170c96b2f882": {
+      "width_mm": 0.8,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied."
+    },
+    "db9aa5c6-b887-4fdf-85a1-8027f40d5e35": {
+      "width_mm": 0.8,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied."
+    },
+    "2813fcce-c89c-5001-ad05-6da80029f981": {
+      "width_mm": 0.6,
+      "reason": "Local ground neck preserves pad clearance; no current qualification implied."
+    },
+    "3d537126-cea5-4fb2-8a10-4504a9c0a362": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        123.1,
+        15.2
+      ],
+      "end_mm": [
+        123.3,
+        15.4
+      ]
+    },
+    "68488812-29eb-4ed2-afd3-1d0af37df731": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        123.1,
+        15.2
+      ],
+      "end_mm": [
+        114.2,
+        15.2
+      ]
+    },
+    "753d7088-ba6a-4bee-b419-cb29c98bb5fa": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        123.5,
+        17.5
+      ],
+      "end_mm": [
+        123.3,
+        17.3
+      ]
+    },
+    "84aa8adc-a227-4878-809b-e35cc7456370": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        148,
+        17.5
+      ],
+      "end_mm": [
+        123.5,
+        17.5
+      ]
+    },
+    "9a1ec778-b7d4-4ddb-bf57-ea4ae4522f5e": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        114.2,
+        15.2
+      ],
+      "end_mm": [
+        114,
+        15.4
+      ]
+    },
+    "c1ef2e25-64c6-485c-8a23-50996a46a64f": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        114,
+        15.4
+      ],
+      "end_mm": [
+        114,
+        17
+      ]
+    },
+    "e292cd06-37c5-421c-af90-ca7aeab2723f": {
+      "reason": "Move relay-area path to preserve nominal clearance after widening.",
+      "start_mm": [
+        123.3,
+        17.3
+      ],
+      "end_mm": [
+        123.3,
+        15.4
+      ]
+    }
+  },
+  "checks": {
+    "source_revision": true,
+    "coverage": true,
+    "+12V_lower_track_resistance_sum": true,
+    "COIL_REV_lower_track_resistance_sum": true,
+    "DRIVER_lower_track_resistance_sum": true,
+    "DRIVE_CAP_lower_track_resistance_sum": true,
+    "TANK_IN_lower_track_resistance_sum": true,
+    "SEND_BUF_lower_track_resistance_sum": true,
+    "REC_OUT_lower_track_resistance_sum": true,
+    "WET_BUF_lower_track_resistance_sum": true,
+    "SUM_INV_lower_track_resistance_sum": true,
+    "OUT_BUF_lower_track_resistance_sum": true,
+    "OUT_AC_lower_track_resistance_sum": true,
+    "GND_lower_track_resistance_sum": true,
+    "widened_direct_audio_nodes_are_opamp_outputs": true,
+    "OUT_AC_is_series_output": true,
+    "native_receipt_current": true,
+    "native_delta_and_drc_pass": true
+  },
+  "controls": {
+    "twice_width_halves_R": true,
+    "thin_foil_raises_R": true,
+    "short_45_degree_length": true
+  },
+  "evidence_checks_pass": true,
+  "thermal_fault_qualified": false,
+  "fabrication_ready": false,
+  "limits": [
+    "Resistance is the sum of every track on each net, not a solved source-to-load or shared-ground transfer impedance.",
+    "Vias, pad rings, connector contacts, harnesses and return-loop interactions are excluded here; rail/wet calculations retain their own scopes.",
+    "These widths add geometric margin; this comparison does not establish maximum continuous, peak, startup or fault current.",
+    "Sensitive input/feedback and tube-interface routes remain for separate clearance/loading review.",
+    "The 70 C calculation temperature is assumed, not predicted or measured."
+  ]
+}
