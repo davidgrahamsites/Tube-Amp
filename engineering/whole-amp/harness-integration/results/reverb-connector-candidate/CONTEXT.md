@@ -5,3 +5,5 @@ The current candidate uses 0.6 mm complete wet nets and a nominal 35 µm two-lay
 CU-002 also sets both supply rails to 0.8 mm, including their four original arcs. Conditional drop/margin checks are in ../../../pcb-measured-r/current-budget/supply-copper-review.html; full thermal/fault qualification remains open.
 
 CU-003 adds broader relay/driver, audio and ground copper with explicit local necks and relay detours. guard-checks.json proves rejection of three corruptions without retaining disposable board copies. Full current, thermal, HV insulation and populated-service checks remain open.
+
+VS-002 repairs the two C607-adjacent ground sections to 0.6 mm and 0.85 mm nominal pad gap. Ordinary DRC remains zero; the conditional voltage-domain screen retains 47 dry-path reports. See ../../../reverb-600/voltage-spacing/domain-review.html through the harness review. This candidate is not released.

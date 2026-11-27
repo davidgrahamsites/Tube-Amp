@@ -1,9 +1,9 @@
 {
   "id": "HI-008-CU003-GUARDS",
   "input_hashes": {
-    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "a620ede01b83c953503f7eed2e26fc27f381380e295ca36dd900121ef188d51a",
-    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "23a4f21d1ac64a9bb831952a239c0407a23f2a2550c2dea8cfd8bc678226a2e3",
-    "engineering/whole-amp/harness-integration/tools/check_reverb_connector.py": "02460a1caf1ddb7e9962b35aecb01a199b1cc827a94fbbbd3c814bf396931887",
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "e5a55ecd3265ae29d94c07fd1b8a66c46f3448fce78e76d7707d4ef3d1a7af51",
+    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "7d79df795860add6c6213e9db51cb0040aeb9a2a87fdc6c49799124adac0d137",
+    "engineering/whole-amp/harness-integration/tools/check_reverb_connector.py": "a4f640a401808426048046c9109f4ee929cb8a338ddc36777f3f945074797861",
     "engineering/whole-amp/harness-integration/tools/test_reverb_candidate_guards.py": "78f8c99bef9f206aa2ce3c27378f70e2dc430b402f9e73151d24714d3e807031"
   },
   "controls": {
@@ -18,7 +18,7 @@
       "drc": {
         "violations": 1,
         "unconnected": 0,
-        "sha256": "3c7015110aa2011c2aa9b31cd105becb65f00d11c947dcb960cf2b01f797de1d"
+        "sha256": "641cd471367411bbfb8fbc5b3098e1cf2afceb0cc50babaa3c147d3e3f8d3f56"
       }
     },
     "altered_ground_endpoint": {
@@ -30,7 +30,7 @@
       "drc": {
         "violations": 0,
         "unconnected": 0,
-        "sha256": "fd27237b8813dedccf42c19b7cf584453af4333ddede301157e1d27555e43b5d"
+        "sha256": "f3b717cf3112f27b5055d0609529d3a31c4439ed407b7682c2a1031ced11ae75"
       }
     },
     "widened_HV_adjacent_neck": {
@@ -38,13 +38,12 @@
       "target_gate_failed": true,
       "failed_checks": [
         "existing_routes_only_declared_width_and_endpoint_changes",
-        "declared_native_widths_and_necks",
-        "zero_DRC_violations"
+        "declared_native_widths_and_necks"
       ],
       "drc": {
-        "violations": 1,
+        "violations": 0,
         "unconnected": 0,
-        "sha256": "67730c733620eb6c1d50083b25764a8f28066a880cd45bdbac3e3ff8d4058397"
+        "sha256": "1f40df0a09c042211b48b372687543179858ab4d4a1a1f336d8535657819b755"
       }
     }
   },

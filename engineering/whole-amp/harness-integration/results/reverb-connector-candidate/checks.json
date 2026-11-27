@@ -4,14 +4,14 @@
   "kicad": "10.0.6",
   "input_hashes": {
     "engineering/whole-amp/reverb-600/circuit.json": "db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a",
-    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "23a4f21d1ac64a9bb831952a239c0407a23f2a2550c2dea8cfd8bc678226a2e3",
+    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "7d79df795860add6c6213e9db51cb0040aeb9a2a87fdc6c49799124adac0d137",
     "engineering/whole-amp/harness-integration/connector-contract.json": "f3d904b57bb70fad5094e9e59fc3f99864ddf3512d1e19461f9958ef421c68f6",
     "engineering/whole-amp/harness-integration/mating-geometry.json": "cc6b5892b4f42fcc5246c734eef537f7440f4b965587035bebe6dc69c13ef377",
     "engineering/whole-amp/harness-integration/wire-dressing.json": "e39f2dd9770749a16d467b1270d99eb936329be8540c6cdcd798ae038b8708dc",
     "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "fa4ac0cbd3ced9b9e0758001c0f2cd488ded0953d3e2fd30025a6d57cc70da3d",
-    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "a620ede01b83c953503f7eed2e26fc27f381380e295ca36dd900121ef188d51a",
-    "engineering/whole-amp/harness-integration/tools/check_reverb_connector.py": "02460a1caf1ddb7e9962b35aecb01a199b1cc827a94fbbbd3c814bf396931887",
-    "engineering/whole-amp/harness-integration/tools/place_reverb_connector.py": "9078ca019e91f92f4dc1b8b20dcfc23f0c3cdc760d36ee3c91d7f1b7554ea0da"
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "e5a55ecd3265ae29d94c07fd1b8a66c46f3448fce78e76d7707d4ef3d1a7af51",
+    "engineering/whole-amp/harness-integration/tools/check_reverb_connector.py": "a4f640a401808426048046c9109f4ee929cb8a338ddc36777f3f945074797861",
+    "engineering/whole-amp/harness-integration/tools/place_reverb_connector.py": "a47e05fa3ea4f6ecfcb0f8c32e4ecf03837d4be1bfb2550fe136c2ef3faf7203"
   },
   "checks": {
     "source_revision": true,
@@ -34,6 +34,7 @@
     "nominal_stackup": true,
     "overrides_reference_retained_items": true,
     "existing_routes_only_declared_width_and_endpoint_changes": true,
+    "moved_arcs_preserve_shape_by_translation": true,
     "circuit_terminal_parity": true,
     "pot_nets_preserved": true,
     "position_and_orientation": true,
@@ -150,14 +151,14 @@
   },
   "route_length_delta_mm": {
     "+12V": 0.6,
-    "GND": 6.411068,
+    "GND": 6.659596,
     "WET_TOP": 31.156854,
     "WET_W": -4.134416
   },
   "drc": {
     "violations": 0,
     "unconnected": 0,
-    "sha256": "6c3289e7ae0d1e1871bfaa261e4ecd5fe658cf65449ecae6d594df21f326845e"
+    "sha256": "a5b6141ca21f01060189c18e6af0ea13c29e9d5b1b6df1b613e6657bc51a94a5"
   },
   "evidence_checks_pass": true,
   "native_adoption": false,

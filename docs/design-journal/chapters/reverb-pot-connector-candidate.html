@@ -56,7 +56,7 @@
 
       <section>
         <h2>FB-170 / CU-003 broader copper pass</h2>
-        <p>The user asked for wider copper where practical. The candidate uses 0.8 mm on +12V, COIL_REV, DRIVER, DRIVE_CAP, and TANK_IN. It uses 0.6 mm on SEND_BUF, REC_OUT, WET_BUF, SUM_INV, OUT_BUF, and OUT_AC. Most GND sections use 1.0 mm. Eight local GND necks use 0.6 or 0.8 mm for pad clearance. Two original 0.3 mm sections beside C607 at the tube-side WET_AC node remain unchanged until high-voltage spacing is reviewed. SUM_INV is U12A's output; its sensitive SUM input was not widened.</p>
+        <p>The user asked for wider copper where practical. The candidate uses 0.8 mm on +12V, COIL_REV, DRIVER, DRIVE_CAP, and TANK_IN. It uses 0.6 mm on SEND_BUF, REC_OUT, WET_BUF, SUM_INV, OUT_BUF, and OUT_AC. Most GND sections use 1.0 mm. At this CU-003 checkpoint, eight local GND necks use 0.6 or 0.8 mm; two original 0.3 mm sections beside C607 at the tube-side WET_AC node remain pending voltage-spacing review. VS-002 below supersedes that last width and geometry. SUM_INV is U12A's output; its sensitive SUM input was not widened.</p>
         <p>Ten straight segments moved around K3 to retain clearance after widening: the +12V path moves 0.3 mm from the relay-coil pad, and the nearby ground path uses a 0.6 mm neck at y = 26.5 mm. One additional GND diagonal was added. No footprints, mount holes, or functional blocks moved. This is a separate candidate; the active board, schematic, and circuit remain unchanged.</p>
         <p>Uniform widening first produced 17 findings: 11 clearance errors, three shorts, and three mask bridges. The corrected candidate reports zero DRC violations and zero opens. The refreshed HI-008 checker passes 37 checks and four controls. CU-003 passes 18 checks and three controls. No rule exception was added. These checks do not approve high-voltage spacing.</p>
         <p>The comparison sums each net's modeled track resistance. It assumes 30 μm finished foil, 20% width loss, and copper at 70 °C. The board's 35 μm nominal outer copper is not fabricator-confirmed at the required finished minimum. For each segment, the estimate uses <span class="math">\(R_i=\rho_{70}L_i/(0.8w_it)\)</span> and sums <span class="math">\(R_{sum}=\sum_iR_i\)</span>. This is a geometry comparison. It does not solve the shared-ground transfer path, noise, or current distribution.</p>
@@ -78,6 +78,26 @@
           </tbody>
         </table>
         <p>These reductions are not a shared-return or noise result. Vias, pads, connector contacts, harnesses, mutual coupling, and actual heating are excluded. The 70 °C value is an assumption, not a measured board temperature. No thermal, fault-current, startup-current, high-voltage insulation, fabrication, or complete-board qualification is claimed. Keep the candidate separate until those checks and physical fit are complete.</p>
+      </section>
+
+      <section>
+        <h2>VS-002 C607 ground and voltage follow-up</h2>
+        <p>VS-002 moves the C607-adjacent ground route outward by 0.6 mm. It widens the vertical section and adjacent arc from 0.3 to 0.6 mm. The arc keeps its radius. The bottom chamfer remains 45 degrees. The nominal pad-2 ground gap changes from 0.40 to 0.85 mm:</p>
+        <div class="math">\[g_{new}=(143.6-141.5)-\frac{1.9}{2}-\frac{0.6}{2}=0.85\;\mathrm{mm}\]</div>
+        <p>This supersedes the CU-003 checkpoint's two retained 0.3 mm sections. It does not change components, mounting holes, signal connections, the active board, or the circuit.</p>
+        <p>The ordinary candidate DRC now reports zero violations and zero opens. The source-delta checker passes 38 checks and four controls. The voltage-domain screen checks a 14-part value/pin map over <span class="math">\(4\times64\times4=1{,}024\)</span> DC cases. Independent KCL differs by at most <span class="math">\(5.18\times10^{-11}\;\mathrm V\)</span>. Sixteen evidence checks pass. These checks do not qualify complete fault behavior or insulation.</p>
+        <table>
+          <thead><tr><th>Node or part</th><th>Maximum sampled value</th></tr></thead>
+          <tbody>
+            <tr><td>FX_RETURN, clamped</td><td>364.5523 V</td></tr>
+            <tr><td>MIX_OUT, clamped</td><td>332.5642 V</td></tr>
+            <tr><td>WET_AC, clamped</td><td>40.0561 V</td></tr>
+            <tr><td>Across R618</td><td>306.7731 V</td></tr>
+          </tbody>
+        </table>
+        <p>The declared dry-node screen is 400 V. The wet-to-−15 V screen is 63 V. These are resistor and clamp corners in the retained model, not measured voltages or full single-fault limits.</p>
+        <p>The repaired board has 47 reports under the conditional dry-path rule: 45 unique typed object pairs and zero opens. Do not report this as 47 unique pairs. Before repair, the 0.6 mm ground-floor rerun had 51 reports: 47 dry clearances, two wet clearances, and two width findings. Those four extra reports were not dry spacing results. The dry-path reports and connector insulation remain open. Neither the 2.5 mm dry rule nor the 0.64 mm wet rule is an approved production insulation rule.</p>
+        <p>The revised ground track-resistance sum is <span class="math">\(0.519072\;\Omega\)</span>, a 67.30% reduction from the source sum of <span class="math">\(1.587164\;\Omega\)</span>. This sums track sections. It does not solve the current path, shared-ground voltage, noise, or current capacity. No fabrication, insulation, full fault, or native adoption approval follows.</p>
       </section>
 
       <section>
@@ -111,6 +131,10 @@
           <dd>A short, narrower copper segment used to preserve clearance around a pad or component.</dd>
           <dt>Mask bridge</dt>
           <dd>A solder-mask web or clearance finding between nearby copper features.</dd>
+          <dt>Typed pair</dt>
+          <dd>Two copper objects counted for a specific rule type. Repeated reports can refer to the same pair.</dd>
+          <dt>Voltage domain</dt>
+          <dd>A group of circuit nodes that can reach a stated voltage range under the listed conditions.</dd>
         </dl>
       </section>
 
@@ -130,6 +154,8 @@
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/results/supply-copper.json">CU-002 supply-copper receipt</a> — twelve recomputed load cases and candidate rail geometry.</li>
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/results/broad-copper.json">FB-170 / CU-003 calculation receipt</a> — per-net track-resistance sums, conditions, checks, and exclusions.</li>
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/tools/check_broad_copper.py">CU-003 checker</a> — calculation and candidate preservation checks.</li>
+          <li><a href="../../../engineering/whole-amp/reverb-600/voltage-spacing/domain-review.html">VS-002 voltage-domain review</a> — C607 clearance repair, typed-pair counts, and conditional insulation screen.</li>
+          <li><a href="../../../engineering/whole-amp/reverb-600/voltage-spacing/results/domain-screen.json">VS-002 result receipt</a> — 1,024 DC cases, KCL check, node maxima, rules, and native hashes.</li>
           <li><a href="harness-mating-datum.html">HI-004 mating datum</a> and <a href="pot-harness-wire-reserve.html">HI-005 wire reserve</a> — inherited nominal geometry.</li>
         </ul>
       </section>

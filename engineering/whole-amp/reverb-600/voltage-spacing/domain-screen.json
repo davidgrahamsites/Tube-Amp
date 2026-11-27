@@ -1,0 +1,160 @@
+{
+  "id": "VS-002",
+  "date": "2026-11-26",
+  "source": "engineering/whole-amp/reverb-600/circuit.json",
+  "candidate": "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb",
+  "candidate_sha256": "e5a55ecd3265ae29d94c07fd1b8a66c46f3448fce78e76d7707d4ef3d1a7af51",
+  "expected_parts": {
+    "R7": {
+      "value": "100k",
+      "pins": {
+        "1": "B_EARLY",
+        "2": "CL_P2"
+      }
+    },
+    "C6": {
+      "value": "47n",
+      "pins": {
+        "1": "CL_P2",
+        "2": "CLEAN_OUT"
+      }
+    },
+    "R43": {
+      "value": "10M",
+      "pins": {
+        "1": "CLEAN_OUT",
+        "2": "GND"
+      }
+    },
+    "R612": {
+      "value": "100k",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "MIX_OUT"
+      }
+    },
+    "R24": {
+      "value": "10M",
+      "pins": {
+        "1": "MIX_OUT",
+        "2": "GND"
+      }
+    },
+    "R618": {
+      "value": "1M",
+      "pins": {
+        "1": "WET_AC",
+        "2": "MIX_OUT"
+      }
+    },
+    "R617": {
+      "value": "1M",
+      "pins": {
+        "1": "WET_AC",
+        "2": "GND"
+      }
+    },
+    "R616": {
+      "value": "100",
+      "pins": {
+        "1": "OUT_BUF",
+        "2": "OUT_AC"
+      }
+    },
+    "C607": {
+      "value": "1u",
+      "pins": {
+        "1": "OUT_AC",
+        "2": "WET_AC"
+      }
+    },
+    "C601": {
+      "value": "100n",
+      "pins": {
+        "1": "FX_RETURN",
+        "2": "IN_AC"
+      }
+    },
+    "R601": {
+      "value": "1M",
+      "pins": {
+        "1": "IN_AC",
+        "2": "SEND_IN"
+      }
+    },
+    "R602": {
+      "value": "100k",
+      "pins": {
+        "1": "SEND_IN",
+        "2": "GND"
+      }
+    },
+    "D603": {
+      "value": "BZX55C27",
+      "pins": {
+        "1": "WET_AC",
+        "2": "WET_Z_JOIN"
+      }
+    },
+    "D604": {
+      "value": "BZX55C27",
+      "pins": {
+        "1": "GND",
+        "2": "WET_Z_JOIN"
+      }
+    }
+  },
+  "supply_V": [
+    278,
+    313,
+    344.3,
+    400
+  ],
+  "resistor_fraction": 0.01,
+  "clamp_threshold_V": [
+    23,
+    35.6,
+    40
+  ],
+  "clamp_slope_ohm": 220,
+  "wet_source_peak_V": 18,
+  "dry_nets": [
+    "FX_RETURN",
+    "IN_AC",
+    "MIX_OUT"
+  ],
+  "wet_nets": [
+    "WET_AC",
+    "WET_Z_JOIN"
+  ],
+  "dry_clearance_mm": 2.5,
+  "wet_clearance_mm": 0.64,
+  "basis": "Conditional PCB functional-spacing screen. TI SLUP421 p24: 400V uncoated2.5mm and63V uncoated0.64mm. Dry group retains cold-step/C601 transient concerns from VAL061. Wet pair uses declared clamp envelope, not a qualified hot/cold protective barrier. Higher spacing wins dry/wet pairs.",
+  "source_links": [
+    "https://www.ti.com/lit/ml/slup421/slup421.pdf",
+    "https://www.ti.com/lit/ml/slup419/slup419.pdf"
+  ],
+  "qualification": {
+    "full_pairwise_voltage": false,
+    "creepage": false,
+    "protective_insulation": false,
+    "fabrication_ready": false
+  },
+  "next_action": "Resolve final common-loop voltage envelope; then select/qualify JR1/JR5 and reroute dry-domain corridor away from supplies/recovery. Retain assembly/CTI/transient qualification.",
+  "local_repair": {
+    "items": [
+      "c4c22678-0f5a-4707-afb0-16b0b39b7930",
+      "bb009f4c-cab1-5bc2-911b-4ab9a30e83bb",
+      "b4822d54-97a0-4d0f-b766-f4858e795e96"
+    ],
+    "ground_vertical_x_mm": 143.6,
+    "C607_pad2_x_mm": 141.5,
+    "C607_pad2_diameter_mm": 1.9,
+    "ground_width_mm": 0.6,
+    "nominal_gap_mm": 0.85,
+    "prior_gap_mm": 0.4,
+    "claim": "Nominal copper only; tolerance, creepage and full envelope remain open."
+  },
+  "pre_repair_commit": "60f109359772741142126dd053ed2e5c470d61a0",
+  "pre_repair_candidate_sha256": "a620ede01b83c953503f7eed2e26fc27f381380e295ca36dd900121ef188d51a"
+}

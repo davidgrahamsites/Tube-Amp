@@ -43,9 +43,9 @@ def main():
    elif v.field(node,'net')[1].strip('"') in c['existing_net_widths_mm']:
     change=c.get('existing_item_overrides',{}).get(u,{})
     v.field(node,'width')[1]=str(change.get('width_mm',c['existing_net_widths_mm'][v.field(node,'net')[1].strip('"')]))
-    for key in ['start','end']:
+    for key in ['start','mid','end']:
      if key+'_mm' in change:
-      assert kind=='segment';v.field(node,key)[1:3]=list(map(str,change[key+'_mm']))
+      assert key!='mid' or kind=='arc';v.field(node,key)[1:3]=list(map(str,change[key+'_mm']))
     edits.append((a,z,emit(node)));widened.append(u)
  assert sorted(removed)==sorted(c['remove_segments'])
  for a,z in spans(original,'gr_text'):

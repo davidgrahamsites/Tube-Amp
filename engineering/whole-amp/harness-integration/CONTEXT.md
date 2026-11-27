@@ -32,6 +32,6 @@ CU-001 follow-up: the HI-008 contract also owns candidate nominal and minimum fi
 
 CU-002 extends the same candidate to 0.8 mm supply segments and arcs using current-budget/supply-copper.json targets. No route centreline or mounting geometry changes. The candidate remains separate from active native files.
 
-CU-003 extends the candidate to relay/driver, selected driven audio nets and broader ground. The same contract owns explicit endpoint changes and local necks, including two retained 0.3 mm C607-adjacent sections. The checker preserves all undeclared data and adds no DRC waiver; current-budget owns the resistance comparison.
+CU-003 extends the candidate to relay/driver, selected driven audio nets and broader ground. The same contract owns explicit endpoint changes and local necks, with the C607-adjacent sections subsequently moved outward and widened to 0.6 mm by VS-002. The checker preserves all undeclared data and adds no DRC waiver; current-budget owns the resistance comparison.
 
 CU-003 guard tests: tools/test_reverb_candidate_guards.py creates temporary candidate copies, rejects undersized relay copper, an undeclared ground endpoint, and a widened C607-adjacent neck, then deletes each copy. Public evidence: results/reverb-connector-candidate/guard-checks.json. The actual candidate is hash-preserved.

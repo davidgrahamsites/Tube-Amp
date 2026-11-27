@@ -3,10 +3,10 @@
   "date": "2026-11-26",
   "input_hashes": {
     "engineering/whole-amp/pcb-measured-r/boards/Renegade_Reverb.kicad_pcb": "fa4ac0cbd3ced9b9e0758001c0f2cd488ded0953d3e2fd30025a6d57cc70da3d",
-    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "a620ede01b83c953503f7eed2e26fc27f381380e295ca36dd900121ef188d51a",
-    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "23a4f21d1ac64a9bb831952a239c0407a23f2a2550c2dea8cfd8bc678226a2e3",
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/Renegade_Reverb.kicad_pcb": "e5a55ecd3265ae29d94c07fd1b8a66c46f3448fce78e76d7707d4ef3d1a7af51",
+    "engineering/whole-amp/harness-integration/reverb-connector-placement.json": "7d79df795860add6c6213e9db51cb0040aeb9a2a87fdc6c49799124adac0d137",
     "engineering/whole-amp/reverb-600/circuit.json": "db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a",
-    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/checks.json": "72f4bf29d4c4223c099c0196832608f36bbab4d2fe83ffd107d8394395f81a65",
+    "engineering/whole-amp/harness-integration/results/reverb-connector-candidate/checks.json": "84f4ae46e61b6a973ad4d35aec728ca78da6372d7c94ff973d1b335e024a2598",
     "engineering/whole-amp/pcb-measured-r/current-budget/tools/check_broad_copper.py": "96fa1c8d0a65c02935c548a0436b2868058cb574dda105398c97f178575869e9",
     "engineering/whole-amp/pcb-measured-r/current-budget/tools/check_candidate_copper.py": "21e50be1201a7a0368eb264fd00eeb775f68bf06556b74c02097ac9d3bb6d5b0"
   },
@@ -240,16 +240,15 @@
       },
       "after": {
         "segments_and_arcs": 129,
-        "length_sum_mm": 567.350149064185,
+        "length_sum_mm": 567.5986772016088,
         "drawn_widths_mm": [
-          0.3,
           0.6,
           0.8,
           1.0
         ],
-        "track_resistance_sum_ohm": 0.5374761274484998
+        "track_resistance_sum_ohm": 0.519072358136335
       },
-      "reduction_percent": 66.13607796113287
+      "reduction_percent": 67.29561561756238
     }
   },
   "local_necks": {
@@ -258,12 +257,32 @@
       "reason": "Local ground neck preserves pad clearance; no current qualification implied."
     },
     "c4c22678-0f5a-4707-afb0-16b0b39b7930": {
-      "width_mm": 0.3,
-      "reason": "Retain source width near C607 WET_AC tube-side node; do not reduce existing spacing before high-voltage insulation qualification."
+      "width_mm": 0.6,
+      "reason": "VS-002 shifts ground0.6mm away from C607 before widening; nominal pad-to-track gap0.85mm exceeds provisional0.64mm screen, not insulation qualification.",
+      "start_mm": [
+        143.6,
+        63.2
+      ],
+      "end_mm": [
+        143.6,
+        52.3
+      ]
     },
     "bb009f4c-cab1-5bc2-911b-4ab9a30e83bb": {
-      "width_mm": 0.3,
-      "reason": "Retain source width near C607 WET_AC tube-side node; do not reduce existing spacing before high-voltage insulation qualification."
+      "width_mm": 0.6,
+      "reason": "Translate the existing0.8mm-radius arc0.6mm right; join retained horizontal ground trunk and shifted vertical.",
+      "start_mm": [
+        144.4,
+        51.5
+      ],
+      "mid_mm": [
+        143.834314575,
+        51.734314575
+      ],
+      "end_mm": [
+        143.6,
+        52.3
+      ]
     },
     "d8d24d74-88de-4930-a4d0-b17f43fbef63": {
       "width_mm": 0.8,
@@ -393,6 +412,17 @@
         123.3,
         15.4
       ]
+    },
+    "b4822d54-97a0-4d0f-b766-f4858e795e96": {
+      "start_mm": [
+        142.8,
+        64
+      ],
+      "end_mm": [
+        143.6,
+        63.2
+      ],
+      "reason": "45-degree connection from shifted C607 ground path to unchanged lower trunk."
     }
   },
   "checks": {

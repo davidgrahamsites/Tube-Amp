@@ -1816,3 +1816,16 @@ Source: Current chat after CU-002 rail widening
 - [engineering/whole-amp/harness-integration/reverb-placement-review.html](<../../engineering/whole-amp/harness-integration/reverb-placement-review.html>)
 - [engineering/whole-amp/pcb-measured-r/current-budget/results/broad-copper.json](<../../engineering/whole-amp/pcb-measured-r/current-budget/results/broad-copper.json>)
 
+## FB-171 — wider-ground-and-voltage-domain-screen
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> VS-002: move copper outward before widening it; distinguish ordinary DRC from voltage-domain qualification.
+
+Candidate C607 ground sections widen 0.3 to 0.6 mm with nominal gap 0.40 to 0.85 mm; source components and active CAD remain unchanged. Ordinary DRC zero/zero opens. Conditional screen retains 47 dry-path reports, 45 typed pairs; 1024 bounded DC cases and 16 evidence checks pass. No insulation, complete current/thermal, populated fit or manufacturing approval.
+
+Source: engineering/whole-amp/reverb-600/voltage-spacing/results/domain-screen.json
+
+- [engineering/whole-amp/reverb-600/voltage-spacing/domain-review.html](<../../engineering/whole-amp/reverb-600/voltage-spacing/domain-review.html>)
+- [engineering/whole-amp/reverb-600/voltage-spacing/domain-screen.json](<../../engineering/whole-amp/reverb-600/voltage-spacing/domain-screen.json>)
+- [engineering/whole-amp/harness-integration/reverb-connector-placement.json](<../../engineering/whole-amp/harness-integration/reverb-connector-placement.json>)
+

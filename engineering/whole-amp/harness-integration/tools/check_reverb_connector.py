@@ -55,7 +55,7 @@ def main():
  checks['other_setup_preserved']=sa==[sb[0]]+[n for n in sb[1:] if n[0]!='stackup']
  layers=[n for n in stack[1:] if n[0]=='layer'];cu=[n for n in layers if n[1] in ('"F.Cu"','"B.Cu"')]
  checks['nominal_stackup']=len(cu)==2 and all(close(float(v.field(n,'thickness')[1]),c['construction']['outer_copper_nominal_um']/1000) for n in cu) and close(sum(float(v.field(n,'thickness')[1]) for n in layers),1.6)
- # Permit only declared widths and explicit segment endpoints; preserve every other field.
+ # Permit declared widths, segment endpoints and arc control points; preserve other fields.
  oldseg={**named(src,'segment'),**named(src,'arc')};newseg={**named(target,'segment'),**named(target,'arc')}
  overrides=c.get('existing_item_overrides',{})
  checks['overrides_reference_retained_items']=set(overrides)<=set(oldseg)-set(c['remove_segments'])
@@ -66,10 +66,16 @@ def main():
   if net in c['existing_net_widths_mm']:
    change=overrides.get(u,{})
    v.field(oldnode,'width')[1]=str(change.get('width_mm',c['existing_net_widths_mm'][net]))
-   for key in ['start','end']:
+   for key in ['start','mid','end']:
     if key+'_mm' in change:v.field(oldnode,key)[1:3]=list(map(str,change[key+'_mm']))
    width_only &= oldnode==newnode
  checks['existing_routes_only_declared_width_and_endpoint_changes']=width_only
+ arc_translations=[]
+ for u,change in overrides.items():
+  if 'mid_mm' not in change:continue
+  node=v.parse(oldseg[u]);deltas=[tuple(change[key+'_mm'][i]-float(v.field(node,key)[i+1]) for i in [0,1]) for key in ['start','mid','end']]
+  arc_translations.append(node[0]=='arc' and all(close(d[i],deltas[0][i]) for d in deltas for i in [0,1]))
+ checks['moved_arcs_preserve_shape_by_translation']=all(arc_translations)
  board=p.LoadBoard(str(target));original=p.LoadBoard(str(src));fp=next(f for f in board.GetFootprints() if f.GetReference()==c['reference']);pad_data={q.GetNumber():{'xy_mm':xy(q.GetPosition()),'net':q.GetNetname(),'drill_mm':xy(q.GetDrillSize()),'shape':int(q.GetDrillShape())} for q in fp.Pads()}
  circuit_path=M.parent/'reverb-600/circuit.json'
  components=json.loads(circuit_path.read_text())['components'];source_jr4=next(q for q in components if q['reference']=='JR4')
@@ -84,7 +90,7 @@ def main():
  checks['requested_route_style']=all((a[0]==z[0] or a[1]==z[1] or close(abs(a[0]-z[0]),abs(a[1]-z[1]))) for r in c['routes'] for a,z in zip(r['points'],r['points'][1:]))
  checks['new_trace_width_requirement']=all(r['width_mm']>=.6 for r in c['routes'])
  checks['declared_native_widths_and_necks']=all(close(p.ToMM(t.GetWidth()),overrides.get(t.m_Uuid.AsString(),{}).get('width_mm',c['existing_net_widths_mm'][t.GetNetname()])) for t in board.GetTracks() if not isinstance(t,p.PCB_VIA) and t.GetNetname() in c['existing_net_widths_mm'] and t.m_Uuid.AsString() in oldseg)
- checks['detours_use_45_degree_or_orthogonal_segments']=all(q['start_mm'][0]==q['end_mm'][0] or q['start_mm'][1]==q['end_mm'][1] or close(abs(q['start_mm'][0]-q['end_mm'][0]),abs(q['start_mm'][1]-q['end_mm'][1])) for q in overrides.values() if 'start_mm' in q)
+ checks['detours_use_45_degree_or_orthogonal_segments']=all(q['start_mm'][0]==q['end_mm'][0] or q['start_mm'][1]==q['end_mm'][1] or close(abs(q['start_mm'][0]-q['end_mm'][0]),abs(q['start_mm'][1]-q['end_mm'][1])) for q in overrides.values() if 'start_mm' in q and 'mid_mm' not in q)
  rules=json.loads(src.with_suffix('.kicad_pro').read_text())['board']['design_settings']['rules']
  checks['via_project_minimum']=all(q['size_mm']>=rules['min_via_diameter'] and q['drill_mm']>=rules['min_through_hole_diameter'] for q in c['vias'])
  # Exact 180 degree proposal: transform local negative-y plug exit to positive board-y.

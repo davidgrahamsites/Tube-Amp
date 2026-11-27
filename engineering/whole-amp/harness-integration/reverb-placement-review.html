@@ -17,11 +17,11 @@
 <p>\[y_{\mathrm{restraint}}=107.07+12.70=119.77\,\mathrm{mm}\]</p>
 <p>Thus the axial reservation beyond the board edge is \(19.77\,\mathrm{mm}\). It is not a complete three-dimensional keepout: wire spread, bend radius, latch finger space and withdrawal stroke remain unknown. Consume <a href="results/reverb-connector-candidate/service-geometry.json">the mechanical interface</a> when placing the populated board; do not substitute the footprint courtyard.</p>
 <h2>Routing and rejected trial</h2><p>The first trial had 19 DRC findings: copper crossings/shorts, clearance and via-size violations, and silkscreen conflicts. It was rejected. The revised routing crosses the existing ground and negative-supply paths on the other copper layer, moves the vias beyond those paths, and keeps the original rules. The header moves inward by 1.5 mm.</p>
-<p>Relative to the source, total WET_TOP copper length increases by 31.156854 mm, WET_W decreases by 4.134416 mm, and ground increases by 6.411068 mm and +12V increases by 0.600000 mm. These are net totals, not wire lengths or an electrical performance claim. Capacitance, return geometry and the actual pot cable still need a loading comparison before release.</p>
+<p>Relative to the source, total WET_TOP copper length increases by 31.156854 mm, WET_W decreases by 4.134416 mm, and ground increases by 6.659596 mm and +12V increases by 0.600000 mm. These are net totals, not wire lengths or an electrical performance claim. Capacitance, return geometry and the actual pot cable still need a loading comparison before release.</p>
 <p>The draft audit initially treated KiCad's circle-drill enumeration as zero. Inspection showed the native enum is one; the checker now uses KiCad's named circle constant. The footprint holes did not change to make that check pass.</p>
 <h2>CU-003: broader copper with local clearances</h2>
 <p>The user requested wider traces where practical. The candidate now uses 0.8 mm for the relay supply/return and tank driver, 0.6 mm for selected driven audio nodes, and 1.0 mm for most ground sections. The native circuit confirms SUM_INV is U12A's output; SUM is its sensitive input and stays unchanged.</p>
-<p>Eight local ground sections use 0.6 or 0.8 mm near pads. Two original 0.3 mm sections beside C607's tube-side WET_AC connection stay unchanged to avoid reducing existing spacing before the high-voltage insulation review. The whole-ground rule therefore retains a 0.3 mm floor; the independent native checker enforces the exact wider trunks and declared necks. No DRC exclusion is added.</p>
+<p>Ten local ground sections use 0.6 or 0.8 mm near pads. VS-002 moves the C607-adjacent route outward, translates its arc and widens both former 0.3 mm sections to 0.6 mm. The nominal pad gap increases from 0.40 to 0.85 mm. Ground now has a 0.6 mm floor. No DRC exclusion is added. <a href="../reverb-600/voltage-spacing/domain-review.html">Voltage-domain review and remaining findings</a>.</p>
 <p>Uniform broadening first caused 17 findings: 11 clearance errors, three shorts and three mask bridges. Move the +12V path 0.3 mm away from the relay coil pad, move the nearby ground path to a 0.6 mm local route at y = 26.5 mm, and retain pad-clearance necks. The final candidate has zero violations and zero opens under the declared native rules. This does not qualify high-voltage insulation.</p>
 <table><thead><tr><th>Net</th><th>Drawn widths (mm)</th><th>Source track sum (Ω)</th><th>Candidate track sum (Ω)</th><th>Reduction</th></tr></thead><tbody><tr><td>+12V</td><td>0.8</td><td>0.120065</td><td>0.047287</td><td>60.62%</td></tr>
 <tr><td>COIL_REV</td><td>0.8</td><td>0.098733</td><td>0.038643</td><td>60.86%</td></tr>
@@ -34,14 +34,11 @@
 <tr><td>SUM_INV</td><td>0.6</td><td>0.154036</td><td>0.077018</td><td>50.00%</td></tr>
 <tr><td>OUT_BUF</td><td>0.6</td><td>0.104939</td><td>0.052470</td><td>50.00%</td></tr>
 <tr><td>OUT_AC</td><td>0.6</td><td>0.044329</td><td>0.022164</td><td>50.00%</td></tr>
-<tr><td>GND</td><td>0.3, 0.6, 0.8, 1.0</td><td>1.587164</td><td>0.537476</td><td>66.14%</td></tr>
+<tr><td>GND</td><td>0.6, 0.8, 1.0</td><td>1.587164</td><td>0.519072</td><td>67.30%</td></tr>
 </tbody></table>
-<p>Apply the same proposed construction to both versions: minimum finished foil (t=30,mumathrm{m}), worst-case width factor (0.8), and assumed copper temperature (70^circmathrm{C}). Native stackup remains nominal 35 µm; the fabricator has not confirmed the finished minima.</p>
-<p>[
-ho_{70}=1.724	imes10^{-8}[1+0.00393(70-20)] Omega,mathrm{m}]</p>
-<p>[R_{mathrm{track,sum}}=sum_irac{
-ho_{70} L_i}{(0.8w_i)t},qquad mathrm{reduction}=100left(1-rac{R_{mathrm{candidate}}}{R_{mathrm{source}}}
-ight)%]</p>
+<p>Apply the same proposed construction to both versions: minimum finished foil \(t=30\,\mu\mathrm{m}\), worst-case width factor \(0.8\), and assumed copper temperature \(70^\circ\mathrm{C}\). Native stackup remains nominal 35 µm; the fabricator has not confirmed the finished minima.</p>
+<p>\[\rho_{70}=1.724\times10^{-8}[1+0.00393(70-20)]\;\Omega\,\mathrm{m}\]</p>
+<p>\[R_{\mathrm{track,sum}}=\sum_i\frac{\rho_{70}L_i}{(0.8w_i)t},\qquad \mathrm{reduction}=100\left(1-\frac{R_{\mathrm{candidate}}}{R_{\mathrm{source}}}\right)\%\]</p>
 <p>Convert all lengths to metres before substitution. The sum compares copper geometry; it is not a solved shared-return voltage drop or a current rating. Vias, pad rings, connector contacts, harnesses, mutual coupling and actual heating are excluded here. CU-001 and CU-002 retain their separate bounded load/drop checks. High-impedance inputs, feedback nodes and tube-interface routes still need their own loading and spacing reviews.</p>
 <p><a href="../pcb-measured-r/current-budget/results/broad-copper.json">CU-003 inputs, calculations and checks</a>; <a href="../pcb-measured-r/current-budget/tools/check_broad_copper.py">reproducible calculation</a>. The source/native board remains unchanged; this is the current integration candidate.</p>
 <p>Three disposable corruption trials also pass: reject undersized relay copper, an undeclared ground endpoint and an enlarged C607-adjacent neck. The endpoint error still passes DRC, so the exact source-delta check is necessary. <a href="results/reverb-connector-candidate/guard-checks.json">Guard-test receipt</a>.</p><h2>Evidence and next work</h2><ul>
