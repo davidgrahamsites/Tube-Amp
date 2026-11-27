@@ -1,0 +1,136 @@
+{
+  "case": {
+    "id": "comp10-nominal",
+    "transient": true,
+    "compensation_pF": 10,
+    "seed": true
+  },
+  "parameters": {
+    "hv_V": 400,
+    "reference_V": 2,
+    "rail_V": 15,
+    "idss_A": 0.002,
+    "vto_V": -2,
+    "sink_A": 0.002,
+    "drain_ohm": 100000,
+    "gate_ohm": 10000,
+    "feedback_ohm": 990000,
+    "ground_ohm": 10000,
+    "input_ohm": 100000,
+    "compensation_pF": 10,
+    "feedback_pF": 1,
+    "load_ohm": 340000,
+    "load_pF": 100,
+    "coupling_uF": 1,
+    "frequency_Hz": 1000,
+    "input_peak_V": 1.35,
+    "max_step_s": 1e-06,
+    "end_s": 0.03,
+    "seed": true,
+    "sink_model": "ideal",
+    "sense_ohm": 499,
+    "current_reference_V": 1,
+    "id": "comp10-nominal",
+    "transient": true,
+    "opamp_model": "engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+  },
+  "op": {
+    "out": 199.9478378324301,
+    "drive": 200.04543056597987,
+    "gate": -0.0002272657700417073,
+    "fb": 1.9994782297485298,
+    "err": -0.0002272657700417073,
+    "inv": 1.9999987891782807
+  },
+  "ac": {
+    "20": {
+      "gain": 99.96157392261954,
+      "gain_error_dB": -0.003338288101173219,
+      "phase_deg": 1.319465287447378
+    },
+    "82.4": {
+      "gain": 99.98729008720021,
+      "gain_error_dB": -0.001104039161577832,
+      "phase_deg": 0.23811551916979098
+    },
+    "1000": {
+      "gain": 99.98246097357921,
+      "gain_error_dB": -0.0015235540906838642,
+      "phase_deg": -1.033274659206262
+    },
+    "5000": {
+      "gain": 99.8271043133445,
+      "gain_error_dB": -0.015030525844763963,
+      "phase_deg": -5.294104179218902
+    },
+    "20000": {
+      "gain": 97.41630240387704,
+      "gain_error_dB": -0.22736717626801567,
+      "phase_deg": -21.12207407795363
+    }
+  },
+  "loop": {
+    "op": {
+      "out": 199.94783782233927,
+      "drive": 200.04543055588414,
+      "gate": -0.00022726571955825837,
+      "fb": 1.9994782297485296,
+      "err": -0.00022726571955825837,
+      "inv": 1.9999987891782807
+    },
+    "crossings": [
+      {
+        "frequency_Hz": 1582600.2594265477,
+        "phase_deg": -77.57904140785578,
+        "phase_margin_deg": 102.42095859214422,
+        "direction": "falling"
+      }
+    ],
+    "low_frequency_return_ratio": 310048.7471257684
+  },
+  "operating_points_valid": true,
+  "small_signal_screen_pass": true,
+  "transient": {
+    "end_s": 0.03,
+    "saved_points": 20001,
+    "fundamental_Vpk": 134.97535997950263,
+    "least_squares_fundamental_Vpk": 134.97535997950254,
+    "THD_percent": 0.06737143276849639,
+    "output_min_V": -135.03654180012455,
+    "output_max_V": 134.91237280553744,
+    "gain_error_dB": -0.0015854817219640642,
+    "max_abs_Vgs_V": 0.8621934585500642,
+    "max_Vds_V": 335.2691628229464,
+    "power_W": {
+      "gain": {
+        "mean": 0.30854540930582053,
+        "peak": 0.400769510210982
+      },
+      "follower": {
+        "mean": 0.4041669192657983,
+        "peak": 0.5657654741435856
+      },
+      "ideal_sink": {
+        "mean": 0.3998956630662225,
+        "peak": 0.6698635882884231
+      },
+      "drain_resistor": {
+        "mean": 0.491305341122305,
+        "peak": 1.12370153855958
+      }
+    },
+    "junction_estimate_C": {
+      "gain": 110.7279940283683,
+      "follower": 123.35003334308537,
+      "ideal_sink": 122.78622752474138
+    },
+    "model_voltage_domain_valid": true,
+    "screen_pass": true
+  },
+  "artifact_hashes": {
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-comp10-nominal.cir": "5cad20484155ea252c41d0318a63d43a0720ffe35e0f32b38c85d196a9a57873",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-comp10-nominal-loop.cir": "ab1c5259c1e5376dd7977af0fa314ad3a490c9e56d39f73ccb3f80b01cac9ba4",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-comp10-nominal-ac.csv": "8211469a55d91504265bc974615b58a64314a92ba2887f9250265b6d8f0b6ee0",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-comp10-nominal.csv": "f3e6e01e55f22124f02304b7c89c7c7268891d47225ce5042fd646decaa6e5a1"
+  }
+}

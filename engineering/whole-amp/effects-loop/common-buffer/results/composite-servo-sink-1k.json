@@ -1,0 +1,142 @@
+{
+  "case": {
+    "id": "servo-sink-1k",
+    "transient": true,
+    "compensation_pF": 10,
+    "seed": true,
+    "sink_model": "servo"
+  },
+  "parameters": {
+    "hv_V": 400,
+    "reference_V": 2,
+    "rail_V": 15,
+    "idss_A": 0.002,
+    "vto_V": -2,
+    "sink_A": 0.002,
+    "drain_ohm": 100000,
+    "gate_ohm": 10000,
+    "feedback_ohm": 990000,
+    "ground_ohm": 10000,
+    "input_ohm": 100000,
+    "compensation_pF": 10,
+    "feedback_pF": 1,
+    "load_ohm": 340000,
+    "load_pF": 100,
+    "coupling_uF": 1,
+    "frequency_Hz": 1000,
+    "input_peak_V": 1.35,
+    "max_step_s": 1e-06,
+    "end_s": 0.03,
+    "seed": true,
+    "sink_model": "servo",
+    "sense_ohm": 499,
+    "current_reference_V": 1,
+    "id": "servo-sink-1k",
+    "transient": true,
+    "opamp_model": "engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+  },
+  "op": {
+    "out": 199.947837824287,
+    "drive": 200.04782694127198,
+    "gate": -0.00023924904529450916,
+    "fb": 1.999478229741791,
+    "err": -0.00023924904529450916,
+    "inv": 1.9999987891782807
+  },
+  "ac": {
+    "20": {
+      "gain": 99.9615739206048,
+      "gain_error_dB": -0.003338288276237959,
+      "phase_deg": 1.3194652732671306
+    },
+    "82.4": {
+      "gain": 99.9872900907763,
+      "gain_error_dB": -0.0011040388509236496,
+      "phase_deg": 0.23811546077886425
+    },
+    "1000": {
+      "gain": 99.98246176537826,
+      "gain_error_dB": -0.0015234853038280794,
+      "phase_deg": -1.0332753654940552
+    },
+    "5000": {
+      "gain": 99.82712473393981,
+      "gain_error_dB": -0.01502874906259414,
+      "phase_deg": -5.294107446631801
+    },
+    "20000": {
+      "gain": 97.41663996059746,
+      "gain_error_dB": -0.2273370788893632,
+      "phase_deg": -21.122074093047697
+    }
+  },
+  "loop": {
+    "op": {
+      "out": 199.94783782166525,
+      "drive": 200.0478269386484,
+      "gate": -0.00023924903217559243,
+      "fb": 1.9994782297417908,
+      "err": -0.00023924903217559243,
+      "inv": 1.9999987891782807
+    },
+    "crossings": [
+      {
+        "frequency_Hz": 1592015.5999485713,
+        "phase_deg": -78.45222867917893,
+        "phase_margin_deg": 101.54777132082107,
+        "direction": "falling"
+      }
+    ],
+    "low_frequency_return_ratio": 310047.4639127089
+  },
+  "operating_points_valid": true,
+  "small_signal_screen_pass": true,
+  "transient": {
+    "end_s": 0.03,
+    "saved_points": 20001,
+    "fundamental_Vpk": 134.9753611226346,
+    "least_squares_fundamental_Vpk": 134.97536112263458,
+    "THD_percent": 0.06737289230633252,
+    "output_min_V": -135.03629949846794,
+    "output_max_V": 134.912207284603,
+    "gain_error_dB": -0.0015854081595134196,
+    "max_abs_Vgs_V": 0.862210216386752,
+    "max_Vds_V": 335.2715383913891,
+    "power_W": {
+      "gain": {
+        "mean": 0.30854580928984,
+        "peak": 0.4007695115604084
+      },
+      "follower": {
+        "mean": 0.40517311839382175,
+        "peak": 0.567503776988634
+      },
+      "drain_resistor": {
+        "mean": 0.4912952617480848,
+        "peak": 1.1236814583764976
+      },
+      "servo_sink": {
+        "mean": 0.3988952140344341,
+        "peak": 0.6695427357942306
+      }
+    },
+    "junction_estimate_C": {
+      "gain": 110.72804682625888,
+      "follower": 123.48285162798447,
+      "servo_sink": 122.6541682525453
+    },
+    "sink_current_A": {
+      "mean": 0.0020050295078305647,
+      "min": 0.002002911338065137,
+      "max": 0.0020071522771727517
+    },
+    "model_voltage_domain_valid": true,
+    "screen_pass": true
+  },
+  "artifact_hashes": {
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-servo-sink-1k.cir": "a3e8f00d2bd223dbc92457a4485edcd84b7528f0fb3957af2412ebb790cecfae",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-servo-sink-1k-loop.cir": "83a6000381aa129ca4ffe892db3d36df16c0c15bbfb2592d511df11ea4b6c4e3",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-servo-sink-1k-ac.csv": "8a652f7321b3e81d338c101869569c0871b2e1b641c49217a76cd0dbfc73e96e",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-servo-sink-1k.csv": "abc87a2aee07f8808952697458a462b61f1cdcb78f999801d899f010ff44af9f"
+  }
+}

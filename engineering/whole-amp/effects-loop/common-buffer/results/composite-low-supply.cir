@@ -1,0 +1,29 @@
+CB-002 composite recovery feasibility; generic MOS and ideal sink
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+.options method=gear reltol=0.0001 abstol=1n
+VHV hv 0 340
+VP vp 0 15
+VN vn 0 -15
+VIN vin 0 DC 2 AC 1 SIN(2 1.35 1000)
+XERR fb inv vp vn err OPAx134
+RINV vin inv 100000
+RGATE err gate 10000
+MGAIN drive gate 0 0 LNDgeneric
+RDR hv drive 100000
+MFOLLOW hv drive out out LNDgeneric
+IBIAS out 0 0.002
+RF out fb 990000
+RG fb 0 10000
+CF out fb 1p
+COUT out load 1u
+RLOAD load 0 340000
+CLOAD load 0 100p
+.model LNDgeneric NMOS (LEVEL=1 VTO=-2 KP=0.001 LAMBDA=0)
+CGS1 gate 0 9p
+CGD1 gate drive 1p
+CDS1 drive 0 2.5p
+CGS2 drive out 9p
+CGD2 drive hv 1p
+CDS2 hv out 2.5p
+CCOMP err inv 4.7p
+.end

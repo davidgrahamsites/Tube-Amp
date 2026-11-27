@@ -1,0 +1,137 @@
+{
+  "case": {
+    "id": "20k-full",
+    "frequency_Hz": 20000,
+    "max_step_s": 1e-07,
+    "end_s": 0.003,
+    "transient": true
+  },
+  "parameters": {
+    "hv_V": 400,
+    "reference_V": 2,
+    "rail_V": 15,
+    "idss_A": 0.002,
+    "vto_V": -2,
+    "sink_A": 0.002,
+    "drain_ohm": 100000,
+    "gate_ohm": 10000,
+    "feedback_ohm": 990000,
+    "ground_ohm": 10000,
+    "input_ohm": 100000,
+    "compensation_pF": 4.7,
+    "feedback_pF": 1,
+    "load_ohm": 340000,
+    "load_pF": 100,
+    "coupling_uF": 1,
+    "frequency_Hz": 20000,
+    "input_peak_V": 1.35,
+    "max_step_s": 1e-07,
+    "end_s": 0.003,
+    "seed": false,
+    "sink_model": "ideal",
+    "sense_ohm": 499,
+    "current_reference_V": 1,
+    "id": "20k-full",
+    "transient": true,
+    "opamp_model": "engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+  },
+  "op": {
+    "out": 199.94783781525524,
+    "drive": 200.0454305487967,
+    "gate": -0.0002272656841160765,
+    "fb": 1.9994782297485298,
+    "err": -0.0002272656841160765,
+    "inv": 1.9999987891782807
+  },
+  "ac": {
+    "20": {
+      "gain": 99.96157512629921,
+      "gain_error_dB": -0.0033381835106963548,
+      "phase_deg": 1.32519320916809
+    },
+    "82.4": {
+      "gain": 99.98731236609034,
+      "gain_error_dB": -0.0011021037960015935,
+      "phase_deg": 0.2617154846665039
+    },
+    "1000": {
+      "gain": 99.98575802674631,
+      "gain_error_dB": -0.0012371301770641814,
+      "phase_deg": -0.7468932637904337
+    },
+    "5000": {
+      "gain": 99.9094742823259,
+      "gain_error_dB": -0.007866525082837049,
+      "phase_deg": -3.8630906860081047
+    },
+    "20000": {
+      "gain": 98.71583265998194,
+      "gain_error_dB": -0.11226373780813288,
+      "phase_deg": -15.459036511265964
+    }
+  },
+  "loop": {
+    "op": {
+      "out": 199.94783781374664,
+      "drive": 200.04543054728737,
+      "gate": -0.00022726567656952608,
+      "fb": 1.9994782297485294,
+      "err": -0.00022726567656952608,
+      "inv": 1.9999987891782807
+    },
+    "crossings": [
+      {
+        "frequency_Hz": 2412426.5214140415,
+        "phase_deg": -121.06887592134686,
+        "phase_margin_deg": 58.93112407865314,
+        "direction": "falling"
+      }
+    ],
+    "low_frequency_return_ratio": 636723.5640411113
+  },
+  "operating_points_valid": true,
+  "small_signal_screen_pass": true,
+  "transient": {
+    "end_s": 0.003,
+    "saved_points": 10001,
+    "fundamental_Vpk": 133.22419626112557,
+    "least_squares_fundamental_Vpk": 133.2241962611256,
+    "THD_percent": 0.6030040978906872,
+    "output_min_V": -133.43156327281608,
+    "output_max_V": 132.7678496286369,
+    "gain_error_dB": -0.11501319327911302,
+    "max_abs_Vgs_V": 1.1373039645761764,
+    "max_Vds_V": 333.4939177283687,
+    "power_W": {
+      "gain": {
+        "mean": 0.310934525449865,
+        "peak": 0.4156178688813749
+      },
+      "follower": {
+        "mean": 0.40505466067360785,
+        "peak": 0.9169946834468846
+      },
+      "ideal_sink": {
+        "mean": 0.3998956652333237,
+        "peak": 0.6654642449895593
+      },
+      "drain_resistor": {
+        "mean": 0.4893972209107901,
+        "peak": 1.1133412087694041
+      }
+    },
+    "junction_estimate_C": {
+      "gain": 111.04335735938218,
+      "follower": 123.46721520891623,
+      "ideal_sink": 122.78622781079872
+    },
+    "model_voltage_domain_valid": true,
+    "screen_pass": true
+  },
+  "artifact_hashes": {
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-20k-full.cir": "588477254d5a89d313826045ab1866937e18ca25c005b6d62c5ba9530622a5da",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-20k-full-loop.cir": "371b776762becfa3e11d5abd97273cf628a3251ed95f554caa2b6baddfd50787",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-20k-full-ac.csv": "dbb73d8a3cab814203ee2f8c133386e468f98418a863770c87df477242b4c92c",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-20k-full.csv": "0c147b9e9647e2a186a12ef4e6d56b043f163b7a95fb486210342b29f4a7d0fc"
+  }
+}

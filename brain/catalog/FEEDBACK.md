@@ -1829,3 +1829,16 @@ Source: engineering/whole-amp/reverb-600/voltage-spacing/results/domain-screen.j
 - [engineering/whole-amp/reverb-600/voltage-spacing/domain-screen.json](<../../engineering/whole-amp/reverb-600/voltage-spacing/domain-screen.json>)
 - [engineering/whole-amp/harness-integration/reverb-connector-placement.json](<../../engineering/whole-amp/harness-integration/reverb-connector-placement.json>)
 
+## FB-172 — composite-return-feasibility
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> CB-002 tests the approved common-buffer recovery direction without adopting a low-headroom shortcut.
+
+18cases complete,7include transients;75 independent evidence checks and3corrupted-record controls pass. Nominal servo sink at1kHz passes standalone waveform screen;20kHz full-swing distortion fails,3 sensitivity operating points are invalid, and current/thermal margins remain unqualified. No actual part selection, active native change or fabrication approval.
+
+Source: engineering/whole-amp/effects-loop/common-buffer/results/composite-audit.json
+
+- [engineering/whole-amp/effects-loop/common-buffer/composite-review.html](<../../engineering/whole-amp/effects-loop/common-buffer/composite-review.html>)
+- [engineering/whole-amp/effects-loop/common-buffer/composite-return.json](<../../engineering/whole-amp/effects-loop/common-buffer/composite-return.json>)
+- [docs/design-journal/chapters/composite-return-feasibility.html](<../../docs/design-journal/chapters/composite-return-feasibility.html>)
+

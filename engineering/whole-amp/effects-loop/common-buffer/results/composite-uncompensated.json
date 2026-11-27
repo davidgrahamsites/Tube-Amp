@@ -1,0 +1,97 @@
+{
+  "case": {
+    "id": "uncompensated",
+    "compensation_pF": 0,
+    "transient": false
+  },
+  "parameters": {
+    "hv_V": 400,
+    "reference_V": 2,
+    "rail_V": 15,
+    "idss_A": 0.002,
+    "vto_V": -2,
+    "sink_A": 0.002,
+    "drain_ohm": 100000,
+    "gate_ohm": 10000,
+    "feedback_ohm": 990000,
+    "ground_ohm": 10000,
+    "input_ohm": 100000,
+    "compensation_pF": 0,
+    "feedback_pF": 1,
+    "load_ohm": 340000,
+    "load_pF": 100,
+    "coupling_uF": 1,
+    "frequency_Hz": 1000,
+    "input_peak_V": 1.35,
+    "max_step_s": 1e-06,
+    "end_s": 0.03,
+    "seed": false,
+    "sink_model": "ideal",
+    "sense_ohm": 499,
+    "current_reference_V": 1,
+    "id": "uncompensated",
+    "transient": false,
+    "opamp_model": "engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+  },
+  "op": {
+    "out": 199.94783891658366,
+    "drive": 200.04543165065013,
+    "gate": -0.000227271194009583,
+    "fb": 1.9994782407618141,
+    "err": -0.000227271194009583,
+    "inv": 1.9999988001916802
+  },
+  "ac": {
+    "20": {
+      "gain": 99.96157479491958,
+      "gain_error_dB": -0.00333821230502899,
+      "phase_deg": 1.3302726870120396
+    },
+    "82.4": {
+      "gain": 99.9873173654072,
+      "gain_error_dB": -0.0011016695057661347,
+      "phase_deg": 0.28264376174293016
+    },
+    "1000": {
+      "gain": 99.9865915044015,
+      "gain_error_dB": -0.0011647252176203641,
+      "phase_deg": -0.4929221351773756
+    },
+    "5000": {
+      "gain": 99.9303767954922,
+      "gain_error_dB": -0.006049500878670898,
+      "phase_deg": -2.59279376370714
+    },
+    "20000": {
+      "gain": 99.06160337494943,
+      "gain_error_dB": -0.08189293929463456,
+      "phase_deg": -10.353828468809695
+    }
+  },
+  "loop": {
+    "op": {
+      "out": 199.94783891507907,
+      "drive": 200.04543164914486,
+      "gate": -0.00022727118648301973,
+      "fb": 1.9994782407618144,
+      "err": -0.00022727118648301973,
+      "inv": 1.9999988001916809
+    },
+    "crossings": [
+      {
+        "frequency_Hz": 2888395.8714641593,
+        "phase_deg": -193.14810282034355,
+        "phase_margin_deg": -13.148102820343553,
+        "direction": "falling"
+      }
+    ],
+    "low_frequency_return_ratio": 3453683.31275923
+  },
+  "operating_points_valid": true,
+  "small_signal_screen_pass": false,
+  "artifact_hashes": {
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-uncompensated.cir": "7409dba13d86e25db93cb20da5be29c64006b6a71dd6d24e3bb139b8b858b748",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-uncompensated-loop.cir": "2f824fa526c1f41f02bbe0d26372c4cfb2346233e11e5edc2f9d8b9b84bbe1a7",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-uncompensated-ac.csv": "37f75cbd38ff9699f390d5113ca06fa72a52c38b7a3989b939f9487bc8d74802"
+  }
+}

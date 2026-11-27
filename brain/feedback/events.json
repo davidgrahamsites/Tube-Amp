@@ -2601,6 +2601,24 @@
       ],
       "supersedes": [],
       "next_action": "Resolve buffered tube-interface fault bounds, qualify exact connector and reroute dry corridor; retain remaining chassis/tool checks."
+    },
+    {
+      "id": "FB-172",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "engineer",
+      "kind": "composite-return-feasibility",
+      "quote": "CB-002 tests the approved common-buffer recovery direction without adopting a low-headroom shortcut.",
+      "source": "engineering/whole-amp/effects-loop/common-buffer/results/composite-audit.json",
+      "interpretation": "18cases complete,7include transients;75 independent evidence checks and3corrupted-record controls pass. Nominal servo sink at1kHz passes standalone waveform screen;20kHz full-swing distortion fails,3 sensitivity operating points are invalid, and current/thermal margins remain unqualified. No actual part selection, active native change or fabrication approval.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/common-buffer/composite-review.html",
+        "engineering/whole-amp/effects-loop/common-buffer/composite-return.json",
+        "docs/design-journal/chapters/composite-return-feasibility.html"
+      ],
+      "supersedes": [],
+      "next_action": "Resolve transistor model/startup, gate protection, hot current-sink/output package and real references; then integrated common-loop loading, connector voltage domains and three-board chassis."
     }
   ]
 }

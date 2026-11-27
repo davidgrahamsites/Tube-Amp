@@ -1,0 +1,138 @@
+{
+  "case": {
+    "id": "20k-cap500",
+    "frequency_Hz": 20000,
+    "load_pF": 500,
+    "max_step_s": 1e-07,
+    "end_s": 0.003,
+    "transient": true
+  },
+  "parameters": {
+    "hv_V": 400,
+    "reference_V": 2,
+    "rail_V": 15,
+    "idss_A": 0.002,
+    "vto_V": -2,
+    "sink_A": 0.002,
+    "drain_ohm": 100000,
+    "gate_ohm": 10000,
+    "feedback_ohm": 990000,
+    "ground_ohm": 10000,
+    "input_ohm": 100000,
+    "compensation_pF": 4.7,
+    "feedback_pF": 1,
+    "load_ohm": 340000,
+    "load_pF": 500,
+    "coupling_uF": 1,
+    "frequency_Hz": 20000,
+    "input_peak_V": 1.35,
+    "max_step_s": 1e-07,
+    "end_s": 0.003,
+    "seed": false,
+    "sink_model": "ideal",
+    "sense_ohm": 499,
+    "current_reference_V": 1,
+    "id": "20k-cap500",
+    "transient": true,
+    "opamp_model": "engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+  },
+  "op": {
+    "out": 199.94783781525524,
+    "drive": 200.0454305487967,
+    "gate": -0.0002272656841160765,
+    "fb": 1.9994782297485298,
+    "err": -0.0002272656841160765,
+    "inv": 1.9999987891782807
+  },
+  "ac": {
+    "20": {
+      "gain": 99.92163241749343,
+      "gain_error_dB": -0.006809590332846664,
+      "phase_deg": 1.3246574064683552
+    },
+    "82.4": {
+      "gain": 99.94733996851818,
+      "gain_error_dB": -0.0045751969737207136,
+      "phase_deg": 0.2615853696368847
+    },
+    "1000": {
+      "gain": 99.94596788175053,
+      "gain_error_dB": -0.004694438526787163,
+      "phase_deg": -0.7469030177974294
+    },
+    "5000": {
+      "gain": 99.87414952797634,
+      "gain_error_dB": -0.01093811738973111,
+      "phase_deg": -3.8629814287623634
+    },
+    "20000": {
+      "gain": 98.75371676310043,
+      "gain_error_dB": -0.10893099973562814,
+      "phase_deg": -15.452446950466944
+    }
+  },
+  "loop": {
+    "op": {
+      "out": 199.94783781374664,
+      "drive": 200.04543054728737,
+      "gate": -0.00022726567656952608,
+      "fb": 1.9994782297485294,
+      "err": -0.00022726567656952608,
+      "inv": 1.9999987891782807
+    },
+    "crossings": [
+      {
+        "frequency_Hz": 664943.4155140129,
+        "phase_deg": -96.35202762160522,
+        "phase_margin_deg": 83.64797237839478,
+        "direction": "falling"
+      }
+    ],
+    "low_frequency_return_ratio": 636724.0432798754
+  },
+  "operating_points_valid": true,
+  "small_signal_screen_pass": true,
+  "transient": {
+    "end_s": 0.003,
+    "saved_points": 24377,
+    "fundamental_Vpk": 72.91748305324431,
+    "least_squares_fundamental_Vpk": 72.91748305324431,
+    "THD_percent": 60.258809993822624,
+    "output_min_V": -58.147374242996825,
+    "output_max_V": 133.20562601504048,
+    "gain_error_dB": -5.350041982351229,
+    "max_abs_Vgs_V": 286.16418281995936,
+    "max_Vds_V": 333.91061807592064,
+    "power_W": {
+      "gain": {
+        "mean": 0.10280963076891292,
+        "peak": 0.575720993023061
+      },
+      "follower": {
+        "mean": 0.35331973070003686,
+        "peak": 33.446914461169555
+      },
+      "ideal_sink": {
+        "mean": 0.48355337854599467,
+        "peak": 0.6670661312158683
+      },
+      "drain_resistor": {
+        "mean": 1.1366578848643103,
+        "peak": 1.597982922847724
+      }
+    },
+    "junction_estimate_C": {
+      "gain": 83.5708712614965,
+      "follower": 116.63820445240486,
+      "ideal_sink": 133.82904596807128
+    },
+    "model_voltage_domain_valid": false,
+    "screen_pass": false
+  },
+  "artifact_hashes": {
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-20k-cap500.cir": "48810ae0ae5688187b104ff325d8d28116d74dd1f839d373a4a4946ba61a9eb3",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-20k-cap500-loop.cir": "0f7f2135b39f59f7692963045a4cd727857b2308e9794c3918ae7052385950d9",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-20k-cap500-ac.csv": "1dc811fab34cbff27bdc33729aac2499b2d6f055ed6b15cae450df5a597c566b",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-20k-cap500.csv": "acb03aeff446c4feb449e546191a22c363e321852c7e80337646300097b2f778"
+  }
+}

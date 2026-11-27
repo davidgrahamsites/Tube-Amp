@@ -1,0 +1,97 @@
+{
+  "case": {
+    "id": "low-idss",
+    "idss_A": 0.001,
+    "transient": false
+  },
+  "parameters": {
+    "hv_V": 400,
+    "reference_V": 2,
+    "rail_V": 15,
+    "idss_A": 0.001,
+    "vto_V": -2,
+    "sink_A": 0.002,
+    "drain_ohm": 100000,
+    "gate_ohm": 10000,
+    "feedback_ohm": 990000,
+    "ground_ohm": 10000,
+    "input_ohm": 100000,
+    "compensation_pF": 4.7,
+    "feedback_pF": 1,
+    "load_ohm": 340000,
+    "load_pF": 100,
+    "coupling_uF": 1,
+    "frequency_Hz": 1000,
+    "input_peak_V": 1.35,
+    "max_step_s": 1e-06,
+    "end_s": 0.03,
+    "seed": false,
+    "sink_model": "ideal",
+    "sense_ohm": 499,
+    "current_reference_V": 1,
+    "id": "low-idss",
+    "transient": false,
+    "opamp_model": "engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+  },
+  "op": {
+    "out": 199.9478840519156,
+    "drive": 200.9143281751983,
+    "gate": 0.8219542996467536,
+    "fb": 1.9994786921151126,
+    "err": 0.8219542996467536,
+    "inv": 1.9999987891782807
+  },
+  "ac": {
+    "20": {
+      "gain": 99.96156160727104,
+      "gain_error_dB": -0.003339358210019884,
+      "phase_deg": 1.3244534820989258
+    },
+    "82.4": {
+      "gain": 99.98729423232479,
+      "gain_error_dB": -0.0011036790748724776,
+      "phase_deg": 0.25867022345438584
+    },
+    "1000": {
+      "gain": 99.98514624801406,
+      "gain_error_dB": -0.0012902763342067744,
+      "phase_deg": -0.7838420322572395
+    },
+    "5000": {
+      "gain": 99.89455223876341,
+      "gain_error_dB": -0.009163908584620548,
+      "phase_deg": -4.047479747664892
+    },
+    "20000": {
+      "gain": 98.4857412839141,
+      "gain_error_dB": -0.1325328377565359,
+      "phase_deg": -16.174476402486075
+    }
+  },
+  "loop": {
+    "op": {
+      "out": 199.94788406407648,
+      "drive": 200.9143281873675,
+      "gate": 0.8219542995605057,
+      "fb": 1.9994786921151122,
+      "err": 0.8219542995605057,
+      "inv": 1.9999987891782807
+    },
+    "crossings": [
+      {
+        "frequency_Hz": 1559654.9571109074,
+        "phase_deg": -103.17803641572185,
+        "phase_margin_deg": 76.82196358427815,
+        "direction": "falling"
+      }
+    ],
+    "low_frequency_return_ratio": 448950.18001799425
+  },
+  "operating_points_valid": true,
+  "small_signal_screen_pass": true,
+  "artifact_hashes": {
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-low-idss.cir": "978ecb27f85547a0a160546dfc2f257e763e8f3faa425543671590dce3d20ec9",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-low-idss-loop.cir": "5d4d3b71679e80cf7c70cdd2b995f49945bd67840eb05bc8d41181deeb6a8b5b",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-low-idss-ac.csv": "cca70b0e40345d9233bec2adca52e8da5e8a366677d0d79d90408d8fbfd3025a"
+  }
+}

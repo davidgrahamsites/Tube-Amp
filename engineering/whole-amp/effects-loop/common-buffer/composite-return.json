@@ -1,0 +1,173 @@
+{
+  "id": "CB-002",
+  "date": "2026-11-26",
+  "owner": "effects-loop integration",
+  "purpose": "Test a low-voltage error amplifier with a discrete high-voltage gain stage and follower before exact device selection.",
+  "opamp_model": "engineering/solid-state-reverb/simulation/models/OPAx134.LIB",
+  "opamp_model_sha256": "8ff414c678a7f8330b87504d7e0553de20ca87bdc713cecf81ab3448b4d7608f",
+  "sources": [
+    {
+      "url": "https://www.microchip.com/content/dam/mchp/documents/OTH/ProductDocuments/DataSheets/LND150-LND250-N-Channel-Depletion-Mode-DMOS-FETs-Data-Sheet-20005454A.pdf",
+      "title": "Microchip LND150/LND250 DS20005454A",
+      "accessed": "2026-11-26",
+      "basis": "500V breakdown; IDSS1–3mA; VGSoff−1..−3V; capacitance sensitivity; TO92 thetaJA132C/W and 0.74W at25C. Model below is authored level1 sensitivity, not a Microchip model."
+    }
+  ],
+  "default": {
+    "hv_V": 400,
+    "reference_V": 2,
+    "rail_V": 15,
+    "idss_A": 0.002,
+    "vto_V": -2,
+    "sink_A": 0.002,
+    "drain_ohm": 100000,
+    "gate_ohm": 10000,
+    "feedback_ohm": 990000,
+    "ground_ohm": 10000,
+    "input_ohm": 100000,
+    "compensation_pF": 4.7,
+    "feedback_pF": 1,
+    "load_ohm": 340000,
+    "load_pF": 100,
+    "coupling_uF": 1,
+    "frequency_Hz": 1000,
+    "input_peak_V": 1.35,
+    "max_step_s": 1e-06,
+    "end_s": 0.03,
+    "seed": false,
+    "sink_model": "ideal",
+    "sense_ohm": 499,
+    "current_reference_V": 1
+  },
+  "thermal": {
+    "ambient_C_assumed": 70,
+    "theta_JA_C_per_W_typical": 132,
+    "junction_design_ceiling_C_assumed": 125,
+    "package_P25_W": 0.74
+  },
+  "acceptance_screen": {
+    "gain_error_dB": 0.5,
+    "phase_margin_deg": 45,
+    "THD_percent": 1,
+    "dc_target_error_V": 1,
+    "maximum_gate_source_V": 20
+  },
+  "cases": [
+    {
+      "id": "nominal",
+      "transient": true
+    },
+    {
+      "id": "uncompensated",
+      "compensation_pF": 0,
+      "transient": false
+    },
+    {
+      "id": "slow-compensation",
+      "compensation_pF": 47,
+      "transient": false
+    },
+    {
+      "id": "low-idss",
+      "idss_A": 0.001,
+      "transient": false
+    },
+    {
+      "id": "high-idss",
+      "idss_A": 0.003,
+      "transient": false
+    },
+    {
+      "id": "low-threshold",
+      "vto_V": -1,
+      "transient": false
+    },
+    {
+      "id": "high-threshold",
+      "vto_V": -3,
+      "transient": false
+    },
+    {
+      "id": "low-supply",
+      "hv_V": 340,
+      "transient": false
+    },
+    {
+      "id": "high-supply",
+      "hv_V": 440,
+      "transient": false
+    },
+    {
+      "id": "20k-full",
+      "frequency_Hz": 20000,
+      "max_step_s": 1e-07,
+      "end_s": 0.003,
+      "transient": true
+    },
+    {
+      "id": "20k-cap500",
+      "frequency_Hz": 20000,
+      "load_pF": 500,
+      "max_step_s": 1e-07,
+      "end_s": 0.003,
+      "transient": true
+    },
+    {
+      "id": "nominal-fine",
+      "max_step_s": 5e-07,
+      "transient": true
+    },
+    {
+      "id": "low-threshold-seeded",
+      "transient": false,
+      "vto_V": -1,
+      "seed": true
+    },
+    {
+      "id": "comp10-nominal",
+      "transient": true,
+      "compensation_pF": 10,
+      "seed": true
+    },
+    {
+      "id": "comp10-strong",
+      "transient": false,
+      "compensation_pF": 10,
+      "vto_V": -1,
+      "idss_A": 0.003,
+      "seed": true
+    },
+    {
+      "id": "comp10-weak",
+      "transient": false,
+      "compensation_pF": 10,
+      "vto_V": -3,
+      "idss_A": 0.001,
+      "seed": true
+    },
+    {
+      "id": "servo-sink-1k",
+      "transient": true,
+      "compensation_pF": 10,
+      "seed": true,
+      "sink_model": "servo"
+    },
+    {
+      "id": "servo-sink-20k",
+      "transient": true,
+      "compensation_pF": 10,
+      "seed": true,
+      "sink_model": "servo",
+      "frequency_Hz": 20000,
+      "max_step_s": 1e-07,
+      "end_s": 0.003
+    }
+  ],
+  "limits": [
+    "Stiff400V/±15V rails and2V voltage reference; ideal2mA sink controls compared with an OPAx134/MOS servo using ideal1V reference. References, protection and physical parts remain unqualified.",
+    "Authored square-law MOS model omits breakdown, body diode, temperature, process correlations, nonlinear capacitance and real safe operating area.",
+    "Typical TI opamp model; no guaranteed extremes, socket parasitics or protection.",
+    "Standalone340k/100p load, not integrated spring/PI loading or full amplifier.",
+    "Thermal resistance is typical and board-dependent; heat screen is not physical qualification."
+  ]
+}

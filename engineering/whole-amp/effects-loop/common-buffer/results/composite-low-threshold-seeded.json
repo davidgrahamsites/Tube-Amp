@@ -1,0 +1,98 @@
+{
+  "case": {
+    "id": "low-threshold-seeded",
+    "transient": false,
+    "vto_V": -1,
+    "seed": true
+  },
+  "parameters": {
+    "hv_V": 400,
+    "reference_V": 2,
+    "rail_V": 15,
+    "idss_A": 0.002,
+    "vto_V": -1,
+    "sink_A": 0.002,
+    "drain_ohm": 100000,
+    "gate_ohm": 10000,
+    "feedback_ohm": 990000,
+    "ground_ohm": 10000,
+    "input_ohm": 100000,
+    "compensation_pF": 4.7,
+    "feedback_pF": 1,
+    "load_ohm": 340000,
+    "load_pF": 100,
+    "coupling_uF": 1,
+    "frequency_Hz": 1000,
+    "input_peak_V": 1.35,
+    "max_step_s": 1e-06,
+    "end_s": 0.03,
+    "seed": true,
+    "sink_model": "ideal",
+    "sense_ohm": 499,
+    "current_reference_V": 1,
+    "id": "low-threshold-seeded",
+    "transient": false,
+    "opamp_model": "engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+  },
+  "op": {
+    "out": 127.39413687146796,
+    "drive": 0.340365125796044,
+    "gate": 1.9542084134945914,
+    "fb": 1.0668596687907528,
+    "err": 1.7241405368893303,
+    "inv": 1.1084337303049132
+  },
+  "ac": {
+    "20": {
+      "gain": 0.6024086695687526,
+      "gain_error_dB": -44.402175732203666,
+      "phase_deg": 0.7313578262802787
+    },
+    "82.4": {
+      "gain": 0.6028867406512072,
+      "gain_error_dB": -44.39528535023772,
+      "phase_deg": -0.6103068083892601
+    },
+    "1000": {
+      "gain": 0.5936394018072721,
+      "gain_error_dB": -44.52954562427152,
+      "phase_deg": -10.144860387172475
+    },
+    "5000": {
+      "gain": 0.4500935853118539,
+      "gain_error_dB": -46.93394353076683,
+      "phase_deg": -41.98636098429194
+    },
+    "20000": {
+      "gain": 0.1628010881058148,
+      "gain_error_dB": -55.766853935278874,
+      "phase_deg": -75.42323737955753
+    }
+  },
+  "loop": {
+    "op": {
+      "out": 199.94783783558995,
+      "drive": 199.99663420236556,
+      "gate": 8.364457447786522e-06,
+      "fb": 1.9994782298810398,
+      "err": 8.364457447786522e-06,
+      "inv": 1.9999987891782807
+    },
+    "crossings": [
+      {
+        "frequency_Hz": 4614923.669512388,
+        "phase_deg": -151.17047195022317,
+        "phase_margin_deg": 28.829528049776826,
+        "direction": "falling"
+      }
+    ],
+    "low_frequency_return_ratio": 1274637.6237354765
+  },
+  "operating_points_valid": false,
+  "small_signal_screen_pass": false,
+  "artifact_hashes": {
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-low-threshold-seeded.cir": "91c63c34250322cfb8b32533f6a68df6eb27eb78d60665200de0150bb8ce869d",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-low-threshold-seeded-loop.cir": "6c0ec82752b2110bf14194428ee6b95c568ec8447951eb305371d3f0fb5d7736",
+    "engineering/whole-amp/effects-loop/common-buffer/results/composite-low-threshold-seeded-ac.csv": "c1ca36b26c861e2aa169eb9ab3bc69d333b8100ea0a266f4ac7110abafc38dfe"
+  }
+}
