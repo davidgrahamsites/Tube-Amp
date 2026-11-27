@@ -50,6 +50,16 @@
         <div class="math">\[V_{+15}=0.100\;\mathrm A(0.267703\;\Omega)=26.7703\;\mathrm{mV},\quad V_{-15}=0.100\;\mathrm A(0.323276\;\Omega)=32.3276\;\mathrm{mV}\]</div>
         <div class="math">\[w_{drawn,required}=0.636744\;\mathrm{mm}\;( +15\;\mathrm V),\quad0.771494\;\mathrm{mm}\;( -15\;\mathrm V)\]</div>
         <p>The −15 V rail sets the 0.8 mm choice. At 0.3 mm, both rails exceed the 50 mV allocation. At 0.6 mm, both drops fall below 50 mV, but neither rail reaches the 1.5× finished-width margin. The earlier 0.3 mm wet-signal result is separate: those tracks passed their lower-current diagnostic. These supply rails do not pass their stated screen at 0.3 mm.</p>
+        <h3>FB-173 — minimum copper and the 50% width margin</h3>
+        <p>Use the guaranteed minimum finished copper thickness for each route. Nominal foil, finished outer copper, and plated via barrels have different limits. Solder and surface finish do not count as copper. The current 30 µm foil and 20 µm barrel minima are proposed values; a fabricator has not confirmed them.</p>
+        <p>First determine the required finished width for every physical segment on each current path. Use actual segment current, length, minimum copper thickness, and local temperature. Include shared feed and return currents. Use RMS current for steady resistive heating. Check peak current, voltage drop, pulse duration, startup, and fault clearing separately. A conservative current sum can bound a shared feed. Current division across parallel tracks or planes requires geometry and resistance.</p>
+        <p>DEC-020 retains 1.5× required finished width as an engineering target for power and return routes. It is 50% extra width, not 50% more current capacity and not a fabrication standard. It does not replace thermal analysis or fault protection. Give sensitive signal routes their own review.</p>
+        <div class="math">\[w_{drawn}\geq\frac{1.5\,w_{required,finished}(t_{min})}{1-\epsilon_w}\]</div>
+        <p>Example: with a qualified minimum finished width of 0.40 mm and 20% permitted narrowing, draw at least 0.75 mm. The resulting minimum is 0.60 mm:</p>
+        <div class="math">\[w_{drawn}=\frac{1.5(0.40)}{0.80}=0.75\;\mathrm{mm},\qquad w_{finished,min}=0.80(0.75)=0.60\;\mathrm{mm}\]</div>
+        <p>At fixed length, thickness, temperature, and current, 1.5× width reduces resistance and resistive heat to two-thirds. It does not establish 1.5× allowable current:</p>
+        <div class="math">\[R=\rho(T)\frac{L}{wt},\qquad P=I_{RMS}^{2}R,\qquad \frac{R_{1.5w}}{R_w}=\frac{2}{3}\]</div>
+        <p>Check pad necks, via barrels, plane-relief spokes, connector contacts, wires, and local spacing across the complete path. More copper can affect etching, soldering, and sensitive-node capacitance. This target is a width margin only. It does not approve all-board thermal performance, fabrication, or fault current.</p>
         <p>A 1.0 mm straight-segment trial caused ten clearance findings and was rejected. A temporary export also produced 41 missing-library warnings; the library table was restored before the accepted 0.8 mm run. The first 0.8 mm factory omitted four segments and 15 arcs, so native preservation and current checks failed. The factory and checker were corrected to include <code>PCB_ARC</code>. No DRC finding was waived. The final candidate reports zero violations and zero opens. The supply review records 15 passing evidence checks and four passing negative controls, including rejection of the old 0.3 mm drop, the 0.6 mm margin, a narrow arc, and half-thickness copper.</p>
         <p>This is a conditional DC-drop and geometry screen. It does not qualify thermal rise, hot copper, fault or startup current, pads, connectors, harness losses, other rails, or the other active-board nets. The all-board inventory is not an all-board qualification.</p>
       </section>
@@ -131,6 +141,14 @@
           <dd>A short, narrower copper segment used to preserve clearance around a pad or component.</dd>
           <dt>Mask bridge</dt>
           <dd>A solder-mask web or clearance finding between nearby copper features.</dd>
+          <dt>RMS current</dt>
+          <dd>The effective current used to estimate steady resistive heating over a stated interval.</dd>
+          <dt>Minimum finished copper</dt>
+          <dd>The guaranteed copper thickness remaining after the specified fabrication process.</dd>
+          <dt>Current capacity</dt>
+          <dd>The current a conductor can carry within stated temperature and voltage limits; extra width alone does not define it.</dd>
+          <dt>Width tolerance</dt>
+          <dd>The permitted reduction from drawn track width during fabrication.</dd>
           <dt>Typed pair</dt>
           <dd>Two copper objects counted for a specific rule type. Repeated reports can refer to the same pair.</dd>
           <dt>Voltage domain</dt>
@@ -152,6 +170,8 @@
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/results/candidate-copper.json">FB-169 candidate-copper receipt</a> — input assumptions, track/via calculation, and four-board inventory.</li>
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html">CU-002 supply-copper review</a> — rail-width trial history, load assumptions, and 0.8 mm results.</li>
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/results/supply-copper.json">CU-002 supply-copper receipt</a> — twelve recomputed load cases and candidate rail geometry.</li>
+          <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html#minimum-copper-margin">FB-173 minimum-copper review</a> — minimum finished copper, route-current checks, and width-margin calculation.</li>
+          <li><a href="../../../brain/records/DEC-020-trace-width-margin.md">DEC-020</a> — retained 1.5× finished-width engineering target and manufacturing-tolerance separation.</li>
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/results/broad-copper.json">FB-170 / CU-003 calculation receipt</a> — per-net track-resistance sums, conditions, checks, and exclusions.</li>
           <li><a href="../../../engineering/whole-amp/pcb-measured-r/current-budget/tools/check_broad_copper.py">CU-003 checker</a> — calculation and candidate preservation checks.</li>
           <li><a href="../../../engineering/whole-amp/reverb-600/voltage-spacing/domain-review.html">VS-002 voltage-domain review</a> — C607 clearance repair, typed-pair counts, and conditional insulation screen.</li>

@@ -2619,6 +2619,24 @@
       ],
       "supersedes": [],
       "next_action": "Resolve transistor model/startup, gate protection, hot current-sink/output package and real references; then integrated common-loop loading, connector voltage domains and three-board chassis."
+    },
+    {
+      "id": "FB-173",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "user",
+      "kind": "minimum-finished-copper-and-current-margin",
+      "quote": "once you know the max current between two netlist points, for every point in the circuit ... is 50% too much? ... calculate it for the thinnest copper pads, not the thickest",
+      "source": "Current chat after CB-002; user clarification on conductor sizing",
+      "interpretation": "Require minimum finished conductor thickness and all current paths, including local restrictions. User asks whether 50% margin is appropriate; retain DEC-020's engineering 1.5x finished-width target for power/returns, not a user-approved 1.5x current rule. Separate branch RMS, pulse and protected fault requirements; netlist alone does not specify routed current distribution.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "Renegade_Codex_Handoff.md",
+        "engineering/whole-amp/pcb-measured-r/routing-requirements.md",
+        "engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html"
+      ],
+      "supersedes": [],
+      "next_action": "Use minimum finished foil/barrel and width tolerances in every path budget; qualify thermal/drop/pulse/fault constraints and local necks before native adoption. No all-board qualification or fabrication release."
     }
   ]
 }

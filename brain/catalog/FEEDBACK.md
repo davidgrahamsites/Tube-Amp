@@ -1842,3 +1842,16 @@ Source: engineering/whole-amp/effects-loop/common-buffer/results/composite-audit
 - [engineering/whole-amp/effects-loop/common-buffer/composite-return.json](<../../engineering/whole-amp/effects-loop/common-buffer/composite-return.json>)
 - [docs/design-journal/chapters/composite-return-feasibility.html](<../../docs/design-journal/chapters/composite-return-feasibility.html>)
 
+## FB-173 — minimum-finished-copper-and-current-margin
+Authority: user. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> once you know the max current between two netlist points, for every point in the circuit ... is 50% too much? ... calculate it for the thinnest copper pads, not the thickest
+
+Require minimum finished conductor thickness and all current paths, including local restrictions. User asks whether 50% margin is appropriate; retain DEC-020's engineering 1.5x finished-width target for power/returns, not a user-approved 1.5x current rule. Separate branch RMS, pulse and protected fault requirements; netlist alone does not specify routed current distribution.
+
+Source: Current chat after CB-002; user clarification on conductor sizing
+
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
+- [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
+- [engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html](<../../engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html>)
+

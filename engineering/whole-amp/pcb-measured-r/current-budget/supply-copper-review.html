@@ -21,4 +21,35 @@
 <p>Fifteen evidence checks and four negative controls pass. The controls reject old-width drop, inadequate width margin, a reintroduced narrow arc and half-thickness copper. The current source and all active native boards remain unchanged; this is an integration candidate.</p>
 <p>Next, establish complete shared-ground/driver current paths and protected startup/fault envelopes. Review finished spacing, pad necks and thermal spokes before adopting a plane or widening other circuits. Then integrate the checked construction into the final three-board assembly. Cabinet fit, actual drill access and manufacturing release remain open.</p>
 <h2>Vocabulary</h2><dl><dt>Rail</dt><dd>A supply-voltage connection distributed to circuit parts.</dd><dt>Quiescent current</dt><dd>Current used by an amplifier with no output load.</dd><dt>Finished-width margin</dt><dd>Minimum manufactured width divided by the calculated required width.</dd><dt>Arc</dt><dd>A curved copper-track section.</dd><dt>Centreline</dt><dd>The geometric path through the middle of a track.</dd><dt>Via barrel</dt><dd>Plated copper inside a hole joining layers.</dd><dt>Clamp injection</dt><dd>Current entering a supply through a protection diode.</dd><dt>DRC</dt><dd>Automated checks against declared board rules.</dd></dl>
-</main></body></html>
+
+<section id="minimum-copper-margin"><h2>Minimum copper and the 50% margin</h2>
+<p><strong>Use the guaranteed minimum finished copper thickness at each conductor.</strong> Base foil, finished surface copper and plated hole walls have different limits. Do not use nominal copper weight or the thickest pad as the guaranteed cross-section; do not count solder or surface finish as copper. <a href="https://www.eurocircuits.com/technical-guidelines/understanding-manufacturing-tolerances-on-a-pcb/tolerances-on-copper-thickness/">Eurocircuits explains base and finished thickness</a>.</p>
+<p>A netlist gives electrical connections, not branch currents along the routed copper. For each physical segment, determine current in every relevant operating case; include shared feed and return currents. Use RMS current for steady resistive heating, and check peak current, voltage drop, pulse duration, startup and fault clearing separately. A worst-case sum can bound a shared feed conservatively; current division across parallel tracks or a plane needs geometry and resistance.</p>
+<p>First establish required finished width from heating and voltage-drop limits using minimum thickness, actual length and local temperature; also meet fabrication limits. <a href="https://www.ipc.org/TOC/IPC-2152.pdf">IPC-2152's public scope</a> relates conductor sizing to current and allowed temperature rise; its public contents document does not supply the sizing charts.</p>
+<p>For power and return routes, retain DEC-020's engineering target of 50% extra finished width; prefer more where spacing and loading permit. This is not a standard-mandated margin, a 50% current increase or permission to skip fault protection. Sensitive signal paths require individual review.</p>
+<p>\[w_{\rm drawn}\geq\frac{1.5\,w_{\rm required,finished}(t_{\min})}{1-\epsilon_w}\]</p>
+<p>Here \(t_{\min}\) is the fabricator's guaranteed minimum finished copper thickness, and \(\epsilon_w\) is the allowed fractional width loss. Apply each tolerance once. The present 30 µm foil, 20 µm barrel and 20% narrowing values remain proposed construction limits pending fabricator acceptance.</p>
+<p>Worked example only: if the qualified minimum finished width is 0.40 mm and permitted narrowing is 20%, draw at least 0.75 mm. The narrowest accepted result is 0.60 mm, retaining 50% width margin.</p>
+<p>\[w_{\rm drawn}=\frac{1.5(0.40)}{0.80}=0.75\ {\rm mm},\qquad w_{\rm finished,min}=0.80(0.75)=0.60\ {\rm mm}\]</p>
+<p>At fixed length, thickness, temperature and current, 1.5× width reduces resistance and resistive heating to two-thirds. It does not establish 1.5× allowable current; temperature rise depends on heat flow through the board and surrounding copper.</p>
+<p>\[R=\rho(T)\frac{L}{w t},\qquad P=I_{\rm RMS}^{2}R,\qquad \frac{R_{1.5w}}{R_w}=\frac{2}{3}\]</p>
+<p>Check the entire route: pad necks, via barrels, relief spokes, connector contacts and wires. Thicker copper helps resistance for the same geometry, but still affects etching limits and soldering; verify minimum finished spacing and sensitive-node capacitance when geometry changes.</p>
+<h3>Vocabulary</h3><dl><dt>Finished copper</dt><dd>Copper remaining after the board's fabrication processes.</dd><dt>RMS current</dt><dd>The effective current used to calculate resistive heating over a defined operating interval.</dd><dt>Pad neck</dt><dd>A narrow copper connection between a pad and a track or plane.</dd><dt>Barrel</dt><dd>The plated copper wall inside a through-hole or via.</dd><dt>Relief spoke</dt><dd>A narrow connection from a solder pad to a copper plane.</dd><dt>Width margin</dt><dd>Extra finished width beyond the qualified minimum; manufacturing tolerance is accounted for separately.</dd></dl>
+<p>FB-173, 26 November 2026: clarification recorded. This section changes no native CAD and provides no new thermal or fabrication approval.</p></section>
+
+<!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>Capacitance</dt><dd>The ratio of stored charge to voltage; measured in farads (F).</dd>
+<dt>Clearance</dt><dd>The shortest distance through air between conductive parts.</dd>
+<dt>DRC</dt><dd>Design Rule Check; a PCB geometry and connectivity check.</dd>
+<dt>Functional block</dt><dd>A group of parts with one defined job and specified connections to other groups.</dd>
+<dt>Ground</dt><dd>A named circuit reference; it is not automatically protective earth.</dd>
+<dt>Harness</dt><dd>A grouped set of wires, contacts and connectors.</dd>
+<dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Net</dt><dd>A named set of electrically connected points.</dd>
+<dt>Node</dt><dd>An electrical connection shared by specified components.</dd>
+<dt>Nominal</dt><dd>The stated reference value before tolerance and operating variation.</dd>
+<dt>Populated</dt><dd>With the components installed.</dd>
+<dt>Qualification</dt><dd>Checks that show a design meets stated limits under stated conditions.</dd>
+<dt>Parallel</dt><dd>Connected across the same two electrical nodes.</dd>
+<dt>Tolerance</dt><dd>The permitted variation from a specified value.</dd>
+<dt>Clipping</dt><dd>Signal flattening when the amplifier reaches its output limit.</dd>
+<dt>Thermal</dt><dd>Related to heat or temperature.</dd></dl></section><!-- /reader-key --></main></body></html>
