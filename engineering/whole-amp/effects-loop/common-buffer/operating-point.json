@@ -1,0 +1,13 @@
+{
+  "id": "CB-003",
+  "date": "2026-11-26",
+  "owner": "Amplifier integration",
+  "baseline": "composite-return.json",
+  "cases": ["nominal", "low-threshold", "low-threshold-seeded", "comp10-weak", "comp10-strong"],
+  "methods": ["original", "internal-nodeset"],
+  "worker_limit_s": 30,
+  "dc_current_residual_limit_A": 1e-7,
+  "paired_voltage_difference_limit_V": 0.001,
+  "source": "https://ngspice.sourceforge.io/docs/ngspice-45-manual.pdf",
+  "scope": "Numerical operating-point diagnosis and conditional AC recovery. Internal node guesses come from the valid nominal operating point and are released by ngspice before final solution. No .ic, UIC, model edit, tolerance relaxation, native adoption or startup qualification."
+}

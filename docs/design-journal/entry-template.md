@@ -39,3 +39,6 @@ For every material calculation alongside its choice: cite inputs; define symbols
 ## Sources
 - Canonical record: `../../brain/records/VAL-000-example.md` (replace with an existing source)
 - Owned review or result: `../../engineering/example/review.md` (replace with an existing source)
+
+## Writing check before delivery
+Produce the reading copy as HTML with KaTeX equations and a vocabulary key. Follow [the document standard](../engineering-reader/document-standard.html). Use aircraft-mechanic English: short sentences, one action per procedure step and one name for each part. State the fault, check, expected result, failed-check action, repair and result where applicable. Remove repetition without removing conditions or limits. Inspect the rendered page and its source links.

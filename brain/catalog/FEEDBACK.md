@@ -1,6 +1,6 @@
 # Feedback and decision trail
 
-Generated as of 2026-11-26; source: ../feedback/events.json. Backfilled original timestamps may be unknown. Incorporated means recorded, not build-complete.
+Generated as of 2026-11-27; source: ../feedback/events.json. Backfilled original timestamps may be unknown. Incorporated means recorded, not build-complete.
 
 ## FB-001 — requirement
 Authority: user. Disposition: incorporated. Recorded: 2026-11-20. Original date: unknown.
@@ -1854,4 +1854,31 @@ Source: Current chat after CB-002; user clarification on conductor sizing
 - [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 - [engineering/whole-amp/pcb-measured-r/routing-requirements.md](<../../engineering/whole-amp/pcb-measured-r/routing-requirements.md>)
 - [engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html](<../../engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html>)
+
+## FB-174 — composite-operating-point-recovery
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-26. Original date: 2026-11-26.
+
+> CB-003 recovers valid DC points with released internal guesses, exposing a compensation shortfall rather than accepting invalid results.
+
+20 runs retain three original invalid operating points; ten internally guided fixtures have valid matching DC points.69 independent checks and3 corruption controls pass. Low-threshold4.7pF margin28.830deg fails45deg target;10pF strong/weak corners pass conditional AC only. No vendor-model edit, startup qualification, native change or release. Existing full-swing distortion/thermal issues remain.
+
+Source: engineering/whole-amp/effects-loop/common-buffer/results/op-audit.json
+
+- [engineering/whole-amp/effects-loop/common-buffer/composite-review.html](<../../engineering/whole-amp/effects-loop/common-buffer/composite-review.html>)
+- [engineering/whole-amp/effects-loop/common-buffer/operating-point.json](<../../engineering/whole-amp/effects-loop/common-buffer/operating-point.json>)
+- [engineering/whole-amp/effects-loop/common-buffer/results/op-audit.json](<../../engineering/whole-amp/effects-loop/common-buffer/results/op-audit.json>)
+
+## FB-175 — design-guide-maintenance-english
+Authority: user. Disposition: incorporated. Recorded: 2026-11-27. Original date: 2026-11-27.
+
+> in the writing of the guide to the engineering process, make sure everything is always written in aircraft mechanic english
+
+Standing writing requirement for the design guide and process record: short direct sentences, one action per procedure step, consistent part names, defined terms, explicit conditions/units/results and failed-check actions. Preserve technical meaning and evidence limits. Apply to new and revised chapters; do not claim the whole archive has been reviewed.
+
+Source: Current chat, resumed CB-003 checkpoint
+
+- [docs/engineering-reader/document-standard.html](<../../docs/engineering-reader/document-standard.html>)
+- [docs/design-journal/CONTEXT.md](<../../docs/design-journal/CONTEXT.md>)
+- [docs/design-journal/entry-template.md](<../../docs/design-journal/entry-template.md>)
+- [Renegade_Codex_Handoff.md](<../../Renegade_Codex_Handoff.md>)
 

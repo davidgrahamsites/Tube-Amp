@@ -16,16 +16,16 @@
       </header>
 
       <section>
-        <h2>Question and boundary</h2>
-        <p>Can a low-voltage error amplifier control a discrete high-voltage gain stage and follower for the recovery output? The screen tests compensation, generic MOSFET sensitivity, sink current, load capacitance, distortion, and estimated heat. It does not alter the active circuit or select parts.</p>
-        <p>The sweep completed 18 of 18 cases. Seven cases included transient runs. Summary checks pass, including native-file preservation and time-step comparison. The independent review also passes 75 checks and three corruption controls. These are model and artifact checks, not hardware qualification.</p>
+        <h2>Question and test limits</h2>
+        <p>Can a low-voltage error amplifier control a discrete high-voltage gain stage and follower for the recovery output? The tests check feedback compensation, transistor variation, output current, load capacitance, distortion and estimated heat. It does not alter the active circuit or select parts.</p>
+        <p>All 18 test cases completed. Seven included tests over time. The saved circuit files did not change. A smaller time step gave matching results in the repeated case. The independent review passes 75 checks and rejects three deliberately corrupted records. These checks do not approve the hardware.</p>
       </section>
 
       <section>
         <h2>Compensation choices</h2>
         <p>The 4.7 pF nominal compensation case has 58.93° phase margin. It meets the 45° screen in that model. With no compensation, margin falls to −13.15°; reject that case. A 47 pF value is too slow: gain at 20 kHz falls 2.605 dB, outside the 0.5 dB screen.</p>
-        <p>A 10 pF candidate gives 102.42° nominal margin. A strong generic-MOS sensitivity case gives 46.20°. Three sensitivity cases do not reach a valid operating point: low threshold, a repeated seeded low-threshold case, and the weak 10 pF case. The added seed did not recover the invalid result. Do not treat the nominal 10 pF result as a robust design.</p>
-        <p>The device sweep uses an authored square-law MOSFET model with generic IDSS and threshold values. It does not model production correlation, temperature, breakdown, body diode, nonlinear capacitance, or safe operating area. The archived TI OPAx134 macro-model is typical behavior, not guaranteed limits.</p>
+        <p>A 10 pF candidate gives 102.42° nominal margin. A strong generic-MOS sensitivity case gives 46.20°. In the original CB-002 run, three cases did not reach a valid steady-state result: low threshold, a repeated seeded low-threshold case, and the weak 10 pF case. The external starting guesses did not fix those results. The CB-003 section below records the later repair. The nominal 10 pF result alone does not approve the design.</p>
+        <p>The tests use a simple MOSFET model written for this study. Its current follows a square-law equation. The IDSS and threshold values are chosen test values. It omits temperature effects, breakdown, the body diode, changes in capacitance with voltage and safe operating area. It also does not show how production variations occur together. The archived TI OPAx134 macro-model is typical behavior, not guaranteed limits.</p>
       </section>
 
       <section>
@@ -55,12 +55,30 @@
       </section>
 
       <section>
-        <h2>Decision and next proof</h2>
-        <p>Keep the composite stage as a feasibility candidate only. Do not add it to native CAD or the build. Next, choose supported amplifier, MOSFET, sink, reference, and protection parts. Check valid startup and operating points across temperature and device limits. Re-run the complete current and thermal stage with the real source impedance, reference, feedback network, cable, and integrated loop load. Check gate protection, output faults, and safe operating area. Then test a low-voltage fixture before connecting the high-voltage stage.</p>
+        <h2>Decision and next checks</h2>
+        <p>Keep the composite stage as a feasibility candidate only. Do not add it to native CAD or the build. Next, choose supported amplifier, MOSFET, sink, reference, and protection parts. Check valid startup and operating points across temperature and device limits. Re-run the complete current and thermal stage with the real source impedance, reference, feedback network, cable, and integrated loop load. Check gate protection, output faults, and safe operating area. Test the low-voltage controls separately before powered high-voltage tests.</p>
       </section>
 
       <section>
-        <h2>Vocabulary</h2>
+        <h2>CB-003 operating-point follow-up</h2>
+        <p>Three CB-002 operating-point runs were invalid with the original solver setup: low-threshold closed loop, seeded low-threshold closed loop, and weak 10 pF return ratio. CB-003 tested five selected cases twice: once with the original setup and once with internal-node guesses. Each case used a closed-loop and return-ratio run, for 20 runs total. The original failures remain recorded.</p>
+        <p>The solver used 118 internal op-amp node voltages from the valid nominal result as starting guesses. Ngspice releases these <code>.nodeset</code> guesses while solving. They steer the first numerical search; they do not force the final voltages. No vendor model was edited. No tolerance was relaxed. No UIC startup mode or hardware change was used.</p>
+        <p>All ten guided fixtures found valid operating points. Each paired voltage result agrees within 1 mV. The largest current-balance error among accepted results is <span class="math">\(2.83157\;\mathrm{nA}\)</span>. The independent audit passes 69 checks and rejects three deliberately corrupted records. The starting guesses affected the earlier numerical result. These tests do not prove startup or the behavior of real parts.</p>
+        <table>
+          <thead><tr><th>Case</th><th>Guided result</th><th>20 kHz gain error</th><th>Screen</th></tr></thead>
+          <tbody>
+            <tr><td>4.7 pF, low threshold</td><td>28.8295° phase margin</td><td>−0.08897 dB</td><td>Fails 45° margin target</td></tr>
+            <tr><td>10 pF, strong sensitivity</td><td>46.2037° phase margin</td><td>−0.14185 dB</td><td>Only 1.2037° above target</td></tr>
+            <tr><td>10 pF, weak sensitivity</td><td>126.0937° phase margin</td><td>−0.41176 dB</td><td>Numerical point recovered; sensitivity remains generic</td></tr>
+            <tr><td>Seeded low threshold</td><td>28.8295° phase margin</td><td>−0.08897 dB</td><td>Still fails margin target</td></tr>
+          </tbody>
+        </table>
+        <p>The external-node guesses in CB-002 did not recover the low-threshold closed-loop failure; the internal-node guesses in CB-003 do recover it. The 10 pF weak case did recover a loop operating point, but that result is a solver diagnostic, not evidence that the weak device is safe or stable in hardware. The existing 20 kHz servo case still has 1.1504% THD, above its 1% screen. The thermal estimate remains near the assumed ceiling. Neither issue is closed here.</p>
+        <p>Startup, selected parts, protection and heat checks remain open. The tests still use simplified MOSFETs, a typical OPAx134 model, fixed supply voltages, ideal references and a separate load model. Do not add this stage to the build yet.</p>
+      </section>
+
+      <section>
+        <h2>Vocabulary</h2><dl><dt>Compensation</dt><dd>Parts used to control feedback response and reduce the risk of oscillation.</dd><dt>IDSS</dt><dd>Drain current at zero gate-to-source voltage under stated test conditions.</dd><dt>Threshold voltage</dt><dd>A model or data-sheet value used to describe when transistor conduction changes.</dd><dt>Square-law model</dt><dd>A simplified transistor model in which current depends on the square of a voltage difference.</dd><dt>Current-balance error</dt><dd>The difference between currents entering and leaving a connection point.</dd><dt>Safe operating area</dt><dd>Allowed combinations of voltage, current, temperature and time for a device.</dd></dl>
         <dl>
           <dt>AC</dt><dd>Alternating current; a small-signal frequency test in this record.</dd>
           <dt>Compensation</dt><dd>A capacitor or network used to control feedback-loop response.</dd>
@@ -72,6 +90,8 @@
           <dt>THD</dt><dd>Total harmonic distortion; harmonic signal content relative to the fundamental.</dd>
           <dt>Transient run</dt><dd>A time-domain simulation of changing voltages and currents.</dd>
           <dt>Valid model domain</dt><dd>The voltage and current range where the model represents supported behavior.</dd>
+          <dt>Internal node guess</dt><dd>A starting estimate for a simulator's numerical solution. It does not set or force the final voltage.</dd>
+          <dt>.nodeset</dt><dd>An ngspice command that gives initial voltage guesses while allowing the solver to find its own final operating point.</dd>
         </dl>
       </section>
 
@@ -87,6 +107,7 @@
           <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-comp10-strong.json">10 pF strong sensitivity</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-comp10-weak.json">weak sensitivity</a>, and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-low-threshold-seeded.json">seeded low-threshold result</a>.</li>
           <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-servo-sink-1k.json">Servo sink at 1 kHz</a> and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-servo-sink-20k.json">servo sink at 20 kHz</a>.</li>
           <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-20k-cap500.json">500 pF ideal-sink stress result</a>.</li>
+          <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/operating-point.json">CB-003 operating-point test contract</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/op-summary.json">20-run result receipt</a>, and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/op-audit.json">69-check audit</a>.</li>
           <li><a href="https://www.microchip.com/content/dam/mchp/documents/OTH/ProductDocuments/DataSheets/LND150-LND250-N-Channel-Depletion-Mode-DMOS-FETs-Data-Sheet-20005454A.pdf">Microchip LND150/LND250 data sheet</a> — sensitivity source; not a model for the generic transistor.</li>
         </ul>
       </section>

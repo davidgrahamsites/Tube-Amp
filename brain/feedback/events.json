@@ -2637,6 +2637,43 @@
       ],
       "supersedes": [],
       "next_action": "Use minimum finished foil/barrel and width tolerances in every path budget; qualify thermal/drop/pulse/fault constraints and local necks before native adoption. No all-board qualification or fabrication release."
+    },
+    {
+      "id": "FB-174",
+      "recorded_on": "2026-11-26",
+      "occurred_on": "2026-11-26",
+      "authority": "engineer",
+      "kind": "composite-operating-point-recovery",
+      "quote": "CB-003 recovers valid DC points with released internal guesses, exposing a compensation shortfall rather than accepting invalid results.",
+      "source": "engineering/whole-amp/effects-loop/common-buffer/results/op-audit.json",
+      "interpretation": "20 runs retain three original invalid operating points; ten internally guided fixtures have valid matching DC points.69 independent checks and3 corruption controls pass. Low-threshold4.7pF margin28.830deg fails45deg target;10pF strong/weak corners pass conditional AC only. No vendor-model edit, startup qualification, native change or release. Existing full-swing distortion/thermal issues remain.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/common-buffer/composite-review.html",
+        "engineering/whole-amp/effects-loop/common-buffer/operating-point.json",
+        "engineering/whole-amp/effects-loop/common-buffer/results/op-audit.json"
+      ],
+      "supersedes": [],
+      "next_action": "Resolve real-device/gate protection and current/thermal output stage, then integrated-loop voltage domains, routing and populated fit."
+    },
+    {
+      "id": "FB-175",
+      "recorded_on": "2026-11-27",
+      "occurred_on": "2026-11-27",
+      "authority": "user",
+      "kind": "design-guide-maintenance-english",
+      "quote": "in the writing of the guide to the engineering process, make sure everything is always written in aircraft mechanic english",
+      "source": "Current chat, resumed CB-003 checkpoint",
+      "interpretation": "Standing writing requirement for the design guide and process record: short direct sentences, one action per procedure step, consistent part names, defined terms, explicit conditions/units/results and failed-check actions. Preserve technical meaning and evidence limits. Apply to new and revised chapters; do not claim the whole archive has been reviewed.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "docs/engineering-reader/document-standard.html",
+        "docs/design-journal/CONTEXT.md",
+        "docs/design-journal/entry-template.md",
+        "Renegade_Codex_Handoff.md"
+      ],
+      "supersedes": [],
+      "next_action": "Use the maintenance-English review before each chapter delivery; revise older chapters when used. Continue current circuit, PCB and fit work."
     }
   ]
 }

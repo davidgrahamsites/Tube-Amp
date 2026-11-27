@@ -16,3 +16,5 @@ The journal owner checks narrative accuracy and source links. The integration co
 
 ## Human check
 Before using any chapter in a public guide or post, follow its linked evidence and confirm that later project records have not superseded the described state; preserve all stated conditions and unresolved limits.
+
+Writing rule: follow [the maintenance-English standard](../engineering-reader/document-standard.html) before delivery. Use short direct sentences, one action per procedure step, consistent part names and defined terms. State the check, expected result and failed-check action. Preserve calculations and limits. Review each new or revised HTML chapter; do not claim untouched history has passed this review.

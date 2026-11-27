@@ -1,0 +1,61 @@
+{
+  "case": "nominal",
+  "method": "original",
+  "loop": false,
+  "parameters": {
+    "hv_V": 400,
+    "reference_V": 2,
+    "rail_V": 15,
+    "idss_A": 0.002,
+    "vto_V": -2,
+    "sink_A": 0.002,
+    "drain_ohm": 100000,
+    "gate_ohm": 10000,
+    "feedback_ohm": 990000,
+    "ground_ohm": 10000,
+    "input_ohm": 100000,
+    "compensation_pF": 4.7,
+    "feedback_pF": 1,
+    "load_ohm": 340000,
+    "load_pF": 100,
+    "coupling_uF": 1,
+    "frequency_Hz": 1000,
+    "input_peak_V": 1.35,
+    "max_step_s": 1e-06,
+    "end_s": 0.03,
+    "seed": false,
+    "sink_model": "ideal",
+    "sense_ohm": 499,
+    "current_reference_V": 1,
+    "id": "nominal",
+    "transient": true,
+    "opamp_model": "engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+  },
+  "voltages_V": {
+    "out": 199.94783787847538,
+    "drive": 200.04543061204737,
+    "gate": -0.00022726600040529036,
+    "fb": 1.9994782294926825,
+    "err": -0.00022726600040529036,
+    "inv": 1.9999987888230082,
+    "vin": 2.0,
+    "hv": 400.0,
+    "vp": 15.0,
+    "vn": -15.0
+  },
+  "currents_A": {
+    "mgain": 0.0019995456938795377,
+    "mfollow": 0.0021999478380291602
+  },
+  "residuals_A": {
+    "drive": -1.1275702593849246e-17,
+    "out": -1.1525069093520912e-16,
+    "fb": 1.5080007175708593e-11
+  },
+  "op_valid": true,
+  "artifact_hashes": {
+    "engineering/whole-amp/effects-loop/common-buffer/results/op-nominal-original-closed.cir": "4085cb3aa50058b2eb44d19de35d0f764eb10d173e41d04d6ec90f1ca90c8f8b",
+    "engineering/whole-amp/effects-loop/common-buffer/results/op-nominal-original-closed.csv": "782397d7e355adf0d39beb04cb83a596e6abe34520b6486e04f72bf04ba14eaf"
+  },
+  "gain_error_20k_dB": -0.11226373781599183
+}

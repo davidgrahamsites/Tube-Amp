@@ -1,0 +1,66 @@
+{
+  "case": "comp10-weak",
+  "method": "internal-nodeset",
+  "loop": true,
+  "parameters": {
+    "hv_V": 400,
+    "reference_V": 2,
+    "rail_V": 15,
+    "idss_A": 0.001,
+    "vto_V": -3,
+    "sink_A": 0.002,
+    "drain_ohm": 100000,
+    "gate_ohm": 10000,
+    "feedback_ohm": 990000,
+    "ground_ohm": 10000,
+    "input_ohm": 100000,
+    "compensation_pF": 10,
+    "feedback_pF": 1,
+    "load_ohm": 340000,
+    "load_pF": 100,
+    "coupling_uF": 1,
+    "frequency_Hz": 1000,
+    "input_peak_V": 1.35,
+    "max_step_s": 1e-06,
+    "end_s": 0.03,
+    "seed": true,
+    "sink_model": "ideal",
+    "sense_ohm": 499,
+    "current_reference_V": 1,
+    "id": "comp10-weak",
+    "transient": false,
+    "opamp_model": "engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+  },
+  "voltages_V": {
+    "out": 199.94790695012117,
+    "drive": 201.39757315820358,
+    "gate": 1.2277909838464713,
+    "fb": 1.9994789200878333,
+    "err": 1.2277909838464713,
+    "inv": 1.9999987888230082,
+    "vin": 2.0,
+    "hv": 400.0,
+    "vp": 15.0,
+    "vn": -15.0
+  },
+  "currents_A": {
+    "mgain": 0.0019860242684179644,
+    "mfollow": 0.0021999479071010465
+  },
+  "residuals_A": {
+    "drive": 0.0,
+    "out": 2.6291902682773483e-18,
+    "fb": 1.5092260449191264e-11
+  },
+  "op_valid": true,
+  "artifact_hashes": {
+    "engineering/whole-amp/effects-loop/common-buffer/results/op-comp10-weak-internal-nodeset-loop.cir": "9aae130e5f42ada1e2051aaa4612bed17b5e4ee1109c34fb9d74062a4042de34",
+    "engineering/whole-amp/effects-loop/common-buffer/results/op-comp10-weak-internal-nodeset-loop.csv": "85201c2769d8d5ea810c933a6a79218950619e98ee537d91b2fad5a132c63b93"
+  },
+  "crossings": [
+    {
+      "frequency_Hz": 360803.59160257207,
+      "phase_margin_deg": 126.0936752699889
+    }
+  ]
+}

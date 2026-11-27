@@ -379,3 +379,6 @@ November 26 document checkpoint (FB-149–151): [Current engineering reader](doc
 
 
 November 26 FB-173: user requires conductor sizing from the thinnest finished copper and current along every path. Retain the engineering 1.5× finished-width target for power/returns; the user asked about 50%, not approved a universal current multiplier. Budget physical branches and shared returns, RMS heating, peak/drop, startup and protected faults; check foil, plated barrels, pad necks and relief spokes separately. See [calculation and vocabulary](engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html#minimum-copper-margin). Minimum finished construction remains supplier-unconfirmed; no all-board acceptance.
+
+
+November27 FB-175: use aircraft-mechanic English throughout the engineering-process guide and journal. Follow the [writing standard](docs/engineering-reader/document-standard.html): short direct sentences, one action per procedure step, consistent part names, defined terms, and explicit check/result/failed-check action. Keep equations, units and evidence limits. Review new and revised HTML chapters before delivery; untouched historical coverage remains pending.

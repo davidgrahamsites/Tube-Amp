@@ -1,0 +1,151 @@
+CB-002 composite recovery feasibility; generic MOS and ideal sink
+.include "/Users/appleadmin/Documents/KiCad/Projects/Renegate Tube Amp with Reverb/engineering/solid-state-reverb/simulation/models/OPAx134.LIB"
+.options method=gear reltol=0.0001 abstol=1n
+VHV hv 0 400
+VP vp 0 15
+VN vn 0 -15
+VIN vin 0 DC 2 AC 0 SIN(2 1.35 1000)
+XERR pos inv vp vn err OPAx134
+RINV vin inv 100000
+RGATE err gate 10000
+MGAIN drive gate 0 0 LNDgeneric
+RDR hv drive 100000
+MFOLLOW hv drive out out LNDgeneric
+IBIAS out 0 0.002
+RF out fb 990000
+RG fb 0 10000
+CF out fb 1p
+COUT out load 1u
+RLOAD load 0 340000
+CLOAD load 0 100p
+.model LNDgeneric NMOS (LEVEL=1 VTO=-1 KP=0.006 LAMBDA=0)
+CGS1 gate 0 9p
+CGD1 gate drive 1p
+CDS1 drive 0 2.5p
+CGS2 drive out 9p
+CGD2 drive hv 1p
+CDS2 hv out 2.5p
+.nodeset v(out)=200 v(drive)=200 v(gate)=0 v(err)=0 v(fb)=2 v(inv)=2
+CCOMP err inv 10p
+LBRIDGE fb pos 1e9
+CINJECT test pos 1e9
+VTEST test 0 DC 0 AC 1
+.nodeset v(xerr.cl_clamp)=-0.000255344427082697
+.nodeset v(xerr.clamp)=-0.000255258074463659
+.nodeset v(xerr.claw_clamp)=-0.000255344427082697
+.nodeset v(xerr.esdn)=1.99999878882289
+.nodeset v(xerr.esdp)=1.99947822949253
+.nodeset v(xerr.mid)=-8.47033371597028e-15
+.nodeset v(xerr.n4200188)=2.0554635190991e-05
+.nodeset v(xerr.n4200190)=1.99984737949253
+.nodeset v(xerr.n4200198)=1.9998679339758
+.nodeset v(xerr.n4200208)=1.99947822949253
+.nodeset v(xerr.n4200214)=-4.56449537181509e-05
+.nodeset v(xerr.n4200216)=8.52099159523063e-05
+.nodeset v(xerr.n4200218)=1.9998679339758
+.nodeset v(xerr.n4200222)=1.99999878884547
+.nodeset v(xerr.n4200254)=1.99999878882289
+.nodeset v(xerr.n4200258)=12.4999850000029
+.nodeset v(xerr.n4200270)=-12.4999850000029
+.nodeset v(xerr.n4200278)=1.99999878884559
+.nodeset v(xerr.n4200292)=1.99999878884559
+.nodeset v(xerr.n4200302)=2.27027484101512e-09
+.nodeset v(xerr.n4200364)=-8.47033371597076e-15
+.nodeset v(xerr.n4200376)=-8.47033371597076e-15
+.nodeset v(xerr.n4200398)=-8.47033371597076e-15
+.nodeset v(xerr.n4200400)=-8.47033371597076e-15
+.nodeset v(xerr.n4200442)=43.98
+.nodeset v(xerr.n4200444)=-8.47033371597076e-15
+.nodeset v(xerr.n4200446)=-8.47033371597076e-15
+.nodeset v(xerr.n4200466)=-8.47033371597076e-15
+.nodeset v(xerr.n4200472)=-8.47033371597076e-15
+.nodeset v(xerr.n4200484)=-48.09
+.nodeset v(xerr.n4200536)=60
+.nodeset v(xerr.n4200540)=-8.47033371597076e-15
+.nodeset v(xerr.n4200542)=-8.47033371597076e-15
+.nodeset v(xerr.n4200560)=-8.47033371597076e-15
+.nodeset v(xerr.n4200566)=-8.47033371597076e-15
+.nodeset v(xerr.n4200578)=-60
+.nodeset v(xerr.n4200604)=-0.000255258074469695
+.nodeset v(xerr.n4200632)=13.7967350003329
+.nodeset v(xerr.n4200636)=-14.4901850003316
+.nodeset v(xerr.n4200664)=-14.4901850003316
+.nodeset v(xerr.n4200668)=13.7967350003329
+.nodeset v(xerr.n4200728)=-1.03206085465178e-08
+.nodeset v(xerr.n4200734)=-1.00200083737684e-08
+.nodeset v(xerr.n4200740)=-8.47033371597028e-15
+.nodeset v(xerr.n4200782)=-4.54995003140385e-10
+.nodeset v(xerr.n4200794)=-0.00022726600040529
+.nodeset v(xerr.n4200864)=-0.00022726600040529
+.nodeset v(xerr.n4200896)=-10.3002553341065
+.nodeset v(xerr.n4200916)=9.99974464555292
+.nodeset v(xerr.n4200924)=-10.3002553444271
+.nodeset v(xerr.n4200928)=-10.3002553341065
+.nodeset v(xerr.n4200952)=9.99974464555292
+.nodeset v(xerr.n4200960)=9.99974465557292
+.nodeset v(xerr.n4201004)=-8.47033371597028e-15
+.nodeset v(xerr.n4201026)=14.9999849850029
+.nodeset v(xerr.n4201042)=-14.9999849850029
+.nodeset v(xerr.n4201138)=-0.000255344427082697
+.nodeset v(xerr.n4201202)=-0.000255344427082697
+.nodeset v(xerr.n4201210)=-0.00250026340877037
+.nodeset v(xerr.n4201214)=-0.000621512575409155
+.nodeset v(xerr.n4201254)=-0.00249993510410414
+.nodeset v(xerr.n4201330)=0.369983447885662
+.nodeset v(xerr.n4201370)=-1.14112384746445
+.nodeset v(xerr.n4201374)=-4.56449538340188e-05
+.nodeset v(xerr.n4201412)=-0.00250028293958788
+.nodeset v(xerr.n4201424)=-0.00250003294579332
+.nodeset v(xerr.n4201430)=-9.50001503427124e-08
+.nodeset v(xerr.n4201448)=10.2251896725509
+.nodeset v(xerr.n4201452)=8.52099161957632e-05
+.nodeset v(xerr.n4201456)=0.000119293882336617
+.nodeset v(xerr.n4201532)=-0.00033795342969487
+.nodeset v(xerr.n4201536)=-0.000255344427082697
+.nodeset v(xerr.n4201574)=-0.000255344427082697
+.nodeset v(xerr.n4201644)=-0.00250028293958788
+.nodeset v(xerr.n4201680)=-5.93384398447485e-05
+.nodeset v(xerr.n42414241)=-0.00250028293958788
+.nodeset v(xerr.sw_ol_opax134)=-8.47033371597028e-15
+.nodeset v(xerr.v11)=-1.03206085465178e-08
+.nodeset v(xerr.v12)=-1.00200083737684e-08
+.nodeset v(xerr.vcc_b)=14.9999850000029
+.nodeset v(xerr.vcc_clp)=13.7967349865362
+.nodeset v(xerr.vclp)=-0.000255344427082697
+.nodeset v(xerr.vee_b)=-14.9999850000029
+.nodeset v(xerr.vee_clp)=-14.4901849858414
+.nodeset v(xerr.vimon)=-4.54995003140385e-10
+.nodeset v(xerr.vout_s)=-0.00022726600040529
+.nodeset v(xerr.vsense)=-0.000255258074469695
+.nodeset v(xerr.x_u1.3)=0
+.nodeset v(xerr.x_u1.4)=0
+.nodeset v(xerr.x_u1.5)=0
+.nodeset v(xerr.x_u1.6)=0
+.nodeset v(xerr.x_u1.7)=0.833786412648769
+.nodeset v(xerr.x_u1.8)=0.833786412648769
+.nodeset v(xerr.x_u10.gvo+_int1)=0
+.nodeset v(xerr.x_u10.gvo-_int1)=0
+.nodeset v(xerr.x_u11.gvo+_int1)=0
+.nodeset v(xerr.x_u11.gvo-_int1)=0
+.nodeset v(xerr.x_u12.gvo+_int1)=0
+.nodeset v(xerr.x_u12.gvo-_int1)=0
+.nodeset v(xerr.x_u16.gsw+_int1)=0
+.nodeset v(xerr.x_u18.g1_int1)=0.00120324999999619
+.nodeset v(xerr.x_u18.g1_int2)=-4.54986532806669e-10
+.nodeset v(xerr.x_u19.g1_int1)=0.000509800000013947
+.nodeset v(xerr.x_u19.g1_int2)=4.54986532806669e-10
+.nodeset v(xerr.x_u22.g1_int1)=0
+.nodeset v(xerr.x_u23.g1_int1)=0
+.nodeset v(xerr.x_u26.g1_int1)=0
+.nodeset v(xerr.x_u27.g1_int1)=4.54986532806669e-13
+.nodeset v(xerr.x_u30.g1_int1)=2.27026513907602e-15
+.nodeset v(xerr.x_u31.g1_int1)=4.5342098294259e-11
+.nodeset v(xerr.x_u32.g1_int1)=-0.00250004873755086
+.nodeset v(xerr.x_u35.g1_int1)=0
+.nodeset v(xerr.x_u36.3)=0
+.nodeset v(xerr.x_u36.5)=0
+.nodeset v(xerr.x_u37.3)=0
+.nodeset v(xerr.x_u37.5)=0
+.nodeset v(xerr.x_u4.e1_int1)=0.00036915
+.nodeset v(xerr.x_u6.g1_int1)=1.99999878884548
+.end

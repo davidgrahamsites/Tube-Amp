@@ -485,3 +485,11 @@ The HI-008 candidate moves the C607-adjacent ground outward and widens two secti
 
 
 November26 FB-173: clarified minimum finished copper and 50% width margin in the existing [supply copper report](engineering/whole-amp/pcb-measured-r/current-budget/supply-copper-review.html#minimum-copper-margin). The example distinguishes manufacturing narrowing from engineering margin and width from current capacity; branch/shared-return, pulse/fault and local restriction checks remain required. No native CAD change or all-board thermal/fabrication approval.
+
+
+## November26 composite operating-point recovery (CB-003)
+
+20 runs retain three original invalid DC points and recover all ten guided closed/loop fixtures using released internal guesses; paired voltages agree within1mV.69 independent checks and3 corruption controls pass; maximum accepted KCL residual2.832nA. Low-threshold4.7pF compensation has28.830deg phase margin and fails45deg target;10pF strong/weak authored corners give46.204/126.094deg. This resolves numerical initialization for the selected cases, not physical startup or production corners. CB-002 full-swing distortion/thermal issues remain; no native change or release. [HTML report](engineering/whole-amp/effects-loop/common-buffer/composite-review.html#operating-point-recovery). Next: actual output/sink device, gate protection and heat/current path before integrated-loop routing and populated fit. Objective6 remains active.
+
+
+November27 FB-175: reinforced aircraft-mechanic English in the writing standard, journal contract and chapter template. Revised the current composite-return chapter for direct wording and defined terms. Untouched historical chapters are not claimed reviewed. Electrical results and native files are unchanged by the writing edit.
