@@ -496,3 +496,8 @@ November27 FB-175: reinforced aircraft-mechanic English in the writing standard,
 
 
 November27 CB-004 / FB-176–178: twelve ideal load/bias cases pass44 arithmetic checks. The500pF overload case needs8.4916mA load-only peak;13mA trial bias produces5.2W standing heat. No device, hot continuous operation or populated heat path is qualified. [Calculation](engineering/whole-amp/effects-loop/common-buffer/composite-review.html#output-current-heat). Drill tip-to-rear210 mm and bit projection28 mm are recorded; FB-178 resolves widest chuck to46.5 mm and supplies motor housing width51 mm. Housing height/axis offset, chuck length, actual fastener positions and swept access remain open. No native CAD change; objective6 remains incomplete.
+
+
+November27 FIT-012 / FB-179–180: current native board screw access checked against31 known package bounds;231 packages remain unknown. The28 mm exposed bit flags Power H1/C26 and H2/C25 under the proposed2 mm handling allowance. A44 mm exposed trial and optional precision driver clear this known subset only.381 CAD checks pass, including agreement on both flags and35-solid STEP roundtrip. [Report](engineering/whole-amp/mechanical/review/bench-tool-access.html). Native boards unchanged. Right-angle driver is an unselected option. Next: final three-board package/support layout and complete fastener approaches. Objective6 remains incomplete.
+
+November27 FB-181: user-supplied KD Industrial storefront verified as current Shenzhen Hanlongjia Technology listing. Custom sizes/OEM are advertised; no one-piece quote or stock fit established. [Supplier comparison](engineering/whole-amp/mechanical/review/chassis-supplier-kd.html). No contact, upload or order.

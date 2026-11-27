@@ -1919,3 +1919,39 @@ Source: Reply to clarification call_480fe1cd47c74e63a4e13513c5f745e0
 - [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
 - [engineering/whole-amp/mechanical/review/tool-access-checks.json](<../../engineering/whole-amp/mechanical/review/tool-access-checks.json>)
 
+## FB-179 — optional-assembly-tool-research
+Authority: user. Disposition: incorporated. Recorded: 2026-11-27. Original date: 2026-11-27.
+
+> i can find a smaller rechargeable screwdriver meant for assembling small boards - can you recommend one?
+
+Precision driver and rechargeable right-angle driver requested as options. User screenshots state16.4 mm body diameter and28/45 mm overall bit lengths, with electric/manual variants. No purchase or replacement of the measured drill requirement.
+
+Source: Current chat and FIT-012 source records
+
+- [engineering/whole-amp/mechanical/precision-driver-candidate.json](<../../engineering/whole-amp/mechanical/precision-driver-candidate.json>)
+- [engineering/whole-amp/mechanical/review/bench-tool-access.html](<../../engineering/whole-amp/mechanical/review/bench-tool-access.html>)
+
+## FB-180 — bench-access-known-bounds
+Authority: engineer. Disposition: incorporated. Recorded: 2026-11-27. Original date: 2026-11-27.
+
+> FIT-012: two power-board screw approaches overlap the proposed chuck handling envelope.
+
+31 known package bounds,231 unknown packages and16 holes. Measured28 mm projection flagsH1/C26 andH2/C25.44 mm exposed trial clears known heights only.381 CAD checks agree with analytic results; no full access or fabrication approval.
+
+Source: Current chat and FIT-012 source records
+
+- [engineering/whole-amp/mechanical/tool-access-study.json](<../../engineering/whole-amp/mechanical/tool-access-study.json>)
+- [engineering/whole-amp/mechanical/review/bench-tool-access.html](<../../engineering/whole-amp/mechanical/review/bench-tool-access.html>)
+- [engineering/whole-amp/mechanical/review/bench-access-cad-checks.json](<../../engineering/whole-amp/mechanical/review/bench-access-cad-checks.json>)
+
+## FB-181 — custom-chassis-supplier-lead
+Authority: user. Disposition: incorporated. Recorded: 2026-11-27. Original date: 2026-11-27.
+
+> This site has chassis and other things
+
+User supplied supplier lead. Browser confirms current Shenzhen Hanlongjia storefront and KD-AL336 customizable/OEM listing. Stock336x200x60 mm exceeds provisional160 mm depth; custom quotation and one-piece availability remain unknown. No selection, contact, upload or order.
+
+Source: https://kdindustrial.m.en.alibaba.com/productgrouplist-807312664/Amp_chassis_OEM_.html
+
+- [engineering/whole-amp/mechanical/review/chassis-supplier-kd.html](<../../engineering/whole-amp/mechanical/review/chassis-supplier-kd.html>)
+

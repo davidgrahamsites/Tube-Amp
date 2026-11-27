@@ -22,3 +22,5 @@ Socket envelope seam: component-selection/socketing/socket-envelope.json is cons
 Updated November24: FB-120 supplies46mm chuck diameter under fit-register.json/drill_tool_measurements. tools/check_tool_access.py generates review/tool-access-checks.json; full tool access remains pending. socket-study.md and tools/socket_fit_cad.py add conservative socket/IC bounds and service space to the existing failing board trial; read review/socket-fit-cad-checks.json.
 
 November27 FB-176/178: bit projection28 mm, tip-to-rear210 mm, widest chuck46.5 mm and motor housing width51 mm received. FB-178 resolves earlier39/46 mm reports. check_tool_access.py records dimensions and handling allowances; housing height/axis offset, chuck length, mounting positions and swept access remain open.
+
+FIT-012: tool-access-study.json owns bench approach assumptions; precision-driver-candidate.json owns optional tool research. tools/bench_tool_access.py reads native boards and component package contracts. tools/bench_access_cad.py checks solid intersections and exports known bounds. Read review/bench-tool-access.html. These interfaces do not replace fit-register.json or grant full access.

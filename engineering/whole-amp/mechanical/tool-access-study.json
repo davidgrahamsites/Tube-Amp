@@ -1,0 +1,31 @@
+{
+  "id": "FIT-012",
+  "date": "2026-11-27",
+  "owner": "Mechanical integration",
+  "scope": "Bench access from the component side of current four native boards; known package bounds only",
+  "assembly_state": "Carrier withdrawn, board horizontal, other chassis parts removed from tool approach; actual withdrawal and harness disconnection not qualified",
+  "screw_head_plane_above_board_mm_assumed": 0,
+  "additional_package_seating_mm_assumed": 1,
+  "axial_handling_allowance_mm_assumed": 2,
+  "tool_source": "fit-register.json/drill_tool_measurements",
+  "package_contracts": {
+    "sockets": "engineering/component-selection/socketing/socket-envelope.json",
+    "panasonic_radial": "engineering/component-selection/footprints/panasonic-fr/package-contract.json",
+    "knscha_film": "engineering/component-selection/film-parity/contract.json",
+    "reverb_coupling": "engineering/component-selection/reverb-coupling/contract.json",
+    "power_film": "engineering/component-selection/power-film/panasonic-contract.json"
+  },
+  "transform_rule": "Read footprint position and rotation from native boards; center symmetric bodies on manufacturer pin grid. Preserve explicit symmetry/lead-forming assumptions.",
+  "chuck_shape_rule": "Conservative cylinder at maximum measured chuck radius from chuck front to tool rear; actual chuck length/taper is unknown. This screens possible clashes; it is not the drill body model.",
+  "limits": [
+    "Unknown package heights and harnesses cannot pass access",
+    "Bit/holder diameter, chuck profile and housing height/axis offset are unknown",
+    "Maximum body envelopes are not detailed part solids",
+    "No installed cabinet or side-wall retaining-screw approach is checked",
+    "No fastener head, washer, edge distance or structural qualification",
+    "No native part, footprint, hole or route changes"
+  ],
+  "fabrication_ready": false,
+  "optional_driver_candidate": "precision-driver-candidate.json",
+  "optional_driver_screen": "Use published body diameter plus same radial allowance from screw head through body+maximum total bit length. Conservative geometry only; user has not selected this tool."
+}

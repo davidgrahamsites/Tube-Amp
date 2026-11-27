@@ -2728,6 +2728,57 @@
         "FB-176"
       ],
       "next_action": "Use measured width/length in assembly study; establish housing shape/axis offset, chuck length and actual fasteners before swept-clearance approval."
+    },
+    {
+      "id": "FB-179",
+      "recorded_on": "2026-11-27",
+      "occurred_on": "2026-11-27",
+      "authority": "user",
+      "kind": "optional-assembly-tool-research",
+      "quote": "i can find a smaller rechargeable screwdriver meant for assembling small boards - can you recommend one?",
+      "source": "Current chat and FIT-012 source records",
+      "interpretation": "Precision driver and rechargeable right-angle driver requested as options. User screenshots state16.4 mm body diameter and28/45 mm overall bit lengths, with electric/manual variants. No purchase or replacement of the measured drill requirement.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/precision-driver-candidate.json",
+        "engineering/whole-amp/mechanical/review/bench-tool-access.html"
+      ],
+      "supersedes": [],
+      "next_action": "Verify exact assembled tool geometry and fastening requirements before access qualification."
+    },
+    {
+      "id": "FB-180",
+      "recorded_on": "2026-11-27",
+      "occurred_on": "2026-11-27",
+      "authority": "engineer",
+      "kind": "bench-access-known-bounds",
+      "quote": "FIT-012: two power-board screw approaches overlap the proposed chuck handling envelope.",
+      "source": "Current chat and FIT-012 source records",
+      "interpretation": "31 known package bounds,231 unknown packages and16 holes. Measured28 mm projection flagsH1/C26 andH2/C25.44 mm exposed trial clears known heights only.381 CAD checks agree with analytic results; no full access or fabrication approval.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/tool-access-study.json",
+        "engineering/whole-amp/mechanical/review/bench-tool-access.html",
+        "engineering/whole-amp/mechanical/review/bench-access-cad-checks.json"
+      ],
+      "supersedes": [],
+      "next_action": "Integrate exact package and harness bounds into final three-board layout and revise fastener approaches."
+    },
+    {
+      "id": "FB-181",
+      "recorded_on": "2026-11-27",
+      "occurred_on": "2026-11-27",
+      "authority": "user",
+      "kind": "custom-chassis-supplier-lead",
+      "quote": "This site has chassis and other things",
+      "source": "https://kdindustrial.m.en.alibaba.com/productgrouplist-807312664/Amp_chassis_OEM_.html",
+      "interpretation": "User supplied supplier lead. Browser confirms current Shenzhen Hanlongjia storefront and KD-AL336 customizable/OEM listing. Stock336x200x60 mm exceeds provisional160 mm depth; custom quotation and one-piece availability remain unknown. No selection, contact, upload or order.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/chassis-supplier-kd.html"
+      ],
+      "supersedes": [],
+      "next_action": "Retain fabrication candidate; finish populated dimensions before any supplier drawing or quote."
     }
   ]
 }
