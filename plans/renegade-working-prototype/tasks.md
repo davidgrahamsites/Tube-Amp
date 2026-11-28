@@ -10,6 +10,8 @@ Existing decisions stay fixed: selectable 120 V / 220 V electric build (FB-106; 
 
 Effort below describes scope, not a promised elapsed time: S = bounded audit/repair; M = several linked checks; L = substantial design iteration; H = requires physical work. Each row names its inputs, output, dependencies and objective completion evidence. Exact execution revisions and commands belong in the linked module's evidence, not duplicated here.
 
+CB-005 advanced the effects-return load check. Use the [loaded recovery experiment](../../engineering/whole-amp/effects-loop/common-buffer/composite-review.html#integrated-load) for the next device and wiring decision. T04 and the populated chassis remain open.
+
 ## Ordered queue
 
 | Task | Status / depends on | Work, owner and edit surface | Done evidence | Effort |

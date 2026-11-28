@@ -1,0 +1,268 @@
+{
+  "id": "CB-005",
+  "sources": {
+    "engineering/whole-amp/reverb-600/circuit.json": "db5b9a017341f2fd2177c22abc38ab8601df6684107af37d732cf3f0933b756a",
+    "engineering/whole-amp/simulation/models/dm12ax7s.inc": "ffa293249bd62b4d1d0b710b4bd42177221325d9533ddad8f0fa88dcecb0e7f6",
+    "engineering/whole-amp/simulation/models/6ca7s.inc": "02768bad91f6497d718e33c09493b8d471c6c3aafee92fb226b5c3376c068b01",
+    "engineering/whole-amp/effects-loop/results/return-port-summary.json": "fc17134eb829736f3d3de654308433da4692f85e2023087f36f875ef74fa523e",
+    "engineering/whole-amp/effects-loop/common-buffer/composite-return.json": "ea7986c82c51e97e8a08cc278d2d911f20ffeeccfd2f58783f262194327b31ed",
+    "engineering/whole-amp/effects-loop/common-buffer/tools/integrated_load.py": "6d2e61d4d1279c8f36d9045888fbbbe7a45233a85370d94494ea1a7a83d64896",
+    "engineering/whole-amp/effects-loop/common-buffer/tools/composite_return.py": "7eb49515607474b6f6fcb174bb0560aa32296fc1b86190ff5db5617b1c3dd9dd",
+    "engineering/solid-state-reverb/simulation/models/OPAx134.LIB": "8ff414c678a7f8330b87504d7e0553de20ca87bdc713cecf81ab3448b4d7608f",
+    "engineering/whole-amp/tools/spice_runtime.py": "3df496fbbce173c6f8a602b9a17a731389f011634af809106184418572b9cf9b",
+    "engineering/whole-amp/effects-loop/tools/fixture.py": "10ea514a6a49c35f4c2e3d4766da725b5a0befccb38d2c89d4f7d96d42585cd5",
+    "engineering/whole-amp/effects-loop/tools/transformer_model.py": "bcb01c87ac723294e92eebc4f138ed3296a5d9841b341447c6db6f6a6853f0b1",
+    "engineering/whole-amp/effects-loop/tools/feedback_model.py": "798acb4cd6b78502971868d564b0280c6be8aec6205f3fe3312e9c2b5fc0d553",
+    "engineering/whole-amp/effects-loop/tools/loaded_feedback_model.py": "3843010b9ff006893137760cdddfaac02402c8671a5068ff9b4c15b7e995e736"
+  },
+  "cases": [
+    {
+      "hz": 1000,
+      "target_Vpk": 4.27,
+      "added_pF": 0,
+      "bias_V": 199.9477931167255,
+      "admittance_S": [
+        2.0654516015680407e-06,
+        9.580836513267957e-08
+      ],
+      "ac_error_fraction": 3.2385142121166086e-11,
+      "linear_target_current_mApk": 0.008828961568797537,
+      "requested_end_s": 0.05,
+      "reached_s": 0.05,
+      "max_step_s": 3.125e-06,
+      "deck_sha256": "843d3a26def5ae09f210be0fb296fa9dbf8b35b419abcf0e69a90fc163fd5389",
+      "status": "completed",
+      "fundamental_Vpk": 4.26951550161836,
+      "thd_percent": 0.0021848758652274073,
+      "port_current_mA": [
+        -0.009065467575038117,
+        0.009199859793720806
+      ],
+      "send_input_abs_Vpk": 0.38855683435135596,
+      "max_abs_Vgs": 0.10638421601845494,
+      "successive_window_voltage_rms_difference_V": 0.00014142057207239308,
+      "successive_window_current_rms_difference_mA": 1.8449491360528062e-06
+    },
+    {
+      "hz": 1000,
+      "target_Vpk": 4.27,
+      "added_pF": 100,
+      "bias_V": 199.9477931167255,
+      "admittance_S": [
+        2.065451601568043e-06,
+        7.241268958522594e-07
+      ],
+      "ac_error_fraction": 3.032352913753565e-11,
+      "linear_target_current_mApk": 0.009345790349588696,
+      "requested_end_s": 0.05,
+      "reached_s": 0.05,
+      "max_step_s": 3.125e-06,
+      "deck_sha256": "2c1c18e91f88a5f2917e19c605191d9feb5304784255e588086377abaaba5a24",
+      "status": "completed",
+      "fundamental_Vpk": 4.269084834669839,
+      "thd_percent": 0.0020273855754009604,
+      "port_current_mA": [
+        -0.009595614451449961,
+        0.009651812910240405
+      ],
+      "send_input_abs_Vpk": 0.3885125275344847,
+      "max_abs_Vgs": 0.10655345066811606,
+      "successive_window_voltage_rms_difference_V": 0.00014826968498505118,
+      "successive_window_current_rms_difference_mA": 1.8556933968851522e-06
+    },
+    {
+      "hz": 1000,
+      "target_Vpk": 4.27,
+      "added_pF": 500,
+      "bias_V": 199.9477931167255,
+      "admittance_S": [
+        2.065451601568037e-06,
+        3.237401018723454e-06
+      ],
+      "ac_error_fraction": 1.7341491073540133e-11,
+      "linear_target_current_mApk": 0.016397498127053073,
+      "requested_end_s": 0.05,
+      "reached_s": 0.05,
+      "max_step_s": 3.125e-06,
+      "deck_sha256": "ff42b512847750106c5500af1b59d48e753d982f97a40b55fcbb377df124469d",
+      "status": "completed",
+      "fundamental_Vpk": 4.267397175643282,
+      "thd_percent": 0.0020704792379871977,
+      "port_current_mA": [
+        -0.016528298875176376,
+        0.016469235921138282
+      ],
+      "send_input_abs_Vpk": 0.38836890203046315,
+      "max_abs_Vgs": 0.10911574522063461,
+      "successive_window_voltage_rms_difference_V": 0.00014661087083421673,
+      "successive_window_current_rms_difference_mA": 1.8732572622162527e-06
+    },
+    {
+      "hz": 1000,
+      "target_Vpk": 135,
+      "added_pF": 0,
+      "bias_V": 199.9477931167255,
+      "admittance_S": [
+        2.0654516015680407e-06,
+        9.580836513267957e-08
+      ],
+      "ac_error_fraction": 3.2385142121166086e-11,
+      "linear_target_current_mApk": 0.27913578730390337,
+      "requested_end_s": 0.05,
+      "reached_s": 0.05,
+      "max_step_s": 3.125e-06,
+      "deck_sha256": "b28cc00a39fdb56a3cf1a559d58f50bcd76150bd12e9c1b19cd50276e27d0f82",
+      "status": "completed",
+      "fundamental_Vpk": 134.98468335280288,
+      "thd_percent": 0.06328174102119201,
+      "port_current_mA": [
+        -0.3981420120177615,
+        0.5438433829004828
+      ],
+      "send_input_abs_Vpk": 12.338697867302901,
+      "max_abs_Vgs": 0.8627669377294067,
+      "successive_window_voltage_rms_difference_V": 0.008635480511148331,
+      "successive_window_current_rms_difference_mA": 0.002152868981600035
+    },
+    {
+      "hz": 1000,
+      "target_Vpk": 135,
+      "added_pF": 100,
+      "bias_V": 199.9477931167255,
+      "admittance_S": [
+        2.065451601568043e-06,
+        7.241268958522594e-07
+      ],
+      "ac_error_fraction": 3.032352913753565e-11,
+      "linear_target_current_mApk": 0.29547580730549744,
+      "requested_end_s": 0.05,
+      "reached_s": 0.05,
+      "max_step_s": 3.125e-06,
+      "deck_sha256": "c5f0e2fb297de772d6528727b225231236c1644583b3fd46755dd779c6512ffe",
+      "status": "completed",
+      "fundamental_Vpk": 134.97179649163448,
+      "thd_percent": 0.06332989688833107,
+      "port_current_mA": [
+        -0.40883482940534216,
+        0.5486745259436066
+      ],
+      "send_input_abs_Vpk": 12.337554776321914,
+      "max_abs_Vgs": 0.8627815273040488,
+      "successive_window_voltage_rms_difference_V": 0.00876205301300812,
+      "successive_window_current_rms_difference_mA": 0.0021770416830048734
+    },
+    {
+      "hz": 1000,
+      "target_Vpk": 135,
+      "added_pF": 500,
+      "bias_V": 199.9477931167255,
+      "admittance_S": [
+        2.065451601568037e-06,
+        3.237401018723454e-06
+      ],
+      "ac_error_fraction": 1.7341491073540133e-11,
+      "linear_target_current_mApk": 0.5184220719325914,
+      "requested_end_s": 0.05,
+      "reached_s": 0.05,
+      "max_step_s": 3.125e-06,
+      "deck_sha256": "f54594d2372471ccad252565446346ab2d15b3a1f984b7b62d5edff634b12518",
+      "status": "completed",
+      "fundamental_Vpk": 134.91741736503332,
+      "thd_percent": 0.06331491881511216,
+      "port_current_mA": [
+        -0.5981317065182095,
+        0.6326443913847428
+      ],
+      "send_input_abs_Vpk": 12.332301895882166,
+      "max_abs_Vgs": 0.8627719475685001,
+      "successive_window_voltage_rms_difference_V": 0.00903013466193205,
+      "successive_window_current_rms_difference_mA": 0.0019962880407830325
+    },
+    {
+      "hz": 20000,
+      "target_Vpk": 135,
+      "added_pF": 0,
+      "bias_V": 199.9477931167255,
+      "admittance_S": [
+        2.567509322630818e-06,
+        1.6362180554788443e-06
+      ],
+      "ac_error_fraction": 2.3492037682091427e-10,
+      "linear_target_current_mApk": 0.41101489171832495,
+      "requested_end_s": 0.003,
+      "reached_s": 0.003,
+      "max_step_s": 7.8125e-08,
+      "deck_sha256": "c150061254402e23f4b70d7e583e8f363edcb44c2854174372f7ba65b4959f06",
+      "status": "completed",
+      "fundamental_Vpk": 131.3341218308576,
+      "thd_percent": 1.1417327420526102,
+      "port_current_mA": [
+        -0.3687916906594211,
+        0.6963945031224485
+      ],
+      "send_input_abs_Vpk": 12.019362692976307,
+      "max_abs_Vgs": 0.8235555017402446,
+      "successive_window_voltage_rms_difference_V": 0.03488705686410864,
+      "successive_window_current_rms_difference_mA": 0.024937671033871383
+    },
+    {
+      "hz": 20000,
+      "target_Vpk": 135,
+      "added_pF": 100,
+      "bias_V": 199.9477931167255,
+      "admittance_S": [
+        2.567509322625846e-06,
+        1.4202588669841443e-05
+      ],
+      "ac_error_fraction": 4.923597174012061e-11,
+      "linear_target_current_mApk": 1.9484275940799245,
+      "requested_end_s": 0.003,
+      "reached_s": 0.003,
+      "max_step_s": 7.8125e-08,
+      "deck_sha256": "239fbc3ef7f7b2669636a165875bc98a9529cfd24435425853ac4b2cf688d0cf",
+      "status": "completed",
+      "fundamental_Vpk": 131.38206259850799,
+      "thd_percent": 1.1594589011693157,
+      "port_current_mA": [
+        -1.8091559844223772,
+        1.705521449893737
+      ],
+      "send_input_abs_Vpk": 12.022532168265146,
+      "max_abs_Vgs": 1.2309564236341828,
+      "successive_window_voltage_rms_difference_V": 0.03467402046345284,
+      "successive_window_current_rms_difference_mA": 0.026125819925966177
+    },
+    {
+      "hz": 20000,
+      "target_Vpk": 135,
+      "added_pF": 500,
+      "bias_V": 199.9477931167255,
+      "admittance_S": [
+        2.5675093226094344e-06,
+        6.44680711272698e-05
+      ],
+      "ac_error_fraction": 1.107614837780975e-11,
+      "linear_target_current_mApk": 8.71008899777359,
+      "requested_end_s": 0.003,
+      "reached_s": 3.6224270990217934e-05,
+      "max_step_s": 7.8125e-08,
+      "deck_sha256": "dd7cec16581ddb9d0a4ac6cf3e6e3c1957e1ea047347564c587f93a63beb7f83",
+      "status": "incomplete",
+      "solver_messages": [
+        "stdout vmain#branch                        -0.0137124",
+        "stdout vpre#branch                        -0.00514555",
+        "stdout vearly#branch                      -0.00348821",
+        "stdout a.xcs.x_u19.ag1#branch_1_0          -5.098e-16",
+        "stdout a.xcs.x_u18.ag1#branch_1_0        -1.20325e-15",
+        "stdout a.xerr.x_u19.ag1#branch_1_0         -5.098e-16",
+        "stdout a.xerr.x_u18.ag1#branch_1_0       -1.20325e-15",
+        " Reference value :  0.00000e+00\r",
+        " Reference value :  3.62220e-05\r",
+        "stdout No. of Data Rows : 735",
+        "stderr doAnalyses: TRAN:  Timestep too small; time = 3.62243e-05, timestep = 9.76562e-20: trouble with node \"h.xerr.x_h2.h_h2#branch\"",
+        "stderr tran simulation(s) aborted"
+      ]
+    }
+  ],
+  "hardware_qualified": false
+}

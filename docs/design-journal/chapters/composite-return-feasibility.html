@@ -107,6 +107,19 @@
         <p>The calculation receipt passes 44 checks. These examples do not qualify safe operating area, DC or hot linear operation, exact sourcing, tab insulation, mounting fit, bias tolerance, or shared heat from nearby parts. No device is selected. Native CAD is unchanged.</p>
       </section>
 
+      <section id="cb-005-integrated-load">
+        <h2>CB-005 integrated load and transient check</h2>
+        <p>CB-005 connected the composite-return model to the integrated effects-loop load. This checks whether the earlier standalone output-load assumptions describe the modeled port. The results remain simulation evidence. The model omits the active wet signal, clamps, and physical wiring.</p>
+        <p>All 36 port-probe configurations returned the same admittance at 20 kHz: <span class="math">\(Y=G+jB=(2.567509+j1.636218)\;\mathrm{\mu S}\)</span>. The equivalent impedance is <span class="math">\(Z=276990-j176520\;\Omega\)</span>. At 1 kHz, the equivalent impedance is <span class="math">\(483116-j22410\;\Omega\)</span>.</p>
+        <p>For added external capacitance <span class="math">\(C\)</span>, frequency <span class="math">\(f\)</span>, and peak output voltage <span class="math">\(V_{pk}\)</span>, calculate external current from the magnitude of the total admittance:</p>
+        <div class="math">\[I_{ext,pk}=V_{pk}\left|Y+j2\pi fC\right|=V_{pk}\sqrt{G^2+(B+2\pi fC)^2}\]</div>
+        <p>Use <span class="math">\(V_{pk}=135\;\mathrm V\)</span>, <span class="math">\(f=20\;\mathrm{kHz}\)</span>, <span class="math">\(G=2.567509\;\mathrm{\mu S}\)</span>, and <span class="math">\(B=1.636218\;\mathrm{\mu S}\)</span>. The calculated external-only peak currents are:</p>
+        <table><thead><tr><th>Added capacitance</th><th>External peak current</th></tr></thead><tbody><tr><td>0 pF</td><td>0.411015 mA</td></tr><tr><td>100 pF</td><td>1.948428 mA</td></tr><tr><td>500 pF</td><td>8.710089 mA</td></tr></tbody></table>
+        <p>For an ideal 2 mA external-only limit, solve <span class="math">\(C=(\sqrt{(I_{lim}/V_{pk})^2-G^2}-B)/(2\pi f)\)</span>. Substituting <span class="math">\(I_{lim}=2\;\mathrm{mA}\)</span> gives <span class="math">\(C=103.088\;\mathrm{pF}\)</span>. This crossing allocates no current to internal feedback or other paths and includes no margin. It is not a harness-capacitance specification or a device-current qualification.</p>
+        <p>At 1 kHz, the 4.27 V target produced 4.2695, 4.2691, and 4.2674 V across 0, 100, and 500 pF, with 0.0020–0.0022% THD. The 135 V runs are overload stresses and exceed the nominal spring-send input limit; they produced 134.985, 134.972, and 134.917 V. At the 20 kHz, 135 V overload stress, completed 0 and 100 pF cases produced 131.334 V at 1.1417% THD and 131.382 V at 1.1595% THD. Both exceed the 1% screen. The 500 pF run stopped at 36.22 µs of the requested 3 ms after an ngspice timestep abort; no valid transient peak or THD is available for that case. A separate 30 ms downstream forced-port control at 135 V peak and 20 kHz measured −8.590/+8.494 mA, with branch-current sum error within 5 µA; it establishes external current demand for the prescribed waveform, not recovery performance.</p>
+        <p>CB-005 resolves the nominal integrated load for this model and adds an external-current screen. It does not close continuous hot-device capability, safe operating area, startup, gate protection, fault current, internal feedback current, or thermal performance. No part or circuit is adopted. Continue with supported device and protection choices, then rerun the complete integrated current and thermal cases before low-voltage fixture testing.</p>
+      </section>
+
       <section>
         <h2>FB-176/178 drill measurements</h2>
         <p>FB-176 reported 21 cm from the drill-bit tip to the tool back and 28 mm from the bit to the chuck. The first value converts to <span class="math">\(21\;\mathrm{cm}\times10=210\;\mathrm{mm}\)</span>. FB-176 also reported a 39 mm widest chuck. FB-178 clarified that the widest chuck diameter is 46.5 mm and the motor housing is 51 mm wide. This resolves the earlier chuck conflict; the 39 mm report remains part of the measurement history.</p>
@@ -133,6 +146,9 @@
           <dt>Standing loss</dt><dd>Power dissipated at the stated DC bias before the output signal is applied.</dd>
           <dt>Sink-to-air thermal resistance</dt><dd>Temperature rise of the shared heat sink divided by its total heat flow to air, in °C/W.</dd>
           <dt>Motor-body offset</dt><dd>Distance between the drill axis and the outer motor housing.</dd>
+          <dt>Admittance</dt><dd>Current divided by voltage for an AC load, expressed here in siemens.</dd>
+          <dt>Impedance</dt><dd>Voltage divided by current for an AC load, expressed here in ohms.</dd>
+          <dt>External-only peak current</dt><dd>Peak current through the modeled external load, excluding current in internal feedback paths.</dd>
         </dl>
       </section>
 
@@ -149,6 +165,8 @@
           <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-servo-sink-1k.json">Servo sink at 1 kHz</a> and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-servo-sink-20k.json">servo sink at 20 kHz</a>.</li>
           <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/composite-20k-cap500.json">500 pF ideal-sink stress result</a>.</li>
           <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/output-heat.json">CB-004 load and heat inputs</a> and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/output-heat.json">44-check calculation receipt</a>.</li>
+          <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/composite-review.html#integrated-load">CB-005 integrated-load engineering review</a> and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/integrated-load.json">integrated-load result receipt</a> — 36 port probes, external-load calculation, completed 1 kHz and 20 kHz transient outputs, and the incomplete 500 pF case.</li>
+          <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/forced-port.json">CB-005 forced-port current control</a> — 30 ms prescribed-waveform external-current result; not recovery-stage qualification.</li>
           <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/tools/output_heat.py">CB-004 calculation tool</a> — current, standing loss, and shared-sink budgets.</li>
           <li><a href="https://www.vishay.com/docs/91059/91059.pdf">Vishay IRF820PbF data sheet</a> and <a href="https://www.littelfuse.com/assetdocs/littelfuse-discrete-mosfets-ixt-01n100d-datasheet?assetguid=90f68c0c-66ed-4288-bfb0-3c2769323c27">Littelfuse/IXYS IXTP01N100D data sheet</a> — thermal-property inputs only; operating-area and exact-device qualification remain open.</li>
           <li><a href="../../../brain/feedback/events.json">FB-176/178 user measurement records</a> and <a href="../../../engineering/whole-amp/mechanical/fit-register.json">mechanical fit register</a> — retained 210 mm length and 28 mm bit projection, clarified 46.5 mm chuck and 51 mm housing width, and remaining measurements.</li>

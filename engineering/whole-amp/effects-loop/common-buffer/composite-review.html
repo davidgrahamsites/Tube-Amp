@@ -67,6 +67,29 @@
 <p>Inputs: <a href="output-heat.json">calculation contract</a>. Factory: <a href="tools/output_heat.py">current and heat calculation</a>. Results: <a href="results/output-heat.json">twelve cases and checks</a>.</p>
 <h3>Vocabulary</h3><dl><dt>Bias current</dt><dd>Current set before the audio signal is applied.</dd><dt>Junction</dt><dd>The active semiconductor region whose temperature must stay within the design limit.</dd><dt>Thermal resistance</dt><dd>Temperature rise per watt along a specified heat path.</dd><dt>Safe operating area</dt><dd>The permitted combination of device voltage, current, time and temperature.</dd><dt>Standing loss</dt><dd>Heat produced with power applied and no audio signal.</dd></dl></section>
 
+<section id="integrated-load"><h2>CB-005 · Drive the modeled return port</h2>
+<p>The nominal servo recovers the 4.27 V peak reference at 1 kHz across all three trial capacitances. At the retained 135 V peak overload target, the installed harness capacitance becomes a design input. Keep the recovery stage and its connector assignment open.</p>
+<p>Connect the CB-002 servo through its 1 µF output capacitor to FX_RETURN. Measure current at that junction. Keep C601, R601 and R602 in the spring send. Keep R612, the wet mixing resistors, C19, the phase inverter, the output tubes and the loaded transformer model. Apply a sine at the recovery input. Set the wet source to zero. The 4.27 V peak target comes from the earlier near-25 W fixture. The present trial drives the recovery independently of the guitar preamp.</p>
+<p>All voltages below are at FX_RETURN. THD includes harmonics 2 through 10. Added capacitance represents wiring and board parasitics to ground. The assembled capacitance is unknown. Quiescent supplies and references are ideal. This fixture omits active wet drive, spring transfer, input clamp currents, the wet mute and fault paths. Transformer parameters and transistor models remain provisional.</p>
+<table><thead><tr><th>Frequency</th><th>Target peak</th><th>Added C</th><th>Fundamental peak</th><th>THD</th></tr></thead><tbody><tr><td>1 kHz</td><td>4.27 V</td><td>0 pF</td><td>4.270 V</td><td>0.0022%</td></tr>
+<tr><td>1 kHz</td><td>4.27 V</td><td>100 pF</td><td>4.269 V</td><td>0.0020%</td></tr>
+<tr><td>1 kHz</td><td>4.27 V</td><td>500 pF</td><td>4.267 V</td><td>0.0021%</td></tr>
+<tr><td>1 kHz</td><td>135 V</td><td>0 pF</td><td>134.985 V</td><td>0.0633%</td></tr>
+<tr><td>1 kHz</td><td>135 V</td><td>100 pF</td><td>134.972 V</td><td>0.0633%</td></tr>
+<tr><td>1 kHz</td><td>135 V</td><td>500 pF</td><td>134.917 V</td><td>0.0633%</td></tr>
+<tr><td>20 kHz</td><td>135 V</td><td>0 pF</td><td>131.334 V</td><td>1.1417%</td></tr>
+<tr><td>20 kHz</td><td>135 V</td><td>100 pF</td><td>131.382 V</td><td>1.1595%</td></tr>
+<tr><td>20 kHz</td><td>135 V</td><td>500 pF</td><td>Incomplete</td><td>Unavailable</td></tr>
+</tbody></table><p>The two completed 20 kHz overload cases exceed the 1% distortion limit. At 500 pF the transient solver stopped after 36.22 µs of the requested 3 ms. Only the DC and small-signal results are available for that case. The three 1 kHz overload trials complete the recovery-stage screen but exceed the nominal spring-send input limit. The 20 kHz values use the final ten cycles of a 3 ms simulation.</p>
+<p>To recover the load demand from the failed 500 pF case, drive the same downstream circuit with an ideal 135 V peak sine at 20 kHz. The 30 ms transient draws −8.590 to +8.494 mA at the port. The sum of the two branch currents and wiring-capacitor current agrees with the source current within 5 µA. This control establishes the current needed to impose the waveform. The recovery stage still lacks a completed transient at this load. <a href="tools/forced_port.py">Forced-port control</a> · <a href="results/forced-port.json">Current extrema and checks</a>.</p>
+<h3>Find the external current requirement</h3>
+<p>Use the prior 1 A AC port probe to obtain complex impedance. At 20 kHz the modeled return presents 276.990 − j176.520 kΩ. Its admittance is 2.5675 + j1.6362 µS. For a sine of peak voltage A, add the trial capacitance C in parallel.</p>
+<p>\[ I_{pk}=A\left|Y+j2\pi f C\right| \]</p>
+<p>At 135 V peak the linearized port requires 0.411, 1.948 and 8.710 mA peak with 0, 100 and 500 pF added. At 100 pF the external load alone uses 97.4% of the nominal 2 mA bias on this calculation. The 2 mA crossing occurs at 103.09 pF. This diagnostic excludes feedback-divider current, device capacitances, nonlinear load behavior and tolerances. Use the transient results above to assess signal reproduction. Record total connected signal length, including service loops. For a dimensional reference, 0.30 m of Belden 8216 at its nominal 101 pF/m contributes 30.3 pF before connector and board capacitance. Measure the disconnected harness conductor to its installed shield/return and account separately for board capacitance before assigning a limit. Cable selection, insulation, temperature and crimp fit remain open. <a href="https://catalog.belden.com/techdata/EN/8216_techdata.pdf">Belden 8216 data sheet</a>.</p>
+<p>The nominal spring-send divider delivers about \(135\times100/(1000+100)=12.27\) V peak at full recovery swing. The native U10 design limit is 10 V peak. Verify spring excitation and overload behavior when recalibrating the mixer. The recovery output and the internal spring-send input require separate acceptance checks.</p>
+<h3>Screen replacement devices</h3><p>Microchip rates the DN2540 at 400 V. The existing 440 V high-supply experiment exceeds this by 40 V if the full rail appears across one device during startup or a fault. Exclude it as an unprotected full-rail replacement. <a href="https://www.microchip.com/content/dam/mchp/documents/APID/ProductDocuments/DataSheets/DN2540-Vertical-DMOS-FET-Data-Sheet-DS20006717.pdf">Microchip DN2540 data sheet</a>.</p>
+<p>The Littelfuse IXTP3N50D2 merits a separate driver study. It has a 500 V rating, a drain-connected mounting tab and published DC safe-operating-area curves at 25 and 75 °C case temperature. Its typical input capacitance is 1,070 pF at 25 V drain-source voltage, −10 V gate-source voltage and 1 MHz. The CB-002 follower uses 9 pF gate-source and 1 pF gate-drain. Recalculate gate drive and compensation with voltage-dependent capacitances and check the insulated mounting path before reserving this package. <a href="https://www.littelfuse.com/assetdocs/littelfuse-discrete-mosfets-ixt-3n50-datasheet?assetguid=7d9bbc87-6f24-48dc-8dcf-2bc5554e3a93">Littelfuse data sheet, pages 1–2 and figures 15–16</a>.</p>
+<p><a href="tools/integrated_load.py">Integrated simulation</a> · <a href="results/integrated-load.json">Nine case results and input hashes</a> · <a href="tools/audit_integrated_load.py">Independent load calculation</a> · <a href="../results/return-port-summary.json">Earlier return-port probe</a> · <a href="../../reverb-600/circuit.json">600R-1 components and net connections</a>.</p></section>
 <!-- reader-key --><section aria-label="Report vocabulary"><h2>Vocabulary key</h2><p>Terms used in this report. See the <a href="../../../../docs/engineering-reader/glossary.html">full key</a> for related terms.</p><dl><dt>AC</dt><dd>Alternating current; current that changes direction.</dd>
 <dt>Bias</dt><dd>A steady voltage or current that sets a device operating point.</dd>
 <dt>Capacitance</dt><dd>The ratio of stored charge to voltage; measured in farads (F).</dd>
@@ -76,21 +99,27 @@
 <dt>Dissipation</dt><dd>Electrical energy converted to heat per unit time; measured in watts (W).</dd>
 <dt>Feedback</dt><dd>A signal returned from an output to an earlier stage to control gain or response.</dd>
 <dt>Functional block</dt><dd>A group of parts with one defined job and specified connections to other groups.</dd>
+<dt>Ground</dt><dd>A named circuit reference; it is not automatically protective earth.</dd>
 <dt>Harness</dt><dd>A grouped set of wires, contacts and connectors.</dd>
 <dt>HV</dt><dd>High voltage; use the actual voltage and insulation requirement in each design check.</dd>
+<dt>Impedance</dt><dd>Opposition to alternating current, including resistance and frequency-dependent effects; measured in ohms (Ω).</dd>
 <dt>Load</dt><dd>The circuit or device that takes current from a source.</dd>
+<dt>Net</dt><dd>A named set of electrically connected points.</dd>
 <dt>Node</dt><dd>An electrical connection shared by specified components.</dd>
 <dt>Nominal</dt><dd>The stated reference value before tolerance and operating variation.</dd>
 <dt>PCB</dt><dd>Printed circuit board.</dd>
 <dt>Populated</dt><dd>With the components installed.</dd>
+<dt>Preamp</dt><dd>Preamplifier; the stages that prepare the input signal for the power amplifier.</dd>
 <dt>Schematic</dt><dd>A drawing of electrical connections and component functions.</dd>
 <dt>Parallel</dt><dd>Connected across the same two electrical nodes.</dd>
 <dt>Socket</dt><dd>A replaceable connection that holds a tube or integrated circuit.</dd>
 <dt>Tolerance</dt><dd>The permitted variation from a specified value.</dd>
+<dt>Transformer</dt><dd>A magnetic device that transfers energy between windings.</dd>
 <dt>Gate</dt><dd>A checkpoint that requires specified evidence before the next activity.</dd>
 <dt>Parasitic</dt><dd>An unintended electrical effect caused by physical conductors, parts or layout.</dd>
 <dt>Thermal</dt><dd>Related to heat or temperature.</dd>
 <dt>Divider</dt><dd>Series components that produce a fraction of an applied voltage.</dd>
 <dt>THD</dt><dd>Total harmonic distortion; harmonic content relative to the fundamental, using the stated harmonic range.</dd>
 <dt>Fundamental</dt><dd>The waveform component at the applied signal frequency.</dd>
+<dt>Transient</dt><dd>A change in circuit conditions over time, such as startup or shutdown.</dd>
 <dt>Corner</dt><dd>A selected combination of component and operating limits.</dd></dl></section><!-- /reader-key --></main></body></html>
