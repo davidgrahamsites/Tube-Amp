@@ -1955,3 +1955,37 @@ Source: https://kdindustrial.m.en.alibaba.com/productgrouplist-807312664/Amp_cha
 
 - [engineering/whole-amp/mechanical/review/chassis-supplier-kd.html](<../../engineering/whole-amp/mechanical/review/chassis-supplier-kd.html>)
 
+## FB-184 — effects-return-gate
+Authority: user. Disposition: incorporated. Recorded: 2026-11-27. Original date: 2026-11-27.
+
+> check the actual parts, heat and protection before putting it on the three-board layout
+
+Use CB-005 loading. Require an actual part, thermal path and fault protection before return-stage placement.
+
+Source: Current Renegade chat, continuation after CB-005
+
+- [engineering/whole-amp/effects-loop/common-buffer/apex-return.html](<../../engineering/whole-amp/effects-loop/common-buffer/apex-return.html>)
+
+## FB-185 — circuit-skill-update
+Authority: user. Disposition: incorporated. Recorded: 2026-11-27. Original date: 2026-11-27.
+
+> read these and get takeaways toupdate the circuit ladder skill
+
+Incorporate the two PCBEditor articles into the installed and mirrored skill. Retain manufacturer pin mapping and native EDA verification.
+
+Source: Current Renegade chat, continuation after CB-005
+
+- [engineering/circuit-workflow/skill/references/review-gates.md](<../../engineering/circuit-workflow/skill/references/review-gates.md>)
+- [engineering/circuit-workflow/skill/references/integrated-sources.md](<../../engineering/circuit-workflow/skill/references/integrated-sources.md>)
+
+## FB-186 — external-review-permission
+Authority: user. Disposition: incorporated. Recorded: 2026-11-27. Original date: 2026-11-27.
+
+> you can call claude to do external checks
+
+Claude may be used for external checking. Review its claims against source data and simulations.
+
+Source: Current Renegade chat, continuation after CB-005
+
+- [engineering/whole-amp/effects-loop/common-buffer/apex-return.html](<../../engineering/whole-amp/effects-loop/common-buffer/apex-return.html>)
+

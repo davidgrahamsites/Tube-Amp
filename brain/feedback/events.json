@@ -2779,6 +2779,55 @@
       ],
       "supersedes": [],
       "next_action": "Retain fabrication candidate; finish populated dimensions before any supplier drawing or quote."
+    },
+    {
+      "id": "FB-184",
+      "recorded_on": "2026-11-27",
+      "occurred_on": "2026-11-27",
+      "authority": "user",
+      "kind": "effects-return-gate",
+      "quote": "check the actual parts, heat and protection before putting it on the three-board layout",
+      "source": "Current Renegade chat, continuation after CB-005",
+      "interpretation": "Use CB-005 loading. Require an actual part, thermal path and fault protection before return-stage placement.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/common-buffer/apex-return.html"
+      ],
+      "supersedes": [],
+      "next_action": "See CB-006 engineering checkpoint."
+    },
+    {
+      "id": "FB-185",
+      "recorded_on": "2026-11-27",
+      "occurred_on": "2026-11-27",
+      "authority": "user",
+      "kind": "circuit-skill-update",
+      "quote": "read these and get takeaways toupdate the circuit ladder skill",
+      "source": "Current Renegade chat, continuation after CB-005",
+      "interpretation": "Incorporate the two PCBEditor articles into the installed and mirrored skill. Retain manufacturer pin mapping and native EDA verification.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/circuit-workflow/skill/references/review-gates.md",
+        "engineering/circuit-workflow/skill/references/integrated-sources.md"
+      ],
+      "supersedes": [],
+      "next_action": "See CB-006 engineering checkpoint."
+    },
+    {
+      "id": "FB-186",
+      "recorded_on": "2026-11-27",
+      "occurred_on": "2026-11-27",
+      "authority": "user",
+      "kind": "external-review-permission",
+      "quote": "you can call claude to do external checks",
+      "source": "Current Renegade chat, continuation after CB-005",
+      "interpretation": "Claude may be used for external checking. Review its claims against source data and simulations.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/common-buffer/apex-return.html"
+      ],
+      "supersedes": [],
+      "next_action": "See CB-006 engineering checkpoint."
     }
   ]
 }

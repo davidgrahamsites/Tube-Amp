@@ -114,3 +114,4 @@ Start with [the brain contract](CONTEXT.md). Evidence is linked in each record.
 | VAL-076 | validation | components | documented | 2026-11-26 | [Shared heater-reference compatibility](records/VAL-076-heater-interface-boundary.md) |
 | VAL-077 | validation | cross-domain | documented | 2026-11-26 | [Capacitor and bottom-power packaging review](records/VAL-077-power-packaging-review.md) |
 | VAL-078 | validation | schematic | documented | 2026-11-27 | [Composite return under modeled amplifier load](records/VAL-078-integrated-return-load.md) |
+| VAL-079 | validation | schematic | documented | 2026-11-27 | [Loaded recovery and fault limits](records/VAL-079-apex-return.md) |

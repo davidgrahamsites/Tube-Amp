@@ -1,5 +1,7 @@
 # Project status
 
+CB-006 · The PA340CC and OPA134PA models drove the CB-005 overload target at 135.54 V peak and 0.292% THD. A sagged supply failed at 1.367% THD. Qualify the protected supply, startup mute, serviceable carrier and heat path before placement. [Engineering record](engineering/whole-amp/effects-loop/common-buffer/apex-return.html).
+
 November 27 · CB-005. The composite effects return now has a nine-case simulation against the modeled spring-send, mixer and phase-inverter load. At 20 kHz, 100 pF of added wiring capacitance brings the external current estimate to 1.948 mA at the 135 V peak overload target. Keep the 2 mA servo out of the board layout. Carry the measured harness capacitance, exact device models, hot operating limits and protection into the next recovery design. [Engineering evidence](engineering/whole-amp/effects-loop/common-buffer/composite-review.html#integrated-load).
 
 November 26 HD-005:680ohm feed candidate screened over570–805ohm;36DC and4audio runs complete,374 evidence checks pass. Minimum behavioral headroom margin1.082V; real pass circuit and independent fault disconnection remain open. Exact Vishay PR03 candidate has a ten-piece RS China route with stock shipping from elsewhere; Shanghai checkout unverified. No native adoption or populated-fit release. [HTML evidence](engineering/component-selection/heater-divider-rating/ceiling-review.html).
