@@ -60,7 +60,7 @@ Risol13 island13 0 1gig
 
 @contextmanager
 def installed(model,off=18,driver_ohm=2.,edge_ns=20,threshold=-10,cap_scale=1.,wire_ohm=0,
-              signal_threshold=-10,isol_pF=6):
+              signal_threshold=-10,isol_pF=6,fault_edge_ns=None):
     original=gain.sp.load
     def branch(signal,tail,control):
         text=legs(signal,tail,model,control,driver_ohm,threshold,cap_scale)
@@ -79,6 +79,12 @@ def installed(model,off=18,driver_ohm=2.,edge_ns=20,threshold=-10,cap_scale=1.,w
             control=f'Vctl13 cmd13 island13 PWL(0 {-off} 2.40u {-off} {2.4+edge_ns/1000}u 0)'
             net=net[:start]+branch('mix','retour',control)+net[end:]
         elif 'SSH mix imon cmd' in net:
+            if fault_edge_ns is not None:
+                def command_edge(match):
+                    onset=float(match.group(2))
+                    return f'{match.group(1)}{onset} 0 {onset+fault_edge_ns*1e-9} 1)'
+                net,n=re.subn(r'^(VTRIP cmd 0 PWL\(0 0 )([^ ]+) 0 [^ ]+ 1\)$',command_edge,net,flags=re.M)
+                assert n==1
             start=net.index('SSH mix imon cmd')
             end=net.index('VMON imon',start)
             net=net[:start]+branch('mix','tail13',f'Bctl13 cmd13 island13 V={off}*(v(cmd)-1)')+f'Rtail13 tail13 imon {2.2+wire_ohm}\n'+net[end:]

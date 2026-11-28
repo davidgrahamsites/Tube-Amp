@@ -24,3 +24,5 @@ CB-009. Integration owns the winding and revised rail trial. Use winding-rail-fi
 The CB-010/011 audio, cutoff and cabinet checkpoint is in [the engineering reader](gain-cutoff-template.html).
 
 Integration owns the CB-012/013 [shunt device checks](shunt-device.html). Compare the opposed-device charge and switching results with the 0.50 dB gain, 1 V residual and 0.70 V injection limits. Measure the two installed devices, driver and harness before placement.
+
+CB-014/015 reduce the local capacitors, check actual sensitivity and compare six signal levels with a fixed-capacitance control. Use the same [device report](shunt-device.html). The human check is a simultaneous source, PA output and receiver capture across signal amplitude and a separate mute transient.

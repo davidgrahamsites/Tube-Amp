@@ -16,3 +16,7 @@ The cutoff guard model owns part data and its two-terminal netlist. The fault fi
 CB-011. The local reservoir bounds minimum capacitance and startup. The assembled-return runner shares the protected supply with the audio macro. The two shunt studies use that fixed network to check bias and nonlinear capacitance. Run audit_gain_cutoff.py against the JSON receipts, then compare the actual pair, installed switch timing and the guarded cabinet with the report.
 
 CB-012 uses shunt_curve.py and qualify_shunt_curve.py to convert the IXYS plot to differential charge and test the silicon mute. CB-013 uses sic_shunt.py and qualify_sic_shunt.py. Supply a local copy of the linked UnitedSiC model with the recorded hash. Run each group (audio, switching, faults) in a fresh KiCad Python process. Inspect partial transients, terminal gate voltage, gain, distortion and switching peaks.
+
+For the revised delay network use retuned_shunt.py with audio and arrival, sic_pair_window.py and sic_audio_tolerance.py with the model path and --revised, then sic_signal_levels.py and sic_distortion_controls.py with the model path. The factories report each threshold or passive corner and tag the fixed-capacitance control. Inspect the receiver distortion and gate pulse together.
+
+steered_bias.py and qualify_steered_bias.py add the actual divider and a behavioral steering diode to both fixtures. floating_driver_budget.py independently sweeps regulator and undervoltage thresholds. Run the electrical factories with the cached hash-checked SiC model.

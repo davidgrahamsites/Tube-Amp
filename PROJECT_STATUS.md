@@ -1,5 +1,8 @@
 # Project status
 
+CB-015 · Three-board return placement stays open. The revised network passes 512 gain corners. A one-way shunt bias passes all 12 signal-level tests but produces a 2.225 V mute pulse against the 0.70 V limit. Check the low-voltage receiver fixture, floating driver and the full-size rear-cover kit. [Circuit and fit evidence](engineering/whole-amp/effects-loop/common-buffer/shunt-device.html).
+
+
 CB-013 · The normally-on SiC return mute passes the 32 nominal-device gain corners and the 20 signed current pulses. A device mismatch produces 3.926 V against the 0.70 V switching limit. Bias supply, installed devices, cooling and rear-cover fit remain open. [Shunt and fault results](engineering/whole-amp/effects-loop/common-buffer/shunt-device.html).
 
 
