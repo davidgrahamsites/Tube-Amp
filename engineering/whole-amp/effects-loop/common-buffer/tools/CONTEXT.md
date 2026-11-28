@@ -26,3 +26,5 @@ receiver_filter.py inserts a local mixer filter. qualify_receiver_filter.py test
 bridge_shunt.py owns the four-diode bridge. qualify_bridge.py compares audio, supply shorts and signed faults. bridge_burst.py reuses the finite-burst fixture to compare the same post-note switching window. The capacitor assumption and the charge sensitivity remain explicit in the receipts.
 
 bridge_reservoir.py disconnects the charger and tests the charged bank through optical handover. qualify_bridge.py with --reserve repeats the quiet and audio tests at 2.0 V. The bank calculation uses assumed series inductance for each branch and a separate common mounting inductance. Compare the voltage at the bridge against bulk capacitor voltage.
+
+CB-020. Use dual_bridge.py for the second independent circuit, qualify_dual_bridge.py for pre-existing shorts and live_bias_short.py for a short applied to a charged capacitor bank. Compare both signs of coupling between the local fault and mixer return loops.

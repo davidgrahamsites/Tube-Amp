@@ -32,3 +32,5 @@ CB-016/017 test receiver filtering and charge left after a tone burst. Compare t
 CB-018 puts one SiC switch inside a biased four-diode bridge. Compare the same module using an intact and a shorted floating source. The human check is a simultaneous capture of bridge bias, mixer voltage and bridge current under loss of the charger. [Bridge evidence](shunt-device.html#cb018).
 
 CB-019 measures the floating bridge terminal and the bulk capacitor after loss of the charger. Use the finite-bank fault results and the 2.0 V control tests. The installed human check is a differential pulse capture directly at the bridge and across one remaining bulk capacitor. [Floating bridge reserve](shunt-device.html#cb019).
+
+CB-020 gives each shunt its own bias and closes a short across a charged bank. Check the mixer pulse and local short current separately. [Two-bridge short test](shunt-device.html#cb020).

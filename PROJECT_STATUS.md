@@ -1,5 +1,7 @@
 # Project status
 
+CB-020 · Two independently powered mute bridges survive either pre-existing bias short in the completed 2 V cases. A short across a charged bank still exceeds the quiet limit. [Charged-short tests](engineering/whole-amp/effects-loop/common-buffer/shunt-device.html#cb020).
+
 CB-019 · The bridge capacitor bank carries the modeled 3.01 ms charger loss. With 2.0 V initial charge, one bulk capacitor and eight local bypasses, the four crest faults stay below 0.680 V in the 1 ns runs. A short across the local bias still defeats the bridge. Qualify the independent fault path, charging and physical assembly before layout. [Reserve test](engineering/whole-amp/effects-loop/common-buffer/shunt-device.html#cb019).
 
 CB-018 · A biased four-diode bridge passes 14 loaded audio checks and 10 post-note checks in simulation. With held bias of at least 1.5 V in the tested cases the playing residual peaks at 0.831 V. A shorted bias supply reaches 2.318 V. Qualify the hold-up supply, real diodes, cutoff and cabinet before three-board placement. [Bridge and failure records](engineering/whole-amp/effects-loop/common-buffer/shunt-device.html#cb018).
