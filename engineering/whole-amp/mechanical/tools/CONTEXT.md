@@ -20,3 +20,5 @@ FIT-012: bench_tool_access.py reads ../tool-access-study.json, the drill fields 
 CB-008. Run guard_sink_fit.py with Python to screen the external sink against the cabinet register. plot_guard_sink.py draws the four Boyd checks. The review folder holds the JSON and SVG. Check the Fischer flat-base alternative against the rear cover, airflow and actual removable carrier.
 
 CB-009. rear_cover_geometry.py reads the cabinet register and drawing dimensions. rear_cover_sink.py writes rear-cover-sink.json and the flat-wall versus recessed section. Check the direct A–B reading and the whole guard with the cover on. The ImageGen measurement illustration is a guide to the endpoints.
+
+CB-010. Run recess_template.py to generate the five-page paper fit kit from the CB-009 cover stack. recess_guide.py owns the illustrated guide. Run check_recess_template.py to measure the exported vectors. Print at actual size and record the smallest installed guard gap and cover withdrawal.

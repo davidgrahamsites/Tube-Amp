@@ -1,0 +1,1082 @@
+{
+ "task": "CB-010 additional U4 junction margin on the CB-009 auxiliary sink",
+ "native_adopted": false,
+ "purchase_ready": false,
+ "cb009_U4_Tj_60C": 98.58316899957337,
+ "target": {
+  "gain_C": 10.0,
+  "junction_limit_C": 100.0
+ },
+ "accepted_for_trial": [
+  "A3_U4_LT3086_series_R",
+  "B2_U5_LT3086_raw_R",
+  "B3_U4_U5_LT3086_raw_R"
+ ],
+ "preferred_trial": "B3_U4_U5_LT3086_raw_R",
+ "preferred_rule": "Accepted option with the largest U4 margin at 60 C. A trial choice only.",
+ "resistor_part_numbers": {
+  "6.8": "AC05000006808JAC00",
+  "68": "AC05000006809JAC00",
+  "basis": "Built from the Vishay part-number key. Not checked against a distributor listing."
+ },
+ "limitations": [
+  "LT3086 data sheet was not re-read. Confirm dropout, ground current, input range and current limit at a 21 V input-output difference before use.",
+  "No mains-loss hold-up run. A series resistor ahead of U4 lowers 12 V hold-up. A raw-fed U5 lowers 5 V hold-up. Rerun the hold-up screen first.",
+  "No startup, short-circuit, stability or noise model. An open resistor removes its rail.",
+  "Resistor heat stays in the closed cabinet. Total auxiliary heat is not reduced. Resistor surface temperature and spacing are not checked.",
+  "Sink 1.6 K/W and contact 1.0 K/W are CB-009 allocations, not measurements. Sink space in the power compartment remains open.",
+  "Typical-regulation transformer surrogate and imposed DC loads, as CB-009."
+ ],
+ "options": {
+  "A0_CB009_reference": {
+   "U4": "LM340T-12/NOPB",
+   "U5": "LM340T-5.0/NOPB",
+   "U5_feed": "cascade",
+   "R_U4_ohm": 0.0,
+   "R_U5_ohm": 0.0,
+   "case_count": 216,
+   "raw_voltage_failures": 0,
+   "winding_rms_peak_A": 0.712083649926429,
+   "pos_range_V": [
+    16.296890796043165,
+    26.489551473665475
+   ],
+   "regulator_input_range_V": {
+    "U4": [
+     16.296890796043165,
+     26.489551473665475
+    ]
+   },
+   "regulator_input_limits_V": {
+    "U4": [
+     15.0,
+     27.0
+    ]
+   },
+   "regulator_inputs_inside_documented_range": true,
+   "max_heat_W": {
+    "U4": 4.261516741426547,
+    "U5": 1.025611252115059,
+    "U6": 1.345709486000763,
+    "U7": 1.5009553648414393
+   },
+   "max_sink_W": 8.133792844383809,
+   "max_resistor_W": {
+    "R_U4": 0.0,
+    "R_U5": 0.0
+   },
+   "resistor_fraction_of_P70": 0.0,
+   "max_aux_heat_in_cabinet_W": 8.133792844383809,
+   "peak_Tj_C": {
+    "normal_60C": {
+     "U4": 98.58316899957337,
+     "U5": 79.16773606370444,
+     "U6": 78.39690649501715,
+     "U7": 82.01980074006272
+    },
+    "air_70C": {
+     "U4": 108.58316899957337,
+     "U5": 89.16773606370444,
+     "U6": 88.39690649501715,
+     "U7": 92.01980074006272
+    },
+    "restricted_sink_3K_W": {
+     "U4": 109.97047898171071,
+     "U5": 90.55504604584178,
+     "U6": 89.78421647715449,
+     "U7": 93.40711072220006
+    },
+    "poor_contact_3K_W": {
+     "U4": 107.10620248242647,
+     "U5": 81.21895856793456,
+     "U6": 81.08832546701868,
+     "U7": 85.02171146974561
+    }
+   },
+   "hottest_device_60C": "U4",
+   "resistor_shorted_peak_Tj_60C": {
+    "U4": 98.58316899957337,
+    "U5": 79.16773606370444,
+    "U6": 78.39690649501715,
+    "U7": 82.01980074006272
+   },
+   "U4_gain_over_CB009_C": 0.0,
+   "U4_margin_60C": 1.416831000426626,
+   "U4_allowed_sink_K_W": 1.7741906915424963,
+   "governing_case": {
+    "line_V": 132.0,
+    "frequency_Hz": 60,
+    "load": "expansion_stress",
+    "budget": "optical_guard",
+    "regulation_factor": 1.25,
+    "reservoir_uF": 5640.0,
+    "positive_V": {
+     "min": 23.48659632040544,
+     "mean": 23.787135719725224,
+     "max": 24.141466042194896
+    },
+    "negative_magnitude_V": {
+     "min": 25.682510168503445,
+     "mean": 25.773062448451658,
+     "max": 25.911431791490607
+    },
+    "winding_rms_A": 0.6701738028536713,
+    "ground_A": {
+     "U4": 0.01,
+     "U5": 0.0095
+    },
+    "logic_A": 0.11540270727580372,
+    "direct_12V_A": 0.19992181029382772,
+    "voltage_ok": true,
+    "heat_W": {
+     "U4": 4.261516741426547,
+     "U5": 1.025611252115059,
+     "U6": 1.345709486000763,
+     "U7": 1.5009553648414393
+    },
+    "resistor_W": {
+     "R_U4": 0.0,
+     "R_U5": 0.0
+    },
+    "regulator_input_V": {
+     "U4": [
+      23.48659632040544,
+      24.141466042194896
+     ]
+    }
+   },
+   "passes": {
+    "gain_10C_at_60C": false,
+    "all_below_100C_at_70C": false,
+    "all_below_100C_with_3K_W_sink": false,
+    "all_below_100C_with_3K_W_contact": false,
+    "documented_input_ranges": true,
+    "resistor_within_own_derating": true
+   },
+   "accepted_for_trial": false
+  },
+  "A1_U4_LT3086": {
+   "U4": "LT3086IT7#PBF",
+   "U5": "LM340T-5.0/NOPB",
+   "U5_feed": "cascade",
+   "R_U4_ohm": 0.0,
+   "R_U5_ohm": 0.0,
+   "case_count": 216,
+   "raw_voltage_failures": 0,
+   "winding_rms_peak_A": 0.7293823369219272,
+   "pos_range_V": [
+    16.234376008896753,
+    26.489551473665475
+   ],
+   "regulator_input_range_V": {
+    "U4": [
+     16.234376008896753,
+     26.489551473665475
+    ]
+   },
+   "regulator_input_limits_V": {
+    "U4": [
+     13.0,
+     27.0
+    ]
+   },
+   "regulator_inputs_inside_documented_range": true,
+   "max_heat_W": {
+    "U4": 4.593265020067386,
+    "U5": 1.025611252115059,
+    "U6": 1.336504244813401,
+    "U7": 1.5009553648414862
+   },
+   "max_sink_W": 8.456335881837333,
+   "max_resistor_W": {
+    "R_U4": 0.0,
+    "R_U5": 0.0
+   },
+   "resistor_fraction_of_P70": 0.0,
+   "max_aux_heat_in_cabinet_W": 8.456335881837333,
+   "peak_Tj_C": {
+    "normal_60C": {
+     "U4": 91.90319749120927,
+     "U5": 79.68380492363008,
+     "U6": 78.87615439019334,
+     "U7": 82.53586959998864
+    },
+    "air_70C": {
+     "U4": 101.90319749120927,
+     "U5": 89.68380492363008,
+     "U6": 88.87615439019334,
+     "U7": 92.53586959998864
+    },
+    "restricted_sink_3K_W": {
+     "U4": 103.74206772578154,
+     "U5": 91.52267515820236,
+     "U6": 90.7150246247656,
+     "U7": 94.37473983456091
+    },
+    "poor_contact_3K_W": {
+     "U4": 101.08972753134404,
+     "U5": 81.7350274278602,
+     "U6": 81.54916287982013,
+     "U7": 85.53778032967162
+    }
+   },
+   "hottest_device_60C": "U4",
+   "resistor_shorted_peak_Tj_60C": {
+    "U4": 91.90319749120927,
+    "U5": 79.68380492363008,
+    "U6": 78.87615439019334,
+    "U7": 82.53586959998864
+   },
+   "U4_gain_over_CB009_C": 6.679971508364105,
+   "U4_margin_60C": 8.09680250879073,
+   "U4_allowed_sink_K_W": 2.557483551023698,
+   "governing_case": {
+    "line_V": 132.0,
+    "frequency_Hz": 60,
+    "load": "expansion_stress",
+    "budget": "optical_guard",
+    "regulation_factor": 1.25,
+    "reservoir_uF": 5640.0,
+    "positive_V": {
+     "min": 23.40641052650955,
+     "mean": 23.71550335579278,
+     "max": 24.077917631576838
+    },
+    "negative_magnitude_V": {
+     "min": 25.682510168503953,
+     "mean": 25.773062448452038,
+     "max": 25.911431791490728
+    },
+    "winding_rms_A": 0.6864129323243305,
+    "ground_A": {
+     "U4": 0.025,
+     "U5": 0.0095
+    },
+    "logic_A": 0.11540270727580372,
+    "direct_12V_A": 0.19992181029382772,
+    "voltage_ok": true,
+    "heat_W": {
+     "U4": 4.593265020067386,
+     "U5": 1.025611252115059,
+     "U6": 1.336504244813401,
+     "U7": 1.5009553648414862
+    },
+    "resistor_W": {
+     "R_U4": 0.0,
+     "R_U5": 0.0
+    },
+    "regulator_input_V": {
+     "U4": [
+      23.40641052650955,
+      24.077917631576838
+     ]
+    }
+   },
+   "passes": {
+    "gain_10C_at_60C": false,
+    "all_below_100C_at_70C": false,
+    "all_below_100C_with_3K_W_sink": false,
+    "all_below_100C_with_3K_W_contact": false,
+    "documented_input_ranges": true,
+    "resistor_within_own_derating": true
+   },
+   "accepted_for_trial": false
+  },
+  "A2_U4_LM340_series_R": {
+   "U4": "LM340T-12/NOPB",
+   "U5": "LM340T-5.0/NOPB",
+   "U5_feed": "cascade",
+   "R_U4_ohm": 2.2,
+   "R_U5_ohm": 0.0,
+   "case_count": 216,
+   "raw_voltage_failures": 0,
+   "winding_rms_peak_A": 0.712083649926429,
+   "pos_range_V": [
+    16.296890796043165,
+    26.489551473665475
+   ],
+   "regulator_input_range_V": {
+    "U4": [
+     15.523446160457317,
+     26.447954815459045
+    ]
+   },
+   "regulator_input_limits_V": {
+    "U4": [
+     15.0,
+     27.0
+    ]
+   },
+   "regulator_inputs_inside_documented_range": true,
+   "max_heat_W": {
+    "U4": 4.014880334781927,
+    "U5": 1.025611252115059,
+    "U6": 1.345709486000763,
+    "U7": 1.5009553648414393
+   },
+   "max_sink_W": 7.887156437739189,
+   "max_resistor_W": {
+    "R_U4": 0.25896822697685123,
+    "R_U5": 0.0
+   },
+   "resistor_fraction_of_P70": 0.055099622761032176,
+   "max_aux_heat_in_cabinet_W": 8.14612466471604,
+   "peak_Tj_C": {
+    "normal_60C": {
+     "U4": 96.70873230907426,
+     "U5": 78.77311781307307,
+     "U6": 78.00228824438577,
+     "U7": 81.62518248943135
+    },
+    "air_70C": {
+     "U4": 106.70873230907426,
+     "U5": 88.77311781307307,
+     "U6": 88.00228824438577,
+     "U7": 91.62518248943135
+    },
+    "restricted_sink_3K_W": {
+     "U4": 107.75075132190912,
+     "U5": 89.81513682590793,
+     "U6": 89.04430725722062,
+     "U7": 92.66720150226621
+    },
+    "poor_contact_3K_W": {
+     "U4": 104.73849297863813,
+     "U5": 80.82434031730318,
+     "U6": 80.69370721638728,
+     "U7": 84.62709321911423
+    }
+   },
+   "hottest_device_60C": "U4",
+   "resistor_shorted_peak_Tj_60C": {
+    "U4": 98.58316899957337,
+    "U5": 79.16773606370444,
+    "U6": 78.39690649501715,
+    "U7": 82.01980074006272
+   },
+   "U4_gain_over_CB009_C": 1.8744366904991097,
+   "U4_margin_60C": 3.2912676909257357,
+   "U4_allowed_sink_K_W": 2.0172945873340837,
+   "governing_case": {
+    "line_V": 132.0,
+    "frequency_Hz": 60,
+    "load": "expansion_stress",
+    "budget": "optical_guard",
+    "regulation_factor": 1.25,
+    "reservoir_uF": 5640.0,
+    "positive_V": {
+     "min": 23.48659632040544,
+     "mean": 23.787135719725224,
+     "max": 24.141466042194896
+    },
+    "negative_magnitude_V": {
+     "min": 25.682510168503445,
+     "mean": 25.773062448451658,
+     "max": 25.911431791490607
+    },
+    "winding_rms_A": 0.6701738028536713,
+    "ground_A": {
+     "U4": 0.01,
+     "U5": 0.0095
+    },
+    "logic_A": 0.11540270727580372,
+    "direct_12V_A": 0.19992181029382772,
+    "voltage_ok": true,
+    "heat_W": {
+     "U4": 4.014880334781927,
+     "U5": 1.025611252115059,
+     "U6": 1.345709486000763,
+     "U7": 1.5009553648414393
+    },
+    "resistor_W": {
+     "R_U4": 0.25896822697685123,
+     "R_U5": 0.0
+    },
+    "regulator_input_V": {
+     "U4": [
+      22.71315168481959,
+      23.441682800474368
+     ]
+    }
+   },
+   "passes": {
+    "gain_10C_at_60C": false,
+    "all_below_100C_at_70C": false,
+    "all_below_100C_with_3K_W_sink": false,
+    "all_below_100C_with_3K_W_contact": false,
+    "documented_input_ranges": true,
+    "resistor_within_own_derating": true
+   },
+   "accepted_for_trial": false
+  },
+  "A3_U4_LT3086_series_R": {
+   "U4": "LT3086IT7#PBF",
+   "U5": "LM340T-5.0/NOPB",
+   "U5_feed": "cascade",
+   "R_U4_ohm": 6.8,
+   "R_U5_ohm": 0.0,
+   "case_count": 216,
+   "raw_voltage_failures": 0,
+   "winding_rms_peak_A": 0.7293823369219272,
+   "pos_range_V": [
+    16.234376008896753,
+    26.489551473665475
+   ],
+   "regulator_input_range_V": {
+    "U4": [
+     13.736628953449584,
+     26.360979984663782
+    ]
+   },
+   "regulator_input_limits_V": {
+    "U4": [
+     13.0,
+     27.0
+    ]
+   },
+   "regulator_inputs_inside_documented_range": true,
+   "max_heat_W": {
+    "U4": 3.7611001070361727,
+    "U5": 1.025611252115059,
+    "U6": 1.336504244813401,
+    "U7": 1.5009553648414862
+   },
+   "max_sink_W": 7.624170968806119,
+   "max_resistor_W": {
+    "R_U4": 0.873773158682773,
+    "R_U5": 0.0
+   },
+   "resistor_fraction_of_P70": 0.18590918269846235,
+   "max_aux_heat_in_cabinet_W": 8.497944127488893,
+   "peak_Tj_C": {
+    "normal_60C": {
+     "U4": 87.24307397823449,
+     "U5": 78.35234106278014,
+     "U6": 77.5446905293434,
+     "U7": 81.2044057391387
+    },
+    "air_70C": {
+     "U4": 97.24307397823449,
+     "U5": 88.35234106278014,
+     "U6": 87.5446905293434,
+     "U7": 91.2044057391387
+    },
+    "restricted_sink_3K_W": {
+     "U4": 97.91691333456305,
+     "U5": 89.02618041910873,
+     "U6": 88.21852988567197,
+     "U7": 91.87824509546728
+    },
+    "poor_contact_3K_W": {
+     "U4": 94.76527419230683,
+     "U5": 80.40356356701027,
+     "U6": 80.2176990189702,
+     "U7": 84.20631646882168
+    }
+   },
+   "hottest_device_60C": "U4",
+   "resistor_shorted_peak_Tj_60C": {
+    "U4": 91.90319749120927,
+    "U5": 79.68380492363008,
+    "U6": 78.87615439019334,
+    "U7": 82.53586959998864
+   },
+   "U4_gain_over_CB009_C": 11.340095021338882,
+   "U4_margin_60C": 12.756926021765508,
+   "U4_allowed_sink_K_W": 3.27322139993447,
+   "governing_case": {
+    "line_V": 132.0,
+    "frequency_Hz": 60,
+    "load": "expansion_stress",
+    "budget": "optical_guard",
+    "regulation_factor": 1.25,
+    "reservoir_uF": 5640.0,
+    "positive_V": {
+     "min": 23.40641052650955,
+     "mean": 23.71550335579278,
+     "max": 24.077917631576838
+    },
+    "negative_magnitude_V": {
+     "min": 25.682510168503953,
+     "mean": 25.773062448452038,
+     "max": 25.911431791490728
+    },
+    "winding_rms_A": 0.6864129323243305,
+    "ground_A": {
+     "U4": 0.025,
+     "U5": 0.0095
+    },
+    "logic_A": 0.11540270727580372,
+    "direct_12V_A": 0.19992181029382772,
+    "voltage_ok": true,
+    "heat_W": {
+     "U4": 3.7611001070361727,
+     "U5": 1.025611252115059,
+     "U6": 1.336504244813401,
+     "U7": 1.5009553648414862
+    },
+    "resistor_W": {
+     "R_U4": 0.873773158682773,
+     "R_U5": 0.0
+    },
+    "regulator_input_V": {
+     "U4": [
+      20.908663471062383,
+      21.81805124807702
+     ]
+    }
+   },
+   "passes": {
+    "gain_10C_at_60C": true,
+    "all_below_100C_at_70C": true,
+    "all_below_100C_with_3K_W_sink": true,
+    "all_below_100C_with_3K_W_contact": true,
+    "documented_input_ranges": true,
+    "resistor_within_own_derating": true
+   },
+   "accepted_for_trial": true
+  },
+  "B1_U5_LM340_raw_R": {
+   "U4": "LM340T-12/NOPB",
+   "U5": "LM340T-5.0/NOPB",
+   "U5_feed": "raw",
+   "R_U4_ohm": 0.0,
+   "R_U5_ohm": 56.0,
+   "case_count": 216,
+   "raw_voltage_failures": 0,
+   "winding_rms_peak_A": 0.712083649926429,
+   "pos_range_V": [
+    16.296890796043165,
+    26.489551473665475
+   ],
+   "regulator_input_range_V": {
+    "U4": [
+     16.296890796043165,
+     26.489551473665475
+    ],
+    "U5": [
+     8.952611608225908,
+     25.483927446592716
+    ]
+   },
+   "regulator_input_limits_V": {
+    "U4": [
+     15.0,
+     27.0
+    ],
+    "U5": [
+     8.0,
+     20.0
+    ]
+   },
+   "regulator_inputs_inside_documented_range": false,
+   "max_heat_W": {
+    "U4": 2.75530481106271,
+    "U5": 1.5492763582203803,
+    "U6": 1.345709486000763,
+    "U7": 1.5009553648414393
+   },
+   "max_sink_W": 7.110271163702637,
+   "max_resistor_W": {
+    "R_U4": 0.0,
+    "R_U5": 0.9173203535477166
+   },
+   "resistor_fraction_of_P70": 0.1951745433080248,
+   "max_aux_heat_in_cabinet_W": 8.027591517250354,
+   "peak_Tj_C": {
+    "normal_60C": {
+     "U4": 87.66241358976455,
+     "U5": 80.6720920112465,
+     "U6": 76.75927180592728,
+     "U7": 80.38216605097287
+    },
+    "air_70C": {
+     "U4": 97.66241358976455,
+     "U5": 90.6720920112465,
+     "U6": 86.75927180592728,
+     "U7": 90.38216605097287
+    },
+    "restricted_sink_3K_W": {
+     "U4": 97.61679321894823,
+     "U5": 90.62647164043018,
+     "U6": 86.71365143511096,
+     "U7": 90.33654568015655
+    },
+    "poor_contact_3K_W": {
+     "U4": 93.09107349904467,
+     "U5": 83.77064472768727,
+     "U6": 79.4506907779288,
+     "U7": 83.38407678065575
+    }
+   },
+   "hottest_device_60C": "U4",
+   "resistor_shorted_peak_Tj_60C": {
+    "U4": 89.0602350808849,
+    "U5": 87.31174409406808,
+    "U6": 78.15709329704761,
+    "U7": 81.77998754209318
+   },
+   "U4_gain_over_CB009_C": 10.92075540980882,
+   "U4_margin_60C": 12.337586410235446,
+   "U4_allowed_sink_K_W": 3.3351780440129812,
+   "governing_case": {
+    "line_V": 132.0,
+    "frequency_Hz": 60,
+    "load": "expansion_stress",
+    "budget": "optical_guard",
+    "regulation_factor": 1.25,
+    "reservoir_uF": 5640.0,
+    "positive_V": {
+     "min": 23.48659632040544,
+     "mean": 23.787135719725224,
+     "max": 24.141466042194896
+    },
+    "negative_magnitude_V": {
+     "min": 25.682510168503445,
+     "mean": 25.773062448451658,
+     "max": 25.911431791490607
+    },
+    "winding_rms_A": 0.6701738028536713,
+    "ground_A": {
+     "U4": 0.01,
+     "U5": 0.0095
+    },
+    "logic_A": 0.11540270727580372,
+    "direct_12V_A": 0.19992181029382772,
+    "voltage_ok": true,
+    "heat_W": {
+     "U4": 2.7143299546400557,
+     "U5": 1.5492763582203803,
+     "U6": 1.345709486000763,
+     "U7": 1.5009553648414393
+    },
+    "resistor_W": {
+     "R_U4": 0.0,
+     "R_U5": 0.9173203535477166
+    },
+    "regulator_input_V": {
+     "U4": [
+      23.48659632040544,
+      24.141466042194896
+     ],
+     "U5": [
+      16.142317132588182,
+      17.496642015122138
+     ]
+    }
+   },
+   "passes": {
+    "gain_10C_at_60C": true,
+    "all_below_100C_at_70C": true,
+    "all_below_100C_with_3K_W_sink": true,
+    "all_below_100C_with_3K_W_contact": true,
+    "documented_input_ranges": false,
+    "resistor_within_own_derating": true
+   },
+   "accepted_for_trial": false
+  },
+  "B2_U5_LT3086_raw_R": {
+   "U4": "LM340T-12/NOPB",
+   "U5": "LT3086IT7#PBF",
+   "U5_feed": "raw",
+   "R_U4_ohm": 0.0,
+   "R_U5_ohm": 68.0,
+   "case_count": 216,
+   "raw_voltage_failures": 0,
+   "winding_rms_peak_A": 0.7132384057390826,
+   "pos_range_V": [
+    16.292713055849823,
+    26.572010329322
+   ],
+   "regulator_input_range_V": {
+    "U4": [
+     16.292713055849823,
+     26.572010329322
+    ],
+    "U5": [
+     7.303259756357438,
+     25.89999543930508
+    ]
+   },
+   "regulator_input_limits_V": {
+    "U4": [
+     15.0,
+     27.0
+    ],
+    "U5": [
+     6.0,
+     27.0
+    ]
+   },
+   "regulator_inputs_inside_documented_range": true,
+   "max_heat_W": {
+    "U4": 2.7542640541109615,
+    "U5": 1.389965155085689,
+    "U6": 1.3450925284784851,
+    "U7": 1.5009553648414335
+   },
+   "max_sink_W": 6.927566053436366,
+   "max_resistor_W": {
+    "R_U4": 0.0,
+    "R_U5": 1.1317965073354979
+   },
+   "resistor_fraction_of_P70": 0.24080776751819102,
+   "max_aux_heat_in_cabinet_W": 8.059362560771865,
+   "peak_Tj_C": {
+    "normal_60C": {
+     "U4": 87.36403843812312,
+     "U5": 76.55688982421402,
+     "U6": 76.46447579941213,
+     "U7": 80.08983787454679
+    },
+    "air_70C": {
+     "U4": 97.36403843812312,
+     "U5": 86.55688982421402,
+     "U6": 86.46447579941213,
+     "U7": 90.08983787454679
+    },
+    "restricted_sink_3K_W": {
+     "U4": 97.06263091293403,
+     "U5": 86.25548229902493,
+     "U6": 86.16306827422304,
+     "U7": 89.7884303493577
+    },
+    "poor_contact_3K_W": {
+     "U4": 92.7906826889981,
+     "U5": 79.29328189357193,
+     "U6": 79.1546608563691,
+     "U7": 83.09174860422965
+    }
+   },
+   "hottest_device_60C": "U4",
+   "resistor_shorted_peak_Tj_60C": {
+    "U4": 89.0886807350153,
+    "U5": 82.59313786333668,
+    "U6": 78.18911809630431,
+    "U7": 81.81448017143897
+   },
+   "U4_gain_over_CB009_C": 11.219130561450257,
+   "U4_margin_60C": 12.635961561876883,
+   "U4_allowed_sink_K_W": 3.4240117040253857,
+   "governing_case": {
+    "line_V": 132.0,
+    "frequency_Hz": 60,
+    "load": "expansion_stress",
+    "budget": "optical_guard",
+    "regulation_factor": 1.25,
+    "reservoir_uF": 5640.0,
+    "positive_V": {
+     "min": 23.48121829608245,
+     "mean": 23.782334745490314,
+     "max": 24.13720664929071
+    },
+    "negative_magnitude_V": {
+     "min": 25.682510168503615,
+     "mean": 25.77306244845161,
+     "max": 25.91143179149038
+    },
+    "winding_rms_A": 0.6712578391073106,
+    "ground_A": {
+     "U4": 0.01,
+     "U5": 0.0105
+    },
+    "logic_A": 0.11540270727580372,
+    "direct_12V_A": 0.19992181029382772,
+    "voltage_ok": true,
+    "heat_W": {
+     "U4": 2.713322125437489,
+     "U5": 1.3681960346789583,
+     "U6": 1.3450925284784851,
+     "U7": 1.5009553648414335
+    },
+    "resistor_W": {
+     "R_U4": 0.0,
+     "R_U5": 1.1317965073354979
+    },
+    "regulator_input_V": {
+     "U4": [
+      23.48121829608245,
+      24.13720664929071
+     ],
+     "U5": [
+      14.491764996590064,
+      16.00389175927379
+     ]
+    }
+   },
+   "passes": {
+    "gain_10C_at_60C": true,
+    "all_below_100C_at_70C": true,
+    "all_below_100C_with_3K_W_sink": true,
+    "all_below_100C_with_3K_W_contact": true,
+    "documented_input_ranges": true,
+    "resistor_within_own_derating": true
+   },
+   "accepted_for_trial": true
+  },
+  "B3_U4_U5_LT3086_raw_R": {
+   "U4": "LT3086IT7#PBF",
+   "U5": "LT3086IT7#PBF",
+   "U5_feed": "raw",
+   "R_U4_ohm": 0.0,
+   "R_U5_ohm": 68.0,
+   "case_count": 216,
+   "raw_voltage_failures": 0,
+   "winding_rms_peak_A": 0.730533851147167,
+   "pos_range_V": [
+    16.230231081103334,
+    26.572010329322
+   ],
+   "regulator_input_range_V": {
+    "U4": [
+     16.230231081103334,
+     26.572010329322
+    ],
+    "U5": [
+     7.240777781610948,
+     25.89999543930508
+    ]
+   },
+   "regulator_input_limits_V": {
+    "U4": [
+     13.0,
+     27.0
+    ],
+    "U5": [
+     6.0,
+     27.0
+    ]
+   },
+   "regulator_inputs_inside_documented_range": true,
+   "max_heat_W": {
+    "U4": 3.097308419745683,
+    "U5": 1.3811916362129855,
+    "U6": 1.335894251607896,
+    "U7": 1.5009553648414626
+   },
+   "max_sink_W": 7.249991420875318,
+   "max_resistor_W": {
+    "R_U4": 0.0,
+    "R_U5": 1.1317965073354979
+   },
+   "resistor_fraction_of_P70": 0.24080776751819102,
+   "max_aux_heat_in_cabinet_W": 8.381787928210816,
+   "peak_Tj_C": {
+    "normal_60C": {
+     "U4": 83.81581689380455,
+     "U5": 77.03672287070029,
+     "U6": 76.94356327983209,
+     "U7": 80.60571846244927
+    },
+    "air_70C": {
+     "U4": 93.81581689380455,
+     "U5": 87.03672287070029,
+     "U6": 86.94356327983209,
+     "U7": 90.60571846244927
+    },
+    "restricted_sink_3K_W": {
+     "U4": 93.96580488303,
+     "U5": 87.18671085992574,
+     "U6": 87.09355126905754,
+     "U7": 90.75570645167473
+    },
+    "poor_contact_3K_W": {
+     "U4": 89.92373220400658,
+     "U5": 79.75509116935018,
+     "U6": 79.61535178304788,
+     "U7": 83.60762919213221
+    }
+   },
+   "hottest_device_60C": "U4",
+   "resistor_shorted_peak_Tj_60C": {
+    "U4": 85.54045919069675,
+    "U5": 83.07297090982296,
+    "U6": 78.66820557672429,
+    "U7": 82.33036075934147
+   },
+   "U4_gain_over_CB009_C": 14.767352105768822,
+   "U4_margin_60C": 16.184183106195448,
+   "U4_allowed_sink_K_W": 3.8323037596424445,
+   "governing_case": {
+    "line_V": 132.0,
+    "frequency_Hz": 60,
+    "load": "expansion_stress",
+    "budget": "optical_guard",
+    "regulation_factor": 1.25,
+    "reservoir_uF": 5640.0,
+    "positive_V": {
+     "min": 23.40109839659993,
+     "mean": 23.710756575735235,
+     "max": 24.07370680859157
+    },
+    "negative_magnitude_V": {
+     "min": 25.682510168503942,
+     "mean": 25.77306244845185,
+     "max": 25.911431791490813
+    },
+    "winding_rms_A": 0.68749390393929,
+    "ground_A": {
+     "U4": 0.025,
+     "U5": 0.0105
+    },
+    "logic_A": 0.11540270727580372,
+    "direct_12V_A": 0.19992181029382772,
+    "voltage_ok": true,
+    "heat_W": {
+     "U4": 3.0539576551010126,
+     "U5": 1.359184149324947,
+     "U6": 1.335894251607896,
+     "U7": 1.5009553648414626
+    },
+    "resistor_W": {
+     "R_U4": 0.0,
+     "R_U5": 1.1317965073354979
+    },
+    "regulator_input_V": {
+     "U4": [
+      23.40109839659993,
+      24.07370680859157
+     ],
+     "U5": [
+      14.411645097107545,
+      15.940391918574651
+     ]
+    }
+   },
+   "passes": {
+    "gain_10C_at_60C": true,
+    "all_below_100C_at_70C": true,
+    "all_below_100C_with_3K_W_sink": true,
+    "all_below_100C_with_3K_W_contact": true,
+    "documented_input_ranges": true,
+    "resistor_within_own_derating": true
+   },
+   "accepted_for_trial": true
+  }
+ },
+ "parts": {
+  "LM340T-12": {
+   "mpn": "LM340T-12/NOPB",
+   "role": "U4",
+   "jc_K_W": 5.0,
+   "tab": "GND",
+   "input_floor_V": 15.0,
+   "input_ceiling_V": 27.0,
+   "ground_heavy_A": 0.01,
+   "ground_light_A": 0.001,
+   "source": "TI SNOSBT0L section 6.7: output 11.4-12.6 V for 14.5-27 V input; line regulation over temperature from 15 V; dropout 2 V typical at 1 A, 25 C. Note 3 of 6.1: TO-220 junction-to-case 4 C/W. Table 6.4 lists 1.7 C/W junction-to-case (bottom). CB-009 used 5 K/W; kept."
+  },
+  "LM340T-5": {
+   "mpn": "LM340T-5.0/NOPB",
+   "role": "U5",
+   "jc_K_W": 5.0,
+   "tab": "GND",
+   "input_floor_V": 8.0,
+   "input_ceiling_V": 20.0,
+   "ground_heavy_A": 0.0095,
+   "ground_light_A": 0.0095,
+   "source": "TI SNOSBT0L section 6.6: output 4.75-5.25 V for 7.5-20 V input; line regulation over temperature 8-20 V; absolute maximum 35 V. Ground current carried from the envelope contract."
+  },
+  "LT3086-12": {
+   "mpn": "LT3086IT7#PBF",
+   "role": "U4",
+   "jc_K_W": 3.0,
+   "tab": "GND",
+   "set_resistor_ohm": 232000.0,
+   "input_floor_V": 13.0,
+   "input_ceiling_V": 27.0,
+   "ground_heavy_A": 0.025,
+   "ground_light_A": 0.001,
+   "source": "Carried from CB-009 and CB-008 records for U6: 3 K/W T7 junction-to-case, 0.4 V + 50 uA x R(SET), 510 mV full-load dropout bound, 25 mA full-load ground current bound. Floor = 12 V x 1.03 + 0.51 V, rounded up. Not re-read in CB-010."
+  },
+  "LT3086-5": {
+   "mpn": "LT3086IT7#PBF",
+   "role": "U5",
+   "jc_K_W": 3.0,
+   "tab": "GND",
+   "set_resistor_ohm": 93100.0,
+   "input_floor_V": 6.0,
+   "input_ceiling_V": 27.0,
+   "ground_heavy_A": 0.0105,
+   "ground_light_A": 0.001,
+   "source": "As LT3086-12. 0.4 V + 50 uA x 93.1 kOhm = 5.055 V. Floor = 5.055 V x 1.03 + 0.51 V, rounded up. Ground current bound is the CB-009 value for U6 at a similar load."
+  }
+ },
+ "resistor": {
+  "series": "Vishay AC05",
+  "P40_W": 5.0,
+  "P70_W": 4.7,
+  "tolerance_fraction": 0.05,
+  "part_number_format": "AC05000 0 0 <3 digits><multiplier> J AC 00; 9 = x0.1, 0 = x1"
+ },
+ "resistor_rule": {
+  "values": "E12",
+  "tolerance_fraction": 0.05,
+  "margin_above_floor_V": 0.5,
+  "load_limit_fraction_of_P70": 0.3,
+  "basis": "Largest value that holds floor + margin at the lowest raw trough with +5% resistance. No credit for an input capacitor after the resistor."
+ },
+ "thermal": {
+  "sink_K_W": 1.6,
+  "tab_pad_K_W": 1.0,
+  "faults": {
+   "normal_60C": {
+    "air_C": 60.0,
+    "sink_K_W": 1.6,
+    "contact_K_W": 1.0
+   },
+   "air_70C": {
+    "air_C": 70.0,
+    "sink_K_W": 1.6,
+    "contact_K_W": 1.0
+   },
+   "restricted_sink_3K_W": {
+    "air_C": 60.0,
+    "sink_K_W": 3.0,
+    "contact_K_W": 1.0
+   },
+   "poor_contact_3K_W": {
+    "air_C": 60.0,
+    "sink_K_W": 1.6,
+    "contact_K_W": 3.0
+   }
+  },
+  "model": "Steady state. All four regulators share the Fischer SK 92 75 SA allocation. Resistors heat the cabinet air, not the sink."
+ },
+ "checks": {
+  "cb009_decks_reproduced": true,
+  "cb009_junctions_reproduced": true,
+  "cb009_faults_reproduced": true,
+  "raw_feed_leaves_rectifier_load_unchanged": true,
+  "distinct_rectifier_runs": 648
+ },
+ "sources": {
+  "TI_LM340": {
+   "url": "https://www.ti.com/lit/ds/symlink/lm340.pdf",
+   "revision": "SNOSBT0L, revised September 2016",
+   "sha256_when_read": "49391342cf3b05f89ae94607257ef03f678ae9f1a3bdd388252adb8b00da043d",
+   "read_on": "2026-11-28",
+   "used": "Sections 6.1 note 3, 6.4, 6.6, 6.7; Figure 22 series input resistor; orderable list has no 12 V TO-3 part."
+  },
+  "Vishay_AC": {
+   "url": "https://www.vishay.com/docs/28730/ac_ac-at_ac-ni.pdf",
+   "revision": "Document 28730, 05-Dec-2024",
+   "sha256_when_read": "ebd3c714bb6b8c267c4cee006f5c72f105ee79c47d43ca680eb7e65929051f51",
+   "read_on": "2026-11-28",
+   "used": "Rated dissipation P40 and P70, tolerance, part-number format."
+  },
+  "LT3086": {
+   "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/lt3086.pdf",
+   "status": "Download timed out on 28 November 2026. Values are carried from the CB-008 and CB-009 records."
+  },
+  "CB009": "results/regulator-cooling.json and ../effects-loop/common-buffer/winding-rail-fit.html"
+ },
+ "input_sha256": {
+  "envelope-contract.json": "e5433623b79a681c218c32ea4da6a6cd7ab631b72f1b51ad3db77df85a266f1b",
+  "results/guard-transformer.json": "564ceb95a5da4e7a5d10604c95af2e8819b57ff1f8cd5678c49dcfa3d4a20332",
+  "results/regulator-cooling.json": "171f83a87fdc02bbfca8224a2dbef3ee424463d58fefdfd4da4caedea9aa9a07",
+  "tools/regulator_cooling.py": "5e00f69ca38b70b5af50c3dfef084bf649accd2e75df4f49baee6d0fb8dfeb80",
+  "tools/guard_transformer.py": "4ab9fae2deff71859b80033a4ff35fe245dc7e7e5fb1edbbf8e741f3c43f15df"
+ },
+ "factory_sha256": "1defc34797bb93a6b2be3cef9e38321733b5949a3636d9a9711692e524b94138"
+}

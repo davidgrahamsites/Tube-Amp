@@ -2045,3 +2045,36 @@ Source: User reply to CB-009 ImageGen side-section A–B, cover installed.
 - [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
 - [engineering/whole-amp/mechanical/review/rear-cover-sink.json](<../../engineering/whole-amp/mechanical/review/rear-cover-sink.json>)
 
+## FB-192 — return-placement-qualification
+Authority: user. Disposition: incorporated. Recorded: 2026-11-28. Original date: 2026-11-28.
+
+> Fix the hot 20 kHz gain and cutoff faults, get more cooling margin on U4, and make a full-size template for the recessed Fischer heatsink before three-board layout.
+
+Revise and verify gain, protective cutoff and U4 cooling. Supply an actual-size printable fit template and independently check the results with Claude.
+
+Source: CB-010 continuation chat
+
+- [engineering/whole-amp/effects-loop/common-buffer/gain-cutoff-template.html](<../../engineering/whole-amp/effects-loop/common-buffer/gain-cutoff-template.html>)
+
+## FB-193 — continuation-goal
+Authority: user. Disposition: incorporated. Recorded: 2026-11-28. Original date: 2026-11-28.
+
+> keep going every time you finish a CB-### and keep going until everything passes
+
+Continue engineering through successive CB checkpoints while actionable checks remain. Keep measured, simulated and outstanding qualification separate.
+
+Source: CB-010 continuation chat
+
+- [engineering/whole-amp/effects-loop/common-buffer/gain-cutoff-template.html](<../../engineering/whole-amp/effects-loop/common-buffer/gain-cutoff-template.html>)
+
+## FB-194 — template-usability
+Authority: user. Disposition: incorporated. Recorded: 2026-11-28. Original date: 2026-11-28.
+
+> I have no idea what this fischer fit template is - pleaes give a full explanation of what it is and all materials in the PDF, then keep moving on
+
+Explain the component, location, purpose, paper materials and real assembly, with clear instructions inside the PDF. Continue engineering.
+
+Source: CB-010 continuation chat
+
+- [engineering/whole-amp/mechanical/review/fischer-recess-fit-template.pdf](<../../engineering/whole-amp/mechanical/review/fischer-recess-fit-template.pdf>)
+

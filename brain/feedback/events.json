@@ -2909,6 +2909,54 @@
       ],
       "supersedes": [],
       "next_action": "Use 155 mm for screening and check installed clearance with a full-width physical template."
+    },
+    {
+      "id": "FB-192",
+      "recorded_on": "2026-11-28",
+      "occurred_on": "2026-11-28",
+      "authority": "user",
+      "kind": "return-placement-qualification",
+      "quote": "Fix the hot 20 kHz gain and cutoff faults, get more cooling margin on U4, and make a full-size template for the recessed Fischer heatsink before three-board layout.",
+      "source": "CB-010 continuation chat",
+      "interpretation": "Revise and verify gain, protective cutoff and U4 cooling. Supply an actual-size printable fit template and independently check the results with Claude.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/common-buffer/gain-cutoff-template.html"
+      ],
+      "supersedes": [],
+      "next_action": "Use CB-010 before three-board placement."
+    },
+    {
+      "id": "FB-193",
+      "recorded_on": "2026-11-28",
+      "occurred_on": "2026-11-28",
+      "authority": "user",
+      "kind": "continuation-goal",
+      "quote": "keep going every time you finish a CB-### and keep going until everything passes",
+      "source": "CB-010 continuation chat",
+      "interpretation": "Continue engineering through successive CB checkpoints while actionable checks remain. Keep measured, simulated and outstanding qualification separate.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/common-buffer/gain-cutoff-template.html"
+      ],
+      "supersedes": [],
+      "next_action": "Carry unresolved checks forward and continue the work."
+    },
+    {
+      "id": "FB-194",
+      "recorded_on": "2026-11-28",
+      "occurred_on": "2026-11-28",
+      "authority": "user",
+      "kind": "template-usability",
+      "quote": "I have no idea what this fischer fit template is - pleaes give a full explanation of what it is and all materials in the PDF, then keep moving on",
+      "source": "CB-010 continuation chat",
+      "interpretation": "Explain the component, location, purpose, paper materials and real assembly, with clear instructions inside the PDF. Continue engineering.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/review/fischer-recess-fit-template.pdf"
+      ],
+      "supersedes": [],
+      "next_action": "Use the annotated fit kit."
     }
   ]
 }

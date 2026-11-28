@@ -1,0 +1,135 @@
+{
+ "mpn": "TDK B32776M4476J000",
+ "quantity": 2,
+ "voltage_V": 450,
+ "nominal_uF": 47,
+ "sourcing": "TDK product catalog, exact code, \u00b15%, 28 mm body width, 42.5 mm height. Confirm the land pattern in the mechanical drawing.",
+ "source": "https://www.tdk-electronics.tdk.com/en/3191480/products/product-catalog/film-capacitors/capacitors-for-dc-link/search-results-deltacap-capacitors?so=%7B%22orderingCode%22%3A%22B32776M%2A%2A%22%7D",
+ "wiring": "Keep one film directly across the PA supply pins and ground, no detachable bulk connector in its loop; give the other branch its own supply and return. Either capacitor may open. Physical pin inductance is unmodeled.",
+ "trip_range_V": [
+  322.92425231593626,
+  335.16423150443217
+ ],
+ "cap_one_survivor_min_uF": 42.4175,
+ "full_max_uF": 103.635,
+ "capacitor_max_energy_J": 6.3476437500000005,
+ "guard_cutoff": [
+  {
+   "raw_V": 440,
+   "total_delay_ms": 2.0,
+   "guard_present_V": 337.43310637918904,
+   "guard_bypassed_V": 340.7890484276807
+  },
+  {
+   "raw_V": 440,
+   "total_delay_ms": 10.0,
+   "guard_present_V": 346.5086058782166,
+   "guard_bypassed_V": 360.42802395086295
+  },
+  {
+   "raw_V": 550,
+   "total_delay_ms": 2.0,
+   "guard_present_V": 337.43310637918904,
+   "guard_bypassed_V": 346.69094498871465
+  },
+  {
+   "raw_V": 550,
+   "total_delay_ms": 10.0,
+   "guard_present_V": 346.5086058782166,
+   "guard_bypassed_V": 386.9363160060204
+  }
+ ],
+ "spice": [
+  {
+   "case": "local film only",
+   "raw_V": 440,
+   "cap_uF": 42.4175,
+   "prefault_rail_V": 309.99829305312625,
+   "fault_to_trip_ms": 22.212813916890383,
+   "trip_V": 335.16423150443217,
+   "limit_mA_mean": 48.11476390107111,
+   "limit_mA_max_after_2ms": 48.12801478178619,
+   "spike_mA": 149.5969748395366,
+   "spike_above_130mA_us": 0.14090468316695776,
+   "rail_if_nothing_opens": {
+    "at_2ms_V": 337.4328586731379,
+    "at_10ms_V": 346.50736729822603
+   },
+   "below_350V_at_10ms": true,
+   "M1_W_plateau": 3.412737917573801,
+   "delay_to_350V_ms": 13.079066779889978,
+   "deck_sha256": "49793e0f13dd1ac49196ee017370065921d95cd342c13aba7375dbded12d23e7",
+   "guard_led_off_after_trip_ms": 0.5,
+   "guard_open_after_led_off_us": 5.312593809030098,
+   "peak_V_guard_opens": 335.7351630301055,
+   "leak_after_open_uA": 9.565830992996768,
+   "M2_drain_source_after_open_V": 4.515503620933487
+  },
+  {
+   "case": "local film only",
+   "raw_V": 550,
+   "cap_uF": 42.4175,
+   "prefault_rail_V": 309.9953335073279,
+   "fault_to_trip_ms": 22.214186258166382,
+   "trip_V": 335.16423150443217,
+   "limit_mA_mean": 48.11487032187195,
+   "limit_mA_max_after_2ms": 48.11946817138759,
+   "spike_mA": 271.5349789440526,
+   "spike_above_130mA_us": 0.12882269379704825,
+   "rail_if_nothing_opens": {
+    "at_2ms_V": 337.43286454025224,
+    "at_10ms_V": 346.5073958271377
+   },
+   "below_350V_at_10ms": true,
+   "M1_W_plateau": 8.705383520616905,
+   "delay_to_350V_ms": 13.079037851520187,
+   "deck_sha256": "b03bb1c23ea678a39cbcf70c4178a51c7c084a5b8293bf0d11fe4e40d81fb9c1",
+   "guard_led_off_after_trip_ms": 0.5,
+   "guard_open_after_led_off_us": 5.3115109363011115,
+   "peak_V_guard_opens": 335.73516352082095,
+   "leak_after_open_uA": 9.565874384219736,
+   "M2_drain_source_after_open_V": 4.515632482232945
+  }
+ ],
+ "starts": [
+  {
+   "raw_V": 335.0,
+   "bypass_forced_open": false,
+   "cap_uF": 103.635,
+   "final_V": 310,
+   "reached_60V_s": 0.2635999999999873,
+   "bypass_closed_s": 1.256399999999878,
+   "reached_300V_s": 1.829799999999815,
+   "meets_CB007_timeouts": true,
+   "applied_raw_V": 340,
+   "diode_and_guard_allowance_V": 5.0
+  },
+  {
+   "raw_V": 385.0,
+   "bypass_forced_open": false,
+   "cap_uF": 103.635,
+   "final_V": 310,
+   "reached_60V_s": 0.2635999999999873,
+   "bypass_closed_s": 1.5797999999998424,
+   "reached_300V_s": 1.8884999999998084,
+   "meets_CB007_timeouts": true,
+   "applied_raw_V": 390,
+   "diode_and_guard_allowance_V": 5.0
+  },
+  {
+   "raw_V": 435.0,
+   "bypass_forced_open": false,
+   "cap_uF": 103.635,
+   "final_V": 310,
+   "reached_60V_s": 0.2635999999999873,
+   "bypass_closed_s": 1.9367999999998031,
+   "reached_300V_s": 1.9656999999998,
+   "meets_CB007_timeouts": true,
+   "applied_raw_V": 440,
+   "diode_and_guard_allowance_V": 5.0
+  }
+ ],
+ "all_caps_absent": "Two independent failures or assembly error; inhibit operation until a capacitance/continuity check at the PA pins passes.",
+ "dual_failure": "Loss of current guard plus a 10ms late independent disconnect exceeds the PA absolute maximum.",
+ "primary_guard_required": true
+}

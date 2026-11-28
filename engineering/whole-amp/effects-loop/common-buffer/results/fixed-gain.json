@@ -1,0 +1,2792 @@
+{
+ "id": "CB-010",
+ "date": "2026-11-28",
+ "evidence": "ngspice and arithmetic only",
+ "sources": {
+  "fixed_gain.py": "8183d2babf6d25b1057d310fc09598bc06877926aa92dafaee55b85bee44d89a",
+  "guard_audio.py": "fa0a1fa26cfe8aa289c266889894d16c866e85029fd99b6c6050b21ccbf92bfb",
+  "guard_detector.py": "fc6f5cdd1fa8625b807bea47db764fa9eb8f90984453c7f81e2ce18935504c4b",
+  "guard_handover.py": "0597a0b510512078f48762c57a1c3826d1fb157b4315d24dbacb6a837d925273",
+  "guard_injection.py": "c0f83e8a728bb307db52a32a6be1aeaa9489c74842c8e479d26fa607993707dd",
+  "low_line_rail.py": "494f3edaba8d48175470be621800aea1f11db03cc5402b97a618666423cd5b1a",
+  "pulse_winding.py": "d9cfd7d0f5c5334cb65ce507d949226d8426e6d3e0420c7e2b2ea99ab3f02890",
+  "rail_winding_audio.py": "723bb32d9696726e642c326160c146396125a260dabf106b16773863d52df2fe",
+  "sudden_guard.py": "af0a8a7bcf60cf6516dce0fc4c90a6793e42207633cc0f79f92ca483bfbb4873"
+ },
+ "limits_used": {
+  "gain_dB": 0.5,
+  "thd_pct": 1,
+  "quiet_V": 1,
+  "handover_V": 1,
+  "injection_V": 0.7,
+  "coil_V": 400,
+  "case_C": 76,
+  "air_C": 60,
+  "reserve_W": 0.8,
+  "case_to_air_K_W": 5
+ },
+ "windings": {
+  "taps": [
+   "mid"
+  ],
+  "coils": [
+   {
+    "part": "MSS1210H-475KED",
+    "L": 0.0047,
+    "dcr": 3.4,
+    "cw_pF": 19.186275051002053,
+    "rated_V": 400
+   },
+   {
+    "part": "MSS1210H-106KED",
+    "L": 0.01,
+    "dcr": 7.1,
+    "cw_pF": 17.541756170764852,
+    "rated_V": 400
+   }
+  ]
+ },
+ "rejected_alternatives": {
+  "mixer_feedback": [
+   {
+    "mixer_feedback_fraction_T": 0.3,
+    "named_20k_rel_1k_dB": [
+     0.0409742048636453,
+     0.42763168982903227
+    ],
+    "named_half_spread_dB": 0.1933287424826935,
+    "stack_144_band_rel_1k_dB": [
+     -0.0372046232060554,
+     0.7711717134071985
+    ],
+    "stack_half_spread_dB": 0.40418816830662696,
+    "min_gain_margin_ratio": 3.1014508529683127,
+    "worst_closed_loop_peak_dB": 8.958927324974931
+   },
+   {
+    "mixer_feedback_fraction_T": 0.5,
+    "named_20k_rel_1k_dB": [
+     0.26411828119171044,
+     0.416638030129278
+    ],
+    "named_half_spread_dB": 0.0762598744687838,
+    "stack_144_band_rel_1k_dB": [
+     -0.003314977548607276,
+     0.8615126100389331
+    ],
+    "stack_half_spread_dB": 0.4324137937937702,
+    "min_gain_margin_ratio": 1.8608705117809876,
+    "worst_closed_loop_peak_dB": 13.065500486661229
+   },
+   {
+    "mixer_feedback_fraction_T": 1.0,
+    "named_20k_rel_1k_dB": [
+     0.48781003127103456,
+     0.36706289459635044
+    ],
+    "named_half_spread_dB": 0.06037356833734206,
+    "stack_144_band_rel_1k_dB": [
+     0.008491715039824477,
+     0.9031146815006044
+    ],
+    "stack_half_spread_dB": 0.44731148323038994,
+    "min_gain_margin_ratio": 0.9304352558904938,
+    "worst_closed_loop_peak_dB": 35.114598580629284
+   }
+  ],
+  "post_isolator_feedback": [
+   {
+    "effective_isolation_ohm": 3000,
+    "fraction_k": 0.09090909090909094,
+    "PA_peak_V_for_135V_mixer": 156.6304555464755,
+    "PA_peak_V_same_resistance_passive": 139.92094988030806
+   },
+   {
+    "effective_isolation_ohm": 2700,
+    "fraction_k": 0.18181818181818177,
+    "PA_peak_V_for_135V_mixer": 165.89507407962012,
+    "PA_peak_V_same_resistance_passive": 132.12393344539868
+   }
+  ],
+  "half_rail_V": 155
+ },
+ "baseline": {
+  "network": {
+   "name": "CB-009",
+   "isolation": 3300,
+   "series": 6.8,
+   "start": 220,
+   "mid": 330,
+   "end": 270,
+   "feedback": 40199.99999999999
+  },
+  "analytic": {
+   "named_20k_rel_1k_dB": [
+    -0.6425638061317113,
+    0.3974781725911496
+   ],
+   "named_half_spread_dB": 0.5200209893614305,
+   "stack_144_band_rel_1k_dB": [
+    -0.7059149158343538,
+    0.5832175988313327
+   ],
+   "stack_half_spread_dB": 0.6445662573328432
+  },
+  "ac_20k_hot_opposite_at_39k7_dB": [
+   -0.5438942334112642,
+   0.4997922451174234
+  ],
+  "ac_20k_hot_opposite_dB": [
+   -0.45694766517752217,
+   0.5867388133511654
+  ],
+  "ac_half_spread_dB": 0.5218432392643437,
+  "fault_screen": {
+   "fast_path_ohm": {
+    "nominal": 10.0,
+    "hot": 18.0
+   },
+   "static_divider_V": 0.9018318459370597,
+   "quiet_mixer_V": 0.9518580519583919,
+   "handover_V": 0.9171139588687633,
+   "injection_V": 0.6945110528499474,
+   "peak_by_coil_V": [
+    101.9299195039685,
+    212.8110866313555
+   ],
+   "peak_by_coil_A": [
+    0.05282284686982164,
+    0.051127360739147205
+   ],
+   "optical_contact_peak_V": 347.19121001795827
+  },
+  "hot_short": {
+   "modeled_chip_W": 2.1590754353949584,
+   "budget_W": 2.9590754353949587,
+   "case_C": 74.7953771769748
+  },
+  "old_limits_met": {
+   "named_corners": 0.0,
+   "quiet": 1.0,
+   "handover": 1.0,
+   "injection": 1.0,
+   "coils": true,
+   "short_heat": 1.0
+  }
+ },
+ "candidates": [
+  {
+   "network": {
+    "name": "A",
+    "isolation": 3000,
+    "series": 4.7,
+    "start": 220,
+    "mid": 330,
+    "end": 270,
+    "feedback": 38300.0
+   },
+   "analytic": {
+    "named_20k_rel_1k_dB": [
+     -0.167042555493549,
+     0.5169526728189042
+    ],
+    "named_half_spread_dB": 0.3419976141562266,
+    "stack_144_band_rel_1k_dB": [
+     -0.2224808315347068,
+     0.8576546340014558
+    ],
+    "stack_half_spread_dB": 0.5400677327680813
+   },
+   "ac_20k_hot_opposite_at_39k7_dB": [
+    -0.054023202737806274,
+    0.6326985398792878
+   ],
+   "ac_20k_hot_opposite_dB": [
+    -0.3022083623742063,
+    0.3845133802428878
+   ],
+   "ac_half_spread_dB": 0.34336087130854703,
+   "fault_screen": {
+    "fast_path_ohm": {
+     "nominal": 7.9,
+     "hot": 15.899999999999999
+    },
+    "static_divider_V": 0.8753096614368291,
+    "quiet_mixer_V": 1.0099351683447604,
+    "handover_V": 0.8838036195593663,
+    "injection_V": 0.7297393140949018,
+    "peak_by_coil_V": [
+     112.26841692786076,
+     234.06564177067054
+    ],
+    "peak_by_coil_A": [
+     0.05700476678019989,
+     0.05571734391516945
+    ],
+    "optical_contact_peak_V": 366.27856504280845
+   },
+   "hot_short": {
+    "modeled_chip_W": 2.340543809125604,
+    "budget_W": 3.140543809125604,
+    "case_C": 75.70271904562802
+   },
+   "old_limits_met": {
+    "named_corners": 1.0,
+    "quiet": 0.0,
+    "handover": 1.0,
+    "injection": 0.0,
+    "coils": true,
+    "short_heat": 1.0
+   }
+  },
+  {
+   "network": {
+    "name": "A2",
+    "isolation": 3000,
+    "series": 4.7,
+    "start": 330,
+    "mid": 330,
+    "end": 270,
+    "feedback": 39200.0
+   },
+   "analytic": {
+    "named_20k_rel_1k_dB": [
+     -0.33875719622584277,
+     0.3912479733267036
+    ],
+    "named_half_spread_dB": 0.3650025847762732,
+    "stack_144_band_rel_1k_dB": [
+     -0.40214204663335723,
+     0.6957273813163656
+    ],
+    "stack_half_spread_dB": 0.5489347139748614
+   },
+   "ac_20k_hot_opposite_at_39k7_dB": [
+    -0.22691229971094573,
+    0.5066467830502805
+   ],
+   "ac_20k_hot_opposite_dB": [
+    -0.3147380190303832,
+    0.4188210637308431
+   ],
+   "ac_half_spread_dB": 0.36677954138061314,
+   "fault_screen": {
+    "fast_path_ohm": {
+     "nominal": 7.9,
+     "hot": 15.899999999999999
+    },
+    "static_divider_V": 0.8753096614368291,
+    "quiet_mixer_V": 0.8835133552425658,
+    "handover_V": 0.8954637927622594,
+    "injection_V": 0.6148291635265194,
+    "peak_by_coil_V": [
+     101.92419681774905,
+     212.57829714207017
+    ],
+    "peak_by_coil_A": [
+     0.05902993204573027,
+     0.056511120196349046
+    ],
+    "optical_contact_peak_V": 359.598175335325
+   },
+   "hot_short": {
+    "modeled_chip_W": 2.331088811773379,
+    "budget_W": 3.1310888117733793,
+    "case_C": 75.65544405886689
+   },
+   "old_limits_met": {
+    "named_corners": 1.0,
+    "quiet": 1.0,
+    "handover": 1.0,
+    "injection": 1.0,
+    "coils": true,
+    "short_heat": 1.0
+   }
+  },
+  {
+   "network": {
+    "name": "A3",
+    "isolation": 3000,
+    "series": 4.7,
+    "start": 270,
+    "mid": 330,
+    "end": 270,
+    "feedback": 38800.0
+   },
+   "analytic": {
+    "named_20k_rel_1k_dB": [
+     -0.24520193451521394,
+     0.46090491200499845
+    ],
+    "named_half_spread_dB": 0.3530534232601062,
+    "stack_144_band_rel_1k_dB": [
+     -0.30427724526930744,
+     0.7843044910339058
+    ],
+    "stack_half_spread_dB": 0.5442908681516065
+   },
+   "ac_20k_hot_opposite_at_39k7_dB": [
+    -0.13270728431304654,
+    0.5765010162841201
+   ],
+   "ac_20k_hot_opposite_dB": [
+    -0.2914386189254775,
+    0.4177696816716891
+   ],
+   "ac_half_spread_dB": 0.35460415029858333,
+   "fault_screen": {
+    "fast_path_ohm": {
+     "nominal": 7.9,
+     "hot": 15.899999999999999
+    },
+    "static_divider_V": 0.8753096614368291,
+    "quiet_mixer_V": 0.9035109463731041,
+    "handover_V": 0.888788734212324,
+    "injection_V": 0.6692941831657465,
+    "peak_by_coil_V": [
+     106.55960367562403,
+     223.85866689052853
+    ],
+    "peak_by_coil_A": [
+     0.057778595587803794,
+     0.05604913864513979
+    ],
+    "optical_contact_peak_V": 362.2090803281362
+   },
+   "hot_short": {
+    "modeled_chip_W": 2.3352331324087947,
+    "budget_W": 3.1352331324087945,
+    "case_C": 75.67616566204397
+   },
+   "old_limits_met": {
+    "named_corners": 1.0,
+    "quiet": 1.0,
+    "handover": 1.0,
+    "injection": 1.0,
+    "coils": true,
+    "short_heat": 1.0
+   }
+  },
+  {
+   "network": {
+    "name": "B",
+    "isolation": 2870,
+    "series": 3.9,
+    "start": 270,
+    "mid": 330,
+    "end": 270,
+    "feedback": 37900.0
+   },
+   "analytic": {
+    "named_20k_rel_1k_dB": [
+     -0.03334691835723423,
+     0.5143777731061789
+    ],
+    "named_half_spread_dB": 0.2738623457317066,
+    "stack_144_band_rel_1k_dB": [
+     -0.0885949898339171,
+     0.9217158214065736
+    ],
+    "stack_half_spread_dB": 0.5051554056202453
+   },
+   "ac_20k_hot_opposite_at_39k7_dB": [
+    0.08541626751499162,
+    0.6358204498004374
+   ],
+   "ac_20k_hot_opposite_dB": [
+    -0.2350012388603874,
+    0.31540294342505837
+   ],
+   "ac_half_spread_dB": 0.27520209114272287,
+   "fault_screen": {
+    "fast_path_ohm": {
+     "nominal": 7.1,
+     "hot": 15.1
+    },
+    "static_divider_V": 0.8684087559757019,
+    "quiet_mixer_V": 0.9291403726586444,
+    "handover_V": 0.8777896200095883,
+    "injection_V": 0.6845239603359397,
+    "peak_by_coil_V": [
+     111.50545775480145,
+     233.818991013983
+    ],
+    "peak_by_coil_A": [
+     0.05988037150593955,
+     0.05829284972705054
+    ],
+    "optical_contact_peak_V": 371.38687816658506
+   },
+   "hot_short": {
+    "modeled_chip_W": 2.4206590721373633,
+    "budget_W": 3.220659072137363,
+    "case_C": 76.10329536068681
+   },
+   "old_limits_met": {
+    "named_corners": 1.0,
+    "quiet": 1.0,
+    "handover": 1.0,
+    "injection": 1.0,
+    "coils": true,
+    "short_heat": 0.0
+   }
+  },
+  {
+   "network": {
+    "name": "C",
+    "isolation": 2700,
+    "series": 3.3,
+    "start": 470,
+    "mid": 330,
+    "end": 270,
+    "feedback": 38300.0
+   },
+   "analytic": {
+    "named_20k_rel_1k_dB": [
+     -0.03841725552781326,
+     0.37873828430764084
+    ],
+    "named_half_spread_dB": 0.20857776991772706,
+    "stack_144_band_rel_1k_dB": [
+     -0.108727831893035,
+     0.8378030066541664
+    ],
+    "stack_half_spread_dB": 0.4732654192736007
+   },
+   "ac_20k_hot_opposite_at_39k7_dB": [
+    0.08660038348913782,
+    0.5071068480811955
+   ],
+   "ac_20k_hot_opposite_dB": [
+    -0.16158477614726222,
+    0.2589216884447955
+   ],
+   "ac_half_spread_dB": 0.21025323229602888,
+   "fault_screen": {
+    "fast_path_ohm": {
+     "nominal": 6.5,
+     "hot": 14.5
+    },
+    "static_divider_V": 0.8854961832061069,
+    "quiet_mixer_V": 0.8996577045329984,
+    "handover_V": 0.909171368568526,
+    "injection_V": 0.5580928397916706,
+    "peak_by_coil_V": [
+     107.20008013229852,
+     209.1918255748222
+    ],
+    "peak_by_coil_A": [
+     0.06639008015611043,
+     0.06297539327037589
+    ],
+    "optical_contact_peak_V": 368.5269614871459
+   },
+   "hot_short": {
+    "modeled_chip_W": 2.524410093248659,
+    "budget_W": 3.324410093248659,
+    "case_C": 76.6220504662433
+   },
+   "old_limits_met": {
+    "named_corners": 1.0,
+    "quiet": 1.0,
+    "handover": 1.0,
+    "injection": 1.0,
+    "coils": true,
+    "short_heat": 0.0
+   }
+  }
+ ],
+ "selected": {
+  "name": "A3",
+  "isolation": 3000,
+  "series": 4.7,
+  "start": 270,
+  "mid": 330,
+  "end": 270,
+  "feedback": 38800.0
+ },
+ "audio": [
+  {
+   "case": "hot named corner",
+   "frequency_Hz": 20000,
+   "harness_pF": 500,
+   "fast_shunt_pF": 600,
+   "open_optical_pF": 150,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 13.414340527933641,
+   "nonlinear": false,
+   "inductance_scale": 0.9,
+   "short": false,
+   "temp_C": 85,
+   "rail_V": 310,
+   "bias_V": 155.01210575860506,
+   "band_gain_min_max_dB": [
+    -0.2904927275013298,
+    -0.03265925759641522
+   ],
+   "peak_V": 130.21245394374236,
+   "thd_pct": 0.2646175492867595,
+   "gain_dB": -0.313624898715163,
+   "peak_chip_mA": 36.06546052345135,
+   "chip_W": 2.1630418898416766,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 16.278228505093224,
+     "at_s": 2.2171449297020356e-05,
+     "half_width_us": 13.105319672807333,
+     "max_dv_dt_V_per_us": 6.61435988841405,
+     "peak_A": 0.029286683203157814,
+     "end_node_peak_to_ground_V": 102.4067874645905
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 31.42722677662921,
+     "at_s": 2.0452699297020352e-05,
+     "half_width_us": 13.574069672807335,
+     "max_dv_dt_V_per_us": 10.129509568305075,
+     "peak_A": 0.025065621323255634,
+     "end_node_peak_to_ground_V": 130.87565273868407
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.08355517778879845,
+     "1000": -0.033378891662020176,
+     "10000": -0.11485503639032199,
+     "20000": -0.2914424574693332
+    },
+    "band_min_max_dB": [
+     -0.2904927275013298,
+     -0.03265925759641522
+    ],
+    "peak_dB": -0.03265925759641522,
+    "peak_Hz": 331.131121482593,
+    "PA_output_peak_dB": 0.11250285490432035
+   }
+  },
+  {
+   "case": "opposite named corner",
+   "frequency_Hz": 20000,
+   "harness_pF": 0,
+   "fast_shunt_pF": 80,
+   "open_optical_pF": 30,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 7.831591009711654,
+   "nonlinear": false,
+   "inductance_scale": 1.1,
+   "short": false,
+   "temp_C": 25,
+   "rail_V": 310,
+   "bias_V": 155.01209630301835,
+   "band_gain_min_max_dB": [
+    -0.06908670689822936,
+    0.4155077518100742
+   ],
+   "peak_V": 140.79821483223202,
+   "thd_pct": 0.5558183988166233,
+   "gain_dB": 0.3652675993146731,
+   "peak_chip_mA": 18.391805978331153,
+   "chip_W": 1.715524710317929,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 13.835880153886222,
+     "at_s": 1.262968070636029e-05,
+     "half_width_us": 8.522679800457045,
+     "max_dv_dt_V_per_us": 7.657079912743667,
+     "peak_A": 0.012346513592786242,
+     "end_node_peak_to_ground_V": 132.57397316285753
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 24.36165681990722,
+     "at_s": 5.73494740767637e-06,
+     "half_width_us": 3.7402527335421247,
+     "max_dv_dt_V_per_us": 12.188299090982504,
+     "peak_A": 0.008488144482079685,
+     "end_node_peak_to_ground_V": 144.7859682624541
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.07373844281835791,
+     "1000": -0.021573347248687466,
+     "10000": 0.08455929521608767,
+     "20000": 0.4177658431278265
+    },
+    "band_min_max_dB": [
+     -0.06908670689822936,
+     0.4155077518100742
+    ],
+    "peak_dB": 4.579435160499038,
+    "peak_Hz": 66069.3448007605,
+    "PA_output_peak_dB": 0.11129252312465374
+   }
+  },
+  {
+   "case": "nominal 20 kHz",
+   "frequency_Hz": 20000,
+   "harness_pF": 500,
+   "fast_shunt_pF": 220,
+   "open_optical_pF": 30,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 11.250941035383057,
+   "nonlinear": false,
+   "inductance_scale": 1,
+   "short": false,
+   "temp_C": 25,
+   "rail_V": 310,
+   "bias_V": 155.01209630301835,
+   "band_gain_min_max_dB": [
+    -0.07398391974007647,
+    0.48189622878702537
+   ],
+   "peak_V": 142.08204724295382,
+   "thd_pct": 0.4265489121627946,
+   "gain_dB": 0.4441087536204067,
+   "peak_chip_mA": 29.21850713348774,
+   "chip_W": 2.090536086993619,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 17.133543836582916,
+     "at_s": 1.8203427306386586e-05,
+     "half_width_us": 11.980776993999605,
+     "max_dv_dt_V_per_us": 7.436121230773616,
+     "peak_A": 0.02333911239687087,
+     "end_node_peak_to_ground_V": 119.34204344374717
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 31.57272876511226,
+     "at_s": 6.089147299160249e-06,
+     "half_width_us": 4.761390710860301,
+     "max_dv_dt_V_per_us": 10.586779848016835,
+     "peak_A": 0.018397602995800417,
+     "end_node_peak_to_ground_V": 143.24387112555308
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.07863486685643677,
+     "1000": -0.026185362153898578,
+     "10000": 0.10661303933621512,
+     "20000": 0.484197756059244
+    },
+    "band_min_max_dB": [
+     -0.07398391974007647,
+     0.48189622878702537
+    ],
+    "peak_dB": 1.1322183213874368,
+    "peak_Hz": 36307.805477010595,
+    "PA_output_peak_dB": 0.11130360945455357
+   }
+  },
+  {
+   "case": "nominal 1 kHz",
+   "frequency_Hz": 1000,
+   "harness_pF": 500,
+   "fast_shunt_pF": 220,
+   "open_optical_pF": 30,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 3.2397080165091987,
+   "nonlinear": false,
+   "inductance_scale": 1,
+   "short": false,
+   "temp_C": 25,
+   "rail_V": 310,
+   "bias_V": 155.01209630301835,
+   "band_gain_min_max_dB": [
+    -0.07398391974007647,
+    0.48189622878702537
+   ],
+   "peak_V": 134.13229272488178,
+   "thd_pct": 0.16901477491741135,
+   "gain_dB": -0.056008408862002285,
+   "peak_chip_mA": 4.03603509654976,
+   "chip_W": 0.7442066072851213,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 0.8194531668684735,
+     "at_s": 8.566367714077097e-06,
+     "half_width_us": 4.46422073776406,
+     "max_dv_dt_V_per_us": 0.37566557545036516,
+     "peak_A": 0.0014129500391145537,
+     "end_node_peak_to_ground_V": 134.4924065998946
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 1.6660206390934515,
+     "at_s": 6.156198821231349e-06,
+     "half_width_us": 5.18668006546991,
+     "max_dv_dt_V_per_us": 0.5390709308744435,
+     "peak_A": 0.0012315977041399407,
+     "end_node_peak_to_ground_V": 134.5431982389899
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.07863486685643677,
+     "1000": -0.026185362153898578,
+     "10000": 0.10661303933621512,
+     "20000": 0.484197756059244
+    },
+    "band_min_max_dB": [
+     -0.07398391974007647,
+     0.48189622878702537
+    ],
+    "peak_dB": 1.1322183213874368,
+    "peak_Hz": 36307.805477010595,
+    "PA_output_peak_dB": 0.11130360945455357
+   }
+  },
+  {
+   "case": "nominal 20 Hz",
+   "frequency_Hz": 20,
+   "harness_pF": 500,
+   "fast_shunt_pF": 220,
+   "open_optical_pF": 30,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 3.128984405618208,
+   "nonlinear": false,
+   "inductance_scale": 1,
+   "short": false,
+   "temp_C": 25,
+   "rail_V": 310,
+   "bias_V": 155.01209630301835,
+   "band_gain_min_max_dB": [
+    -0.07398391974007647,
+    0.48189622878702537
+   ],
+   "peak_V": 132.99059913396593,
+   "thd_pct": 0.16308263565107375,
+   "gain_dB": -0.13025651876009492,
+   "peak_chip_mA": 3.594838998373982,
+   "chip_W": 0.7185950165803601,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 0.012665143936475665,
+     "at_s": 8.77971496706654e-06,
+     "half_width_us": 9.697229429673914,
+     "max_dv_dt_V_per_us": 0.003922938112219475,
+     "peak_A": 0.0005220449816134146,
+     "end_node_peak_to_ground_V": 145.52280047367748
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 0.029206624391845404,
+     "at_s": 7.215558318346258e-06,
+     "half_width_us": 5.552331068246135,
+     "max_dv_dt_V_per_us": 0.007040669776181714,
+     "peak_A": 0.0005197502844643114,
+     "end_node_peak_to_ground_V": 145.5211569200511
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.07863486685643677,
+     "1000": -0.026185362153898578,
+     "10000": 0.10661303933621512,
+     "20000": 0.484197756059244
+    },
+    "band_min_max_dB": [
+     -0.07398391974007647,
+     0.48189622878702537
+    ],
+    "peak_dB": 1.1322183213874368,
+    "peak_Hz": 36307.805477010595,
+    "PA_output_peak_dB": 0.11130360945455357
+   }
+  },
+  {
+   "case": "heavy load, 25 C, inductance +10 %",
+   "frequency_Hz": 20000,
+   "harness_pF": 500,
+   "fast_shunt_pF": 600,
+   "open_optical_pF": 150,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 13.831903080503691,
+   "nonlinear": false,
+   "inductance_scale": 1.1,
+   "short": false,
+   "temp_C": 25,
+   "rail_V": 310,
+   "bias_V": 155.01209630301835,
+   "band_gain_min_max_dB": [
+    -0.07872598631627728,
+    0.22689485557787267
+   ],
+   "peak_V": 138.10005427540236,
+   "thd_pct": 0.3394269722011283,
+   "gain_dB": 0.1972016153586888,
+   "peak_chip_mA": 37.40597861160094,
+   "chip_W": 2.160559021069927,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 21.287313455970718,
+     "at_s": 2.0241702038800918e-05,
+     "half_width_us": 12.353863567920127,
+     "max_dv_dt_V_per_us": 7.163675301106655,
+     "peak_A": 0.031019246970329553,
+     "end_node_peak_to_ground_V": 101.89375667545983
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 40.479145373885615,
+     "at_s": 2.2116702038800923e-05,
+     "half_width_us": 13.255337996789219,
+     "max_dv_dt_V_per_us": 10.66856363604649,
+     "peak_A": 0.026865037414665456,
+     "end_node_peak_to_ground_V": 138.17671830718587
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.08337611997644122,
+     "1000": -0.03158475170678447,
+     "10000": 0.03932176825814069,
+     "20000": 0.2277526948869581
+    },
+    "band_min_max_dB": [
+     -0.07872598631627728,
+     0.22689485557787267
+    ],
+    "peak_dB": 0.28221159988497974,
+    "peak_Hz": 25118.86431509611,
+    "PA_output_peak_dB": 0.11138129651706268
+   }
+  },
+  {
+   "case": "light load, 85 C, inductance -10 %",
+   "frequency_Hz": 20000,
+   "harness_pF": 0,
+   "fast_shunt_pF": 80,
+   "open_optical_pF": 30,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 7.7703891278491195,
+   "nonlinear": false,
+   "inductance_scale": 0.9,
+   "short": false,
+   "temp_C": 85,
+   "rail_V": 310,
+   "bias_V": 155.01210575860506,
+   "band_gain_min_max_dB": [
+    -0.06926540499621212,
+    0.217995697422192
+   ],
+   "peak_V": 137.7442198386004,
+   "thd_pct": 0.42305445598936914,
+   "gain_dB": 0.17479230219240055,
+   "peak_chip_mA": 18.197492936305093,
+   "chip_W": 1.7081928837129239,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 11.697666307891843,
+     "at_s": 2.988013055406284e-06,
+     "half_width_us": 3.0705413743485006,
+     "max_dv_dt_V_per_us": 7.043242724724177,
+     "peak_A": 0.012279186861894933,
+     "end_node_peak_to_ground_V": 131.85050901097642
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 21.096891477084053,
+     "at_s": 5.235115602203315e-06,
+     "half_width_us": 3.3408525467970347,
+     "max_dv_dt_V_per_us": 11.187399929288784,
+     "peak_A": 0.008246758331149457,
+     "end_node_peak_to_ground_V": 137.69707422324893
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.07391717590520616,
+     "1000": -0.022244400798772702,
+     "10000": 0.03513616313161178,
+     "20000": 0.21926374959085024
+    },
+    "band_min_max_dB": [
+     -0.06926540499621212,
+     0.217995697422192
+    ],
+    "peak_dB": 3.9025781967842703,
+    "peak_Hz": 75857.75750291943,
+    "PA_output_peak_dB": 0.11118064732693984
+   }
+  },
+  {
+   "case": "hot corner, local capacitors +5 %",
+   "frequency_Hz": 20000,
+   "harness_pF": 500,
+   "fast_shunt_pF": 600,
+   "open_optical_pF": 150,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 13.517803834732007,
+   "nonlinear": false,
+   "inductance_scale": 0.9,
+   "short": false,
+   "temp_C": 85,
+   "rail_V": 310,
+   "bias_V": 155.01210575860506,
+   "band_gain_min_max_dB": [
+    -0.3498050086695771,
+    -0.03301610257202463
+   ],
+   "peak_V": 129.33493623751116,
+   "thd_pct": 0.2596532366092757,
+   "gain_dB": -0.3723583037299947,
+   "peak_chip_mA": 36.393452288848195,
+   "chip_W": 2.1643361249359288,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 16.48181643168371,
+     "at_s": 1.893838004165111e-05,
+     "half_width_us": 12.920807414243914,
+     "max_dv_dt_V_per_us": 6.590029994916295,
+     "peak_A": 0.029508375041888364,
+     "end_node_peak_to_ground_V": 101.47640103380895
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 31.432037418942414,
+     "at_s": 2.0657130041651115e-05,
+     "half_width_us": 13.545807414243916,
+     "max_dv_dt_V_per_us": 10.024953242264994,
+     "peak_A": 0.025115756550511664,
+     "end_node_peak_to_ground_V": 130.31431215679893
+    }
+   ],
+   "local_cap_scale": 1.05,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.08388780743571242,
+     "1000": -0.03393290217663318,
+     "10000": -0.13516406207050763,
+     "20000": -0.3509200173570179
+    },
+    "band_min_max_dB": [
+     -0.3498050086695771,
+     -0.03301610257202463
+    ],
+    "peak_dB": -0.03301610257202463,
+    "peak_Hz": 316.2277660168397,
+    "PA_output_peak_dB": 0.11254953848769912
+   }
+  },
+  {
+   "case": "opposite corner, local capacitors -5 %",
+   "frequency_Hz": 20000,
+   "harness_pF": 0,
+   "fast_shunt_pF": 80,
+   "open_optical_pF": 30,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 7.613625235143896,
+   "nonlinear": false,
+   "inductance_scale": 1.1,
+   "short": false,
+   "temp_C": 25,
+   "rail_V": 310,
+   "bias_V": 155.01209630301835,
+   "band_gain_min_max_dB": [
+    -0.06875372511620423,
+    0.42641358328300705
+   ],
+   "peak_V": 140.9641654220765,
+   "thd_pct": 0.56324406098304,
+   "gain_dB": 0.3754991190380111,
+   "peak_chip_mA": 17.697529638602013,
+   "chip_W": 1.6809274991072933,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 13.477566043452114,
+     "at_s": 1.2417556995295644e-05,
+     "half_width_us": 8.240680647867896,
+     "max_dv_dt_V_per_us": 7.695105757030804,
+     "peak_A": 0.011920568401570582,
+     "end_node_peak_to_ground_V": 133.17751510064343
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 24.156853655203413,
+     "at_s": 5.4984671080209425e-06,
+     "half_width_us": 3.55894357432453,
+     "max_dv_dt_V_per_us": 12.230763648992129,
+     "peak_A": 0.008274143818862427,
+     "end_node_peak_to_ground_V": 144.85755553520522
+    }
+   ],
+   "local_cap_scale": 0.95,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.07340551709744106,
+     "1000": -0.021209363884171495,
+     "10000": 0.08784013705025279,
+     "20000": 0.42871607463547745
+    },
+    "band_min_max_dB": [
+     -0.06875372511620423,
+     0.42641358328300705
+    ],
+    "peak_dB": 4.703135662651694,
+    "peak_Hz": 69183.0970918946,
+    "PA_output_peak_dB": 0.11129190335215391
+   }
+  },
+  {
+   "case": "heavy load, 25 C, inductance +10 %, capacitors -5 %",
+   "frequency_Hz": 20000,
+   "harness_pF": 500,
+   "fast_shunt_pF": 600,
+   "open_optical_pF": 150,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 13.727339103014797,
+   "nonlinear": false,
+   "inductance_scale": 1.1,
+   "short": false,
+   "temp_C": 25,
+   "rail_V": 310,
+   "bias_V": 155.01209630301835,
+   "band_gain_min_max_dB": [
+    -0.07839328992270932,
+    0.28408983628425816
+   ],
+   "peak_V": 139.001173211096,
+   "thd_pct": 0.3443087962015011,
+   "gain_dB": 0.2536939469738437,
+   "peak_chip_mA": 37.07545730894888,
+   "chip_W": 2.160066877695909,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 20.837543997314995,
+     "at_s": 2.0018135111023644e-05,
+     "half_width_us": 12.496096138716661,
+     "max_dv_dt_V_per_us": 7.188415530300918,
+     "peak_A": 0.030807667139592498,
+     "end_node_peak_to_ground_V": 102.87774726596552
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 40.53682881540264,
+     "at_s": 2.189313511102365e-05,
+     "half_width_us": 13.277682742991555,
+     "max_dv_dt_V_per_us": 10.774370152921092,
+     "peak_A": 0.026791370028519536,
+     "end_node_peak_to_ground_V": 139.10702945174435
+    }
+   ],
+   "local_cap_scale": 0.95,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.0830434855508139,
+     "1000": -0.03105474883904502,
+     "10000": 0.05793946085441206,
+     "20000": 0.2851174227073066
+    },
+    "band_min_max_dB": [
+     -0.07839328992270932,
+     0.28408983628425816
+    ],
+    "peak_dB": 0.35372919917805273,
+    "peak_Hz": 25118.86431509611,
+    "PA_output_peak_dB": 0.11136536543929863
+   }
+  },
+  {
+   "case": "charge-dependent shunt 1300 pF, 25 C",
+   "frequency_Hz": 20000,
+   "harness_pF": 500,
+   "fast_shunt_pF": 1300,
+   "open_optical_pF": 150,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 11.536456007134364,
+   "nonlinear": true,
+   "inductance_scale": 1,
+   "short": false,
+   "temp_C": 25,
+   "rail_V": 310,
+   "bias_V": 155.01209630302586,
+   "band_gain_min_max_dB": [
+    -0.07881369717918077,
+    -0.007026232572297655
+   ],
+   "peak_V": 138.43545582696112,
+   "thd_pct": 0.4595724544078307,
+   "gain_dB": 0.21827133106151853,
+   "peak_chip_mA": 30.16006448622977,
+   "chip_W": 2.096109868273946,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 18.502055937456262,
+     "at_s": 1.8391097507503496e-05,
+     "half_width_us": 11.021143477758773,
+     "max_dv_dt_V_per_us": 6.953491827375944,
+     "peak_A": 0.02285819172340649,
+     "end_node_peak_to_ground_V": 116.30828748212468
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 32.498684013494106,
+     "at_s": 6.3128346525793475e-06,
+     "half_width_us": 4.915897151819183,
+     "max_dv_dt_V_per_us": 10.496026898392296,
+     "peak_A": 0.018036337656350328,
+     "end_node_peak_to_ground_V": 142.82585751782486
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.08347159095595218,
+     "1000": -0.032337876712245646,
+     "10000": -0.032288194522015375,
+     "20000": -0.006902151633984958
+    },
+    "band_min_max_dB": [
+     -0.07881369717918077,
+     -0.007026232572297655
+    ],
+    "peak_dB": -0.0026777823954788915,
+    "peak_Hz": 22908.67652767801,
+    "PA_output_peak_dB": 0.11136765047564012
+   }
+  },
+  {
+   "case": "charge-dependent shunt 2600 pF, 85 C",
+   "frequency_Hz": 20000,
+   "harness_pF": 500,
+   "fast_shunt_pF": 2600,
+   "open_optical_pF": 150,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 12.021043624989549,
+   "nonlinear": true,
+   "inductance_scale": 1,
+   "short": false,
+   "temp_C": 85,
+   "rail_V": 310,
+   "bias_V": 155.0121057586497,
+   "band_gain_min_max_dB": [
+    -0.7815094776616485,
+    -0.048905743495159075
+   ],
+   "peak_V": 137.9735216203215,
+   "thd_pct": 0.4078101560545346,
+   "gain_dB": 0.18923961645288656,
+   "peak_chip_mA": 31.698280357775353,
+   "chip_W": 2.1209520646978106,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 20.041488042688655,
+     "at_s": 1.8770999275494333e-05,
+     "half_width_us": 10.954100357390132,
+     "max_dv_dt_V_per_us": 6.843930006046437,
+     "peak_A": 0.02450467722826047,
+     "end_node_peak_to_ground_V": 113.6322437215056
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 34.4702714329811,
+     "at_s": 6.5291203215851916e-06,
+     "half_width_us": 5.434232706444027,
+     "max_dv_dt_V_per_us": 10.791708606635524,
+     "peak_A": 0.01980188274412194,
+     "end_node_peak_to_ground_V": 141.58984967226795
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.09523920837735919,
+     "1000": -0.08248367853064248,
+     "10000": -0.2605996857416977,
+     "20000": -0.7852090748526399
+    },
+    "band_min_max_dB": [
+     -0.7815094776616485,
+     -0.048905743495159075
+    ],
+    "peak_dB": -0.048905743495159075,
+    "peak_Hz": 83.17637711026737,
+    "PA_output_peak_dB": 0.11300986379498583
+   }
+  },
+  {
+   "case": "charge-dependent shunt 1300 pF, short harness",
+   "frequency_Hz": 20000,
+   "harness_pF": 0,
+   "fast_shunt_pF": 1300,
+   "open_optical_pF": 30,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 310.0,
+   "rail_max_V": 310.0,
+   "mean_PA_rail_mA": 7.956445858847255,
+   "nonlinear": true,
+   "inductance_scale": 1.1,
+   "short": false,
+   "temp_C": 25,
+   "rail_V": 310,
+   "bias_V": 155.01209630302586,
+   "band_gain_min_max_dB": [
+    -0.0731530792711439,
+    0.6889260942586259
+   ],
+   "peak_V": 141.12972088288348,
+   "thd_pct": 0.5869646405434994,
+   "gain_dB": 0.3856942823964231,
+   "peak_chip_mA": 18.801881659904204,
+   "chip_W": 1.7345431078957736,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 18.246158792909853,
+     "at_s": 1.299690406062416e-05,
+     "half_width_us": 6.224050620737291,
+     "max_dv_dt_V_per_us": 9.619618801369208,
+     "peak_A": 0.01530107066704568,
+     "end_node_peak_to_ground_V": 134.51156332200932
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 31.393338418519974,
+     "at_s": 5.993657789586763e-06,
+     "half_width_us": 3.7443495627673506,
+     "max_dv_dt_V_per_us": 15.213357919990134,
+     "peak_A": 0.0113717811989731,
+     "end_node_peak_to_ground_V": 152.06345876475768
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.077811971504589,
+     "1000": -0.02478944147362261,
+     "10000": 0.156155825070882,
+     "20000": 0.6923425736471632
+    },
+    "band_min_max_dB": [
+     -0.0731530792711439,
+     0.6889260942586259
+    ],
+    "peak_dB": 2.0152958171043083,
+    "peak_Hz": 39810.71705535024,
+    "PA_output_peak_dB": 0.11130046094199696
+   }
+  },
+  {
+   "case": "hot mixer short, 320 V",
+   "frequency_Hz": 20000,
+   "harness_pF": 500,
+   "fast_shunt_pF": 220,
+   "open_optical_pF": 30,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": null,
+   "rail_min_V": 320.0,
+   "rail_max_V": 320.0,
+   "mean_PA_rail_mA": 14.433057285709305,
+   "nonlinear": false,
+   "inductance_scale": 1,
+   "short": true,
+   "temp_C": 85,
+   "rail_V": 320,
+   "bias_V": 160.0121095474379,
+   "band_gain_min_max_dB": [
+    -97.50375281418093,
+    -89.55094016687526
+   ],
+   "peak_V": 0.004206803789050434,
+   "thd_pct": 0.04599558783258855,
+   "gain_dB": -90.127630241611,
+   "peak_chip_mA": 39.3432819822635,
+   "chip_W": 2.3352331324087947,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 23.790807770601866,
+     "at_s": 3.0522149905548014e-05,
+     "half_width_us": 16.25000000000004,
+     "max_dv_dt_V_per_us": 7.278998873035653,
+     "peak_A": 0.04004566285900244,
+     "end_node_peak_to_ground_V": 76.67896153119901
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 53.04170796408835,
+     "at_s": 5.536589990554808e-05,
+     "half_width_us": 16.40624999999993,
+     "max_dv_dt_V_per_us": 12.271898335079085,
+     "peak_A": 0.04231429550049849,
+     "end_node_peak_to_ground_V": 53.04169661386389
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -97.8279496531794,
+     "1000": -89.55460576993558,
+     "10000": -89.69203399004711,
+     "20000": -90.12613403285205
+    },
+    "band_min_max_dB": [
+     -97.50375281418093,
+     -89.55094016687526
+    ],
+    "peak_dB": -89.55094016687526,
+    "peak_Hz": 1584.8931924611265,
+    "PA_output_peak_dB": 0.11111206968547341
+   }
+  },
+  {
+   "case": "hot named corner, 340 V raw, CB-009 rail",
+   "frequency_Hz": 20000,
+   "harness_pF": 500,
+   "fast_shunt_pF": 600,
+   "open_optical_pF": 150,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": 340,
+   "rail_min_V": 309.11233896870635,
+   "rail_max_V": 309.11867710101683,
+   "mean_PA_rail_mA": 13.391650354961696,
+   "nonlinear": false,
+   "inductance_scale": 0.9,
+   "short": false,
+   "temp_C": 85,
+   "rail_V": 310,
+   "bias_V": 154.78846724065764,
+   "band_gain_min_max_dB": [
+    -0.29071106048834516,
+    -0.033247158361090115
+   ],
+   "peak_V": 130.3486725477277,
+   "thd_pct": 0.20952743948522676,
+   "gain_dB": -0.3045431152228142,
+   "peak_chip_mA": 36.023633531744544,
+   "chip_W": 2.1541814631511262,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 16.27762470460931,
+     "at_s": 2.2172712717035807e-05,
+     "half_width_us": 13.107065924946793,
+     "max_dv_dt_V_per_us": 6.614298942426777,
+     "peak_A": 0.02928516839930654,
+     "end_node_peak_to_ground_V": 102.81164696657062
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 31.426757047401153,
+     "at_s": 2.0453962717035803e-05,
+     "half_width_us": 13.575815924946793,
+     "max_dv_dt_V_per_us": 10.129365494885121,
+     "peak_A": 0.02506431498833912,
+     "end_node_peak_to_ground_V": 131.2237253437751
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.09419909832811937,
+     "1000": -0.03378935173725212,
+     "10000": -0.11518272367753138,
+     "20000": -0.2916601532632959
+    },
+    "band_min_max_dB": [
+     -0.29071106048834516,
+     -0.033247158361090115
+    ],
+    "peak_dB": -0.033247158361090115,
+    "peak_Hz": 478.6300923226414,
+    "PA_output_peak_dB": 0.1121989611445963
+   }
+  },
+  {
+   "case": "opposite named corner, 340 V raw, CB-009 rail",
+   "frequency_Hz": 20000,
+   "harness_pF": 0,
+   "fast_shunt_pF": 80,
+   "open_optical_pF": 30,
+   "feedback_ohm": 38800.0,
+   "raw_input_V": 340,
+   "rail_min_V": 309.33267792241577,
+   "rail_max_V": 309.3359130953985,
+   "mean_PA_rail_mA": 7.805809499746552,
+   "nonlinear": false,
+   "inductance_scale": 1.1,
+   "short": false,
+   "temp_C": 25,
+   "rail_V": 310,
+   "bias_V": 154.78824536040787,
+   "band_gain_min_max_dB": [
+    -0.08154834971580377,
+    0.4153289249181246
+   ],
+   "peak_V": 140.98827634629555,
+   "thd_pct": 0.48381783919794635,
+   "gain_dB": 0.3769846520309895,
+   "peak_chip_mA": 18.36531712946039,
+   "chip_W": 1.7144310129833382,
+   "windings": [
+    {
+     "coil": "l8a",
+     "peak_V": 13.835921521095585,
+     "at_s": 1.2629895260148134e-05,
+     "half_width_us": 8.522800961581904,
+     "max_dv_dt_V_per_us": 7.657009996330213,
+     "peak_A": 0.01241098089654421,
+     "end_node_peak_to_ground_V": 132.5681421051969
+    },
+    {
+     "coil": "l8b",
+     "peak_V": 24.361203835620934,
+     "at_s": 5.735005235487162e-06,
+     "half_width_us": 3.7403105081021772,
+     "max_dv_dt_V_per_us": 12.188252408827397,
+     "peak_A": 0.00848795422037524,
+     "end_node_peak_to_ground_V": 144.78038080797822
+    }
+   ],
+   "local_cap_scale": 1,
+   "small_signal": {
+    "gain_dB": {
+     "20": -0.08604898120901856,
+     "1000": -0.02181006279600063,
+     "10000": 0.08436948692307032,
+     "20000": 0.4175870879431453
+    },
+    "band_min_max_dB": [
+     -0.08154834971580377,
+     0.4153289249181246
+    ],
+    "peak_dB": 4.579463559710732,
+    "peak_Hz": 66069.3448007605,
+    "PA_output_peak_dB": 0.11107538110867624
+   }
+  }
+ ],
+ "faults": {
+  "summary": {
+   "fast_path_ohm": {
+    "nominal": 7.9,
+    "hot": 15.899999999999999
+   },
+   "static_divider_V": 0.8753096614368291,
+   "quiet_mixer_V": 0.9035109463731041,
+   "handover_V": 0.8959887596994942,
+   "injection_V": 0.6692941831657465,
+   "peak_by_coil_V": [
+    111.10639968371862,
+    229.48846822184046
+   ],
+   "peak_by_coil_A": [
+    0.09655513662697998,
+    0.09817396452825361
+   ],
+   "optical_contact_peak_V": 378.353832314314,
+   "playing_after_switch_V": 0.773452978931304,
+   "playing_peak_shunt_A": 14.281635907203153,
+   "open_fast_shunt_V": 180.48100339499933
+  },
+  "fast": [
+   {
+    "case": "nominal",
+    "sign": 1,
+    "delay_us": 0.5,
+    "rise_us": 1.0,
+    "harness_pF": 500,
+    "line_caps_pF": {},
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 7.9,
+    "inductance_scale": 1,
+    "current_limit_A": null,
+    "winding_pF": 18,
+    "phase_deg": null,
+    "timestep_ns": 4.0,
+    "peak_mixer_V": 0.43562529119887744,
+    "post_switch_peak_V": 0.43562529119887744,
+    "peak_shunt_A": 0.055142441923908526,
+    "shunt_energy_uJ": 0.5426698201285128,
+    "max_coil_A": 0.056487555406908946,
+    "reached_s": 3.0999999999999995e-05,
+    "deck_sha256": "37278582f57815444a7f65007ee17764c65038b83608391c3b026db3f7655197",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 77.65737705071214,
+      "at_s": 2.5259999999999844e-06,
+      "half_width_us": 1.6591547148794898,
+      "max_dv_dt_V_per_us": 83.21903500518502,
+      "peak_A": 0.056487555406908946,
+      "end_node_peak_to_ground_V": 124.32748915951268
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 124.15597678299349,
+      "at_s": 5.150000000000045e-06,
+      "half_width_us": 3.4800000000002207,
+      "max_dv_dt_V_per_us": 55.24190414539901,
+      "peak_A": 0.05525343910211427,
+      "end_node_peak_to_ground_V": 124.32748915951268
+     }
+    ]
+   },
+   {
+    "case": "negative",
+    "sign": -1,
+    "delay_us": 0.5,
+    "rise_us": 1.0,
+    "harness_pF": 500,
+    "line_caps_pF": {},
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 7.9,
+    "inductance_scale": 1,
+    "current_limit_A": null,
+    "winding_pF": 18,
+    "phase_deg": null,
+    "timestep_ns": 4.0,
+    "peak_mixer_V": 0.43562529119887744,
+    "post_switch_peak_V": 0.43562529119887744,
+    "peak_shunt_A": 0.055142441923908526,
+    "shunt_energy_uJ": 0.5426698201285128,
+    "max_coil_A": 0.056487555406908946,
+    "reached_s": 3.0999999999999995e-05,
+    "deck_sha256": "0cc21f709774948d6f749a228f391ac5dc8227908bea28c47aa82d921fa75b75",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 77.65737705071214,
+      "at_s": 2.5259999999999844e-06,
+      "half_width_us": 1.6591547148794898,
+      "max_dv_dt_V_per_us": 83.21903500518502,
+      "peak_A": 0.056487555406908946,
+      "end_node_peak_to_ground_V": 124.32748915951268
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 124.15597678299349,
+      "at_s": 5.150000000000045e-06,
+      "half_width_us": 3.4800000000002207,
+      "max_dv_dt_V_per_us": 55.24190414539901,
+      "peak_A": 0.05525343910211427,
+      "end_node_peak_to_ground_V": 124.32748915951268
+     }
+    ]
+   },
+   {
+    "case": "hot shunt",
+    "sign": 1,
+    "delay_us": 0.5,
+    "rise_us": 1.0,
+    "harness_pF": 500,
+    "line_caps_pF": {},
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 15.899999999999999,
+    "inductance_scale": 1,
+    "current_limit_A": null,
+    "winding_pF": 18,
+    "phase_deg": null,
+    "timestep_ns": 4.0,
+    "peak_mixer_V": 0.8743785343452605,
+    "post_switch_peak_V": 0.8743785343452605,
+    "peak_shunt_A": 0.05499236065064531,
+    "shunt_energy_uJ": 1.0863161320239128,
+    "max_coil_A": 0.05635302565592201,
+    "reached_s": 3.0999999999999995e-05,
+    "deck_sha256": "4ed34fb398758f39de988038382caa6fac4eb06799b601630c1c4404e8c65c69",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 77.65649936546649,
+      "at_s": 2.5259999999999844e-06,
+      "half_width_us": 1.6579999999999504,
+      "max_dv_dt_V_per_us": 83.21844954813685,
+      "peak_A": 0.05635302565592201,
+      "end_node_peak_to_ground_V": 124.3661441257935
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 124.02285201833504,
+      "at_s": 5.146000000000044e-06,
+      "half_width_us": 3.4800000000002207,
+      "max_dv_dt_V_per_us": 55.19752934904957,
+      "peak_A": 0.05510780557360365,
+      "end_node_peak_to_ground_V": 124.3661441257935
+     }
+    ]
+   },
+   {
+    "case": "short harness fast edge",
+    "sign": 1,
+    "delay_us": 0.5,
+    "rise_us": 0.05,
+    "harness_pF": 0,
+    "line_caps_pF": {
+     "shunt_pF": 80
+    },
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 7.9,
+    "inductance_scale": 0.9,
+    "current_limit_A": null,
+    "winding_pF": 30,
+    "phase_deg": null,
+    "timestep_ns": 4.0,
+    "peak_mixer_V": 0.7517856354734879,
+    "post_switch_peak_V": 0.4379447923521896,
+    "peak_shunt_A": 0.08079646844839249,
+    "shunt_energy_uJ": 0.5722073831785071,
+    "max_coil_A": 0.057778595587803794,
+    "reached_s": 3.0999999999999995e-05,
+    "deck_sha256": "175011d38ba6baacf4fc1efee0f182e6215239b8511a08dbb7ecd1e556018a5a",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 78.77236667120876,
+      "at_s": 2.0153629903539645e-06,
+      "half_width_us": 1.631362990353931,
+      "max_dv_dt_V_per_us": 165.27824391571724,
+      "peak_A": 0.057778595587803794,
+      "end_node_peak_to_ground_V": 121.48539164585455
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 121.30166249788765,
+      "at_s": 4.607362990353969e-06,
+      "half_width_us": 3.396000000000161,
+      "max_dv_dt_V_per_us": 169.7476937462923,
+      "peak_A": 0.055641688818041775,
+      "end_node_peak_to_ground_V": 121.48539164585455
+     }
+    ]
+   },
+   {
+    "case": "combined quiet corner",
+    "sign": 1,
+    "delay_us": 0.5,
+    "rise_us": 0.05,
+    "harness_pF": 0,
+    "line_caps_pF": {
+     "shunt_pF": 50,
+     "end_pF": 256.5,
+     "mid_pF": 313.5,
+     "start_pF": 256.5
+    },
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 15.899999999999999,
+    "inductance_scale": 0.9,
+    "current_limit_A": null,
+    "winding_pF": 30,
+    "phase_deg": null,
+    "timestep_ns": 1.0,
+    "peak_mixer_V": 0.9035109463731041,
+    "post_switch_peak_V": 0.8779058867989431,
+    "peak_shunt_A": 0.05521420671691466,
+    "shunt_energy_uJ": 1.1435720337670285,
+    "max_coil_A": 0.05744211739339145,
+    "reached_s": 3.0999999999999995e-05,
+    "deck_sha256": "078c7a4dae23c86e9d11e129dc0ca41413c5f8ad330e9551df9dd12060578838",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 79.50919740646671,
+      "at_s": 1.9895000000000358e-06,
+      "half_width_us": 1.5970000000000852,
+      "max_dv_dt_V_per_us": 172.27532165109008,
+      "peak_A": 0.05744211739339145,
+      "end_node_peak_to_ground_V": 122.50959269115019
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 122.14471935230905,
+      "at_s": 4.527499999999925e-06,
+      "half_width_us": 3.3279999999992396,
+      "max_dv_dt_V_per_us": 148.4459620885858,
+      "peak_A": 0.055434090403145966,
+      "end_node_peak_to_ground_V": 122.50959269115019
+     }
+    ]
+   },
+   {
+    "case": "playing",
+    "sign": -1,
+    "delay_us": 0.5,
+    "rise_us": 1.0,
+    "harness_pF": 500,
+    "line_caps_pF": {},
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 7.9,
+    "inductance_scale": 1,
+    "current_limit_A": null,
+    "winding_pF": 18,
+    "phase_deg": 0,
+    "timestep_ns": 4.0,
+    "peak_mixer_V": 81.89938272134472,
+    "post_switch_peak_V": 0.43794015145356857,
+    "peak_shunt_A": 8.893315594412526,
+    "shunt_energy_uJ": 2.9416863869742547,
+    "max_coil_A": 0.05549138454883919,
+    "reached_s": 0.00023,
+    "deck_sha256": "035dba6aa1978d1053d5bb30756a63396b22491011b3262b65e50092ae613f38",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 80.95407350024858,
+      "at_s": 0.0002016186696098842,
+      "half_width_us": 1.7840000000039118,
+      "max_dv_dt_V_per_us": 441.09972375888566,
+      "peak_A": 0.055206646585368294,
+      "end_node_peak_to_ground_V": 138.91024030293818
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 101.26824136472548,
+      "at_s": 0.0002038986696098892,
+      "half_width_us": 5.060000000011095,
+      "max_dv_dt_V_per_us": 7961.14079914587,
+      "peak_A": 0.05549138454883919,
+      "end_node_peak_to_ground_V": 143.37870814672073
+     }
+    ]
+   },
+   {
+    "case": "playing",
+    "sign": -1,
+    "delay_us": 0.5,
+    "rise_us": 1.0,
+    "harness_pF": 500,
+    "line_caps_pF": {},
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 7.9,
+    "inductance_scale": 1,
+    "current_limit_A": null,
+    "winding_pF": 18,
+    "phase_deg": 90,
+    "timestep_ns": 4.0,
+    "peak_mixer_V": 120.33085718828573,
+    "post_switch_peak_V": 0.7728563184134372,
+    "peak_shunt_A": 14.266688115171716,
+    "shunt_energy_uJ": 8.131424983412955,
+    "max_coil_A": 0.09798240508462402,
+    "reached_s": 0.00024249999999999999,
+    "deck_sha256": "ec53ff31e1e1def95ab3296292f7b39131c75f7a9b74dd38259dc7a3c76e58e7",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 78.92833483677234,
+      "at_s": 0.0002195721785055688,
+      "half_width_us": 2.4480000000053677,
+      "max_dv_dt_V_per_us": 528.0460888521751,
+      "peak_A": 0.09530236110466914,
+      "end_node_peak_to_ground_V": 119.38789155684464
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 106.8256085405469,
+      "at_s": 0.00021687217850556288,
+      "half_width_us": 2.796000000006131,
+      "max_dv_dt_V_per_us": 12617.939004321643,
+      "peak_A": 0.09798240508462402,
+      "end_node_peak_to_ground_V": 143.37870814672073
+     }
+    ]
+   },
+   {
+    "case": "playing",
+    "sign": -1,
+    "delay_us": 0.5,
+    "rise_us": 1.0,
+    "harness_pF": 500,
+    "line_caps_pF": {},
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 7.9,
+    "inductance_scale": 1,
+    "current_limit_A": null,
+    "winding_pF": 18,
+    "phase_deg": 180,
+    "timestep_ns": 4.0,
+    "peak_mixer_V": 81.87915397252941,
+    "post_switch_peak_V": 0.773452978931304,
+    "peak_shunt_A": 8.814639466405863,
+    "shunt_energy_uJ": 4.130083358138592,
+    "max_coil_A": 0.09817396452825361,
+    "reached_s": 0.00025499999999999996,
+    "deck_sha256": "146ed119600fd73f66b6d8b2181e9a4d5c72c715644cb43f1fd2427aec5472a7",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 88.28781510657934,
+      "at_s": 0.00023199613041542745,
+      "half_width_us": 2.7000000000059203,
+      "max_dv_dt_V_per_us": 300.633515832488,
+      "peak_A": 0.09655513662697998,
+      "end_node_peak_to_ground_V": 149.26664936144428
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 149.00786303132568,
+      "at_s": 0.00022930013041542153,
+      "half_width_us": 3.5160000000077094,
+      "max_dv_dt_V_per_us": 7741.488875019698,
+      "peak_A": 0.09817396452825361,
+      "end_node_peak_to_ground_V": 149.26664936144428
+     }
+    ]
+   },
+   {
+    "case": "playing",
+    "sign": -1,
+    "delay_us": 0.5,
+    "rise_us": 1.0,
+    "harness_pF": 500,
+    "line_caps_pF": {},
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 7.9,
+    "inductance_scale": 1,
+    "current_limit_A": null,
+    "winding_pF": 18,
+    "phase_deg": 270,
+    "timestep_ns": 4.0,
+    "peak_mixer_V": 120.45657180716866,
+    "post_switch_peak_V": 0.6418258764407896,
+    "peak_shunt_A": 14.281635907203153,
+    "shunt_energy_uJ": 8.05562076648139,
+    "max_coil_A": 0.08286470199262438,
+    "reached_s": 0.0002675,
+    "deck_sha256": "842415f7e44803718fe07a4cb405ee5e6f1acb9f4f3f4bd1aced1120800b6add",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 84.97221399075372,
+      "at_s": 0.00023921241157608735,
+      "half_width_us": 2.0160000000044205,
+      "max_dv_dt_V_per_us": 661.8995474067034,
+      "peak_A": 0.08286470199262438,
+      "end_node_peak_to_ground_V": 198.38499366788812
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 146.28164078320114,
+      "at_s": 0.00024122841157609177,
+      "half_width_us": 5.376000000011788,
+      "max_dv_dt_V_per_us": 12696.821066627863,
+      "peak_A": 0.0813448214022368,
+      "end_node_peak_to_ground_V": 146.67188091625414
+     }
+    ]
+   },
+   {
+    "case": "playing",
+    "sign": 1,
+    "delay_us": 0.5,
+    "rise_us": 1.0,
+    "harness_pF": 500,
+    "line_caps_pF": {},
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 7.9,
+    "inductance_scale": 1,
+    "current_limit_A": null,
+    "winding_pF": 18,
+    "phase_deg": 0,
+    "timestep_ns": 4.0,
+    "peak_mixer_V": 81.89924494245459,
+    "post_switch_peak_V": 0.7733970750109055,
+    "peak_shunt_A": 8.81702128794042,
+    "shunt_energy_uJ": 4.131369956630328,
+    "max_coil_A": 0.09816689245148875,
+    "reached_s": 0.00023,
+    "deck_sha256": "8891df3ff837bf3b553dc4e95e31fd65a7202060907825a6c405bf2052e39505",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 88.28801948249978,
+      "at_s": 0.00020699613005223727,
+      "half_width_us": 2.7000000000059203,
+      "max_dv_dt_V_per_us": 300.7355292346051,
+      "peak_A": 0.09654821179446106,
+      "end_node_peak_to_ground_V": 149.2618834567304
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 149.00312870275033,
+      "at_s": 0.00020430013005223136,
+      "half_width_us": 3.5160000000077094,
+      "max_dv_dt_V_per_us": 7743.655739322885,
+      "peak_A": 0.09816689245148875,
+      "end_node_peak_to_ground_V": 149.2618834567304
+     }
+    ]
+   },
+   {
+    "case": "playing",
+    "sign": 1,
+    "delay_us": 0.5,
+    "rise_us": 1.0,
+    "harness_pF": 500,
+    "line_caps_pF": {},
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 7.9,
+    "inductance_scale": 1,
+    "current_limit_A": null,
+    "winding_pF": 18,
+    "phase_deg": 90,
+    "timestep_ns": 4.0,
+    "peak_mixer_V": 120.4364833667995,
+    "post_switch_peak_V": 0.6417740992136046,
+    "peak_shunt_A": 14.2792543738656,
+    "shunt_energy_uJ": 8.053020858848303,
+    "max_coil_A": 0.08285856924337688,
+    "reached_s": 0.00024249999999999999,
+    "deck_sha256": "9d072b766b1507a91ab830048c9af494903800fa61d5f90c2d557bed151082ce",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 84.96879246034776,
+      "at_s": 0.00021421241140842515,
+      "half_width_us": 2.0160000000044205,
+      "max_dv_dt_V_per_us": 661.7969312056761,
+      "peak_A": 0.08285856924337688,
+      "end_node_peak_to_ground_V": 198.36581196181646
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 146.2755399360533,
+      "at_s": 0.00021622841140842957,
+      "half_width_us": 5.376000000011788,
+      "max_dv_dt_V_per_us": 12694.641185304969,
+      "peak_A": 0.08133837600595652,
+      "end_node_peak_to_ground_V": 146.66575760730328
+     }
+    ]
+   },
+   {
+    "case": "playing",
+    "sign": 1,
+    "delay_us": 0.5,
+    "rise_us": 1.0,
+    "harness_pF": 500,
+    "line_caps_pF": {},
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 7.9,
+    "inductance_scale": 1,
+    "current_limit_A": null,
+    "winding_pF": 18,
+    "phase_deg": 180,
+    "timestep_ns": 4.0,
+    "peak_mixer_V": 81.87929175142568,
+    "post_switch_peak_V": 0.4378840374484258,
+    "peak_shunt_A": 8.890915432190607,
+    "shunt_energy_uJ": 2.9401057480593646,
+    "max_coil_A": 0.055484281881731726,
+    "reached_s": 0.00025499999999999996,
+    "deck_sha256": "bf718761231654e2dcbd064dadf1fb7f3b4a8f3238c1b0cc18b5137915697b69",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 80.95098212191876,
+      "at_s": 0.00022661866956246013,
+      "half_width_us": 1.7840000000039118,
+      "max_dv_dt_V_per_us": 440.9985954544505,
+      "peak_A": 0.05519952460944539,
+      "end_node_peak_to_ground_V": 138.89081867431864
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 101.26264568441266,
+      "at_s": 0.00022889866956246513,
+      "half_width_us": 5.060000000011095,
+      "max_dv_dt_V_per_us": 7958.992611865757,
+      "peak_A": 0.055484281881731726,
+      "end_node_peak_to_ground_V": 143.37870814672073
+     }
+    ]
+   },
+   {
+    "case": "playing",
+    "sign": 1,
+    "delay_us": 0.5,
+    "rise_us": 1.0,
+    "harness_pF": 500,
+    "line_caps_pF": {},
+    "feedthrough_pF": 0.35,
+    "shunt_ohm": 7.9,
+    "inductance_scale": 1,
+    "current_limit_A": null,
+    "winding_pF": 18,
+    "phase_deg": 270,
+    "timestep_ns": 4.0,
+    "peak_mixer_V": 120.3509456286555,
+    "post_switch_peak_V": 0.7728002111952013,
+    "peak_shunt_A": 14.269069648509337,
+    "shunt_energy_uJ": 8.133732544134292,
+    "max_coil_A": 0.09797530327655132,
+    "reached_s": 0.0002675,
+    "deck_sha256": "86d4509451c3d6ff9228b7f46f45741c2c3515cb901d8095b7b89366da2232c4",
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 78.92854822998964,
+      "at_s": 0.0002445721788359472,
+      "half_width_us": 2.4480000000053406,
+      "max_dv_dt_V_per_us": 528.1484704511192,
+      "peak_A": 0.09529524524678828,
+      "end_node_peak_to_ground_V": 119.38789155684464
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 106.82098194579058,
+      "at_s": 0.00024187217883594133,
+      "half_width_us": 2.796000000006131,
+      "max_dv_dt_V_per_us": 12620.113755064967,
+      "peak_A": 0.09797530327655132,
+      "end_node_peak_to_ground_V": 143.37870814672073
+     }
+    ]
+   }
+  ],
+  "handover": [
+   {
+    "series_stuck": false,
+    "fast_open": false,
+    "step_V": 160,
+    "peak_V": 0.888788734212324,
+    "after_3ms_V": 0.022969065292428866,
+    "end_V": -1.808284636959486e-07,
+    "optical_contact_peak_V": 362.2090803281362,
+    "peak_coil_terminal_V": 223.85866689052853,
+    "fast_path_energy_mJ": 0.014441350814051563,
+    "final_capacitor_voltage_estimate_V": 157.99432884675977,
+    "window_s": 0.06,
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 106.55960367562403,
+      "at_s": 0.00025939362444537444,
+      "half_width_us": 2.249999999999811,
+      "max_dv_dt_V_per_us": 90.13695479649245,
+      "peak_A": 0.05772234621169864,
+      "end_node_peak_to_ground_V": 223.72882027071333
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 223.85866689052853,
+      "at_s": 0.00025664362444537467,
+      "half_width_us": 3.7499999999996847,
+      "max_dv_dt_V_per_us": 86.36096236999241,
+      "peak_A": 0.05604913864513979,
+      "end_node_peak_to_ground_V": 223.72882027071333
+     }
+    ]
+   },
+   {
+    "series_stuck": false,
+    "fast_open": false,
+    "step_V": -160,
+    "peak_V": 0.888788734212324,
+    "after_3ms_V": 0.022969065292428866,
+    "end_V": 1.808284636959486e-07,
+    "optical_contact_peak_V": 362.2090803281362,
+    "peak_coil_terminal_V": 223.85866689052853,
+    "fast_path_energy_mJ": 0.014441350814051563,
+    "final_capacitor_voltage_estimate_V": -157.99432884675977,
+    "window_s": 0.06,
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 106.55960367562403,
+      "at_s": 0.00025939362444537444,
+      "half_width_us": 2.249999999999811,
+      "max_dv_dt_V_per_us": 90.13695479649245,
+      "peak_A": 0.05772234621169864,
+      "end_node_peak_to_ground_V": 223.72882027071333
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 223.85866689052853,
+      "at_s": 0.00025664362444537467,
+      "half_width_us": 3.7499999999996847,
+      "max_dv_dt_V_per_us": 86.36096236999241,
+      "peak_A": 0.05604913864513979,
+      "end_node_peak_to_ground_V": 223.72882027071333
+     }
+    ]
+   },
+   {
+    "series_stuck": true,
+    "fast_open": false,
+    "step_V": 160,
+    "peak_V": 0.888788734212324,
+    "after_3ms_V": 0.26451807346468315,
+    "end_V": 4.548952144674162e-09,
+    "optical_contact_peak_V": 1.6944478599627715,
+    "peak_coil_terminal_V": 115.62997454416877,
+    "fast_path_energy_mJ": 0.08180518638129723,
+    "final_capacitor_voltage_estimate_V": 159.99999998223853,
+    "window_s": 0.06,
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 69.51347541337948,
+      "at_s": 3.404298346799639e-06,
+      "half_width_us": 1.6124184142706877,
+      "max_dv_dt_V_per_us": 74.97159116198242,
+      "peak_A": 0.05772234621169864,
+      "end_node_peak_to_ground_V": 115.94687392686137
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 115.62997454416877,
+      "at_s": 6.15429834679964e-06,
+      "half_width_us": 3.250000000000001,
+      "max_dv_dt_V_per_us": 50.010705629747406,
+      "peak_A": 0.05604913864513979,
+      "end_node_peak_to_ground_V": 115.94687392686137
+     }
+    ]
+   },
+   {
+    "series_stuck": false,
+    "fast_open": true,
+    "step_V": 160,
+    "peak_V": 180.48100339499933,
+    "after_3ms_V": 0.10664751181723468,
+    "end_V": -8.630920585983025e-07,
+    "optical_contact_peak_V": 158.54298522642185,
+    "peak_coil_terminal_V": 100.3831256665412,
+    "fast_path_energy_mJ": 1.4556901701790323e-13,
+    "final_capacitor_voltage_estimate_V": 157.84312832636581,
+    "window_s": 0.06,
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 69.36536916259394,
+      "at_s": 3.625e-06,
+      "half_width_us": 1.4562000000000044,
+      "max_dv_dt_V_per_us": 74.94744091576436,
+      "peak_A": 0.03448064169586821,
+      "end_node_peak_to_ground_V": 174.17794001620604
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 100.3831256665412,
+      "at_s": 5.875000000000001e-06,
+      "half_width_us": 3.0000000000000018,
+      "max_dv_dt_V_per_us": 60.13708680175949,
+      "peak_A": 0.03133226785384584,
+      "end_node_peak_to_ground_V": 180.48100339499933
+     }
+    ]
+   },
+   {
+    "series_stuck": false,
+    "fast_open": false,
+    "step_V": 160,
+    "peak_V": 0.8832693409772485,
+    "after_3ms_V": 0.019457109559723032,
+    "end_V": -1.8084960541786015e-07,
+    "optical_contact_peak_V": 378.353832314314,
+    "peak_coil_terminal_V": 229.17679748560653,
+    "fast_path_energy_mJ": 0.014517882289171056,
+    "final_capacitor_voltage_estimate_V": 157.99409396016677,
+    "window_s": 0.06,
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 105.60963180596612,
+      "at_s": 0.00025889222121310717,
+      "half_width_us": 1.9999999999998317,
+      "max_dv_dt_V_per_us": 90.35087665277247,
+      "peak_A": 0.05644154290567329,
+      "end_node_peak_to_ground_V": 242.56291485903162
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 229.17679748560653,
+      "at_s": 0.00025664222121310736,
+      "half_width_us": 3.9999999999996634,
+      "max_dv_dt_V_per_us": 98.27737291973136,
+      "peak_A": 0.055639561738712415,
+      "end_node_peak_to_ground_V": 229.02455146227442
+     }
+    ],
+    "sensitivity": {
+     "c_scales": [
+      0.65,
+      0.65
+     ],
+     "l_mismatch": [
+      0.9,
+      1.1
+     ],
+     "r_scale": 1.236
+    }
+   },
+   {
+    "series_stuck": false,
+    "fast_open": false,
+    "step_V": 160,
+    "peak_V": 0.8927840645905029,
+    "after_3ms_V": 0.02568206833248902,
+    "end_V": -1.8082995529329157e-07,
+    "optical_contact_peak_V": 353.81459376467694,
+    "peak_coil_terminal_V": 216.23644589592834,
+    "fast_path_energy_mJ": 0.014267208720667928,
+    "final_capacitor_voltage_estimate_V": 157.99430623015283,
+    "window_s": 0.06,
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 109.87960609020212,
+      "at_s": 0.0002538923296326144,
+      "half_width_us": 1.9999999999998317,
+      "max_dv_dt_V_per_us": 94.84169493161231,
+      "peak_A": 0.058027380606195944,
+      "end_node_peak_to_ground_V": 216.15027720613037
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 216.23644589592834,
+      "at_s": 0.0002566423296326142,
+      "half_width_us": 3.7499999999996847,
+      "max_dv_dt_V_per_us": 84.77784877940782,
+      "peak_A": 0.056266643446746374,
+      "end_node_peak_to_ground_V": 216.15027720613037
+     }
+    ],
+    "sensitivity": {
+     "c_scales": [
+      0.65,
+      0.65
+     ],
+     "l_mismatch": [
+      1.1,
+      0.8999999999999999
+     ],
+     "r_scale": 1.236
+    }
+   },
+   {
+    "series_stuck": false,
+    "fast_open": false,
+    "step_V": 160,
+    "peak_V": 0.8824339122474582,
+    "after_3ms_V": 0.018770946165209402,
+    "end_V": -1.8084941937851408e-07,
+    "optical_contact_peak_V": 376.6735150258566,
+    "peak_coil_terminal_V": 228.46220821249398,
+    "fast_path_energy_mJ": 0.014509713570858514,
+    "final_capacitor_voltage_estimate_V": 157.99409395299242,
+    "window_s": 0.06,
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 105.52944528836535,
+      "at_s": 0.00025914222305547906,
+      "half_width_us": 1.9999999999998317,
+      "max_dv_dt_V_per_us": 90.63146455155503,
+      "peak_A": 0.05651904322953304,
+      "end_node_peak_to_ground_V": 241.53553484897208
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 228.46220821249398,
+      "at_s": 0.00025664222305547927,
+      "half_width_us": 3.9999999999996634,
+      "max_dv_dt_V_per_us": 96.20668902870399,
+      "peak_A": 0.055665157546459,
+      "end_node_peak_to_ground_V": 228.29786120636206
+     }
+    ],
+    "sensitivity": {
+     "c_scales": [
+      0.65,
+      1.5
+     ],
+     "l_mismatch": [
+      0.9,
+      1.1
+     ],
+     "r_scale": 1.236
+    }
+   },
+   {
+    "series_stuck": false,
+    "fast_open": false,
+    "step_V": 160,
+    "peak_V": 0.8901806093296893,
+    "after_3ms_V": 0.024536160272074538,
+    "end_V": -1.808299122685215e-07,
+    "optical_contact_peak_V": 350.7905993327681,
+    "peak_coil_terminal_V": 215.39200382064377,
+    "fast_path_energy_mJ": 0.014260096778241525,
+    "final_capacitor_voltage_estimate_V": 157.9943062237329,
+    "window_s": 0.06,
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 111.10639968371862,
+      "at_s": 0.00025389233194312037,
+      "half_width_us": 2.249999999999811,
+      "max_dv_dt_V_per_us": 94.30700166401361,
+      "peak_A": 0.05804067672982474,
+      "end_node_peak_to_ground_V": 215.29455140477623
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 215.39200382064377,
+      "at_s": 0.00025664233194312014,
+      "half_width_us": 3.7499999999996847,
+      "max_dv_dt_V_per_us": 83.83405489764033,
+      "peak_A": 0.05623208710365006,
+      "end_node_peak_to_ground_V": 215.29455140477623
+     }
+    ],
+    "sensitivity": {
+     "c_scales": [
+      0.65,
+      1.5
+     ],
+     "l_mismatch": [
+      1.1,
+      0.8999999999999999
+     ],
+     "r_scale": 1.236
+    }
+   },
+   {
+    "series_stuck": false,
+    "fast_open": false,
+    "step_V": 160,
+    "peak_V": 0.8857235315503318,
+    "after_3ms_V": 0.020740100886690125,
+    "end_V": -1.8084939401537646e-07,
+    "optical_contact_peak_V": 372.4403563550289,
+    "peak_coil_terminal_V": 229.48846822184046,
+    "fast_path_energy_mJ": 0.014517992236359792,
+    "final_capacitor_voltage_estimate_V": 157.99409395401872,
+    "window_s": 0.06,
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 101.45344395400696,
+      "at_s": 0.0002591454148482833,
+      "half_width_us": 1.9999999999998317,
+      "max_dv_dt_V_per_us": 85.11981678781234,
+      "peak_A": 0.05724332047013537,
+      "end_node_peak_to_ground_V": 237.29175857681443
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 229.48846822184046,
+      "at_s": 0.0002566454148482835,
+      "half_width_us": 3.9999999999996634,
+      "max_dv_dt_V_per_us": 92.37741760858539,
+      "peak_A": 0.05580646585999299,
+      "end_node_peak_to_ground_V": 229.32840028685024
+     }
+    ],
+    "sensitivity": {
+     "c_scales": [
+      1.5,
+      0.65
+     ],
+     "l_mismatch": [
+      0.9,
+      1.1
+     ],
+     "r_scale": 1.236
+    }
+   },
+   {
+    "series_stuck": false,
+    "fast_open": false,
+    "step_V": 160,
+    "peak_V": 0.8959887596994942,
+    "after_3ms_V": 0.025642104720655222,
+    "end_V": -1.8083017958453828e-07,
+    "optical_contact_peak_V": 349.4122444130195,
+    "peak_coil_terminal_V": 214.1443732742437,
+    "fast_path_energy_mJ": 0.014267463050746044,
+    "final_capacitor_voltage_estimate_V": 157.99430622465476,
+    "window_s": 0.06,
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 106.72173442219659,
+      "at_s": 0.00025389550760741825,
+      "half_width_us": 2.249999999999811,
+      "max_dv_dt_V_per_us": 89.36691766759932,
+      "peak_A": 0.05865332886557178,
+      "end_node_peak_to_ground_V": 214.13774273791088
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 214.1443732742437,
+      "at_s": 0.000256895507607418,
+      "half_width_us": 3.7499999999996847,
+      "max_dv_dt_V_per_us": 79.48111676465604,
+      "peak_A": 0.05648458017140506,
+      "end_node_peak_to_ground_V": 214.13774273791088
+     }
+    ],
+    "sensitivity": {
+     "c_scales": [
+      1.5,
+      0.65
+     ],
+     "l_mismatch": [
+      1.1,
+      0.8999999999999999
+     ],
+     "r_scale": 1.236
+    }
+   },
+   {
+    "series_stuck": false,
+    "fast_open": false,
+    "step_V": 160,
+    "peak_V": 0.8843048393924687,
+    "after_3ms_V": 0.019889773112510674,
+    "end_V": -1.8084977175194391e-07,
+    "optical_contact_peak_V": 370.3971053198596,
+    "peak_coil_terminal_V": 228.2821079210363,
+    "fast_path_energy_mJ": 0.014509810145907558,
+    "final_capacitor_voltage_estimate_V": 157.9940939411245,
+    "window_s": 0.06,
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 101.50473395529716,
+      "at_s": 0.00025939542939776376,
+      "half_width_us": 2.249999999999811,
+      "max_dv_dt_V_per_us": 84.90805103495738,
+      "peak_A": 0.05729267518002181,
+      "end_node_peak_to_ground_V": 235.5653957046329
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 228.2821079210363,
+      "at_s": 0.000256645429397764,
+      "half_width_us": 3.9999999999996634,
+      "max_dv_dt_V_per_us": 90.90971806517152,
+      "peak_A": 0.055811010797376735,
+      "end_node_peak_to_ground_V": 228.11216391804723
+     }
+    ],
+    "sensitivity": {
+     "c_scales": [
+      1.5,
+      1.5
+     ],
+     "l_mismatch": [
+      0.9,
+      1.1
+     ],
+     "r_scale": 1.236
+    }
+   },
+   {
+    "series_stuck": false,
+    "fast_open": false,
+    "step_V": 160,
+    "peak_V": 0.8928808397889727,
+    "after_3ms_V": 0.024486081655231685,
+    "end_V": -1.8083045668697355e-07,
+    "optical_contact_peak_V": 346.08080054982264,
+    "peak_coil_terminal_V": 213.81567130979803,
+    "fast_path_energy_mJ": 0.014260396877909039,
+    "final_capacitor_voltage_estimate_V": 157.99430621133612,
+    "window_s": 0.06,
+    "windings": [
+     {
+      "coil": "l8a",
+      "peak_V": 107.84967462676755,
+      "at_s": 0.000253895522872814,
+      "half_width_us": 2.249999999999811,
+      "max_dv_dt_V_per_us": 89.38954619083162,
+      "peak_A": 0.05867429329798338,
+      "end_node_peak_to_ground_V": 213.79553695727452
+     },
+     {
+      "coil": "l8b",
+      "peak_V": 213.81567130979803,
+      "at_s": 0.00025689552287281377,
+      "half_width_us": 3.9999999999996634,
+      "max_dv_dt_V_per_us": 78.58452649568018,
+      "peak_A": 0.05644730683406141,
+      "end_node_peak_to_ground_V": 213.79553695727452
+     }
+    ],
+    "sensitivity": {
+     "c_scales": [
+      1.5,
+      1.5
+     ],
+     "l_mismatch": [
+      1.1,
+      0.8999999999999999
+     ],
+     "r_scale": 1.236
+    }
+   }
+  ],
+  "injection": [
+   {
+    "step_V": -160,
+    "capacitance_scale": 1,
+    "Crss_ratio": 0.5,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.6325957706534064
+   },
+   {
+    "step_V": -160,
+    "capacitance_scale": 2,
+    "Crss_ratio": 0.5,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.561845900974452
+   },
+   {
+    "step_V": -160,
+    "capacitance_scale": 4,
+    "Crss_ratio": 0.5,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.4862985629895896
+   },
+   {
+    "step_V": -160,
+    "capacitance_scale": 1,
+    "Crss_ratio": 2,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.5045642406379258
+   },
+   {
+    "step_V": -160,
+    "capacitance_scale": 2,
+    "Crss_ratio": 2,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.4775113177606336
+   },
+   {
+    "step_V": -160,
+    "capacitance_scale": 4,
+    "Crss_ratio": 2,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.47751208286073876
+   },
+   {
+    "step_V": 0,
+    "capacitance_scale": 1,
+    "Crss_ratio": 0.5,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.09439784628643162
+   },
+   {
+    "step_V": 0,
+    "capacitance_scale": 2,
+    "Crss_ratio": 0.5,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.14261456546876872
+   },
+   {
+    "step_V": 0,
+    "capacitance_scale": 4,
+    "Crss_ratio": 0.5,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.19739709233628602
+   },
+   {
+    "step_V": 0,
+    "capacitance_scale": 1,
+    "Crss_ratio": 2,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.15463128912024013
+   },
+   {
+    "step_V": 0,
+    "capacitance_scale": 2,
+    "Crss_ratio": 2,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.2262741059528723
+   },
+   {
+    "step_V": 0,
+    "capacitance_scale": 4,
+    "Crss_ratio": 2,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.30687402114846696
+   },
+   {
+    "step_V": 160,
+    "capacitance_scale": 1,
+    "Crss_ratio": 0.5,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.5322706078735432
+   },
+   {
+    "step_V": 160,
+    "capacitance_scale": 2,
+    "Crss_ratio": 0.5,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.4775110986081722
+   },
+   {
+    "step_V": 160,
+    "capacitance_scale": 4,
+    "Crss_ratio": 0.5,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.47751185951772057
+   },
+   {
+    "step_V": 160,
+    "capacitance_scale": 1,
+    "Crss_ratio": 2,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.6692941831657465
+   },
+   {
+    "step_V": 160,
+    "capacitance_scale": 2,
+    "Crss_ratio": 2,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.6124818037408994
+   },
+   {
+    "step_V": 160,
+    "capacitance_scale": 4,
+    "Crss_ratio": 2,
+    "off_bias_V": -6.2,
+    "release": false,
+    "driver_transition_ns": 20,
+    "slow_optical_shunt_closed": false,
+    "peak_V": 0.5561283369203998
+   }
+  ]
+ },
+ "rail_loss_matrix": {
+  "cases": 468,
+  "max_mixer_V": 0.8789910021443167,
+  "worst": {
+   "lost_pin": "hv",
+   "output_sign": -1,
+   "edge_us": 0.05,
+   "pin_fall_us": 4,
+   "closed_us": 0.4012903309650164
+  }
+ },
+ "checks": {
+  "named_20k_full_load_within_0p5_dB": true,
+  "named_band_20Hz_20kHz_within_0p5_dB": true,
+  "low_line_rail_named_within_0p5_dB": true,
+  "every_full_load_case_within_0p5_dB": true,
+  "every_small_signal_band_within_0p5_dB": false,
+  "thd_below_1_pct": true,
+  "quiet_below_1_V": true,
+  "playing_after_switch_below_1_V": true,
+  "handover_below_1_V": true,
+  "injection_below_0p7_V": true,
+  "windings_below_400_V": true,
+  "rail_loss_matrix_below_1_V": true,
+  "PA_rail_mean_below_16p5_mA": true,
+  "hot_short_case_below_76_C": true
+ }
+}

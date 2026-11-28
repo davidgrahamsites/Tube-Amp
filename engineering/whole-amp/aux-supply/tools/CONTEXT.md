@@ -13,3 +13,7 @@ Current load route: calculate_loads.py owns source-bound load arithmetic; screen
 Transformer option route: screen_transformer_candidates.py reads ../transformer-candidates.json and reuses evaluate() without editing the historical engine; it applies actual primary ratios, the proposed U4 limit and each candidate's current rating. check_transformer_candidates.py audits matrix coverage/scaling and deliberately rejects selection claims. Products remain in ../results/transformer-candidates and do not replace adopted-circuit evidence.
 
 Hold-up route: hold_up_screen.py reads the explicit hold-up contract, reuses the rectifier deck/runtime and load arithmetic, and writes results/hold-up/screen.json. hold_up_comparison.py changes only the reference transformer's rating/resistance in a limited follow-up grid. check_hold_up.py uses independent closed-form capacitor discharge and divider arithmetic, checks input hashes and rejects corruptions; it also compares all22 native CAD files with the pinned baseline. Simulation uses KiCad Python; the audit uses system Python. Public acceptance and unqualified interfaces are in ../hold-up-review.md; no native write path exists here.
+
+The U4 margin tool compares regulator arrangements. The cutoff-load cooling runner applies the selected arrangement to the joint guard and switch load. Use the HTML report for the installed check.
+
+The relay-loss-window tool starts from the loaded rectifier ripple trough. It reports time to loss of regulator input headroom on abrupt secondary loss.

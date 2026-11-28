@@ -10,6 +10,8 @@ Existing decisions stay fixed: selectable 120 V / 220 V electric build (FB-106; 
 
 Effort below describes scope, not a promised elapsed time: S = bounded audit/repair; M = several linked checks; L = substantial design iteration; H = requires physical work. Each row names its inputs, output, dependencies and objective completion evidence. Exact execution revisions and commands belong in the linked module's evidence, not duplicated here.
 
+CB-011 · T04 stays open. Bench-check low-level shunt capacitance, fault cutoff and installed temperatures. Use the five-page paper kit for the rear cover before placement. [CB-010/011 evidence](../../engineering/whole-amp/effects-loop/common-buffer/gain-cutoff-template.html).
+
 CB-009 tested the revised return at low line and checked winding voltage, regulator losses and the guarded PA sink against the approximate 155 mm cabinet reading. T04 remains open for full-load audio, faults, fit and thermal verification. [Qualification report](../../engineering/whole-amp/effects-loop/common-buffer/winding-rail-fit.html).
 
 CB-008 checked sudden-loss protection, a 50 VA auxiliary transformer and external cooling. T04 awaits installed transient, full-band and fit checks. [Qualification report](../../engineering/whole-amp/effects-loop/common-buffer/sudden-loss.html).

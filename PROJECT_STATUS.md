@@ -1,5 +1,7 @@
 # Project status
 
+CB-011 · Hold three-board return placement. Full-level hot gain is −0.453 dB. One remaining local film capacitor and a 10 ms delayed guarded cutoff hold the modeled PA rail to 346.51 V. U4 is 88.15 °C at 60 °C air. The charge-dependent low-level response, actual switching and covered-cabinet fit remain open. [Gain, cutoff, cooling and illustrated full-size cabinet guide](engineering/whole-amp/effects-loop/common-buffer/gain-cutoff-template.html).
+
 CB-009 · Hold return placement. The revised PA rail holds the low-line load in simulation. The 400 V winding pair, hot regulator margin and recessed Fischer mount require an assembled check. Approximate cover-on depth is 155 mm. [Winding, supply and fit report](engineering/whole-amp/effects-loop/common-buffer/winding-rail-fit.html).
 
 CB-008 · Hold return placement. The fast shunt contained the specified sudden silent fault in simulation. A 50 VA Triad winding carried the modeled load with revised regulators. The flat-base Fischer sink clears only the shallow-tray depth screen. Qualify gate timing, winding pulse voltage, audio corners and installed cooling. [Sudden-loss and fit report](engineering/whole-amp/effects-loop/common-buffer/sudden-loss.html).

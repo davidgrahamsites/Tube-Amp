@@ -20,3 +20,5 @@ CB-007. Amplifier integration owns the 310 V supply and mute trial. Read supply-
 CB-008. Integration owns the receiver guard. Use the CB-007 circuit, PA340 model and the coil, switch and gate data in sudden-loss.html. Run the guard factories in tools with KiCad Python. Compare the fast-fault, detector, gate injection, handover, loaded audio and sustained-load receipts. Human check: capture simultaneous rail, gate and mixer waveforms and compare the populated audio load before placement.
 
 CB-009. Integration owns the winding and revised rail trial. Use winding-rail-fit.html, tools/low_line_rail.py and tools/rail_winding_audio.py. Results are in results/low-line-rail.json and results/rail-winding-audio.json. Compare port, winding, regulator and cutoff waveforms at the same load and temperature before placement.
+
+The CB-010/011 audio, cutoff and cabinet checkpoint is in [the engineering reader](gain-cutoff-template.html).
