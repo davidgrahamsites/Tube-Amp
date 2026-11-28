@@ -2828,6 +2828,38 @@
       ],
       "supersedes": [],
       "next_action": "See CB-006 engineering checkpoint."
+    },
+    {
+      "id": "FB-187",
+      "recorded_on": "2026-11-28",
+      "occurred_on": "2026-11-28",
+      "authority": "user",
+      "kind": "recovery-supply-qualification",
+      "quote": "Check the actual parts and simulate the faults before putting it on the three-board layout.",
+      "source": "CB-006 continuation chat",
+      "interpretation": "Develop the PA340CC rail, independent cutoff, startup mute and cooling. Gate placement on their evidence.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html"
+      ],
+      "supersedes": [],
+      "next_action": "Use CB-007 fault and thermal evidence before layout."
+    },
+    {
+      "id": "FB-188",
+      "recorded_on": "2026-11-28",
+      "occurred_on": "2026-11-28",
+      "authority": "user",
+      "kind": "external-review-preference",
+      "quote": "remember, you can keep calling claude to do tasks",
+      "source": "CB-007 continuation chat",
+      "interpretation": "Use Claude repeatedly for bounded tasks and independent checks during amplifier work when useful.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html"
+      ],
+      "supersedes": [],
+      "next_action": "Give Claude scoped checks and verify its conclusions against the circuit and receipts."
     }
   ]
 }

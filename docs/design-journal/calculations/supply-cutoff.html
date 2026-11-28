@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CB-007 Supply Cutoff Calculations | Renegade Amplifier Journal</title>
+  <meta name="description" content="Source-linked CB-007 overvoltage, sequence, loop, mute-race, and thermal calculations.">
+  <!-- reader-head --><link rel="stylesheet" href="../../engineering-reader/assets/reader.css"><link rel="stylesheet" href="../../engineering-reader/assets/katex/katex.min.css"><script defer src="../../engineering-reader/assets/katex/katex.min.js"></script><script defer src="../../engineering-reader/assets/katex/auto-render.min.js"></script><script defer src="../../engineering-reader/assets/math.js"></script><!-- /reader-head -->
+</head>
+<body>
+  <!-- reader-nav --><header><nav aria-label="Documents"><a href="../../engineering-reader/index.html">Engineering status</a><a href="../../engineering-reader/glossary.html">Vocabulary key</a><a href="../../engineering-reader/document-standard.html">Document standard</a></nav></header><!-- /reader-nav -->
+  <main>
+    <section class="intro">
+      <p>Renegade amplifier design journal · CB-007 · 28 November 2026</p>
+      <h1>Supply cutoff and sequence calculations</h1>
+      <p>This entry checks the modeled overvoltage cutoff, supply loop, start and mute sequence, and heat path for the single-rail PA340 return candidate. These are simulations and arithmetic. They do not approve a circuit, placement, component, or hardware test.</p>
+      <p><strong>Choice informed:</strong> whether the modeled supply cutoff and sequence are sufficiently bounded to continue the return-stage study. The present evidence leaves important cases failed or untested.</p>
+    </section>
+
+    <section aria-labelledby="threshold">
+      <h2 id="threshold">1. Overvoltage trip corners</h2>
+      <p><strong>Inputs and sources:</strong> the supply-fault factory enumerates 32 combinations of reference error, divider-resistor tolerance, offset, and input bias current. The inputs and formula are in <a href="../../../engineering/whole-amp/effects-loop/common-buffer/tools/supply_faults.py">supply_faults.py</a>; the saved trip range is in <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-faults.json">supply-faults.json</a>.</p>
+      <dl>
+        <dt><span class="math">\(V_R\)</span></dt><dd>Nominal 2.5 V reference before its fractional error.</dd>
+        <dt><span class="math">\(r\)</span></dt><dd>Reference multiplier, 0.991 to 1.009.</dd>
+        <dt><span class="math">\(R_T,R_B\)</span></dt><dd>Top and bottom divider resistances. Nominals are 328 kΩ and 2.49 kΩ; each tolerance multiplier is 0.996 to 1.004.</dd>
+        <dt><span class="math">\(V_{OS}\)</span></dt><dd>Input offset allowance, −4 to +4 mV.</dd>
+        <dt><span class="math">\(I_B\)</span></dt><dd>Input bias-current allowance, −62.5 to +62.5 nA.</dd>
+        <dt><span class="math">\(V_T\)</span></dt><dd>Overvoltage trip voltage, in volts.</dd>
+      </dl>
+      <div class="math">\[V_T=(2.5r+V_{OS})\left(1+\frac{R_T}{R_B}\right)+I_BR_T\]</div>
+      <p>The minimum and maximum over the 32 endpoint combinations are <span class="math">\(V_{T,min}=325.683\;\mathrm V\)</span> and <span class="math">\(V_{T,max}=338.028\;\mathrm V\)</span>. Both lie below the 350 V absolute-maximum comparison used by the fault screen. The upper endpoint is used for the fast-rise case because it delays detection most. A separate LM2903BIDR detector surrogate gives 343.533 V peak at the slowest modeled threshold with 1.9 ms actuator time and 15.8 µs comparator delay. Extending actuator time to 10 ms gives 365.255 V. These are model outputs, not measured comparator or actuator timing.</p>
+      <p><strong>Limit:</strong> this is the modeled comparator threshold range. It does not prove the actual reference, comparator, board layout, or trip delay.</p>
+    </section>
+
+    <section aria-labelledby="fault-rise">
+      <h2 id="fault-rise">2. Pass-device short and cutoff delay</h2>
+      <p><strong>Question:</strong> estimate the PA340 rail peak after the pass device shorts to a 440 V raw source and the cutoff waits for its trip delay.</p>
+      <p>The fast-rise model uses the minimum series resistance <span class="math">\(R=0.95(1820)=1729\;\mathrm\Omega\)</span>, initial rail <span class="math">\(V_0=310\;\mathrm V\)</span>, and one remaining reservoir <span class="math">\(C=17.6\;\mathrm{\mu F}\)</span>. Let the source be <span class="math">\(V_S=440\;\mathrm V\)</span>. For an RC charge, voltage at time <span class="math">\(t\)</span> is:
+      <div class="math">\[V(t)=V_S-(V_S-V_0)e^{-t/(RC)}\]</div>
+      <p>Time to the high trip corner is:</p>
+      <div class="math">\[t_T=RC\ln\!\left(\frac{V_S-V_0}{V_S-V_{T,max}}\right)=1729(17.6\times10^{-6})\ln\!\left(\frac{440-310}{440-338.028}\right)=7.390\;\mathrm{ms}\]</div>
+      <p>After cutoff delay <span class="math">\(t_D\)</span>, the peak is:</p>
+      <div class="math">\[V_{peak}=440-(440-310)e^{-(t_T+t_D)/(RC)}\]</div>
+      <table>
+        <thead><tr><th scope="col">Fault case</th><th scope="col">Substitution</th><th scope="col">Peak rail</th><th scope="col">350 V screen</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Both minimum reservoirs; 2 ms delay</th><td><span class="math">\(C=35.2\;\mathrm{\mu F},\;t_D=2\;\mathrm{ms}\)</span></td><td>341.325 V</td><td>Below</td></tr>
+          <tr><th scope="row">One reservoir open; 2 ms delay</th><td><span class="math">\(C=17.6\;\mathrm{\mu F},\;t_D=2\;\mathrm{ms}\)</span></td><td>344.515 V</td><td>Below by 5.485 V</td></tr>
+          <tr><th scope="row">One reservoir open; 10 ms delay</th><td><span class="math">\(C=17.6\;\mathrm{\mu F},\;t_D=10\;\mathrm{ms}\)</span></td><td>366.589 V</td><td>Exceeds by 16.589 V</td></tr>
+        </tbody>
+      </table>
+      <p>For the one-reservoir case, the maximum delay before reaching 350 V is <span class="math">\(RC\ln((440-338.028)/(440-350))=3.800\;\mathrm{ms}\)</span>. The 10 ms case fails that screen. The factory checks the one-open result against a closed-form result and repeats it at half the time step; both agree within 1 µV.</p>
+      <p>The 344.515 V (2 ms) and 366.589 V (10 ms) values above are the original prescribed-delay RC calculation. The updated detector/actuator transient gives 343.533 V at 1.9 ms and 365.255 V at 10 ms. It includes a modeled LM2903BIDR delay but is still not measured hardware timing. The supply-fault receipt also models loss of both reservoirs with only a 0.1 µF local bypass, a welded cutoff, and a raw-source diagnostic; bypass-only and welded-cutoff cases rise to about 440 V. The 550 V case is an out-of-allocation diagnostic.</p>
+      <p><strong>Scope:</strong> the RC source is prescribed and the cutoff delay is imposed. The result is not an actual supply transient, component rating, trip-time measurement, or proof that the cutoff can interrupt the fault current.</p>
+    </section>
+
+    <section aria-labelledby="audio-loop">
+      <h2 id="audio-loop">3. Regulator audio and loop correction</h2>
+      <p><strong>Supply scenarios:</strong> the coupled regulator surrogate holds the PA340 rail near 310 V in the nominal, low-line and high-hot cases. At raw 390 V, the modeled rail spans 309.539–309.542 V and the 20 kHz return gives 134.839 V peak at 0.243% THD. At raw 340 V with low-line corners, it spans 309.284–309.294 V and gives 134.838 V at 0.242% THD. At raw 440 V and 85 °C, with the precharge resistor kept in circuit, it spans 309.285–309.291 V and gives 134.848 V at 0.240% THD.</p>
+      <p>The 290 V brownout case falls to 272.420–272.488 V and gives 132.938 V peak at 1.611% THD, above the 1% screen. With the precharge bypass welded during a 390-to-440 V transition, the unguided solver starts at 376.332 V and reaches 374.652–374.789 V over the sampled cycles; reject that waveform. Released operating-point guesses start at 309.63 V and give 310.275–310.323 V over the observation interval. The hot output short holds the modeled port near 4.3 mV, but this does not establish the physical cutoff or mute response.</p>
+      <p><strong>Feedback correction:</strong> the original network used one 10 nF capacitor. The replacement uses a 100 nF capacitor and 100 kΩ series resistor in the outer controller loop. Phase margin is <span class="math">\(10.308^\circ\)–\(20.459^\circ\)</span> across four sampled source/capacitance corners with the original network. The corrected network gives <span class="math">\(73.769^\circ\)–\(83.671^\circ\)</span> across the same corners. Margin is calculated at each unity-gain crossing as <span class="math">\(180^\circ+\angle L(j\omega_c)\)</span>. The result addresses this regulator model only; it does not qualify the real controller or power stage.</p>
+      <p>Under a 2 mA load step, the four corrected-loop rail cases stay between 308.994 and 310.145 V through the 0.4 s run. These are modeled load and ripple tests, not measured supply regulation.</p>
+    </section>
+
+    <section aria-labelledby="start-mute">
+      <h2 id="start-mute">4. Startup, mute and auxiliary power</h2>
+      <p>The cold-start fixtures begin with all supply nodes at zero. Four attempts, including 20 ms and 500 ms positive-rail ramps, different negative-rail delays, and a gain-capacitor short, abort at time zero with singular-matrix and timestep errors in the OPA134 model. They provide no cold-start result.</p>
+      <p>Two powered-start fixtures begin with the modeled high-voltage rail initialized at 100 V. With 500 ms and 20 ms rail rise, the earliest sustained release estimates are 1.985 s and 1.778 s. These runs complete at 5 s. A powered-start case with the gain capacitor short does not release within 5 s; its final bias is 307.548 V and maximum precharge output is 4.577 V. Initializing at 100 V is not evidence of startup from zero.</p>
+      <p>The revised supply control closes the precharge bypass at a differential below 140 V and opens it above 160 V. In the modeled startup envelope, closure occurs at 1.144 s with 340 V raw, 1.473 s at 390 V, and 1.825 s at 440 V. At 400 V raw with the bypass held open, a 1.4 s sustained load bottoms at 283.50 V; with the bypass closed, the rail stays above 309.6 V. A pass short before ARM reaches 340.238 V with 80.972 mA worst modeled feed current for 52.8 µF total capacitance; the bypass-weld-before-ARM case has higher current and remains separately faulted. These are simulation conditions, not startup qualification.</p>
+      <p>The earlier relay-race fixture applies a 160 V step through 3.3 kΩ and 1.1 µF, with 500 pF across a 100 kΩ mixer surrogate. Its 3 ms opening model gives 154.798 V at simultaneous onset and when the contact is welded. This is one coarse contact model.</p>
+      <p>The refined optical-mute fixture uses a 160 V step with a 1 µs edge, an allocated 0.25 ms series-path opening, and 3 ms shunt closure. It tests 150 pF across the open series switch and 4.7 Ω at the receiver. A 100 Ω receiver resistor yields 2.441 V; the 4.7 Ω resistor reduces that to 0.912 V. At 30 pF it gives 0.197 V. A failed series contact gives 2.564 V. With no warning, the 150 pF case gives 154.226 V before isolation.</p>
+      <table><thead><tr><th scope="col">Optical mute condition</th><th scope="col">Peak mixer voltage</th></tr></thead><tbody><tr><td>30 pF, 5 ms advance, 4.7 Ω receiver</td><td>0.197 V</td></tr><tr><td>150 pF, 5 ms advance, 4.7 Ω receiver</td><td>0.912 V</td></tr><tr><td>150 pF, 5 ms advance, series switch stuck on</td><td>2.564 V</td></tr><tr><td>150 pF, no warning lead</td><td>154.226 V</td></tr></tbody></table>
+      <p>The 1 V silent-receiver screen is an engineering target. These switch models omit PCB feedthrough, nonlinear device charge and wet-stage response. Neither mute direction is hardware-qualified.</p>
+      <p>The simple mute coil screen assumes 12.6 V, 150 Ω nominal resistance, −10% resistance tolerance and −25 °C copper resistance:</p>
+      <div class="math">\[I_{coil}=\frac{12.6}{150(0.90)(1-0.00393\times50)}=0.1162\;\mathrm A\]</div>
+      <p>Across 72 auxiliary rectifier cases, this 12 V coil plus other trial loads puts all cases above the provisional 0.25 A half-winding screen; maximum modeled RMS current is 0.4566 A and conditional regulator heat is 5.707 W. A three-photo-switch mute removes coil current but still puts 48 of 72 cases above the winding screen; 56 cases have at least one flag. Its maximum half-winding current is 0.3825 A and conditional regulator heat is 5.503 W. The 0.25 A value is a screen, not a transformer rating. Neither auxiliary option is selected.</p>
+      <p>The seven state-logic injection cases clear the latch, inhibit play, reject a held button and accept a fresh edge. This is a logic-interface simulation. It does not verify the actual POR, relay or switching devices.</p>
+    </section>
+
+    <section aria-labelledby="thermal">
+      <h2 id="thermal">5. Assumed heat path</h2>
+      <p>The fault-budget factory adds a conservative <span class="math">\(0.800\;\mathrm W=320\;\mathrm V\times2.5\;\mathrm{mA}\)</span> reserve to the modeled full-sine and short losses. The report deliberately counts some idle loss twice. For the revised thermal target, assume 60 °C effective air at the external wall and 5 K/W total from that wall to the device case:</p>
+      <div class="math">\[T_C=T_{wall}+P_{budget}\theta_{wall-case}\]</div>
+      <p>With full-sine loss <span class="math">\(P_{full}=1.2554+0.800=2.0554\;\mathrm W\)</span>, <span class="math">\(T_{C,full}=60+2.0554(5)=70.28\;^\circ\mathrm C\)</span>. With short loss <span class="math">\(P_{short}=2.044+0.800=2.844\;\mathrm W\)</span>, <span class="math">\(T_{C,short}=60+2.844(5)=74.22\;^\circ\mathrm C\)</span>. The 79 °C nominal trip threshold with ±3 °C tolerance spans 76–82 °C, above these steady estimates.</p>
+      <p><strong>Superseded:</strong> the prior 70 °C ambient table is rejected. It placed the 80.28 °C full-sine estimate above the nominal 79 °C trip point, so it cannot describe a valid operating baseline. The replacement sensor transient initializes at 60 °C with degraded fins and joint: an attached sensor with −3 °C error gives an 82.15 °C case peak at 1 s lag and 83.17 °C at 8 s lag. A detached sink-reading sensor does not trip within 300 s and the case reaches 91.08 °C. These lag outcomes exceed the steady estimates because of delayed sensing and fault heat; they remain model results, not a hardware sensor test. The 60 °C wall and 5 K/W path remain assumptions, not a selected carrier, measured airflow, installed interface, or temperature measurement.</p>
+    </section>
+
+    <section aria-labelledby="decision">
+      <h2 id="decision">6. Engineering interpretation and open checks</h2>
+      <p>CB-007 improves the modeled regulator-loop margin and bounds several cutoff and sequence cases. The evidence still includes a 10 ms one-reservoir overvoltage fail, cold-start solver failures, a high mixer step with no mute warning, auxiliary-winding cases above a provisional current screen, and a hot case above the assumed temperature target when the fins are obstructed. Do not place or adopt this supply or return stage from these results.</p>
+      <p>Keep placement and hardware checks open. Qualify the exact supply and cutoff switch, prove operation from zero-voltage startup, resolve the mute race and welded-contact state, and confirm the full PA340 carrier and heat path. Check spring drive and downstream transfer after the supply behavior is fixed.</p>
+    </section>
+
+    <section aria-labelledby="vocabulary">
+      <h2 id="vocabulary">Vocabulary</h2>
+      <dl>
+        <dt>Absolute maximum</dt><dd>A device limit that must not be exceeded; it is not a normal operating target.</dd>
+        <dt>Cold start</dt><dd>A simulation initialized with the modeled supply and circuit states at zero.</dd>
+        <dt>Cutoff delay</dt><dd>Time between the modeled trip crossing and disconnection of the source.</dd>
+        <dt>Loop phase margin</dt><dd>Angle from the loop phase to −180 degrees at a unity-gain crossing.</dd>
+        <dt>NC relay contact</dt><dd>Normally closed relay contact; it opens when the coil is energized.</dd>
+        <dt>Overvoltage (OV)</dt><dd>Supply voltage above the declared operating window.</dd>
+        <dt>Thermal resistance</dt><dd>Temperature rise divided by heat flow, in K/W.</dd>
+      </dl>
+    </section>
+
+    <section aria-labelledby="sources">
+      <h2 id="sources">Sources</h2>
+      <ul>
+        <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html">CB-007 engineering report</a> — test limits and interpretation.</li>
+        <li>Nine result receipts are hash-listed by the <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-audit.json">supply audit</a>: <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-audio.json">audio</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-loop.json">loop</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-mute.json">startup/mute</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-faults.json">faults/thermal</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-sequence.json">logic sequence</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-optical-mute.json">optical mute</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-aux.json">coil auxiliary</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-aux-optical.json">optical auxiliary</a>, and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-detector.json">LM2903BIDR detector/actuator transient</a>.</li>
+        <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/apex-fault-budget.json">PA340 full-sine and short power budgets</a>.</li>
+        <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-aux.json">12 V mute-coil auxiliary supply sweep</a> and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-aux-optical.json">three-switch optical mute sweep</a> — 72 source/load cases each.</li>
+        <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-optical-mute.json">Optical-mute receiver fault simulations</a> and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/results/supply-sequence.json">seven latch/arm logic tests</a>.</li>
+        <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/tools/supply_aux.py">Auxiliary-winding case factory</a> and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/tools/optical_mute.py">optical-mute fault factory</a>.</li>
+        <li><a href="../../../engineering/whole-amp/effects-loop/common-buffer/tools/supply_trial.py">coupled supply/audio factory</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/tools/supply_loop.py">loop and load-step factory</a>, <a href="../../../engineering/whole-amp/effects-loop/common-buffer/tools/supply_mute.py">startup and mute factory</a>, and <a href="../../../engineering/whole-amp/effects-loop/common-buffer/tools/supply_faults.py">fault and thermal calculator</a>.</li>
+        <li><a href="../chapters/composite-return-feasibility.html#cb-007-supply-cutoff">CB-007 journal chapter</a>; <a href="../CONTEXT.md">journal contract</a>; <a href="CONTEXT.md">calculation ledger contract</a>.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

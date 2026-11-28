@@ -4,3 +4,5 @@ Owner: integration. Inputs: declared cases and source hashes. Process: worker ru
 composite-* products belong to CB-002. Keep failed controls and exact inputs distinct from accepted numerical evidence. Each rerun replaces its same-name products and deletes superseded case outputs; no full board copies are made. Ideal-sink controls and a modeled servo sink remain distinct; neither qualifies real references, transistor packages or protection.
 
 output-heat.json records CB-004 load/bias cases and arithmetic checks; source hashes bind the contract and factory. Physical safe operating area, temperature, supply faults and enclosure fit remain unqualified.
+
+CB-007. Integration owns supply-audio, supply-detector, supply-loop, supply-mute, supply-faults, supply-optical-mute, supply-sequence, supply-aux, supply-aux-optical and supply-audit JSON. Each result is recreated by the factory named in ../supply-cutoff.html or the tools contract. Inspect failed cold starts, absolute-voltage excursions, unannounced rail loss and winding/thermal failures before making a layout decision.

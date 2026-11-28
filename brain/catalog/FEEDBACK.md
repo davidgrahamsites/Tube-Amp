@@ -1,6 +1,6 @@
 # Feedback and decision trail
 
-Generated as of 2026-11-27; source: ../feedback/events.json. Backfilled original timestamps may be unknown. Incorporated means recorded, not build-complete.
+Generated as of 2026-11-28; source: ../feedback/events.json. Backfilled original timestamps may be unknown. Incorporated means recorded, not build-complete.
 
 ## FB-001 — requirement
 Authority: user. Disposition: incorporated. Recorded: 2026-11-20. Original date: unknown.
@@ -1988,4 +1988,26 @@ Claude may be used for external checking. Review its claims against source data 
 Source: Current Renegade chat, continuation after CB-005
 
 - [engineering/whole-amp/effects-loop/common-buffer/apex-return.html](<../../engineering/whole-amp/effects-loop/common-buffer/apex-return.html>)
+
+## FB-187 — recovery-supply-qualification
+Authority: user. Disposition: incorporated. Recorded: 2026-11-28. Original date: 2026-11-28.
+
+> Check the actual parts and simulate the faults before putting it on the three-board layout.
+
+Develop the PA340CC rail, independent cutoff, startup mute and cooling. Gate placement on their evidence.
+
+Source: CB-006 continuation chat
+
+- [engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html](<../../engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html>)
+
+## FB-188 — external-review-preference
+Authority: user. Disposition: incorporated. Recorded: 2026-11-28. Original date: 2026-11-28.
+
+> remember, you can keep calling claude to do tasks
+
+Use Claude repeatedly for bounded tasks and independent checks during amplifier work when useful.
+
+Source: CB-007 continuation chat
+
+- [engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html](<../../engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html>)
 

@@ -10,6 +10,8 @@ Existing decisions stay fixed: selectable 120 V / 220 V electric build (FB-106; 
 
 Effort below describes scope, not a promised elapsed time: S = bounded audit/repair; M = several linked checks; L = substantial design iteration; H = requires physical work. Each row names its inputs, output, dependencies and objective completion evidence. Exact execution revisions and commands belong in the linked module's evidence, not duplicated here.
 
+CB-007 screened the dedicated PA340CC supply, independent cutoff, two mute circuits and installed cooling budgets. T04 remains active. Resolve auxiliary winding capacity, abrupt rail-loss timing, raw maximum and case-temperature proof before routing. [Fault results and part limits](../../engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html).
+
 CB-006 tested a return-stage candidate against the CB-005 load. Verify the dedicated rail, independent trip, startup mute, removable carrier and heat path before native layout. [Signal and fault results](../../engineering/whole-amp/effects-loop/common-buffer/apex-return.html). T04 remains active.
 
 ## Ordered queue

@@ -1,5 +1,7 @@
 # Project status
 
+CB-007 · Hold return-stage placement. With one reservoir open, the modeled 2 ms cutoff holds a 440 V pass short to 344.51 V. Sudden rail loss reaches the mixer before mute, 48 of 72 optical-mute cases exceed winding current, and the internal mount can trip during full output. An external-wall cooler is the next thermal candidate. [Supply, parts and fault report](engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html).
+
 CB-006 · The PA340CC and OPA134PA models drove the CB-005 overload target at 135.54 V peak and 0.292% THD. A sagged supply failed at 1.367% THD. Qualify the protected supply, startup mute, serviceable carrier and heat path before placement. [Engineering record](engineering/whole-amp/effects-loop/common-buffer/apex-return.html).
 
 November 27 · CB-005. The composite effects return now has a nine-case simulation against the modeled spring-send, mixer and phase-inverter load. At 20 kHz, 100 pF of added wiring capacitance brings the external current estimate to 1.948 mA at the 135 V peak overload target. Keep the 2 mA servo out of the board layout. Carry the measured harness capacitance, exact device models, hot operating limits and protection into the next recovery design. [Engineering evidence](engineering/whole-amp/effects-loop/common-buffer/composite-review.html#integrated-load).

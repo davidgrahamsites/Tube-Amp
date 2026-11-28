@@ -1,0 +1,373 @@
+{
+  "ov_trip_V": [
+    325.68336088446216,
+    338.02827101308037
+  ],
+  "faults": [
+    {
+      "case": "both caps at minimum",
+      "raw_V": 440,
+      "cap_uF": 35.2,
+      "delay_ms": 2.0,
+      "initial_V": 310,
+      "peak_V": 341.3247916420453,
+      "worst_feed_mA": 75.18796992481202,
+      "total_feed_J": 0.12607237729705092,
+      "disconnected": true,
+      "final_time_ms": 16.779366218551598,
+      "below_absolute_max": true
+    },
+    {
+      "case": "one reservoir open",
+      "raw_V": 440,
+      "cap_uF": 17.6,
+      "delay_ms": 2.0,
+      "initial_V": 310,
+      "peak_V": 344.51474304475295,
+      "worst_feed_mA": 75.18796992481202,
+      "total_feed_J": 0.06848657819687584,
+      "disconnected": true,
+      "final_time_ms": 9.389683109284636,
+      "below_absolute_max": true
+    },
+    {
+      "case": "late disconnect",
+      "raw_V": 440,
+      "cap_uF": 17.6,
+      "delay_ms": 10.0,
+      "initial_V": 310,
+      "peak_V": 366.5887746096786,
+      "worst_feed_mA": 75.18796992481202,
+      "total_feed_J": 0.10129496948288468,
+      "disconnected": true,
+      "final_time_ms": 17.389683109284636,
+      "below_absolute_max": false
+    },
+    {
+      "case": "reservoir lost; local bypass only",
+      "raw_V": 440,
+      "cap_uF": 0.09999999999999999,
+      "delay_ms": 2.0,
+      "initial_V": 310,
+      "peak_V": 439.9990343261214,
+      "worst_feed_mA": 75.18796992481202,
+      "total_feed_J": 0.0008449999999533746,
+      "disconnected": true,
+      "final_time_ms": 2.041986835848199,
+      "below_absolute_max": false
+    },
+    {
+      "case": "cutoff welded and pass short",
+      "raw_V": 440,
+      "cap_uF": 35.2,
+      "delay_ms": 2.0,
+      "initial_V": 310,
+      "peak_V": 439.9997457642059,
+      "worst_feed_mA": 75.18796992481202,
+      "total_feed_J": 0.29743999999887333,
+      "disconnected": false,
+      "final_time_ms": 800.0019999924319,
+      "below_absolute_max": false
+    },
+    {
+      "case": "pass short before arm",
+      "raw_V": 440,
+      "cap_uF": 52.800000000000004,
+      "delay_ms": 2.0,
+      "initial_V": 0,
+      "peak_V": 340.23796586743214,
+      "worst_feed_mA": 80.97152468270338,
+      "total_feed_J": 4.848294964807505,
+      "disconnected": true,
+      "final_time_ms": 606.4823025611793,
+      "below_absolute_max": true
+    },
+    {
+      "case": "pass short; precharge bypass welded before arm",
+      "raw_V": 440,
+      "cap_uF": 52.800000000000004,
+      "delay_ms": 2.0,
+      "initial_V": 0,
+      "peak_V": 340.2379658673718,
+      "worst_feed_mA": 254.48235974551764,
+      "total_feed_J": 4.8482949648070655,
+      "disconnected": true,
+      "final_time_ms": 135.474957254054,
+      "below_absolute_max": true
+    },
+    {
+      "case": "550V raw diagnostic outside input allocation",
+      "raw_V": 550,
+      "cap_uF": 17.6,
+      "delay_ms": 2.0,
+      "initial_V": 310,
+      "peak_V": 351.51189735970496,
+      "worst_feed_mA": 138.80855986119144,
+      "total_feed_J": 0.1601817633702498,
+      "disconnected": true,
+      "final_time_ms": 5.77903000123643,
+      "below_absolute_max": false
+    }
+  ],
+  "one_open_closed_form_V": 344.5147430447548,
+  "one_open_max_delay_to_350_ms": 3.8003290398424134,
+  "startup_envelope": [
+    {
+      "raw_V": 340,
+      "bypass_forced_open": false,
+      "final_V": 310,
+      "bypass_closed_s": 1.1438999999998904,
+      "window_reached": true
+    },
+    {
+      "raw_V": 340,
+      "bypass_forced_open": true,
+      "final_V": 269.6362462464374,
+      "bypass_closed_s": null,
+      "window_reached": false
+    },
+    {
+      "raw_V": 390,
+      "bypass_forced_open": false,
+      "final_V": 310,
+      "bypass_closed_s": 1.4734999999998541,
+      "window_reached": true
+    },
+    {
+      "raw_V": 390,
+      "bypass_forced_open": true,
+      "final_V": 310,
+      "bypass_closed_s": null,
+      "window_reached": true
+    },
+    {
+      "raw_V": 400,
+      "bypass_forced_open": false,
+      "final_V": 310,
+      "bypass_closed_s": 1.5419999999998466,
+      "window_reached": true
+    },
+    {
+      "raw_V": 400,
+      "bypass_forced_open": true,
+      "final_V": 310,
+      "bypass_closed_s": null,
+      "window_reached": true
+    },
+    {
+      "raw_V": 405,
+      "bypass_forced_open": false,
+      "final_V": 310,
+      "bypass_closed_s": 1.5765999999998428,
+      "window_reached": true
+    },
+    {
+      "raw_V": 405,
+      "bypass_forced_open": true,
+      "final_V": 310,
+      "bypass_closed_s": null,
+      "window_reached": true
+    },
+    {
+      "raw_V": 410,
+      "bypass_forced_open": false,
+      "final_V": 310,
+      "bypass_closed_s": 1.611399999999839,
+      "window_reached": true
+    },
+    {
+      "raw_V": 410,
+      "bypass_forced_open": true,
+      "final_V": 310,
+      "bypass_closed_s": null,
+      "window_reached": true
+    },
+    {
+      "raw_V": 415,
+      "bypass_forced_open": false,
+      "final_V": 310,
+      "bypass_closed_s": 1.646499999999835,
+      "window_reached": true
+    },
+    {
+      "raw_V": 415,
+      "bypass_forced_open": true,
+      "final_V": 310,
+      "bypass_closed_s": null,
+      "window_reached": true
+    },
+    {
+      "raw_V": 420,
+      "bypass_forced_open": false,
+      "final_V": 310,
+      "bypass_closed_s": 1.6816999999998312,
+      "window_reached": true
+    },
+    {
+      "raw_V": 420,
+      "bypass_forced_open": true,
+      "final_V": 310,
+      "bypass_closed_s": null,
+      "window_reached": true
+    },
+    {
+      "raw_V": 430,
+      "bypass_forced_open": false,
+      "final_V": 310,
+      "bypass_closed_s": 1.7529999999998234,
+      "window_reached": true
+    },
+    {
+      "raw_V": 430,
+      "bypass_forced_open": true,
+      "final_V": 310,
+      "bypass_closed_s": null,
+      "window_reached": true
+    },
+    {
+      "raw_V": 440,
+      "bypass_forced_open": false,
+      "final_V": 310,
+      "bypass_closed_s": 1.8252999999998154,
+      "window_reached": true
+    },
+    {
+      "raw_V": 440,
+      "bypass_forced_open": true,
+      "final_V": 310,
+      "bypass_closed_s": null,
+      "window_reached": true
+    }
+  ],
+  "mute_race": [
+    {
+      "case": "simultaneous loss",
+      "lead_ms": 0,
+      "opening_ms": 3.0,
+      "welded": false,
+      "mixer_peak_V": 154.79767616037287
+    },
+    {
+      "case": "5ms advance warning",
+      "lead_ms": 5,
+      "opening_ms": 3.0,
+      "welded": false,
+      "mixer_peak_V": 0.0
+    },
+    {
+      "case": "welded NO",
+      "lead_ms": 5,
+      "opening_ms": 3.0,
+      "welded": true,
+      "mixer_peak_V": 154.79767616037287
+    }
+  ],
+  "thermal": [
+    {
+      "case": "catalog-only",
+      "sink_K_W": 2.6,
+      "joint_K_W": 1,
+      "full_case_C": 77.39956863710944,
+      "short_case_C": 80.2382437549557
+    },
+    {
+      "case": "installed-target",
+      "sink_K_W": 4,
+      "joint_K_W": 1,
+      "full_case_C": 80.277178662652,
+      "short_case_C": 84.21978299299403
+    },
+    {
+      "case": "blocked-fins",
+      "sink_K_W": 7,
+      "joint_K_W": 1,
+      "full_case_C": 86.44348586024321,
+      "short_case_C": 92.75165278879044
+    },
+    {
+      "case": "loose-interface",
+      "sink_K_W": 4,
+      "joint_K_W": 4,
+      "full_case_C": 86.44348586024321,
+      "short_case_C": 92.75165278879044
+    },
+    {
+      "case": "external-wall target",
+      "air_C": 60,
+      "sink_K_W": 4,
+      "joint_K_W": 1,
+      "full_case_C": 70.277178662652,
+      "short_case_C": 74.21978299299403
+    }
+  ],
+  "thermal_trip": [
+    {
+      "ambient_C": 70,
+      "sensor_tau_s": 1,
+      "sensor_error_C": -3,
+      "detached_to_sink": false,
+      "trip_s": 12.109,
+      "peak_case_C": 82.41486607590927
+    },
+    {
+      "ambient_C": 70,
+      "sensor_tau_s": 8,
+      "sensor_error_C": -3,
+      "detached_to_sink": false,
+      "trip_s": 21.233,
+      "peak_case_C": 85.16402580407951
+    },
+    {
+      "ambient_C": 70,
+      "sensor_tau_s": 8,
+      "sensor_error_C": -3,
+      "detached_to_sink": true,
+      "trip_s": 70.774,
+      "peak_case_C": 93.90764776937225
+    },
+    {
+      "ambient_C": 60,
+      "sensor_tau_s": 1,
+      "sensor_error_C": -3,
+      "detached_to_sink": false,
+      "trip_s": 57.187000000000005,
+      "peak_case_C": 82.14700053664944
+    },
+    {
+      "ambient_C": 60,
+      "sensor_tau_s": 8,
+      "sensor_error_C": -3,
+      "detached_to_sink": false,
+      "trip_s": 64.756,
+      "peak_case_C": 83.1740743964715
+    },
+    {
+      "ambient_C": 60,
+      "sensor_tau_s": 8,
+      "sensor_error_C": -3,
+      "detached_to_sink": true,
+      "trip_s": null,
+      "peak_case_C": 91.08474975141299
+    }
+  ],
+  "protected_rail_short": [
+    {
+      "case": "cold start",
+      "pass_peak_bound_W": 5.08456770669188,
+      "duration_s": 1.0,
+      "pass_energy_bound_J": 5.08456770669188,
+      "feed_current_ceiling_A": 0.03151323763955343,
+      "resistor_bank_peak_W": 9.453167990790199
+    },
+    {
+      "case": "running bypass initially closed",
+      "pass_peak_bound_W": 10.658788845391717,
+      "duration_s": 0.002,
+      "pass_energy_bound_J": 0.021317577690783435,
+      "feed_current_ceiling_A": 0.03151323763955343,
+      "resistor_bank_peak_W": 1.717042489345126
+    }
+  ],
+  "maximum_stored_J": 3.234,
+  "bleed_only_to_60_s": 35.1984065597891
+}
