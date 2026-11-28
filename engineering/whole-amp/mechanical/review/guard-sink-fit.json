@@ -1,0 +1,412 @@
+{
+  "task": "CB-008 independent mechanical check: PA340CC external sink Boyd 530002B02500G with guard",
+  "checked_on": "2026-11-28",
+  "scope": "Arithmetic envelope and interface screen from manufacturer drawings and register measurements. Not CAD, not a measured fit, not a fabrication or placement release.",
+  "register_input_sha256": "f2e814c56b128d9bc1e6c529110cfbc286a9dbcdd133d1843eed1ab66547345e",
+  "sources": {
+    "boyd_catalog": {
+      "url": "https://info.boydcorp.com/hubfs/Thermal/Air-Cooling/Boyd-Board-Level-Heatsinks-Catalog.pdf",
+      "location": "printed page 56 (PDF page 58), series 5297/5298/5299/5300; flat-back YB32-4G on printed page 61 (PDF page 63)",
+      "sha256_when_read": "985d70eb8ab6a8c445ce1eccba7cf25be5d1f4699406f002d9650b84cf12e469",
+      "read_on": "2026-11-28"
+    },
+    "apex_pa340": {
+      "url": "https://www.apexanalog.com/resources/products/pa340u.pdf",
+      "location": "PA340U Rev D page 14, PACKAGE STYLE CC; page 12 HEATSINKING; page 3 note 5",
+      "sha256_when_read": "6fc55e08d84ba70c449a4b38f2a0e684b1de70b00e18e6b98a90f62dc7593948",
+      "read_on": "2026-11-28"
+    },
+    "cb007": "engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html (thermal paragraphs)",
+    "packaging_search_case": "engineering/whole-amp/mechanical/review/electric-packaging-panel-2026-11-21.md",
+    "three_board_concept": "engineering/whole-amp/mechanical/review/three-board-chassis-concept.md"
+  },
+  "sink_mm": {
+    "height_A": 63.5,
+    "width": 41.91,
+    "depth": 25.4,
+    "hole_B_from_base": 18.29,
+    "hole_C_dia": 3.17,
+    "hole_x_from_edge": 20.96,
+    "channel_width": 17.02,
+    "web_thickness": 1.57,
+    "base_notch_width": 13.72,
+    "base_notch_height": 3.18,
+    "pin_dia": 2.36,
+    "pin_pitch": 25.4,
+    "pin_length": 3.96,
+    "pcb_hole_for_pin": 2.67,
+    "listed_device": "TO-220",
+    "material": "aluminium, black anodize",
+    "catalog_Rth_K_per_W_at_75C_rise": 2.6
+  },
+  "assumed_tolerance_mm": 0.38,
+  "package_mm": {
+    "body_width_max": 10.31,
+    "body_width_min": 10.06,
+    "overall_length_max": 15.75,
+    "overall_length_min": 14.74,
+    "thickness_max": 4.57,
+    "thickness_min": 4.32,
+    "lead_pitch": 1.27,
+    "lead_width_max": 0.91,
+    "leads": 7,
+    "land_tab_w": 13.0,
+    "land_tab_l": 11.4,
+    "land_gap": 2.16,
+    "land_lead_l": 5.08,
+    "mounting_hole": null,
+    "tab_net": "-Vs (ground in the CB-006/007 candidate)",
+    "case_limit_C": 85
+  },
+  "assumptions": {
+    "guard_air_gap_mm": 6.0,
+    "guard_material_mm": 1.5,
+    "wall_bracket_mm": 2.0,
+    "carrier_pcb_mm": 1.6,
+    "interface_mm": 0.25,
+    "m3_washer_dia_mm": 7.0,
+    "carrier_placement_tol_mm": 0.5,
+    "controls_centred_in_opening": true
+  },
+  "envelopes_mm": {
+    "bare_max_w_d_h": [
+      42.29,
+      25.78,
+      63.88
+    ],
+    "guarded_free_standing_w_d_h": [
+      57.29,
+      40.78,
+      71.38
+    ],
+    "flat_on_wall_protrusion_bare": 27.78,
+    "flat_on_wall_protrusion_guarded": 35.28
+  },
+  "flat_base_candidate": {
+    "mpn": "SK 81 50 SA",
+    "source": "https://www.farnell.com/datasheets/3171141.pdf",
+    "guarded_width_height_depth_mm": [
+      115.38,
+      65.38,
+      24.880000000000003
+    ],
+    "base_mm": 4,
+    "margin_130_tray_mm": 5.119999999999997,
+    "margin_145_cage_mm": -9.880000000000003,
+    "family_catalog_K_per_W": [
+      1.9,
+      3.4
+    ],
+    "guaranteed_installed_K_per_W": null
+  },
+  "checks": [
+    {
+      "id": "A1",
+      "title": "PA340CC fastens directly to the sink",
+      "verdict": "FAIL",
+      "value_mm": null,
+      "limit_mm": null,
+      "margin_mm": null,
+      "note": "Sink is drilled for one TO-220 screw. The DDPAK is surface-mount with no hole (Apex p.14) and Apex requires solder attachment of the heat slug (p.12). A soldered carrier/spreader is mandatory; the sink alone is not a PA340 mount."
+    },
+    {
+      "id": "A2",
+      "title": "Apex tab land width inside sink channel",
+      "verdict": "CONDITIONAL",
+      "value_mm": 14.0,
+      "limit_mm": 16.64,
+      "margin_mm": 2.64,
+      "note": "Carrier strip must be narrower than 16.64 mm. Compensation parts cannot sit beside the package inside the channel; the carrier must extend along the extrusion."
+    },
+    {
+      "id": "A3",
+      "title": "Carrier + package stack inside channel depth",
+      "verdict": "CONDITIONAL",
+      "value_mm": 6.42,
+      "limit_mm": 11.725,
+      "margin_mm": 5.305,
+      "note": "Package top stays inside the fin envelope; a top-of-package sensor (TMP235) and a spring clip must also fit in the remaining depth."
+    },
+    {
+      "id": "A4a",
+      "title": "Package footprint fits between base notch and the screw",
+      "verdict": "FAIL",
+      "value_mm": 18.64,
+      "limit_mm": 11.61,
+      "margin_mm": -7.03,
+      "note": "Package cannot sit below the only screw hole."
+    },
+    {
+      "id": "A4b",
+      "title": "Package footprint fits above the screw",
+      "verdict": "CONDITIONAL",
+      "value_mm": 18.64,
+      "limit_mm": 41.33,
+      "margin_mm": 22.69,
+      "note": "Fits above the hole, but then one screw clamps one END of the spreader."
+    },
+    {
+      "id": "A5",
+      "title": "Clamp force over the heat slug",
+      "verdict": "FAIL",
+      "value_mm": 9.2,
+      "limit_mm": null,
+      "margin_mm": null,
+      "note": "Heat-slug centre is at least 9.20 mm from the single screw axis (cantilever clamp). Contact pressure under the slug is uncontrolled, so the 1 K/W case-to-sink allocation in CB-007 is unsupported. Needs a second fastener (drilling the 1.57 mm web = modified part) or a qualified spring clip over the body."
+    },
+    {
+      "id": "A6",
+      "title": "Thread in the web",
+      "verdict": "CONDITIONAL",
+      "value_mm": 1.57,
+      "limit_mm": null,
+      "margin_mm": null,
+      "note": "1.57 mm web gives about 3 threads of M3x0.5; use a through screw with nut and washer in the opposite channel, not a tapped hole."
+    },
+    {
+      "id": "A7",
+      "title": "Lateral gap, outer leads to grounded fin wall",
+      "verdict": "CONDITIONAL",
+      "value_mm": 3.555,
+      "limit_mm": null,
+      "margin_mm": null,
+      "note": "Leads carry up to the 310-350 V rail; tab, web and fins are -Vs/ground. Gap is through air inside the channel with the carrier edge only 0.82 mm from the wall if the carrier fills the channel. Required creepage/clearance for this rail is not established by this check; Apex states pin pitch alone is not sufficient above its noted supply voltage."
+    },
+    {
+      "id": "B1",
+      "title": "Sink has a wall-mounting provision",
+      "verdict": "FAIL",
+      "value_mm": null,
+      "limit_mm": null,
+      "margin_mm": null,
+      "note": "Only two solder pins (dia 2.36, 25.40 pitch, 3.96 long) for a 2.67 mm plated PCB hole. No flange, no threaded hole, no flat back: both faces are radial fins. It cannot be bolted to a chassis or cabinet wall, and aluminium wall metal cannot take the solder pins."
+    },
+    {
+      "id": "B2",
+      "title": "Heat can cross a wall into this sink",
+      "verdict": "FAIL",
+      "value_mm": null,
+      "limit_mm": null,
+      "margin_mm": null,
+      "note": "Device mounts on the centre web between the fins, on the same side of any wall as the sink. \"Device inside, sink outside\" is impossible with this profile: either the PA340 and its high-voltage carrier leave the enclosure, or the sink stays inside. This contradicts the CB-007 allocation that keeps the PA carrier at the internal return."
+    },
+    {
+      "id": "B3",
+      "title": "Solder pin projection through a 1.6 mm carrier PCB",
+      "verdict": "PASS",
+      "value_mm": 2.36,
+      "limit_mm": null,
+      "margin_mm": null,
+      "note": "Manufacturer-intended mount: vertical on a PCB. Pins are electrically the sink (ground)."
+    },
+    {
+      "id": "C0",
+      "title": "Three-board concept supplies a dimensioned wall",
+      "verdict": "NOT_EVALUABLE",
+      "value_mm": null,
+      "limit_mm": null,
+      "margin_mm": null,
+      "note": "The three-board illustration is a workspace visual reference. Heights and rail positions are unscaled in that concept. The chassis_service_study envelope, rail section and fastener positions are null in the register. No interference with a three-board chassis can be computed. Checks C1-C4 use received cabinet measurements and the 21 November search envelopes (four-board study, proposal only)."
+    },
+    {
+      "id": "C1a",
+      "title": "Top panel end zone: guarded sink, long side across",
+      "verdict": "FAIL",
+      "value_mm": 57.29,
+      "limit_mm": 46.0,
+      "margin_mm": -11.29,
+      "note": "End zone = (307 - 215)/2 beside the ten-control study, controls assumed centred."
+    },
+    {
+      "id": "C1b",
+      "title": "Top panel end zone: guarded sink turned 90 deg, depth",
+      "verdict": "FAIL",
+      "value_mm": 57.29,
+      "limit_mm": 53,
+      "margin_mm": -4.29,
+      "note": "Opening clear depth about 53 mm with rear cover on."
+    },
+    {
+      "id": "C1c",
+      "title": "Top panel end zone: bare sink, rectangular screen",
+      "verdict": "CONDITIONAL",
+      "value_mm": 42.29,
+      "limit_mm": 46.0,
+      "margin_mm": 3.71,
+      "note": "Bare fins on the top face: no guard, input/power/indicator area consumed."
+    },
+    {
+      "id": "C1d",
+      "title": "Bare sink corner vs published R31 opening corner",
+      "verdict": "FAIL",
+      "value_mm": 1.36,
+      "limit_mm": null,
+      "margin_mm": null,
+      "note": "Positive = sink corner lies outside the rounded opening by this amount. Published radius applied to the received 307 x 53 frame; actual corner shape is unmeasured."
+    },
+    {
+      "id": "C1e",
+      "title": "Top-panel protrusion",
+      "verdict": "FAIL",
+      "value_mm": 71.38,
+      "limit_mm": null,
+      "margin_mm": null,
+      "note": "Vertical extrusion stands this high above the control face, beside the knobs (16.5 mm) and the handle. Handle/bolt keepouts are unknown in the register."
+    },
+    {
+      "id": "C2 440x130 tray bare",
+      "title": "Rear wall, sink flat on wall, no guard",
+      "verdict": "CONDITIONAL",
+      "value_mm": 27.78,
+      "limit_mm": 30.0,
+      "margin_mm": 2.22,
+      "note": "Spare is TOTAL front+rear depth with zero rear-cover thickness: an upper bound."
+    },
+    {
+      "id": "C2 440x130 tray guard",
+      "title": "Rear wall, sink flat on wall, with guard",
+      "verdict": "FAIL",
+      "value_mm": 35.28,
+      "limit_mm": 30.0,
+      "margin_mm": -5.28,
+      "note": "Also sits behind the wooden rear cover, not in outside air."
+    },
+    {
+      "id": "C3 440x130 tray bare",
+      "title": "Side wall, sink flat on wall, no guard",
+      "verdict": "FAIL",
+      "value_mm": 27.78,
+      "limit_mm": 27.0,
+      "margin_mm": -0.78,
+      "note": "Spare is TOTAL of both sides; register budgets 15 mm side flange per side for the rails."
+    },
+    {
+      "id": "C2 440x145x85 cage bare",
+      "title": "Rear wall, sink flat on wall, no guard",
+      "verdict": "FAIL",
+      "value_mm": 27.78,
+      "limit_mm": 15.0,
+      "margin_mm": -12.78,
+      "note": "Spare is TOTAL front+rear depth with zero rear-cover thickness: an upper bound."
+    },
+    {
+      "id": "C2 440x145x85 cage guard",
+      "title": "Rear wall, sink flat on wall, with guard",
+      "verdict": "FAIL",
+      "value_mm": 35.28,
+      "limit_mm": 15.0,
+      "margin_mm": -20.28,
+      "note": "Also sits behind the wooden rear cover, not in outside air."
+    },
+    {
+      "id": "C3 440x145x85 cage bare",
+      "title": "Side wall, sink flat on wall, no guard",
+      "verdict": "FAIL",
+      "value_mm": 27.78,
+      "limit_mm": 27.0,
+      "margin_mm": -0.78,
+      "note": "Spare is TOTAL of both sides; register budgets 15 mm side flange per side for the rails."
+    },
+    {
+      "id": "C4a",
+      "title": "Below chassis floor: height (cage 85 + carrier + sink + guard)",
+      "verdict": "CONDITIONAL",
+      "value_mm": 157.98,
+      "limit_mm": 346.5,
+      "margin_mm": 188.52,
+      "note": "Chassis elevation in the cabinet is unassigned; tank height subtracted."
+    },
+    {
+      "id": "C4b",
+      "title": "Below chassis floor: guard depth vs space behind reference speaker",
+      "verdict": "CONDITIONAL",
+      "value_mm": 40.78,
+      "limit_mm": 41,
+      "margin_mm": 0.22,
+      "note": "Reference Celestion depth 119 mm (not selected). Margin is effectively zero directly behind the magnet: place it laterally clear of the 134 mm magnet or above it."
+    },
+    {
+      "id": "C4c",
+      "title": "Below chassis floor is an \"external wall\"",
+      "verdict": "FAIL",
+      "value_mm": null,
+      "limit_mm": null,
+      "margin_mm": null,
+      "note": "This is cabinet-interior air below a tube chassis and behind the speaker. The CB-007 target of <=60 C effective air is unproven there. Rear withdrawal must also clear a 73.0 mm drop below the chassis floor; fixed-support and lower-panel positions are null."
+    },
+    {
+      "id": "C5",
+      "title": "Sink through the wooden cabinet side",
+      "verdict": "FAIL",
+      "value_mm": 20.5,
+      "limit_mm": null,
+      "margin_mm": null,
+      "note": "Derived side thickness (published 508 - measured 467)/2, unverified. A sink on the wood either ties the removable chassis to the fixed cabinet or needs a separable thermal joint across about this thickness; cabinet alteration is outside the fixed-cabinet rule."
+    }
+  ],
+  "thermal_sanity": {
+    "power_W": 2.844,
+    "cb007_installed_sink_allocation_K_per_W": 4.0,
+    "catalog_headline_K_per_W": 2.6,
+    "catalog_headline_condition": "75 C mounting-surface rise, free air, vertical",
+    "graph_53000X_reading_K_per_W_at_power": [
+      3.52,
+      5.45
+    ],
+    "graph_central_K_per_W": 4.4,
+    "graph_reading_confidence": "LOW: read by eye from the printed natural-convection curve (dashed 53000X, lower graph). Re-read or measure.",
+    "verdict": "HOLD",
+    "note": "The 2.6 K/W figure applies only at a 75 C rise. Near 2.8 W the free-air curve reads about 3.5-5.5 K/W before any guard, wall proximity, non-vertical mounting or tolerance. The 4 K/W installed allocation therefore has no demonstrated margin.",
+    "sink_surface_estimate_C_at_60C_air": 71.4,
+    "touch_note": "Estimated fin temperature exceeds common accessible-metal touch limits; a guard is justified. Limit values must be taken from the applicable safety standard; not verified in this check."
+  },
+  "failed_checks": [
+    "A1",
+    "A4a",
+    "A5",
+    "B1",
+    "B2",
+    "C1a",
+    "C1b",
+    "C1d",
+    "C1e",
+    "C2 440x130 tray guard",
+    "C3 440x130 tray bare",
+    "C2 440x145x85 cage bare",
+    "C2 440x145x85 cage guard",
+    "C3 440x145x85 cage bare",
+    "C4c",
+    "C5"
+  ],
+  "verdict": "FAIL as an external-wall sink. Keep return-stage placement on hold.",
+  "verdict_reasons": [
+    "B1/B2: board-level radial-fin part with solder pins only; no flat face or fastener to put it outside a wall while the PA340 stays inside.",
+    "A1/A5: DDPAK needs a soldered carrier, and the single TO-220 screw cannot clamp it properly.",
+    "C1-C3: with a guard it does not fit the top opening end zones or the rear/side spare of either 21 November search envelope.",
+    "C0: the three-board concept has no dimensions, so no interference result exists for it.",
+    "Thermal: no demonstrated margin against the 4 K/W allocation."
+  ],
+  "alternatives": [
+    {
+      "name": "ALT-1 same part, used as the manufacturer intends (conditional fit)",
+      "description": "530002B02500G soldered by its two pins to the removable PA carrier PCB, extrusion vertical, hung below the chassis floor in the open-back air stream with a perforated guard. Package above the screw hole, held by a qualified spring clip plus the screw-clamped spreader.",
+      "fits": "C4a and C4b pass conditionally; B3 passes.",
+      "conditions": [
+        "Not an external wall: measure local air (target <=60 C) and case temperature in the closed cabinet.",
+        "Keep laterally clear of the speaker magnet.",
+        "Prove rear withdrawal with the 73.0 mm drop.",
+        "Resolve A5 clamp, A7 high-voltage spacing and guard earthing."
+      ]
+    },
+    {
+      "name": "ALT-2 Fischer SK 81 50 SA flat-base wall sink",
+      "description": "PA340 soldered to a copper or insulated-metal carrier bolted to the INSIDE of an aluminium chassis wall; a flat-base extrusion bolted to the OUTSIDE of the same wall with the same two or more screws. Target <=3 K/W free-air at about 3 W so that wall joints and guard leave margin inside 5 K/W. Protrusion including guard must suit the chosen wall: <=30 mm on a rear wall of a 130 mm-deep tray only if the rear cover position allows; otherwise use the chassis underside.",
+      "fits": "Depth screen only. See flat_base_candidate. The actual wall face, cover and exposed air are unqualified.",
+      "conditions": [
+        "Reserve the stated clear wall face and demonstrate clamping and rear withdrawal on the proposed cassette.",
+        "Boyd YB32-4G (flat back, 60 x 32 x 16 mm, printed page 61) was read and rejected: its curve is roughly 10 K/W near 3-4 W."
+      ]
+    }
+  ],
+  "human_check": "Before any placement: fix the chassis wall and elevation in the register, hold the real sink, carrier and guard against the empty cabinet, and measure case temperature at full output and in the port-short case."
+}

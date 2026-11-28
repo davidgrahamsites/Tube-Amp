@@ -1,5 +1,7 @@
 # Project status
 
+CB-008 · Hold return placement. The fast shunt contained the specified sudden silent fault in simulation. A 50 VA Triad winding carried the modeled load with revised regulators. The flat-base Fischer sink clears only the shallow-tray depth screen. Qualify gate timing, winding pulse voltage, audio corners and installed cooling. [Sudden-loss and fit report](engineering/whole-amp/effects-loop/common-buffer/sudden-loss.html).
+
 CB-007 · Hold return-stage placement. With one reservoir open, the modeled 2 ms cutoff holds a 440 V pass short to 344.51 V. Sudden rail loss reaches the mixer before mute, 48 of 72 optical-mute cases exceed winding current, and the internal mount can trip during full output. An external-wall cooler is the next thermal candidate. [Supply, parts and fault report](engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html).
 
 CB-006 · The PA340CC and OPA134PA models drove the CB-005 overload target at 135.54 V peak and 0.292% THD. A sagged supply failed at 1.367% THD. Qualify the protected supply, startup mute, serviceable carrier and heat path before placement. [Engineering record](engineering/whole-amp/effects-loop/common-buffer/apex-return.html).

@@ -2011,3 +2011,14 @@ Source: CB-007 continuation chat
 
 - [engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html](<../../engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html>)
 
+## FB-189 — return-placement-qualification
+Authority: user. Disposition: incorporated. Recorded: 2026-11-28. Original date: 2026-11-28.
+
+> Work out a mute that handles sudden rail loss, find an auxiliary transformer that can carry the load, and check the external heatsink fit before putting it on the three-board layout.
+
+Qualify sudden-loss mute, exact auxiliary winding and external sink geometry with independent Claude checks before native layout.
+
+Source: CB-008 continuation chat
+
+- [engineering/whole-amp/effects-loop/common-buffer/sudden-loss.html](<../../engineering/whole-amp/effects-loop/common-buffer/sudden-loss.html>)
+
