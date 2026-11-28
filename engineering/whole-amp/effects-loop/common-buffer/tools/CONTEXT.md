@@ -24,3 +24,5 @@ steered_bias.py and qualify_steered_bias.py add the actual divider and a behavio
 receiver_filter.py inserts a local mixer filter. qualify_receiver_filter.py tests it against listening levels, quiet faults and playing faults. burst_memory.py checks a separate source-bias trial after a finite burst. Each runner accepts the archived SiC model path as its only argument. Inspect the stop time and the pre-command voltage before accepting a peak.
 
 bridge_shunt.py owns the four-diode bridge. qualify_bridge.py compares audio, supply shorts and signed faults. bridge_burst.py reuses the finite-burst fixture to compare the same post-note switching window. The capacitor assumption and the charge sensitivity remain explicit in the receipts.
+
+bridge_reservoir.py disconnects the charger and tests the charged bank through optical handover. qualify_bridge.py with --reserve repeats the quiet and audio tests at 2.0 V. The bank calculation uses assumed series inductance for each branch and a separate common mounting inductance. Compare the voltage at the bridge against bulk capacitor voltage.

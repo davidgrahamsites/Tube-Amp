@@ -10,6 +10,8 @@ Existing decisions stay fixed: selectable 120 V / 220 V electric build (FB-106; 
 
 Effort below describes scope, not a promised elapsed time: S = bounded audit/repair; M = several linked checks; L = substantial design iteration; H = requires physical work. Each row names its inputs, output, dependencies and objective completion evidence. Exact execution revisions and commands belong in the linked module's evidence, not duplicated here.
 
+CB-019 · T04 stays open. The modeled bank carries a disconnected charger through the 3.01 ms handover. Resolve a direct short across the bridge bias, actual charger and return-path inductance. [Finite hold-up test](../../engineering/whole-amp/effects-loop/common-buffer/shunt-device.html#cb019).
+
 CB-018 · T04 stays open. The bridge passes the loaded audio and burst tests with a held bias source. Qualify its charger and hold-up through handover, diode charge, installed thermal path and cabinet fit. [Bridge fault comparison](../../engineering/whole-amp/effects-loop/common-buffer/shunt-device.html#cb018).
 
 CB-015 · T04 stays open. CB-014 passes the revised gain and selected-pair mute screens. The unmodified shunt distorts intermediate signals. One-way bias corrects the 12 audio tests but fails gate injection. [Device and floating-driver report](../../engineering/whole-amp/effects-loop/common-buffer/shunt-device.html).

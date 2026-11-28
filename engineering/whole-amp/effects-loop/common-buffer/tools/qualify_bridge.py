@@ -65,7 +65,12 @@ if __name__=='__main__':
     cases += [(path,'tone',a,h,1.8,30,25,1.2,True) for a,h in
               product((.135,4.27,13.5,22,42.7,85,135),(False,True))]
     cases += [(path,'tone',.135,True,1.8,30,25,1.2,False)]
+    output='bridge-shunt.json'
+    if '--reserve' in sys.argv[2:]:
+        output='bridge-reserve-audio.json'
+        cases=[(path,k,v,x,2.,c,t,r,park) for _,k,v,x,h,c,t,r,park in cases
+               if h==1.8 and park and k in ('tone','quiet')]
     with multiprocessing.get_context('spawn').Pool(5,maxtasksperchild=1) as pool:
         rows=pool.map(case,cases,chunksize=1)
     out=dict(model_sha256=MODEL_SHA,network=NETWORK,local_additional_pF=270,rows=rows)
-    (gain.MODULE/'results/bridge-shunt.json').write_text(json.dumps(out,indent=1,default=float)+'\n')
+    (gain.MODULE/'results'/output).write_text(json.dumps(out,indent=1,default=float)+'\n')

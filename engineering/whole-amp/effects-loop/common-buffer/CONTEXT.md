@@ -30,3 +30,5 @@ CB-014/015 reduce the local capacitors, check actual sensitivity and compare six
 CB-016/017 test receiver filtering and charge left after a tone burst. Compare the absolute event peak, voltage before the command and residual 100 ns after it. Human check: capture the same three quantities on the isolated low-voltage receiver fixture. Read the [filter and burst results](shunt-device.html#cb016).
 
 CB-018 puts one SiC switch inside a biased four-diode bridge. Compare the same module using an intact and a shorted floating source. The human check is a simultaneous capture of bridge bias, mixer voltage and bridge current under loss of the charger. [Bridge evidence](shunt-device.html#cb018).
+
+CB-019 measures the floating bridge terminal and the bulk capacitor after loss of the charger. Use the finite-bank fault results and the 2.0 V control tests. The installed human check is a differential pulse capture directly at the bridge and across one remaining bulk capacitor. [Floating bridge reserve](shunt-device.html#cb019).
