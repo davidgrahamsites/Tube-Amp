@@ -20,3 +20,7 @@ CB-012 uses shunt_curve.py and qualify_shunt_curve.py to convert the IXYS plot t
 For the revised delay network use retuned_shunt.py with audio and arrival, sic_pair_window.py and sic_audio_tolerance.py with the model path and --revised, then sic_signal_levels.py and sic_distortion_controls.py with the model path. The factories report each threshold or passive corner and tag the fixed-capacitance control. Inspect the receiver distortion and gate pulse together.
 
 steered_bias.py and qualify_steered_bias.py add the actual divider and a behavioral steering diode to both fixtures. floating_driver_budget.py independently sweeps regulator and undervoltage thresholds. Run the electrical factories with the cached hash-checked SiC model.
+
+receiver_filter.py inserts a local mixer filter. qualify_receiver_filter.py tests it against listening levels, quiet faults and playing faults. burst_memory.py checks a separate source-bias trial after a finite burst. Each runner accepts the archived SiC model path as its only argument. Inspect the stop time and the pre-command voltage before accepting a peak.
+
+bridge_shunt.py owns the four-diode bridge. qualify_bridge.py compares audio, supply shorts and signed faults. bridge_burst.py reuses the finite-burst fixture to compare the same post-note switching window. The capacitor assumption and the charge sensitivity remain explicit in the receipts.

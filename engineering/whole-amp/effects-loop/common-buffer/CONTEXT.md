@@ -26,3 +26,7 @@ The CB-010/011 audio, cutoff and cabinet checkpoint is in [the engineering reade
 Integration owns the CB-012/013 [shunt device checks](shunt-device.html). Compare the opposed-device charge and switching results with the 0.50 dB gain, 1 V residual and 0.70 V injection limits. Measure the two installed devices, driver and harness before placement.
 
 CB-014/015 reduce the local capacitors, check actual sensitivity and compare six signal levels with a fixed-capacitance control. Use the same [device report](shunt-device.html). The human check is a simultaneous source, PA output and receiver capture across signal amplitude and a separate mute transient.
+
+CB-016/017 test receiver filtering and charge left after a tone burst. Compare the absolute event peak, voltage before the command and residual 100 ns after it. Human check: capture the same three quantities on the isolated low-voltage receiver fixture. Read the [filter and burst results](shunt-device.html#cb016).
+
+CB-018 puts one SiC switch inside a biased four-diode bridge. Compare the same module using an intact and a shorted floating source. The human check is a simultaneous capture of bridge bias, mixer voltage and bridge current under loss of the charger. [Bridge evidence](shunt-device.html#cb018).

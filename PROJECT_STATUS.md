@@ -1,5 +1,7 @@
 # Project status
 
+CB-018 · A biased four-diode bridge passes 14 loaded audio checks and 10 post-note checks in simulation. With held bias of at least 1.5 V in the tested cases the playing residual peaks at 0.831 V. A shorted bias supply reaches 2.318 V. Qualify the hold-up supply, real diodes, cutoff and cabinet before three-board placement. [Bridge and failure records](engineering/whole-amp/effects-loop/common-buffer/shunt-device.html#cb018).
+
 CB-015 · Three-board return placement stays open. The revised network passes 512 gain corners. A one-way shunt bias passes all 12 signal-level tests but produces a 2.225 V mute pulse against the 0.70 V limit. Check the low-voltage receiver fixture, floating driver and the full-size rear-cover kit. [Circuit and fit evidence](engineering/whole-amp/effects-loop/common-buffer/shunt-device.html).
 
 
