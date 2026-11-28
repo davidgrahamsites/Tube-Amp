@@ -2876,6 +2876,39 @@
       ],
       "supersedes": [],
       "next_action": "Use the CB-008 evidence and placement decision."
+    },
+    {
+      "id": "FB-190",
+      "recorded_on": "2026-11-28",
+      "occurred_on": "2026-11-28",
+      "authority": "user",
+      "kind": "return-placement-qualification",
+      "quote": "Find a winding that can take the 211 V pulse, resolve the low-line PA rail sag, and check regulator cooling and the Fischer heatsink’s rear-cover clearance before three-board layout.",
+      "source": "CB-009 continuation chat",
+      "interpretation": "Check end-to-end winding voltage, sustained PA rail and fault limits, installed regulator heat paths and the independent rear cover. Use Claude for independent checks.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/effects-loop/common-buffer/winding-rail-fit.html"
+      ],
+      "supersedes": [],
+      "next_action": "Use the CB-009 report before three-board placement."
+    },
+    {
+      "id": "FB-191",
+      "recorded_on": "2026-11-28",
+      "occurred_on": "2026-11-28",
+      "authority": "user",
+      "kind": "cabinet-measurement",
+      "quote": "15.5 cm … it's hard to get that measurement, but that's about it",
+      "source": "User reply to CB-009 ImageGen side-section A–B, cover installed.",
+      "interpretation": "Approximately 155 mm to the inside rear cover in the upper cabinet. Unknown measurement uncertainty; retain the 160 mm depth to a different endpoint.",
+      "disposition": "incorporated",
+      "canonical_paths": [
+        "engineering/whole-amp/mechanical/fit-register.json",
+        "engineering/whole-amp/mechanical/review/rear-cover-sink.json"
+      ],
+      "supersedes": [],
+      "next_action": "Use 155 mm for screening and check installed clearance with a full-width physical template."
     }
   ]
 }

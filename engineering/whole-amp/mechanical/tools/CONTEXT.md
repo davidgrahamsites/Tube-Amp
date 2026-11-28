@@ -18,3 +18,5 @@ check_tool_access.py consumes only the partial drill measurement seam and emits 
 FIT-012: bench_tool_access.py reads ../tool-access-study.json, the drill fields in ../fit-register.json, optional precision-driver-candidate.json, native boards and component-owned package contracts. It writes ../review/bench-tool-access.json. bench_access_cad.py verifies that receipt, checks independent solid intersections and writes editable FCStd, STEP and a CAD receipt. No board mutation. Human check: compare each screw approach with the actual populated assembly and fitted bit.
 
 CB-008. Run guard_sink_fit.py with Python to screen the external sink against the cabinet register. plot_guard_sink.py draws the four Boyd checks. The review folder holds the JSON and SVG. Check the Fischer flat-base alternative against the rear cover, airflow and actual removable carrier.
+
+CB-009. rear_cover_geometry.py reads the cabinet register and drawing dimensions. rear_cover_sink.py writes rear-cover-sink.json and the flat-wall versus recessed section. Check the direct A–B reading and the whole guard with the cover on. The ImageGen measurement illustration is a guide to the endpoints.

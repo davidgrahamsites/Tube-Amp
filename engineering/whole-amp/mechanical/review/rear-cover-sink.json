@@ -1,0 +1,417 @@
+{
+  "task": "CB-009 independent mechanical check: rear-cover clearance of Fischer SK 81 50 SA",
+  "checked_on": "2026-11-28",
+  "scope": "Arithmetic screen from the register, the supplier drawings and photographs. Not CAD, not a measured fit, not a placement or fabrication release. No register, native or CAD file changed.",
+  "coverage_input_sha256": "cbf766cc86ec6662813b4c464e9c01efb7f061f0f6eef0ca9058e25263268216",
+  "sources": {
+    "register": "engineering/whole-amp/mechanical/fit-register.json (cabinet.user_measurements: B, P1, P2-clear, P3, A)",
+    "cb008": "engineering/whole-amp/mechanical/review/guard-sink-fit.json (flat_base_candidate, assumptions)",
+    "feedback": "brain/feedback/events.json FB-068 (cover top level with top underside), FB-070 (no mount to removable cover), FB-071/072 (rear withdrawal, drill access), FB-073 (P1, P2-clear, cover ON), FB-074 (P3, cover OFF), FB-069 (tube glow through oval slots), FB-190 (this task)",
+    "measurement_guide": "engineering/whole-amp/mechanical/review/measurement-guide-2026-11-21.md (P2-clear replaces the earlier P2-to-outside-edge instruction)",
+    "supplier_side_view": {
+      "file": "engineering/solid-state-reverb/evidence/cabinet-size-02.jpg",
+      "sha256": "be6d0342f1f22dff1ae578409b2ff1df406cb0d7a613b9b3f21a589770df33f8",
+      "read": "top depth 215, bottom depth 242, height 420; dashed rear strip 18 deep, set 11 in from the rear edge, starting 25 below the top and ending 25 above the bottom; front strips 9 x 48"
+    },
+    "supplier_top_view": {
+      "file": "engineering/solid-state-reverb/evidence/cabinet-size-01.jpg",
+      "sha256": "8bc19e61f3903e7223f5790ebd92e51833ab6e8fa6d01a3118d72a47732fb08b",
+      "read": "top notch 67 deep from the cabinet rear edge, 2-R31, 156+156 straight, 172+172 stepped"
+    },
+    "supplier_front_view": {
+      "file": "engineering/solid-state-reverb/evidence/cabinet-size-03.jpg",
+      "sha256": "e2c7cbc3f1398c7a5e9699a0c2018d4f3e085c76ca8df07a8e4fa339462f6ca4",
+      "read": "baffle 468 x 380; section shows two 9 mm layers (18 total at the 30 mm frame strips)"
+    },
+    "photos": "engineering/whole-amp/mechanical/evidence/received-cabinet-2026-11-21/ (cabinet-04.jpg rear/top with upper cover ON; speaker-offset-rear.jpg upper cover OFF, side cleats visible). Qualitative only per the evidence CONTEXT.md.",
+    "fischer": {
+      "url": "https://www.fischerelektronik.de/web_fischer/en_GB/heatsinks/A01/Standard%20extruded%20heatsinks/PR/SK81_/index.xhtml",
+      "read_on": "2026-11-28",
+      "read": "width 100, height 15, plate thickness 4, lengths 37.5/50/75/100/1000, thermal resistance 3.4 - 1.9 K/W (no length mapping, no conditions printed), black anodised",
+      "not_read": "https://www.farnell.com/datasheets/3171141.pdf timed out twice on 2026-11-28. Fin count, fin pitch, tolerances, drilling and the K/W value at 50 mm were NOT read in this check."
+    }
+  },
+  "parameters": {
+    "sink_width": 100.0,
+    "sink_profile_height": 15.0,
+    "sink_base": 4.0,
+    "sink_length": 50.0,
+    "sink_tol": 0.38,
+    "guard_air_gap": 6.0,
+    "guard_material": 1.5,
+    "wall_bracket": 2.0,
+    "cover_gap_min": 5.0,
+    "front_gap": 3.0,
+    "side_clear": 3.0,
+    "tray_wall": 2.0,
+    "tray_depth": 130.0,
+    "tray_width": 440.0,
+    "tray_height": 85.0,
+    "z_sink": 45.0,
+    "u_B": 2.0,
+    "u_P2": 2.0,
+    "tweed_wrap": 1.5
+  },
+  "stack_mm": {
+    "sink_max": 15.38,
+    "guard": 7.5,
+    "need_contact": 24.88,
+    "need_with_cover_gap": 29.88,
+    "guarded_elevation_w_h": [
+      115.38,
+      65.38
+    ]
+  },
+  "cover_inner_face": {
+    "same_datum_P2_outer_recorded": false,
+    "same_datum_estimate_supported": false,
+    "reason": "Register and feedback ledger hold P2-clear = 53 mm (cover ON) only. No P2-to-outside-edge value exists. A subtraction of two measured values on one datum cannot be made.",
+    "mixed_datum_estimates_mm": {
+      "E1_drawing_notch_minus_P2_clear": 14,
+      "E1_note": "Supplier notch 67 (cabinet rear edge to handle-side cut edge, bare-wood drawing) minus measured P2-clear 53. Mixed drawing/measured datum. The same drawing overstates the received straight width by 4-5 mm (312 vs 307-308), so the notch may also be short by the covering.",
+      "E2_notch_less_tweed_minus_P2_clear": 12.5,
+      "E3_drawing_rear_recess": 11.0,
+      "E3_note": "Supplier side view sets the dashed rear strip 11 in from the rear edge. Read as the seat for the rear covers. This reading of the drawing is an interpretation."
+    },
+    "inner_face_inboard_of_rear_edge_mm": {
+      "low": 10.5,
+      "central": 14,
+      "high": 16.0
+    },
+    "status": "ESTIMATE ONLY. Bounded 10.5 to 16.0 mm, central 14.0. Not a measurement."
+  },
+  "longitudinal_datum": {
+    "B_reported": 160,
+    "B_register_interpretation": "160mm converted from16cm, treated as speaker-board rear face to cabinet rear edge per preceding instructions; exact endpoint not independently confirmed.",
+    "B_measurement_height": null,
+    "drawing_baffle_rear_to_rear_edge_at_top": 188.0,
+    "drawing_baffle_rear_to_cleat_front_at_top": 159.0,
+    "conflict_mm": 28.0,
+    "finding": "The drawing puts the cabinet rear edge 188 mm behind the baffle at the top, 28 mm more than B. The drawing distance to the front of the rear cleat is 159 mm, 1 mm from B. Either the received cabinet is 28 mm shallower inside than drawn, or B ended on the cleat and not on the rear edge. The register cannot tell which.",
+    "H1": "B = baffle rear face to cabinet rear edge (as recorded).",
+    "H2": "B = baffle rear face to rear-cleat front face (drawing-consistent). Rear edge = B + cleat 18 + recess 11."
+  },
+  "height_taper": {
+    "slope_mm_per_mm": 0.06429,
+    "basis": "(242 - 215) / 420 from the supplier side view; assumes the baffle is parallel to the sloped front",
+    "z_sink_assumed": 45.0,
+    "depth_correction_at_sink_mm": {
+      "B_taken_at_sink_height": 0.0,
+      "B_taken_at_top_z0": 2.89,
+      "B_taken_at_mid_height": -9.42,
+      "B_taken_at_floor": -21.73
+    },
+    "baffle_step": "Supplier front view shows 9 + 9 mm layers at the 30 mm frame strips. If the frame strip is on the rear face, depth is 9 mm less within 30 mm of the baffle edges than at the board. Which face carries the strip is not established.",
+    "offset_range_mm": [
+      -21.73,
+      2.89
+    ]
+  },
+  "interior_near_fins": {
+    "cleats": "Side cleats only are visible. Drawing: 18 deep, from 25 below the top. Width not drawn.",
+    "photo_scale_px_per_mm": 1.969,
+    "photo_between_sides_mm": 470.0,
+    "photo_between_cleats_mm": 424.0,
+    "photo_check": "Photo scale returns 470 mm between the side walls against measured A = 467. Same method gives 424 mm between the cleats. LOW confidence: pixel pick from a displayed 2000 px frame, perspective uncorrected. Assume +/-8 mm.",
+    "sink_zone": "A guarded sink 115.4 wide on the centre of the rear wall is 154 mm from either cleat. The cleats do not touch the sink. They limit the tray, not the fins.",
+    "oval_slots": "Two oval slots in the upper cover (FB-069). Position and size are not in the register. A sink behind a slot blocks that tube sightline; a sink between or below the slots has no outlet above it except the gap to the cover."
+  },
+  "scenarios": {
+    "H1": {
+      "interior_baffle_to_cover_mm": 146.0,
+      "space_behind_130_tray_mm": {
+        "central": 13.0,
+        "worst_B_at_sink_height": 9.0,
+        "worst_all_cases": -12.73,
+        "best_all_cases": 21.39
+      },
+      "margin_guarded_contact_mm": -8.88,
+      "margin_guarded_service_mm": {
+        "central": -16.88,
+        "worst_B_at_sink_height": -20.88,
+        "worst_all_cases": -42.61,
+        "best_all_cases": -8.49
+      },
+      "pocket_depth_needed_mm": {
+        "central": 16.9,
+        "worst_B_at_sink_height": 20.9,
+        "worst_all_cases": 42.6
+      },
+      "max_tray_depth_no_pocket_mm": {
+        "central": 113.1,
+        "worst_B_at_sink_height": 109.1,
+        "worst_all_cases": 87.4
+      },
+      "cleat_front_from_baffle_mm": 131.0,
+      "tray_rear_past_cleat_front_mm": 2.0
+    },
+    "H2": {
+      "interior_baffle_to_cover_mm": 175.0,
+      "space_behind_130_tray_mm": {
+        "central": 42.0,
+        "worst_B_at_sink_height": 38.0,
+        "worst_all_cases": 16.27,
+        "best_all_cases": 50.39
+      },
+      "margin_guarded_contact_mm": 20.12,
+      "margin_guarded_service_mm": {
+        "central": 12.12,
+        "worst_B_at_sink_height": 8.12,
+        "worst_all_cases": -13.61,
+        "best_all_cases": 20.51
+      },
+      "pocket_depth_needed_mm": {
+        "central": 0.0,
+        "worst_B_at_sink_height": 0.0,
+        "worst_all_cases": 13.6
+      },
+      "max_tray_depth_no_pocket_mm": {
+        "central": 142.1,
+        "worst_B_at_sink_height": 138.1,
+        "worst_all_cases": 116.4
+      },
+      "cleat_front_from_baffle_mm": 160.0,
+      "tray_rear_past_cleat_front_mm": -27.0
+    }
+  },
+  "pocket": {
+    "H1": {
+      "depth_mm": {
+        "central": 16.9,
+        "worst_B_at_sink_height": 20.9,
+        "worst_all_cases": 42.6
+      },
+      "width_mm": 121.4,
+      "height_mm": "full tray height 85, open top and bottom",
+      "internal_depth_left_at_pocket_mm": {
+        "central": 109.1,
+        "worst_B_at_sink_height": 105.1,
+        "worst_all_cases": 83.4
+      },
+      "plan_area_lost_mm2": {
+        "central": 2051,
+        "worst_B_at_sink_height": 2537,
+        "worst_all_cases": 5171
+      },
+      "share_of_tray_plan_percent": {
+        "central": 3.59,
+        "worst_B_at_sink_height": 4.44,
+        "worst_all_cases": 9.04
+      }
+    },
+    "H2": {
+      "depth_mm": {
+        "central": 0.0,
+        "worst_B_at_sink_height": 0.0,
+        "worst_all_cases": 13.6
+      },
+      "width_mm": 121.4,
+      "height_mm": "full tray height 85, open top and bottom",
+      "internal_depth_left_at_pocket_mm": {
+        "central": 126.0,
+        "worst_B_at_sink_height": 126.0,
+        "worst_all_cases": 112.4
+      },
+      "plan_area_lost_mm2": {
+        "central": 0,
+        "worst_B_at_sink_height": 0,
+        "worst_all_cases": 1651
+      },
+      "share_of_tray_plan_percent": {
+        "central": 0.0,
+        "worst_B_at_sink_height": 0.0,
+        "worst_all_cases": 2.89
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "R0",
+      "title": "CB-008 depth margin for the 130 tray (+5.12) holds with the cover on",
+      "verdict": "FAIL",
+      "margin_mm": -8.88,
+      "note": "CB-008 used B - 130 - 24.88 with zero cover thickness and zero gaps. Subtract the cover (14 central) under the recorded datum H1 and the guard is 8.9 mm INTO the cover."
+    },
+    {
+      "id": "R1-H1",
+      "title": "Guarded sink on the flat rear wall of the 130 tray, cover ON (H1)",
+      "verdict": "FAIL",
+      "margin_mm": -16.88,
+      "note": "Need 29.88 = bracket 2.0 + sink 15.38 + guard 7.5 + cover gap 5.0. Behind tray 13.0 central. Range of margin -42.6 to -8.5 over cover, tape and B-height cases."
+    },
+    {
+      "id": "R1-H2",
+      "title": "Guarded sink on the flat rear wall of the 130 tray, cover ON (H2)",
+      "verdict": "CONDITIONAL",
+      "margin_mm": 12.12,
+      "note": "Need 29.88 = bracket 2.0 + sink 15.38 + guard 7.5 + cover gap 5.0. Behind tray 42.0 central. Range of margin -13.6 to 20.5 over cover, tape and B-height cases."
+    },
+    {
+      "id": "R2",
+      "title": "Bare sink, no guard, flat rear wall, cover ON (H1)",
+      "verdict": "FAIL",
+      "margin_mm": -9.38,
+      "note": "Fin tips -4.4 mm from the wood before the 5.0 mm gap rule. No guard for service with the cover off."
+    },
+    {
+      "id": "R3",
+      "title": "Stepped pocket in the rear wall, 130 tray kept (H1)",
+      "verdict": "CONDITIONAL",
+      "margin_mm": null,
+      "note": "Pocket 16.9 deep central, 20.9 if B was taken at sink height with worst tape/cover, 42.6 worst of all cases; 121.4 wide. Leaves 109.1 / 105.1 / 83.4 mm internal depth over that width. Costs 3.59% of tray plan area (central). The PA carrier sits on the inside of the pocket wall."
+    },
+    {
+      "id": "R4",
+      "title": "Shorter tray, flat rear wall, no pocket (H1)",
+      "verdict": "FAIL",
+      "margin_mm": -16.9,
+      "note": "Tray depth must drop to 113.1 central (109.1 / 87.4 worst). That removes 17 mm from the whole 440 mm width (7436 mm2) to serve a 115 mm wide part. Present Main is 140 deep and Control 110: neither depth survives."
+    },
+    {
+      "id": "W1",
+      "title": "Rear cover removal independent of sink and guard (FB-070)",
+      "verdict": "PASS",
+      "margin_mm": 5.0,
+      "note": "Sink and guard fasten to the cassette only. The cover seats in the rear recess and leaves rearward. Holds only while the 5.0 mm guard-to-cover gap is kept; no part may bear on or fasten to the cover."
+    },
+    {
+      "id": "W2",
+      "title": "440 mm tray withdraws rearward between the side cleats",
+      "verdict": "FAIL",
+      "margin_mm": -15.82,
+      "note": "Photo estimate 424 mm between cleats (+/-8, low confidence) against a 440 mm tray. Measured A = 467 is the wall-to-wall width, per the same photo scale. Measure the cleat-to-cleat width before fixing tray width."
+    },
+    {
+      "id": "W3-H1",
+      "title": "Tray rear corners clear the cleat front faces (H1)",
+      "verdict": "FAIL",
+      "margin_mm": -2.0,
+      "note": "Cleat front 131.0 mm from the baffle; tray rear at 133.0. Applies only if the tray is wider than the cleat-to-cleat width."
+    },
+    {
+      "id": "W3-H2",
+      "title": "Tray rear corners clear the cleat front faces (H2)",
+      "verdict": "PASS",
+      "margin_mm": 27.0,
+      "note": "Cleat front 160.0 mm from the baffle; tray rear at 133.0. Applies only if the tray is wider than the cleat-to-cleat width."
+    },
+    {
+      "id": "W4",
+      "title": "Cassette with sink passes the upper-cover aperture height",
+      "verdict": "NOT_EVALUABLE",
+      "margin_mm": null,
+      "note": "Upper cover height, lower cover top edge and chassis elevation are not in the register."
+    },
+    {
+      "id": "W5",
+      "title": "Sink fasteners",
+      "verdict": "CONDITIONAL",
+      "margin_mm": null,
+      "note": "Base 4.0 mm. M3 from inside the cassette into tapped base holes gives about 8 threads and nothing proud of the fins. Drilling/tapping is a modification of a stock part: order Fischer CNC option or accept it. Screws must be reachable with the cassette on the bench, not through the cover."
+    },
+    {
+      "id": "W6",
+      "title": "Guard fastening",
+      "verdict": "CONDITIONAL",
+      "margin_mm": null,
+      "note": "Guard 115.4 x 65.4 mm fastens to the cassette rear wall, bonded to chassis earth, open top and bottom. It must not reach the cover screws or cleats."
+    },
+    {
+      "id": "T1",
+      "title": "Installed cooling behind the wooden cover",
+      "verdict": "NOT_EVALUABLE",
+      "margin_mm": null,
+      "note": "HOLD. Installed K/W behind the cover is unproven."
+    }
+  ],
+  "failed_checks": [
+    "R0",
+    "R1-H1",
+    "R2",
+    "R4",
+    "W2",
+    "W3-H1"
+  ],
+  "thermal": {
+    "power_W": 2.844,
+    "cb007_installed_allocation_K_per_W": 4.0,
+    "fischer_family_K_per_W": [
+      1.9,
+      3.4
+    ],
+    "bound_for_50mm": "The 50 mm cut is no worse than the 37.5 mm figure if 3.4 K/W belongs to 37.5 mm. That mapping is not printed on the page read. Value at 50 mm NOT READ.",
+    "margin_to_allocation_K_per_W_if_3.4": 0.6,
+    "sink_estimate_C_at_60C_air_and_4K_per_W": 71.4,
+    "air_path": "Behind the cover the sink stands in a slot 27.9 mm deep (base wall to wood, H1 central with pocket) between the cassette and the cover. Catalogue free-air figures do not apply. Inlet is the open back below the upper cover; outlet is the oval slots or the top of the gap. A pocket closed at top or bottom, or a control panel sealing the top, stops the chimney.",
+    "wood": "At about 71 C metal and a 5.0 mm gap the wood and covering are not a fire question. The open points are trapped warm air under the cabinet top, heat from the tubes into the same slot, and covering adhesive. Measure wood-face and local air temperature in the closed cabinet.",
+    "verdict": "HOLD. Installed K/W behind the cover is unproven."
+  },
+  "alternatives": {
+    "underside": "Sink on the cassette underside, fins down, 24.88 mm drop with guard. Independent of the rear cover and of B. Fins-down is a poor natural-convection attitude and the air is cabinet air (CB-008 C4c). Withdrawal must clear that drop over the lower cover edge: not measured.",
+    "side_wall": "Rejected by CB-008 C3: 27 mm total side spare."
+  },
+  "missing_measurements": {
+    "prior_datum_study": [
+      {
+        "id": "M1",
+        "cover": "ON",
+        "what": "Same-datum P2 pair",
+        "how": "One ruler placement at the opening centre. Zero on the cut wooden edge nearest the handle. Read (a) the inner edge of the cover top, (b) the outer face of the cover top, (c) the cabinet rear edge (hold a straightedge across the two side-wall rear edges and read where it crosses the ruler).",
+        "gives": "cover thickness = b - a; cover inset = c - b; cover inner face inboard of rear edge = c - a"
+      },
+      {
+        "id": "M2",
+        "cover": "OFF",
+        "what": "Cover thickness direct",
+        "how": "Lay the removed upper cover flat. Measure thickness at the top edge and at one oval slot, covering included.",
+        "gives": "check on M1 (b - a)"
+      },
+      {
+        "id": "M3",
+        "cover": "OFF",
+        "what": "Depth B on a stated datum, three heights",
+        "how": "Straightedge across the two side-wall rear edges. Ruler from the baffle rear face to the straightedge, on the cabinet centre line, at 30, 70 and 110 mm below the underside of the top. State whether the ruler started on the flat board or on a raised frame strip.",
+        "gives": "decides H1 against H2 (160 or about 188), the taper, and the baffle step"
+      },
+      {
+        "id": "M4",
+        "cover": "OFF",
+        "what": "Rear cleats",
+        "how": "Clear width between the left and right cleats. Cleat depth front-to-back. Distance from the baffle rear face to the cleat front face at 70 mm below the top. Rear edge to the cleat rear face (the recess).",
+        "gives": "tray width limit for withdrawal (W2, W3) and a second value for the cover seat"
+      },
+      {
+        "id": "M5",
+        "cover": "OFF, cover on the bench",
+        "what": "Upper cover and slots",
+        "how": "Cover height. For each oval slot: top edge of cover to slot top and slot bottom; nearest cover end to slot start and slot end.",
+        "gives": "W4, the air outlet and the tube sightline keepout"
+      },
+      {
+        "id": "M6",
+        "cover": "either",
+        "what": "Outside depth of the cabinet top",
+        "how": "Front edge to rear edge on the top face, covering included. Drawing says 215.",
+        "gives": "tells whether the received cabinet follows the drawing depth"
+      }
+    ],
+    "current": "Confirm the minimum gap over the full assembly at mock-up. The direct A\u2013B reading is adequate for this trial."
+  },
+  "verdict": "Hold flat-wall placement. The direct cover-on reading is approximate. A 15 mm open-ended recess passes the local depth screen; verify the full guard and withdrawal path with a template.",
+  "recommendation": [
+    "Use the direct A\u2013B reading at this location. Trial a 15 mm open-ended recess and retain independent cover removal. Check the full guard footprint, hardware and cover sweep with a template and verify installed cooling."
+  ],
+  "direct_cover_on_check": {
+    "measured_approx_mm": 155,
+    "measurement_uncertainty_mm": null,
+    "flat_needed_mm": 162.88,
+    "flat_guard_to_wood_mm": -2.88,
+    "recess_min_for_5mm_gap_mm": 7.88,
+    "trial_recess_mm": 15.0,
+    "trial_recess_width_mm": 121.4,
+    "clear_internal_depth_mm": 111.0,
+    "minimum_AB_for_trial_mm": 147.88,
+    "trial_guard_to_wood_mm": 12.12
+  },
+  "historical_datum_verdict": "HOLD. Actual clearance is not determined. Under the datum as recorded (H1) the guarded sink on a flat rear wall of the 130 mm tray overlaps the cover by 8.9 mm, or 16.9 mm short with the gaps. Under the drawing-consistent datum (H2) it clears by 12.1 mm with the gaps. M1 and M3 decide."
+}

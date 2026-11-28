@@ -1,5 +1,7 @@
 # Project status
 
+CB-009 · Hold return placement. The revised PA rail holds the low-line load in simulation. The 400 V winding pair, hot regulator margin and recessed Fischer mount require an assembled check. Approximate cover-on depth is 155 mm. [Winding, supply and fit report](engineering/whole-amp/effects-loop/common-buffer/winding-rail-fit.html).
+
 CB-008 · Hold return placement. The fast shunt contained the specified sudden silent fault in simulation. A 50 VA Triad winding carried the modeled load with revised regulators. The flat-base Fischer sink clears only the shallow-tray depth screen. Qualify gate timing, winding pulse voltage, audio corners and installed cooling. [Sudden-loss and fit report](engineering/whole-amp/effects-loop/common-buffer/sudden-loss.html).
 
 CB-007 · Hold return-stage placement. With one reservoir open, the modeled 2 ms cutoff holds a 440 V pass short to 344.51 V. Sudden rail loss reaches the mixer before mute, 48 of 72 optical-mute cases exceed winding current, and the internal mount can trip during full output. An external-wall cooler is the next thermal candidate. [Supply, parts and fault report](engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html).

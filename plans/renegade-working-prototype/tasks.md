@@ -10,6 +10,8 @@ Existing decisions stay fixed: selectable 120 V / 220 V electric build (FB-106; 
 
 Effort below describes scope, not a promised elapsed time: S = bounded audit/repair; M = several linked checks; L = substantial design iteration; H = requires physical work. Each row names its inputs, output, dependencies and objective completion evidence. Exact execution revisions and commands belong in the linked module's evidence, not duplicated here.
 
+CB-009 tested the revised return at low line and checked winding voltage, regulator losses and the guarded PA sink against the approximate 155 mm cabinet reading. T04 remains open for full-load audio, faults, fit and thermal verification. [Qualification report](../../engineering/whole-amp/effects-loop/common-buffer/winding-rail-fit.html).
+
 CB-008 checked sudden-loss protection, a 50 VA auxiliary transformer and external cooling. T04 awaits installed transient, full-band and fit checks. [Qualification report](../../engineering/whole-amp/effects-loop/common-buffer/sudden-loss.html).
 
 CB-007 screened the dedicated PA340CC supply, independent cutoff, two mute circuits and installed cooling budgets. T04 remains active. Resolve auxiliary winding capacity, abrupt rail-loss timing, raw maximum and case-temperature proof before routing. [Fault results and part limits](../../engineering/whole-amp/effects-loop/common-buffer/supply-cutoff.html).

@@ -2022,3 +2022,26 @@ Source: CB-008 continuation chat
 
 - [engineering/whole-amp/effects-loop/common-buffer/sudden-loss.html](<../../engineering/whole-amp/effects-loop/common-buffer/sudden-loss.html>)
 
+## FB-190 — return-placement-qualification
+Authority: user. Disposition: incorporated. Recorded: 2026-11-28. Original date: 2026-11-28.
+
+> Find a winding that can take the 211 V pulse, resolve the low-line PA rail sag, and check regulator cooling and the Fischer heatsink’s rear-cover clearance before three-board layout.
+
+Check end-to-end winding voltage, sustained PA rail and fault limits, installed regulator heat paths and the independent rear cover. Use Claude for independent checks.
+
+Source: CB-009 continuation chat
+
+- [engineering/whole-amp/effects-loop/common-buffer/winding-rail-fit.html](<../../engineering/whole-amp/effects-loop/common-buffer/winding-rail-fit.html>)
+
+## FB-191 — cabinet-measurement
+Authority: user. Disposition: incorporated. Recorded: 2026-11-28. Original date: 2026-11-28.
+
+> 15.5 cm … it's hard to get that measurement, but that's about it
+
+Approximately 155 mm to the inside rear cover in the upper cabinet. Unknown measurement uncertainty; retain the 160 mm depth to a different endpoint.
+
+Source: User reply to CB-009 ImageGen side-section A–B, cover installed.
+
+- [engineering/whole-amp/mechanical/fit-register.json](<../../engineering/whole-amp/mechanical/fit-register.json>)
+- [engineering/whole-amp/mechanical/review/rear-cover-sink.json](<../../engineering/whole-amp/mechanical/review/rear-cover-sink.json>)
+

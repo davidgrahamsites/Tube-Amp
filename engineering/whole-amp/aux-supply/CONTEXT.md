@@ -18,3 +18,5 @@ November25 VAL-064: current load contract and results/loads include native R619/
 November25 VAL-069: envelope-contract.json working audio allocation is70mA per rail, with native rail loads still added separately. Current results/loads are refreshed; load-review.md links the source-bound passive budget in ../pcb-measured-r/current-budget/. Earlier envelope/transformer/hold-up products remain historical until explicitly regenerated and reviewed.
 
 CB-008. Supply qualification owns guard_transformer.py and guard_regulators.py under tools. Run them in this order with KiCad Python. Both read existing load and transformer contracts and produce results/guard-*.json. Check winding RMS, raw extrema, available regulator heat paths and charging surge against actual hot hardware.
+
+CB-009. Supply qualification owns the dedicated regulator sink trial. Run tools/regulator_cooling.py against the CB-008 load profiles. Compare results/regulator-cooling.json with temperatures at the regulator tabs, sink and inlet in the closed cabinet.
