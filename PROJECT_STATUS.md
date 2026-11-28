@@ -1,5 +1,8 @@
 # Project status
 
+CB-013 · The normally-on SiC return mute passes the 32 nominal-device gain corners and the 20 signed current pulses. A device mismatch produces 3.926 V against the 0.70 V switching limit. Bias supply, installed devices, cooling and rear-cover fit remain open. [Shunt and fault results](engineering/whole-amp/effects-loop/common-buffer/shunt-device.html).
+
+
 CB-011 · Hold three-board return placement. Full-level hot gain is −0.453 dB. One remaining local film capacitor and a 10 ms delayed guarded cutoff hold the modeled PA rail to 346.51 V. U4 is 88.15 °C at 60 °C air. The charge-dependent low-level response, actual switching and covered-cabinet fit remain open. [Gain, cutoff, cooling and illustrated full-size cabinet guide](engineering/whole-amp/effects-loop/common-buffer/gain-cutoff-template.html).
 
 CB-009 · Hold return placement. The revised PA rail holds the low-line load in simulation. The 400 V winding pair, hot regulator margin and recessed Fischer mount require an assembled check. Approximate cover-on depth is 155 mm. [Winding, supply and fit report](engineering/whole-amp/effects-loop/common-buffer/winding-rail-fit.html).

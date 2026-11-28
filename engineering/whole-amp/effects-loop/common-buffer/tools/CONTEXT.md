@@ -14,3 +14,5 @@ CB-008. sudden_guard.py owns the delay network and fast shunt fault fixture. gua
 The cutoff guard model owns part data and its two-terminal netlist. The fault fixtures apply independent load, switching and sequencing faults. The guarded-cutoff runner writes the CB-010 receipt. The relay-margin tool checks the DC switch correction against that receipt.
 
 CB-011. The local reservoir bounds minimum capacitance and startup. The assembled-return runner shares the protected supply with the audio macro. The two shunt studies use that fixed network to check bias and nonlinear capacitance. Run audit_gain_cutoff.py against the JSON receipts, then compare the actual pair, installed switch timing and the guarded cabinet with the report.
+
+CB-012 uses shunt_curve.py and qualify_shunt_curve.py to convert the IXYS plot to differential charge and test the silicon mute. CB-013 uses sic_shunt.py and qualify_sic_shunt.py. Supply a local copy of the linked UnitedSiC model with the recorded hash. Run each group (audio, switching, faults) in a fresh KiCad Python process. Inspect partial transients, terminal gate voltage, gain, distortion and switching peaks.

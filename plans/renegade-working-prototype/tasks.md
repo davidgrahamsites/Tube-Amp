@@ -10,6 +10,8 @@ Existing decisions stay fixed: selectable 120 V / 220 V electric build (FB-106; 
 
 Effort below describes scope, not a promised elapsed time: S = bounded audit/repair; M = several linked checks; L = substantial design iteration; H = requires physical work. Each row names its inputs, output, dependencies and objective completion evidence. Exact execution revisions and commands belong in the linked module's evidence, not duplicated here.
 
+CB-013 · T04 remains open. Test the floating SiC driver and matched-pair spread after the silicon source-bias failure. Use the installed cover and paper kit before placement. [CB-012/013 shunt comparison](../../engineering/whole-amp/effects-loop/common-buffer/shunt-device.html).
+
 CB-011 · T04 stays open. Bench-check low-level shunt capacitance, fault cutoff and installed temperatures. Use the five-page paper kit for the rear cover before placement. [CB-010/011 evidence](../../engineering/whole-amp/effects-loop/common-buffer/gain-cutoff-template.html).
 
 CB-009 tested the revised return at low line and checked winding voltage, regulator losses and the guarded PA sink against the approximate 155 mm cabinet reading. T04 remains open for full-load audio, faults, fit and thermal verification. [Qualification report](../../engineering/whole-amp/effects-loop/common-buffer/winding-rail-fit.html).

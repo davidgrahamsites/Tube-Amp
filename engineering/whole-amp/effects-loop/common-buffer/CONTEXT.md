@@ -22,3 +22,5 @@ CB-008. Integration owns the receiver guard. Use the CB-007 circuit, PA340 model
 CB-009. Integration owns the winding and revised rail trial. Use winding-rail-fit.html, tools/low_line_rail.py and tools/rail_winding_audio.py. Results are in results/low-line-rail.json and results/rail-winding-audio.json. Compare port, winding, regulator and cutoff waveforms at the same load and temperature before placement.
 
 The CB-010/011 audio, cutoff and cabinet checkpoint is in [the engineering reader](gain-cutoff-template.html).
+
+Integration owns the CB-012/013 [shunt device checks](shunt-device.html). Compare the opposed-device charge and switching results with the 0.50 dB gain, 1 V residual and 0.70 V injection limits. Measure the two installed devices, driver and harness before placement.
